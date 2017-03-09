@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Batteries included: templates and other libraries &#8212; Cheetah - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0 dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Visual Editors" href="editors.html" />
+    <link rel="prev" title="Non-HTML Output" href="nonHtml.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="editors.html" title="Visual Editors"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="nonHtml.html" title="Non-HTML Output"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User&#8217;s Guide</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Batteries included: templates and other libraries</a><ul>
+<li><a class="reference internal" href="#errorcatchers">ErrorCatchers</a></li>
+<li><a class="reference internal" href="#fileutils">FileUtils</a></li>
+<li><a class="reference internal" href="#filters">Filters</a></li>
+<li><a class="reference internal" href="#settingsmanager">SettingsManager</a></li>
+<li><a class="reference internal" href="#templates">Templates</a></li>
+<li><a class="reference internal" href="#tools">Tools</a></li>
+<li><a class="reference internal" href="#utils">Utils</a><ul>
+<li><a class="reference internal" href="#cheetah-templates-skeletonpage">Cheetah.Templates.SkeletonPage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="nonHtml.html"
+                        title="previous chapter">Non-HTML Output</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="editors.html"
+                        title="next chapter">Visual Editors</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/users_guide/libraries.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="batteries-included-templates-and-other-libraries">
+<h1>Batteries included: templates and other libraries<a class="headerlink" href="#batteries-included-templates-and-other-libraries" title="Permalink to this headline">¶</a></h1>
+<p>(libraries)</p>
+<p>Cheetah comes &#8220;batteries included&#8221; with libraries of templates,
+functions, classes and other objects you can use in your own
+programs. The different types are listed alphabetically below,
+followed by a longer description of the SkeletonPage framework.
+Some of the objects are classes for specific purposes (e.g.,
+filters or error catchers), while others are standalone and can be
+used without Cheetah.</p>
+<p>If you develop any objects which are generally useful for Cheetah
+sites, please consider posting them on the wiki with an
+announcement on the mailing list so we can incorporate them into
+the standard library. That way, all Cheetah users will benefit, and
+it will encourage others to contribute their objects, which might
+include something you want.</p>
+<div class="section" id="errorcatchers">
+<h2>ErrorCatchers<a class="headerlink" href="#errorcatchers" title="Permalink to this headline">¶</a></h2>
+<p>(libraries.ErrorCatchers)</p>
+<p>Module {Cheetah.ErrorCatchers} contains error-handling classes
+suitable for the {#errorCatcher} directive. These are debugging
+tools that are not intended for use in production systems. See
+section errorHandling.errorCatcher for a description of the error
+catchers bundled with Cheetah.</p>
+</div>
+<div class="section" id="fileutils">
+<h2>FileUtils<a class="headerlink" href="#fileutils" title="Permalink to this headline">¶</a></h2>
+<p>(libraries.FileUtils)</p>
+<p>Module {Cheetah.FileUtils} contains generic functions and classes
+for doing bulk search-and-replace on several files, and for finding
+all the files in a directory hierarchy whose names match a glob
+pattern.</p>
+</div>
+<div class="section" id="filters">
+<h2>Filters<a class="headerlink" href="#filters" title="Permalink to this headline">¶</a></h2>
+<p>(libraries.Filters)</p>
+<p>Module {Filters} contains filters suitable for the {#Filter}
+directive. See section output.filter for a description of the
+filters bundled with Cheetah.</p>
+</div>
+<div class="section" id="settingsmanager">
+<h2>SettingsManager<a class="headerlink" href="#settingsmanager" title="Permalink to this headline">¶</a></h2>
+<p>(libraries.SettingsManager)</p>
+<p>The {SettingsManager} class in the {Cheetah.SettingsManager} module
+is a baseclass that provides facilities for managing application
+settings. It facilitates the use of user-supplied configuration
+files to fine tune an application. A setting is a key/value pair
+that an application or component (e.g., a filter, or your own
+servlets) looks up and treats as a configuration value to modify
+its (the component&#8217;s) behaviour.</p>
+<p>SettingsManager is designed to:</p>
+<ul class="simple">
+<li>work well with nested settings dictionaries of any depth</li>
+<li>read/write {.ini style config files} (or strings)</li>
+<li>read settings from Python source files (or strings) so that
+complex Python objects can be stored in the application&#8217;s settings
+dictionary. For example, you might want to store references to
+various classes that are used by the application, and plugins to
+the application might want to substitute one class for another.</li>
+<li>allow sections in {.ini config files} to be extended by settings
+in Python src files. If a section contains a setting like
+&#8220;{importSettings=mySettings.py}&#8221;, {SettingsManager} will merge all
+the settings defined in &#8220;{mySettings.py}&#8221; with the settings for
+that section that are defined in the {.ini config file}.</li>
+<li>maintain the case of setting names, unlike the ConfigParser
+module</li>
+</ul>
+<p>Cheetah uses {SettingsManager} to manage its configuration
+settings. {SettingsManager} might also be useful in your own
+applications. See the source code and docstrings in the file
+{src/SettingsManager.py} for more information.</p>
+</div>
+<div class="section" id="templates">
+<h2>Templates<a class="headerlink" href="#templates" title="Permalink to this headline">¶</a></h2>
+<p>(libraries.templates)</p>
+<p>Package {Cheetah.Templates} contains stock templates that you can
+either use as is, or extend by using the {#def} directive to
+redefine specific { blocks}. Currently, the only template in here
+is SkeletonPage, which is described in detail below in section
+libraries.templates.skeletonPage. (Contributed by Tavis Rudd.)</p>
+</div>
+<div class="section" id="tools">
+<h2>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<p>(libraries.Tools)</p>
+<p>Package {Cheetah.Tools} contains functions and classes contributed
+by third parties. Some are Cheetah-specific but others are generic
+and can be used standalone. None of them are imported by any other
+Cheetah component; you can delete the Tools/ directory and Cheetah
+will function fine.</p>
+<p>Some of the items in Tools/ are experimental and have been placed
+there just to see how useful they will be, and whether they attract
+enough users to make refining them worthwhile (the tools, not the
+users :).</p>
+<p>Nothing in Tools/ is guaranteed to be: (A) tested, (B) reliable,
+(C) immune from being deleted in a future Cheetah version, or (D)
+immune from backwards-incompatable changes. If you depend on
+something in Tools/ on a production system, consider making a copy
+of it outside the Cheetah/ directory so that this version won&#8217;t be
+lost when you upgrade Cheetah. Also, learn enough about Python and
+about the Tool so that you can maintain it and bugfix it if
+necessary.</p>
+<p>If anything in Tools/ is found to be necessary to Cheetah&#8217;s
+operation (i.e., if another Cheetah component starts importing it),
+it will be moved to the {Cheetah.Utils} package.</p>
+<p>Current Tools include:</p>
+<blockquote>
+<div><p>an ambitious class useful when iterating over records of data
+({#for} loops), displaying one pageful of records at a time (with
+previous/next links), and printing summary statistics about the
+records or the current page. See {MondoReportDoc.txt} in the same
+directory as the module. Some features are not implemented yet.
+{MondoReportTest.py} is a test suite (and it shows there are
+currently some errors in MondoReport, hmm). Contributed by Mike
+Orr.</p>
+<p>Nothing, but in a friendly way. Good for filling in for objects you
+want to hide. If {$form.f1} is a RecursiveNull object, then
+{$form.f1.anything[&#8220;you&#8221;].might(&#8220;use&#8221;)} will resolve to the empty
+string. You can also put a {RecursiveNull} instance at the end of
+the searchList to convert missing values to &#8216;&#8217; rather than raising
+a {NotFound} error or having a (less efficient) errorCatcher handle
+it. Of course, maybe you prefer to get a {NotFound} error...
+Contributed by Ian Bicking.</p>
+<p>Provides navigational links to this page&#8217;s parents and children.
+The constructor takes a recursive list of (url,description) pairs
+representing a tree of hyperlinks to every page in the site (or
+section, or application...), and also a string containing the
+current URL. Two methods &#8216;menuList&#8217; and &#8216;crumbs&#8217; return
+output-ready HTML showing an indented menu (hierarchy tree) or
+crumbs list (Yahoo-style bar: home &gt; grandparent &gt; parent &gt;
+currentURL). Contributed by Ian Bicking.</p>
+</div></blockquote>
+</div>
+<div class="section" id="utils">
+<h2>Utils<a class="headerlink" href="#utils" title="Permalink to this headline">¶</a></h2>
+<p>(libraries.Utils)</p>
+<p>Package {Cheetah.Utils} contains non-Cheetah-specific functions and
+classes that are imported by other Cheetah components. Many of
+these utils can be used standalone in other applications too.</p>
+<p>Current Utils include:</p>
+<blockquote>
+<div><p>This is inherited by {Template} objects, and provides the method,
+{.cgiImport} method (section webware.cgiImport).</p>
+<p>A catch-all module for small functions.</p>
+<blockquote>
+<div><p>Raise &#8216;thing&#8217; if it&#8217;s a subclass of Exception, otherwise return it.
+Useful when one argument does double duty as a default value or an
+exception to throw. Contribyted by Mike Orr.</p>
+<p>Verifies the dictionary does not contain any keys not listed in
+&#8216;legalKeywords&#8217;. If it does, raise TypeError. Useful for checking
+the keyword arguments to a function. Contributed by Mike Orr.</p>
+</div></blockquote>
+<p>Not implemented yet, but will contain the {.uploadFile} method (or
+three methods) to &#8220;safely&#8221; copy a form-uploaded file to a local
+file, to a searchList variable, or return it. When finished, this
+will be inherited by {Template}, allowing all templates to do this.
+If you want this feature, read the docstring in the source and let
+us know on the mailing list what you&#8217;d like this method to do.
+Contributed by Mike Orr.</p>
+<p>Functions to verify the type of a user-supplied function argument.
+Contributed by Mike Orr.</p>
+</div></blockquote>
+<div class="section" id="cheetah-templates-skeletonpage">
+<h3>Cheetah.Templates.SkeletonPage<a class="headerlink" href="#cheetah-templates-skeletonpage" title="Permalink to this headline">¶</a></h3>
+<p>(libraries.templates.skeletonPage)</p>
+<p>A stock template class that may be useful for web developers is
+defined in the {Cheetah.Templates.SkeletonPage} module. The
+{SkeletonPage} template class is generated from the following
+Cheetah source code:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>##doc-module: A Skeleton HTML page template, that provides basic structure and utility methods.
+################################################################################
+#extends Cheetah.Templates._SkeletonPage
+#implements respond
+################################################################################
+#cache id=&#39;header&#39;
+$docType
+$htmlTag
+&lt;!-- This document was autogenerated by Cheetah(http://CheetahTemplate.org).
+Do not edit it directly!
+
+Copyright $currentYr - $siteCopyrightName - All Rights Reserved.
+Feel free to copy any javascript or html you like on this site,
+provided you remove all links and/or references to $siteDomainName
+However, please do not copy any content or images without permission.
+
+$siteCredits
+
+--&gt;
+
+
+#block writeHeadTag
+&lt;head&gt;
+&lt;title&gt;$title&lt;/title&gt;
+$metaTags
+$stylesheetTags
+$javascriptTags
+&lt;/head&gt;
+#end block writeHeadTag
+
+#end cache header
+#################
+
+$bodyTag
+
+#block writeBody
+This skeleton page has no flesh. Its body needs to be implemented.
+#end block writeBody
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
+<p>You can redefine any of the blocks defined in this template by
+writing a new template that {#extends} SkeletonPage. (As you
+remember, using {#extends} makes your template implement the
+{.writeBody()} method instead of {.respond()} - which happens to be
+the same method SkeletonPage expects the page content to be (note
+the writeBody block in SkeletonPage).)</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#def bodyContents</span>
+<span class="n">Here</span><span class="s1">&#39;s my new body. I&#39;</span><span class="n">ve</span> <span class="n">got</span> <span class="n">some</span> <span class="n">flesh</span> <span class="n">on</span> <span class="n">my</span> <span class="n">bones</span> <span class="n">now</span><span class="o">.</span>
+<span class="c1">#end def bodyContents</span>
+</pre></div>
+</div>
+<p>All of the $placeholders used in the {SkeletonPage} template
+definition are attributes or methods of the {SkeletonPage} class.
+You can reimplement them as you wish in your subclass. Please read
+the source code of the file {src/Templates/_SkeletonPage.py}
+before doing so.</p>
+<p>You&#8217;ll need to understand how to use the following methods of the
+{SkeletonPage} class: {$metaTags()}, {$stylesheetTags()},
+{$javascriptTags()}, and {$bodyTag()}. They take the data you
+define in various attributes and renders them into HTML tags.</p>
+<ul class="simple">
+<li>{ metaTags()} - Returns a formatted vesion of the
+self._metaTags dictionary, using the formatMetaTags function from
+{_SkeletonPage.py}.</li>
+<li>{ stylesheetTags()} - Returns a formatted version of the
+{self._stylesheetLibs} and {self._stylesheets} dictionaries. The
+keys in {self._stylesheets} must be listed in the order that they
+should appear in the list {self._stylesheetsOrder}, to ensure that
+the style rules are defined in the correct order.</li>
+<li>{ javascriptTags()} - Returns a formatted version of the
+{self._javascriptTags} and {self._javascriptLibs} dictionaries.
+Each value in {self._javascriptTags} should be a either a code
+string to include, or a list containing the JavaScript version
+number and the code string. The keys can be anything. The same
+applies for {self._javascriptLibs}, but the string should be the
+SRC filename rather than a code string.</li>
+<li>{ bodyTag()} - Returns an HTML body tag from the entries in the
+dict {self._bodyTagAttribs}.</li>
+</ul>
+<p>The class also provides some convenience methods that can be used
+as $placeholders in your template definitions:</p>
+<ul class="simple">
+<li>{ imgTag(self, src, alt=&#8217;&#8216;, width=None, height=None, border=0)}
+- Dynamically generate an image tag. Cheetah will try to convert
+the &#8220;{src}&#8221; argument to a WebKit serverSidePath relative to the
+servlet&#8217;s location. If width and height aren&#8217;t specified they are
+calculated using PIL or ImageMagick if either of these tools are
+available. If all your images are stored in a certain directory you
+can reimplement this method to append that directory&#8217;s path to the
+&#8220;{src}&#8221; argument. Doing so would also insulate your template
+definitions from changes in your directory structure.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="editors.html" title="Visual Editors"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="nonHtml.html" title="Non-HTML Output"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User&#8217;s Guide</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 09, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+  </body>
+</html>

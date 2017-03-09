@@ -1,31 +1,36 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>(#2) Conditionalized #import behavior &mdash; Cheetah - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+    <title>(#2) Conditionalized #import behavior &#8212; Cheetah - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.2.1',
-        COLLAPSE_MODINDEX: false,
+        VERSION:     '3.0.0 dev',
+        COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
-    <script type="text/javascript" src="../static/jquery.js"></script>
-    <script type="text/javascript" src="../static/doctools.js"></script>
-    <link rel="top" title="Cheetah - The Python-Powered Template Engine" href="../index.html" />
-    <link rel="up" title="Cheetah Enhancement Proposals" href="../chep.html" />
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="(#3) Exposing of super() and self via Template searchList" href="3_super.html" />
     <link rel="prev" title="(#1) CHEP Purpose and Guidelines" href="1_chep.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -37,57 +42,56 @@
         <li class="right" >
           <a href="1_chep.html" title="(#1) CHEP Purpose and Guidelines"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &raquo;</li>
-          <li><a href="../chep.html" accesskey="U">Cheetah Enhancement Proposals</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../chep.html" accesskey="U">Cheetah Enhancement Proposals</a> &#187;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-            <h3><a href="../index.html">Table Of Contents</a></h3>
-            <ul>
-<li><a class="reference external" href="">(#2) Conditionalized #import behavior</a><ul>
-<li><a class="reference external" href="#abstract">Abstract</a></li>
-<li><a class="reference external" href="#motivation">Motivation</a></li>
-<li><a class="reference external" href="#specification">Specification</a></li>
-<li><a class="reference external" href="#rationale">Rationale</a></li>
-<li><a class="reference external" href="#backwards-compatibility">Backwards Compatibility</a></li>
-<li><a class="reference external" href="#reference-implementation">Reference Implementation</a></li>
-<li><a class="reference external" href="#copyright">Copyright</a></li>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">(#2) Conditionalized #import behavior</a><ul>
+<li><a class="reference internal" href="#abstract">Abstract</a></li>
+<li><a class="reference internal" href="#motivation">Motivation</a></li>
+<li><a class="reference internal" href="#specification">Specification</a></li>
+<li><a class="reference internal" href="#rationale">Rationale</a></li>
+<li><a class="reference internal" href="#backwards-compatibility">Backwards Compatibility</a></li>
+<li><a class="reference internal" href="#reference-implementation">Reference Implementation</a></li>
+<li><a class="reference internal" href="#copyright">Copyright</a></li>
 </ul>
 </li>
 </ul>
 
-            <h4>Previous topic</h4>
-            <p class="topless"><a href="1_chep.html"
-                                  title="previous chapter">(#1) CHEP Purpose and Guidelines</a></p>
-            <h4>Next topic</h4>
-            <p class="topless"><a href="3_super.html"
-                                  title="next chapter">(#3) Exposing of super() and self via Template searchList</a></p>
-            <h3>This Page</h3>
-            <ul class="this-page-menu">
-              <li><a href="../sources/cheps/2_import.txt"
-                     rel="nofollow">Show Source</a></li>
-            </ul>
-          <div id="searchbox" style="display: none">
-            <h3>Quick search</h3>
-              <form class="search" action="../search.html" method="get">
-                <input type="text" name="q" size="18" />
-                <input type="submit" value="Go" />
-                <input type="hidden" name="check_keywords" value="yes" />
-                <input type="hidden" name="area" value="default" />
-              </form>
-              <p class="searchtip" style="font-size: 90%">
-              Enter search terms or a module, class or function name.
-              </p>
-          </div>
-          <script type="text/javascript">$('#searchbox').show(0);</script>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="1_chep.html"
+                        title="previous chapter">(#1) CHEP Purpose and Guidelines</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="3_super.html"
+                        title="next chapter">(#3) Exposing of super() and self via Template searchList</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/cheps/2_import.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="conditionalized-import-behavior">
 <h1>(#2) Conditionalized #import behavior<a class="headerlink" href="#conditionalized-import-behavior" title="Permalink to this headline">¶</a></h1>
@@ -95,21 +99,21 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">CHEP:</th><td class="field-body">2</td>
+<tr class="field-odd field"><th class="field-name">CHEP:</th><td class="field-body">2</td>
 </tr>
-<tr class="field"><th class="field-name">Title:</th><td class="field-body">Conditionalized #import behavior</td>
+<tr class="field-even field"><th class="field-name">Title:</th><td class="field-body">Conditionalized #import behavior</td>
 </tr>
-<tr class="field"><th class="field-name">Version:</th><td class="field-body">1</td>
+<tr class="field-odd field"><th class="field-name">Version:</th><td class="field-body">1</td>
 </tr>
-<tr class="field"><th class="field-name">Author:</th><td class="field-body">R Tyler Ballance &lt;tyler at slide.com&gt;</td>
+<tr class="field-even field"><th class="field-name">Author:</th><td class="field-body">R Tyler Ballance &lt;tyler at slide.com&gt;</td>
 </tr>
-<tr class="field"><th class="field-name">Status:</th><td class="field-body">Draft</td>
+<tr class="field-odd field"><th class="field-name">Status:</th><td class="field-body">Draft</td>
 </tr>
-<tr class="field"><th class="field-name">Type:</th><td class="field-body">Standards Track</td>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body">Standards Track</td>
 </tr>
-<tr class="field"><th class="field-name">Content-Type:</th><td class="field-body">text/x-rst</td>
+<tr class="field-odd field"><th class="field-name">Content-Type:</th><td class="field-body">text/x-rst</td>
 </tr>
-<tr class="field"><th class="field-name">Created:</th><td class="field-body">07-Jun-2009</td>
+<tr class="field-even field"><th class="field-name">Created:</th><td class="field-body">07-Jun-2009</td>
 </tr>
 </tbody>
 </table>
@@ -127,41 +131,42 @@ means of importing Python modules with the #from/#import directives. The
 &#8220;traditional&#8221; handling for #from/#import (hereafter referred to as &#8220;module imports&#8221;)
 is that the generated import statements shall all be relocated to
 the top of the generated module&#8217;s source code, i.e.</p>
-<div class="highlight-python"><pre>#import cjson
+<div class="highlight-default"><div class="highlight"><pre><span></span>#import cjson
 
-Hello $cjson.encode([1, 2, 3])</pre>
+Hello $cjson.encode([1, 2, 3])
+</pre></div>
 </div>
 <p>Will result in generated module code along the lines of:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">cjson</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cjson</span>
 
 <span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="n">Template</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">writeBody</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">write</span><span class="p">(</span><span class="s">&#39;Hello &#39;</span><span class="p">)</span>
-        <span class="n">write</span><span class="p">(</span><span class="n">cjson</span><span class="o">.</span><span class="n">encode</span><span class="p">([</span><span class="mf">1</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="mf">3</span><span class="p">]))</span>
+        <span class="n">write</span><span class="p">(</span><span class="s1">&#39;Hello &#39;</span><span class="p">)</span>
+        <span class="n">write</span><span class="p">(</span><span class="n">cjson</span><span class="o">.</span><span class="n">encode</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
 </pre></div>
 </div>
 <p>Also currently in Cheetah is the ability to switch off this
 behavior and enable location specific #from/#import handling
 (hereafter referred to as &#8220;function imports&#8221;) in the generated
 code, with this block of Cheetah for example:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">#def aFunction(arg)</span>
-    <span class="c">#try</span>
-        <span class="c">#from hashlib import md5</span>
-    <span class="c">#except ImportError</span>
-        <span class="c">#from md5 import md5</span>
-    <span class="c">#end try</span>
-    <span class="c">#return $md5.new(arg).hexdigest()</span>
-<span class="c">#end def</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#def aFunction(arg)</span>
+    <span class="c1">#try</span>
+        <span class="c1">#from hashlib import md5</span>
+    <span class="c1">#except ImportError</span>
+        <span class="c1">#from md5 import md5</span>
+    <span class="c1">#end try</span>
+    <span class="c1">#return $md5.new(arg).hexdigest()</span>
+<span class="c1">#end def</span>
 </pre></div>
 </div>
 <p>Will result in code generated with everything in
 place such that the Python looks something like:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="n">Template</span><span class="p">):</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="n">Template</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">aFunction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">):</span>
         <span class="k">try</span><span class="p">:</span>
-            <span class="kn">from</span> <span class="nn">hashlib</span> <span class="kn">import</span> <span class="n">md5</span>
+            <span class="kn">from</span> <span class="nn">hashlib</span> <span class="k">import</span> <span class="n">md5</span>
         <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-            <span class="kn">from</span> <span class="nn">md5</span> <span class="kn">import</span> <span class="n">md5</span>
+            <span class="kn">from</span> <span class="nn">md5</span> <span class="k">import</span> <span class="n">md5</span>
         <span class="k">return</span> <span class="n">md5</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -221,7 +226,7 @@ that they&#8217;re declared in.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -233,14 +238,14 @@ that they&#8217;re declared in.</p>
         <li class="right" >
           <a href="1_chep.html" title="(#1) CHEP Purpose and Guidelines"
              >previous</a> |</li>
-        <li><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &raquo;</li>
-          <li><a href="../chep.html" >Cheetah Enhancement Proposals</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../chep.html" >Cheetah Enhancement Proposals</a> &#187;</li> 
       </ul>
     </div>
-    <div class="footer">
-      &copy; Copyright 2009, R. Tyler Ballance.
-      Last updated on Jul 16, 2009.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.1.
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 09, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
     </div>
   </body>
 </html>

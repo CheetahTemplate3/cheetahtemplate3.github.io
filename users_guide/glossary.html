@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Vocabulary &#8212; Cheetah - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0 dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Getting Started" href="gettingStarted.html" />
+    <link rel="prev" title="Introduction" href="intro.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="gettingStarted.html" title="Getting Started"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="Introduction"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User&#8217;s Guide</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="intro.html"
+                        title="previous chapter">Introduction</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gettingStarted.html"
+                        title="next chapter">Getting Started</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/users_guide/glossary.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="vocabulary">
+<h1>Vocabulary<a class="headerlink" href="#vocabulary" title="Permalink to this headline">¶</a></h1>
+<p>(glossary) (vocabulary)</p>
+<p>{ Template} is an informal term meaning a template definition, a
+template instance or a template class. A { template definition} is
+what the human { template maintainer} writes: a string consisting
+of text, placeholders and directives. { Placeholders} are variables
+that will be looked up when the template is filled. { Directives}
+are commands to be executed when the template is filled, or
+instructions to the Cheetah compiler. The conventional suffix for a
+file containing a template definition is { .tmpl}.</p>
+<p>There are two things you can do with a template: compile it or fill
+it. { Filling} is the reason you have a template in the first
+place: to get a finished string out of it. Compiling is a necessary
+prerequisite: the { Cheetah compiler} takes a template definition
+and produces Python code to create the finished string. Cheetah
+provides several ways to compile and fill templates, either as one
+step or two.</p>
+<p>Cheetah&#8217;s compiler produces a subclass of {Cheetah.Template}
+specific to that template definition; this is called the {
+generated class}. A { template instance} is an instance of a
+generated class.</p>
+<p>If the user calls the {Template} constructor directly (rather than
+a subclass constructor), s/he will get what appears to be an
+instance of {Template} but is actually a subclass created
+on-the-fly.</p>
+<p>The user can make the subclass explicit by using the
+&#8220;cheetah compile&#8221; command to write the template class to a Python
+module. Such a module is called a { .py template module}.</p>
+<p>The { Template Definition Language} - or the &#8220;Cheetah language&#8221; for
+short - is the syntax rules governing placeholders and directives.
+These are discussed in sections language and following in this
+Guide.</p>
+<p>To fill a template, you call its { main method}. This is normally
+{.respond()}, but it may be something else, and you can use the
+{#implements} directive to choose the method name. (Section
+inheritanceEtc.implements.</p>
+<p>A { template-servlet} is a .py template module in a Webware servlet
+directory. Such templates can be filled directly through the web by
+requesting the URL. &#8220;Template-servlet&#8221; can also refer to the
+instance being filled by a particular web request. If a Webware
+servlet that is not a template-servlet invokes a template, that
+template is not a template-servlet either.</p>
+<p>A { placeholder tag} is the substring in the template definition
+that is the placeholder, including the start and end delimeters (if
+there is an end delimeter). The { placeholder name} is the same but
+without the delimeters.</p>
+<p>Placeholders consist of one or more { identifiers} separated by
+periods (e.g., {a.b}). Each identifier must follow the same rules
+as Python identifiers; that is, a letter or underscore followed by
+one or more letters, digits or underscores. (This is the regular
+expression <code class="docutils literal"><span class="pre">[A-Za-z_][A-Za-z0-9_]*</span></code>.)</p>
+<p>The first (or only) identifier of a placeholder name represents a {
+variable} to be looked up. Cheetah looks up variables in various {
+namespaces}: the searchList, local variables, and certain other
+places. The searchList is a list of objects ({ containers}) with
+attributes and/or keys: each container is a namespace. Every
+template instance has exactly one searchList. Identifiers after the
+first are looked up only in the parent object. The final value
+after all lookups have been performed is the { placeholder value}.</p>
+<p>Placeholders may occur in three positions: top-level, expression
+and LVALUE. { Top-level} placeholders are those in ordinary text
+(&#8220;top-level text&#8221;). { Expression} placeholders are those in Python
+expressions. { LVALUE} placeholders are those naming a variable to
+receive a value. (LVALUE is computerese for
+&#8220;the left side of the equal sign&#8221;.) Section
+language.placeholders.positions explains the differences between
+these three positions.</p>
+<p>The routine that does the placeholder lookups is called the {
+NameMapper}. Cheetah&#8217;s NameMapper supports universal dotted
+notation and autocalling. { Universal dotted notation} means that
+keys may be written as if they were attributes: {a.b} instead of
+{a[&#8216;b&#8217;]}. { Autocalling} means that if any identifier&#8217;s value is
+found to be a function or method, Cheetah will call it without
+arguments if there is no <code class="docutils literal"><span class="pre">()</span></code> following. More about the
+NameMapper is in section language.namemapper.</p>
+<p>Some directives are multi-line, meaning they have a matching {
+#end} tag. The lines of text between the start and end tags is the
+{ body} of the directive. Arguments on the same line as the start
+tag, in contrast, are considered part of the directive tag. More
+details are in section language.directives.syntax (Directive Syntax
+Rules).</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="gettingStarted.html" title="Getting Started"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="Introduction"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User&#8217;s Guide</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 09, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+  </body>
+</html>

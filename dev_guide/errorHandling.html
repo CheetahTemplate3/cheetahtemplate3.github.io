@@ -1,0 +1,412 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Directives: Error Handling &#8212; Cheetah - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0 dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Placeholders" href="placeholders.html" />
+    <link rel="prev" title="The parser" href="parser.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="placeholders.html" title="Placeholders"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="parser.html" title="The parser"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer&#8217;s Guide</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Directives: Error Handling</a><ul>
+<li><a class="reference internal" href="#try-and-raise">#try and #raise</a></li>
+<li><a class="reference internal" href="#assert">#assert</a></li>
+<li><a class="reference internal" href="#errorcatcher">#errorCatcher</a><ul>
+<li><a class="reference internal" href="#no-error-catcher">No error catcher</a></li>
+<li><a class="reference internal" href="#echo-and-bigecho">Echo and BigEcho</a></li>
+<li><a class="reference internal" href="#listerrors">ListErrors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="parser.html"
+                        title="previous chapter">The parser</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="placeholders.html"
+                        title="next chapter">Placeholders</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/dev_guide/errorHandling.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="directives-error-handling">
+<h1>Directives: Error Handling<a class="headerlink" href="#directives-error-handling" title="Permalink to this headline">¶</a></h1>
+<p>(errorHandling)</p>
+<div class="section" id="try-and-raise">
+<h2>#try and #raise<a class="headerlink" href="#try-and-raise" title="Permalink to this headline">¶</a></h2>
+<p>(errorHandling.try)</p>
+<p>The template:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#import traceback</span>
+<span class="c1">#try</span>
+<span class="c1">#raise RuntimeError</span>
+<span class="c1">#except RuntimeError</span>
+<span class="n">A</span> <span class="n">runtime</span> <span class="n">error</span> <span class="n">occurred</span><span class="o">.</span>
+<span class="c1">#end try</span>
+
+<span class="c1">#try</span>
+<span class="c1">#raise RuntimeError(&quot;Hahaha!&quot;)</span>
+<span class="c1">#except RuntimeError</span>
+<span class="c1">#echo $sys.exc_info()[1]</span>
+<span class="c1">#end try</span>
+
+<span class="c1">#try</span>
+<span class="c1">#echo 1/0</span>
+<span class="c1">#except ZeroDivisionError</span>
+<span class="n">You</span> <span class="n">can</span><span class="s1">&#39;t divide by zero, idiot!</span>
+<span class="c1">#end try</span>
+</pre></div>
+</div>
+<p>The output:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>A runtime error occurred.
+
+Hahaha!
+
+You can&#39;t divide by zero, idiot!
+</pre></div>
+</div>
+<p>The generated code:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">RuntimeError</span>
+<span class="k">except</span> <span class="ne">RuntimeError</span><span class="p">:</span>
+    <span class="n">write</span><span class="p">(</span><span class="s1">&#39;A runtime error occurred.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Hahaha!&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">RuntimeError</span><span class="p">:</span>
+    <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFN</span><span class="p">(</span><span class="n">sys</span><span class="p">,</span><span class="s2">&quot;exc_info&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">)()[</span><span class="mi">1</span><span class="p">]))</span>
+    <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">0</span><span class="p">))</span>
+    <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="n">write</span><span class="p">(</span><span class="s2">&quot;You can&#39;t divide by zero, idiot!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>{#finally} works just like in Python.</p>
+</div>
+<div class="section" id="assert">
+<h2>#assert<a class="headerlink" href="#assert" title="Permalink to this headline">¶</a></h2>
+<p>(errorHandling.assert)</p>
+<p>The template:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#assert False, &quot;You lose, buster!&quot;</span>
+</pre></div>
+</div>
+<p>The output:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Traceback (most recent call last):
+  File &quot;x.py&quot;, line 117, in ?
+    x().runAsMainProgram()
+  File &quot;/local/opt/Python/lib/python2.2/site-packages/Webware/Cheetah/
+Template.py&quot;, line 331, in runAsMainProgram
+    CmdLineIface(templateObj=self).run()
+  File &quot;/local/opt/Python/lib/python2.2/site-packages/Webware/Cheetah/
+TemplateCmdLineIface.py&quot;, line 59, in run
+    print self._template
+  File &quot;x.py&quot;, line 91, in respond
+    assert False, &quot;You lose, buster!&quot;
+AssertionError: You lose, buster!
+</pre></div>
+</div>
+<p>The generated code:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;You lose, buster!&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="errorcatcher">
+<h2>#errorCatcher<a class="headerlink" href="#errorcatcher" title="Permalink to this headline">¶</a></h2>
+<p>(errorHandling.errorCatcher)</p>
+<div class="section" id="no-error-catcher">
+<h3>No error catcher<a class="headerlink" href="#no-error-catcher" title="Permalink to this headline">¶</a></h3>
+<p>(errorHandling.errorCatcher.no)</p>
+<p>The template:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$noValue
+</pre></div>
+</div>
+<p>The output:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Traceback (most recent call last):
+  File &quot;x.py&quot;, line 118, in ?
+    x().runAsMainProgram()
+  File &quot;/local/opt/Python/lib/python2.2/site-packages/Webware/Cheetah/
+Template.py&quot;, line 331, in runAsMainProgram
+    CmdLineIface(templateObj=self).run()
+  File &quot;/local/opt/Python/lib/python2.2/site-packages/Webware/Cheetah/
+TemplateCmdLineIface.py&quot;, line 59, in run
+    print self._template
+  File &quot;x.py&quot;, line 91, in respond
+    write(filter(VFS(SL,&quot;noValue&quot;,1))) # generated from &#39;$noValue&#39; at line
+1, col 1.
+NameMapper.NotFound: noValue
+</pre></div>
+</div>
+<p>The generated code:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;noValue&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from &#39;$noValue&#39; at line 1,</span>
+    <span class="c1"># col 1.</span>
+<span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="echo-and-bigecho">
+<h3>Echo and BigEcho<a class="headerlink" href="#echo-and-bigecho" title="Permalink to this headline">¶</a></h3>
+<p>(errorHandling.errorCatcher.echo)</p>
+<p>The template:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>#errorCatcher Echo
+$noValue
+#errorCatcher BigEcho
+$noValue
+</pre></div>
+</div>
+<p>The output:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$noValue
+===============&amp;lt;$noValue could not be found&amp;gt;===============
+</pre></div>
+</div>
+<p>The generated code:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="s2">&quot;Echo&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatchers</span><span class="p">:</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatcher</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatchers</span><span class="p">[</span><span class="s2">&quot;Echo&quot;</span><span class="p">]</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatcher</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatchers</span><span class="p">[</span><span class="s2">&quot;Echo&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ErrorCatchers</span><span class="o">.</span><span class="n">Echo</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__errorCatcher1</span><span class="p">(</span><span class="n">localsDict</span><span class="o">=</span><span class="nb">locals</span><span class="p">())))</span>
+    <span class="c1"># generated from &#39;$noValue&#39; at line 2, col 1.</span>
+<span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="s2">&quot;BigEcho&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatchers</span><span class="p">:</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatcher</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatchers</span><span class="p">[</span><span class="s2">&quot;BigEcho&quot;</span><span class="p">]</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatcher</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatchers</span><span class="p">[</span><span class="s2">&quot;BigEcho&quot;</span><span class="p">]</span> <span class="o">=</span> \
+        <span class="n">ErrorCatchers</span><span class="o">.</span><span class="n">BigEcho</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__errorCatcher1</span><span class="p">(</span><span class="n">localsDict</span><span class="o">=</span><span class="nb">locals</span><span class="p">())))</span>
+        <span class="c1"># generated from &#39;$noValue&#39; at line 4, col 1.</span>
+<span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="listerrors">
+<h3>ListErrors<a class="headerlink" href="#listerrors" title="Permalink to this headline">¶</a></h3>
+<p>(errorHandling.errorCatcher.listErrors)</p>
+<p>The template:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>#import pprint
+#errorCatcher ListErrors
+$noValue
+$anotherMissingValue.really
+$pprint.pformat($errorCatcher.listErrors)
+## This is really self.errorCatcher().listErrors()
+</pre></div>
+</div>
+<p>The output:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$noValue
+$anotherMissingValue.really
+[{&#39;code&#39;: &#39;VFS(SL,&quot;noValue&quot;,1)&#39;,
+  &#39;exc_val&#39;: &lt;NameMapper.NotFound instance at 0x8170ecc&gt;,
+  &#39;lineCol&#39;: (3, 1),
+  &#39;rawCode&#39;: &#39;$noValue&#39;,
+  &#39;time&#39;: &#39;Wed May 15 00:38:23 2002&#39;},
+ {&#39;code&#39;: &#39;VFS(SL,&quot;anotherMissingValue.really&quot;,1)&#39;,
+  &#39;exc_val&#39;: &lt;NameMapper.NotFound instance at 0x816d0fc&gt;,
+  &#39;lineCol&#39;: (4, 1),
+  &#39;rawCode&#39;: &#39;$anotherMissingValue.really&#39;,
+  &#39;time&#39;: &#39;Wed May 15 00:38:23 2002&#39;}]
+</pre></div>
+</div>
+<p>The generated import:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pprint</span>
+</pre></div>
+</div>
+<p>Then in the generated class, we have our familiar {.respond} method
+and several new methods:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">__errorCatcher1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">localsDict</span><span class="o">=</span><span class="p">{}):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generated from $noValue at line, col (3, 1).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;VFS(SL,&quot;noValue&quot;,1)&#39;&#39;&#39;</span><span class="p">,</span> <span class="nb">globals</span><span class="p">(),</span> <span class="n">localsDict</span><span class="p">)</span>
+    <span class="k">except</span> <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatcher</span><span class="o">.</span><span class="n">exceptions</span><span class="p">(),</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatcher</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">exc_val</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span> <span class="s1">&#39;VFS(SL,&quot;noValue&quot;,1)&#39;</span> <span class="p">,</span>
+        <span class="n">rawCode</span><span class="o">=</span> <span class="s1">&#39;$noValue&#39;</span> <span class="p">,</span> <span class="n">lineCol</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">__errorCatcher2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">localsDict</span><span class="o">=</span><span class="p">{}):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generated from $anotherMissingValue.really at line, col (4, 1).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;VFS(SL,&quot;anotherMissingValue.really&quot;,1)&#39;&#39;&#39;</span><span class="p">,</span> <span class="nb">globals</span><span class="p">(),</span>
+        <span class="n">localsDict</span><span class="p">)</span>
+    <span class="k">except</span> <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatcher</span><span class="o">.</span><span class="n">exceptions</span><span class="p">(),</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatcher</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">exc_val</span><span class="o">=</span><span class="n">e</span><span class="p">,</span>
+        <span class="n">code</span><span class="o">=</span> <span class="s1">&#39;VFS(SL,&quot;anotherMissingValue.really&quot;,1)&#39;</span> <span class="p">,</span>
+        <span class="n">rawCode</span><span class="o">=</span> <span class="s1">&#39;$anotherMissingValue.really&#39;</span> <span class="p">,</span> <span class="n">lineCol</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">__errorCatcher3</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">localsDict</span><span class="o">=</span><span class="p">{}):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generated from $pprint.pformat($errorCatcher.listErrors) at line, col</span>
+<span class="sd">    (5, 1).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;VFN(pprint,&quot;pformat&quot;,0)(VFS(SL,</span>
+<span class="s1">        &quot;errorCatcher.listErrors&quot;,1))&#39;&#39;&#39;</span><span class="p">,</span> <span class="nb">globals</span><span class="p">(),</span> <span class="n">localsDict</span><span class="p">)</span>
+    <span class="k">except</span> <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatcher</span><span class="o">.</span><span class="n">exceptions</span><span class="p">(),</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatcher</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">exc_val</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span>
+        <span class="s1">&#39;VFN(pprint,&quot;pformat&quot;,0)(VFS(SL,&quot;errorCatcher.listErrors&quot;,1))&#39;</span> <span class="p">,</span>
+        <span class="n">rawCode</span><span class="o">=</span> <span class="s1">&#39;$pprint.pformat($errorCatcher.listErrors)&#39;</span> <span class="p">,</span>
+        <span class="n">lineCol</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">respond</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+        <span class="n">trans</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">dummyTrans</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">VFS</span><span class="o">=</span><span class="n">valueFromSearchList</span><span class="p">,</span>
+        <span class="n">VFN</span><span class="o">=</span><span class="n">valueForName</span><span class="p">,</span>
+        <span class="n">getmtime</span><span class="o">=</span><span class="n">getmtime</span><span class="p">,</span>
+        <span class="n">currentTime</span><span class="o">=</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">):</span>
+
+
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This is the main method generated by Cheetah</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">trans</span><span class="p">:</span>
+        <span class="n">trans</span> <span class="o">=</span> <span class="n">DummyTransaction</span><span class="p">()</span>
+        <span class="n">dummyTrans</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">write</span> <span class="o">=</span> <span class="n">trans</span><span class="o">.</span><span class="n">response</span><span class="p">()</span><span class="o">.</span><span class="n">write</span>
+    <span class="n">SL</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_searchList</span>
+    <span class="nb">filter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_currentFilter</span>
+    <span class="n">globalSetVars</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_globalSetVars</span>
+
+    <span class="c1">########################################</span>
+    <span class="c1">## START - generated method body</span>
+
+    <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_filePath</span><span class="p">)</span> <span class="ow">and</span> <span class="n">getmtime</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_filePath</span><span class="p">)</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fileMtime</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_filePath</span><span class="p">)</span>
+        <span class="n">write</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mainCheetahMethod_for_x</span><span class="p">)(</span><span class="n">trans</span><span class="o">=</span><span class="n">trans</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">dummyTrans</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">trans</span><span class="o">.</span><span class="n">response</span><span class="p">()</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">if</span> <span class="s2">&quot;ListErrors&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatchers</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatcher</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatchers</span><span class="p">[</span><span class="s2">&quot;ListErrors&quot;</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatcher</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatchers</span><span class="p">[</span><span class="s2">&quot;ListErrors&quot;</span><span class="p">]</span> <span class="o">=</span> \
+        <span class="n">ErrorCatchers</span><span class="o">.</span><span class="n">ListErrors</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__errorCatcher1</span><span class="p">(</span><span class="n">localsDict</span><span class="o">=</span><span class="nb">locals</span><span class="p">())))</span>
+        <span class="c1"># generated from &#39;$noValue&#39; at line 3, col 1.</span>
+    <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__errorCatcher2</span><span class="p">(</span><span class="n">localsDict</span><span class="o">=</span><span class="nb">locals</span><span class="p">())))</span>
+        <span class="c1"># generated from &#39;$anotherMissingValue.really&#39; at line 4, col 1.</span>
+    <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__errorCatcher3</span><span class="p">(</span><span class="n">localsDict</span><span class="o">=</span><span class="nb">locals</span><span class="p">())))</span>
+        <span class="c1"># generated from &#39;$pprint.pformat($errorCatcher.listErrors)&#39; at line</span>
+    <span class="c1"># 5, col 1.</span>
+    <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="c1">#  This is really self.errorCatcher().listErrors()</span>
+
+    <span class="c1">########################################</span>
+    <span class="c1">## END - generated method body</span>
+
+    <span class="k">if</span> <span class="n">dummyTrans</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">trans</span><span class="o">.</span><span class="n">response</span><span class="p">()</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+</pre></div>
+</div>
+<p>So whenever an error catcher is active, each placeholder gets
+wrapped in its own method. No wonder error catchers slow down the
+system!</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="placeholders.html" title="Placeholders"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="parser.html" title="The parser"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer&#8217;s Guide</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 09, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+  </body>
+</html>

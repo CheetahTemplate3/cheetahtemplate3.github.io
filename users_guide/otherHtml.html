@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>non-Webware HTML output &#8212; Cheetah - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0 dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">non-Webware HTML output</a><ul>
+<li><a class="reference internal" href="#static-html-pages">Static HTML Pages</a></li>
+<li><a class="reference internal" href="#cgi-scripts">CGI scripts</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/users_guide/otherHtml.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="non-webware-html-output">
+<h1>non-Webware HTML output<a class="headerlink" href="#non-webware-html-output" title="Permalink to this headline">¶</a></h1>
+<p>(otherHTML)</p>
+<p>Cheetah can be used with all types of HTML output, not just with
+Webware.</p>
+<div class="section" id="static-html-pages">
+<h2>Static HTML Pages<a class="headerlink" href="#static-html-pages" title="Permalink to this headline">¶</a></h2>
+<p>(otherHTML.static)</p>
+<p>Some sites like Linux Gazette (<a class="reference external" href="http://www.linuxgazette.com/">http://www.linuxgazette.com/</a>)
+require completely static pages because they are mirrored on
+servers running completely different software from the main site.
+Even dynamic sites may have one or two pages that are static for
+whatever reason, and the site administrator may wish to generate
+those pages from Cheetah templates.</p>
+<p>There&#8217;s nothing special here. Just create your templates as usual.
+Then compile and fill them whenever the template definition
+changes, and fill them again whenever the placeholder values
+change. You may need an extra step to copy the .html files to their
+final location. A Makefile (chapter tips.Makefile) can help
+encapsulate these steps.</p>
+</div>
+<div class="section" id="cgi-scripts">
+<h2>CGI scripts<a class="headerlink" href="#cgi-scripts" title="Permalink to this headline">¶</a></h2>
+<p>(otherHTML)</p>
+<p>Unlike Webware servlets, which don&#8217;t have to worry about the HTTP
+headers, CGI scripts must emit their own headers. To make a
+template CGI aware, add this at the top:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>#extends Cheetah.Tools.CGITemplate
+#implements respond
+$cgiHeaders#slurp
+</pre></div>
+</div>
+<p>Or if your template is inheriting from a Python class:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>#extends MyPythonClass
+#implements respond
+$cgiHeaders#slurp
+</pre></div>
+</div>
+<p>A sample Python class:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Cheetah.Tools</span> <span class="k">import</span> <span class="n">CGITemplate</span>
+<span class="k">class</span> <span class="nc">MyPythonClass</span><span class="p">(</span><span class="n">CGITemplate</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">cgiHeadersHook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Content-Type: text/html; charset=koi8-r</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>Compile the template as usual, put the .py template module in your
+cgi-bin directory and give it execute permission. {.cgiHeaders()}
+is a &#8220;smart&#8221; method that outputs the headers if the module is
+called as a CGI script, or outputs nothing if not. Being
+&#8220;called as a CGI script&#8221; means the environmental variable
+{REQUEST_METHOD} exists and {self.isControlledByWebKit} is false.
+If you don&#8217;t agree with that definition, override {.isCgi()} and
+provide your own.</p>
+<p>The default header is a simple <code class="docutils literal"><span class="pre">Content-type:</span> <span class="pre">text/html\n\n</span></code>,
+which works with all CGI scripts. If you want to customize the
+headers (e.g., to specify the character set), override
+{.cgiHeadersHook()} and return a string containing all the headers.
+Don&#8217;t forget to include the extra newline at the end of the string:
+the HTTP protocol requires this empty line to mark the end of the
+headers.</p>
+<p>To read GET/POST variables from form input, use the {.webInput()}
+method (section webware.webInput), or extract them yourself using
+Python&#8217;s {cgi} module or your own function. Although {.webInput()}
+was originally written for Webware servlets, it now handles CGI
+scripts too. There are a couple behavioral differences between CGI
+scripts and Webware servlets regarding input variables:</p>
+<ol class="arabic simple">
+<li>CGI scripts, using Python&#8217;s {cgi} module, believe
+{REQUEST_METHOD} and recognize { either} GET variables { or} POST
+variables, not both. Webware servlets, doing additional processing,
+ignore {REQUEST_METHOD} and recognize both, like PHP does.</li>
+<li>Webware servlets can ask for cookies or session variables
+instead of GET/POST variables, by passing the argument {src=&#8217;c&#8217;} or
+{src=&#8217;s&#8217;}. CGI scripts get a {RuntimeError} if they try to do
+this.</li>
+</ol>
+<p>If you keep your .tmpl files in the same directory as your CGI
+scripts, make sure they don&#8217;t have execute permission. Apache at
+least refuses to serve files in a {ScriptAlias} directory that
+don&#8217;t have execute permission.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 09, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+  </body>
+</html>

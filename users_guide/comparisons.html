@@ -1,0 +1,570 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Cheetah vs. Other Template Engines &#8212; Cheetah - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0 dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Cheetah Recipes" href="../documentation.html" />
+    <link rel="prev" title="Examples" href="examples.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../documentation.html" title="Cheetah Recipes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="examples.html" title="Examples"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User&#8217;s Guide</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Cheetah vs. Other Template Engines</a><ul>
+<li><a class="reference internal" href="#which-features-are-unique-to-cheetah">Which features are unique to Cheetah</a></li>
+<li><a class="reference internal" href="#cheetah-vs-velocity">Cheetah vs. Velocity</a></li>
+<li><a class="reference internal" href="#cheetah-vs-webmacro">Cheetah vs. WebMacro</a></li>
+<li><a class="reference internal" href="#cheetah-vs-zope-s-dtml">Cheetah vs. Zope&#8217;s DTML</a></li>
+<li><a class="reference internal" href="#cheetah-vs-zope-page-templates">Cheetah vs. Zope Page Templates</a></li>
+<li><a class="reference internal" href="#cheetah-vs-php-s-smarty-templates">Cheetah vs. PHP&#8217;s Smarty templates</a></li>
+<li><a class="reference internal" href="#cheetah-vs-phplib-s-template-class">Cheetah vs. PHPLib&#8217;s Template class</a></li>
+<li><a class="reference internal" href="#cheetah-vs-psp-php-asp-jsp-embperl-etc">Cheetah vs. PSP, PHP, ASP, JSP, Embperl, etc.</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="examples.html"
+                        title="previous chapter">Examples</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../documentation.html"
+                        title="next chapter">Cheetah Recipes</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/users_guide/comparisons.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="cheetah-vs-other-template-engines">
+<h1>Cheetah vs. Other Template Engines<a class="headerlink" href="#cheetah-vs-other-template-engines" title="Permalink to this headline">¶</a></h1>
+<p>(comparisons)</p>
+<p>This appendix compares Cheetah with various other template/emdedded
+scripting languages and Internet development frameworks. As Cheetah
+is similar to Velocity at a superficial level, you may also wish to
+read comparisons between Velocity and other languages at
+<a class="reference external" href="http://jakarta.apache.org/velocity/ymtd/ymtd.html">http://jakarta.apache.org/velocity/ymtd/ymtd.html</a>.</p>
+<div class="section" id="which-features-are-unique-to-cheetah">
+<h2>Which features are unique to Cheetah<a class="headerlink" href="#which-features-are-unique-to-cheetah" title="Permalink to this headline">¶</a></h2>
+<p>(comparisons.unique)</p>
+<ul class="simple">
+<li>The { block framework} (section inheritanceEtc.block)</li>
+<li>Cheetah&#8217;s powerful yet simple { caching framework} (section
+output.caching)</li>
+<li>Cheetah&#8217;s { Unified Dotted Notation} and { autocalling}
+(sections language.namemapper.dict and
+language.namemapper.autocalling)</li>
+<li>Cheetah&#8217;s searchList (section language.searchList) information.</li>
+<li>Cheetah&#8217;s {#raw} directive (section output.raw)</li>
+<li>Cheetah&#8217;s {#slurp} directive (section output.slurp)</li>
+<li>Cheetah&#8217;s tight integration with Webware for Python (section
+webware)</li>
+<li>Cheetah&#8217;s { SkeletonPage framework} (section
+libraries.templates.skeletonPage)</li>
+<li>Cheetah&#8217;s ability to mix PSP-style code with Cheetah Language
+syntax (section tips.PSP) Because of Cheetah&#8217;s design and Python&#8217;s
+flexibility it is relatively easy to extend Cheetah&#8217;s syntax with
+syntax elements from almost any other template or embedded
+scripting language.</li>
+</ul>
+</div>
+<div class="section" id="cheetah-vs-velocity">
+<h2>Cheetah vs. Velocity<a class="headerlink" href="#cheetah-vs-velocity" title="Permalink to this headline">¶</a></h2>
+<p>(comparisons.velocity)</p>
+<p>For a basic introduction to Velocity, visit
+<a class="reference external" href="http://jakarta.apache.org/velocity">http://jakarta.apache.org/velocity</a>.</p>
+<p>Velocity is a Java template engine. It&#8217;s older than Cheetah, has a
+larger user base, and has better examples and docs at the moment.
+Cheetah, however, has a number of advantages over Velocity:</p>
+<ul>
+<li><p class="first">Cheetah is written in Python. Thus, it&#8217;s easier to use and
+extend.</p>
+</li>
+<li><p class="first">Cheetah&#8217;s syntax is closer to Python&#8217;s syntax than Velocity&#8217;s is
+to Java&#8217;s.</p>
+</li>
+<li><p class="first">Cheetah has a powerful caching mechanism. Velocity has no
+equivalent.</p>
+</li>
+<li><p class="first">It&#8217;s far easier to add data/objects into the namespace where
+$placeholder values are extracted from in Cheetah. Velocity calls
+this namespace a &#8216;context&#8217;. Contexts are dictionaries/hashtables.
+You can put anything you want into a context, BUT you have to use
+the .put() method to populate the context; e.g.,</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">VelocityContext</span> <span class="n">context1</span> <span class="o">=</span> <span class="n">new</span> <span class="n">VelocityContext</span><span class="p">();</span>
+<span class="n">context1</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span><span class="s2">&quot;Velocity&quot;</span><span class="p">);</span>
+<span class="n">context1</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="s2">&quot;Jakarta&quot;</span><span class="p">);</span>
+<span class="n">context1</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s2">&quot;duplicate&quot;</span><span class="p">,</span> <span class="s2">&quot;I am in context1&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Cheetah takes a different approach. Rather than require you to
+manually populate the &#8216;namespace&#8217; like Velocity, Cheetah will
+accept any existing Python object or dictionary AS the &#8216;namespace&#8217;.
+Furthermore, Cheetah allows you to specify a list namespaces that
+will be searched in sequence to find a varname-to-value mapping.
+This searchList can be extended at run-time.</p>
+<p>If you add a &#8216;foo&#8217; object to the searchList and the &#8216;foo&#8217; has an
+attribute called &#8216;bar&#8217;, you can simply type {$bar} in the template.
+If the second item in the searchList is dictionary &#8216;foofoo&#8217;
+containing {{&#8216;spam&#8217;:1234, &#8216;parrot&#8217;:666}}, Cheetah will first look
+in the &#8216;foo&#8217; object for a &#8216;spam&#8217; attribute. Not finding it, Cheetah
+will then go to &#8216;foofoo&#8217; (the second element in the searchList) and
+look among its dictionary keys for &#8216;spam&#8217;. Finding it, Cheetah will
+select {foofoo[&#8216;spam&#8217;]} as {$spam}&#8217;s value.</p>
+</li>
+<li><p class="first">In Cheetah, the tokens that are used to signal the start of
+$placeholders and #directives are configurable. You can set them to
+any character sequences, not just $ and #.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="cheetah-vs-webmacro">
+<h2>Cheetah vs. WebMacro<a class="headerlink" href="#cheetah-vs-webmacro" title="Permalink to this headline">¶</a></h2>
+<p>(comparisons.webmacro)</p>
+<p>For a basic introduction to WebMacro, visit <a class="reference external" href="http://webmacro.org">http://webmacro.org</a>.</p>
+<p>The points discussed in section comparisons.velocity also apply to
+the comparison between Cheetah and WebMacro. For further
+differences please refer to
+<a class="reference external" href="http://jakarta.apache.org/velocity/differences.html">http://jakarta.apache.org/velocity/differences.html</a>.</p>
+</div>
+<div class="section" id="cheetah-vs-zope-s-dtml">
+<h2>Cheetah vs. Zope&#8217;s DTML<a class="headerlink" href="#cheetah-vs-zope-s-dtml" title="Permalink to this headline">¶</a></h2>
+<p>(comparisons.dtml)</p>
+<p>For a basic introduction to DTML, visit
+<a class="reference external" href="http://www.zope.org/Members/michel/ZB/DTML.dtml">http://www.zope.org/Members/michel/ZB/DTML.dtml</a>.</p>
+<ul class="simple">
+<li>Cheetah is faster than DTML.</li>
+<li>Cheetah does not use HTML-style tags; DTML does. Thus, Cheetah
+tags are visible in rendered HTML output if something goes wrong.</li>
+<li>DTML can only be used with ZOPE for web development; Cheetah can
+be used as a standalone tool for any purpose.</li>
+<li>Cheetah&#8217;s documentation is more complete than DTML&#8217;s.</li>
+<li>Cheetah&#8217;s learning curve is shorter than DTML&#8217;s.</li>
+<li>DTML has no equivalent of Cheetah&#8217;s blocks, caching framework,
+unified dotted notation, and {#raw} directive.</li>
+</ul>
+<p>Here are some examples of syntax differences between DTML and
+Cheetah:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">ul</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">dtml</span><span class="o">-</span><span class="ow">in</span> <span class="n">frogQuery</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">dtml</span><span class="o">-</span><span class="n">var</span> <span class="n">animal_name</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">dtml</span><span class="o">-</span><span class="ow">in</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">ul</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span>&lt;ul&gt;
+#for $animal_name in $frogQuery
+ &lt;li&gt;$animal_name&lt;/li&gt;
+#end for
+&lt;/ul&gt;
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span>&lt;dtml-if expr=&quot;monkeys &gt; monkey_limit&quot;&gt;
+  &lt;p&gt;There are too many monkeys!&lt;/p&gt;
+&lt;dtml-elif expr=&quot;monkeys &lt; minimum_monkeys&quot;&gt;
+  &lt;p&gt;There aren&#39;t enough monkeys!&lt;/p&gt;
+&lt;dtml-else&gt;
+  &lt;p&gt;There are just enough monkeys.&lt;/p&gt;
+&lt;/dtml-if&gt;
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span>#if $monkeys &gt; $monkey_limit
+  &lt;p&gt;There are too many monkeys!&lt;/p&gt;
+#else if $monkeys &lt; $minimum_monkeys
+  &lt;p&gt;There aren&#39;t enough monkeys!&lt;/p&gt;
+#else
+  &lt;p&gt;There are just enough monkeys.&lt;/p&gt;
+#end if
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">table</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">dtml</span><span class="o">-</span><span class="ow">in</span> <span class="n">expr</span><span class="o">=</span><span class="s2">&quot;objectValues(&#39;File&#39;)&quot;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">dtml</span><span class="o">-</span><span class="k">if</span> <span class="n">sequence</span><span class="o">-</span><span class="n">even</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">tr</span> <span class="n">bgcolor</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">dtml</span><span class="o">-</span><span class="k">else</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">dtml</span><span class="o">-</span><span class="k">if</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;&amp;dtml-absolute_url;&quot;</span><span class="o">&gt;&lt;</span><span class="n">dtml</span><span class="o">-</span><span class="n">var</span> <span class="n">title_or_id</span><span class="o">&gt;&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">dtml</span><span class="o">-</span><span class="ow">in</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">table</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span>&lt;table&gt;
+#set $evenRow = 0
+#for $file in $files(&#39;File&#39;)
+  #if $evenRow
+    &lt;tr bgcolor=&quot;grey&quot;&gt;
+    #set $evenRow = 0
+  #else
+    &lt;tr&gt;
+    #set $evenRow = 1
+  #end if
+  &lt;td&gt;
+  &lt;a href=&quot;$file.absolute_url&quot;&gt;$file.title_or_id&lt;/a&gt;
+  &lt;/td&gt;&lt;/tr&gt;
+#end for
+&lt;/table&gt;
+</pre></div>
+</div>
+<p>The last example changed the name of {$objectValues} to {$files}
+because that&#8217;s what a Cheetah developer would write. The developer
+would be responsible for ensuring {$files} returned a list (or
+tuple) of objects (or dictionaries) containing the attributes (or
+methods or dictionary keys) &#8216;absolute_url&#8217; and &#8216;title_or_id&#8217;.
+All these names (&#8216;objectValues&#8217;, &#8216;absolute_url&#8217; and
+&#8216;title_or_id&#8217;) are standard parts of Zope, but in Cheetah the
+developer is in charge of writing them and giving them a reasonable
+behaviour.</p>
+<p>Some of DTML&#8217;s features are being ported to Cheetah, such as
+{Cheetah.Tools.MondoReport}, which is based on the {&lt;dtml-in&gt;} tag.
+We are also planning an output filter as flexible as the
+{&lt;dtml-var&gt;} formatting options. However, neither of these are
+complete yet.</p>
+</div>
+<div class="section" id="cheetah-vs-zope-page-templates">
+<h2>Cheetah vs. Zope Page Templates<a class="headerlink" href="#cheetah-vs-zope-page-templates" title="Permalink to this headline">¶</a></h2>
+<p>(comparisons.zpt)</p>
+<p>For a basic introduction to Zope Page Templates, please visit
+<a class="reference external" href="http://www.zope.org/Documentation/Articles/ZPT2">http://www.zope.org/Documentation/Articles/ZPT2</a>.</p>
+</div>
+<div class="section" id="cheetah-vs-php-s-smarty-templates">
+<h2>Cheetah vs. PHP&#8217;s Smarty templates<a class="headerlink" href="#cheetah-vs-php-s-smarty-templates" title="Permalink to this headline">¶</a></h2>
+<p>(comparisons.smarty)</p>
+<p>PHP (<a class="reference external" href="http://www.php.net/">http://www.php.net/</a>) is one of the few scripting languages
+expressly designed for web servlets. However, it&#8217;s also a
+full-fledged programming language with libraries similar to
+Python&#8217;s and Perl&#8217;s. The syntax and functions are like a cross
+between Perl and C plus some original ideas (e.g.; a single array
+type serves as both a list and a dictionary, <code class="docutils literal"><span class="pre">$arr[]=&quot;value&quot;;</span></code>
+appends to an array).</p>
+<p>Smarty (<a class="reference external" href="http://smarty.php.net/">http://smarty.php.net/</a>) is an advanced template engine for
+PHP. ({ Note:} this comparision is based on Smarty&#8217;s on-line
+documentation. The author has not used Smarty. Please send
+corrections or ommissions to the Cheetah mailing list.) Like
+Cheetah, Smarty:</p>
+<ul class="simple">
+<li>compiles to the target programming language (PHP).</li>
+<li>has configurable delimeters.</li>
+<li>passes if-blocks directly to PHP, so you can use any PHP
+expression in them.</li>
+<li>allows you to embed PHP code in a template.</li>
+<li>has a caching framework (although it works quite differently).</li>
+<li>can read the template definition from any arbitrary source.</li>
+</ul>
+<p>Features Smarty has that Cheetah lacks:</p>
+<ul class="simple">
+<li>Preprocessors, postprocessors and output filters. You can
+emulate a preprocessor in Cheetah by running your template
+definition through a filter program or function before Cheetah sees
+it. To emulate a postprocessor, run a .py template module through a
+filter program/function. To emulate a Smarty output filter, run the
+template output through a filter program/function. If you want to
+use &#8220;cheetah compile&#8221; or &#8220;cheetah fill&#8221; in a pipeline, use {-} as
+the input file name and {-stdout} to send the result to standard
+output. Note that Cheetah uses the term &#8220;output filter&#8221; differently
+than Smarty: Cheetah output filters ({#filter}) operate on
+placeholders, while Smarty output filters operate on the entire
+template output. There has been a proposed {#sed} directive that
+would operate on the entire output line by line, but it has not
+been implemented.</li>
+<li>Variable modifiers. In some cases, Python has equivalent string
+methods ({.strip}, {.capitalize}, {.replace(SEARCH, REPL)}), but in
+other cases you must wrap the result in a function call or write a
+custom output filter ({#filter}).</li>
+<li>Certain web-specific functions, which can be emulated with
+third-party functions.</li>
+<li>The ability to &#8220;plug in&#8221; new directives in a modular way.
+Cheetah directives are tightly bound to the compiler. However,
+third-party { functions} can be freely imported and called from
+placeholders, and { methods} can be mixed in via {#extends}. Part
+of this is because Cheetah distinguishes between functions and
+directives, while Smarty treats them all as &#8220;functions&#8221;. Cheetah&#8217;s
+design does not allow functions to have flow control effect outside
+the function (e.g., {#if} and {#for}, which operate on template
+body lines), so directives like these cannot be encoded as
+functions.</li>
+<li>Configuration variables read from an .ini-style file. The
+{Cheetah.SettingsManager} module can parse such a file, but you&#8217;d
+have to invoke it manually. (See the docstrings in the module for
+details.) In Smarty, this feature is used for multilingual
+applications. In Cheetah, the developers maintain that everybody
+has their own preferred way to do this (such as using Python&#8217;s
+{gettext} module), and it&#8217;s not worth blessing one particular
+strategy in Cheetah since it&#8217;s easy enough to integrate third-party
+code around the template, or to add the resulting values to the
+searchList.</li>
+</ul>
+<p>Features Cheetah has that Smarty lacks:</p>
+<ul class="simple">
+<li>Saving the compilation result in a Python (PHP) module for quick
+reading later.</li>
+<li>Caching individual placeholders or portions of a template.
+Smarty caches only the entire template output as a unit.</li>
+</ul>
+<p>Comparisions of various Smarty constructs:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>{assign var=&quot;name&quot; value=&quot;Bob&quot;} (#set has better syntax in the author&#39;s opinion)
+counter   (looks like equivalent to #for)
+eval      (same as #include with variable)
+fetch: insert file content into output   (#include raw)
+fetch: insert URL content into output    (no euqivalent, user can write
+     function calling urllib, call as $fetchURL(&#39;URL&#39;) )
+fetch: read file into variable  (no equivalent, user can write function
+     based on the &#39;open/file&#39; builtin, or on .getFileContents() in
+     Template.)
+fetch: read URL content into variable  (no equivalent, use above
+     function and call as:  #set $var = $fetchURL(&#39;URL&#39;)
+html_options: output an HTML option list  (no equivalent, user can
+     write custom function.  Maybe FunFormKit can help.)
+html_select_date: output three dropdown controls to specify a date
+     (no equivalent, user can write custom function)
+html_select_time: output four dropdown controls to specify a time
+     (no equvalent, user can write custom function)
+math: eval calculation and output result   (same as #echo)
+math: eval calculation and assign to variable  (same as #set)
+popup_init: library for popup windows  (no equivalent, user can write
+     custom method outputting Javascript)
+
+
+Other commands:
+capture   (no equivalent, collects output into variable.  A Python
+     program would create a StringIO instance, set sys.stdout to
+     it temporarily, print the output, set sys.stdout back, then use
+     .getvalue() to get the result.)
+config_load   (roughly analagous to #settings, which was removed
+     from Cheetah.  Use Cheetah.SettingsManager manually or write
+     a custom function.)
+include   (same as #include, but can include into variable.
+     Variables are apparently shared between parent and child.)
+include_php: include a PHP script (e.g., functions)
+     (use #extends or #import instead)
+insert   (same as #include not in a #cache region)
+{ldelim}{rdelim}   (escape literal $ and # with a backslash,
+     use #compiler-settings to change the delimeters)
+literal  (#raw)
+php    (``&lt;% %&gt;&#39;&#39; tags)
+section  (#for $i in $range(...) )
+foreach  (#for)
+strip   (like the #sed tag which was never implemented.  Strips
+     leading/trailing whitespace from lines, joins several lines
+     together.)
+
+
+Variable modifiers:
+capitalize    ( $STRING.capitalize() )
+count_characters    (   $len(STRING)  )
+count_paragraphs/sentances/words   (no equivalent, user can write function)
+date_format    (use &#39;time&#39; module or download Egenix&#39;s mx.DateTime)
+default    ($getVar(&#39;varName&#39;, &#39;default value&#39;) )
+escape: html encode    ($cgi.escape(VALUE) )
+escape: url encode    ($urllib.quote_plus(VALUE) )
+escape: hex encode   (no equivalent?  user can write function)
+escape: hex entity encode  (no equivalent?  user can write function)
+indent: indent all lines of a var&#39;s output  (may be part of future
+     #indent directive)
+lower    ($STRING.lower() )
+regex_replace   (&#39;re&#39; module)
+replace    ($STRING.replace(OLD, NEW, MAXSPLIT) )
+spacify   (#echo &quot;SEPARATOR&quot;.join(SEQUENCE) )
+string_format   (#echo &quot;%.2f&quot; % FLOAT , etc.)
+strip_tags  (no equivalent, user can write function to strip HTML tags,
+     or customize the WebSafe filter)
+truncate   (no equivalent, user can write function)
+upper   ($STRING.upper() )
+wordwrap  (&#39;writer&#39; module, or a new module coming in Python 2.3)
+</pre></div>
+</div>
+<p>Some of these modifiers could be added to the super output filter
+we want to write someday.</p>
+</div>
+<div class="section" id="cheetah-vs-phplib-s-template-class">
+<h2>Cheetah vs. PHPLib&#8217;s Template class<a class="headerlink" href="#cheetah-vs-phplib-s-template-class" title="Permalink to this headline">¶</a></h2>
+<p>(comparisons.php)</p>
+<p>PHPLib ((<a class="reference external" href="http://phplib.netuse.de/">http://phplib.netuse.de/</a>) is a collection of classes for
+various web objects (authentication, shopping cart, sessions, etc),
+but what we&#8217;re interested in is the {Template} object. It&#8217;s much
+more primitive than Smarty, and was based on an old Perl template
+class. In fact, one of the precursors to Cheetah was based on it
+too. Differences from Cheetah:</p>
+<ul class="simple">
+<li>Templates consist of text with {{placeholders}} in braces.</li>
+<li>Instead of a searchList, there is one flat namespace. Every
+variable must be assigned via the {set_var} method. However, you
+can pass this method an array (dictionary) of several variables at
+once.</li>
+<li>You cannot embed lookups or calculations into the template.
+Every placeholder must be an exact variable name.</li>
+<li>There are no directives. You must do all display logic (if, for,
+etc) in the calling routine.</li>
+<li>There is, however, a &#8220;block&#8221; construct. A block is a portion of
+text between the comment markers {&lt;!- BEGIN blockName -&gt; ... &lt;!-
+END blockName&gt;}. The {set_block} method extracts this text into a
+namespace variable and puts a placeholder referring to it in the
+template. This has a few parallels with Cheetah&#8217;s {#block}
+directive but is overall quite different.</li>
+<li>To do the equivalent of {#if}, extract the block. Then if true,
+do nothing. If false, assign the empty string to the namespace
+variable.</li>
+<li>To do the equivalent of {#for}, extract the block. Set any
+namespace variables needed inside the loop. To parse one iteration,
+use the {parse} method to fill the block variable (a mini-template)
+into another namespace variable, appending to it. Refresh the
+namespace variables needed inside the loop and parse again; repeat
+for each iteration. You&#8217;ll end up with a mini-result that will be
+plugged into the main template&#8217;s placeholder.</li>
+<li>To read a template definition from a file, use the {set_file}
+method. This places the file&#8217;s content in a namespace variable. To
+read a template definition from a string, assign it to a namespace
+variable.</li>
+<li>Thus, for complicated templates, you are doing a lot of
+recursive block filling and file reading and parsing mini-templates
+all into one flat namespace as you finally build up values for the
+main template. In Cheetah, all this display logic can be embedded
+into the template using directives, calling out to Python methods
+for the more complicated tasks.</li>
+<li>Although you can nest blocks in the template, it becomes tedious
+and arguably hard to read, because all blocks have identical
+syntax. Unless you choose your block names carefully and put
+comments around them, it&#8217;s hard to tell which blocks are if-blocks
+and which are for-blocks, or what their nesting order is.</li>
+<li>PHPLib templates do not have caching, output filters, etc.</li>
+</ul>
+</div>
+<div class="section" id="cheetah-vs-psp-php-asp-jsp-embperl-etc">
+<h2>Cheetah vs. PSP, PHP, ASP, JSP, Embperl, etc.<a class="headerlink" href="#cheetah-vs-psp-php-asp-jsp-embperl-etc" title="Permalink to this headline">¶</a></h2>
+<p>(comparisons.pspEtc)</p>
+<dl class="docutils">
+<dt>Webware&#8217;s PSP Component</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://webware.sourceforge.net/Webware/PSP/Docs/">http://webware.sourceforge.net/Webware/PSP/Docs/</a></li>
+</ul>
+</dd>
+<dt>Tomcat JSP Information</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://jakarta.apache.org/tomcat/index.html">http://jakarta.apache.org/tomcat/index.html</a></li>
+</ul>
+</dd>
+<dt>ASP Information at ASP101</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://www.asp101.com/">http://www.asp101.com/</a></li>
+</ul>
+</dd>
+<dt>Embperl</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://perl.apache.org/embperl/">http://perl.apache.org/embperl/</a></li>
+</ul>
+</dd>
+</dl>
+<p>Here&#8217;s a basic Cheetah example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>&lt;TABLE&gt;
+#for $client in $service.clients
+&lt;TR&gt;
+&lt;TD&gt;$client.surname, $client.firstname&lt;/TD&gt;
+&lt;TD&gt;&lt;A HREF=&quot;mailto:$client.email&quot; &gt;$client.email&lt;/A&gt;&lt;/TD&gt;
+&lt;/TR&gt;
+#end for
+&lt;/TABLE&gt;
+</pre></div>
+</div>
+<p>Compare this with PSP:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">TABLE</span><span class="o">&gt;</span>
+<span class="o">&lt;%</span> <span class="k">for</span> <span class="n">client</span> <span class="ow">in</span> <span class="n">service</span><span class="o">.</span><span class="n">clients</span><span class="p">():</span> <span class="o">%&gt;</span>
+<span class="o">&lt;</span><span class="n">TR</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">TD</span><span class="o">&gt;&lt;%=</span><span class="n">client</span><span class="o">.</span><span class="n">surname</span><span class="p">()</span><span class="o">%&gt;</span><span class="p">,</span> <span class="o">&lt;%=</span><span class="n">client</span><span class="o">.</span><span class="n">firstname</span><span class="p">()</span><span class="o">%&gt;&lt;/</span><span class="n">TD</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">TD</span><span class="o">&gt;&lt;</span><span class="n">A</span> <span class="n">HREF</span><span class="o">=</span><span class="s2">&quot;mailto:&lt;%=client.email()%&gt;&quot;</span><span class="o">&gt;&lt;%=</span><span class="n">client</span><span class="o">.</span><span class="n">email</span><span class="p">()</span><span class="o">%&gt;&lt;/</span><span class="n">A</span><span class="o">&gt;&lt;/</span><span class="n">TD</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">TR</span><span class="o">&gt;</span>
+<span class="o">&lt;%</span><span class="n">end</span><span class="o">%&gt;</span>
+<span class="o">&lt;/</span><span class="n">TABLE</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../documentation.html" title="Cheetah Recipes"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="examples.html" title="Examples"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User&#8217;s Guide</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 09, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+  </body>
+</html>

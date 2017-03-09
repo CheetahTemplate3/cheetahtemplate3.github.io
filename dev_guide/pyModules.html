@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>.py Template Modules &#8212; Cheetah - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0 dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Directives: Comments" href="comments.html" />
+    <link rel="prev" title="A BNF Grammar of Cheetah" href="bnf.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="comments.html" title="Directives: Comments"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="bnf.html" title="A BNF Grammar of Cheetah"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer&#8217;s Guide</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">.py Template Modules</a><ul>
+<li><a class="reference internal" href="#an-example">An example</a></li>
+<li><a class="reference internal" href="#a-walk-through-the-example">A walk through the example</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="bnf.html"
+                        title="previous chapter">A BNF Grammar of Cheetah</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="comments.html"
+                        title="next chapter">Directives: Comments</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/dev_guide/pyModules.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="py-template-modules">
+<h1>.py Template Modules<a class="headerlink" href="#py-template-modules" title="Permalink to this headline">¶</a></h1>
+<p>(pyModules)</p>
+<p>This chapter examines the structure of a .py template module. The
+following few chapters will then show how each placeholder and
+directive affects the generated Python code.</p>
+<div class="section" id="an-example">
+<h2>An example<a class="headerlink" href="#an-example" title="Permalink to this headline">¶</a></h2>
+<p>(pyModules.example)</p>
+<p>Our first template follows a long noble tradition in computer
+tutorials. It produces a familiar, friendly greeting. Here&#8217;s the
+template:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Hello, world!
+</pre></div>
+</div>
+<p>... the output:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Hello, world!
+</pre></div>
+</div>
+<p>... and the .py template module cheetah-compile produced, with line
+numbers added:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span> <span class="mi">1</span> <span class="c1">#!/usr/bin/env python</span>
+
+ <span class="mi">2</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2"> 3 Autogenerated by CHEETAH: The Python-Powered Template Engine</span>
+<span class="s2"> 4  CHEETAH VERSION: 0.9.12</span>
+<span class="s2"> 5  Generation time: Sat Apr 20 14:27:47 2002</span>
+<span class="s2"> 6    Source file: x.tmpl</span>
+<span class="s2"> 7    Source file last modified: Wed Apr 17 22:10:59 2002</span>
+<span class="s2"> 8 &quot;&quot;&quot;</span>
+
+ <span class="mi">9</span> <span class="n">__CHEETAH_genTime__</span> <span class="o">=</span> <span class="s1">&#39;Sat Apr 20 14:27:47 2002&#39;</span>
+<span class="mi">10</span> <span class="n">__CHEETAH_src__</span> <span class="o">=</span> <span class="s1">&#39;x.tmpl&#39;</span>
+<span class="mi">11</span> <span class="n">__CHEETAH_version__</span> <span class="o">=</span> <span class="s1">&#39;0.9.12&#39;</span>
+
+<span class="mi">12</span> <span class="c1">##################################################</span>
+<span class="mi">13</span> <span class="c1">## DEPENDENCIES</span>
+
+<span class="mi">14</span> <span class="kn">import</span> <span class="nn">sys</span>
+<span class="mi">15</span> <span class="kn">import</span> <span class="nn">os</span>
+<span class="mi">16</span> <span class="kn">import</span> <span class="nn">os.path</span>
+<span class="mi">17</span> <span class="kn">from</span> <span class="nn">os.path</span> <span class="k">import</span> <span class="n">getmtime</span><span class="p">,</span> <span class="n">exists</span>
+<span class="mi">18</span> <span class="kn">import</span> <span class="nn">time</span>
+<span class="mi">19</span> <span class="kn">import</span> <span class="nn">types</span>
+<span class="mi">20</span> <span class="kn">from</span> <span class="nn">Cheetah.Template</span> <span class="k">import</span> <span class="n">Template</span>
+<span class="mi">21</span> <span class="kn">from</span> <span class="nn">Cheetah.DummyTransaction</span> <span class="k">import</span> <span class="n">DummyTransaction</span>
+<span class="mi">22</span> <span class="kn">from</span> <span class="nn">Cheetah.NameMapper</span> <span class="k">import</span> <span class="n">NotFound</span><span class="p">,</span> <span class="n">valueForName</span><span class="p">,</span>
+          <span class="n">valueFromSearchList</span>
+<span class="mi">23</span> <span class="kn">import</span> <span class="nn">Cheetah.Filters</span> <span class="k">as</span> <span class="nn">Filters</span>
+<span class="mi">24</span> <span class="kn">import</span> <span class="nn">Cheetah.ErrorCatchers</span> <span class="k">as</span> <span class="nn">ErrorCatchers</span>
+
+<span class="mi">25</span> <span class="c1">##################################################</span>
+<span class="mi">26</span> <span class="c1">## MODULE CONSTANTS</span>
+
+<span class="mi">27</span> <span class="k">try</span><span class="p">:</span>
+<span class="mi">28</span>     <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span>
+<span class="mi">29</span> <span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+<span class="mi">30</span>     <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">==</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="mi">31</span> <span class="c1">##################################################</span>
+<span class="mi">32</span> <span class="c1">## CLASSES</span>
+
+<span class="mi">33</span> <span class="k">class</span> <span class="nc">x</span><span class="p">(</span><span class="n">Template</span><span class="p">):</span>
+<span class="mi">34</span>     <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">35</span>
+<span class="s2">36     Autogenerated by CHEETAH: The Python-Powered Template Engine</span>
+<span class="s2">37     &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">38</span>     <span class="c1">##################################################</span>
+<span class="mi">39</span>     <span class="c1">## GENERATED METHODS</span>
+
+
+<span class="mi">40</span>     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">KWs</span><span class="p">):</span>
+<span class="mi">41</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">42</span>
+<span class="s2">43         &quot;&quot;&quot;</span>
+
+<span class="mi">44</span>         <span class="n">Template</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">KWs</span><span class="p">)</span>
+<span class="mi">45</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_filePath</span> <span class="o">=</span> <span class="s1">&#39;x.tmpl&#39;</span>
+<span class="mi">46</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_fileMtime</span> <span class="o">=</span> <span class="mi">1019106659</span>
+
+<span class="mi">47</span>     <span class="k">def</span> <span class="nf">respond</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+<span class="mi">48</span>             <span class="n">trans</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="mi">49</span>             <span class="n">dummyTrans</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="mi">50</span>             <span class="n">VFS</span><span class="o">=</span><span class="n">valueFromSearchList</span><span class="p">,</span>
+<span class="mi">51</span>             <span class="n">VFN</span><span class="o">=</span><span class="n">valueForName</span><span class="p">,</span>
+<span class="mi">52</span>             <span class="n">getmtime</span><span class="o">=</span><span class="n">getmtime</span><span class="p">,</span>
+<span class="mi">53</span>             <span class="n">currentTime</span><span class="o">=</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">):</span>
+
+
+<span class="mi">54</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">55         This is the main method generated by Cheetah</span>
+<span class="s2">56         &quot;&quot;&quot;</span>
+
+<span class="mi">57</span>         <span class="k">if</span> <span class="ow">not</span> <span class="n">trans</span><span class="p">:</span>
+<span class="mi">58</span>             <span class="n">trans</span> <span class="o">=</span> <span class="n">DummyTransaction</span><span class="p">()</span>
+<span class="mi">59</span>             <span class="n">dummyTrans</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="mi">60</span>         <span class="n">write</span> <span class="o">=</span> <span class="n">trans</span><span class="o">.</span><span class="n">response</span><span class="p">()</span><span class="o">.</span><span class="n">write</span>
+<span class="mi">61</span>         <span class="n">SL</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_searchList</span>
+<span class="mi">62</span>         <span class="nb">filter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_currentFilter</span>
+<span class="mi">63</span>         <span class="n">globalSetVars</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_globalSetVars</span>
+<span class="mi">64</span>
+<span class="mi">65</span>         <span class="c1">########################################</span>
+<span class="mi">66</span>         <span class="c1">## START - generated method body</span>
+<span class="mi">67</span>
+<span class="mi">68</span>         <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_filePath</span><span class="p">)</span> <span class="ow">and</span> <span class="n">getmtime</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_filePath</span><span class="p">)</span> <span class="o">&gt;</span> \
+                   <span class="bp">self</span><span class="o">.</span><span class="n">_fileMtime</span><span class="p">:</span>
+<span class="mi">69</span>             <span class="bp">self</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_filePath</span><span class="p">)</span>
+<span class="mi">70</span>             <span class="n">write</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mainCheetahMethod_for_x</span><span class="p">)</span>
+                       <span class="p">(</span><span class="n">trans</span><span class="o">=</span><span class="n">trans</span><span class="p">))</span>
+<span class="mi">71</span>             <span class="k">if</span> <span class="n">dummyTrans</span><span class="p">:</span>
+<span class="mi">72</span>                 <span class="k">return</span> <span class="n">trans</span><span class="o">.</span><span class="n">response</span><span class="p">()</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+<span class="mi">73</span>             <span class="k">else</span><span class="p">:</span>
+<span class="mi">74</span>                 <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+<span class="mi">75</span>         <span class="n">write</span><span class="p">(</span><span class="s1">&#39;Hello, world!</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="mi">76</span>
+<span class="mi">77</span>         <span class="c1">########################################</span>
+<span class="mi">78</span>         <span class="c1">## END - generated method body</span>
+<span class="mi">79</span>
+<span class="mi">80</span>         <span class="k">if</span> <span class="n">dummyTrans</span><span class="p">:</span>
+<span class="mi">81</span>             <span class="k">return</span> <span class="n">trans</span><span class="o">.</span><span class="n">response</span><span class="p">()</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+<span class="mi">82</span>         <span class="k">else</span><span class="p">:</span>
+<span class="mi">83</span>             <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">84</span>
+<span class="mi">85</span>     <span class="c1">##################################################</span>
+<span class="mi">86</span>     <span class="c1">## GENERATED ATTRIBUTES</span>
+
+
+<span class="mi">87</span>     <span class="fm">__str__</span> <span class="o">=</span> <span class="n">respond</span>
+
+<span class="mi">88</span>     <span class="n">_mainCheetahMethod_for_x</span><span class="o">=</span> <span class="s1">&#39;respond&#39;</span>
+
+
+<span class="mi">89</span> <span class="c1"># CHEETAH was developed by Tavis Rudd, Chuck Esterbrook, Ian Bicking</span>
+       <span class="c1">#     and Mike Orr;</span>
+<span class="mi">90</span> <span class="c1"># with code, advice and input from many other volunteers.</span>
+<span class="mi">91</span> <span class="c1"># For more information visit http://www.CheetahTemplate.org</span>
+
+<span class="mi">92</span> <span class="c1">##################################################</span>
+<span class="mi">93</span> <span class="c1">## if run from command line:</span>
+<span class="mi">94</span> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="mi">95</span>     <span class="n">x</span><span class="p">()</span><span class="o">.</span><span class="n">runAsMainProgram</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(I added the line numbers for this Guide, and split a few lines to
+fit the page width. The continuation lines don&#8217;t have line numbers,
+and I added indentation, backslashes and &#8216;#&#8217; as necessary to make
+the result a valid Python program.)</p>
+<p>The examples were generated from CVS versions of Cheetah between
+0.9.12 and 0.9.14.</p>
+</div>
+<div class="section" id="a-walk-through-the-example">
+<h2>A walk through the example<a class="headerlink" href="#a-walk-through-the-example" title="Permalink to this headline">¶</a></h2>
+<p>(pyModules.walk)</p>
+<p>Lines 20-24 are the Cheetah-specific imports. Line 33 introduces
+our generated class, {x}, a subclass of {Template}. It&#8217;s called x
+because the source file was x.tmpl.</p>
+<p>Lines 40-46 are the {.__init__} method called when the template
+is instantiated or used as a Webware servlet, or when the module is
+run as a standalone program. We can see it calling its superclass
+constructor and setting {._filePath} and {._fileMtime} to the
+filename and modification time (in Unix ticks) of the source .tmpl
+file.</p>
+<p>Lines 47-84 are the main method {.respond}, the one that fills the
+template. Normally you call it without arguments, but Webware calls
+it with a Webware {Transaction} object representing the current
+request. Lines 57-59 set up the {trans} variable. If a real or
+dummy transaction is passed in, the method uses it. Otherwise (if
+the {trans} argument is {None}), the method creates a
+{DummyTransaction} instance. {dummyTrans} is a flag that just tells
+whether a dummy transaction is in effect; it&#8217;ll be used at the end
+of the method.</p>
+<p>The other four {.respond} arguments aren&#8217;t anything you&#8217;d ever want
+to pass in; they exist solely to speed up access to these
+frequently-used global functions. This is a standard Python trick
+described in question 4.7 of the Python FAQ
+(<a class="reference external" href="http://www.python.org/cgi-bin/faqw.py">http://www.python.org/cgi-bin/faqw.py</a>). {VFS} and {VFN} are the
+functions that give your template the benefits of NameMapper
+lookup, such as the ability to use the searchList.</p>
+<p>Line 60 initializes the {write} variable. This important variable
+is discussed below.</p>
+<p>Lines 60-63 initialize a few more local variables. {SL} is the
+searchList. {filter} is the current output filter. {globalSetVars}
+are the variables that have been defined with {#set global}.</p>
+<p>The comments at lines 65 and 78 delimit the start and end of the
+code that varies with each template. The code outside this region
+is identical in all template modules. That&#8217;s not quite true -
+{#import} for instance generates additional {import} statements at
+the top of the module - but it&#8217;s true enough for the most part.</p>
+<p>Lines 68-74 exist only if the template source was a named file
+rather than a string or file object. The stanza recompiles the
+template if the source file has changed. Lines 70-74 seem to be
+redundant with 75-83: both fill the template and send the output.
+The reason the first set of lines exists is because the second set
+may become invalid when the template is recompiled. (This is for {
+re} compilation only. The initial compilation happened in the
+{.__init__} method if the template wasn&#8217;t precompiled.)</p>
+<p>Line 75 is the most interesting line in this module. It&#8217;s a direct
+translation of what we put in the template definition,
+&#8220;Hello, world!&#8221; Here the content is a single string literal.
+{write} looks like an ordinary function call, but remember that
+line 60 made it an alias to {trans.response().write}, a method in
+the transaction. The next few chapters describe how the different
+placeholders and directives influence this portion of the generated
+class.</p>
+<p>Lines 80-83 finish the template filling. If {trans} is a real
+Webware transaction, {write} has already sent the output to Webware
+for handling, so we return {&#8220;&#8221;}. If {trans} is a dummy transaction,
+{write} has been accumulating the output in a Python {StringIO}
+object rather than sending it anywhere, so we have to return it.</p>
+<p>Line 83 is the end of the {.respond} method.</p>
+<p>Line 87 makes code{.__str__} an alias for the main method, so
+that you can {print} it or apply {str} to it and it will fill the
+template. Line 88 gives the name of the main method, because
+sometimes it&#8217;s not {.respond}.</p>
+<p>Lines 94-95 allow the module to be run directly as a script.
+Essentially, they process the command-line arguments and them make
+the template fill itself.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="comments.html" title="Directives: Comments"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="bnf.html" title="A BNF Grammar of Cheetah"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer&#8217;s Guide</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 09, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+  </body>
+</html>

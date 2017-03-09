@@ -1,0 +1,498 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Generating, Caching and Filtering Output &#8212; Cheetah - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0 dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Import, Inheritance, Declaration and Assignment" href="inheritanceEtc.html" />
+    <link rel="prev" title="Comments" href="comments.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="inheritanceEtc.html" title="Import, Inheritance, Declaration and Assignment"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="comments.html" title="Comments"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User&#8217;s Guide</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Generating, Caching and Filtering Output</a><ul>
+<li><a class="reference internal" href="#output-from-complex-expressions-echo">Output from complex expressions: #echo</a></li>
+<li><a class="reference internal" href="#executing-expressions-without-output-silent">Executing expressions without output: #silent</a></li>
+<li><a class="reference internal" href="#one-line-if">One-line #if</a></li>
+<li><a class="reference internal" href="#caching-output">Caching Output</a><ul>
+<li><a class="reference internal" href="#caching-individual-placeholders">Caching individual placeholders</a></li>
+<li><a class="reference internal" href="#caching-entire-regions">Caching entire regions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#raw">#raw</a></li>
+<li><a class="reference internal" href="#include">#include</a></li>
+<li><a class="reference internal" href="#slurp">#slurp</a></li>
+<li><a class="reference internal" href="#indent">#indent</a></li>
+<li><a class="reference internal" href="#ouput-filtering-and-filter">Ouput Filtering and #filter</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="comments.html"
+                        title="previous chapter">Comments</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="inheritanceEtc.html"
+                        title="next chapter">Import, Inheritance, Declaration and Assignment</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/users_guide/output.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="generating-caching-and-filtering-output">
+<h1>Generating, Caching and Filtering Output<a class="headerlink" href="#generating-caching-and-filtering-output" title="Permalink to this headline">¶</a></h1>
+<p>(output)</p>
+<div class="section" id="output-from-complex-expressions-echo">
+<h2>Output from complex expressions: #echo<a class="headerlink" href="#output-from-complex-expressions-echo" title="Permalink to this headline">¶</a></h2>
+<p>(output.echo)</p>
+<p>Syntax:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#echo EXPR</span>
+</pre></div>
+</div>
+<p>The {#echo} directive is used to echo the output from expressions
+that can&#8217;t be written as simple $placeholders.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Here</span> <span class="ow">is</span> <span class="n">my</span> <span class="c1">#echo &#39;, &#39;.join([&#39;silly&#39;]*5) # example</span>
+</pre></div>
+</div>
+<p>This produces:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Here</span> <span class="ow">is</span> <span class="n">my</span> <span class="n">silly</span><span class="p">,</span> <span class="n">silly</span><span class="p">,</span> <span class="n">silly</span><span class="p">,</span> <span class="n">silly</span><span class="p">,</span> <span class="n">silly</span> <span class="n">example</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="executing-expressions-without-output-silent">
+<h2>Executing expressions without output: #silent<a class="headerlink" href="#executing-expressions-without-output-silent" title="Permalink to this headline">¶</a></h2>
+<p>(output.silent)</p>
+<p>Syntax:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#silent EXPR</span>
+</pre></div>
+</div>
+<p>{#silent} is the opposite of {#echo}. It executes an expression but
+discards the output.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#silent $myList.reverse()</span>
+<span class="c1">#silent $myList.sort()</span>
+<span class="n">Here</span> <span class="ow">is</span> <span class="c1">#silent $covertOperation() # nothing</span>
+</pre></div>
+</div>
+<p>If your template requires some Python code to be executed at the
+beginning; (e.g., to calculate placeholder values, access a
+database, etc), you can put it in a &#8220;doEverything&#8221; method you
+inherit, and call this method using {#silent} at the top of the
+template.</p>
+</div>
+<div class="section" id="one-line-if">
+<h2>One-line #if<a class="headerlink" href="#one-line-if" title="Permalink to this headline">¶</a></h2>
+<p>(output.oneLineIf)</p>
+<p>Syntax:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#if EXPR1 then EXPR2 else EXPR3#</span>
+</pre></div>
+</div>
+<p>The {#if} flow-control directive (section flowControl.if) has a
+one-line counterpart akin to Perl&#8217;s and C&#8217;s {?:} operator. If
+{EXPR1} is true, it evaluates {EXPR2} and outputs the result (just
+like {#echo EXPR2#}). Otherwise it evaluates {EXPR3} and outputs
+that result. This directive is short-circuiting, meaning the
+expression that isn&#8217;t needed isn&#8217;t evaluated.</p>
+<p>You MUST include both &#8216;then&#8217; and &#8216;else&#8217;. If this doesn&#8217;t work for
+you or you don&#8217;t like the style use multi-line {#if} directives
+(section flowControl.if).</p>
+<p>The trailing {#} is the normal end-of-directive character. As usual
+it may be omitted if there&#8217;s nothing after the directive on the
+same line.</p>
+</div>
+<div class="section" id="caching-output">
+<h2>Caching Output<a class="headerlink" href="#caching-output" title="Permalink to this headline">¶</a></h2>
+<p>(output.caching)</p>
+<div class="section" id="caching-individual-placeholders">
+<h3>Caching individual placeholders<a class="headerlink" href="#caching-individual-placeholders" title="Permalink to this headline">¶</a></h3>
+<p>(output.caching.placeholders)</p>
+<p>By default, the values of each $placeholder is retrieved and
+interpolated for every request. However, it&#8217;s possible to cache the
+values of individual placeholders if they don&#8217;t change very often,
+in order to speed up the template filling.</p>
+<p>To cache the value of a single {$placeholder}, add an asterisk
+after the $; e.g., {$*var}. The first time the template is filled,
+{$var} is looked up. Then whenever the template is filled again,
+the cached value is used instead of doing another lookup.</p>
+<p>The {$*} format caches &#8220;forever&#8221;; that is, as long as the template
+instance remains in memory. It&#8217;s also possible to cache for a
+certain time period using the form {$*&lt;interval&gt;*variable}, where
+{&lt;interval&gt;} is the interval. The time interval can be specified in
+seconds (5s), minutes (15m), hours (3h), days (2d) or weeks (1.5w).
+The default is minutes.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>&lt;HTML&gt;
+&lt;HEAD&gt;&lt;TITLE&gt;$title&lt;/TITLE&gt;&lt;/HEAD&gt;
+&lt;BODY&gt;
+
+$var ${var}           ## dynamic - will be reinterpolated for each request
+$*var2 $*{var2}       ## static - will be interpolated only once at start-up
+$*5*var3 $*5*{var3}   ## timed refresh - will be updated every five minutes.
+
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</pre></div>
+</div>
+<p>Note that &#8220;every five minutes&#8221; in the example really means every
+five minutes: the variable is looked up again when the time limit
+is reached, whether the template is being filled that frequently or
+not. Keep this in mind when setting refresh times for CPU-intensive
+or I/O intensive operations.</p>
+<p>If you&#8217;re using the long placeholder syntax, <code class="docutils literal"><span class="pre">${}</span></code>, the braces go
+only around the placeholder name: <code class="docutils literal"><span class="pre">$*.5h*{var.func('arg')}</span></code>.</p>
+<p>Sometimes it&#8217;s preferable to explicitly invalidate a cached item
+whenever you say so rather than at certain time intervals. You
+can&#8217;t do this with individual placeholders, but you can do it with
+cached regions, which will be described next.</p>
+</div>
+<div class="section" id="caching-entire-regions">
+<h3>Caching entire regions<a class="headerlink" href="#caching-entire-regions" title="Permalink to this headline">¶</a></h3>
+<p>(output.caching.regions)</p>
+<p>Syntax:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#cache [id=EXPR] [timer=EXPR] [test=EXPR]</span>
+<span class="c1">#end cache</span>
+</pre></div>
+</div>
+<p>The {#cache} directive is used to cache a region of content in a
+template. The region is cached as a single unit, after placeholders
+and directives inside the region have been evaluated. If there are
+any {$*&lt;interval&gt;*var} placholders inside the cache region, they
+are refreshed only when { both} the cache region { and} the
+placeholder are simultaneously due for a refresh.</p>
+<p>Caching regions offers more flexibility than caching individual
+placeholders. You can specify the refresh interval using a
+placeholder or expression, or refresh according to other criteria
+rather than a certain time interval.</p>
+<p>{#cache} without arguments caches the region statically, the same
+way as {$*var}. The region will not be automatically refreshed.</p>
+<p>To refresh the region at an interval, use the {timer=EXPRESSION}
+argument, equivalent to {$*&lt;interval&gt;*}. The expression should
+evaluate to a number or string that is a valid interval (e.g., 0.5,
+&#8216;3m&#8217;, etc).</p>
+<p>To refresh whenever an expression is true, use {test=EXPRESSION}.
+The expression can be a method/function returning true or false, a
+boolean placeholder, several of these joined by {and} and/or {or},
+or any other expression. If the expression contains spaces, it&#8217;s
+easier to read if you enclose it in {()}, but this is not
+required.</p>
+<p>To refresh whenever you say so, use {id=EXPRESSION}. Your program
+can then call {.refreshCache(ID)} whenever it wishes. This is
+useful if the cache depends on some external condition that changes
+infrequently but has just changed now.</p>
+<p>You can combine arguments by separating them with commas. For
+instance, you can specify both {id=} and {interval=}, or {id=} and
+{test=}. (You can also combine interval and test although it&#8217;s not
+very useful.) However, repeating an argument is undefined.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>#cache
+This is a static cache.  It will not be refreshed.
+$a $b $c
+#end cache
+
+#cache timer=&#39;30m&#39;, id=&#39;cache1&#39;
+#for $cust in $customers
+$cust.name:
+$cust.street - $cust.city
+#end for
+#end cache
+
+#cache id=&#39;sidebar&#39;, test=$isDBUpdated
+... left sidebar HTML ...
+#end cache
+
+#cache id=&#39;sidebar2&#39;, test=($isDBUpdated or $someOtherCondition)
+... right sidebar HTML ...
+#end cache
+</pre></div>
+</div>
+<p>The {#cache} directive cannot be nested.</p>
+<p>We are planning to add a {&#8216;varyBy&#8217;} keyword argument in the future
+that will allow a separate cache instances to be created for a
+variety of conditions, such as different query string parameters or
+browser types. This is inspired by ASP.net&#8217;s varyByParam and
+varyByBrowser output caching keywords.</p>
+</div>
+</div>
+<div class="section" id="raw">
+<h2>#raw<a class="headerlink" href="#raw" title="Permalink to this headline">¶</a></h2>
+<p>(output.raw)</p>
+<p>Syntax:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#raw</span>
+<span class="c1">#end raw</span>
+</pre></div>
+</div>
+<p>Any section of a template definition that is inside a {#raw ...
+#end raw} tag pair will be printed verbatim without any parsing of
+$placeholders or other directives. This can be very useful for
+debugging, or for Cheetah examples and tutorials.</p>
+<p>{#raw} is conceptually similar to HTML&#8217;s {&lt;PRE&gt;} tag and LaTeX&#8217;s {
+verbatim{}} tag, but unlike those tags, {#raw} does not cause the
+body to appear in a special font or typeface. It can&#8217;t, because
+Cheetah doesn&#8217;t know what a font is.</p>
+</div>
+<div class="section" id="include">
+<h2>#include<a class="headerlink" href="#include" title="Permalink to this headline">¶</a></h2>
+<p>(output.include)</p>
+<p>Syntax:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#include [raw] FILENAME_EXPR</span>
+<span class="c1">#include [raw] source=STRING_EXPR</span>
+</pre></div>
+</div>
+<p>The {#include} directive is used to include text from outside the
+template definition. The text can come from an external file or
+from a {$placeholder} variable. When working with external files,
+Cheetah will monitor for changes to the included file and update as
+necessary.</p>
+<p>This example demonstrates its use with external files:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#include &quot;includeFileName.txt&quot;</span>
+</pre></div>
+</div>
+<p>The content of &#8220;includeFileName.txt&#8221; will be parsed for Cheetah
+syntax.</p>
+<p>And this example demonstrates use with {$placeholder} variables:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#include source=$myParseText</span>
+</pre></div>
+</div>
+<p>The value of {$myParseText} will be parsed for Cheetah syntax. This
+is not the same as simply placing the $placeholder tag
+&#8220;{$myParseText}&#8221; in the template definition. In the latter case,
+the value of $myParseText would not be parsed.</p>
+<p>By default, included text will be parsed for Cheetah tags. The
+argument &#8220;{raw}&#8221; can be used to suppress the parsing.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#include raw &quot;includeFileName.txt&quot;</span>
+<span class="c1">#include raw source=$myParseText</span>
+</pre></div>
+</div>
+<p>Cheetah wraps each chunk of {#include} text inside a nested
+{Template} object. Each nested template has a copy of the main
+template&#8217;s searchList. However, {#set} variables are visible across
+includes only if the defined using the {#set global} keyword.</p>
+<p>All directives must be balanced in the include file. That is, if
+you start a {#for} or {#if} block inside the include, you must end
+it in the same include. (This is unlike PHP, which allows
+unbalanced constructs in include files.)</p>
+</div>
+<div class="section" id="slurp">
+<h2>#slurp<a class="headerlink" href="#slurp" title="Permalink to this headline">¶</a></h2>
+<p>(output.slurp)</p>
+<p>Syntax:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#slurp</span>
+</pre></div>
+</div>
+<p>The {#slurp} directive eats up the trailing newline on the line it
+appears in, joining the following line onto the current line.</p>
+<p>It is particularly useful in {#for} loops:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>#for $i in range(5)
+$i #slurp
+#end for
+</pre></div>
+</div>
+<p>outputs:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="indent">
+<h2>#indent<a class="headerlink" href="#indent" title="Permalink to this headline">¶</a></h2>
+<p>(output.indent)</p>
+<p>This directive is not implemented yet. When/if it&#8217;s completed, it
+will allow you to</p>
+<ol class="arabic simple">
+<li>indent your template definition in a natural way (e.g., the
+bodies of {#if} blocks) without affecting the output</li>
+<li>add indentation to output lines without encoding it literally in
+the template definition. This will make it easier to use Cheetah to
+produce indented source code programmatically (e.g., Java or Python
+source code).</li>
+</ol>
+<p>There is some experimental code that recognizes the {#indent}
+directive with options, but the options are purposely undocumented
+at this time. So pretend it doesn&#8217;t exist. If you have a use for
+this feature and would like to see it implemented sooner rather
+than later, let us know on the mailing list.</p>
+<p>The latest specification for the future {#indent} directive is in
+the TODO file in the Cheetah source distribution.</p>
+</div>
+<div class="section" id="ouput-filtering-and-filter">
+<h2>Ouput Filtering and #filter<a class="headerlink" href="#ouput-filtering-and-filter" title="Permalink to this headline">¶</a></h2>
+<p>(output.filter)</p>
+<p>Syntax:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#filter FILTER_CLASS_NAME</span>
+<span class="c1">#filter $PLACEHOLDER_TO_A_FILTER_INSTANCE</span>
+<span class="c1">#filter None</span>
+</pre></div>
+</div>
+<p>Output from $placeholders is passed through an ouput filter. The
+default filter merely returns a string representation of the
+placeholder value, unless the value is {None}, in which case the
+filter returns an empty string. Only top-level placeholders invoke
+the filter; placeholders inside expressions do not.</p>
+<p>Certain filters take optional arguments to modify their behaviour.
+To pass arguments, use the long placeholder syntax and precede each
+filter argument by a comma. By convention, filter arguments don&#8217;t
+take a {$} prefix, to avoid clutter in the placeholder tag which
+already has plenty of dollar signs. For instance, the MaxLen filter
+takes an argument &#8216;maxlen&#8217;:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>${placeholderName, maxlen=20}
+${functionCall($functionArg), maxlen=$myMaxLen}
+</pre></div>
+</div>
+<p>To change the output filter, use the {&#8216;filter&#8217;} keyword to the
+{Template} class constructor, or the {#filter} directive at runtime
+(details below). You may use {#filter} as often as you wish to
+switch between several filters, if certain {$placeholders} need one
+filter and other {$placeholders} need another.</p>
+<p>The standard filters are in the module {Cheetah.Filters}. Cheetah
+currently provides:</p>
+<blockquote>
+<div><p>The default filter, which converts None to &#8216;&#8217; and everything else
+to {str(whateverItIs)}. This is the base class for all other
+filters, and the minimum behaviour for all filters distributed with
+Cheetah.</p>
+<p>Same.</p>
+<p>Same, but truncate the value if it&#8217;s longer than a certain length.
+Use the &#8216;maxlen&#8217; filter argument to specify the length, as in the
+examples above. If you don&#8217;t specify &#8216;maxlen&#8217;, the value will not
+be truncated.</p>
+<p>Output a &#8220;pageful&#8221; of a long string. After the page, output HTML
+hyperlinks to the previous and next pages. This filter uses several
+filter arguments and environmental variables, which have not been
+documented yet.</p>
+<p>Same as default, but convert HTML-sensitive characters
+(&#8216;<span class="math">$<$</span>&#8216;, &#8216;&amp;&#8217;, &#8216;<span class="math">$>$</span>&#8216;) to HTML entities so that the
+browser will display them literally rather than interpreting them
+as HTML tags. This is useful with database values or user input
+that may contain sensitive characters. But if your values contain
+embedded HTML tags you want to preserve, you do not want this
+filter.</p>
+<p>The filter argument &#8216;also&#8217; may be used to specify additional
+characters to escape. For instance, say you want to ensure a value
+displays all on one line. Escape all spaces in the value with
+&#8216;&amp;nbsp&#8217;, the non-breaking space:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>${$country, also=&#39; &#39;}}
+</pre></div>
+</div>
+</div></blockquote>
+<p>To switch filters using a class object, pass the class using the {
+filter} argument to the Template constructor, or via a placeholder
+to the {#filter} directive: {#filter $myFilterClass}. The class
+must be a subclass of {Cheetah.Filters.Filter}. When passing a
+class object, the value of { filtersLib} does not matter, and it
+does not matter where the class was defined.</p>
+<p>To switch filters by name, pass the name of the class as a string
+using the { filter} argument to the Template constructor, or as a
+bare word (without quotes) to the {#filter} directive: {#filter
+TheFilter}. The class will be looked up in the { filtersLib}.</p>
+<p>The filtersLib is a module containing filter classes, by default
+{Cheetah.Filters}. All classes in the module that are subclasses of
+{Cheetah.Filters.Filter} are considered filters. If your filters
+are in another module, pass the module object as the { filtersLib}
+argument to the Template constructor.</p>
+<p>Writing a custom filter is easy: just override the {.filter}
+method.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>     <span class="c1"># Returns a string.</span>
+</pre></div>
+</div>
+<p>Return the { string} that should be output for &#8216;val&#8217;. &#8216;val&#8217; may be
+any type. Most filters return `&#8217; for {None}. Cheetah passes one
+keyword argument: <code class="docutils literal"><span class="pre">kw['rawExpr']</span></code> is the placeholder name as it
+appears in the template definition, including all subscripts and
+arguments. If you use the long placeholder syntax, any options you
+pass appear as keyword arguments. Again, the return value must be a
+string.</p>
+<p>You can always switch back to the default filter this way: {#filter
+None}. This is easy to remember because &#8220;no filter&#8221; means the
+default filter, and because None happens to be the only object the
+default filter treats specially.</p>
+<p>We are considering additional filters; see
+<a class="reference external" href="http://webware.colorstudy.net/twiki/bin/view/Cheetah/MoreFilters">http://webware.colorstudy.net/twiki/bin/view/Cheetah/MoreFilters</a>
+for the latest ideas.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="inheritanceEtc.html" title="Import, Inheritance, Declaration and Assignment"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="comments.html" title="Comments"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User&#8217;s Guide</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 09, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+  </body>
+</html>

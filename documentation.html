@@ -1,30 +1,36 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>User Documentation &mdash; Cheetah - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    <title>Cheetah Recipes &#8212; Cheetah - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '',
-        VERSION:     '2.2.1',
-        COLLAPSE_MODINDEX: false,
+        URL_ROOT:    './',
+        VERSION:     '3.0.0 dev',
+        COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
-    <script type="text/javascript" src="static/jquery.js"></script>
-    <script type="text/javascript" src="static/doctools.js"></script>
-    <link rel="top" title="Cheetah - The Python-Powered Template Engine" href="index.html" />
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Basic Inheritance" href="recipes/inheritance.html" />
-    <link rel="prev" title="Cheetah Roadmap" href="roadmap.html" /> 
+    <link rel="prev" title="Cheetah vs. Other Template Engines" href="users_guide/comparisons.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -34,73 +40,61 @@
           <a href="recipes/inheritance.html" title="Basic Inheritance"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="roadmap.html" title="Cheetah Roadmap"
+          <a href="users_guide/comparisons.html" title="Cheetah vs. Other Template Engines"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">Cheetah - The Python-Powered Template Engine</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-            <h3><a href="index.html">Table Of Contents</a></h3>
-            <ul>
-<li><a class="reference external" href="">User Documentation</a><ul>
-<li><a class="reference external" href="#simple-recipes">Simple Recipes</a><ul>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-            <h4>Previous topic</h4>
-            <p class="topless"><a href="roadmap.html"
-                                  title="previous chapter">Cheetah Roadmap</a></p>
-            <h4>Next topic</h4>
-            <p class="topless"><a href="recipes/inheritance.html"
-                                  title="next chapter">Basic Inheritance</a></p>
-            <h3>This Page</h3>
-            <ul class="this-page-menu">
-              <li><a href="sources/documentation.txt"
-                     rel="nofollow">Show Source</a></li>
-            </ul>
-          <div id="searchbox" style="display: none">
-            <h3>Quick search</h3>
-              <form class="search" action="search.html" method="get">
-                <input type="text" name="q" size="18" />
-                <input type="submit" value="Go" />
-                <input type="hidden" name="check_keywords" value="yes" />
-                <input type="hidden" name="area" value="default" />
-              </form>
-              <p class="searchtip" style="font-size: 90%">
-              Enter search terms or a module, class or function name.
-              </p>
-          </div>
-          <script type="text/javascript">$('#searchbox').show(0);</script>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="users_guide/comparisons.html"
+                        title="previous chapter">Cheetah vs. Other Template Engines</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="recipes/inheritance.html"
+                        title="next chapter">Basic Inheritance</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/documentation.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
-  <div class="section" id="user-documentation">
-<h1>User Documentation<a class="headerlink" href="#user-documentation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="simple-recipes">
-<h2>Simple Recipes<a class="headerlink" href="#simple-recipes" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="cheetah-recipes">
+<h1>Cheetah Recipes<a class="headerlink" href="#cheetah-recipes" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference external" href="recipes/inheritance.html">Basic Inheritance</a><ul>
-<li class="toctree-l2"><a class="reference external" href="recipes/inheritance.html#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference external" href="recipes/inheritance.html#cheetah-inheriting-from-python">Cheetah inheriting from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recipes/inheritance.html">Basic Inheritance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="recipes/inheritance.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recipes/inheritance.html#cheetah-inheriting-from-python">Cheetah inheriting from Python</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference external" href="recipes/precompiled.html">Precompiled Templates</a><ul>
-<li class="toctree-l2"><a class="reference external" href="recipes/precompiled.html#why-bother">Why bother?</a></li>
-<li class="toctree-l2"><a class="reference external" href="recipes/precompiled.html#basic-pre-compilation">Basic Pre-compilation</a></li>
-<li class="toctree-l2"><a class="reference external" href="recipes/precompiled.html#importing-and-lookup">Importing and lookup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recipes/precompiled.html">Precompiled Templates</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="recipes/precompiled.html#why-bother">Why bother?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recipes/precompiled.html#basic-pre-compilation">Basic Pre-compilation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recipes/precompiled.html#importing-and-lookup">Importing and lookup</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference external" href="recipes/staticmethod.html">&#64;staticmethod and &#64;classmethod</a></li>
-<li class="toctree-l1"><a class="reference external" href="recipes/writing_a_recipe.html">Writing a &#8220;Recipe&#8221;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recipes/staticmethod.html">&#64;staticmethod and &#64;classmethod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recipes/writing_a_recipe.html">Writing a &#8220;Recipe&#8221;</a></li>
 </ul>
 </div>
 </div>
@@ -111,7 +105,7 @@
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -121,15 +115,15 @@
           <a href="recipes/inheritance.html" title="Basic Inheritance"
              >next</a> |</li>
         <li class="right" >
-          <a href="roadmap.html" title="Cheetah Roadmap"
+          <a href="users_guide/comparisons.html" title="Cheetah vs. Other Template Engines"
              >previous</a> |</li>
-        <li><a href="index.html">Cheetah - The Python-Powered Template Engine</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li> 
       </ul>
     </div>
-    <div class="footer">
-      &copy; Copyright 2009, R. Tyler Ballance.
-      Last updated on Jul 16, 2009.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.1.
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 09, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
     </div>
   </body>
 </html>

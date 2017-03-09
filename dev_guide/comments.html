@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Directives: Comments &#8212; Cheetah - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0 dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Directives: Parser Instructions" href="parserInstructions.html" />
+    <link rel="prev" title=".py Template Modules" href="pyModules.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="parserInstructions.html" title="Directives: Parser Instructions"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyModules.html" title=".py Template Modules"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer&#8217;s Guide</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Directives: Comments</a><ul>
+<li><a class="reference internal" href="#docstring-and-header-comments">Docstring and header comments</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pyModules.html"
+                        title="previous chapter">.py Template Modules</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="parserInstructions.html"
+                        title="next chapter">Directives: Parser Instructions</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/dev_guide/comments.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="directives-comments">
+<h1>Directives: Comments<a class="headerlink" href="#directives-comments" title="Permalink to this headline">¶</a></h1>
+<p>(comments)</p>
+<p>The template:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Text</span> <span class="n">before</span> <span class="n">the</span> <span class="n">comment</span><span class="o">.</span>
+<span class="c1">## The comment.</span>
+<span class="n">Text</span> <span class="n">after</span> <span class="n">the</span> <span class="n">comment</span><span class="o">.</span>
+<span class="c1">#* A multi-line comment spanning several lines.</span>
+   <span class="n">It</span> <span class="n">spans</span> <span class="n">several</span> <span class="n">lines</span><span class="p">,</span> <span class="n">too</span><span class="o">.</span>
+<span class="o">*</span><span class="c1">#</span>
+<span class="n">Text</span> <span class="n">after</span> <span class="n">the</span> <span class="n">multi</span><span class="o">-</span><span class="n">line</span> <span class="n">comment</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>The output:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Text</span> <span class="n">before</span> <span class="n">the</span> <span class="n">comment</span><span class="o">.</span>
+<span class="n">Text</span> <span class="n">after</span> <span class="n">the</span> <span class="n">comment</span><span class="o">.</span>
+
+<span class="n">Text</span> <span class="n">after</span> <span class="n">the</span> <span class="n">multi</span><span class="o">-</span><span class="n">line</span> <span class="n">comment</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>The generated code:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Text before the comment.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="c1">#  The comment.</span>
+<span class="n">write</span><span class="p">(</span><span class="s1">&#39;Text after the comment.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="c1">#  A multi-line comment spanning several lines.</span>
+<span class="c1">#    It spans several lines, too.</span>
+<span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Text after the multi-line comment.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="docstring-and-header-comments">
+<h2>Docstring and header comments<a class="headerlink" href="#docstring-and-header-comments" title="Permalink to this headline">¶</a></h2>
+<p>(comments.docstring)</p>
+<p>The template:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">##doc: .respond() method comment.</span>
+<span class="c1">##doc-method: Another .respond() method comment.</span>
+<span class="c1">##doc-class: A class comment.</span>
+<span class="c1">##doc-module: A module comment.</span>
+<span class="c1">##header: A header comment.</span>
+</pre></div>
+</div>
+<p>The output:</p>
+<p>The beginning of the generated {.respond} method:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">respond</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+        <span class="n">trans</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">dummyTrans</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">VFS</span><span class="o">=</span><span class="n">valueFromSearchList</span><span class="p">,</span>
+        <span class="n">VFN</span><span class="o">=</span><span class="n">valueForName</span><span class="p">,</span>
+        <span class="n">getmtime</span><span class="o">=</span><span class="n">getmtime</span><span class="p">,</span>
+        <span class="n">currentTime</span><span class="o">=</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This is the main method generated by Cheetah</span>
+<span class="sd">    .respond() method comment.</span>
+<span class="sd">    Another .respond() method comment.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>The class docstring:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">A class comment.</span>
+
+<span class="sd">Autogenerated by CHEETAH: The Python-Powered Template Engine</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>The top of the module:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1"># A header comment.</span>
+
+<span class="sd">&quot;&quot;&quot;A module comment.</span>
+
+<span class="sd">Autogenerated by CHEETAH: The Python-Powered Template Engine</span>
+<span class="sd"> CHEETAH VERSION: 0.9.13a1</span>
+<span class="sd"> Generation time: Fri Apr 26 22:39:23 2002</span>
+<span class="sd">   Source file: x.tmpl</span>
+<span class="sd">   Source file last modified: Fri Apr 26 22:36:23 2002</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="parserInstructions.html" title="Directives: Parser Instructions"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyModules.html" title=".py Template Modules"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer&#8217;s Guide</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 09, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+  </body>
+</html>

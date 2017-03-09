@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Error Handling &#8212; Cheetah - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0 dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Instructions to the Parser/Compiler" href="parserInstructions.html" />
+    <link rel="prev" title="Flow Control" href="flowControl.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="parserInstructions.html" title="Instructions to the Parser/Compiler"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="flowControl.html" title="Flow Control"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User&#8217;s Guide</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Error Handling</a><ul>
+<li><a class="reference internal" href="#try-except-end-try-finally-and-assert">#try ... #except ... #end try, #finally, and #assert</a></li>
+<li><a class="reference internal" href="#errorcatcher-and-errorcatcher-objects">#errorCatcher and ErrorCatcher objects</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="flowControl.html"
+                        title="previous chapter">Flow Control</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="parserInstructions.html"
+                        title="next chapter">Instructions to the Parser/Compiler</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/users_guide/errorHandling.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="error-handling">
+<h1>Error Handling<a class="headerlink" href="#error-handling" title="Permalink to this headline">¶</a></h1>
+<p>(errorHandling)</p>
+<p>There are two ways to handle runtime errors (exceptions) in
+Cheetah. The first is with the Cheetah directives that mirror
+Python&#8217;s structured exception handling statements. The second is
+with Cheetah&#8217;s {ErrorCatcher} framework. These are described
+below.</p>
+<div class="section" id="try-except-end-try-finally-and-assert">
+<h2>#try ... #except ... #end try, #finally, and #assert<a class="headerlink" href="#try-except-end-try-finally-and-assert" title="Permalink to this headline">¶</a></h2>
+<p>(errorHandling.directives)</p>
+<p>Cheetah&#8217;s exception-handling directives are exact mirrors Python&#8217;s
+exception-handling statements. See Python&#8217;s documentation for
+details. The following Cheetah code demonstrates their use:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>#try
+  $mightFail()
+#except
+  It failed
+#end try
+
+#try
+  #assert $x == $y
+#except AssertionError
+  They&#39;re not the same!
+#end try
+
+#try
+  #raise ValueError
+#except ValueError
+  #pass
+#end try
+
+
+#try
+  $mightFail()
+#except ValueError
+  Hey, it raised a ValueError!
+#except NameMapper.NotFound
+  Hey, it raised a NameMapper.NotFound!
+#else
+  It didn&#39;t raise anything!
+#end try
+
+#try
+  $mightFail()
+#finally
+  $cleanup()
+#end try
+</pre></div>
+</div>
+<p>Like Python, {#except} and {#finally} cannot appear in the same
+try-block, but can appear in nested try-blocks.</p>
+</div>
+<div class="section" id="errorcatcher-and-errorcatcher-objects">
+<h2>#errorCatcher and ErrorCatcher objects<a class="headerlink" href="#errorcatcher-and-errorcatcher-objects" title="Permalink to this headline">¶</a></h2>
+<p>(errorHandling.errorCatcher)</p>
+<p>Syntax:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#errorCatcher CLASS</span>
+<span class="c1">#errorCatcher $PLACEHOLDER_TO_AN_ERROR_CATCHER_INSTANCE</span>
+</pre></div>
+</div>
+<p>{ErrorCatcher} is a debugging tool that catches exceptions that
+occur inside {$placeholder} tags and provides a customizable
+warning to the developer. Normally, the first missing namespace
+value raises a {NameMapper.NotFound} error and halts the filling of
+the template. This requires the developer to resolve the exceptions
+in order without seeing the subsequent output. When an
+{ErrorCatcher} is enabled, the developer can see all the exceptions
+at once as well as the template output around them.</p>
+<p>The {Cheetah.ErrorCatchers} module defines the base class for
+ErrorCatchers:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ErrorCatcher</span><span class="p">:</span>
+    <span class="n">_exceptionsToCatch</span> <span class="o">=</span> <span class="p">(</span><span class="n">NameMapper</span><span class="o">.</span><span class="n">NotFound</span><span class="p">,)</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">templateObj</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">exceptions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exceptionsToCatch</span>
+
+    <span class="k">def</span> <span class="nf">warn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_val</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">rawCode</span><span class="p">,</span> <span class="n">lineCol</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">rawCode</span>
+</pre></div>
+</div>
+<p>This ErrorCatcher catches {NameMapper.NotFound} exceptions and
+leaves the offending placeholder visible in its raw form in the
+template output. If the following template is executed:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#errorCatcher Echo</span>
+<span class="c1">#set $iExist = &#39;Here I am!&#39;</span>
+<span class="n">Here</span><span class="s1">&#39;s a good placeholder: $iExist</span>
+<span class="n">Here</span><span class="s1">&#39;s bad placeholder: $iDontExist</span>
+</pre></div>
+</div>
+<p>the output will be:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Here</span><span class="s1">&#39;s a good placeholder: Here I am!</span>
+<span class="n">Here</span><span class="s1">&#39;s bad placeholder: $iDontExist</span>
+</pre></div>
+</div>
+<p>The base class shown above is also accessible under the alias
+{Cheetah.ErrorCatchers.Echo}. {Cheetah.ErrorCatchers} also provides
+a number of specialized subclasses that warn about exceptions in
+different ways. {Cheetah.ErrorCatchers.BigEcho} will output</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Here</span><span class="s1">&#39;s a good placeholder: Here I am!</span>
+<span class="n">Here</span><span class="s1">&#39;s bad placeholder: ===============&amp;lt;$iDontExist could not be found&amp;gt;===============</span>
+</pre></div>
+</div>
+<p>ErrorCatcher has a significant performance impact and is turned off
+by default. It can also be turned on with the {Template} class&#8217;
+{&#8216;errorCatcher&#8217;} keyword argument. The value of this argument
+should either be a string specifying which of the classes in
+{Cheetah.ErrorCatchers} to use, or a class that subclasses
+{Cheetah.ErrorCatchers.ErrorCatcher}. The {#errorCatcher} directive
+can also be used to change the errorCatcher part way through a
+template.</p>
+<p>{Cheetah.ErrorCatchers.ListErrors} will produce the same ouput as
+{Echo} while maintaining a list of the errors that can be retrieved
+later. To retrieve the list, use the {Template} class&#8217;
+{&#8216;errorCatcher&#8217;} method to retrieve the errorCatcher and then call
+its {listErrors} method.</p>
+<p>ErrorCatcher doesn&#8217;t catch exceptions raised inside directives.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="parserInstructions.html" title="Instructions to the Parser/Compiler"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="flowControl.html" title="Flow Control"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User&#8217;s Guide</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 09, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+  </body>
+</html>

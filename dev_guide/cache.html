@@ -1,0 +1,448 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Caching placeholders and #cache &#8212; Cheetah - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0 dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="A BNF Grammar of Cheetah" href="bnf.html" />
+    <link rel="prev" title="Files" href="files.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="bnf.html" title="A BNF Grammar of Cheetah"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="files.html" title="Files"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer&#8217;s Guide</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Caching placeholders and #cache</a><ul>
+<li><a class="reference internal" href="#dynamic-placeholder-no-cache">Dynamic placeholder - no cache</a></li>
+<li><a class="reference internal" href="#static-placeholder">Static placeholder</a></li>
+<li><a class="reference internal" href="#timed-refresh-placeholder">Timed-refresh placeholder</a></li>
+<li><a class="reference internal" href="#timed-refresh-placeholder-with-braces">Timed-refresh placeholder with braces</a></li>
+<li><a class="reference internal" href="#cache">#cache</a></li>
+<li><a class="reference internal" href="#cache-with-timer-and-id">#cache with timer and id</a></li>
+<li><a class="reference internal" href="#cache-with-test-expression-and-method-conditions">#cache with test: expression and method conditions</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="files.html"
+                        title="previous chapter">Files</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="bnf.html"
+                        title="next chapter">A BNF Grammar of Cheetah</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/dev_guide/cache.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="caching-placeholders-and-cache">
+<h1>Caching placeholders and #cache<a class="headerlink" href="#caching-placeholders-and-cache" title="Permalink to this headline">¶</a></h1>
+<p>(cache)</p>
+<div class="section" id="dynamic-placeholder-no-cache">
+<h2>Dynamic placeholder - no cache<a class="headerlink" href="#dynamic-placeholder-no-cache" title="Permalink to this headline">¶</a></h2>
+<p>(cache.dynamic)</p>
+<p>The template:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Dynamic variable:  $voom
+</pre></div>
+</div>
+<p>The command line and the output:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>% voom=&#39;Voom!&#39; python x.py --env
+Dynamic variable:  Voom!
+</pre></div>
+</div>
+<p>The generated code:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Dynamic variable:  &#39;</span><span class="p">)</span>
+<span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;voom&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from &#39;$voom&#39; at line 1, col 20.</span>
+<span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Just what we expected, like any other dynamic placeholder.</p>
+</div>
+<div class="section" id="static-placeholder">
+<h2>Static placeholder<a class="headerlink" href="#static-placeholder" title="Permalink to this headline">¶</a></h2>
+<p>(cache.static)</p>
+<p>The template:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Cached variable:  $*voom
+</pre></div>
+</div>
+<p>The command line and output:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>% voom=&#39;Voom!&#39; python x.py --env
+Cached variable:  Voom!
+</pre></div>
+</div>
+<p>The generated code, with line numbers:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span> <span class="mi">1</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;Cached variable:  &#39;</span><span class="p">)</span>
+ <span class="mi">2</span>  <span class="c1">## START CACHE REGION: at line, col (1, 19) in the source.</span>
+ <span class="mi">3</span>  <span class="n">RECACHE</span> <span class="o">=</span> <span class="kc">True</span>
+ <span class="mi">4</span>  <span class="k">if</span> <span class="s1">&#39;19760169&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cacheData</span><span class="p">:</span>
+ <span class="mi">5</span>      <span class="k">pass</span>
+ <span class="mi">6</span>  <span class="k">else</span><span class="p">:</span>
+ <span class="mi">7</span>      <span class="n">RECACHE</span> <span class="o">=</span> <span class="kc">False</span>
+ <span class="mi">8</span>  <span class="k">if</span> <span class="n">RECACHE</span><span class="p">:</span>
+ <span class="mi">9</span>      <span class="n">orig_trans</span> <span class="o">=</span> <span class="n">trans</span>
+<span class="mi">10</span>      <span class="n">trans</span> <span class="o">=</span> <span class="n">cacheCollector</span> <span class="o">=</span> <span class="n">DummyTransaction</span><span class="p">()</span>
+<span class="mi">11</span>      <span class="n">write</span> <span class="o">=</span> <span class="n">cacheCollector</span><span class="o">.</span><span class="n">response</span><span class="p">()</span><span class="o">.</span><span class="n">write</span>
+<span class="mi">12</span>      <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;voom&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from &#39;$*voom&#39; at line 1,</span>
+            <span class="c1"># col 19.</span>
+<span class="mi">13</span>      <span class="n">trans</span> <span class="o">=</span> <span class="n">orig_trans</span>
+<span class="mi">14</span>      <span class="n">write</span> <span class="o">=</span> <span class="n">trans</span><span class="o">.</span><span class="n">response</span><span class="p">()</span><span class="o">.</span><span class="n">write</span>
+<span class="mi">15</span>      <span class="bp">self</span><span class="o">.</span><span class="n">_cacheData</span><span class="p">[</span><span class="s1">&#39;19760169&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cacheCollector</span><span class="o">.</span><span class="n">response</span><span class="p">()</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+<span class="mi">16</span>      <span class="k">del</span> <span class="n">cacheCollector</span>
+<span class="mi">17</span>  <span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cacheData</span><span class="p">[</span><span class="s1">&#39;19760169&#39;</span><span class="p">])</span>
+<span class="mi">18</span>  <span class="c1">## END CACHE REGION</span>
+
+<span class="mi">19</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>That one little star generated a whole lotta code. First, instead
+of an ordinary {VFS} lookup (searchList) lookup, it converted the
+placeholder to a lookup in the {._cacheData} dictionary. Cheetah
+also generated a unique key ({&#8216;19760169&#8217;}) for our cached item -
+this is its cache ID.</p>
+<p>Second, Cheetah put a pair of if-blocks before the {write}. The
+first (lines 3-7) determine whether the cache value is missing or
+out of date, and sets local variable {RECACHE} true or false. This
+stanza may look unnecessarily verbose - lines 3-7 could be
+eliminated if line 8 was changed to</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="s1">&#39;19760169&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cacheData</span><span class="p">:</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>but this model is expandable for some of the cache features we&#8217;ll</li>
+</ul>
+<p>see below.</p>
+<p>The second if-block, lines 8-16, do the cache updating if
+necessary. Clearly, the programmer is trying to stick as close to
+normal (dynamic) workflow as possible. Remember that {write}, even
+though it looks like a local function, is actually a method of a
+file-like object. So we create a temporary file-like object to
+divert the {write} object into, then read the result and stuff it
+into the cache.</p>
+</div>
+<div class="section" id="timed-refresh-placeholder">
+<h2>Timed-refresh placeholder<a class="headerlink" href="#timed-refresh-placeholder" title="Permalink to this headline">¶</a></h2>
+<p>(cache.timed)</p>
+<p>The template:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Timed cache:  $*.5m*voom
+</pre></div>
+</div>
+<p>The command line and the output:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>% voom=&#39;Voom!&#39; python x.py --env
+Timed cache:  Voom!
+</pre></div>
+</div>
+<p>The generated method&#8217;s docstring:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This is the main method generated by Cheetah</span>
+<span class="sd">This cache will be refreshed every 30.0 seconds.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>The generated code:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span> <span class="mi">1</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;Timed cache:  &#39;</span><span class="p">)</span>
+ <span class="mi">2</span>  <span class="c1">## START CACHE REGION: at line, col (1, 15) in the source.</span>
+ <span class="mi">3</span>  <span class="n">RECACHE</span> <span class="o">=</span> <span class="kc">True</span>
+ <span class="mi">4</span>  <span class="k">if</span> <span class="s1">&#39;55048032&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cacheData</span><span class="p">:</span>
+ <span class="mi">5</span>      <span class="bp">self</span><span class="o">.</span><span class="n">__cache55048032__refreshTime</span> <span class="o">=</span> <span class="n">currentTime</span><span class="p">()</span> <span class="o">+</span> <span class="mf">30.0</span>
+ <span class="mi">6</span>  <span class="k">elif</span> <span class="n">currentTime</span><span class="p">()</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">__cache55048032__refreshTime</span><span class="p">:</span>
+ <span class="mi">7</span>      <span class="bp">self</span><span class="o">.</span><span class="n">__cache55048032__refreshTime</span> <span class="o">=</span> <span class="n">currentTime</span><span class="p">()</span> <span class="o">+</span> <span class="mf">30.0</span>
+ <span class="mi">8</span>  <span class="k">else</span><span class="p">:</span>
+ <span class="mi">9</span>      <span class="n">RECACHE</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="mi">10</span>  <span class="k">if</span> <span class="n">RECACHE</span><span class="p">:</span>
+<span class="mi">11</span>      <span class="n">orig_trans</span> <span class="o">=</span> <span class="n">trans</span>
+<span class="mi">12</span>      <span class="n">trans</span> <span class="o">=</span> <span class="n">cacheCollector</span> <span class="o">=</span> <span class="n">DummyTransaction</span><span class="p">()</span>
+<span class="mi">13</span>      <span class="n">write</span> <span class="o">=</span> <span class="n">cacheCollector</span><span class="o">.</span><span class="n">response</span><span class="p">()</span><span class="o">.</span><span class="n">write</span>
+<span class="mi">14</span>      <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;voom&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from &#39;$*.5m*voom&#39; at</span>
+            <span class="c1"># line 1, col 15.</span>
+<span class="mi">15</span>      <span class="n">trans</span> <span class="o">=</span> <span class="n">orig_trans</span>
+<span class="mi">16</span>      <span class="n">write</span> <span class="o">=</span> <span class="n">trans</span><span class="o">.</span><span class="n">response</span><span class="p">()</span><span class="o">.</span><span class="n">write</span>
+<span class="mi">17</span>      <span class="bp">self</span><span class="o">.</span><span class="n">_cacheData</span><span class="p">[</span><span class="s1">&#39;55048032&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cacheCollector</span><span class="o">.</span><span class="n">response</span><span class="p">()</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+<span class="mi">18</span>      <span class="k">del</span> <span class="n">cacheCollector</span>
+<span class="mi">19</span>  <span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cacheData</span><span class="p">[</span><span class="s1">&#39;55048032&#39;</span><span class="p">])</span>
+<span class="mi">20</span>  <span class="c1">## END CACHE REGION</span>
+
+<span class="mi">21</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This code is identical to the static cache example except for the
+docstring and the first if-block. (OK, so the cache ID is different
+and the comment on line 14 is different too. Big deal.)</p>
+<p>Each timed-refresh cache item has a corrsponding private attribute
+{.__cache########__refreshTime} giving the refresh time in
+ticks (=seconds since January 1, 1970). The first if-block (lines
+3-9) checks whether the cache value is missing or its update time
+has passed, and if so, sets {RECACHE} to true and also schedules
+another refresh at the next interval.</p>
+<p>The method docstring reminds the user how often the cache will be
+refreshed. This information is unfortunately not as robust as it
+could be. Each timed-cache placeholder blindly generates a line in
+the docstring. If all refreshes are at the same interval, there
+will be multiple identical lines in the docstring. If the refreshes
+are at different intervals, you get a situation like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This is the main method generated by Cheetah</span>
+<span class="sd">This cache will be refreshed every 30.0 seconds.</span>
+<span class="sd">This cache will be refreshed every 60.0 seconds.</span>
+<span class="sd">This cache will be refreshed every 120.0 seconds.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>The docstring tells only that &#8220;something&#8221; will be refreshed every
+60.0 seconds, but doesn&#8217;t reveal { which} placeholder that is. Only
+if you know the relative order of the placeholders in the template
+can you figure that out.</p>
+</div>
+<div class="section" id="timed-refresh-placeholder-with-braces">
+<h2>Timed-refresh placeholder with braces<a class="headerlink" href="#timed-refresh-placeholder-with-braces" title="Permalink to this headline">¶</a></h2>
+<p>(cache.timed.braces)</p>
+<p>This example is the same but with the long placeholder syntax. It&#8217;s
+here because it&#8217;s a Cheetah FAQ whether to put the cache interval
+inside or outside the braces. (It&#8217;s also here so I can look it up
+because I frequently forget.) The answer is: outside. The braces go
+around only the placeholder name (and perhaps some output-filter
+arguments.)</p>
+<p>The template:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Timed with {}:  $*.5m*{voom}
+</pre></div>
+</div>
+<p>The output:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Timed with {}:  Voom!
+</pre></div>
+</div>
+<p>The generated code differs only in the comment. Inside the
+cache-refresh if-block:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;voom&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from &#39;$*.5m*{voom}&#39; at line 1,</span>
+    <span class="c1">#col 17.</span>
+</pre></div>
+</div>
+<p>If you try to do it this way:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Timed with {}:  ${*.5m*voom}      ## Wrong!
+</pre></div>
+</div>
+<p>you get:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Timed with {}:  ${*.5m*voom}
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">${</span></code> is not a valid placeholder, so it gets treated as ordinary
+text.</p>
+</div>
+<div class="section" id="cache">
+<h2>#cache<a class="headerlink" href="#cache" title="Permalink to this headline">¶</a></h2>
+<p>(cache.directive)</p>
+<p>The template:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>#cache
+This is a cached region.  $voom
+#end cache
+</pre></div>
+</div>
+<p>The output:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>This is a cached region.  Voom!
+</pre></div>
+</div>
+<p>The generated code:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span> <span class="mi">1</span>  <span class="c1">## START CACHE REGION: at line, col (1, 1) in the source.</span>
+ <span class="mi">2</span>  <span class="n">RECACHE</span> <span class="o">=</span> <span class="kc">True</span>
+ <span class="mi">3</span>  <span class="k">if</span> <span class="s1">&#39;23711421&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cacheData</span><span class="p">:</span>
+ <span class="mi">4</span>      <span class="k">pass</span>
+ <span class="mi">5</span>  <span class="k">else</span><span class="p">:</span>
+ <span class="mi">6</span>      <span class="n">RECACHE</span> <span class="o">=</span> <span class="kc">False</span>
+ <span class="mi">7</span>  <span class="k">if</span> <span class="n">RECACHE</span><span class="p">:</span>
+ <span class="mi">8</span>      <span class="n">orig_trans</span> <span class="o">=</span> <span class="n">trans</span>
+ <span class="mi">9</span>      <span class="n">trans</span> <span class="o">=</span> <span class="n">cacheCollector</span> <span class="o">=</span> <span class="n">DummyTransaction</span><span class="p">()</span>
+<span class="mi">10</span>      <span class="n">write</span> <span class="o">=</span> <span class="n">cacheCollector</span><span class="o">.</span><span class="n">response</span><span class="p">()</span><span class="o">.</span><span class="n">write</span>
+<span class="mi">11</span>      <span class="n">write</span><span class="p">(</span><span class="s1">&#39;This is a cached region.  &#39;</span><span class="p">)</span>
+<span class="mi">12</span>      <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;voom&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from &#39;$voom&#39; at line 2,</span>
+            <span class="c1"># col 27.</span>
+<span class="mi">13</span>      <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="mi">14</span>      <span class="n">trans</span> <span class="o">=</span> <span class="n">orig_trans</span>
+<span class="mi">15</span>      <span class="n">write</span> <span class="o">=</span> <span class="n">trans</span><span class="o">.</span><span class="n">response</span><span class="p">()</span><span class="o">.</span><span class="n">write</span>
+<span class="mi">16</span>      <span class="bp">self</span><span class="o">.</span><span class="n">_cacheData</span><span class="p">[</span><span class="s1">&#39;23711421&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cacheCollector</span><span class="o">.</span><span class="n">response</span><span class="p">()</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+<span class="mi">17</span>      <span class="k">del</span> <span class="n">cacheCollector</span>
+<span class="mi">18</span>  <span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cacheData</span><span class="p">[</span><span class="s1">&#39;23711421&#39;</span><span class="p">])</span>
+<span class="mi">19</span>  <span class="c1">## END CACHE REGION</span>
+</pre></div>
+</div>
+<p>This is the same as the {$*voom} example, except that the plain
+text around the placeholder is inside the second if-block.</p>
+</div>
+<div class="section" id="cache-with-timer-and-id">
+<h2>#cache with timer and id<a class="headerlink" href="#cache-with-timer-and-id" title="Permalink to this headline">¶</a></h2>
+<p>(cache.directive.timer)</p>
+<p>The template:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>#cache timer=&#39;.5m&#39;, id=&#39;cache1&#39;
+This is a cached region.  $voom
+#end cache
+</pre></div>
+</div>
+<p>The output:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>This is a cached region.  Voom!
+</pre></div>
+</div>
+<p>The generated code is the same as the previous example except the
+first if-block:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">RECACHE</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">if</span> <span class="s1">&#39;13925129&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cacheData</span><span class="p">:</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_cacheIndex</span><span class="p">[</span><span class="s1">&#39;cache1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;13925129&#39;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">__cache13925129__refreshTime</span> <span class="o">=</span> <span class="n">currentTime</span><span class="p">()</span> <span class="o">+</span> <span class="mf">30.0</span>
+<span class="k">elif</span> <span class="n">currentTime</span><span class="p">()</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">__cache13925129__refreshTime</span><span class="p">:</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">__cache13925129__refreshTime</span> <span class="o">=</span> <span class="n">currentTime</span><span class="p">()</span> <span class="o">+</span> <span class="mf">30.0</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">RECACHE</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="cache-with-test-expression-and-method-conditions">
+<h2>#cache with test: expression and method conditions<a class="headerlink" href="#cache-with-test-expression-and-method-conditions" title="Permalink to this headline">¶</a></h2>
+<p>(cache.directive.test)</p>
+<p>The template:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>#cache test=$isDBUpdated
+This is a cached region.  $voom
+#end cache
+</pre></div>
+</div>
+<p>(Analysis postponed: bug in Cheetah produces invalid Python.)</p>
+<p>The template:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>#cache id=&#39;cache1&#39;, test=($isDBUpdated or $someOtherCondition)
+This is a cached region.  $voom
+#end cache
+</pre></div>
+</div>
+<p>The output:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>This is a cached region.  Voom!
+</pre></div>
+</div>
+<p>The first if-block in the generated code:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">RECACHE</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">if</span> <span class="s1">&#39;36798144&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cacheData</span><span class="p">:</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_cacheIndex</span><span class="p">[</span><span class="s1">&#39;cache1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;36798144&#39;</span>
+<span class="k">elif</span> <span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;isDBUpdated&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="ow">or</span> <span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;someOtherCondition&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)):</span>
+    <span class="n">RECACHE</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">RECACHE</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p>The second if-block is the same as in the previous example. If you
+leave out the {()} around the test expression, the result is the
+same, although it may be harder for the template maintainer to
+read.</p>
+<p>You can even combine arguments, although this is of questionable
+value.</p>
+<p>The template:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>#cache id=&#39;cache1&#39;, timer=&#39;30m&#39;, test=$isDBUpdated or $someOtherCondition
+This is a cached region.  $voom
+#end cache
+</pre></div>
+</div>
+<p>The output:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>This is a cached region.  Voom!
+</pre></div>
+</div>
+<p>The first if-block:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">RECACHE</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">if</span> <span class="s1">&#39;88939345&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cacheData</span><span class="p">:</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_cacheIndex</span><span class="p">[</span><span class="s1">&#39;cache1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;88939345&#39;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">__cache88939345__refreshTime</span> <span class="o">=</span> <span class="n">currentTime</span><span class="p">()</span> <span class="o">+</span> <span class="mf">1800.0</span>
+<span class="k">elif</span> <span class="n">currentTime</span><span class="p">()</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">__cache88939345__refreshTime</span><span class="p">:</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">__cache88939345__refreshTime</span> <span class="o">=</span> <span class="n">currentTime</span><span class="p">()</span> <span class="o">+</span> <span class="mf">1800.0</span>
+<span class="k">elif</span> <span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;isDBUpdated&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="ow">or</span> <span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;someOtherCondition&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">RECACHE</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">RECACHE</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p>We are planning to add a {&#8216;varyBy&#8217;} keyword argument in the future
+that will allow separate cache instances to be created for a
+variety of conditions, such as different query string parameters or
+browser types. This is inspired by ASP.net&#8217;s varyByParam and
+varyByBrowser output caching keywords. Since this is not
+implemented yet, I cannot provide examples here.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="bnf.html" title="A BNF Grammar of Cheetah"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="files.html" title="Files"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer&#8217;s Guide</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 09, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+  </body>
+</html>

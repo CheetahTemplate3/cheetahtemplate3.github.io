@@ -1,0 +1,579 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Placeholders &#8212; Cheetah - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0 dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Patching Cheetah" href="patching.html" />
+    <link rel="prev" title="Directives: Error Handling" href="errorHandling.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="patching.html" title="Patching Cheetah"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="errorHandling.html" title="Directives: Error Handling"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer&#8217;s Guide</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Placeholders</a><ul>
+<li><a class="reference internal" href="#simple-placeholders">Simple placeholders</a></li>
+<li><a class="reference internal" href="#complex-placeholders">Complex placeholders</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="errorHandling.html"
+                        title="previous chapter">Directives: Error Handling</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="patching.html"
+                        title="next chapter">Patching Cheetah</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/dev_guide/placeholders.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="placeholders">
+<h1>Placeholders<a class="headerlink" href="#placeholders" title="Permalink to this headline">¶</a></h1>
+<p>(placeholders)</p>
+<div class="section" id="simple-placeholders">
+<h2>Simple placeholders<a class="headerlink" href="#simple-placeholders" title="Permalink to this headline">¶</a></h2>
+<p>(placeholders.simple)</p>
+<p>Let&#8217;s add a few $placeholders to our template:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">Cheetah.Template</span> <span class="k">import</span> <span class="n">Template</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">values</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;what&#39;</span><span class="p">:</span> <span class="s1">&#39;surreal&#39;</span><span class="p">,</span> <span class="s1">&#39;punctuation&#39;</span><span class="p">:</span> <span class="s1">&#39;?&#39;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="gp">... </span><span class="s2">Hello, $what world$punctuation</span>
+<span class="gp">... </span><span class="s2">One of Python&#39;s least-used functions is $xrange.</span>
+<span class="gp">... </span><span class="s2">&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">values</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">t</span>
+<span class="go">Hello, surreal world?</span>
+<span class="go">One of Python&#39;s least-used functions is &lt;built-in function xrange&gt;.</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">t</span><span class="o">.</span><span class="n">generatedModuleCode</span><span class="p">()</span>
+<span class="go">  1 #!/usr/bin/env python</span>
+
+<span class="go">  2 &quot;&quot;&quot;</span>
+<span class="go">  3 Autogenerated by CHEETAH: The Python-Powered Template Engine</span>
+<span class="go">  4  CHEETAH VERSION: 0.9.12</span>
+<span class="go">  5  Generation time: Sun Apr 21 00:53:01 2002</span>
+<span class="go">  6 &quot;&quot;&quot;</span>
+
+<span class="go">  7 __CHEETAH_genTime__ = &#39;Sun Apr 21 00:53:01 2002&#39;</span>
+<span class="go">  8 __CHEETAH_version__ = &#39;0.9.12&#39;</span>
+
+<span class="go">  9 ##################################################</span>
+<span class="go"> 10 ## DEPENDENCIES</span>
+
+<span class="go"> 11 import sys</span>
+<span class="go"> 12 import os</span>
+<span class="go"> 13 import os.path</span>
+<span class="go"> 14 from os.path import getmtime, exists</span>
+<span class="go"> 15 import time</span>
+<span class="go"> 16 import types</span>
+<span class="go"> 17 from Cheetah.Template import Template</span>
+<span class="go"> 18 from Cheetah.DummyTransaction import DummyTransaction</span>
+<span class="go"> 19 from Cheetah.NameMapper import NotFound, valueForName,</span>
+<span class="go">           valueFromSearchList</span>
+<span class="go"> 20 import Cheetah.Filters as Filters</span>
+<span class="go"> 21 import Cheetah.ErrorCatchers as ErrorCatchers</span>
+
+<span class="go"> 22 ##################################################</span>
+<span class="go"> 23 ## MODULE CONSTANTS</span>
+
+<span class="go"> 24 try:</span>
+<span class="go"> 25     True, False</span>
+<span class="go"> 26 except NameError:</span>
+<span class="go"> 27     True, False = (1==1), (1==0)</span>
+
+<span class="go"> 28 ##################################################</span>
+<span class="go"> 29 ## CLASSES</span>
+
+<span class="go"> 30 class GenTemplate(Template):</span>
+<span class="go"> 31     &quot;&quot;&quot;</span>
+<span class="go"> 32</span>
+<span class="go"> 33     Autogenerated by CHEETAH: The Python-Powered Template Engine</span>
+<span class="go"> 34     &quot;&quot;&quot;</span>
+
+<span class="go"> 35     ##################################################</span>
+<span class="go"> 36     ## GENERATED METHODS</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">37</span>     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">KWs</span><span class="p">):</span>
+<span class="mi">38</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">39</span>
+<span class="s2">40         &quot;&quot;&quot;</span>
+
+<span class="mi">41</span>         <span class="n">Template</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">KWs</span><span class="p">)</span>
+
+<span class="mi">42</span>     <span class="k">def</span> <span class="nf">respond</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+<span class="mi">43</span>             <span class="n">trans</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="mi">44</span>             <span class="n">dummyTrans</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="mi">45</span>             <span class="n">VFS</span><span class="o">=</span><span class="n">valueFromSearchList</span><span class="p">,</span>
+<span class="mi">46</span>             <span class="n">VFN</span><span class="o">=</span><span class="n">valueForName</span><span class="p">,</span>
+<span class="mi">47</span>             <span class="n">getmtime</span><span class="o">=</span><span class="n">getmtime</span><span class="p">,</span>
+<span class="mi">48</span>             <span class="n">currentTime</span><span class="o">=</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">):</span>
+
+
+<span class="mi">49</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">50         This is the main method generated by Cheetah</span>
+<span class="s2">51         &quot;&quot;&quot;</span>
+
+<span class="mi">52</span>         <span class="k">if</span> <span class="ow">not</span> <span class="n">trans</span><span class="p">:</span>
+<span class="mi">53</span>             <span class="n">trans</span> <span class="o">=</span> <span class="n">DummyTransaction</span><span class="p">()</span>
+<span class="mi">54</span>             <span class="n">dummyTrans</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="mi">55</span>         <span class="n">write</span> <span class="o">=</span> <span class="n">trans</span><span class="o">.</span><span class="n">response</span><span class="p">()</span><span class="o">.</span><span class="n">write</span>
+<span class="mi">56</span>         <span class="n">SL</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_searchList</span>
+<span class="mi">57</span>         <span class="nb">filter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_currentFilter</span>
+<span class="mi">58</span>         <span class="n">globalSetVars</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_globalSetVars</span>
+<span class="mi">59</span>
+<span class="mi">60</span>         <span class="c1">########################################</span>
+<span class="mi">61</span>         <span class="c1">## START - generated method body</span>
+<span class="mi">62</span>
+<span class="mi">63</span>         <span class="n">write</span><span class="p">(</span><span class="s1">&#39;Hello, &#39;</span><span class="p">)</span>
+<span class="mi">64</span>         <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;what&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from &#39;$what&#39; at</span>
+                                               <span class="c1"># line 1, col 8.</span>
+<span class="mi">65</span>         <span class="n">write</span><span class="p">(</span><span class="s1">&#39; world&#39;</span><span class="p">)</span>
+<span class="mi">66</span>         <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;punctuation&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from</span>
+                                    <span class="c1"># &#39;$punctuation&#39; at line 1, col 19.</span>
+<span class="mi">67</span>         <span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">One of Python&#39;s least-used methods is &quot;</span><span class="p">)</span>
+<span class="mi">68</span>         <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">xrange</span><span class="p">))</span> <span class="c1"># generated from &#39;$xrange&#39; at line 2,</span>
+                                     <span class="c1"># col 39.</span>
+<span class="mi">69</span>         <span class="n">write</span><span class="p">(</span><span class="s1">&#39;.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="mi">70</span>
+<span class="mi">71</span>         <span class="c1">########################################</span>
+<span class="mi">72</span>         <span class="c1">## END - generated method body</span>
+<span class="mi">73</span>
+<span class="mi">74</span>         <span class="k">if</span> <span class="n">dummyTrans</span><span class="p">:</span>
+<span class="mi">75</span>             <span class="k">return</span> <span class="n">trans</span><span class="o">.</span><span class="n">response</span><span class="p">()</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+<span class="mi">76</span>         <span class="k">else</span><span class="p">:</span>
+<span class="mi">77</span>             <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">78</span>
+<span class="mi">79</span>     <span class="c1">##################################################</span>
+<span class="mi">80</span>     <span class="c1">## GENERATED ATTRIBUTES</span>
+
+<span class="mi">81</span>     <span class="fm">__str__</span> <span class="o">=</span> <span class="n">respond</span>
+<span class="mi">82</span>     <span class="n">_mainCheetahMethod_for_GenTemplate</span><span class="o">=</span> <span class="s1">&#39;respond&#39;</span>
+
+<span class="mi">83</span> <span class="c1"># CHEETAH was developed by Tavis Rudd, Chuck Esterbrook, Ian Bicking</span>
+       <span class="c1"># and Mike Orr;</span>
+<span class="mi">84</span> <span class="c1"># with code, advice and input from many other volunteers.</span>
+<span class="mi">85</span> <span class="c1"># For more information visit http://www.CheetahTemplate.org</span>
+
+<span class="mi">86</span> <span class="c1">##################################################</span>
+<span class="mi">87</span> <span class="c1">## if run from command line:</span>
+<span class="mi">88</span> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="mi">89</span>     <span class="n">GenTemplate</span><span class="p">()</span><span class="o">.</span><span class="n">runAsMainProgram</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(Again, I have added line numbers and split the lines as in the
+previous chapter.)</p>
+<p>This generated template module is different from the previous one
+in several trivial respects and one important respect. Trivially,
+{._filePath} and {._fileMtime} are not updated in
+{.__init__}, so they inherit the value {None} from {Template}.
+Also, that if-stanza in {.respond} that recompiles the template if
+the source file changes is missing - because there is no source
+file. So this module is several lines shorter than the other one.</p>
+<p>But the important way this module is different is that instead of
+the one {write} call outputting a string literal, this module has a
+series of {write} calls (lines 63-69) outputting successive chunks
+of the template. Regular text has been translated into a string
+literal, and placeholders into function calls. Every placeholder is
+wrapped inside a {filter} call to apply the current output filter.
+(The default output filter converts all objects to strings, and
+{None} to {&#8220;&#8221;}.)</p>
+<p>Placeholders referring to a Python builtin like {xrange} (line 68)
+generate a bare variable name. Placeholders to be looked up in the
+searchList have a nested function call; e.g.,</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;what&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from &#39;$what&#39; at line 1, col 8.</span>
+</pre></div>
+</div>
+<p>{VFS}, remember, is a function imported from {Cheetah.NameMapper}
+that looks up a value in a searchList. So we pass it the
+searchList, the name to look up, and a boolean (1) indicating we
+want autocalling. (It&#8217;s {1} rather than {True} because it&#8217;s
+generated from an {and} expression, and that&#8217;s what Python 2.2
+outputs for true {and} expressions.)</p>
+</div>
+<div class="section" id="complex-placeholders">
+<h2>Complex placeholders<a class="headerlink" href="#complex-placeholders" title="Permalink to this headline">¶</a></h2>
+<p>(placeholders.complex)</p>
+<p>Placeholders can get far more complicated than that. This example
+shows what kind of code the various NameMapper features produce.
+The formulas are taken from Cheetah&#8217;s test suite, in the
+{Cheetah.Tests.SyntaxAndOutput.Placeholders} class.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>1 placeholder: $aStr
+2 placeholders: $aStr $anInt
+2 placeholders, back-to-back: $aStr$anInt
+1 placeholder enclosed in {}: ${aStr}
+1 escaped placeholder: \$var
+func placeholder - with (): $aFunc()
+func placeholder - with (int): $aFunc(1234)
+func placeholder - with (string): $aFunc(&#39;aoeu&#39;)
+func placeholder - with (&#39;&#39;&#39;\nstring&#39;\n&#39;&#39;&#39;): $aFunc(&#39;&#39;&#39;\naoeu&#39;\n&#39;&#39;&#39;)
+func placeholder - with (string*int): $aFunc(&#39;aoeu&#39;*2)
+func placeholder - with (int*float): $aFunc(2*2.0)
+Python builtin values: $None $True $False
+func placeholder - with ($arg=float): $aFunc($arg=4.0)
+deeply nested argstring: $aFunc(  $arg = $aMeth( $arg = $aFunc( 1 ) ) ):
+function with None: $aFunc(None)
+autocalling: $aFunc! $aFunc().
+nested autocalling: $aFunc($aFunc).
+list subscription: $aList[0]
+list slicing: $aList[:2]
+list slicing and subcription combined: $aList[:2][0]
+dict - NameMapper style: $aDict.one
+dict - Python style: $aDict[&#39;one&#39;]
+dict combined with autocalled string method: $aDict.one.upper
+dict combined with string method: $aDict.one.upper()
+nested dict - NameMapper style: $aDict.nestedDict.two
+nested dict - Python style: $aDict[&#39;nestedDict&#39;][&#39;two&#39;]
+nested dict - alternating style: $aDict[&#39;nestedDict&#39;].two
+nested dict - NameMapper style + method: $aDict.nestedDict.two.upper
+nested dict - alternating style + method: $aDict[&#39;nestedDict&#39;].two.upper
+nested dict - NameMapper style + method + slice: $aDict.nestedDict.two.upper[:4]
+nested dict - Python style, variable key: $aDict[$anObj.meth(&#39;nestedDict&#39;)].two
+object method: $anObj.meth1
+object method + complex slice: $anObj.meth1[0: ((4/4*2)*2)/$anObj.meth1(2) ]
+very complex slice: $( anObj.meth1[0: ((4/4*2)*2)/$anObj.meth1(2) ] )
+$_(&#39;a call to gettext&#39;)
+</pre></div>
+</div>
+<p>We&#8217;ll need a big program to set up the placeholder values. Here it
+is:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="kn">from</span> <span class="nn">ComplexExample</span> <span class="k">import</span> <span class="n">ComplexExample</span>
+
+<span class="k">try</span><span class="p">:</span>   <span class="c1"># Python &gt;= 2.2.1</span>
+    <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span>
+<span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>  <span class="c1"># Older Python</span>
+    <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">==</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">DummyClass</span><span class="p">:</span>
+    <span class="n">_called</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;object&#39;</span>
+
+    <span class="k">def</span> <span class="nf">meth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="o">=</span><span class="s2">&quot;arff&quot;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">meth1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="o">=</span><span class="s2">&quot;doo&quot;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">arg</span>
+
+    <span class="k">def</span> <span class="nf">meth2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg1</span><span class="o">=</span><span class="s2">&quot;a1&quot;</span><span class="p">,</span> <span class="n">arg2</span><span class="o">=</span><span class="s2">&quot;a2&quot;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">arg1</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">arg2</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">callIt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="o">=</span><span class="mi">1234</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_called</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_callArg</span> <span class="o">=</span> <span class="n">arg</span>
+
+<span class="k">def</span> <span class="nf">dummyFunc</span><span class="p">(</span><span class="n">arg</span><span class="o">=</span><span class="s2">&quot;Scooby&quot;</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">arg</span>
+
+<span class="n">defaultTestNameSpace</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;aStr&#39;</span><span class="p">:</span><span class="s1">&#39;blarg&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;anInt&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s1">&#39;aFloat&#39;</span><span class="p">:</span><span class="mf">1.5</span><span class="p">,</span>
+    <span class="s1">&#39;aList&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;item0&#39;</span><span class="p">,</span><span class="s1">&#39;item1&#39;</span><span class="p">,</span><span class="s1">&#39;item2&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;aDict&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;one&#39;</span><span class="p">:</span><span class="s1">&#39;item1&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;two&#39;</span><span class="p">:</span><span class="s1">&#39;item2&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;nestedDict&#39;</span><span class="p">:{</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;nestedItem1&#39;</span><span class="p">,</span>
+                          <span class="s1">&#39;two&#39;</span><span class="p">:</span><span class="s1">&#39;nestedItem2&#39;</span>
+                          <span class="p">},</span>
+              <span class="s1">&#39;nestedFunc&#39;</span><span class="p">:</span><span class="n">dummyFunc</span><span class="p">,</span>
+              <span class="p">},</span>
+    <span class="s1">&#39;aFunc&#39;</span><span class="p">:</span> <span class="n">dummyFunc</span><span class="p">,</span>
+    <span class="s1">&#39;anObj&#39;</span><span class="p">:</span> <span class="n">DummyClass</span><span class="p">(),</span>
+    <span class="s1">&#39;aMeth&#39;</span><span class="p">:</span> <span class="n">DummyClass</span><span class="p">()</span><span class="o">.</span><span class="n">meth1</span><span class="p">,</span>
+    <span class="s1">&#39;_&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;translated &#39;</span> <span class="o">+</span> <span class="n">x</span>
+<span class="p">}</span>
+
+<span class="nb">print</span> <span class="n">ComplexExample</span><span class="p">(</span> <span class="n">searchList</span><span class="o">=</span><span class="p">[</span><span class="n">defaultTestNameSpace</span><span class="p">]</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>Here&#8217;s the output:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>1 placeholder: blarg
+2 placeholders: blarg 1
+2 placeholders, back-to-back: blarg1
+1 placeholder enclosed in {}: blarg
+1 escaped placeholder: $var
+func placeholder - with (): Scooby
+func placeholder - with (int): 1234
+func placeholder - with (string): aoeu
+func placeholder - with (&#39;&#39;&#39;\nstring&#39;\n&#39;&#39;&#39;):
+aoeu&#39;
+
+func placeholder - with (string*int): aoeuaoeu
+func placeholder - with (int*float): 4.0
+Python builtin values:  1 0
+func placeholder - with ($arg=float): 4.0
+deeply nested argstring: 1:
+function with None:
+autocalling: Scooby! Scooby.
+nested autocalling: Scooby.
+list subscription: item0
+list slicing: [&#39;item0&#39;, &#39;item1&#39;]
+list slicing and subcription combined: item0
+dict - NameMapper style: item1
+dict - Python style: item1
+dict combined with autocalled string method: ITEM1
+dict combined with string method: ITEM1
+nested dict - NameMapper style: nestedItem2
+nested dict - Python style: nestedItem2
+nested dict - alternating style: nestedItem2
+nested dict - NameMapper style + method: NESTEDITEM2
+nested dict - alternating style + method: NESTEDITEM2
+nested dict - NameMapper style + method + slice: NEST
+nested dict - Python style, variable key: nestedItem2
+object method: doo
+object method + complex slice: do
+very complex slice: do
+translated a call to gettext
+</pre></div>
+</div>
+<p>And here - tada! - is the generated module. To save space, I&#8217;ve
+included only the lines containing the {write} calls. The rest of
+the module is the same as in the first example, chapter
+pyModules.example. I&#8217;ve split some of the lines to make them fit on
+the page.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span> <span class="mi">1</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;1 placeholder: &#39;</span><span class="p">)</span>
+ <span class="mi">2</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aStr&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from &#39;$aStr&#39; at line 1, col 16.</span>
+ <span class="mi">3</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">2 placeholders: &#39;</span><span class="p">)</span>
+ <span class="mi">4</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aStr&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from &#39;$aStr&#39; at line 2, col 17.</span>
+ <span class="mi">5</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+ <span class="mi">6</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;anInt&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span>
+        <span class="c1"># generated from &#39;$anInt&#39; at line 2, col 23.</span>
+ <span class="mi">7</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">2 placeholders, back-to-back: &#39;</span><span class="p">)</span>
+ <span class="mi">8</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aStr&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from &#39;$aStr&#39; at line 3, col 31.</span>
+ <span class="mi">9</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;anInt&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span>
+        <span class="c1"># generated from &#39;$anInt&#39; at line 3, col 36.</span>
+<span class="mi">10</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">1 placeholder enclosed in </span><span class="si">{}</span><span class="s1">: &#39;</span><span class="p">)</span>
+<span class="mi">11</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aStr&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from &#39;${aStr}&#39; at line 4,</span>
+        <span class="c1"># col 31.</span>
+<span class="mi">12</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">1 escaped placeholder: $var</span><span class="se">\n</span><span class="s1">func placeholder - with (): &#39;</span><span class="p">)</span>
+<span class="mi">13</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aFunc&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">)()))</span> <span class="c1"># generated from &#39;$aFunc()&#39; at line 6,</span>
+        <span class="c1"># col 29.</span>
+<span class="mi">14</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">func placeholder - with (int): &#39;</span><span class="p">)</span>
+<span class="mi">15</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aFunc&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">)(</span><span class="mi">1234</span><span class="p">)))</span> <span class="c1"># generated from &#39;$aFunc(1234)&#39; at</span>
+        <span class="c1"># line 7, col 32.</span>
+<span class="mi">16</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">func placeholder - with (string): &#39;</span><span class="p">)</span>
+<span class="mi">17</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aFunc&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">)(</span><span class="s1">&#39;aoeu&#39;</span><span class="p">)))</span> <span class="c1"># generated from &quot;$aFunc(&#39;aoeu&#39;)&quot;</span>
+        <span class="c1"># at line 8, col 35.</span>
+<span class="mi">18</span>  <span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">func placeholder - with (&#39;&#39;&#39;</span><span class="se">\\</span><span class="s2">nstring&#39;</span><span class="se">\\</span><span class="s2">n&#39;&#39;&#39;): &quot;</span><span class="p">)</span>
+<span class="mi">19</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aFunc&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">)(</span><span class="s1">&#39;&#39;&#39;</span><span class="se">\n</span><span class="s1">aoeu&#39;</span><span class="se">\n</span><span class="s1">&#39;&#39;&#39;</span><span class="p">)))</span> <span class="c1"># generated from</span>
+        <span class="c1"># &quot;$aFunc(&#39;&#39;&#39;\\naoeu&#39;\\n&#39;&#39;&#39;)&quot; at line 9, col 46.</span>
+<span class="mi">20</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">func placeholder - with (string*int): &#39;</span><span class="p">)</span>
+<span class="mi">21</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aFunc&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">)(</span><span class="s1">&#39;aoeu&#39;</span><span class="o">*</span><span class="mi">2</span><span class="p">)))</span> <span class="c1"># generated from</span>
+        <span class="c1"># &quot;$aFunc(&#39;aoeu&#39;*2)&quot; at line 10, col 39.</span>
+<span class="mi">22</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">func placeholder - with (int*float): &#39;</span><span class="p">)</span>
+<span class="mi">23</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aFunc&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">)(</span><span class="mi">2</span><span class="o">*</span><span class="mf">2.0</span><span class="p">)))</span> <span class="c1"># generated from &#39;$aFunc(2*2.0)&#39;</span>
+        <span class="c1"># at line 11, col 38.</span>
+<span class="mi">24</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Python builtin values: &#39;</span><span class="p">)</span>
+<span class="mi">25</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="kc">None</span><span class="p">))</span> <span class="c1"># generated from &#39;$None&#39; at line 12, col 24.</span>
+<span class="mi">26</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="mi">27</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="kc">True</span><span class="p">))</span> <span class="c1"># generated from &#39;$True&#39; at line 12, col 30.</span>
+<span class="mi">28</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="mi">29</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="kc">False</span><span class="p">))</span> <span class="c1"># generated from &#39;$False&#39; at line 12, col 36.</span>
+<span class="mi">30</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">func placeholder - with ($arg=float): &#39;</span><span class="p">)</span>
+<span class="mi">31</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aFunc&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">)(</span><span class="n">arg</span><span class="o">=</span><span class="mf">4.0</span><span class="p">)))</span> <span class="c1"># generated from</span>
+        <span class="c1"># &#39;$aFunc($arg=4.0)&#39; at line 13, col 40.</span>
+<span class="mi">32</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">deeply nested argstring: &#39;</span><span class="p">)</span>
+<span class="mi">33</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aFunc&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">)(</span>
+        <span class="n">arg</span> <span class="o">=</span> <span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aMeth&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">)(</span> <span class="n">arg</span> <span class="o">=</span> <span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aFunc&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">)(</span> <span class="mi">1</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)))</span>
+    <span class="c1"># generated from &#39;$aFunc(  $arg = $aMeth( $arg = $aFunc( 1 ) ) )&#39;</span>
+    <span class="c1"># at line 14, col 26.</span>
+<span class="mi">34</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;:</span><span class="se">\n</span><span class="s1">function with None: &#39;</span><span class="p">)</span>
+<span class="mi">35</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aFunc&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">)(</span><span class="kc">None</span><span class="p">)))</span> <span class="c1"># generated from &#39;$aFunc(None)&#39; at</span>
+        <span class="c1"># line 15, col 21.</span>
+<span class="mi">36</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">autocalling: &#39;</span><span class="p">)</span>
+<span class="mi">37</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aFunc&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from &#39;$aFunc&#39; at line 16,</span>
+        <span class="c1"># col 14.</span>
+<span class="mi">38</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;! &#39;</span><span class="p">)</span>
+<span class="mi">39</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aFunc&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">)()))</span> <span class="c1"># generated from &#39;$aFunc()&#39; at line 16,</span>
+        <span class="c1"># col 22.</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">40</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;.</span><span class="se">\n</span><span class="s1">nested autocalling: &#39;</span><span class="p">)</span>
+<span class="mi">41</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aFunc&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">)(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aFunc&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">))))</span> <span class="c1"># generated from</span>
+        <span class="c1"># &#39;$aFunc($aFunc)&#39; at line 17, col 21.</span>
+<span class="mi">42</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;.</span><span class="se">\n</span><span class="s1">list subscription: &#39;</span><span class="p">)</span>
+<span class="mi">43</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aList&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]))</span> <span class="c1"># generated from &#39;$aList[0]&#39; at line</span>
+        <span class="c1"># 18, col 20.</span>
+<span class="mi">44</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">list slicing: &#39;</span><span class="p">)</span>
+<span class="mi">45</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aList&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)[:</span><span class="mi">2</span><span class="p">]))</span> <span class="c1"># generated from &#39;$aList[:2]&#39; at</span>
+        <span class="c1"># line 19, col 15.</span>
+<span class="mi">46</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">list slicing and subcription combined: &#39;</span><span class="p">)</span>
+<span class="mi">47</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aList&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)[:</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]))</span> <span class="c1"># generated from &#39;$aList[:2][0]&#39;</span>
+        <span class="c1"># at line 20, col 40.</span>
+<span class="mi">48</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">dict - NameMapper style: &#39;</span><span class="p">)</span>
+<span class="mi">49</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aDict.one&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from &#39;$aDict.one&#39; at line</span>
+        <span class="c1"># 21, col 26.</span>
+<span class="mi">50</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">dict - Python style: &#39;</span><span class="p">)</span>
+<span class="mi">51</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aDict&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)[</span><span class="s1">&#39;one&#39;</span><span class="p">]))</span> <span class="c1"># generated from &quot;$aDict[&#39;one&#39;]&quot;</span>
+        <span class="c1"># at line 22, col 22.</span>
+<span class="mi">52</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">dict combined with autocalled string method: &#39;</span><span class="p">)</span>
+<span class="mi">53</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aDict.one.upper&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from</span>
+        <span class="c1"># &#39;$aDict.one.upper&#39; at line 23, col 46.</span>
+<span class="mi">54</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">dict combined with string method: &#39;</span><span class="p">)</span>
+<span class="mi">55</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFN</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aDict.one&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="s2">&quot;upper&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">)()))</span> <span class="c1"># generated from</span>
+        <span class="c1"># &#39;$aDict.one.upper()&#39; at line 24, col 35.</span>
+<span class="mi">56</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">nested dict - NameMapper style: &#39;</span><span class="p">)</span>
+<span class="mi">57</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aDict.nestedDict.two&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from</span>
+        <span class="c1"># &#39;$aDict.nestedDict.two&#39; at line 25, col 33.</span>
+<span class="mi">58</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">nested dict - Python style: &#39;</span><span class="p">)</span>
+<span class="mi">59</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aDict&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)[</span><span class="s1">&#39;nestedDict&#39;</span><span class="p">][</span><span class="s1">&#39;two&#39;</span><span class="p">]))</span> <span class="c1"># generated from</span>
+        <span class="c1"># &quot;$aDict[&#39;nestedDict&#39;][&#39;two&#39;]&quot; at line 26, col 29.</span>
+<span class="mi">60</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">nested dict - alternating style: &#39;</span><span class="p">)</span>
+<span class="mi">61</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFN</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aDict&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)[</span><span class="s1">&#39;nestedDict&#39;</span><span class="p">],</span><span class="s2">&quot;two&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated</span>
+        <span class="c1"># from &quot;$aDict[&#39;nestedDict&#39;].two&quot; at line 27, col 34.</span>
+<span class="mi">62</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">nested dict - NameMapper style + method: &#39;</span><span class="p">)</span>
+<span class="mi">63</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aDict.nestedDict.two.upper&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from</span>
+        <span class="c1"># &#39;$aDict.nestedDict.two.upper&#39; at line 28, col 42.</span>
+<span class="mi">64</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">nested dict - alternating style + method: &#39;</span><span class="p">)</span>
+<span class="mi">65</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFN</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aDict&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)[</span><span class="s1">&#39;nestedDict&#39;</span><span class="p">],</span><span class="s2">&quot;two.upper&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span>
+        <span class="c1"># generated from &quot;$aDict[&#39;nestedDict&#39;].two.upper&quot; at line 29, col 43.</span>
+<span class="mi">66</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">nested dict - NameMapper style + method + slice: &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">67</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFN</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aDict.nestedDict.two&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="s2">&quot;upper&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)[:</span><span class="mi">4</span><span class="p">]))</span>
+        <span class="c1"># generated from &#39;$aDict.nestedDict.two.upper[:4]&#39; at line 30, col 50.</span>
+<span class="mi">68</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">nested dict - Python style, variable key: &#39;</span><span class="p">)</span>
+<span class="mi">69</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFN</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aDict&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="p">[</span><span class="n">VFN</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;anObj&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="s2">&quot;meth&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">)(</span><span class="s1">&#39;nestedDict&#39;</span><span class="p">)],</span><span class="s2">&quot;two&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span>
+    <span class="c1"># generated from &quot;$aDict[$anObj.meth(&#39;nestedDict&#39;)].two&quot; at line 31,</span>
+    <span class="c1"># col 43.</span>
+<span class="mi">70</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">object method: &#39;</span><span class="p">)</span>
+<span class="mi">71</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;anObj.meth1&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from &#39;$anObj.meth1&#39; at</span>
+        <span class="c1"># line 32, col 16.</span>
+<span class="mi">72</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">object method + complex slice: &#39;</span><span class="p">)</span>
+<span class="mi">73</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFN</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;anObj&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="s2">&quot;meth1&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">:</span> <span class="p">((</span><span class="mi">4</span><span class="o">/</span><span class="mi">4</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">VFN</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;anObj&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="s2">&quot;meth1&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">)(</span><span class="mi">2</span><span class="p">)</span> <span class="p">]))</span>
+    <span class="c1"># generated from &#39;$anObj.meth1[0: ((4/4*2)*2)/$anObj.meth1(2) ]&#39;</span>
+    <span class="c1"># at line 33, col 32.</span>
+<span class="mi">74</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">very complex slice: &#39;</span><span class="p">)</span>
+<span class="mi">75</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFN</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;anObj&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="s2">&quot;meth1&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">:</span> <span class="p">((</span><span class="mi">4</span><span class="o">/</span><span class="mi">4</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">VFN</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;anObj&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="s2">&quot;meth1&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">)(</span><span class="mi">2</span><span class="p">)</span> <span class="p">]</span> <span class="p">))</span>
+    <span class="c1"># generated from &#39;$( anObj.meth1[0: ((4/4*2)*2)/$anObj.meth1(2) ] )&#39;</span>
+    <span class="c1"># at line 34, col 21.</span>
+<span class="mi">76</span>  <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+<span class="mi">77</span>      <span class="n">_</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="mi">78</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;_&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">)(</span><span class="s2">&quot;a call to gettext&quot;</span><span class="p">)))</span>
+        <span class="c1"># generated from &quot;$_(&#39;a call to gettext&#39;)&quot;</span>
+        <span class="c1"># at line 35, col 1.</span>
+<span class="mi">79</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For each placeholder lookup, the the innermost level of nesting is
+a {VFS} call, which looks up the first (leftmost) placeholder
+component in the searchList. This is wrapped by zero or more {VFN}
+calls, which perform Universal Dotted Notation lookup on the next
+dotted component of the placeholder, looking for an attribute or
+key by that name within the previous object (not in the
+searchList). Autocalling is performed by {VFS} and {VFN}: that&#8217;s
+the reason for their third argument.</p>
+<p>Explicit function/method arguments, subscripts and keys (which are
+all expressions) are left unchanged, besides expanding any embedded
+$placeholders in them. This means they must result in valid Python
+expressions, following the standard Python quoting rules.</p>
+<p>Built-in Python values ({None}, {True} and {False}) are converted
+to {filter(None)}, etc. They use normal Python variable lookup
+rather than {VFS}. (Cheetah emulates {True} and {False} using
+global variables for Python &lt; 2.2.1, when they weren&#8217;t builtins
+yet.)</p>
+<p>Notice the last line is a call to {_} (i.e. {gettext}) which is
+used for internationalization (see
+<a class="reference external" href="http://docs.python.org/lib/module-gettext.html">http://docs.python.org/lib/module-gettext.html</a>). The code is
+converted normally, but an {if False} block is used so that gettext
+can successfully mark the string for translation when parsing the
+generated Python. Otherwise, the NameMapper syntax would get in the
+way of this.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="patching.html" title="Patching Cheetah"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="errorHandling.html" title="Directives: Error Handling"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer&#8217;s Guide</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 09, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+  </body>
+</html>

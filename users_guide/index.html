@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Cheetah User’s Guide &#8212; Cheetah - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0 dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Introduction" href="intro.html" />
+    <link rel="prev" title="Downloading Cheetah" href="../download.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="intro.html" title="Introduction"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../download.html" title="Downloading Cheetah"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../download.html"
+                        title="previous chapter">Downloading Cheetah</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="intro.html"
+                        title="next chapter">Introduction</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/users_guide/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="cheetah-user-s-guide">
+<h1>Cheetah User&#8217;s Guide<a class="headerlink" href="#cheetah-user-s-guide" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#who-should-read-this-guide">Who should read this Guide?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-is-cheetah">What is Cheetah?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-is-the-philosophy-behind-cheetah">What is the philosophy behind Cheetah?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#give-me-an-example">Give me an example!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#give-me-an-example-of-a-webware-servlet">Give me an example of a Webware servlet!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#how-mature-is-cheetah">How mature is Cheetah?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#where-can-i-get-news">Where can I get news?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#how-can-i-contribute">How can I contribute?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#acknowledgements">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Vocabulary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gettingStarted.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gettingStarted.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingStarted.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingStarted.html#files">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingStarted.html#uninstalling">Uninstalling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingStarted.html#the-cheetah-command">The &#8216;cheetah&#8217; command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingStarted.html#testing-your-installation">Testing your installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingStarted.html#quickstart-tutorial">Quickstart tutorial</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="language.html">Language Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="language.html#language-constructs-summary">Language Constructs - Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="language.html#placeholder-syntax-rules">Placeholder Syntax Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="language.html#where-can-you-use-placeholders">Where can you use placeholders?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="language.html#are-all-those-dollar-signs-really-necessary">Are all those dollar signs really necessary?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="language.html#namemapper-syntax">NameMapper Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="language.html#namespace-cascading-and-the-searchlist">Namespace cascading and the searchList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="language.html#missing-values">Missing Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="language.html#directive-syntax-rules">Directive Syntax Rules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="comments.html">Comments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="comments.html#docstring-comments">Docstring Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comments.html#header-comments">Header Comments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="output.html">Generating, Caching and Filtering Output</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="output.html#output-from-complex-expressions-echo">Output from complex expressions: #echo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output.html#executing-expressions-without-output-silent">Executing expressions without output: #silent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output.html#one-line-if">One-line #if</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output.html#caching-output">Caching Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output.html#raw">#raw</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output.html#include">#include</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output.html#slurp">#slurp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output.html#indent">#indent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output.html#ouput-filtering-and-filter">Ouput Filtering and #filter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="inheritanceEtc.html">Import, Inheritance, Declaration and Assignment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="inheritanceEtc.html#import-and-from-directives">#import and #from directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inheritanceEtc.html#extends">#extends</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inheritanceEtc.html#implements">#implements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inheritanceEtc.html#set">#set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inheritanceEtc.html#del">#del</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inheritanceEtc.html#attr">#attr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inheritanceEtc.html#def">#def</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inheritanceEtc.html#block-end-block">#block ... #end block</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flowControl.html">Flow Control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="flowControl.html#for-end-for">#for ... #end for</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flowControl.html#repeat-end-repeat">#repeat ... #end repeat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flowControl.html#while-end-while">#while ... #end while</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flowControl.html#if-else-if-else-end-if">#if ... #else if ... #else ... #end if</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flowControl.html#unless-end-unless">#unless ... #end unless</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flowControl.html#break-and-continue">#break and #continue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flowControl.html#pass">#pass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flowControl.html#stop">#stop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flowControl.html#return">#return</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="errorHandling.html">Error Handling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="errorHandling.html#try-except-end-try-finally-and-assert">#try ... #except ... #end try, #finally, and #assert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="errorHandling.html#errorcatcher-and-errorcatcher-objects">#errorCatcher and ErrorCatcher objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="parserInstructions.html">Instructions to the Parser/Compiler</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="parserInstructions.html#breakpoint">#breakpoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parserInstructions.html#compiler-settings">#compiler-settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tipsAndTricks.html">Tips, Tricks and Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tipsAndTricks.html#placeholder-tips">Placeholder Tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tipsAndTricks.html#diagnostic-output">Diagnostic Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tipsAndTricks.html#when-to-use-python-methods">When to use Python methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tipsAndTricks.html#calling-superclass-methods-and-why-you-have-to">Calling superclass methods, and why you have to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tipsAndTricks.html#all-methods">All methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tipsAndTricks.html#optimizing-templates">Optimizing templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tipsAndTricks.html#psp-style-tags">PSP-style tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tipsAndTricks.html#makefiles">Makefiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tipsAndTricks.html#using-cheetah-in-a-multi-threaded-application">Using Cheetah in a Multi-Threaded Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tipsAndTricks.html#using-cheetah-with-gettext">Using Cheetah with gettext</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="webware.html">Using Cheetah with Webware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="webware.html#installing-cheetah-on-a-webware-system">Installing Cheetah on a Webware system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webware.html#containment-vs-inheritance">Containment vs Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webware.html#site-frameworks">Site frameworks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webware.html#directory-structure">Directory structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webware.html#initializing-your-template-servlet-with-python-code">Initializing your template-servlet with Python code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webware.html#form-processing">Form processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webware.html#form-input-cookies-session-variables-and-web-server-variables">Form input, cookies, session variables and web server variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webware.html#more-examples">More examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webware.html#other-tips">Other Tips</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nonHtml.html">Non-HTML Output</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nonHtml.html#python-source-code">Python source code</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="libraries.html">Batteries included: templates and other libraries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html#errorcatchers">ErrorCatchers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html#fileutils">FileUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html#filters">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html#settingsmanager">SettingsManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html#templates">Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html#tools">Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html#utils">Utils</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="editors.html">Visual Editors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="links.html">Useful Web Links</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="links.html#cheetah-links">Cheetah Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="links.html#third-party-cheetah-stuff">Third-party Cheetah Stuff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="links.html#webware-links">Webware Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="links.html#python-links">Python Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="links.html#other-useful-links">Other Useful Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#syntax-examples">Syntax examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#webware-examples">Webware Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="comparisons.html">Cheetah vs. Other Template Engines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="comparisons.html#which-features-are-unique-to-cheetah">Which features are unique to Cheetah</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comparisons.html#cheetah-vs-velocity">Cheetah vs. Velocity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comparisons.html#cheetah-vs-webmacro">Cheetah vs. WebMacro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comparisons.html#cheetah-vs-zope-s-dtml">Cheetah vs. Zope&#8217;s DTML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comparisons.html#cheetah-vs-zope-page-templates">Cheetah vs. Zope Page Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comparisons.html#cheetah-vs-php-s-smarty-templates">Cheetah vs. PHP&#8217;s Smarty templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comparisons.html#cheetah-vs-phplib-s-template-class">Cheetah vs. PHPLib&#8217;s Template class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comparisons.html#cheetah-vs-psp-php-asp-jsp-embperl-etc">Cheetah vs. PSP, PHP, ASP, JSP, Embperl, etc.</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="intro.html" title="Introduction"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../download.html" title="Downloading Cheetah"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 09, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+  </body>
+</html>

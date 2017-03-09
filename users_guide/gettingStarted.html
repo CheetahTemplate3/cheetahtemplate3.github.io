@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Getting Started &#8212; Cheetah - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0 dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="howItWorks.html" />
+    <link rel="prev" title="Vocabulary" href="glossary.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="howItWorks.html" title="&lt;no title&gt;"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="glossary.html" title="Vocabulary"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User&#8217;s Guide</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Getting Started</a><ul>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#files">Files</a></li>
+<li><a class="reference internal" href="#uninstalling">Uninstalling</a></li>
+<li><a class="reference internal" href="#the-cheetah-command">The &#8216;cheetah&#8217; command</a></li>
+<li><a class="reference internal" href="#testing-your-installation">Testing your installation</a></li>
+<li><a class="reference internal" href="#quickstart-tutorial">Quickstart tutorial</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="glossary.html"
+                        title="previous chapter">Vocabulary</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="howItWorks.html"
+                        title="next chapter">&lt;no title&gt;</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/users_guide/gettingStarted.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<p>(gettingStarted)</p>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>(gettingStarted.requirements)</p>
+<p>Cheetah requires Python release 2.0 or greater, and has been tested
+with Python 2.0, 2.1 and 2.2. It is known to run on Linux, Windows
+NT/98/XP, FreeBSD and Solaris, and should run anywhere Python
+runs.</p>
+<p>99% of Cheetah is written in Python. There is one small C module
+({_namemapper.so}) for speed, but Cheetah automatically falls back
+to a Python equivalent ({NameMapper.py}) if the C module is not
+available.</p>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>(gettingStarted.install)</p>
+<p>To install Cheetah in your system-wide Python library:</p>
+<ol class="arabic simple">
+<li>Login as a user with privileges to install system-wide Python
+packages. On POSIX systems (AIX, Solaris, Linux, IRIX, etc.), the
+command is normally &#8216;su root&#8217;. On non-POSIX systems such as Windows
+NT, login as an administrator.</li>
+<li>Run {python setup.py install} at the command prompt.</li>
+<li>The setup program will install the wrapper script { cheetah} to
+wherever it usually puts Python binaries (&#8220;/usr/bin/&#8221;, &#8220;bin/&#8221; in
+the Python install directory, etc.)</li>
+</ol>
+<p>Cheetah&#8217;s installation is managed by Python&#8217;s Distribution
+Utilities (&#8216;distutils&#8217;). There are many options for customization.
+Type {&#8220;python setup.py help&#8221;} for more information.</p>
+<p>To install Cheetah in an alternate location - someplace outside
+Python&#8217;s {site-packages/} directory, use one of these options:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span> <span class="o">--</span><span class="n">home</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">tavis</span>
+<span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span> <span class="o">--</span><span class="n">install</span><span class="o">-</span><span class="n">lib</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">tavis</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python</span>
+</pre></div>
+</div>
+<p>Either way installs to /home/tavis/lib/python/Cheetah/ . Of course,
+/home/tavis/lib/python must be in your Python path in order for
+Python to find Cheetah.</p>
+</div>
+<div class="section" id="files">
+<h2>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h2>
+<p>(gettingstarted.files)</p>
+<p>If you do the systemwide install, all Cheetah modules are installed
+in the { site-packages/Cheetah/} subdirectory of your standard
+library directory; e.g.,
+/opt/Python2.2/lib/python2.2/site-packages/Cheetah.</p>
+<p>Two commands are installed in Python&#8217;s {bin/} directory or a system
+bin directory: {cheetah} (section gettingStarted.cheetah) and
+{cheetah-compile} (section howWorks.cheetah-compile).</p>
+</div>
+<div class="section" id="uninstalling">
+<h2>Uninstalling<a class="headerlink" href="#uninstalling" title="Permalink to this headline">¶</a></h2>
+<p>(gettingstarted.uninstalling)</p>
+<p>To uninstall Cheetah, merely delete the site-packages/Cheetah/
+directory. Then delete the &#8220;cheetah&#8221; and &#8220;cheetah-compile&#8221; commands
+from whichever bin/ directory they were put in.</p>
+</div>
+<div class="section" id="the-cheetah-command">
+<h2>The &#8216;cheetah&#8217; command<a class="headerlink" href="#the-cheetah-command" title="Permalink to this headline">¶</a></h2>
+<p>(gettingStarted.cheetah)</p>
+<p>Cheetah comes with a utility {cheetah} that provides a command-line
+interface to various housekeeping tasks. The command&#8217;s first
+argument is the name of the task. The following commands are
+currently supported:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cheetah</span> <span class="nb">compile</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span> <span class="p">[</span><span class="n">FILES</span> <span class="o">...</span><span class="p">]</span>     <span class="p">:</span> <span class="n">Compile</span> <span class="n">template</span> <span class="n">definitions</span>
+<span class="n">cheetah</span> <span class="n">fill</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span> <span class="p">[</span><span class="n">FILES</span> <span class="o">...</span><span class="p">]</span>        <span class="p">:</span> <span class="n">Fill</span> <span class="n">template</span> <span class="n">definitions</span>
+<span class="n">cheetah</span> <span class="n">help</span>                              <span class="p">:</span> <span class="n">Print</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span>
+<span class="n">cheetah</span> <span class="n">options</span>                           <span class="p">:</span> <span class="n">Print</span> <span class="n">options</span> <span class="n">help</span> <span class="n">message</span>
+<span class="n">cheetah</span> <span class="n">test</span>                              <span class="p">:</span> <span class="n">Run</span> <span class="n">Cheetah</span><span class="s1">&#39;s regression tests</span>
+<span class="n">cheetah</span> <span class="n">version</span>                           <span class="p">:</span> <span class="n">Print</span> <span class="n">Cheetah</span> <span class="n">version</span> <span class="n">number</span>
+</pre></div>
+</div>
+<p>You only have to type the first letter of the command: {cheetah c}
+is the same as {cheetah compile}.</p>
+<p>The test suite is described in the next section. The {compile}
+command will be described in section howWorks.cheetah-compile, and
+the {fill} command in section howWorks.cheetah-fill.</p>
+<p>The depreciated {cheetah-compile} program does the same thing as
+{cheetah compile}.</p>
+</div>
+<div class="section" id="testing-your-installation">
+<h2>Testing your installation<a class="headerlink" href="#testing-your-installation" title="Permalink to this headline">¶</a></h2>
+<p>(gettingStarted.test)</p>
+<p>After installing Cheetah, you can run its self-test routine to
+verify it&#8217;s working properly on your system. Change directory to
+any directory you have write permission in (the tests write
+temporary files). Do not run the tests in the directory you
+installed Cheetah from, or you&#8217;ll get unnecessary errors. Type the
+following at the command prompt:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cheetah</span> <span class="n">test</span>
+</pre></div>
+</div>
+<p>The tests will run for about three minutes and print a
+success/failure message. If the tests pass, start Python in
+interactive mode and try the example in the next section.</p>
+<p>Certain test failures are insignificant:</p>
+<blockquote>
+<div><p>Python 2.3 changed the string representation of booleans, and the
+tests haven&#8217;t yet been updated to reflect this.</p>
+<p>Certain tests run &#8220;cheetah&#8221; as a subcommand. The failure may mean
+the command wasn&#8217;t found in your system path. (What happens if you
+run &#8220;cheetah&#8221; on the command line?) The failure also happens on
+some Windows systems for unknown reasons. This failure has never
+been observed outside the test suite. Long term, we plan to rewrite
+the tests to do a function call rather than a subcommand, which
+will also make the tests run significantly faster.</p>
+<p>The test tried to write a temporary module in the current directory
+and {import} it. Reread the first paragraph in this section about
+the current directory.</p>
+<p>May be the same problem as SampleBaseClass; let us know if changing
+the current directory doesn&#8217;t work.</p>
+</div></blockquote>
+<p>If any other tests fail, please send a message to the e-mail list
+with a copy of the test output and the following details about your
+installation:</p>
+<ol class="arabic simple">
+<li>your version of Cheetah</li>
+<li>your version of Python</li>
+<li>your operating system</li>
+<li>whether you have changed anything in the Cheetah installation</li>
+</ol>
+</div>
+<div class="section" id="quickstart-tutorial">
+<h2>Quickstart tutorial<a class="headerlink" href="#quickstart-tutorial" title="Permalink to this headline">¶</a></h2>
+<p>(gettingStarted.tutorial)</p>
+<p>This tutorial briefly introduces how to use Cheetah from the Python
+prompt. The following chapters will discuss other ways to use
+templates and more of Cheetah&#8217;s features.</p>
+<p>The core of Cheetah is the {Template} class in the
+{Cheetah.Template} module. The following example shows how to use
+the {Template} class in an interactive Python session. {t} is the
+Template instance. Lines prefixed with {&gt;&gt;&gt;} and {...} are user
+input. The remaining lines are Python output.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">Cheetah.Template</span> <span class="k">import</span> <span class="n">Template</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">templateDef</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="gp">... </span><span class="s2">&lt;HTML&gt;</span>
+<span class="gp">... </span><span class="s2">&lt;HEAD&gt;&lt;TITLE&gt;$title&lt;/TITLE&gt;&lt;/HEAD&gt;</span>
+<span class="gp">... </span><span class="s2">&lt;BODY&gt;</span>
+<span class="gp">... </span><span class="s2">$contents</span>
+<span class="gp">... </span><span class="s2">## this is a single-line Cheetah comment and won&#39;t appear in the output</span>
+<span class="gp">... </span><span class="s2">#* This is a multi-line comment and won&#39;t appear in the output</span>
+<span class="gp">... </span><span class="s2">   blah, blah, blah</span>
+<span class="gp">... </span><span class="s2">*#</span>
+<span class="gp">... </span><span class="s2">&lt;/BODY&gt;</span>
+<span class="gp">... </span><span class="s2">&lt;/HTML&gt;&quot;&quot;&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nameSpace</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Hello World Example&#39;</span><span class="p">,</span> <span class="s1">&#39;contents&#39;</span><span class="p">:</span> <span class="s1">&#39;Hello World!&#39;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="n">templateDef</span><span class="p">,</span> <span class="n">searchList</span><span class="o">=</span><span class="p">[</span><span class="n">nameSpace</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">t</span>
+
+<span class="go">&lt;HTML&gt;</span>
+<span class="go">&lt;HEAD&gt;&lt;TITLE&gt;Hello World Example&lt;/TITLE&gt;&lt;/HEAD&gt;</span>
+<span class="go">&lt;BODY&gt;</span>
+<span class="go">Hello World!</span>
+<span class="go">&lt;/BODY&gt;</span>
+<span class="go">&lt;/HTML&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">t</span>    <span class="c1"># print it as many times as you want</span>
+<span class="go">      [ ... same output as above ... ]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nameSpace</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Example #2&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nameSpace</span><span class="p">[</span><span class="s1">&#39;contents&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Hiya Planet Earth!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">t</span>   <span class="c1"># Now with different plug-in values.</span>
+<span class="go">&lt;HTML&gt;</span>
+<span class="go">&lt;HEAD&gt;&lt;TITLE&gt;Example #2&lt;/TITLE&gt;&lt;/HEAD&gt;</span>
+<span class="go">&lt;BODY&gt;</span>
+<span class="go">Hiya Planet Earth!</span>
+<span class="go">&lt;/BODY&gt;</span>
+<span class="go">&lt;/HTML&gt;</span>
+</pre></div>
+</div>
+<p>Since Cheetah is extremely flexible, you can achieve the same
+result this way:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">t2</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="n">templateDef</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t2</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Hello World Example!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t2</span><span class="o">.</span><span class="n">contents</span> <span class="o">=</span> <span class="s1">&#39;Hello World&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">t2</span>
+<span class="go">      [ ... same output as the first example above ... ]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t2</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Example #2&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t2</span><span class="o">.</span><span class="n">contents</span> <span class="o">=</span> <span class="s1">&#39;Hello World!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">t2</span>
+<span class="go">     [ ... same as Example #2 above ... ]</span>
+</pre></div>
+</div>
+<p>Or this way:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Template3</span><span class="p">(</span><span class="n">Template</span><span class="p">):</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Hello World Example!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">contents</span> <span class="o">=</span> <span class="s1">&#39;Hello World!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t3</span> <span class="o">=</span> <span class="n">Template3</span><span class="p">(</span><span class="n">templateDef</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">t3</span>
+<span class="go">     [ ... you get the picture ... ]</span>
+</pre></div>
+</div>
+<p>The template definition can also come from a file instead of a
+string, as we will see in section howWorks.constructing.</p>
+<p>The above is all fine for short templates, but for long templates
+or for an application that depends on many templates in a
+hierarchy, it&#8217;s easier to store the templates in separate *.tmpl
+files and use the { cheetah compile} program to convert them into
+Python classes in their own modules. This will be covered in
+section howWorks.cheetah-compile.</p>
+<p>As an appetizer, we&#8217;ll just briefly mention that you can store
+constant values { inside} the template definition, and they will be
+converted to attributes in the generated class. You can also create
+methods the same way. You can even use inheritance to arrange your
+templates in a hierarchy, with more specific templates overriding
+certain parts of more general templates (e.g., a &#8220;page&#8221; template
+overriding a sidebar in a &#8220;section&#8221; template).</p>
+<p>For the minimalists out there, here&#8217;s a template definition,
+instantiation and filling all in one Python statement:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">Template</span><span class="p">(</span><span class="s2">&quot;Templates are pretty useless without placeholders.&quot;</span><span class="p">)</span>
+<span class="go">Templates are pretty useless without placeholders.</span>
+</pre></div>
+</div>
+<p>You use a precompiled template the same way, except you don&#8217;t
+provide a template definition since it was already established:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">MyPrecompiledTemplate</span> <span class="k">import</span> <span class="n">MyPrecompiledTemplate</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">MyPrecompiledTemplate</span><span class="p">()</span>
+<span class="n">t</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Fred Flintstone&quot;</span>
+<span class="n">t</span><span class="o">.</span><span class="n">city</span> <span class="o">=</span> <span class="s2">&quot;Bedrock City&quot;</span>
+<span class="nb">print</span> <span class="n">t</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="howItWorks.html" title="&lt;no title&gt;"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="glossary.html" title="Vocabulary"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah - The Python-Powered Template Engine</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User&#8217;s Guide</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 09, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+  </body>
+</html>
