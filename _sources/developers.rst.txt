@@ -1,8 +1,10 @@
 Contributing to Cheetah
 =======================
 
-Cheetah is the work of many volunteers. If you use Cheetah, share your experiences, 
-tricks, customizations, and frustrations. Please join the `mailing list <http://lists.sourceforge.net/lists/listinfo/cheetahtemplate-discuss>`_
+Cheetah is the work of many volunteers. If you use Cheetah, share your
+experiences, tricks, customizations, and frustrations. Please visit
+https://github.com/CheetahTemplate3 and file bug reports, feature requests or
+pull requests.
 
 
 Getting the Code
@@ -22,21 +24,23 @@ the current release of Cheetah will go, it's common for a patch
 to be applied to maint and next at the same time.
 
 Anyone and everyone is encouraged to submit patches at any time, but as far 
-as bugs or feature requests go, we try to file those *first* in the `Cheetah Bug Tracker <http://bugs.cheetahtemplate.org>`_
+as bugs or feature requests go, we try to file those *first* in the `Cheetah3 Bug Tracker <https://github.com/CheetahTemplate3/cheetah3/issues>`_
 and then they can be organized into particular releases as is necessary.
 
-In addition to the bug tracker, Cheetah uses `Hudson <http://hudson-ci.org>`_ for 
-automating builds and test runs on a number of platforms (see: `Cheetah's Hudson <http://hudson.cheetahtemplate.org>`_).
-Prior to the tarballing of
-a release, **all** tests must be passing before the **next** branch is merged down
-to the Git **master** branch where the release tarball will actually be created from.
+In addition to the bug tracker, Cheetah uses Travis CI for automating builds
+and test runs (see: `Cheetah at Travis
+<https://travis-ci.org/CheetahTemplate3/cheetah3>`_).
+
+Prior to the tarballing of a release, **all** tests must be passing before the
+**next** branch is merged down to the Git **master** branch where the release
+tarball will actually be created from.
 
 
 Filing Bugs
 -----------
 No software is perfect, and unfortunately no bug report is either. If you've 
 found yourself faced with a bug in Cheetah, or just have a good idea for a 
-new feature, we kindly ask that you create an issue in the `Cheetah Bug Tracker <http://bugs.cheetahtemplate.org>`_.
+new feature, we kindly ask that you create an issue in the `Cheetah3 Bug Tracker <https://github.com/CheetahTemplate3/cheetah3/issues>`_.
 
 Some tips for filing a *useful* bug report, try to include the following:
 
