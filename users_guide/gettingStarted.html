@@ -99,14 +99,14 @@
 <div class="section" id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <p>(gettingStarted.requirements)</p>
-<p>Cheetah requires Python release 2.0 or greater, and has been tested
-with Python 2.0, 2.1 and 2.2. It is known to run on Linux, Windows
-NT/98/XP, FreeBSD and Solaris, and should run anywhere Python
-runs.</p>
+<p>Cheetah requires Python release 2.7 (there are plans to support 3.4+).
+It is known to run on Linux, Windows, FreeBSD and Solaris,
+and should run anywhere Python runs.</p>
 <p>99% of Cheetah is written in Python. There is one small C module
 ({_namemapper.so}) for speed, but Cheetah automatically falls back
 to a Python equivalent ({NameMapper.py}) if the C module is not
 available.</p>
+<p>Cheetah can use an additional module Markdown but it&#8217;s not strictly required.</p>
 </div>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
@@ -117,14 +117,18 @@ available.</p>
 packages. On POSIX systems (AIX, Solaris, Linux, IRIX, etc.), the
 command is normally &#8216;su root&#8217;. On non-POSIX systems such as Windows
 NT, login as an administrator.</li>
-<li>Run {python setup.py install} at the command prompt.</li>
+<li>Run {pip install CT3} at the command prompt.</li>
+<li>Or download source code and run {python setup.py install}.</li>
 <li>The setup program will install the wrapper script { cheetah} to
 wherever it usually puts Python binaries (&#8220;/usr/bin/&#8221;, &#8220;bin/&#8221; in
 the Python install directory, etc.)</li>
+<li>If you cannot login as as an administrator install Cheetah as user to your
+own home directory: add option {&#8211;user} to commands: either
+{pip install &#8211;user CT3} or {python setup.py install &#8211;user}.</li>
 </ol>
 <p>Cheetah&#8217;s installation is managed by Python&#8217;s Distribution
 Utilities (&#8216;distutils&#8217;). There are many options for customization.
-Type {&#8220;python setup.py help&#8221;} for more information.</p>
+Type {python setup.py help} for more information.</p>
 <p>To install Cheetah in an alternate location - someplace outside
 Python&#8217;s {site-packages/} directory, use one of these options:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span> <span class="o">--</span><span class="n">home</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">tavis</span>
@@ -343,7 +347,7 @@ provide a template definition since it was already established:</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Mar 12, 2017.
+      Last updated on Mar 14, 2017.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
     </div>
   </body>
