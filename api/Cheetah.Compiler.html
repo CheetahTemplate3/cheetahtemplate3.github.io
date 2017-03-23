@@ -311,48 +311,50 @@ remainderOfExpr = any arglist, index, or slice</dd>
 <p>If remainderOfExpr contains a call arglist (e.g. &#8216;(1234)&#8217;) then useAC
 is False, otherwise it defaults to True. It is overridden by the global
 setting &#8216;useAutocalling&#8217; if this setting is False.</p>
-<dl class="docutils">
-<dt>if the raw Cheetah Var is</dt>
-<dd>$a.b.c[1].d().x.y.z</dd>
-<dt>nameChunks is the list</dt>
-<dd><dl class="first docutils">
-<dt>[ (&#8216;a.b.c&#8217;,True,&#8217;[1]&#8217;), # A</dt>
-<dd>(&#8216;d&#8217;,False,&#8217;()&#8217;),     # B
-(&#8216;x.y.z&#8217;,True,&#8217;&#8216;),    # C</dd>
-</dl>
-<p class="last">]</p>
-</dd>
-<dt>When this method is fed the list above it returns</dt>
-<dd>VFN(VFN(VFFSL(SL, &#8216;a.b.c&#8217;,True)[1], &#8216;d&#8217;,False)(), &#8216;x.y.z&#8217;,True)</dd>
-<dt>which can be represented as</dt>
-<dd>VFN(B`, name=C[0], executeCallables=(useAC and C[1]))C[2]</dd>
-<dt>where:</dt>
-<dd><p class="first">VFN = NameMapper.valueForName
+<p>EXAMPLE:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>if the raw Cheetah Var is
+  $a.b.c[1].d().x.y.z
+
+nameChunks is the list
+  [ (&#39;a.b.c&#39;,True,&#39;[1]&#39;), # A
+    (&#39;d&#39;,False,&#39;()&#39;),     # B
+    (&#39;x.y.z&#39;,True,&#39;&#39;),    # C
+  ]
+</pre></div>
+</div>
+<p>When this method is fed the list above it returns:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">VFN</span><span class="p">(</span><span class="n">VFN</span><span class="p">(</span><span class="n">VFFSL</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span> <span class="s1">&#39;a.b.c&#39;</span><span class="p">,</span><span class="kc">True</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="kc">False</span><span class="p">)(),</span> <span class="s1">&#39;x.y.z&#39;</span><span class="p">,</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>which can be represented as:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>VFN(B`, name=C[0], executeCallables=(useAC and C[1]))C[2]
+</pre></div>
+</div>
+<p>where:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>VFN = NameMapper.valueForName
 VFFSL = NameMapper.valueFromFrameOrSearchList
 VFSL = NameMapper.valueFromSearchList # optionally used instead of VFFSL
 SL = self.searchList()
-useAC = self.setting(&#8216;useAutocalling&#8217;) # True in this example</p>
-<p>A = (&#8216;a.b.c&#8217;,True,&#8217;[1]&#8217;)
-B = (&#8216;d&#8217;,False,&#8217;()&#8217;)
-C = (&#8216;x.y.z&#8217;,True,&#8217;&#8216;)</p>
-<dl class="docutils">
-<dt>C` = VFN( VFN( VFFSL(SL, &#8216;a.b.c&#8217;,True)[1],</dt>
-<dd><blockquote class="first">
-<div><blockquote>
-<div>&#8216;d&#8217;,False)(),</div></blockquote>
-<p>&#8216;x.y.z&#8217;,True)</p>
-</div></blockquote>
-<p class="last">= VFN(B`, name=&#8217;x.y.z&#8217;, executeCallables=True)</p>
-</dd>
-</dl>
-<p class="last">B` = VFN(A`, name=B[0], executeCallables=(useAC and B[1]))B[2]
-A` = VFFSL(SL, name=A[0], executeCallables=(useAC and A[1]))A[2]</p>
-</dd>
-</dl>
+useAC = self.setting(&#39;useAutocalling&#39;) # True in this example
+
+A = (&#39;a.b.c&#39;,True,&#39;[1]&#39;)
+B = (&#39;d&#39;,False,&#39;()&#39;)
+C = (&#39;x.y.z&#39;,True,&#39;&#39;)
+
+C` = VFN( VFN( VFFSL(SL, &#39;a.b.c&#39;,True)[1],
+               &#39;d&#39;,False)(),
+          &#39;x.y.z&#39;,True)
+   = VFN(B`, name=&#39;x.y.z&#39;, executeCallables=True)
+
+B` = VFN(A`, name=B[0], executeCallables=(useAC and B[1]))B[2]
+A` = VFFSL(SL, name=A[0], executeCallables=(useAC and A[1]))A[2]
+</pre></div>
+</div>
 <p>Note, if the compiler setting useStackFrames=False (default is true)
-then</p>
-<blockquote>
-<div>A` = VFSL([locals()]+SL+[globals(), builtin], name=A[0], executeCallables=(useAC and A[1]))A[2]</div></blockquote>
+then:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>A` = VFSL([locals()]+SL+[globals(), builtin], name=A[0], executeCallables=(useAC and A[1]))A[2]
+</pre></div>
+</div>
 <p>This option allows Cheetah to be used with Psyco, which doesn&#8217;t support
 stack frame introspection.</p>
 </dd></dl>

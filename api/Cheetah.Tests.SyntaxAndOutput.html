@@ -380,7 +380,7 @@ for the #end block part: #end block OR #end block [name]</p>
 <code class="descname">test3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.CGI.test3" title="Permalink to this definition">¶</a></dt>
 <dd><p>A (pseudo) Webware servlet.</p>
 <p>This uses the Python syntax escape to set
-self._CHEETAH__isControlledByWebKit.           
+self._CHEETAH__isControlledByWebKit.
 We could instead do &#8216;#silent self._CHEETAH__isControlledByWebKit = True&#8217;,
 taking advantage of the fact that it will compile unchanged as long
 as there&#8217;s no &#8216;$&#8217; in the statement.  (It won&#8217;t compile with an &#8216;$&#8217;
@@ -1620,7 +1620,7 @@ Shouldn&#8217;t gobble</p>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.OutputTest" title="Cheetah.Tests.SyntaxAndOutput.OutputTest"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Tests.SyntaxAndOutput.OutputTest</span></code></a></p>
 <dl class="attribute">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Indenter.control">
-<code class="descname">control</code><em class="property"> = '\npublic class X\n{\n    public void Foo(\n                       _input, \n                       _output);\n\n\n    public int Bar(\n                       _str1, \n                       str2, \n                       _str3);\n\n\n    public Object Add(\n                       value1, \n                       value);\n\n\n}\n//end of class\n\n\n\n'</em><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Indenter.control" title="Permalink to this definition">¶</a></dt>
+<code class="descname">control</code><em class="property"> = '\npublic class X\n{\n    public void Foo(\n                       _input,\n                       _output);\n\n\n    public int Bar(\n                       _str1,\n                       str2,\n                       _str3);\n\n\n    public Object Add(\n                       value1,\n                       value);\n\n\n}\n//end of class\n\n\n\n'</em><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Indenter.control" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1635,7 +1635,7 @@ Shouldn&#8217;t gobble</p>
 
 <dl class="attribute">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Indenter.source">
-<code class="descname">source</code><em class="property"> = '\npublic class X\n{\n    #for $method in $methods\n        $getMethod($method)\n        \n    #end for\n}\n//end of class\n\n#def getMethod($method)\n    #indent ++\n    public $getType($method) ${method.Name}($getParams($method.Params));\n    #indent --\n#end def\n\n#def getParams($params)\n    #indent off\n\n    #for $counter in $range($len($params))\n        #if $counter == len($params) - 1\n                       $params[$counter]#slurp\n        #else:\n                       $params[$counter], \n        #end if\n    #end for\n    #indent on\n#end def\n\n#def getType($method)\n    #indent push\n    #indent=0\n    #if $method.Type == &quot;VT_VOID&quot;\n        void#slurp\n    #elif $method.Type == &quot;VT_INT&quot;\n        int#slurp\n    #elif $method.Type == &quot;VT_VARIANT&quot;\n        Object#slurp\n    #end if\n    #indent pop\n#end def\n'</em><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Indenter.source" title="Permalink to this definition">¶</a></dt>
+<code class="descname">source</code><em class="property"> = '\npublic class X\n{\n    #for $method in $methods\n        $getMethod($method)\n\n    #end for\n}\n//end of class\n\n#def getMethod($method)\n    #indent ++\n    public $getType($method) ${method.Name}($getParams($method.Params));\n    #indent --\n#end def\n\n#def getParams($params)\n    #indent off\n\n    #for $counter in $range($len($params))\n        #if $counter == len($params) - 1\n                       $params[$counter]#slurp\n        #else:\n                       $params[$counter],\n        #end if\n    #end for\n    #indent on\n#end def\n\n#def getType($method)\n    #indent push\n    #indent=0\n    #if $method.Type == &quot;VT_VOID&quot;\n        void#slurp\n    #elif $method.Type == &quot;VT_INT&quot;\n        int#slurp\n    #elif $method.Type == &quot;VT_VARIANT&quot;\n        Object#slurp\n    #end if\n    #indent pop\n#end def\n'</em><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Indenter.source" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -1861,7 +1861,7 @@ for.</p>
 
 <dl class="attribute">
 <dt id="Cheetah.Tests.SyntaxAndOutput.OutputTest.report">
-<code class="descname">report</code><em class="property"> = '\nTemplate output mismatch: \n\n    Input Template =\n%(template)s%(end)s\n\n    Expected Output =\n%(expected)s%(end)s\n\n    Actual Output =\n%(actual)s%(end)s'</em><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.OutputTest.report" title="Permalink to this definition">¶</a></dt>
+<code class="descname">report</code><em class="property"> = '\nTemplate output mismatch:\n\n    Input Template =\n%(template)s%(end)s\n\n    Expected Output =\n%(expected)s%(end)s\n\n    Actual Output =\n%(actual)s%(end)s'</em><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.OutputTest.report" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">

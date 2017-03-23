@@ -115,7 +115,7 @@ most Python web frameworks (Webware, Aquarium, mod_python, Turbogears,
 CherryPy, Quixote, etc.) provide plugins that handle Cheetah compilation for
 you.</p>
 <dl class="docutils">
-<dt>There are several possible usage patterns:          </dt>
+<dt>There are several possible usage patterns:</dt>
 <dd><ol class="first last arabic">
 <li><p class="first">tclass = Template.compile(src)
 t1 = tclass() # or tclass(namespaces=[namespace,...])
@@ -143,7 +143,7 @@ print(tclass(name=&#8217;world&#8217;, caller=&#8217;me&#8217;))</p>
 <p>Notes on the usage patterns:</p>
 <blockquote>
 <div><dl class="docutils">
-<dt>usage pattern 1)       </dt>
+<dt>usage pattern 1)</dt>
 <dd>This is the most flexible, but it is slightly more verbose unless you
 write a wrapper function to hide the plumbing.  Under the hood, all
 other usage patterns are based on this approach.  Templates compiled
@@ -249,7 +249,7 @@ overridden in subclasses of this class.  Working with most of these is
 an advanced topic.</p>
 <blockquote class="last">
 <div><ul>
-<li><p class="first">returnAClass=True            
+<li><p class="first">returnAClass=True
 If false, return the generated module code rather than a class.</p>
 </li>
 <li><p class="first">compilerSettings (a dict)
@@ -434,7 +434,7 @@ directiveToken) and should separated with a space:</p>
 <blockquote>
 <div><p>e.g. &#8216;&#64; %&#8217;
 klass = Template.compile(src, preprocessors=&#8217;&#64; %&#8217;)
-# or 
+# or
 klass = Template.compile(src, preprocessors=[&#8216;&#64; %&#8217;])</p>
 </div></blockquote>
 </li>
@@ -535,21 +535,22 @@ raises NameMapper.NotFound.</p>
 <dt id="Cheetah.Template.Template.i18n">
 <code class="descclassname">Template.</code><code class="descname">i18n</code><span class="sig-paren">(</span><em>message</em>, <em>plural=None</em>, <em>n=None</em>, <em>id=None</em>, <em>domain=None</em>, <em>source=None</em>, <em>target=None</em>, <em>comment=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.i18n" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is just a stub at this time.</p>
-<blockquote>
-<div><p>plural = the plural form of the message
+<p>plural = the plural form of the message
 n = a sized argument to distinguish between single and plural forms</p>
-<p>id = msgid in the translation catalog
-domain = translation domain
+<blockquote>
+<div>id = msgid in the translation catalog</div></blockquote>
+<p>domain = translation domain
 source = source lang
 target = a specific target lang
 comment = a comment to the translation team</p>
-</div></blockquote>
-<p>See the following for some ideas
+<blockquote>
+<div><p>See the following for some ideas
 <a class="reference external" href="http://www.zope.org/DevHome/Wikis/DevSite/Projects/ComponentArchitecture/ZPTInternationalizationSupport">http://www.zope.org/DevHome/Wikis/DevSite/Projects/ComponentArchitecture/ZPTInternationalizationSupport</a></p>
 <p>Other notes:
 - There is no need to replicate the i18n:name attribute from plone / PTL,</p>
 <blockquote>
 <div>as cheetah placeholders serve the same purpose</div></blockquote>
+</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -665,7 +666,7 @@ terminal, in a Webware log file, or whatever. <a href="#id1"><span class="proble
 <dd><ul class="first last simple">
 <li>If one value is found, put it in a list.</li>
 <li>If several values are found, leave them in a list.</li>
-<li>If no values are found, use the empty list ([]).  The &#8216;default*&#8217; 
+<li>If no values are found, use the empty list ([]).  The &#8216;default*&#8217;
 arguments are <em>not</em> consulted in this case.</li>
 </ul>
 </dd>

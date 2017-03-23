@@ -7,7 +7,6 @@ Cheetah User's Guide
     intro.rst
     glossary.rst
     gettingStarted.rst
-    howItWorks.rst
     language.rst
     comments.rst
     output.rst
@@ -18,6 +17,7 @@ Cheetah User's Guide
 
     tipsAndTricks.rst
     webware.rst
+    otherHtml.rst
     nonHtml.rst
     libraries.rst
     editors.rst

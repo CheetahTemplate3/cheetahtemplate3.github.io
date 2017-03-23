@@ -76,12 +76,12 @@
 <dt id="Cheetah.Filters.CodeHighlighter">
 <em class="property">class </em><code class="descclassname">Cheetah.Filters.</code><code class="descname">CodeHighlighter</code><span class="sig-paren">(</span><em>template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.CodeHighlighter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Filters.Filter" title="Cheetah.Filters.Filter"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Filters.Filter</span></code></a></p>
-<p>The CodeHighlighter filter depends on the &#8220;pygments&#8221; module which you can 
+<p>The CodeHighlighter filter depends on the &#8220;pygments&#8221; module which you can
 download and install from: <a class="reference external" href="http://pygments.org">http://pygments.org</a></p>
 <p>What the CodeHighlighter assumes the string that it&#8217;s receiving is source
 code and uses pygments.lexers.guess_lexer() to try to guess which parser
 to use when highlighting it.</p>
-<p>CodeHighlighter will return the HTML and CSS to render the code block, syntax 
+<p>CodeHighlighter will return the HTML and CSS to render the code block, syntax
 highlighted, in a browser</p>
 <p>NOTE: I had an issue installing pygments on Linux/amd64/Python 2.6 dealing with
 importing of pygments.lexers, I was able to correct the failure by adding:</p>
@@ -127,7 +127,7 @@ importing of pygments.lexers, I was able to correct the failure by adding:</p>
 <dd>&lt;h1&gt;My Header&lt;/h1&gt;</dd>
 </dl>
 <p>and so on.</p>
-<p>Markdown is meant to be used with the #transform 
+<p>Markdown is meant to be used with the #transform
 tag, as it&#8217;s usefulness with #filter is marginal at
 best</p>
 <dl class="method">
