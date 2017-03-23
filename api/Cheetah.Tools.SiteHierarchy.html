@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Cheetah.Tools.SiteHierarchy module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/Cheetah.Tools.SiteHierarchy.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-Cheetah.Tools.SiteHierarchy">
+<span id="cheetah-tools-sitehierarchy-module"></span><h1>Cheetah.Tools.SiteHierarchy module<a class="headerlink" href="#module-Cheetah.Tools.SiteHierarchy" title="Permalink to this headline">¶</a></h1>
+<p>Create menus and crumbs from a site hierarchy.</p>
+<p>You define the site hierarchy as lists/tuples.  Each location in the hierarchy
+is a (url, description) tuple.  Each list has the base URL/text in the 0
+position, and all the children coming after it.  Any child can be a list,
+representing further depth to the hierarchy.  See the end of the file for an
+example hierarchy.</p>
+<p>Use Hierarchy(contents, currentURL), where contents is this hierarchy, and
+currentURL is the position you are currently in.  The menubar and crumbs methods
+give you the HTML output.</p>
+<p>There are methods you can override to customize the HTML output.</p>
+<dl class="class">
+<dt id="Cheetah.Tools.SiteHierarchy.Hierarchy">
+<em class="property">class </em><code class="descclassname">Cheetah.Tools.SiteHierarchy.</code><code class="descname">Hierarchy</code><span class="sig-paren">(</span><em>hierarchy</em>, <em>currentURL</em>, <em>prefix=''</em>, <em>menuCSSClass=None</em>, <em>crumbCSSClass=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tools.SiteHierarchy.Hierarchy" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="Cheetah.Tools.SiteHierarchy.Hierarchy.crumbLink">
+<code class="descname">crumbLink</code><span class="sig-paren">(</span><em>url</em>, <em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tools.SiteHierarchy.Hierarchy.crumbLink" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Tools.SiteHierarchy.Hierarchy.crumbSeperator">
+<code class="descname">crumbSeperator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tools.SiteHierarchy.Hierarchy.crumbSeperator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Tools.SiteHierarchy.Hierarchy.crumbTerminator">
+<code class="descname">crumbTerminator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tools.SiteHierarchy.Hierarchy.crumbTerminator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Tools.SiteHierarchy.Hierarchy.crumbs">
+<code class="descname">crumbs</code><span class="sig-paren">(</span><em>crumbCSSClass=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tools.SiteHierarchy.Hierarchy.crumbs" title="Permalink to this definition">¶</a></dt>
+<dd><p>The home&gt;where&gt;you&gt;are crumbs</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Tools.SiteHierarchy.Hierarchy.emptyCrumb">
+<code class="descname">emptyCrumb</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tools.SiteHierarchy.Hierarchy.emptyCrumb" title="Permalink to this definition">¶</a></dt>
+<dd><p>When you are at the homepage</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Tools.SiteHierarchy.Hierarchy.menuLink">
+<code class="descname">menuLink</code><span class="sig-paren">(</span><em>url</em>, <em>text</em>, <em>indent</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tools.SiteHierarchy.Hierarchy.menuLink" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Tools.SiteHierarchy.Hierarchy.menuList">
+<code class="descname">menuList</code><span class="sig-paren">(</span><em>menuCSSClass=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tools.SiteHierarchy.Hierarchy.menuList" title="Permalink to this definition">¶</a></dt>
+<dd><p>An indented menu list</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 23, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+  </body>
+</html>

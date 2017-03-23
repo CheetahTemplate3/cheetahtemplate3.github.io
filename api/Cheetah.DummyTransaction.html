@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Cheetah.DummyTransaction module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/Cheetah.DummyTransaction.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-Cheetah.DummyTransaction">
+<span id="cheetah-dummytransaction-module"></span><h1>Cheetah.DummyTransaction module<a class="headerlink" href="#module-Cheetah.DummyTransaction" title="Permalink to this headline">¶</a></h1>
+<p>Provides dummy Transaction and Response classes is used by Cheetah in place
+of real Webware transactions when the Template obj is not used directly as a
+Webware servlet.</p>
+<p>Warning: This may be deprecated in the future, please do not rely on any 
+specific DummyTransaction or DummyResponse behavior</p>
+<dl class="class">
+<dt id="Cheetah.DummyTransaction.DummyResponse">
+<em class="property">class </em><code class="descclassname">Cheetah.DummyTransaction.</code><code class="descname">DummyResponse</code><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>A dummy Response class is used by Cheetah in place of real Webware
+Response objects when the Template obj is not used directly as a Webware
+servlet</p>
+<dl class="method">
+<dt id="Cheetah.DummyTransaction.DummyResponse.flush">
+<code class="descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponse.flush" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.DummyTransaction.DummyResponse.getvalue">
+<code class="descname">getvalue</code><span class="sig-paren">(</span><em>outputChunks=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponse.getvalue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.DummyTransaction.DummyResponse.safeConvert">
+<code class="descname">safeConvert</code><span class="sig-paren">(</span><em>chunk</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponse.safeConvert" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.DummyTransaction.DummyResponse.write">
+<code class="descname">write</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponse.write" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.DummyTransaction.DummyResponse.writelines">
+<code class="descname">writelines</code><span class="sig-paren">(</span><em>*lines</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponse.writelines" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.DummyTransaction.DummyResponse.writeln">
+<code class="descname">writeln</code><span class="sig-paren">(</span><em>txt</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponse.writeln" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="Cheetah.DummyTransaction.DummyResponseFailure">
+<em class="property">exception </em><code class="descclassname">Cheetah.DummyTransaction.</code><code class="descname">DummyResponseFailure</code><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponseFailure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">exceptions.Exception</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.DummyTransaction.DummyTransaction">
+<em class="property">class </em><code class="descclassname">Cheetah.DummyTransaction.</code><code class="descname">DummyTransaction</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyTransaction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>A dummy Transaction class is used by Cheetah in place of real Webware
+transactions when the Template obj is not used directly as a Webware
+servlet.</p>
+<p>It only provides a response object and method.  All other methods and
+attributes make no sense in this context.</p>
+<dl class="method">
+<dt id="Cheetah.DummyTransaction.DummyTransaction.response">
+<code class="descname">response</code><span class="sig-paren">(</span><em>resp=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyTransaction.response" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.DummyTransaction.TransformerResponse">
+<em class="property">class </em><code class="descclassname">Cheetah.DummyTransaction.</code><code class="descname">TransformerResponse</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.TransformerResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.DummyTransaction.DummyResponse" title="Cheetah.DummyTransaction.DummyResponse"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.DummyTransaction.DummyResponse</span></code></a></p>
+<dl class="method">
+<dt id="Cheetah.DummyTransaction.TransformerResponse.getvalue">
+<code class="descname">getvalue</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.TransformerResponse.getvalue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.DummyTransaction.TransformerTransaction">
+<em class="property">class </em><code class="descclassname">Cheetah.DummyTransaction.</code><code class="descname">TransformerTransaction</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.TransformerTransaction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="Cheetah.DummyTransaction.TransformerTransaction.response">
+<code class="descname">response</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.TransformerTransaction.response" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 23, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+  </body>
+</html>

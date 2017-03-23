@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Cheetah.SourceReader module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/Cheetah.SourceReader.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-Cheetah.SourceReader">
+<span id="cheetah-sourcereader-module"></span><h1>Cheetah.SourceReader module<a class="headerlink" href="#module-Cheetah.SourceReader" title="Permalink to this headline">¶</a></h1>
+<p>SourceReader class for Cheetah&#8217;s Parser and CodeGenerator</p>
+<dl class="function">
+<dt id="Cheetah.SourceReader.ENCODINGsearch">
+<code class="descclassname">Cheetah.SourceReader.</code><code class="descname">ENCODINGsearch</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.ENCODINGsearch" title="Permalink to this definition">¶</a></dt>
+<dd><p>search(string[, pos[, endpos]]) &#8211;&gt; match object or None.
+Scan through string looking for a match, and return a corresponding
+match object instance. Return None if no position in the string matches.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="Cheetah.SourceReader.Error">
+<em class="property">exception </em><code class="descclassname">Cheetah.SourceReader.</code><code class="descname">Error</code><a class="headerlink" href="#Cheetah.SourceReader.Error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">exceptions.Exception</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.SourceReader.SourceReader">
+<em class="property">class </em><code class="descclassname">Cheetah.SourceReader.</code><code class="descname">SourceReader</code><span class="sig-paren">(</span><em>src</em>, <em>filename=None</em>, <em>breakPoint=None</em>, <em>encoding=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.advance">
+<code class="descname">advance</code><span class="sig-paren">(</span><em>offset=1</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.advance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.atEnd">
+<code class="descname">atEnd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.atEnd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.atStart">
+<code class="descname">atStart</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.atStart" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.breakPoint">
+<code class="descname">breakPoint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.breakPoint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.checkPos">
+<code class="descname">checkPos</code><span class="sig-paren">(</span><em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.checkPos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.filename">
+<code class="descname">filename</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.filename" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.find">
+<code class="descname">find</code><span class="sig-paren">(</span><em>it</em>, <em>pos=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.find" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.findBOL">
+<code class="descname">findBOL</code><span class="sig-paren">(</span><em>pos=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.findBOL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.findEOL">
+<code class="descname">findEOL</code><span class="sig-paren">(</span><em>pos=None</em>, <em>gobble=False</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.findEOL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.getLine">
+<code class="descname">getLine</code><span class="sig-paren">(</span><em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.getLine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.getNonWhiteSpace">
+<code class="descname">getNonWhiteSpace</code><span class="sig-paren">(</span><em>WSchars=' \x0c\t\n\r'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.getNonWhiteSpace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.getRowCol">
+<code class="descname">getRowCol</code><span class="sig-paren">(</span><em>pos=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.getRowCol" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.getRowColLine">
+<code class="descname">getRowColLine</code><span class="sig-paren">(</span><em>pos=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.getRowColLine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.getWhiteSpace">
+<code class="descname">getWhiteSpace</code><span class="sig-paren">(</span><em>max=None</em>, <em>WSchars=' \x0c\t'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.getWhiteSpace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.getc">
+<code class="descname">getc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.getc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.gotoBookmark">
+<code class="descname">gotoBookmark</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.gotoBookmark" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.hasBookmark">
+<code class="descname">hasBookmark</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.hasBookmark" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.isLineClearToPos">
+<code class="descname">isLineClearToPos</code><span class="sig-paren">(</span><em>pos=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.isLineClearToPos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.lineNum">
+<code class="descname">lineNum</code><span class="sig-paren">(</span><em>pos=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.lineNum" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.matchNonWhiteSpace">
+<code class="descname">matchNonWhiteSpace</code><span class="sig-paren">(</span><em>WSchars=' \x0c\t\n\r'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.matchNonWhiteSpace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.matchWhiteSpace">
+<code class="descname">matchWhiteSpace</code><span class="sig-paren">(</span><em>WSchars=' \x0c\t'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.matchWhiteSpace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>strOrRE</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.matches" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.peek">
+<code class="descname">peek</code><span class="sig-paren">(</span><em>offset=0</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.peek" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.pos">
+<code class="descname">pos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.pos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.read">
+<code class="descname">read</code><span class="sig-paren">(</span><em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.readTo">
+<code class="descname">readTo</code><span class="sig-paren">(</span><em>to</em>, <em>start=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.readTo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.readToEOL">
+<code class="descname">readToEOL</code><span class="sig-paren">(</span><em>start=None</em>, <em>gobble=True</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.readToEOL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.rev">
+<code class="descname">rev</code><span class="sig-paren">(</span><em>offset=1</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.rev" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.rfind">
+<code class="descname">rfind</code><span class="sig-paren">(</span><em>it</em>, <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.rfind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.setBookmark">
+<code class="descname">setBookmark</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.setBookmark" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.setBreakPoint">
+<code class="descname">setBreakPoint</code><span class="sig-paren">(</span><em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.setBreakPoint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.setPos">
+<code class="descname">setPos</code><span class="sig-paren">(</span><em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.setPos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.splitlines">
+<code class="descname">splitlines</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.splitlines" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.src">
+<code class="descname">src</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.src" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.startswith">
+<code class="descname">startswith</code><span class="sig-paren">(</span><em>it</em>, <em>pos=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.startswith" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.ungetc">
+<code class="descname">ungetc</code><span class="sig-paren">(</span><em>c=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.ungetc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.SourceReader.SourceReader.validPos">
+<code class="descname">validPos</code><span class="sig-paren">(</span><em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.SourceReader.validPos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 23, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+  </body>
+</html>

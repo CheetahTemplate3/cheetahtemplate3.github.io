@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Cheetah.Utils.Misc module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/Cheetah.Utils.Misc.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-Cheetah.Utils.Misc">
+<span id="cheetah-utils-misc-module"></span><h1>Cheetah.Utils.Misc module<a class="headerlink" href="#module-Cheetah.Utils.Misc" title="Permalink to this headline">¶</a></h1>
+<p>Miscellaneous functions/objects used by Cheetah but also useful standalone.</p>
+<dl class="function">
+<dt id="Cheetah.Utils.Misc.checkKeywords">
+<code class="descclassname">Cheetah.Utils.Misc.</code><code class="descname">checkKeywords</code><span class="sig-paren">(</span><em>dic</em>, <em>legalKeywords</em>, <em>what='argument'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Misc.checkKeywords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Verify no illegal keyword arguments were passed to a function.</p>
+<dl class="docutils">
+<dt>in <span class="classifier-delimiter">:</span> <span class="classifier">dic, dictionary (<a href="#id1"><span class="problematic" id="id2">**</span></a>kw in the calling routine).</span></dt>
+<dd>legalKeywords, list of strings, the keywords that are allowed.
+what, string, suffix for error message (see function source).</dd>
+</dl>
+<p>out: None.
+exc: TypeError if &#8216;dic&#8217; contains a key not in &#8216;legalKeywords&#8217;.
+called by: Cheetah.Template.__init__()</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Cheetah.Utils.Misc.die">
+<code class="descclassname">Cheetah.Utils.Misc.</code><code class="descname">die</code><span class="sig-paren">(</span><em>reason</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Misc.die" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="Cheetah.Utils.Misc.mkdirsWithPyInitFiles">
+<code class="descclassname">Cheetah.Utils.Misc.</code><code class="descname">mkdirsWithPyInitFiles</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Misc.mkdirsWithPyInitFiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as os.makedirs (mkdir &#8216;path&#8217; and all missing parent directories)
+but also puts a Python &#8216;__init__.py&#8217; file in every directory it
+creates.  Does nothing (without creating an &#8216;__init__.py&#8217; file) if the
+directory already exists.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Cheetah.Utils.Misc.removeFromList">
+<code class="descclassname">Cheetah.Utils.Misc.</code><code class="descname">removeFromList</code><span class="sig-paren">(</span><em>list_</em>, <em>*elements</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Misc.removeFromList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save as <a href="#id3"><span class="problematic" id="id4">list_</span></a>.remove(each element) but don&#8217;t raise an error if
+element is missing.  Modifies &#8216;<a href="#id5"><span class="problematic" id="id6">list_</span></a>&#8216; in place!  Returns None.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Cheetah.Utils.Misc.useOrRaise">
+<code class="descclassname">Cheetah.Utils.Misc.</code><code class="descname">useOrRaise</code><span class="sig-paren">(</span><em>thing</em>, <em>errmsg=''</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Misc.useOrRaise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raise &#8216;thing&#8217; if it&#8217;s a subclass of Exception.  Otherwise return it.</p>
+<p>Called by: Cheetah.Servlet.cgiImport()</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 23, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+  </body>
+</html>

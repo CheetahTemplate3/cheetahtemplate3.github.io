@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Cheetah.Utils.Indenter module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/Cheetah.Utils.Indenter.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-Cheetah.Utils.Indenter">
+<span id="cheetah-utils-indenter-module"></span><h1>Cheetah.Utils.Indenter module<a class="headerlink" href="#module-Cheetah.Utils.Indenter" title="Permalink to this headline">¶</a></h1>
+<p>Indentation maker.
+&#64;&#64;TR: this code is unsupported and largely undocumented ...</p>
+<p>This version is based directly on code by Robert Kuzelj
+&lt;<a class="reference external" href="mailto:robert_kuzelj&#37;&#52;&#48;yahoo&#46;com">robert_kuzelj<span>&#64;</span>yahoo<span>&#46;</span>com</a>&gt; and uses his directive syntax.  Some classes and
+attributes have been renamed.  Indentation is output via
+$self._CHEETAH__indenter.indent() to prevent &#8216;_indenter&#8217; being looked up on the
+searchList and another one being found.  The directive syntax will
+soon be changed somewhat.</p>
+<dl class="class">
+<dt id="Cheetah.Utils.Indenter.IndentProcessor">
+<em class="property">class </em><code class="descclassname">Cheetah.Utils.Indenter.</code><code class="descname">IndentProcessor</code><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Preprocess #indent tags.</p>
+<dl class="attribute">
+<dt id="Cheetah.Utils.Indenter.IndentProcessor.ARGS">
+<code class="descname">ARGS</code><em class="property"> = 'args'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.ARGS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Utils.Indenter.IndentProcessor.CHAR">
+<code class="descname">CHAR</code><em class="property"> = 'char'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.CHAR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Utils.Indenter.IndentProcessor.DEC">
+<code class="descname">DEC</code><em class="property"> = '--'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.DEC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Utils.Indenter.IndentProcessor.DIRECTIVE">
+<code class="descname">DIRECTIVE</code><em class="property"> = &lt;_sre.SRE_Pattern object&gt;</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.DIRECTIVE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Utils.Indenter.IndentProcessor.INC">
+<code class="descname">INC</code><em class="property"> = '++'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.INC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Utils.Indenter.IndentProcessor.INDENT_DIR">
+<code class="descname">INDENT_DIR</code><em class="property"> = &lt;_sre.SRE_Pattern object&gt;</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.INDENT_DIR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Utils.Indenter.IndentProcessor.LINE_SEP">
+<code class="descname">LINE_SEP</code><em class="property"> = '\n'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.LINE_SEP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Utils.Indenter.IndentProcessor.OFF">
+<code class="descname">OFF</code><em class="property"> = 'off'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.OFF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Utils.Indenter.IndentProcessor.ON">
+<code class="descname">ON</code><em class="property"> = 'on'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.ON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Utils.Indenter.IndentProcessor.POP">
+<code class="descname">POP</code><em class="property"> = 'pop'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.POP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Utils.Indenter.IndentProcessor.PUSH">
+<code class="descname">PUSH</code><em class="property"> = 'push'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.PUSH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Utils.Indenter.IndentProcessor.SET">
+<code class="descname">SET</code><em class="property"> = '='</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.SET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Utils.Indenter.IndentProcessor.WHITESPACES">
+<code class="descname">WHITESPACES</code><em class="property"> = &lt;_sre.SRE_Pattern object&gt;</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.WHITESPACES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Utils.Indenter.IndentProcessor.WS">
+<code class="descname">WS</code><em class="property"> = 'ws'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.WS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Utils.Indenter.IndentProcessor.process">
+<code class="descname">process</code><span class="sig-paren">(</span><em>_txt</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.process" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.Utils.Indenter.Indenter">
+<em class="property">class </em><code class="descclassname">Cheetah.Utils.Indenter.</code><code class="descname">Indenter</code><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>A class that keeps track of the current indentation level.
+.indent() returns the appropriate amount of indentation.</p>
+<dl class="attribute">
+<dt id="Cheetah.Utils.Indenter.Indenter.Chars">
+<code class="descname">Chars</code><em class="property"> = '    '</em><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.Chars" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Utils.Indenter.Indenter.Level">
+<code class="descname">Level</code><em class="property"> = 0</em><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.Level" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Utils.Indenter.Indenter.LevelStack">
+<code class="descname">LevelStack</code><em class="property"> = []</em><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.LevelStack" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Utils.Indenter.Indenter.On">
+<code class="descname">On</code><em class="property"> = 1</em><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.On" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Utils.Indenter.Indenter.dec">
+<code class="descname">dec</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.dec" title="Permalink to this definition">¶</a></dt>
+<dd><p>decrement can only be applied to values greater zero
+values below zero don&#8217;t make any sense at all!</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Utils.Indenter.Indenter.inc">
+<code class="descname">inc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.inc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Utils.Indenter.Indenter.indent">
+<code class="descname">indent</code><span class="sig-paren">(</span><em>_default=0</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.indent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Utils.Indenter.Indenter.off">
+<code class="descname">off</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.off" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Utils.Indenter.Indenter.on">
+<code class="descname">on</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.on" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Utils.Indenter.Indenter.pop">
+<code class="descname">pop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.pop" title="Permalink to this definition">¶</a></dt>
+<dd><p>the levestack can not become -1. any attempt to do so
+sets the level to 0!</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Utils.Indenter.Indenter.push">
+<code class="descname">push</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.push" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Utils.Indenter.Indenter.setChar">
+<code class="descname">setChar</code><span class="sig-paren">(</span><em>_chars</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.setChar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Utils.Indenter.Indenter.setLevel">
+<code class="descname">setLevel</code><span class="sig-paren">(</span><em>_level</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.setLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>the leve can&#8217;t be less than zero. any attempt to do so
+sets the level automatically to zero!</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="Cheetah.Utils.Indenter.indentize">
+<code class="descclassname">Cheetah.Utils.Indenter.</code><code class="descname">indentize</code><span class="sig-paren">(</span><em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.indentize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 23, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+  </body>
+</html>

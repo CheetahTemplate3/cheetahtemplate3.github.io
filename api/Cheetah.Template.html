@@ -1,0 +1,862 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Cheetah.Template module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/Cheetah.Template.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-Cheetah.Template">
+<span id="cheetah-template-module"></span><h1>Cheetah.Template module<a class="headerlink" href="#module-Cheetah.Template" title="Permalink to this headline">¶</a></h1>
+<p>Provides the core API for Cheetah.</p>
+<p>See the docstring in the Template class and the Users&#8217; Guide for more information</p>
+<dl class="class">
+<dt id="Cheetah.Template.CompileCacheItem">
+<em class="property">class </em><code class="descclassname">Cheetah.Template.</code><code class="descname">CompileCacheItem</code><a class="headerlink" href="#Cheetah.Template.CompileCacheItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="Cheetah.Template.Error">
+<em class="property">exception </em><code class="descclassname">Cheetah.Template.</code><code class="descname">Error</code><a class="headerlink" href="#Cheetah.Template.Error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">exceptions.Exception</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="Cheetah.Template.PreprocessError">
+<em class="property">exception </em><code class="descclassname">Cheetah.Template.</code><code class="descname">PreprocessError</code><a class="headerlink" href="#Cheetah.Template.PreprocessError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.Template.Error" title="Cheetah.Template.Error"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Template.Error</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Template.T">
+<code class="descclassname">Cheetah.Template.</code><code class="descname">T</code><a class="headerlink" href="#Cheetah.Template.T" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#Cheetah.Template.Template" title="Cheetah.Template.Template"><code class="xref py py-class docutils literal"><span class="pre">Template</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.Template.Template">
+<em class="property">class </em><code class="descclassname">Cheetah.Template.</code><code class="descname">Template</code><span class="sig-paren">(</span><em>source=None</em>, <em>namespaces=None</em>, <em>searchList=None</em>, <em>file=None</em>, <em>filter='RawOrEncodedUnicode'</em>, <em>filtersLib=&lt;module 'Cheetah.Filters' from '/home/phd/current/projects/cheetah3/cheetah3/Cheetah/Filters.pyc'&gt;</em>, <em>errorCatcher=None</em>, <em>compilerSettings=Unspecified</em>, <em>_globalSetVars=None</em>, <em>_preBuiltSearchList=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="Cheetah.Servlet.html#Cheetah.Servlet.Servlet" title="Cheetah.Servlet.Servlet"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Servlet.Servlet</span></code></a></p>
+<blockquote>
+<div><p>This class provides a) methods used by templates at runtime and b)
+methods for compiling Cheetah source code into template classes.</p>
+<p>This documentation assumes you already know Python and the basics of object
+oriented programming.  If you don&#8217;t know Python, see the sections of the
+Cheetah Users&#8217; Guide for non-programmers.  It also assumes you have read
+about Cheetah&#8217;s syntax in the Users&#8217; Guide.</p>
+<p>The following explains how to use Cheetah from within Python programs or via
+the interpreter. If you statically compile your templates on the command
+line using the &#8216;cheetah&#8217; script, this is not relevant to you. Statically
+compiled Cheetah template modules/classes (e.g. myTemplate.py:
+MyTemplateClasss) are just like any other Python module or class. Also note,
+most Python web frameworks (Webware, Aquarium, mod_python, Turbogears,
+CherryPy, Quixote, etc.) provide plugins that handle Cheetah compilation for
+you.</p>
+<dl class="docutils">
+<dt>There are several possible usage patterns:          </dt>
+<dd><ol class="first last arabic">
+<li><p class="first">tclass = Template.compile(src)
+t1 = tclass() # or tclass(namespaces=[namespace,...])
+t2 = tclass() # or tclass(namespaces=[namespace2,...])
+outputStr = str(t1) # or outputStr = t1.aMethodYouDefined()</p>
+<p>Template.compile provides a rich and very flexible API via its
+optional arguments so there are many possible variations of this
+pattern.  One example is:</p>
+<blockquote>
+<div><p>tclass = Template.compile(&#8216;hello $name from $caller&#8217;, baseclass=dict)
+print(tclass(name=&#8217;world&#8217;, caller=&#8217;me&#8217;))</p>
+</div></blockquote>
+<p>See the Template.compile() docstring for more details.</p>
+</li>
+<li><dl class="first docutils">
+<dt>tmplInstance = Template(src)</dt>
+<dd><p class="first last"># or Template(src, namespaces=[namespace,...])</p>
+</dd>
+</dl>
+<p>outputStr = str(tmplInstance) # or outputStr = tmplInstance.aMethodYouDefined(...args...)</p>
+</li>
+</ol>
+</dd>
+</dl>
+<p>Notes on the usage patterns:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>usage pattern 1)       </dt>
+<dd>This is the most flexible, but it is slightly more verbose unless you
+write a wrapper function to hide the plumbing.  Under the hood, all
+other usage patterns are based on this approach.  Templates compiled
+this way can #extend (subclass) any Python baseclass: old-style or
+new-style (based on object or a builtin type).</dd>
+<dt>usage pattern 2)</dt>
+<dd><p class="first">This was Cheetah&#8217;s original usage pattern.  It returns an instance,
+but you can still access the generated class via
+tmplInstance.__class__.  If you want to use several different
+namespace &#8216;searchLists&#8217; with a single template source definition,
+you&#8217;re better off with Template.compile (1).</p>
+<dl class="last docutils">
+<dt>Limitations (use pattern 1 instead):</dt>
+<dd><ul class="first last simple">
+<li>Templates compiled this way can only #extend subclasses of the
+new-style &#8216;object&#8217; baseclass.  Cheetah.Template is a subclass of
+&#8216;object&#8217;.  You also can not #extend dict, list, or other builtin
+types.</li>
+<li>If your template baseclass&#8217; __init__ constructor expects args there
+is currently no way to pass them in.</li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>If you need to subclass a dynamically compiled Cheetah class, do something like this:</dt>
+<dd>from Cheetah.Template import Template
+T1 = Template.compile(&#8216;$meth1 #def meth1: this is meth1 in T1&#8217;)
+T2 = Template.compile(&#8216;#implements meth1</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>this is meth1 redefined in T2&#8217;, baseclass=T1)</dt>
+<dd><blockquote class="first">
+<div>print(T1, T1())
+print(T2, T2())</div></blockquote>
+<dl class="last docutils">
+<dt>Note about class and instance attribute names:</dt>
+<dd><p class="first">Attributes used by Cheetah have a special prefix to avoid confusion with
+the attributes of the templates themselves or those of template
+baseclasses.</p>
+<dl class="last docutils">
+<dt>Class attributes which are used in class methods look like this:</dt>
+<dd>klass._CHEETAH_useCompilationCache (_CHEETAH_xxx)</dd>
+<dt>Instance attributes look like this:</dt>
+<dd>klass._CHEETAH__globalSetVars (_CHEETAH__xxx with 2 underscores)</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="exception">
+<dt id="Cheetah.Template.Template.NonNumericInputError">
+<em class="property">exception </em><code class="descname">NonNumericInputError</code><a class="headerlink" href="#Cheetah.Template.Template.NonNumericInputError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">exceptions.ValueError</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Template.Template.Reserved_SearchList">
+<code class="descclassname">Template.</code><code class="descname">Reserved_SearchList</code><em class="property"> = set(['respond', '_CHEETAH_preprocessors', '__module__', '__format__', '_CHEETAH_defaultMainMethodNameForTemplates', '_CHEETAH_keepRefToGeneratedCode', 'serverSidePath', 'searchList', '__str__', '__getattribute__', '_getTemplateAPIClassForIncludeDirectiveCompilation', 'transaction', '_CHEETAH_defaultModuleNameForTemplates', '_CHEETAH_cacheCompilationResults', 'application', 'sleep', 'getCacheRegions', 'shutdown', 'hasVar', '__dict__', '__sizeof__', '__weakref__', '_createCacheRegion', '_CHEETAH_generatedModuleCode', 'runAsMainProgram', 'getCacheRegion', '__setattr__', '__reduce_ex__', '__new__', '__delattr__', '_normalizePreprocessorSettings', '_CHEETAH_compilerInstance', 'errorCatcher', '_CHEETAH_requiredCheetahClassMethods', '__class__', '_CHEETAH_useCompilationCache', '_updateSettingsWithPreprocessTokens', '_CHEETAH_cacheStoreIdPrefix', 'session', '_CHEETAH_defaultMainMethodName', '_normalizePreprocessorArg', 'getVar', '_compile', '_CHEETAH_cacheDirForModuleFiles', '__doc__', '_handleCheetahInclude', '_CHEETAH_compileLock', '_CHEETAH_defaultClassNameForTemplates', '_CHEETAH_requiredCheetahMethods', '_CHEETAH_compilerSettings', 'generatedClassCode', 'i18n', '_addCheetahPlumbingCodeToClass', '_CHEETAH_defaultBaseclassForTemplates', '_CHEETAH_defaultPreprocessorClass', '__hash__', 'webInput', '__subclasshook__', '_CHEETAH_requiredCheetahClassAttributes', '_CHEETAH_compileCache', '_CHEETAH_cacheStoreClass', '__reduce__', 'subclass', '_CHEETAH_cacheRegionClass', '_CHEETAH_cacheStore', '_initCheetahInstance', 'generatedModuleCode', '_CHEETAH_cacheModuleFilesForTracebacks', '_getCacheStore', '_getCacheStoreIdPrefix', 'refreshCache', '_getCompilerClass', 'request', 'getFileContents', 'compile', '_CHEETAH_compilerClass', '_preprocessSource', '_CHEETAH_defaultModuleGlobalsForTemplates', '__repr__', '__init__', 'NonNumericInputError', '_getCompilerSettings', 'varExists'])</em><a class="headerlink" href="#Cheetah.Template.Template.Reserved_SearchList" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="Cheetah.Template.Template.compile">
+<em class="property">classmethod </em><code class="descclassname">Template.</code><code class="descname">compile</code><span class="sig-paren">(</span><em>klass</em>, <em>source=None</em>, <em>file=None</em>, <em>returnAClass=True</em>, <em>compilerSettings=Unspecified</em>, <em>compilerClass=Unspecified</em>, <em>moduleName=None</em>, <em>className=Unspecified</em>, <em>mainMethodName=Unspecified</em>, <em>baseclass=Unspecified</em>, <em>moduleGlobals=Unspecified</em>, <em>cacheCompilationResults=Unspecified</em>, <em>useCache=Unspecified</em>, <em>preprocessors=Unspecified</em>, <em>cacheModuleFilesForTracebacks=Unspecified</em>, <em>cacheDirForModuleFiles=Unspecified</em>, <em>commandlineopts=None</em>, <em>keepRefToGeneratedCode=Unspecified</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.compile" title="Permalink to this definition">¶</a></dt>
+<dd><p>The core API for compiling Cheetah source code into template classes.</p>
+<p>This class method compiles Cheetah source code and returns a python
+class.  You then create template instances using that class.  All
+Cheetah&#8217;s other compilation API&#8217;s use this method under the hood.</p>
+<p>Internally, this method a) parses the Cheetah source code and generates
+Python code defining a module with a single class in it, b) dynamically
+creates a module object with a unique name, c) execs the generated code
+in that module&#8217;s namespace then inserts the module into sys.modules, and
+d) returns a reference to the generated class.  If you want to get the
+generated python source code instead, pass the argument
+returnAClass=False.</p>
+<p>It caches generated code and classes.  See the descriptions of the
+arguments&#8217;cacheCompilationResults&#8217; and &#8216;useCache&#8217; for details. This
+doesn&#8217;t mean that templates will automatically recompile themselves when
+the source file changes. Rather, if you call Template.compile(src) or
+Template.compile(file=path) repeatedly it will attempt to return a
+cached class definition instead of recompiling.</p>
+<p>Hooks are provided template source preprocessing.  See the notes on the
+&#8216;preprocessors&#8217; arg.</p>
+<p>If you are an advanced user and need to customize the way Cheetah parses
+source code or outputs Python code, you should check out the
+compilerSettings argument.</p>
+<dl class="docutils">
+<dt>Arguments:</dt>
+<dd><dl class="first docutils">
+<dt>You must provide either a &#8216;source&#8217; or &#8216;file&#8217; arg, but not both:</dt>
+<dd><ul class="first last simple">
+<li>source (string or None)</li>
+<li>file (string path, file-like object, or None)</li>
+</ul>
+</dd>
+</dl>
+<p>The rest of the arguments are strictly optional. All but the first
+have defaults in attributes of the Template class which can be
+overridden in subclasses of this class.  Working with most of these is
+an advanced topic.</p>
+<blockquote class="last">
+<div><ul>
+<li><p class="first">returnAClass=True            
+If false, return the generated module code rather than a class.</p>
+</li>
+<li><p class="first">compilerSettings (a dict)
+Default: Template._CHEETAH_compilerSettings=None</p>
+<p>a dictionary of settings to override those defined in
+DEFAULT_COMPILER_SETTINGS. These can also be overridden in your
+template source code with the #compiler or #compiler-settings
+directives.</p>
+</li>
+<li><p class="first">compilerClass (a class)
+Default: Template._CHEETAH_compilerClass=Cheetah.Compiler.Compiler</p>
+<p>a subclass of Cheetah.Compiler.Compiler. Mucking with this is a
+very advanced topic.</p>
+</li>
+<li><p class="first">moduleName (a string)
+Default:</p>
+<blockquote>
+<div><p>Template._CHEETAH_defaultModuleNameForTemplates
+=&#8217;DynamicallyCompiledCheetahTemplate&#8217;</p>
+</div></blockquote>
+<p>What to name the generated Python module.  If the provided value is
+None and a file arg was given, the moduleName is created from the
+file path.  In all cases if the moduleName provided is already in
+sys.modules it is passed through a filter that generates a unique
+variant of the name.</p>
+</li>
+<li><p class="first">className (a string)
+Default: Template._CHEETAH_defaultClassNameForTemplates=None</p>
+<p>What to name the generated Python class.  If the provided value is
+None, the moduleName is use as the class name.</p>
+</li>
+<li><p class="first">mainMethodName (a string)
+Default:</p>
+<blockquote>
+<div><p>Template._CHEETAH_defaultMainMethodNameForTemplates
+=None (and thus DEFAULT_COMPILER_SETTINGS[&#8216;mainMethodName&#8217;])</p>
+</div></blockquote>
+<p>What to name the main output generating method in the compiled
+template class.</p>
+</li>
+<li><p class="first">baseclass (a string or a class)
+Default: Template._CHEETAH_defaultBaseclassForTemplates=None</p>
+<p>Specifies the baseclass for the template without manually
+including an #extends directive in the source. The #extends
+directive trumps this arg.</p>
+<p>If the provided value is a string you must make sure that a class
+reference by that name is available to your template, either by
+using an #import directive or by providing it in the arg
+&#8216;moduleGlobals&#8217;.</p>
+<p>If the provided value is a class, Cheetah will handle all the
+details for you.</p>
+</li>
+<li><p class="first">moduleGlobals (a dict)
+Default: Template._CHEETAH_defaultModuleGlobalsForTemplates=None</p>
+<p>A dict of vars that will be added to the global namespace of the
+module the generated code is executed in, prior to the execution
+of that code.  This should be Python values, not code strings!</p>
+</li>
+<li><p class="first">cacheCompilationResults (True/False)
+Default: Template._CHEETAH_cacheCompilationResults=True</p>
+<p>Tells Cheetah to cache the generated code and classes so that they
+can be reused if Template.compile() is called multiple times with
+the same source and options.</p>
+</li>
+<li><p class="first">useCache (True/False)
+Default: Template._CHEETAH_useCompilationCache=True</p>
+<p>Should the compilation cache be used?  If True and a previous
+compilation created a cached template class with the same source
+code, compiler settings and other options, the cached template
+class will be returned.</p>
+</li>
+<li><p class="first">cacheModuleFilesForTracebacks (True/False)
+Default: Template._CHEETAH_cacheModuleFilesForTracebacks=False</p>
+<p>In earlier versions of Cheetah tracebacks from exceptions that
+were raised inside dynamically compiled Cheetah templates were
+opaque because Python didn&#8217;t have access to a python source file
+to use in the traceback:</p>
+<blockquote>
+<div><blockquote>
+<div><dl class="docutils">
+<dt>File &#8220;xxxx.py&#8221;, line 192, in getTextiledContent</dt>
+<dd><p class="first last">content = str(template(searchList=searchList))</p>
+</dd>
+</dl>
+<p>File &#8220;cheetah_yyyy.py&#8221;, line 202, in __str__
+File &#8220;cheetah_yyyy.py&#8221;, line 187, in respond
+File &#8220;cheetah_yyyy.py&#8221;, line 139, in writeBody</p>
+</div></blockquote>
+<p>ZeroDivisionError: integer division or modulo by zero</p>
+</div></blockquote>
+<p>It is now possible to keep those files in a cache dir and allow
+Python to include the actual source lines in tracebacks and makes
+them much easier to understand:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>File &#8220;xxxx.py&#8221;, line 192, in getTextiledContent</dt>
+<dd><p class="first last">content = str(template(searchList=searchList))</p>
+</dd>
+<dt>File &#8220;/tmp/CheetahCacheDir/cheetah_yyyy.py&#8221;, line 202, in __str__</dt>
+<dd><p class="first last">def __str__(self): return self.respond()</p>
+</dd>
+<dt>File &#8220;/tmp/CheetahCacheDir/cheetah_yyyy.py&#8221;, line 187, in respond</dt>
+<dd><p class="first last">self.writeBody(trans=trans)</p>
+</dd>
+<dt>File &#8220;/tmp/CheetahCacheDir/cheetah_yyyy.py&#8221;, line 139, in writeBody</dt>
+<dd><p class="first last">__v = 0/0 # $(0/0)</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>ZeroDivisionError: integer division or modulo by zero</p>
+</li>
+<li><p class="first">cacheDirForModuleFiles (a string representing a dir path)
+Default: Template._CHEETAH_cacheDirForModuleFiles=None</p>
+<p>See notes on cacheModuleFilesForTracebacks.</p>
+</li>
+<li><p class="first">preprocessors
+Default: Template._CHEETAH_preprocessors=None</p>
+<p>** THIS IS A VERY ADVANCED TOPIC **</p>
+<p>These are used to transform the source code prior to compilation.
+They provide a way to use Cheetah as a code generator for Cheetah
+code. In other words, you use one Cheetah template to output the
+source code for another Cheetah template.</p>
+<p>The major expected use cases are:</p>
+<blockquote>
+<div><ol class="loweralpha">
+<li><p class="first">&#8216;compile-time caching&#8217; aka &#8216;partial template binding&#8217;,
+wherein an intermediate Cheetah template is used to output
+the source for the final Cheetah template. The intermediate
+template is a mix of a modified Cheetah syntax (the
+&#8216;preprocess syntax&#8217;) and standard Cheetah syntax.  The
+preprocessor syntax is executed at compile time and outputs
+Cheetah code which is then compiled in turn. This approach
+allows one to completely soft-code all the elements in the
+template which are subject to change yet have it compile to
+extremely efficient Python code with everything but the
+elements that must be variable at runtime (per browser
+request, etc.) compiled as static strings.  Examples of this
+usage pattern will be added to the Cheetah Users&#8217; Guide.</p>
+<p>The&#8217;preprocess syntax&#8217; is just Cheetah&#8217;s standard one with
+alternatives for the $ and # tokens:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>e.g. &#8216;&#64;&#8217; and &#8216;%&#8217; for code like this</dt>
+<dd><p class="first">&#64;aPreprocessVar $aRuntimeVar
+%if aCompileTimeCondition then yyy else zzz
+%% preprocessor comment</p>
+<p class="last">#if aRunTimeCondition then aaa else bbb
+## normal comment
+$aRuntimeVar</p>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+<li><p class="first">adding #import and #extends directives dynamically based on
+the source</p>
+</li>
+</ol>
+</div></blockquote>
+<p>If preprocessors are provided, Cheetah pipes the source code
+through each one in the order provided.  Each preprocessor should
+accept the args (source, file) and should return a tuple (source,
+file).</p>
+<p>The argument value should be a list, but a single non-list value
+is acceptable and will automatically be converted into a list.
+Each item in the list will be passed through
+Template._normalizePreprocessor().  The items should either match
+one of the following forms:</p>
+<blockquote>
+<div><ul class="simple">
+<li>an object with a .preprocess(source, file) method</li>
+<li><dl class="first docutils">
+<dt>a callable with the following signature:</dt>
+<dd>source, file = f(source, file)</dd>
+</dl>
+</li>
+</ul>
+<p>or one of the forms below:</p>
+<ul>
+<li><p class="first">a single string denoting the 2 &#8216;tokens&#8217; for the preprocess
+syntax.  The tokens should be in the order (placeholderToken,
+directiveToken) and should separated with a space:</p>
+<blockquote>
+<div><p>e.g. &#8216;&#64; %&#8217;
+klass = Template.compile(src, preprocessors=&#8217;&#64; %&#8217;)
+# or 
+klass = Template.compile(src, preprocessors=[&#8216;&#64; %&#8217;])</p>
+</div></blockquote>
+</li>
+<li><p class="first">a dict with the following keys or an object with the
+following attributes (all are optional, but nothing will
+happen if you don&#8217;t provide at least one):</p>
+<blockquote>
+<div><ul class="simple">
+<li>tokens: same as the single string described above. You can
+also provide a tuple of 2 strings.</li>
+<li>searchList: the searchList used for preprocess $placeholders</li>
+<li>compilerSettings: used in the compilation of the intermediate
+template</li>
+<li>templateAPIClass: an optional subclass of <cite>Template</cite></li>
+<li>outputTransformer: a simple hook for passing in a callable
+which can do further transformations of the preprocessor
+output, or do something else like debug logging. The
+default is str().</li>
+</ul>
+<ul class="simple">
+<li>any keyword arguments to Template.compile which you want to
+provide for the compilation of the intermediate template.</li>
+</ul>
+<dl class="docutils">
+<dt>klass = Template.compile(src,</dt>
+<dd><p class="first last">preprocessors=[ dict(tokens=&#8217;&#64; %&#8217;, searchList=[...]) ] )</p>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Template.Template.errorCatcher">
+<code class="descclassname">Template.</code><code class="descname">errorCatcher</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.errorCatcher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a reference to the current errorCatcher</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Template.Template.generatedClassCode">
+<code class="descclassname">Template.</code><code class="descname">generatedClassCode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.generatedClassCode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the class code the compiler generated, or None if no
+compilation took place.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Template.Template.generatedModuleCode">
+<code class="descclassname">Template.</code><code class="descname">generatedModuleCode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.generatedModuleCode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the module code the compiler generated, or None if no
+compilation took place.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Template.Template.getCacheRegion">
+<code class="descclassname">Template.</code><code class="descname">getCacheRegion</code><span class="sig-paren">(</span><em>regionID</em>, <em>cacheInfo=None</em>, <em>create=True</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.getCacheRegion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Template.Template.getCacheRegions">
+<code class="descclassname">Template.</code><code class="descname">getCacheRegions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.getCacheRegions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a dictionary of the &#8216;cache regions&#8217; initialized in a
+template.</p>
+<p>Each #cache directive block or $*cachedPlaceholder is a separate &#8216;cache
+region&#8217;.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Template.Template.getFileContents">
+<code class="descclassname">Template.</code><code class="descname">getFileContents</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.getFileContents" title="Permalink to this definition">¶</a></dt>
+<dd><p>A hook for getting the contents of a file.  The default
+implementation just uses the Python open() function to load local files.
+This method could be reimplemented to allow reading of remote files via
+various protocols, as PHP allows with its &#8216;URL fopen wrapper&#8217;</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Template.Template.getVar">
+<code class="descclassname">Template.</code><code class="descname">getVar</code><span class="sig-paren">(</span><em>varName</em>, <em>default=Unspecified</em>, <em>autoCall=True</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.getVar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a variable from the searchList.  If the variable can&#8217;t be found
+in the searchList, it returns the default value if one was given, or
+raises NameMapper.NotFound.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Template.Template.hasVar">
+<code class="descclassname">Template.</code><code class="descname">hasVar</code><span class="sig-paren">(</span><em>varName</em>, <em>autoCall=True</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.hasVar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if a variable name exists in the searchList.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Template.Template.i18n">
+<code class="descclassname">Template.</code><code class="descname">i18n</code><span class="sig-paren">(</span><em>message</em>, <em>plural=None</em>, <em>n=None</em>, <em>id=None</em>, <em>domain=None</em>, <em>source=None</em>, <em>target=None</em>, <em>comment=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.i18n" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is just a stub at this time.</p>
+<blockquote>
+<div><p>plural = the plural form of the message
+n = a sized argument to distinguish between single and plural forms</p>
+<p>id = msgid in the translation catalog
+domain = translation domain
+source = source lang
+target = a specific target lang
+comment = a comment to the translation team</p>
+</div></blockquote>
+<p>See the following for some ideas
+<a class="reference external" href="http://www.zope.org/DevHome/Wikis/DevSite/Projects/ComponentArchitecture/ZPTInternationalizationSupport">http://www.zope.org/DevHome/Wikis/DevSite/Projects/ComponentArchitecture/ZPTInternationalizationSupport</a></p>
+<p>Other notes:
+- There is no need to replicate the i18n:name attribute from plone / PTL,</p>
+<blockquote>
+<div>as cheetah placeholders serve the same purpose</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Template.Template.refreshCache">
+<code class="descclassname">Template.</code><code class="descname">refreshCache</code><span class="sig-paren">(</span><em>cacheRegionId=None</em>, <em>cacheItemId=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.refreshCache" title="Permalink to this definition">¶</a></dt>
+<dd><p>Refresh a cache region or a specific cache item within a region.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Template.Template.runAsMainProgram">
+<code class="descclassname">Template.</code><code class="descname">runAsMainProgram</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.runAsMainProgram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows the Template to function as a standalone command-line program
+for static page generation.</p>
+<p>Type &#8216;python yourtemplate.py &#8211;help to see what it&#8217;s capabable of.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Template.Template.searchList">
+<code class="descclassname">Template.</code><code class="descname">searchList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.searchList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a reference to the searchlist</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Template.Template.shutdown">
+<code class="descclassname">Template.</code><code class="descname">shutdown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.shutdown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Break reference cycles before discarding a servlet.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="Cheetah.Template.Template.subclass">
+<em class="property">classmethod </em><code class="descclassname">Template.</code><code class="descname">subclass</code><span class="sig-paren">(</span><em>klass</em>, <em>*args</em>, <em>**kws</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.subclass" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Takes the same args as the .compile() classmethod and returns a</dt>
+<dd><p class="first">template that is a subclass of the template this method is called from.</p>
+<blockquote class="last">
+<div>T1 = Template.compile(&#8216; foo - $meth1 - bar</div></blockquote>
+</dd>
+<dt>#def meth1: this is T1.meth1&#8217;)</dt>
+<dd><blockquote class="first">
+<div>T2 = T1.subclass(&#8216;#implements meth1</div></blockquote>
+<p class="last">this is T2.meth1&#8217;)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Template.Template.varExists">
+<code class="descclassname">Template.</code><code class="descname">varExists</code><span class="sig-paren">(</span><em>varName</em>, <em>autoCall=True</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.varExists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if a variable name exists in the searchList.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Template.Template.webInput">
+<code class="descclassname">Template.</code><code class="descname">webInput</code><span class="sig-paren">(</span><em>names</em>, <em>namesMulti=()</em>, <em>default=''</em>, <em>src='f'</em>, <em>defaultInt=0</em>, <em>defaultFloat=0.0</em>, <em>badInt=0</em>, <em>badFloat=0.0</em>, <em>debug=False</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.webInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for importing web transaction variables in bulk.</p>
+<p>This works for GET/POST fields both in Webware servlets and in CGI
+scripts, and for cookies and session variables in Webware servlets.  If
+you try to read a cookie or session variable in a CGI script, you&#8217;ll get
+a RuntimeError.  &#8216;In a CGI script&#8217; here means &#8216;not running as a Webware
+servlet&#8217;.  If the CGI environment is not properly set up, Cheetah will
+act like there&#8217;s no input.</p>
+<p>The public method provided is:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>def webInput(self, names, namesMulti=(), default=&#8217;&#8216;, src=&#8217;f&#8217;,</dt>
+<dd>defaultInt=0, defaultFloat=0.00, badInt=0, badFloat=0.00, debug=False):</dd>
+</dl>
+</div></blockquote>
+<p>This method places the specified GET/POST fields, cookies or session
+variables into a dictionary, which is both returned and put at the
+beginning of the searchList.  It handles:</p>
+<blockquote>
+<div><ul class="simple">
+<li>single vs multiple values</li>
+<li>conversion to integer or float for specified names</li>
+<li>default values/exceptions for missing or bad values</li>
+<li>printing a snapshot of all values retrieved for debugging</li>
+</ul>
+</div></blockquote>
+<p>All the &#8216;default*&#8217; and &#8216;bad*&#8217; arguments have &#8216;use or raise&#8217; behavior,
+meaning that if they&#8217;re a subclass of Exception, they&#8217;re raised.  If
+they&#8217;re anything else, that value is substituted for the missing/bad
+value.</p>
+<p>The simplest usage is:</p>
+<blockquote>
+<div><p>#silent $webInput([&#8216;choice&#8217;])
+$choice</p>
+<p>dic = self.webInput([&#8216;choice&#8217;])
+write(dic[&#8216;choice&#8217;])</p>
+</div></blockquote>
+<p>Both these examples retrieves the GET/POST field &#8216;choice&#8217; and print it.
+If you leave off the&#8217;#silent&#8217;, all the values would be printed too.  But
+a better way to preview the values is</p>
+<blockquote>
+<div>#silent $webInput([&#8216;name&#8217;], $debug=1)</div></blockquote>
+<p>because this pretty-prints all the values inside HTML &lt;PRE&gt; tags.</p>
+<p>** KLUDGE: &#8216;debug&#8217; is supposed to insert into the template output, but it
+wasn&#8217;t working so I changed it to a&#8217;print&#8217; statement.  So the debugging
+output will appear wherever standard output is pointed, whether at the
+terminal, in a Webware log file, or whatever. <a href="#id1"><span class="problematic" id="id2">**</span></a><a href="#id3"><span class="problematic" id="id4">*</span></a></p>
+<p>Since we didn&#8217;t specify any coversions, the value is a string.  It&#8217;s a
+&#8216;single&#8217; value because we specified it in &#8216;names&#8217; rather than
+&#8216;namesMulti&#8217;. Single values work like this:</p>
+<blockquote>
+<div><ul class="simple">
+<li>If one value is found, take it.</li>
+<li>If several values are found, choose one arbitrarily and ignore the rest.</li>
+<li>If no values are found, use or raise the appropriate &#8216;default*&#8217; value.</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>Multi values work like this:</dt>
+<dd><ul class="first last simple">
+<li>If one value is found, put it in a list.</li>
+<li>If several values are found, leave them in a list.</li>
+<li>If no values are found, use the empty list ([]).  The &#8216;default*&#8217; 
+arguments are <em>not</em> consulted in this case.</li>
+</ul>
+</dd>
+</dl>
+<p>Example: assume &#8216;days&#8217; came from a set of checkboxes or a multiple combo
+box on a form, and the user  chose&#8217;Monday&#8217;, &#8216;Tuesday&#8217; and &#8216;Thursday&#8217;.</p>
+<blockquote>
+<div><p>#silent $webInput([], [&#8216;days&#8217;])
+The days you chose are: #slurp
+#for $day in $days
+$day #slurp
+#end for</p>
+<p>dic = self.webInput([], [&#8216;days&#8217;])
+write(&#8216;The days you chose are: &#8216;)
+for day in dic[&#8216;days&#8217;]:</p>
+<blockquote>
+<div>write(day + &#8216; &#8216;)</div></blockquote>
+</div></blockquote>
+<p>Both these examples print:  &#8216;The days you chose are: Monday Tuesday Thursday&#8217;.</p>
+<p>By default, missing strings are replaced by &#8216;&#8217; and missing/bad numbers
+by zero.  (A&#8217;bad number&#8217; means the converter raised an exception for
+it, usually because of non-numeric characters in the value.)  This
+mimics Perl/PHP behavior, and simplifies coding for many applications
+where missing/bad values <em>should</em> be blank/zero.  In those relatively
+few cases where you must distinguish between empty-string/zero on the
+one hand and missing/bad on the other, change the appropriate
+&#8216;default*&#8217; and &#8216;bad*&#8217; arguments to something like:</p>
+<blockquote>
+<div><ul class="simple">
+<li>None</li>
+<li>another constant value</li>
+<li>$NonNumericInputError/self.NonNumericInputError</li>
+<li>$ValueError/ValueError</li>
+</ul>
+</div></blockquote>
+<p>(NonNumericInputError is defined in this class and is useful for
+distinguishing between bad input vs a TypeError/ValueError thrown for
+some other rason.)</p>
+<p>Here&#8217;s an example using multiple values to schedule newspaper
+deliveries.  &#8216;checkboxes&#8217; comes from a form with checkboxes for all the
+days of the week.  The days the user previously chose are preselected.
+The user checks/unchecks boxes as desired and presses Submit.  The value
+of &#8216;checkboxes&#8217; is a list of checkboxes that were checked when Submit
+was pressed.  Our task now is to turn on the days the user checked, turn
+off the days he unchecked, and leave on or off the days he didn&#8217;t
+change.</p>
+<blockquote>
+<div><p>dic = self.webInput([], [&#8216;dayCheckboxes&#8217;])
+wantedDays = dic[&#8216;dayCheckboxes&#8217;] # The days the user checked.
+for day, on in self.getAllValues():</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>if   not on and day in wantedDays:</dt>
+<dd>self.TurnOn(day)
+# ... Set a flag or insert a database record ...</dd>
+<dt>elif on and day not in wantedDays:</dt>
+<dd>self.TurnOff(day)
+# ... Unset a flag or delete a database record ...</dd>
+</dl>
+</div></blockquote>
+</div></blockquote>
+<p>&#8216;source&#8217; allows you to look up the variables from a number of different
+sources:</p>
+<blockquote>
+<div>&#8216;f&#8217;   fields (CGI GET/POST parameters)
+&#8216;c&#8217;   cookies
+&#8216;s&#8217;   session variables
+&#8216;v&#8217;   &#8216;values&#8217;, meaning fields or cookies</div></blockquote>
+<p>In many forms, you&#8217;re dealing only with strings, which is why the
+&#8216;default&#8217; argument is third and the numeric arguments are banished to
+the end.  But sometimes you want automatic number conversion, so that
+you can do numeric comparisions in your templates without having to
+write a bunch of conversion/exception handling code.  Example:</p>
+<blockquote>
+<div><p>#silent $webInput([&#8216;name&#8217;, &#8216;height:int&#8217;])
+$name is $height cm tall.
+#if $height &gt;= 300
+Wow, you&#8217;re tall!
+#else
+Pshaw, you&#8217;re short.
+#end if</p>
+<p>dic = self.webInput([&#8216;name&#8217;, &#8216;height:int&#8217;])
+name = dic[name]
+height = dic[height]
+write(&#8216;%s is %s cm tall.&#8217; % (name, height))
+if height &gt; 300:</p>
+<blockquote>
+<div>write(&#8216;Wow, you&#8217;re tall!&#8217;)</div></blockquote>
+<dl class="docutils">
+<dt>else:</dt>
+<dd>write(&#8216;Pshaw, you&#8217;re short.&#8217;)</dd>
+</dl>
+</div></blockquote>
+<p>To convert a value to a number, suffix &#8216;:int&#8217; or &#8216;:float&#8217; to the name.
+The method will search first for a &#8216;height:int&#8217; variable and then for a
+&#8216;height&#8217; variable.  (It will be called &#8216;height&#8217; in the final
+dictionary.)  If a numeric conversion fails, use or raise &#8216;badInt&#8217; or
+&#8216;badFloat&#8217;.  Missing values work the same way as for strings, except the
+default is &#8216;defaultInt&#8217; or &#8216;defaultFloat&#8217; instead of &#8216;default&#8217;.</p>
+<p>If a name represents an uploaded file, the entire file will be read into
+memory.  For more sophistocated file-upload handling, leave that name
+out of the list and do your own handling, or wait for
+Cheetah.Utils.UploadFileMixin.</p>
+<p>This only in a subclass that also inherits from Webware&#8217;s Servlet or
+HTTPServlet.  Otherwise you&#8217;ll get an AttributeError on &#8216;self.request&#8217;.</p>
+<p>EXCEPTIONS: ValueError if &#8216;source&#8217; is not one of the stated characters.
+TypeError if a conversion suffix is not &#8216;:int&#8217; or &#8216;:float&#8217;.</p>
+<p>FUTURE EXPANSION: a future version of this method may allow source
+cascading; e.g., &#8216;vs&#8217; would look first in &#8216;values&#8217; and then in session
+variables.</p>
+<p>Author: Mike Orr &lt;<a class="reference external" href="mailto:iron&#37;&#52;&#48;mso&#46;oz&#46;net">iron<span>&#64;</span>mso<span>&#46;</span>oz<span>&#46;</span>net</a>&gt;
+License: This software is released for unlimited distribution under the</p>
+<blockquote>
+<div>terms of the MIT license.  See the LICENSE file.</div></blockquote>
+<p>Version: $Revision: 1.186 $
+Start Date: 2002/03/17
+Last Revision Date: $Date: 2008/03/10 04:48:11 $</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.Template.TemplatePreprocessor">
+<em class="property">class </em><code class="descclassname">Cheetah.Template.</code><code class="descname">TemplatePreprocessor</code><span class="sig-paren">(</span><em>settings</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.TemplatePreprocessor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>This is used with the preprocessors argument to Template.compile().</p>
+<p>See the docstring for Template.compile</p>
+<p>** Preprocessors are an advanced topic **</p>
+<dl class="method">
+<dt id="Cheetah.Template.TemplatePreprocessor.preprocess">
+<code class="descname">preprocess</code><span class="sig-paren">(</span><em>source</em>, <em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.TemplatePreprocessor.preprocess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an intermediate template and return the source code
+it outputs</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="Cheetah.Template.checkFileMtime">
+<code class="descclassname">Cheetah.Template.</code><code class="descname">checkFileMtime</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.checkFileMtime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="Cheetah.Template.createMethod">
+<code class="descclassname">Cheetah.Template.</code><code class="descname">createMethod</code><span class="sig-paren">(</span><em>func</em>, <em>cls</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.createMethod" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="Cheetah.Template.genParserErrorFromPythonException">
+<code class="descclassname">Cheetah.Template.</code><code class="descname">genParserErrorFromPythonException</code><span class="sig-paren">(</span><em>source</em>, <em>file</em>, <em>generatedPyCode</em>, <em>exception</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.genParserErrorFromPythonException" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="Cheetah.Template.hashDict">
+<code class="descclassname">Cheetah.Template.</code><code class="descname">hashDict</code><span class="sig-paren">(</span><em>d</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.hashDict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="Cheetah.Template.hashList">
+<code class="descclassname">Cheetah.Template.</code><code class="descname">hashList</code><span class="sig-paren">(</span><em>l</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.hashList" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="Cheetah.Template.updateLinecache">
+<code class="descclassname">Cheetah.Template.</code><code class="descname">updateLinecache</code><span class="sig-paren">(</span><em>filename</em>, <em>src</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.updateLinecache" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 23, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Cheetah.ImportManager module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/Cheetah.ImportManager.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-Cheetah.ImportManager">
+<span id="cheetah-importmanager-module"></span><h1>Cheetah.ImportManager module<a class="headerlink" href="#module-Cheetah.ImportManager" title="Permalink to this headline">¶</a></h1>
+<p>Provides an emulator/replacement for Python&#8217;s standard import system.</p>
+<p>&#64;&#64;TR: Be warned that Import Hooks are in the deepest, darkest corner of Python&#8217;s
+jungle.  If you need to start hacking with this, be prepared to get lost for a
+while. Also note, this module predates the newstyle import hooks in Python 2.3
+<a class="reference external" href="http://www.python.org/peps/pep-0302.html">http://www.python.org/peps/pep-0302.html</a>.</p>
+<p>This is a hacked/documented version of Gordon McMillan&#8217;s iu.py. I have:</p>
+<blockquote>
+<div><ul class="simple">
+<li>made it a little less terse</li>
+<li>added docstrings and explanatations</li>
+<li>standardized the variable naming scheme</li>
+<li>reorganized the code layout to enhance readability</li>
+</ul>
+</div></blockquote>
+<dl class="class">
+<dt id="Cheetah.ImportManager.BuiltinImportDirector">
+<em class="property">class </em><code class="descclassname">Cheetah.ImportManager.</code><code class="descname">BuiltinImportDirector</code><a class="headerlink" href="#Cheetah.ImportManager.BuiltinImportDirector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.ImportManager.ImportDirector" title="Cheetah.ImportManager.ImportDirector"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.ImportManager.ImportDirector</span></code></a></p>
+<p>Directs imports of builtin modules</p>
+<dl class="method">
+<dt id="Cheetah.ImportManager.BuiltinImportDirector.getmod">
+<code class="descname">getmod</code><span class="sig-paren">(</span><em>nm</em>, <em>isbuiltin=&lt;built-in function is_builtin&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.BuiltinImportDirector.getmod" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.ImportManager.DirOwner">
+<em class="property">class </em><code class="descclassname">Cheetah.ImportManager.</code><code class="descname">DirOwner</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.DirOwner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.ImportManager.Owner" title="Cheetah.ImportManager.Owner"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.ImportManager.Owner</span></code></a></p>
+<dl class="method">
+<dt id="Cheetah.ImportManager.DirOwner.getmod">
+<code class="descname">getmod</code><span class="sig-paren">(</span><em>nm</em>, <em>getsuffixes=&lt;built-in function get_suffixes&gt;</em>, <em>loadco=&lt;built-in function loads&gt;</em>, <em>newmod=&lt;built-in function new_module&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.DirOwner.getmod" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.ImportManager.FrozenImportDirector">
+<em class="property">class </em><code class="descclassname">Cheetah.ImportManager.</code><code class="descname">FrozenImportDirector</code><a class="headerlink" href="#Cheetah.ImportManager.FrozenImportDirector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.ImportManager.ImportDirector" title="Cheetah.ImportManager.ImportDirector"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.ImportManager.ImportDirector</span></code></a></p>
+<p>Directs imports of frozen modules</p>
+<dl class="method">
+<dt id="Cheetah.ImportManager.FrozenImportDirector.getmod">
+<code class="descname">getmod</code><span class="sig-paren">(</span><em>nm</em>, <em>isFrozen=&lt;built-in function is_frozen&gt;</em>, <em>loadMod=&lt;built-in function load_module&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.FrozenImportDirector.getmod" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.ImportManager.ImportDirector">
+<em class="property">class </em><code class="descclassname">Cheetah.ImportManager.</code><code class="descname">ImportDirector</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.ImportDirector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.ImportManager.Owner" title="Cheetah.ImportManager.Owner"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.ImportManager.Owner</span></code></a></p>
+<p>ImportDirectors live on the metapath There&#8217;s one for builtins, one for
+frozen modules, and one for sys.path Windows gets one for modules gotten
+from the Registry Mac would have them for PY_RESOURCE modules etc.  A
+generalization of Owner - their concept of &#8216;turf&#8217; is broader</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.ImportManager.ImportManager">
+<em class="property">class </em><code class="descclassname">Cheetah.ImportManager.</code><code class="descname">ImportManager</code><a class="headerlink" href="#Cheetah.ImportManager.ImportManager" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="Cheetah.ImportManager.ImportManager.doimport">
+<code class="descname">doimport</code><span class="sig-paren">(</span><em>nm</em>, <em>parentnm</em>, <em>fqname</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.ImportManager.doimport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.ImportManager.ImportManager.importHook">
+<code class="descname">importHook</code><span class="sig-paren">(</span><em>name</em>, <em>globals=None</em>, <em>locals=None</em>, <em>fromlist=None</em>, <em>level=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.ImportManager.importHook" title="Permalink to this definition">¶</a></dt>
+<dd><p>NOTE: Currently importHook will accept the keyword-argument &#8220;level&#8221; 
+but it will <em>NOT</em> use it (currently). Details about the &#8220;level&#8221; keyword
+argument can be found here: <a class="reference external" href="http://www.python.org/doc/2.5.2/lib/built-in-funcs.html">http://www.python.org/doc/2.5.2/lib/built-in-funcs.html</a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.ImportManager.ImportManager.install">
+<code class="descname">install</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.ImportManager.install" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.ImportManager.ImportManager.reloadHook">
+<code class="descname">reloadHook</code><span class="sig-paren">(</span><em>mod</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.ImportManager.reloadHook" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.ImportManager.ImportManager.setThreaded">
+<code class="descname">setThreaded</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.ImportManager.setThreaded" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.ImportManager.Owner">
+<em class="property">class </em><code class="descclassname">Cheetah.ImportManager.</code><code class="descname">Owner</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.Owner" title="Permalink to this definition">¶</a></dt>
+<dd><p>An Owner does imports from a particular piece of turf That is, there&#8217;s
+an Owner for each thing on sys.path There are owners for directories and
+.pyz files.  There could be owners for zip files, or even URLs.  A
+shadowpath (a dictionary mapping the names in sys.path to their owners) is
+used so that sys.path (or a package&#8217;s __path__) is still a bunch of strings,</p>
+<dl class="method">
+<dt id="Cheetah.ImportManager.Owner.getmod">
+<code class="descname">getmod</code><span class="sig-paren">(</span><em>nm</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.Owner.getmod" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.ImportManager.PathImportDirector">
+<em class="property">class </em><code class="descclassname">Cheetah.ImportManager.</code><code class="descname">PathImportDirector</code><span class="sig-paren">(</span><em>pathlist=None</em>, <em>importers=None</em>, <em>ownertypes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.PathImportDirector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.ImportManager.ImportDirector" title="Cheetah.ImportManager.ImportDirector"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.ImportManager.ImportDirector</span></code></a></p>
+<p>Directs imports of modules stored on the filesystem.</p>
+<dl class="method">
+<dt id="Cheetah.ImportManager.PathImportDirector.getmod">
+<code class="descname">getmod</code><span class="sig-paren">(</span><em>nm</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.PathImportDirector.getmod" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.ImportManager.RegistryImportDirector">
+<em class="property">class </em><code class="descclassname">Cheetah.ImportManager.</code><code class="descname">RegistryImportDirector</code><a class="headerlink" href="#Cheetah.ImportManager.RegistryImportDirector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.ImportManager.ImportDirector" title="Cheetah.ImportManager.ImportDirector"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.ImportManager.ImportDirector</span></code></a></p>
+<p>Directs imports of modules stored in the Windows Registry</p>
+<dl class="method">
+<dt id="Cheetah.ImportManager.RegistryImportDirector.getmod">
+<code class="descname">getmod</code><span class="sig-paren">(</span><em>nm</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.RegistryImportDirector.getmod" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="Cheetah.ImportManager.getDescr">
+<code class="descclassname">Cheetah.ImportManager.</code><code class="descname">getDescr</code><span class="sig-paren">(</span><em>fnm</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.getDescr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="Cheetah.ImportManager.getPathExt">
+<code class="descclassname">Cheetah.ImportManager.</code><code class="descname">getPathExt</code><span class="sig-paren">(</span><em>fnm</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.getPathExt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="Cheetah.ImportManager.nameSplit">
+<code class="descclassname">Cheetah.ImportManager.</code><code class="descname">nameSplit</code><span class="sig-paren">(</span><em>s</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.nameSplit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="Cheetah.ImportManager.packageName">
+<code class="descclassname">Cheetah.ImportManager.</code><code class="descname">packageName</code><span class="sig-paren">(</span><em>s</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.packageName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="Cheetah.ImportManager.pathIsDir">
+<code class="descclassname">Cheetah.ImportManager.</code><code class="descname">pathIsDir</code><span class="sig-paren">(</span><em>pathname</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.pathIsDir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Local replacement for os.path.isdir().</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 23, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+  </body>
+</html>

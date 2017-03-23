@@ -1,0 +1,917 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Cheetah.Compiler module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/Cheetah.Compiler.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-Cheetah.Compiler">
+<span id="cheetah-compiler-module"></span><h1>Cheetah.Compiler module<a class="headerlink" href="#module-Cheetah.Compiler" title="Permalink to this headline">¶</a></h1>
+<p>Compiler classes for Cheetah:
+ModuleCompiler aka &#8216;Compiler&#8217;
+ClassCompiler
+MethodCompiler</p>
+<p>If you are trying to grok this code start with ModuleCompiler.__init__,
+ModuleCompiler.compile, and ModuleCompiler.__getattr__.</p>
+<dl class="class">
+<dt id="Cheetah.Compiler.AutoClassCompiler">
+<em class="property">class </em><code class="descclassname">Cheetah.Compiler.</code><code class="descname">AutoClassCompiler</code><span class="sig-paren">(</span><em>className</em>, <em>mainMethodName='respond'</em>, <em>moduleCompiler=None</em>, <em>fileName=None</em>, <em>settingsManager=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.AutoClassCompiler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.Compiler.ClassCompiler" title="Cheetah.Compiler.ClassCompiler"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Compiler.ClassCompiler</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.Compiler.AutoMethodCompiler">
+<em class="property">class </em><code class="descclassname">Cheetah.Compiler.</code><code class="descname">AutoMethodCompiler</code><span class="sig-paren">(</span><em>methodName</em>, <em>classCompiler</em>, <em>initialMethodComment=None</em>, <em>decorators=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.AutoMethodCompiler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.Compiler.MethodCompiler" title="Cheetah.Compiler.MethodCompiler"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Compiler.MethodCompiler</span></code></a></p>
+<dl class="method">
+<dt id="Cheetah.Compiler.AutoMethodCompiler.addMethArg">
+<code class="descname">addMethArg</code><span class="sig-paren">(</span><em>name</em>, <em>defVal=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.AutoMethodCompiler.addMethArg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.AutoMethodCompiler.addStop">
+<code class="descname">addStop</code><span class="sig-paren">(</span><em>expr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.AutoMethodCompiler.addStop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.AutoMethodCompiler.cleanupState">
+<code class="descname">cleanupState</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.AutoMethodCompiler.cleanupState" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.AutoMethodCompiler.isClassMethod">
+<code class="descname">isClassMethod</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.AutoMethodCompiler.isClassMethod" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.AutoMethodCompiler.isStaticMethod">
+<code class="descname">isStaticMethod</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.AutoMethodCompiler.isStaticMethod" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.AutoMethodCompiler.methodSignature">
+<code class="descname">methodSignature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.AutoMethodCompiler.methodSignature" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.Compiler.ClassCompiler">
+<em class="property">class </em><code class="descclassname">Cheetah.Compiler.</code><code class="descname">ClassCompiler</code><span class="sig-paren">(</span><em>className</em>, <em>mainMethodName='respond'</em>, <em>moduleCompiler=None</em>, <em>fileName=None</em>, <em>settingsManager=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.Compiler.GenUtils" title="Cheetah.Compiler.GenUtils"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Compiler.GenUtils</span></code></a></p>
+<dl class="method">
+<dt id="Cheetah.Compiler.ClassCompiler.addAttribute">
+<code class="descname">addAttribute</code><span class="sig-paren">(</span><em>attribExpr</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.addAttribute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ClassCompiler.addChunkToInit">
+<code class="descname">addChunkToInit</code><span class="sig-paren">(</span><em>chunk</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.addChunkToInit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ClassCompiler.addClassDocString">
+<code class="descname">addClassDocString</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.addClassDocString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ClassCompiler.addDecorator">
+<code class="descname">addDecorator</code><span class="sig-paren">(</span><em>decoratorExpr</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.addDecorator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the decorator to be used with the next method in the source.</p>
+<p>See _spawnMethodCompiler() and MethodCompiler for the details of how
+this is used.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ClassCompiler.addErrorCatcherCall">
+<code class="descname">addErrorCatcherCall</code><span class="sig-paren">(</span><em>codeChunk</em>, <em>rawCode=''</em>, <em>lineCol=''</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.addErrorCatcherCall" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ClassCompiler.addSuper">
+<code class="descname">addSuper</code><span class="sig-paren">(</span><em>argsList</em>, <em>parserComment=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.addSuper" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ClassCompiler.attributes">
+<code class="descname">attributes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.attributes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ClassCompiler.classDef">
+<code class="descname">classDef</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.classDef" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ClassCompiler.classDocstring">
+<code class="descname">classDocstring</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.classDocstring" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ClassCompiler.className">
+<code class="descname">className</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.className" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ClassCompiler.classSignature">
+<code class="descname">classSignature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.classSignature" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ClassCompiler.cleanupState">
+<code class="descname">cleanupState</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.cleanupState" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ClassCompiler.closeBlock">
+<code class="descname">closeBlock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.closeBlock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ClassCompiler.closeDef">
+<code class="descname">closeDef</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.closeDef" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Compiler.ClassCompiler.methodCompilerClass">
+<code class="descname">methodCompilerClass</code><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.methodCompilerClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#Cheetah.Compiler.AutoMethodCompiler" title="Cheetah.Compiler.AutoMethodCompiler"><code class="xref py py-class docutils literal"><span class="pre">AutoMethodCompiler</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Compiler.ClassCompiler.methodCompilerClassForInit">
+<code class="descname">methodCompilerClassForInit</code><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.methodCompilerClassForInit" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#Cheetah.Compiler.MethodCompiler" title="Cheetah.Compiler.MethodCompiler"><code class="xref py py-class docutils literal"><span class="pre">MethodCompiler</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ClassCompiler.methodDefs">
+<code class="descname">methodDefs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.methodDefs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ClassCompiler.setBaseClass">
+<code class="descname">setBaseClass</code><span class="sig-paren">(</span><em>baseClassName</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.setBaseClass" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ClassCompiler.setClassName">
+<code class="descname">setClassName</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.setClassName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ClassCompiler.setMainMethodArgs">
+<code class="descname">setMainMethodArgs</code><span class="sig-paren">(</span><em>argsList</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.setMainMethodArgs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ClassCompiler.setMainMethodName">
+<code class="descname">setMainMethodName</code><span class="sig-paren">(</span><em>methodName</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.setMainMethodName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ClassCompiler.setting">
+<code class="descname">setting</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.setting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ClassCompiler.startMethodDef">
+<code class="descname">startMethodDef</code><span class="sig-paren">(</span><em>methodName</em>, <em>argsList</em>, <em>parserComment</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.startMethodDef" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ClassCompiler.wrapClassDef">
+<code class="descname">wrapClassDef</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.wrapClassDef" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Compiler.Compiler">
+<code class="descclassname">Cheetah.Compiler.</code><code class="descname">Compiler</code><a class="headerlink" href="#Cheetah.Compiler.Compiler" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler" title="Cheetah.Compiler.ModuleCompiler"><code class="xref py py-class docutils literal"><span class="pre">ModuleCompiler</span></code></a></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="Cheetah.Compiler.Error">
+<em class="property">exception </em><code class="descclassname">Cheetah.Compiler.</code><code class="descname">Error</code><a class="headerlink" href="#Cheetah.Compiler.Error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">exceptions.Exception</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.Compiler.GenUtils">
+<em class="property">class </em><code class="descclassname">Cheetah.Compiler.</code><code class="descname">GenUtils</code><a class="headerlink" href="#Cheetah.Compiler.GenUtils" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>An abstract baseclass for the Compiler classes that provides methods that
+perform generic utility functions or generate pieces of output code from
+information passed in by the Parser baseclass.  These methods don&#8217;t do any
+parsing themselves.</p>
+<dl class="method">
+<dt id="Cheetah.Compiler.GenUtils.addGetTextVar">
+<code class="descname">addGetTextVar</code><span class="sig-paren">(</span><em>nameChunks</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.GenUtils.addGetTextVar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output something that gettext can recognize.</p>
+<p>This is a harmless side effect necessary to make gettext work when it
+is scanning compiled templates for strings marked for translation.</p>
+<p>&#64;&#64;TR: another marginally more efficient approach would be to put the
+output in a dummy method that is never called.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.GenUtils.genCacheInfo">
+<code class="descname">genCacheInfo</code><span class="sig-paren">(</span><em>cacheTokenParts</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.GenUtils.genCacheInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decipher a placeholder cachetoken</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.GenUtils.genCacheInfoFromArgList">
+<code class="descname">genCacheInfoFromArgList</code><span class="sig-paren">(</span><em>argList</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.GenUtils.genCacheInfoFromArgList" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.GenUtils.genCheetahVar">
+<code class="descname">genCheetahVar</code><span class="sig-paren">(</span><em>nameChunks</em>, <em>plain=False</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.GenUtils.genCheetahVar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.GenUtils.genNameMapperVar">
+<code class="descname">genNameMapperVar</code><span class="sig-paren">(</span><em>nameChunks</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.GenUtils.genNameMapperVar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate valid Python code for a Cheetah $var, using NameMapper
+(Unified Dotted Notation with the SearchList).</p>
+<dl class="docutils">
+<dt>nameChunks = list of var subcomponents represented as tuples</dt>
+<dd>[ (name,useAC,remainderOfExpr),
+]</dd>
+<dt>where:</dt>
+<dd>name = the dotted name base
+useAC = where NameMapper should use autocalling on namemapperPart
+remainderOfExpr = any arglist, index, or slice</dd>
+</dl>
+<p>If remainderOfExpr contains a call arglist (e.g. &#8216;(1234)&#8217;) then useAC
+is False, otherwise it defaults to True. It is overridden by the global
+setting &#8216;useAutocalling&#8217; if this setting is False.</p>
+<dl class="docutils">
+<dt>if the raw Cheetah Var is</dt>
+<dd>$a.b.c[1].d().x.y.z</dd>
+<dt>nameChunks is the list</dt>
+<dd><dl class="first docutils">
+<dt>[ (&#8216;a.b.c&#8217;,True,&#8217;[1]&#8217;), # A</dt>
+<dd>(&#8216;d&#8217;,False,&#8217;()&#8217;),     # B
+(&#8216;x.y.z&#8217;,True,&#8217;&#8216;),    # C</dd>
+</dl>
+<p class="last">]</p>
+</dd>
+<dt>When this method is fed the list above it returns</dt>
+<dd>VFN(VFN(VFFSL(SL, &#8216;a.b.c&#8217;,True)[1], &#8216;d&#8217;,False)(), &#8216;x.y.z&#8217;,True)</dd>
+<dt>which can be represented as</dt>
+<dd>VFN(B`, name=C[0], executeCallables=(useAC and C[1]))C[2]</dd>
+<dt>where:</dt>
+<dd><p class="first">VFN = NameMapper.valueForName
+VFFSL = NameMapper.valueFromFrameOrSearchList
+VFSL = NameMapper.valueFromSearchList # optionally used instead of VFFSL
+SL = self.searchList()
+useAC = self.setting(&#8216;useAutocalling&#8217;) # True in this example</p>
+<p>A = (&#8216;a.b.c&#8217;,True,&#8217;[1]&#8217;)
+B = (&#8216;d&#8217;,False,&#8217;()&#8217;)
+C = (&#8216;x.y.z&#8217;,True,&#8217;&#8216;)</p>
+<dl class="docutils">
+<dt>C` = VFN( VFN( VFFSL(SL, &#8216;a.b.c&#8217;,True)[1],</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>&#8216;d&#8217;,False)(),</div></blockquote>
+<p>&#8216;x.y.z&#8217;,True)</p>
+</div></blockquote>
+<p class="last">= VFN(B`, name=&#8217;x.y.z&#8217;, executeCallables=True)</p>
+</dd>
+</dl>
+<p class="last">B` = VFN(A`, name=B[0], executeCallables=(useAC and B[1]))B[2]
+A` = VFFSL(SL, name=A[0], executeCallables=(useAC and A[1]))A[2]</p>
+</dd>
+</dl>
+<p>Note, if the compiler setting useStackFrames=False (default is true)
+then</p>
+<blockquote>
+<div>A` = VFSL([locals()]+SL+[globals(), builtin], name=A[0], executeCallables=(useAC and A[1]))A[2]</div></blockquote>
+<p>This option allows Cheetah to be used with Psyco, which doesn&#8217;t support
+stack frame introspection.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.GenUtils.genPlainVar">
+<code class="descname">genPlainVar</code><span class="sig-paren">(</span><em>nameChunks</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.GenUtils.genPlainVar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate Python code for a Cheetah $var without using NameMapper
+(Unified Dotted Notation with the SearchList).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.GenUtils.genTimeInterval">
+<code class="descname">genTimeInterval</code><span class="sig-paren">(</span><em>timeString</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.GenUtils.genTimeInterval" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.Compiler.MethodCompiler">
+<em class="property">class </em><code class="descclassname">Cheetah.Compiler.</code><code class="descname">MethodCompiler</code><span class="sig-paren">(</span><em>methodName</em>, <em>classCompiler</em>, <em>initialMethodComment=None</em>, <em>decorators=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.Compiler.GenUtils" title="Cheetah.Compiler.GenUtils"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Compiler.GenUtils</span></code></a></p>
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addAssert">
+<code class="descname">addAssert</code><span class="sig-paren">(</span><em>expr</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addAssert" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addBreak">
+<code class="descname">addBreak</code><span class="sig-paren">(</span><em>expr</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addBreak" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addChunk">
+<code class="descname">addChunk</code><span class="sig-paren">(</span><em>chunk</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addChunk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addClosure">
+<code class="descname">addClosure</code><span class="sig-paren">(</span><em>functionName</em>, <em>argsList</em>, <em>parserComment</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addClosure" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addContinue">
+<code class="descname">addContinue</code><span class="sig-paren">(</span><em>expr</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addContinue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addDel">
+<code class="descname">addDel</code><span class="sig-paren">(</span><em>expr</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addDel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addEcho">
+<code class="descname">addEcho</code><span class="sig-paren">(</span><em>expr</em>, <em>rawExpr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addEcho" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addElif">
+<code class="descname">addElif</code><span class="sig-paren">(</span><em>expr</em>, <em>dedent=True</em>, <em>lineCol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addElif" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addElse">
+<code class="descname">addElse</code><span class="sig-paren">(</span><em>expr</em>, <em>dedent=True</em>, <em>lineCol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addElse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addExcept">
+<code class="descname">addExcept</code><span class="sig-paren">(</span><em>expr</em>, <em>dedent=True</em>, <em>lineCol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addExcept" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addFilteredChunk">
+<code class="descname">addFilteredChunk</code><span class="sig-paren">(</span><em>chunk</em>, <em>filterArgs=None</em>, <em>rawExpr=None</em>, <em>lineCol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addFilteredChunk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addFinally">
+<code class="descname">addFinally</code><span class="sig-paren">(</span><em>expr</em>, <em>dedent=True</em>, <em>lineCol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addFinally" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addFor">
+<code class="descname">addFor</code><span class="sig-paren">(</span><em>expr</em>, <em>lineCol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addFor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addIf">
+<code class="descname">addIf</code><span class="sig-paren">(</span><em>expr</em>, <em>lineCol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addIf" title="Permalink to this definition">¶</a></dt>
+<dd><p>For a full #if ... #end if directive</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addInclude">
+<code class="descname">addInclude</code><span class="sig-paren">(</span><em>sourceExpr</em>, <em>includeFrom</em>, <em>isRaw</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addInclude" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addIndentingDirective">
+<code class="descname">addIndentingDirective</code><span class="sig-paren">(</span><em>expr</em>, <em>lineCol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addIndentingDirective" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addMethComment">
+<code class="descname">addMethComment</code><span class="sig-paren">(</span><em>comm</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addMethComment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addMethDocString">
+<code class="descname">addMethDocString</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addMethDocString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addOneLineIf">
+<code class="descname">addOneLineIf</code><span class="sig-paren">(</span><em>expr</em>, <em>lineCol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addOneLineIf" title="Permalink to this definition">¶</a></dt>
+<dd><p>For a full #if ... #end if directive</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addPSP">
+<code class="descname">addPSP</code><span class="sig-paren">(</span><em>PSP</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addPSP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addPass">
+<code class="descname">addPass</code><span class="sig-paren">(</span><em>expr</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addPass" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addPlaceholder">
+<code class="descname">addPlaceholder</code><span class="sig-paren">(</span><em>expr</em>, <em>filterArgs</em>, <em>rawPlaceholder</em>, <em>cacheTokenParts</em>, <em>lineCol</em>, <em>silentMode=False</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addPlaceholder" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addRaise">
+<code class="descname">addRaise</code><span class="sig-paren">(</span><em>expr</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addRaise" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addRawText">
+<code class="descname">addRawText</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addRawText" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addReIndentingDirective">
+<code class="descname">addReIndentingDirective</code><span class="sig-paren">(</span><em>expr</em>, <em>dedent=True</em>, <em>lineCol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addReIndentingDirective" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addRepeat">
+<code class="descname">addRepeat</code><span class="sig-paren">(</span><em>expr</em>, <em>lineCol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addRepeat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addReturn">
+<code class="descname">addReturn</code><span class="sig-paren">(</span><em>expr</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addReturn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addSet">
+<code class="descname">addSet</code><span class="sig-paren">(</span><em>expr</em>, <em>exprComponents</em>, <em>setStyle</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addSet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addSilent">
+<code class="descname">addSilent</code><span class="sig-paren">(</span><em>expr</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addSilent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addStrConst">
+<code class="descname">addStrConst</code><span class="sig-paren">(</span><em>strConst</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addStrConst" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addTernaryExpr">
+<code class="descname">addTernaryExpr</code><span class="sig-paren">(</span><em>conditionExpr</em>, <em>trueExpr</em>, <em>falseExpr</em>, <em>lineCol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addTernaryExpr" title="Permalink to this definition">¶</a></dt>
+<dd><p>For a single-lie #if ... then .... else ... directive
+&lt;condition&gt; then &lt;trueExpr&gt; else &lt;falseExpr&gt;</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addTry">
+<code class="descname">addTry</code><span class="sig-paren">(</span><em>expr</em>, <em>lineCol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addTry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addUnless">
+<code class="descname">addUnless</code><span class="sig-paren">(</span><em>expr</em>, <em>lineCol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addUnless" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addWhile">
+<code class="descname">addWhile</code><span class="sig-paren">(</span><em>expr</em>, <em>lineCol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addWhile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addWriteChunk">
+<code class="descname">addWriteChunk</code><span class="sig-paren">(</span><em>chunk</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addWriteChunk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.addYield">
+<code class="descname">addYield</code><span class="sig-paren">(</span><em>expr</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addYield" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.appendToPrevChunk">
+<code class="descname">appendToPrevChunk</code><span class="sig-paren">(</span><em>appendage</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.appendToPrevChunk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.cleanupState">
+<code class="descname">cleanupState</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.cleanupState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called by the containing class compiler instance</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.closeFilterBlock">
+<code class="descname">closeFilterBlock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.closeFilterBlock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.commitStrConst">
+<code class="descname">commitStrConst</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.commitStrConst" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add the code for outputting the pending strConst without chopping off
+any whitespace from it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.dedent">
+<code class="descname">dedent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.dedent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.docString">
+<code class="descname">docString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.docString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.endCacheRegion">
+<code class="descname">endCacheRegion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.endCacheRegion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.endCallRegion">
+<code class="descname">endCallRegion</code><span class="sig-paren">(</span><em>regionTitle='CALL'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.endCallRegion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.endCaptureRegion">
+<code class="descname">endCaptureRegion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.endCaptureRegion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.handleWSBeforeDirective">
+<code class="descname">handleWSBeforeDirective</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.handleWSBeforeDirective" title="Permalink to this definition">¶</a></dt>
+<dd><p>Truncate the pending strCont to the beginning of the current line.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.indent">
+<code class="descname">indent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.indent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.indentation">
+<code class="descname">indentation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.indentation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.isErrorCatcherOn">
+<code class="descname">isErrorCatcherOn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.isErrorCatcherOn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.methodBody">
+<code class="descname">methodBody</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.methodBody" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.methodDef">
+<code class="descname">methodDef</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.methodDef" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.methodName">
+<code class="descname">methodName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.methodName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.methodSignature">
+<code class="descname">methodSignature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.methodSignature" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.nextCacheID">
+<code class="descname">nextCacheID</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.nextCacheID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.nextCallRegionID">
+<code class="descname">nextCallRegionID</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.nextCallRegionID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.nextCaptureRegionID">
+<code class="descname">nextCaptureRegionID</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.nextCaptureRegionID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.nextFilterRegionID">
+<code class="descname">nextFilterRegionID</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.nextFilterRegionID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.setCallArg">
+<code class="descname">setCallArg</code><span class="sig-paren">(</span><em>argName</em>, <em>lineCol</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.setCallArg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.setErrorCatcher">
+<code class="descname">setErrorCatcher</code><span class="sig-paren">(</span><em>errorCatcherName</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.setErrorCatcher" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.setFilter">
+<code class="descname">setFilter</code><span class="sig-paren">(</span><em>theFilter</em>, <em>isKlass</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.setFilter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.setMethodName">
+<code class="descname">setMethodName</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.setMethodName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.setMethodSignature">
+<code class="descname">setMethodSignature</code><span class="sig-paren">(</span><em>signature</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.setMethodSignature" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.setTransform">
+<code class="descname">setTransform</code><span class="sig-paren">(</span><em>transformer</em>, <em>isKlass</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.setTransform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.setting">
+<code class="descname">setting</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.setting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.startCacheRegion">
+<code class="descname">startCacheRegion</code><span class="sig-paren">(</span><em>cacheInfo</em>, <em>lineCol</em>, <em>rawPlaceholder=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.startCacheRegion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.startCallRegion">
+<code class="descname">startCallRegion</code><span class="sig-paren">(</span><em>functionName</em>, <em>args</em>, <em>lineCol</em>, <em>regionTitle='CALL'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.startCallRegion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.startCaptureRegion">
+<code class="descname">startCaptureRegion</code><span class="sig-paren">(</span><em>assignTo</em>, <em>lineCol</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.startCaptureRegion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.turnErrorCatcherOff">
+<code class="descname">turnErrorCatcherOff</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.turnErrorCatcherOff" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.turnErrorCatcherOn">
+<code class="descname">turnErrorCatcherOn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.turnErrorCatcherOn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.MethodCompiler.wrapCode">
+<code class="descname">wrapCode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.wrapCode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.Compiler.ModuleCompiler">
+<em class="property">class </em><code class="descclassname">Cheetah.Compiler.</code><code class="descname">ModuleCompiler</code><span class="sig-paren">(</span><em>source=None</em>, <em>file=None</em>, <em>moduleName='DynamicallyCompiledCheetahTemplate'</em>, <em>mainClassName=None</em>, <em>mainMethodName=None</em>, <em>baseclassName=None</em>, <em>extraImportStatements=None</em>, <em>settings=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="Cheetah.SettingsManager.html#Cheetah.SettingsManager.SettingsManager" title="Cheetah.SettingsManager.SettingsManager"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.SettingsManager.SettingsManager</span></code></a>, <a class="reference internal" href="#Cheetah.Compiler.GenUtils" title="Cheetah.Compiler.GenUtils"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Compiler.GenUtils</span></code></a></p>
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.addAttribute">
+<code class="descname">addAttribute</code><span class="sig-paren">(</span><em>attribName</em>, <em>expr</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.addAttribute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.addComment">
+<code class="descname">addComment</code><span class="sig-paren">(</span><em>comm</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.addComment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.addImportStatement">
+<code class="descname">addImportStatement</code><span class="sig-paren">(</span><em>impStatement</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.addImportStatement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.addImportedVarNames">
+<code class="descname">addImportedVarNames</code><span class="sig-paren">(</span><em>varNames</em>, <em>raw_statement=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.addImportedVarNames" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.addModuleDocString">
+<code class="descname">addModuleDocString</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.addModuleDocString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a line to the generated module docstring.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.addModuleGlobal">
+<code class="descname">addModuleGlobal</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.addModuleGlobal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a line of global module code.  It is inserted after the import
+statements and Cheetah default module constants.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.addModuleHeader">
+<code class="descname">addModuleHeader</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.addModuleHeader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a header comment to the top of the generated module.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.addSpecialVar">
+<code class="descname">addSpecialVar</code><span class="sig-paren">(</span><em>basename</em>, <em>contents</em>, <em>includeUnderscores=True</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.addSpecialVar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds module __specialConstant__ to the module globals.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Compiler.ModuleCompiler.classCompilerClass">
+<code class="descname">classCompilerClass</code><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.classCompilerClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#Cheetah.Compiler.AutoClassCompiler" title="Cheetah.Compiler.AutoClassCompiler"><code class="xref py py-class docutils literal"><span class="pre">AutoClassCompiler</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.classDefs">
+<code class="descname">classDefs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.classDefs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.compile">
+<code class="descname">compile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.compile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.getModuleCode">
+<code class="descname">getModuleCode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.getModuleCode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.getModuleEncoding">
+<code class="descname">getModuleEncoding</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.getModuleEncoding" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.importStatements">
+<code class="descname">importStatements</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.importStatements" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.importedVarNames">
+<code class="descname">importedVarNames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.importedVarNames" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.moduleConstants">
+<code class="descname">moduleConstants</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.moduleConstants" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.moduleDocstring">
+<code class="descname">moduleDocstring</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.moduleDocstring" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.moduleFooter">
+<code class="descname">moduleFooter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.moduleFooter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.moduleHeader">
+<code class="descname">moduleHeader</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.moduleHeader" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Compiler.ModuleCompiler.parserClass">
+<code class="descname">parserClass</code><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.parserClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">_HighLevelParser</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.setBaseClass">
+<code class="descname">setBaseClass</code><span class="sig-paren">(</span><em>baseClassName</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.setBaseClass" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.setCompilerSetting">
+<code class="descname">setCompilerSetting</code><span class="sig-paren">(</span><em>key</em>, <em>valueExpr</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.setCompilerSetting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.setCompilerSettings">
+<code class="descname">setCompilerSettings</code><span class="sig-paren">(</span><em>keywords</em>, <em>settingsStr</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.setCompilerSettings" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.setModuleEncoding">
+<code class="descname">setModuleEncoding</code><span class="sig-paren">(</span><em>encoding</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.setModuleEncoding" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.setShBang">
+<code class="descname">setShBang</code><span class="sig-paren">(</span><em>shBang</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.setShBang" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.specialVars">
+<code class="descname">specialVars</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.specialVars" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.timestamp">
+<code class="descname">timestamp</code><span class="sig-paren">(</span><em>theTime=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.timestamp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Compiler.ModuleCompiler.wrapModuleDef">
+<code class="descname">wrapModuleDef</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.wrapModuleDef" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 23, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+  </body>
+</html>

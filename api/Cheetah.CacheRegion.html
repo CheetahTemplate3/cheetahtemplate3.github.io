@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Cheetah.CacheRegion module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/Cheetah.CacheRegion.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-Cheetah.CacheRegion">
+<span id="cheetah-cacheregion-module"></span><h1>Cheetah.CacheRegion module<a class="headerlink" href="#module-Cheetah.CacheRegion" title="Permalink to this headline">¶</a></h1>
+<p>Cache holder classes for Cheetah:</p>
+<p>Cache regions are defined using the #cache Cheetah directive. Each
+cache region can be viewed as a dictionary (keyed by cacheRegionID)
+handling at least one cache item (the default one). It&#8217;s possible to add
+cacheItems in a region by using the <cite>varyBy</cite> #cache directive parameter as
+in the following example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>#def getArticle
+   this is the article content.
+#end def
+
+#cache varyBy=$getArticleID()
+   $getArticle($getArticleID())
+#end cache
+</pre></div>
+</div>
+<p>The code above will generate a CacheRegion and add new cacheItem for each value
+of $getArticleID().</p>
+<dl class="class">
+<dt id="Cheetah.CacheRegion.CacheItem">
+<em class="property">class </em><code class="descclassname">Cheetah.CacheRegion.</code><code class="descname">CacheItem</code><span class="sig-paren">(</span><em>cacheItemID</em>, <em>cacheStore</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>A CacheItem is a container storing:</p>
+<blockquote>
+<div><ul class="simple">
+<li>cacheID (string)</li>
+<li>refreshTime (timestamp or None) : last time the cache was refreshed</li>
+<li>data (string) : the content of the cache</li>
+</ul>
+</div></blockquote>
+<dl class="method">
+<dt id="Cheetah.CacheRegion.CacheItem.clear">
+<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem.clear" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.CacheRegion.CacheItem.getData">
+<code class="descname">getData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem.getData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.CacheRegion.CacheItem.getExpiryTime">
+<code class="descname">getExpiryTime</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem.getExpiryTime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.CacheRegion.CacheItem.getRefreshTime">
+<code class="descname">getRefreshTime</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem.getRefreshTime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.CacheRegion.CacheItem.hasExpired">
+<code class="descname">hasExpired</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem.hasExpired" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.CacheRegion.CacheItem.renderOutput">
+<code class="descname">renderOutput</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem.renderOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Can be overridden to implement edge-caching</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.CacheRegion.CacheItem.setData">
+<code class="descname">setData</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem.setData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.CacheRegion.CacheItem.setExpiryTime">
+<code class="descname">setExpiryTime</code><span class="sig-paren">(</span><em>time</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem.setExpiryTime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.CacheRegion.CacheRegion">
+<em class="property">class </em><code class="descclassname">Cheetah.CacheRegion.</code><code class="descname">CacheRegion</code><span class="sig-paren">(</span><em>regionID</em>, <em>templateCacheIdPrefix=''</em>, <em>cacheStore=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheRegion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>A <cite>CacheRegion</cite> stores some <cite>CacheItem</cite> instances.</p>
+<p>This implementation stores the data in the memory of the current process.
+If you need a more advanced data store, create a cacheStore class that works
+with Cheetah&#8217;s CacheStore protocol and provide it as the cacheStore argument
+to __init__.  For example you could use
+Cheetah.CacheStore.MemcachedCacheStore, a wrapper around the Python
+memcached API (<a class="reference external" href="http://www.danga.com/memcached">http://www.danga.com/memcached</a>).</p>
+<dl class="method">
+<dt id="Cheetah.CacheRegion.CacheRegion.clear">
+<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheRegion.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>drop all the caches stored in this cache region</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.CacheRegion.CacheRegion.getCacheItem">
+<code class="descname">getCacheItem</code><span class="sig-paren">(</span><em>cacheItemID</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheRegion.getCacheItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lazy access to a cacheItem</p>
+<p>Try to find a cache in the stored caches. If it doesn&#8217;t
+exist, it&#8217;s created.</p>
+<p>Returns a <cite>CacheItem</cite> instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.CacheRegion.CacheRegion.isNew">
+<code class="descname">isNew</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheRegion.isNew" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 23, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+  </body>
+</html>

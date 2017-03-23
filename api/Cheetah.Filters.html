@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Cheetah.Filters module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/Cheetah.Filters.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-Cheetah.Filters">
+<span id="cheetah-filters-module"></span><h1>Cheetah.Filters module<a class="headerlink" href="#module-Cheetah.Filters" title="Permalink to this headline">¶</a></h1>
+<p>Filters for the #filter directive as well as #transform</p>
+<p>#filter results in output filters Cheetah&#8217;s $placeholders .
+#transform results in a filter on the entirety of the output</p>
+<dl class="class">
+<dt id="Cheetah.Filters.CodeHighlighter">
+<em class="property">class </em><code class="descclassname">Cheetah.Filters.</code><code class="descname">CodeHighlighter</code><span class="sig-paren">(</span><em>template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.CodeHighlighter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.Filters.Filter" title="Cheetah.Filters.Filter"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Filters.Filter</span></code></a></p>
+<p>The CodeHighlighter filter depends on the &#8220;pygments&#8221; module which you can 
+download and install from: <a class="reference external" href="http://pygments.org">http://pygments.org</a></p>
+<p>What the CodeHighlighter assumes the string that it&#8217;s receiving is source
+code and uses pygments.lexers.guess_lexer() to try to guess which parser
+to use when highlighting it.</p>
+<p>CodeHighlighter will return the HTML and CSS to render the code block, syntax 
+highlighted, in a browser</p>
+<p>NOTE: I had an issue installing pygments on Linux/amd64/Python 2.6 dealing with
+importing of pygments.lexers, I was able to correct the failure by adding:</p>
+<blockquote>
+<div>raise ImportError</div></blockquote>
+<p>to line 39 of pygments/plugin.py (since importing pkg_resources was causing issues)</p>
+<dl class="method">
+<dt id="Cheetah.Filters.CodeHighlighter.filter">
+<code class="descname">filter</code><span class="sig-paren">(</span><em>source</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.CodeHighlighter.filter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Filters.EncodeUnicode">
+<code class="descclassname">Cheetah.Filters.</code><code class="descname">EncodeUnicode</code><a class="headerlink" href="#Cheetah.Filters.EncodeUnicode" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#Cheetah.Filters.Filter" title="Cheetah.Filters.Filter"><code class="xref py py-class docutils literal"><span class="pre">Filter</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.Filters.Filter">
+<em class="property">class </em><code class="descclassname">Cheetah.Filters.</code><code class="descname">Filter</code><span class="sig-paren">(</span><em>template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.Filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>A baseclass for the Cheetah Filters.</p>
+<dl class="method">
+<dt id="Cheetah.Filters.Filter.filter">
+<code class="descname">filter</code><span class="sig-paren">(</span><em>val</em>, <em>encoding=None</em>, <em>str=&lt;type 'str'&gt;</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.Filter.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pass Unicode strings through unmolested, unless an encoding is specified.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.Filters.Markdown">
+<em class="property">class </em><code class="descclassname">Cheetah.Filters.</code><code class="descname">Markdown</code><span class="sig-paren">(</span><em>template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.Markdown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.Filters.Filter" title="Cheetah.Filters.Filter"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Filters.Filter</span></code></a></p>
+<dl class="docutils">
+<dt>Markdown will change regular strings to Markdown</dt>
+<dd>(<a class="reference external" href="http://daringfireball.net/projects/markdown/">http://daringfireball.net/projects/markdown/</a>)</dd>
+<dt>Such that:</dt>
+<dd></dd>
+<dt>Becaomes:</dt>
+<dd>&lt;h1&gt;My Header&lt;/h1&gt;</dd>
+</dl>
+<p>and so on.</p>
+<p>Markdown is meant to be used with the #transform 
+tag, as it&#8217;s usefulness with #filter is marginal at
+best</p>
+<dl class="method">
+<dt id="Cheetah.Filters.Markdown.filter">
+<code class="descname">filter</code><span class="sig-paren">(</span><em>value</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.Markdown.filter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.Filters.MaxLen">
+<em class="property">class </em><code class="descclassname">Cheetah.Filters.</code><code class="descname">MaxLen</code><span class="sig-paren">(</span><em>template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.MaxLen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.Filters.Filter" title="Cheetah.Filters.Filter"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Filters.Filter</span></code></a></p>
+<dl class="method">
+<dt id="Cheetah.Filters.MaxLen.filter">
+<code class="descname">filter</code><span class="sig-paren">(</span><em>val</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.MaxLen.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace None with &#8216;&#8217; and cut off at maxlen.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Cheetah.Filters.RawOrEncodedUnicode">
+<code class="descclassname">Cheetah.Filters.</code><code class="descname">RawOrEncodedUnicode</code><a class="headerlink" href="#Cheetah.Filters.RawOrEncodedUnicode" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#Cheetah.Filters.Filter" title="Cheetah.Filters.Filter"><code class="xref py py-class docutils literal"><span class="pre">Filter</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.Filters.Strip">
+<em class="property">class </em><code class="descclassname">Cheetah.Filters.</code><code class="descname">Strip</code><span class="sig-paren">(</span><em>template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.Strip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.Filters.Filter" title="Cheetah.Filters.Filter"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Filters.Filter</span></code></a></p>
+<p>Strip leading/trailing whitespace but preserve newlines.</p>
+<blockquote>
+<div><p>This filter goes through the value line by line, removing leading and
+trailing whitespace on each line.  It does not strip newlines, so every
+input line corresponds to one output line, with its trailing newline intact.</p>
+<p>We do not use val.split(&#8216;</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>&#8216;) because that would squeeze out consecutive</dt>
+<dd><p class="first">blank lines.  Instead, we search for each newline individually.  This
+makes us unable to use the fast C .split method, but it makes the filter
+much more widely useful.</p>
+<p class="last">This filter is intended to be usable both with the #filter directive and
+with the proposed #sed directive (which has not been ratified yet.)</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="Cheetah.Filters.Strip.filter">
+<code class="descname">filter</code><span class="sig-paren">(</span><em>val</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.Strip.filter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.Filters.StripSqueeze">
+<em class="property">class </em><code class="descclassname">Cheetah.Filters.</code><code class="descname">StripSqueeze</code><span class="sig-paren">(</span><em>template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.StripSqueeze" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.Filters.Filter" title="Cheetah.Filters.Filter"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Filters.Filter</span></code></a></p>
+<p>Canonicalizes every chunk of whitespace to a single space.</p>
+<p>Strips leading/trailing whitespace.  Removes all newlines, so multi-line
+input is joined into one ling line with NO trailing newline.</p>
+<dl class="method">
+<dt id="Cheetah.Filters.StripSqueeze.filter">
+<code class="descname">filter</code><span class="sig-paren">(</span><em>val</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.StripSqueeze.filter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.Filters.WebSafe">
+<em class="property">class </em><code class="descclassname">Cheetah.Filters.</code><code class="descname">WebSafe</code><span class="sig-paren">(</span><em>template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.WebSafe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.Filters.Filter" title="Cheetah.Filters.Filter"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Filters.Filter</span></code></a></p>
+<p>Escape HTML entities in $placeholders.</p>
+<dl class="method">
+<dt id="Cheetah.Filters.WebSafe.filter">
+<code class="descname">filter</code><span class="sig-paren">(</span><em>val</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.WebSafe.filter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="Cheetah.Filters.test">
+<code class="descclassname">Cheetah.Filters.</code><code class="descname">test</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.test" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 23, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+  </body>
+</html>

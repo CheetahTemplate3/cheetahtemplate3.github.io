@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Cheetah.NameMapper module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Cheetah.NameMapper module</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#details">Details</a><ul>
+<li><a class="reference internal" href="#dictionary-access-a">DICTIONARY ACCESS (a)</a></li>
+<li><a class="reference internal" href="#autocalling-b-d">AUTOCALLING (b,d)</a></li>
+<li><a class="reference internal" href="#leaving-out-self-c-d">LEAVING OUT &#8216;self&#8217; (c,d)</a></li>
+<li><a class="reference internal" href="#namespace-cascading-d">NAMESPACE CASCADING (d)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#implementation-details">Implementation details</a></li>
+<li><a class="reference internal" href="#performance-and-the-c-version">Performance and the C version</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/Cheetah.NameMapper.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-Cheetah.NameMapper">
+<span id="cheetah-namemapper-module"></span><h1>Cheetah.NameMapper module<a class="headerlink" href="#module-Cheetah.NameMapper" title="Permalink to this headline">¶</a></h1>
+<p>This module supports Cheetah&#8217;s optional NameMapper syntax.</p>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>NameMapper provides a simple syntax for accessing Python data structures,
+functions, and methods from Cheetah. It&#8217;s called NameMapper because it &#8216;maps&#8217;
+simple &#8216;names&#8217; in Cheetah templates to possibly more complex syntax in Python.</p>
+<p>Its purpose is to make working with Cheetah easy for non-programmers.
+Specifically, non-programmers using Cheetah should NOT need to be taught (a)
+what the difference is between an object and a dictionary, (b) what functions
+and methods are, and (c) what &#8216;self&#8217; is.  A further aim (d) is to buffer the
+code in Cheetah templates from changes in the implementation of the Python data
+structures behind them.</p>
+<p>Consider this scenario:</p>
+<p>You are building a customer information system. The designers with you want to
+use information from your system on the client&#8217;s website &#8211;AND&#8211; they want to
+understand the display code and so they can maintian it themselves.</p>
+<p>You write a UI class with a &#8216;customers&#8217; method that returns a dictionary of all
+the customer objects.  Each customer object has an &#8216;address&#8217; method that returns
+the a dictionary with information about the customer&#8217;s address.  The designers
+want to be able to access that information.</p>
+<p>Using PSP, the display code for the website would look something like the
+following, assuming your servlet subclasses the class you created for managing
+customer information:</p>
+<blockquote>
+<div>&lt;%= self.customer()[ID].address()[&#8216;city&#8217;] %&gt;   (42 chars)</div></blockquote>
+<p>Using Cheetah&#8217;s NameMapper syntax it could be any of the following:</p>
+<blockquote>
+<div>$self.customers()[$ID].address()[&#8216;city&#8217;]       (39 chars)
+&#8211;OR&#8211;
+$customers()[$ID].address()[&#8216;city&#8217;]
+&#8211;OR&#8211;
+$customers()[$ID].address().city
+&#8211;OR&#8211;
+$customers()[$ID].address.city
+&#8211;OR&#8211;
+$customers()[$ID].address.city
+&#8211;OR&#8211;
+$customers[$ID].address.city                   (27 chars)</div></blockquote>
+<p>Which of these would you prefer to explain to the designers, who have no
+programming experience?  The last form is 15 characters shorter than the PSP
+and, conceptually, is far more accessible. With PHP or ASP, the code would be
+even messier than the PSP</p>
+<p>This is a rather extreme example and, of course, you could also just implement
+&#8216;$getCustomer($ID).city&#8217; and obey the Law of Demeter (search Google for more on that).
+But good object orientated design isn&#8217;t the point here.</p>
+</div>
+<div class="section" id="details">
+<h2>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h2>
+<p>The parenthesized letters below correspond to the aims in the second paragraph.</p>
+<div class="section" id="dictionary-access-a">
+<h3>DICTIONARY ACCESS (a)<a class="headerlink" href="#dictionary-access-a" title="Permalink to this headline">¶</a></h3>
+<p>NameMapper allows access to items in a dictionary using the same dotted notation
+used to access object attributes in Python.  This aspect of NameMapper is known
+as &#8216;Unified Dotted Notation&#8217;.</p>
+<dl class="docutils">
+<dt>For example, with Cheetah it is possible to write:</dt>
+<dd>$customers()[&#8216;kerr&#8217;].address()  &#8211;OR&#8211;  $customers().kerr.address()</dd>
+</dl>
+<p>where the second form is in NameMapper syntax.</p>
+<dl class="docutils">
+<dt>This only works with dictionary keys that are also valid python identifiers:</dt>
+<dd>regex = &#8216;[<a href="#id1"><span class="problematic" id="id2">a-zA-Z_</span></a>][a-zA-Z_0-9]*&#8217;</dd>
+</dl>
+</div>
+<div class="section" id="autocalling-b-d">
+<h3>AUTOCALLING (b,d)<a class="headerlink" href="#autocalling-b-d" title="Permalink to this headline">¶</a></h3>
+<p>NameMapper automatically detects functions and methods in Cheetah $vars and calls
+them if the parentheses have been left off.</p>
+<dl class="docutils">
+<dt>For example if &#8216;a&#8217; is an object, &#8216;b&#8217; is a method</dt>
+<dd>$a.b</dd>
+<dt>is equivalent to</dt>
+<dd>$a.b()</dd>
+<dt>If b returns a dictionary, then following variations are possible</dt>
+<dd>$a.b.c  &#8211;OR&#8211;  $a.b().c  &#8211;OR&#8211;  $a.b()[&#8216;c&#8217;]</dd>
+</dl>
+<p>where &#8216;c&#8217; is a key in the dictionary that a.b() returns.</p>
+<p>Further notes:
+* NameMapper autocalls the function or method without any arguments.  Thus
+autocalling can only be used with functions or methods that either have no
+arguments or have default values for all arguments.</p>
+<ul class="simple">
+<li>NameMapper only autocalls functions and methods.  Classes and callable object instances</li>
+</ul>
+<p>will not be autocalled.</p>
+<ul class="simple">
+<li>Autocalling can be disabled using Cheetah&#8217;s &#8216;useAutocalling&#8217; setting.</li>
+</ul>
+</div>
+<div class="section" id="leaving-out-self-c-d">
+<h3>LEAVING OUT &#8216;self&#8217; (c,d)<a class="headerlink" href="#leaving-out-self-c-d" title="Permalink to this headline">¶</a></h3>
+<p>NameMapper makes it possible to access the attributes of a servlet in Cheetah
+without needing to include &#8216;self&#8217; in the variable names.  See the NAMESPACE
+CASCADING section below for details.</p>
+</div>
+<div class="section" id="namespace-cascading-d">
+<h3>NAMESPACE CASCADING (d)<a class="headerlink" href="#namespace-cascading-d" title="Permalink to this headline">¶</a></h3>
+<p>...</p>
+</div>
+</div>
+<div class="section" id="implementation-details">
+<h2>Implementation details<a class="headerlink" href="#implementation-details" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>NameMapper&#8217;s search order is dictionary keys then object attributes</li>
+<li>NameMapper.NotFound is raised if a value can&#8217;t be found for a name.</li>
+</ul>
+</div>
+<div class="section" id="performance-and-the-c-version">
+<h2>Performance and the C version<a class="headerlink" href="#performance-and-the-c-version" title="Permalink to this headline">¶</a></h2>
+<p>Cheetah comes with both a C version and a Python version of NameMapper.  The C
+version is significantly faster and the exception tracebacks are much easier to
+read.  It&#8217;s still slower than standard Python syntax, but you won&#8217;t notice the
+difference in realistic usage scenarios.</p>
+<p>Cheetah uses the optimized C version (_namemapper.c) if it has
+been compiled or falls back to the Python version if not.</p>
+<dl class="exception">
+<dt id="Cheetah.NameMapper.NotFound">
+<em class="property">exception </em><code class="descclassname">Cheetah.NameMapper.</code><code class="descname">NotFound</code><a class="headerlink" href="#Cheetah.NameMapper.NotFound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">exceptions.LookupError</span></code></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Cheetah.NameMapper.hasKey">
+<code class="descclassname">Cheetah.NameMapper.</code><code class="descname">hasKey</code><span class="sig-paren">(</span><em>obj</em>, <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.NameMapper.hasKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if &#8216;obj&#8217; has &#8216;key&#8217;</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Cheetah.NameMapper.valueForKey">
+<code class="descclassname">Cheetah.NameMapper.</code><code class="descname">valueForKey</code><span class="sig-paren">(</span><em>obj</em>, <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.NameMapper.valueForKey" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="Cheetah.NameMapper.valueForName">
+<code class="descclassname">Cheetah.NameMapper.</code><code class="descname">valueForName</code><span class="sig-paren">(</span><em>obj</em>, <em>name</em>, <em>executeCallables=False</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.NameMapper.valueForName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="Cheetah.NameMapper.valueFromSearchList">
+<code class="descclassname">Cheetah.NameMapper.</code><code class="descname">valueFromSearchList</code><span class="sig-paren">(</span><em>searchList</em>, <em>name</em>, <em>executeCallables=False</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.NameMapper.valueFromSearchList" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="Cheetah.NameMapper.valueFromFrameOrSearchList">
+<code class="descclassname">Cheetah.NameMapper.</code><code class="descname">valueFromFrameOrSearchList</code><span class="sig-paren">(</span><em>searchList</em>, <em>name</em>, <em>executeCallables=False</em>, <em>frame=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.NameMapper.valueFromFrameOrSearchList" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="Cheetah.NameMapper.valueFromFrame">
+<code class="descclassname">Cheetah.NameMapper.</code><code class="descname">valueFromFrame</code><span class="sig-paren">(</span><em>name</em>, <em>executeCallables=False</em>, <em>frame=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.NameMapper.valueFromFrame" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Mar 23, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+  </body>
+</html>
