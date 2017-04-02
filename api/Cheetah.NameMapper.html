@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '3.0.0',
+        VERSION:     '3.0.0a1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -140,38 +140,40 @@ But good object orientated design isn&#8217;t the point here.</p>
 <p>NameMapper allows access to items in a dictionary using the same dotted notation
 used to access object attributes in Python.  This aspect of NameMapper is known
 as &#8216;Unified Dotted Notation&#8217;.</p>
-<dl class="docutils">
-<dt>For example, with Cheetah it is possible to write:</dt>
-<dd>$customers()[&#8216;kerr&#8217;].address()  &#8211;OR&#8211;  $customers().kerr.address()</dd>
-</dl>
+<p>For example, with Cheetah it is possible to write:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$customers()[&#39;kerr&#39;].address()  --OR--  $customers().kerr.address()
+</pre></div>
+</div>
 <p>where the second form is in NameMapper syntax.</p>
-<dl class="docutils">
-<dt>This only works with dictionary keys that are also valid python identifiers:</dt>
-<dd>regex = &#8216;[<a href="#id1"><span class="problematic" id="id2">a-zA-Z_</span></a>][a-zA-Z_0-9]*&#8217;</dd>
-</dl>
+<p>This only works with dictionary keys that are also valid python identifiers:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">regex</span> <span class="o">=</span> <span class="s1">&#39;[a-zA-Z_][a-zA-Z_0-9]*&#39;</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="autocalling-b-d">
 <h3>AUTOCALLING (b,d)<a class="headerlink" href="#autocalling-b-d" title="Permalink to this headline">¶</a></h3>
 <p>NameMapper automatically detects functions and methods in Cheetah $vars and calls
 them if the parentheses have been left off.</p>
-<dl class="docutils">
-<dt>For example if &#8216;a&#8217; is an object, &#8216;b&#8217; is a method</dt>
-<dd>$a.b</dd>
-<dt>is equivalent to</dt>
-<dd>$a.b()</dd>
-<dt>If b returns a dictionary, then following variations are possible</dt>
-<dd>$a.b.c  &#8211;OR&#8211;  $a.b().c  &#8211;OR&#8211;  $a.b()[&#8216;c&#8217;]</dd>
-</dl>
+<p>For example if &#8216;a&#8217; is an object, &#8216;b&#8217; is a method:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$a.b
+</pre></div>
+</div>
+<p>is equivalent to:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$a.b()
+</pre></div>
+</div>
+<p>If b returns a dictionary, then following variations are possible:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$a.b.c  --OR--  $a.b().c  --OR--  $a.b()[&#39;c&#39;]
+</pre></div>
+</div>
 <p>where &#8216;c&#8217; is a key in the dictionary that a.b() returns.</p>
-<p>Further notes:
-* NameMapper autocalls the function or method without any arguments.  Thus
+<p>Further notes:</p>
+<ul class="simple">
+<li>NameMapper autocalls the function or method without any arguments.  Thus
 autocalling can only be used with functions or methods that either have no
-arguments or have default values for all arguments.</p>
-<ul class="simple">
-<li>NameMapper only autocalls functions and methods.  Classes and callable object instances</li>
-</ul>
-<p>will not be autocalled.</p>
-<ul class="simple">
+arguments or have default values for all arguments.</li>
+<li>NameMapper only autocalls functions and methods.  Classes and callable object instances
+will not be autocalled.</li>
 <li>Autocalling can be disabled using Cheetah&#8217;s &#8216;useAutocalling&#8217; setting.</li>
 </ul>
 </div>
@@ -204,7 +206,7 @@ been compiled or falls back to the Python version if not.</p>
 <dl class="exception">
 <dt id="Cheetah.NameMapper.NotFound">
 <em class="property">exception </em><code class="descclassname">Cheetah.NameMapper.</code><code class="descname">NotFound</code><a class="headerlink" href="#Cheetah.NameMapper.NotFound" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">exceptions.LookupError</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">LookupError</span></code></p>
 </dd></dl>
 
 <dl class="function">
@@ -261,8 +263,8 @@ been compiled or falls back to the Python version if not.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Mar 23, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+      Last updated on Apr 02, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.4.
     </div>
   </body>
 </html>

@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '3.0.0',
+        VERSION:     '3.0.0a1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -85,8 +85,9 @@ to use when highlighting it.</p>
 highlighted, in a browser</p>
 <p>NOTE: I had an issue installing pygments on Linux/amd64/Python 2.6 dealing with
 importing of pygments.lexers, I was able to correct the failure by adding:</p>
-<blockquote>
-<div>raise ImportError</div></blockquote>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">raise</span> <span class="ne">ImportError</span>
+</pre></div>
+</div>
 <p>to line 39 of pygments/plugin.py (since importing pkg_resources was causing issues)</p>
 <dl class="method">
 <dt id="Cheetah.Filters.CodeHighlighter.filter">
@@ -108,7 +109,7 @@ importing of pygments.lexers, I was able to correct the failure by adding:</p>
 <p>A baseclass for the Cheetah Filters.</p>
 <dl class="method">
 <dt id="Cheetah.Filters.Filter.filter">
-<code class="descname">filter</code><span class="sig-paren">(</span><em>val</em>, <em>encoding=None</em>, <em>str=&lt;type 'str'&gt;</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.Filter.filter" title="Permalink to this definition">¶</a></dt>
+<code class="descname">filter</code><span class="sig-paren">(</span><em>val</em>, <em>encoding=None</em>, <em>str=&lt;class 'str'&gt;</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.Filter.filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pass Unicode strings through unmolested, unless an encoding is specified.</p>
 </dd></dl>
 
@@ -118,14 +119,16 @@ importing of pygments.lexers, I was able to correct the failure by adding:</p>
 <dt id="Cheetah.Filters.Markdown">
 <em class="property">class </em><code class="descclassname">Cheetah.Filters.</code><code class="descname">Markdown</code><span class="sig-paren">(</span><em>template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.Markdown" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Filters.Filter" title="Cheetah.Filters.Filter"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Filters.Filter</span></code></a></p>
-<dl class="docutils">
-<dt>Markdown will change regular strings to Markdown</dt>
-<dd>(<a class="reference external" href="http://daringfireball.net/projects/markdown/">http://daringfireball.net/projects/markdown/</a>)</dd>
-<dt>Such that:</dt>
-<dd></dd>
-<dt>Becaomes:</dt>
-<dd>&lt;h1&gt;My Header&lt;/h1&gt;</dd>
-</dl>
+<p>Markdown will change regular strings to <a class="reference external" href="http://daringfireball.net/projects/markdown/">Markdown</a></p>
+<p>Such that:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">My</span> <span class="n">Header</span>
+<span class="o">=========</span>
+</pre></div>
+</div>
+<p>Becomes:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">My</span> <span class="n">Header</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</pre></div>
+</div>
 <p>and so on.</p>
 <p>Markdown is meant to be used with the #transform
 tag, as it&#8217;s usefulness with #filter is marginal at
@@ -160,21 +163,15 @@ best</p>
 <em class="property">class </em><code class="descclassname">Cheetah.Filters.</code><code class="descname">Strip</code><span class="sig-paren">(</span><em>template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.Strip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Filters.Filter" title="Cheetah.Filters.Filter"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Filters.Filter</span></code></a></p>
 <p>Strip leading/trailing whitespace but preserve newlines.</p>
-<blockquote>
-<div><p>This filter goes through the value line by line, removing leading and
+<p>This filter goes through the value line by line, removing leading and
 trailing whitespace on each line.  It does not strip newlines, so every
 input line corresponds to one output line, with its trailing newline intact.</p>
-<p>We do not use val.split(&#8216;</p>
-</div></blockquote>
-<dl class="docutils">
-<dt>&#8216;) because that would squeeze out consecutive</dt>
-<dd><p class="first">blank lines.  Instead, we search for each newline individually.  This
+<p>We do not use val.split(&#8216;n&#8217;) because that would squeeze out consecutive
+blank lines.  Instead, we search for each newline individually.  This
 makes us unable to use the fast C .split method, but it makes the filter
 much more widely useful.</p>
-<p class="last">This filter is intended to be usable both with the #filter directive and
+<p>This filter is intended to be usable both with the #filter directive and
 with the proposed #sed directive (which has not been ratified yet.)</p>
-</dd>
-</dl>
 <dl class="method">
 <dt id="Cheetah.Filters.Strip.filter">
 <code class="descname">filter</code><span class="sig-paren">(</span><em>val</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.Strip.filter" title="Permalink to this definition">¶</a></dt>
@@ -235,8 +232,8 @@ input is joined into one ling line with NO trailing newline.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Mar 23, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+      Last updated on Apr 02, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.4.
     </div>
   </body>
 </html>

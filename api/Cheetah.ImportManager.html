@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '3.0.0',
+        VERSION:     '3.0.0a1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -101,7 +101,7 @@ while. Also note, this module predates the newstyle import hooks in Python 2.3
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.ImportManager.Owner" title="Cheetah.ImportManager.Owner"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.ImportManager.Owner</span></code></a></p>
 <dl class="method">
 <dt id="Cheetah.ImportManager.DirOwner.getmod">
-<code class="descname">getmod</code><span class="sig-paren">(</span><em>nm</em>, <em>getsuffixes=&lt;built-in function get_suffixes&gt;</em>, <em>loadco=&lt;built-in function loads&gt;</em>, <em>newmod=&lt;built-in function new_module&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.DirOwner.getmod" title="Permalink to this definition">¶</a></dt>
+<code class="descname">getmod</code><span class="sig-paren">(</span><em>nm</em>, <em>getsuffixes=&lt;function get_suffixes&gt;</em>, <em>loadco=&lt;built-in function loads&gt;</em>, <em>newmod=&lt;function new_module&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.DirOwner.getmod" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -113,7 +113,7 @@ while. Also note, this module predates the newstyle import hooks in Python 2.3
 <p>Directs imports of frozen modules</p>
 <dl class="method">
 <dt id="Cheetah.ImportManager.FrozenImportDirector.getmod">
-<code class="descname">getmod</code><span class="sig-paren">(</span><em>nm</em>, <em>isFrozen=&lt;built-in function is_frozen&gt;</em>, <em>loadMod=&lt;built-in function load_module&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.FrozenImportDirector.getmod" title="Permalink to this definition">¶</a></dt>
+<code class="descname">getmod</code><span class="sig-paren">(</span><em>nm</em>, <em>isFrozen=&lt;built-in function is_frozen&gt;</em>, <em>loadMod=&lt;function load_module&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.FrozenImportDirector.getmod" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -131,7 +131,8 @@ generalization of Owner - their concept of &#8216;turf&#8217; is broader</p>
 <dl class="class">
 <dt id="Cheetah.ImportManager.ImportManager">
 <em class="property">class </em><code class="descclassname">Cheetah.ImportManager.</code><code class="descname">ImportManager</code><a class="headerlink" href="#Cheetah.ImportManager.ImportManager" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="method">
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
 <dt id="Cheetah.ImportManager.ImportManager.doimport">
 <code class="descname">doimport</code><span class="sig-paren">(</span><em>nm</em>, <em>parentnm</em>, <em>fqname</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.ImportManager.doimport" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -164,7 +165,8 @@ argument can be found here: <a class="reference external" href="http://www.pytho
 <dl class="class">
 <dt id="Cheetah.ImportManager.Owner">
 <em class="property">class </em><code class="descclassname">Cheetah.ImportManager.</code><code class="descname">Owner</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.Owner" title="Permalink to this definition">¶</a></dt>
-<dd><p>An Owner does imports from a particular piece of turf That is, there&#8217;s
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>An Owner does imports from a particular piece of turf That is, there&#8217;s
 an Owner for each thing on sys.path There are owners for directories and
 .pyz files.  There could be owners for zip files, or even URLs.  A
 shadowpath (a dictionary mapping the names in sys.path to their owners) is
@@ -248,8 +250,8 @@ used so that sys.path (or a package&#8217;s __path__) is still a bunch of string
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Mar 23, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+      Last updated on Apr 02, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.4.
     </div>
   </body>
 </html>
