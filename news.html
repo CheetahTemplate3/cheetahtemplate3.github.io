@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '3.0.0b1',
+        VERSION:     '3.0.0b2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -83,22 +83,39 @@
             
   <div class="section" id="news">
 <h1>News<a class="headerlink" href="#news" title="Permalink to this headline">¶</a></h1>
-<dl class="docutils">
-<dt>3.0.0b1 (2017-04-22)</dt>
-<dd><ul class="first last simple">
+<p>3.0.0b2 (2017-05-02)</p>
+<p>Major features:</p>
+<blockquote>
+<div><ul class="simple">
 <li>!!!THIS RELEASE REQUIRES RECOMPILATION OF ALL COMPILED CHEETAH TEMPLATES!!!</li>
 <li>Stop supporting Python older than 2.7.</li>
 <li>Update code to work with Python 3.3+. Tested with 3.3, 3.4, 3.5 and 3.6.</li>
-<li>Run tests at Travis (Linux) and AppVeyor (w32) with Python 2.7, 3.3, 3.4,
-3.5 and 3.6; x86 and x64.</li>
+</ul>
+</div></blockquote>
+<p>Minor features:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Use &#8216;/usr/bin/env python&#8217; for scripts;
+this allows eggs/wheels to be installed into virtual environments.</li>
+</ul>
+</div></blockquote>
+<p>Bug fixes:</p>
+<blockquote>
+<div><ul class="simple">
 <li>Fix a bug in multiple inheritance (#extend Parent1, Parent2).
 Pull request by Jonathan Ross Rogers.</li>
 <li>Fix bugs in pure-python NameMapper.py. Bugs reported by Noah Ingham,
 patches by Adam Karpierz, tests by Oleg Broytman.</li>
+</ul>
+</div></blockquote>
+<p>Tests:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Run tests at Travis (Linux) and AppVeyor (w32) with Python 2.7, 3.3, 3.4,
+3.5 and 3.6; x86 and x64.</li>
 <li>Fix a problem in Unicode tests - cleanup temporary files.</li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 <p><a class="reference external" href="news2.html">Older news</a></p>
 </div>
 
@@ -128,7 +145,7 @@ patches by Adam Karpierz, tests by Oleg Broytman.</li>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Apr 22, 2017.
+      Last updated on May 02, 2017.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
     </div>
   </body>
