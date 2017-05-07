@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '3.0.0rc1',
+        VERSION:     '3.0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -80,7 +80,7 @@
 <dl class="exception">
 <dt id="Cheetah.Template.Error">
 <em class="property">exception </em><code class="descclassname">Cheetah.Template.</code><code class="descname">Error</code><a class="headerlink" href="#Cheetah.Template.Error" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">exceptions.Exception</span></code></p>
 </dd></dl>
 
 <dl class="exception">
@@ -97,7 +97,7 @@
 
 <dl class="class">
 <dt id="Cheetah.Template.Template">
-<em class="property">class </em><code class="descclassname">Cheetah.Template.</code><code class="descname">Template</code><span class="sig-paren">(</span><em>source=None</em>, <em>namespaces=None</em>, <em>searchList=None</em>, <em>file=None</em>, <em>filter='RawOrEncodedUnicode'</em>, <em>filtersLib=&lt;module 'Cheetah.Filters' from '/home/phd/current/projects/cheetah3/cheetah3/Cheetah/Filters.py'&gt;</em>, <em>errorCatcher=None</em>, <em>compilerSettings=Unspecified</em>, <em>_globalSetVars=None</em>, <em>_preBuiltSearchList=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">Cheetah.Template.</code><code class="descname">Template</code><span class="sig-paren">(</span><em>source=None</em>, <em>namespaces=None</em>, <em>searchList=None</em>, <em>file=None</em>, <em>filter='RawOrEncodedUnicode'</em>, <em>filtersLib=&lt;module 'Cheetah.Filters' from '/home/phd/current/projects/cheetah3/cheetah3/Cheetah/Filters.pyc'&gt;</em>, <em>errorCatcher=None</em>, <em>compilerSettings=Unspecified</em>, <em>_globalSetVars=None</em>, <em>_preBuiltSearchList=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="Cheetah.Servlet.html#Cheetah.Servlet.Servlet" title="Cheetah.Servlet.Servlet"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Servlet.Servlet</span></code></a></p>
 <p>This class provides a) methods used by templates at runtime and b)
 methods for compiling Cheetah source code into template classes.</p>
@@ -181,12 +181,12 @@ you.</p>
 <dl class="exception">
 <dt id="Cheetah.Template.Template.NonNumericInputError">
 <em class="property">exception </em><code class="descname">NonNumericInputError</code><a class="headerlink" href="#Cheetah.Template.Template.NonNumericInputError" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ValueError</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">exceptions.ValueError</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Template.Template.Reserved_SearchList">
-<code class="descname">Reserved_SearchList</code><em class="property"> = {'getCacheRegions', 'serverSidePath', '__init__', 'refreshCache', 'webInput', 'searchList', 'i18n', '_getCompilerClass', '_preprocessSource', '_CHEETAH_compilerInstance', '__dir__', '_compile', '_CHEETAH_requiredCheetahClassMethods', 'generatedClassCode', 'hasVar', '__reduce__', '_updateSettingsWithPreprocessTokens', '_CHEETAH_cacheDirForModuleFiles', 'shutdown', '_addCheetahPlumbingCodeToClass', '_getCacheStoreIdPrefix', '_CHEETAH_generatedModuleCode', '_handleCheetahInclude', '_CHEETAH_defaultPreprocessorClass', '_CHEETAH_defaultModuleNameForTemplates', 'getVar', 'application', 'compile', '_CHEETAH_preprocessors', 'generatedModuleCode', '__eq__', '__new__', 'request', '_getCacheStore', '_CHEETAH_compilerSettings', '_CHEETAH_cacheCompilationResults', '__str__', '_CHEETAH_keepRefToGeneratedCode', 'transaction', '__reduce_ex__', '__format__', '_createCacheRegion', '__le__', 'runAsMainProgram', 'subclass', 'NonNumericInputError', '_getTemplateAPIClassForIncludeDirectiveCompilation', '_CHEETAH_compilerClass', '_CHEETAH_cacheStore', '_getCompilerSettings', '_initCheetahInstance', '_CHEETAH_compileLock', '_CHEETAH_cacheRegionClass', '__getattribute__', '__delattr__', 'sleep', 'getCacheRegion', '_CHEETAH_cacheModuleFilesForTracebacks', '_CHEETAH_compileCache', '_normalizePreprocessorSettings', '__doc__', '_CHEETAH_useCompilationCache', 'getFileContents', '__gt__', 'session', '_CHEETAH_requiredCheetahClassAttributes', '_CHEETAH_defaultClassNameForTemplates', '__dict__', '__subclasshook__', '_CHEETAH_requiredCheetahMethods', '__hash__', 'errorCatcher', '_normalizePreprocessorArg', '__ne__', '_CHEETAH_defaultBaseclassForTemplates', 'varExists', '__repr__', '_CHEETAH_defaultMainMethodName', '__class__', '__ge__', '_CHEETAH_defaultMainMethodNameForTemplates', '__setattr__', '__weakref__', '_CHEETAH_cacheStoreClass', '__module__', 'respond', '__sizeof__', '_CHEETAH_defaultModuleGlobalsForTemplates', '_CHEETAH_cacheStoreIdPrefix', '__lt__'}</em><a class="headerlink" href="#Cheetah.Template.Template.Reserved_SearchList" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Reserved_SearchList</code><em class="property"> = set(['respond', '_CHEETAH_preprocessors', '__module__', '__format__', '_CHEETAH_defaultMainMethodNameForTemplates', '_CHEETAH_keepRefToGeneratedCode', 'serverSidePath', 'searchList', '__str__', '__getattribute__', '_getTemplateAPIClassForIncludeDirectiveCompilation', 'transaction', '_CHEETAH_defaultModuleNameForTemplates', '_CHEETAH_cacheCompilationResults', 'application', 'sleep', 'getCacheRegions', 'shutdown', 'hasVar', '__dict__', '__sizeof__', '__weakref__', '_createCacheRegion', '_CHEETAH_generatedModuleCode', 'runAsMainProgram', 'getCacheRegion', '__setattr__', '__reduce_ex__', '__new__', '__delattr__', '_normalizePreprocessorSettings', '_CHEETAH_compilerInstance', 'errorCatcher', '_CHEETAH_requiredCheetahClassMethods', '__class__', '_CHEETAH_useCompilationCache', '_updateSettingsWithPreprocessTokens', '_CHEETAH_cacheStoreIdPrefix', 'session', '_CHEETAH_defaultMainMethodName', '_normalizePreprocessorArg', 'getVar', '_compile', '_CHEETAH_cacheDirForModuleFiles', '__doc__', '_handleCheetahInclude', '_CHEETAH_compileLock', '_CHEETAH_defaultClassNameForTemplates', '_CHEETAH_requiredCheetahMethods', '_CHEETAH_compilerSettings', 'generatedClassCode', 'i18n', '_addCheetahPlumbingCodeToClass', '_CHEETAH_defaultBaseclassForTemplates', '_CHEETAH_defaultPreprocessorClass', '__hash__', 'webInput', '__subclasshook__', '_CHEETAH_requiredCheetahClassAttributes', '_CHEETAH_compileCache', '_CHEETAH_cacheStoreClass', '__reduce__', 'subclass', '_CHEETAH_cacheRegionClass', '_CHEETAH_cacheStore', '_initCheetahInstance', 'generatedModuleCode', '_CHEETAH_cacheModuleFilesForTracebacks', '_getCacheStore', '_getCacheStoreIdPrefix', 'refreshCache', '_getCompilerClass', 'request', 'getFileContents', 'compile', '_CHEETAH_compilerClass', '_preprocessSource', '_CHEETAH_defaultModuleGlobalsForTemplates', '__repr__', '__init__', 'NonNumericInputError', '_getCompilerSettings', 'varExists'])</em><a class="headerlink" href="#Cheetah.Template.Template.Reserved_SearchList" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="classmethod">
@@ -793,7 +793,7 @@ it outputs</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 02, 2017.
+      Last updated on May 07, 2017.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
     </div>
   </body>

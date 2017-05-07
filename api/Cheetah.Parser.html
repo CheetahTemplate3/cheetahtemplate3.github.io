@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '3.0.0rc1',
+        VERSION:     '3.0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -131,7 +131,7 @@ Parser === _HighLevelParser (an alias)</dd>
 <dl class="exception">
 <dt id="Cheetah.Parser.ParseError">
 <em class="property">exception </em><code class="descclassname">Cheetah.Parser.</code><code class="descname">ParseError</code><span class="sig-paren">(</span><em>stream</em>, <em>msg='Invalid Syntax'</em>, <em>extMsg=''</em>, <em>lineno=None</em>, <em>col=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ParseError" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ValueError</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">exceptions.ValueError</span></code></p>
 <dl class="method">
 <dt id="Cheetah.Parser.ParseError.report">
 <code class="descname">report</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ParseError.report" title="Permalink to this definition">¶</a></dt>
@@ -163,7 +163,7 @@ Parser === _HighLevelParser (an alias)</dd>
 
 <dl class="function">
 <dt id="Cheetah.Parser.escapeRegexChars">
-<code class="descclassname">Cheetah.Parser.</code><code class="descname">escapeRegexChars</code><span class="sig-paren">(</span><em>txt</em>, <em>escapeRE=re.compile('([\\$\\^\\*\\+\\.\\?\\{\\}\\[\\]\\(\\)\\|\\\\])')</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.escapeRegexChars" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">Cheetah.Parser.</code><code class="descname">escapeRegexChars</code><span class="sig-paren">(</span><em>txt</em>, <em>escapeRE=&lt;_sre.SRE_Pattern object&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.escapeRegexChars" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a txt with all special regular expressions chars escaped.</p>
 </dd></dl>
 
@@ -214,7 +214,7 @@ Parser === _HighLevelParser (an alias)</dd>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 02, 2017.
+      Last updated on May 07, 2017.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
     </div>
   </body>
