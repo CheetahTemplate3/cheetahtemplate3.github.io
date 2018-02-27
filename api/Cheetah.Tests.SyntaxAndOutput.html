@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Cheetah.Tests.SyntaxAndOutput module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +24,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -133,7 +130,7 @@ Should gobble</p>
 <dt id="Cheetah.Tests.SyntaxAndOutput.AttrDirective.test5">
 <code class="descname">test5</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.AttrDirective.test5" title="Permalink to this definition">¶</a></dt>
 <dd><p>#attr with string + WS + leading text
-Shouldn&#8217;t gobble</p>
+Shouldn’t gobble</p>
 </dd></dl>
 
 </dd></dl>
@@ -267,8 +264,8 @@ shorter strings with only a few newlines.</p>
 <dt id="Cheetah.Tests.SyntaxAndOutput.BlockDirective.test3">
 <code class="descname">test3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.BlockDirective.test3" title="Permalink to this definition">¶</a></dt>
 <dd><p>#block with argstring, gobble WS</p>
-<p>Because blocks can be reused in multiple parts of the template arguments
-(!!with defaults!!) can be given.</p>
+<p>Because blocks can be reused in multiple parts of the template
+arguments (!!with defaults!!) can be given.</p>
 </dd></dl>
 
 <dl class="method">
@@ -381,12 +378,13 @@ for the #end block part: #end block OR #end block [name]</p>
 <dd><p>A (pseudo) Webware servlet.</p>
 <p>This uses the Python syntax escape to set
 self._CHEETAH__isControlledByWebKit.
-We could instead do &#8216;#silent self._CHEETAH__isControlledByWebKit = True&#8217;,
+We could instead do
+‘#silent self._CHEETAH__isControlledByWebKit = True’,
 taking advantage of the fact that it will compile unchanged as long
-as there&#8217;s no &#8216;$&#8217; in the statement.  (It won&#8217;t compile with an &#8216;$&#8217;
-because that would convert to a function call, and you can&#8217;t assign
-to a function call.)  Because this isn&#8217;t really being called from
-Webware, we&#8217;d better not use any Webware services!  Likewise, we&#8217;d
+as there’s no ‘$’ in the statement.  (It won’t compile with an ‘$’
+because that would convert to a function call, and you can’t assign
+to a function call.)  Because this isn’t really being called from
+Webware, we’d better not use any Webware services!  Likewise, we’d
 better not call $cgiImport() because it would be misled.</p>
 </dd></dl>
 
@@ -417,13 +415,13 @@ better not call $cgiImport() because it would be misled.</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.CacheDirective.test3">
 <code class="descname">test3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.CacheDirective.test3" title="Permalink to this definition">¶</a></dt>
-<dd><p>simple #cache ... #end cache</p>
+<dd><p>simple #cache … #end cache</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.CacheDirective.test4">
 <code class="descname">test4</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.CacheDirective.test4" title="Permalink to this definition">¶</a></dt>
-<dd><p>2 #cache ... #end cache blocks</p>
+<dd><p>2 #cache … #end cache blocks</p>
 </dd></dl>
 
 <dl class="method">
@@ -435,7 +433,7 @@ better not call $cgiImport() because it would be misled.</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.CacheDirective.test6">
 <code class="descname">test6</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.CacheDirective.test6" title="Permalink to this definition">¶</a></dt>
-<dd><p>Make sure that partial directives don&#8217;t match</p>
+<dd><p>Make sure that partial directives don’t match</p>
 </dd></dl>
 
 </dd></dl>
@@ -524,7 +522,7 @@ function that will be called</p>
 <dt id="Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine">
 <em class="property">class </em><code class="descclassname">Cheetah.Tests.SyntaxAndOutput.</code><code class="descname">Comments_MultiLine</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.OutputTest" title="Cheetah.Tests.SyntaxAndOutput.OutputTest"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Tests.SyntaxAndOutput.OutputTest</span></code></a></p>
-<p>Note: Multiline comments don&#8217;t gobble whitespace!</p>
+<p>Note: Multiline comments don’t gobble whitespace!</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test1">
 <code class="descname">test1</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test1" title="Permalink to this definition">¶</a></dt>
@@ -535,60 +533,66 @@ Should gobble WS</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test10">
 <code class="descname">test10</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test10" title="Permalink to this definition">¶</a></dt>
-<dd><p>text around #* <a href="#id3"><span class="problematic" id="id4">*</span></a># containing #for directive and newlines: trailing whitespace
-which should be gobbled.</p>
+<dd><p>text around #* <a href="#id3"><span class="problematic" id="id4">*</span></a># containing #for directive and trailing whitespace
+which should be gobbled</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test11">
+<code class="descname">test11</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test11" title="Permalink to this definition">¶</a></dt>
+<dd><p>Text around #* <a href="#id5"><span class="problematic" id="id6">*</span></a># containing #for directive and newlines:
+trailing whitespace which should be gobbled.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test2">
 <code class="descname">test2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test2" title="Permalink to this definition">¶</a></dt>
-<dd><p>#* <a href="#id5"><span class="problematic" id="id6">*</span></a># preceded and followed by WS
+<dd><p>#* <a href="#id7"><span class="problematic" id="id8">*</span></a># preceded and followed by WS
 Should gobble WS</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test3">
 <code class="descname">test3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test3" title="Permalink to this definition">¶</a></dt>
-<dd><p>#* <a href="#id7"><span class="problematic" id="id8">*</span></a># followed by WS, with NEWLINE
-Shouldn&#8217;t gobble WS</p>
+<dd><p>#* <a href="#id9"><span class="problematic" id="id10">*</span></a># followed by WS, with NEWLINE
+Shouldn’t gobble WS</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test4">
 <code class="descname">test4</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test4" title="Permalink to this definition">¶</a></dt>
-<dd><p>#* <a href="#id9"><span class="problematic" id="id10">*</span></a># preceded and followed by WS, with NEWLINE
-Shouldn&#8217;t gobble WS</p>
+<dd><p>#* <a href="#id11"><span class="problematic" id="id12">*</span></a># preceded and followed by WS, with NEWLINE
+Shouldn’t gobble WS</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test5">
 <code class="descname">test5</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test5" title="Permalink to this definition">¶</a></dt>
-<dd><p>#* <a href="#id11"><span class="problematic" id="id12">*</span></a># containing nothing</p>
+<dd><p>#* <a href="#id13"><span class="problematic" id="id14">*</span></a># containing nothing</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test6">
 <code class="descname">test6</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test6" title="Permalink to this definition">¶</a></dt>
-<dd><p>#* <a href="#id13"><span class="problematic" id="id14">*</span></a># containing only NEWLINES</p>
+<dd><p>#* <a href="#id15"><span class="problematic" id="id16">*</span></a># containing only NEWLINES</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test7">
 <code class="descname">test7</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test7" title="Permalink to this definition">¶</a></dt>
-<dd><p>#* <a href="#id15"><span class="problematic" id="id16">*</span></a># containing $placeholders</p>
+<dd><p>#* <a href="#id17"><span class="problematic" id="id18">*</span></a># containing $placeholders</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test8">
 <code class="descname">test8</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test8" title="Permalink to this definition">¶</a></dt>
-<dd><p>#* <a href="#id17"><span class="problematic" id="id18">*</span></a># containing #for directive</p>
+<dd><p>#* <a href="#id19"><span class="problematic" id="id20">*</span></a># containing #for directive</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test9">
 <code class="descname">test9</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test9" title="Permalink to this definition">¶</a></dt>
-<dd><p>text around #* <a href="#id19"><span class="problematic" id="id20">*</span></a># containing #for directive and trailing whitespace
-which should be gobbled</p>
+<dd><p>text around #* <a href="#id21"><span class="problematic" id="id22">*</span></a># containing #for directive</p>
 </dd></dl>
 
 </dd></dl>
@@ -597,34 +601,34 @@ which should be gobbled</p>
 <dt id="Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine_NoGobble">
 <em class="property">class </em><code class="descclassname">Cheetah.Tests.SyntaxAndOutput.</code><code class="descname">Comments_MultiLine_NoGobble</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine_NoGobble" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.OutputTest" title="Cheetah.Tests.SyntaxAndOutput.OutputTest"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Tests.SyntaxAndOutput.OutputTest</span></code></a></p>
-<p>Multiline comments used to not gobble whitespace.  They do now, but this can
-be turned off with a compilerSetting</p>
+<p>Multiline comments used to not gobble whitespace</p>
+<p>They do now, but this can be turned off with a compilerSetting.</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine_NoGobble.test1">
 <code class="descname">test1</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine_NoGobble.test1" title="Permalink to this definition">¶</a></dt>
-<dd><p>#* <a href="#id21"><span class="problematic" id="id22">*</span></a># followed by WS
-Shouldn&#8217;t gobble WS</p>
+<dd><p>#* <a href="#id23"><span class="problematic" id="id24">*</span></a># followed by WS
+Shouldn’t gobble WS</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine_NoGobble.test2">
 <code class="descname">test2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine_NoGobble.test2" title="Permalink to this definition">¶</a></dt>
-<dd><p>#* <a href="#id23"><span class="problematic" id="id24">*</span></a># preceded and followed by WS
-Shouldn&#8217;t gobble WS</p>
+<dd><p>#* <a href="#id25"><span class="problematic" id="id26">*</span></a># preceded and followed by WS
+Shouldn’t gobble WS</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine_NoGobble.test3">
 <code class="descname">test3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine_NoGobble.test3" title="Permalink to this definition">¶</a></dt>
-<dd><p>#* <a href="#id25"><span class="problematic" id="id26">*</span></a># followed by WS, with NEWLINE
-Shouldn&#8217;t gobble WS</p>
+<dd><p>#* <a href="#id27"><span class="problematic" id="id28">*</span></a># followed by WS, with NEWLINE
+Shouldn’t gobble WS</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine_NoGobble.test4">
 <code class="descname">test4</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine_NoGobble.test4" title="Permalink to this definition">¶</a></dt>
-<dd><p>#* <a href="#id27"><span class="problematic" id="id28">*</span></a># preceded and followed by WS, with NEWLINE
-Shouldn&#8217;t gobble WS</p>
+<dd><p>#* <a href="#id29"><span class="problematic" id="id30">*</span></a># preceded and followed by WS, with NEWLINE
+Shouldn’t gobble WS</p>
 </dd></dl>
 
 </dd></dl>
@@ -697,7 +701,7 @@ with text on previous and following lines</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Comments_SingleLine.test9">
 <code class="descname">test9</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Comments_SingleLine.test9" title="Permalink to this definition">¶</a></dt>
-<dd><p>## don&#8217;t gobble line
+<dd><p>## don’t gobble line
 with text on previous and following lines</p>
 </dd></dl>
 
@@ -794,7 +798,7 @@ with text on previous and following lines</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.DefDirective.test10">
 <code class="descname">test10</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.DefDirective.test10" title="Permalink to this definition">¶</a></dt>
-<dd><p>#def with <a href="#id29"><span class="problematic" id="id30">*</span></a>args + <a href="#id31"><span class="problematic" id="id32">**</span></a>KWs, gobble WS</p>
+<dd><p>#def with <a href="#id31"><span class="problematic" id="id32">*</span></a>args + <a href="#id33"><span class="problematic" id="id34">**</span></a>KWs, gobble WS</p>
 </dd></dl>
 
 <dl class="method">
@@ -884,19 +888,19 @@ with text on previous and following lines</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.DefDirective.test7">
 <code class="descname">test7</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.DefDirective.test7" title="Permalink to this definition">¶</a></dt>
-<dd><p>#def with <a href="#id33"><span class="problematic" id="id34">*</span></a>args, gobble WS</p>
+<dd><p>#def with <a href="#id35"><span class="problematic" id="id36">*</span></a>args, gobble WS</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.DefDirective.test8">
 <code class="descname">test8</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.DefDirective.test8" title="Permalink to this definition">¶</a></dt>
-<dd><p>#def with <a href="#id35"><span class="problematic" id="id36">**</span></a>KWs, gobble WS</p>
+<dd><p>#def with <a href="#id37"><span class="problematic" id="id38">**</span></a>KWs, gobble WS</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.DefDirective.test9">
 <code class="descname">test9</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.DefDirective.test9" title="Permalink to this definition">¶</a></dt>
-<dd><p>#def with <a href="#id37"><span class="problematic" id="id38">*</span></a>args + <a href="#id39"><span class="problematic" id="id40">**</span></a>KWs, gobble WS</p>
+<dd><p>#def with <a href="#id39"><span class="problematic" id="id40">*</span></a>args + <a href="#id41"><span class="problematic" id="id42">**</span></a>KWs, gobble WS</p>
 </dd></dl>
 
 </dd></dl>
@@ -968,14 +972,14 @@ Should gobble</p>
 <dt id="Cheetah.Tests.SyntaxAndOutput.EOLSlurpToken.test3">
 <code class="descname">test3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.EOLSlurpToken.test3" title="Permalink to this definition">¶</a></dt>
 <dd><p>#slurp with 1 n, leading content
-Shouldn&#8217;t gobble</p>
+Shouldn’t gobble</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.EOLSlurpToken.test4">
 <code class="descname">test4</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.EOLSlurpToken.test4" title="Permalink to this definition">¶</a></dt>
 <dd><p>#slurp with WS then n, leading content
-Shouldn&#8217;t gobble</p>
+Shouldn’t gobble</p>
 </dd></dl>
 
 <dl class="method">
@@ -1112,13 +1116,13 @@ Should NOT eat the garbage</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.FilterDirective.test10">
 <code class="descname">test10</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.FilterDirective.test10" title="Permalink to this definition">¶</a></dt>
-<dd><p>#filter Strip &#8211; multi-line</p>
+<dd><p>#filter Strip – multi-line</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.FilterDirective.test11">
 <code class="descname">test11</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.FilterDirective.test11" title="Permalink to this definition">¶</a></dt>
-<dd><p>#filter StripSqueeze &#8211; canonicalize all whitespace to &#8216; &#8216;</p>
+<dd><p>#filter StripSqueeze – canonicalize all whitespace to ‘ ‘</p>
 </dd></dl>
 
 <dl class="method">
@@ -1130,43 +1134,43 @@ Should NOT eat the garbage</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.FilterDirective.test3">
 <code class="descname">test3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.FilterDirective.test3" title="Permalink to this definition">¶</a></dt>
-<dd><p>#filter MaxLen &#8211; maxlen of 5</p>
+<dd><p>#filter MaxLen – maxlen of 5</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.FilterDirective.test4">
 <code class="descname">test4</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.FilterDirective.test4" title="Permalink to this definition">¶</a></dt>
-<dd><p>#filter MaxLen &#8211; no maxlen</p>
+<dd><p>#filter MaxLen – no maxlen</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.FilterDirective.test5">
 <code class="descname">test5</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.FilterDirective.test5" title="Permalink to this definition">¶</a></dt>
-<dd><p>#filter WebSafe &#8211; basic usage</p>
+<dd><p>#filter WebSafe – basic usage</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.FilterDirective.test6">
 <code class="descname">test6</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.FilterDirective.test6" title="Permalink to this definition">¶</a></dt>
-<dd><p>#filter WebSafe &#8211; also space</p>
+<dd><p>#filter WebSafe – also space</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.FilterDirective.test7">
 <code class="descname">test7</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.FilterDirective.test7" title="Permalink to this definition">¶</a></dt>
-<dd><p>#filter WebSafe &#8211; also space, without $ on the args</p>
+<dd><p>#filter WebSafe – also space, without $ on the args</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.FilterDirective.test8">
 <code class="descname">test8</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.FilterDirective.test8" title="Permalink to this definition">¶</a></dt>
-<dd><p>#filter Strip &#8211; trailing newline</p>
+<dd><p>#filter Strip – trailing newline</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.FilterDirective.test9">
 <code class="descname">test9</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.FilterDirective.test9" title="Permalink to this definition">¶</a></dt>
-<dd><p>#filter Strip &#8211; no trailing newine</p>
+<dd><p>#filter Strip – no trailing newine</p>
 </dd></dl>
 
 </dd></dl>
@@ -1280,31 +1284,31 @@ Should NOT eat the garbage</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.GetVar.test1">
 <code class="descname">test1</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.GetVar.test1" title="Permalink to this definition">¶</a></dt>
-<dd><p>$getVar(&#8216;$anInt&#8217;)</p>
+<dd><p>$getVar(‘$anInt’)</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.GetVar.test2">
 <code class="descname">test2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.GetVar.test2" title="Permalink to this definition">¶</a></dt>
-<dd><p>$getVar(&#8216;anInt&#8217;)</p>
+<dd><p>$getVar(‘anInt’)</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.GetVar.test3">
 <code class="descname">test3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.GetVar.test3" title="Permalink to this definition">¶</a></dt>
-<dd><p>$self.getVar(&#8216;anInt&#8217;)</p>
+<dd><p>$self.getVar(‘anInt’)</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.GetVar.test4">
 <code class="descname">test4</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.GetVar.test4" title="Permalink to this definition">¶</a></dt>
-<dd><p>$getVar(&#8216;bogus&#8217;, 1234)</p>
+<dd><p>$getVar(‘bogus’, 1234)</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.GetVar.test5">
 <code class="descname">test5</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.GetVar.test5" title="Permalink to this definition">¶</a></dt>
-<dd><p>$getVar(&#8216;$bogus&#8217;, 1234)</p>
+<dd><p>$getVar(‘$bogus’, 1234)</p>
 </dd></dl>
 
 </dd></dl>
@@ -1347,14 +1351,14 @@ Should NOT eat the garbage</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.IfDirective.test12">
 <code class="descname">test12</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective.test12" title="Permalink to this definition">¶</a></dt>
-<dd><p>#if ... #else if ... #else ... block using a $emptyString
+<dd><p>#if … #else if … #else … block using a $emptyString
 Same as test 8 but using else if instead of elif</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.IfDirective.test13">
 <code class="descname">test13</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective.test13" title="Permalink to this definition">¶</a></dt>
-<dd><p>#if# ... #else # ... block using a $emptyString with</p>
+<dd><p>#if# … #else # … block using a $emptyString with</p>
 </dd></dl>
 
 <dl class="method">
@@ -1372,7 +1376,7 @@ Same as test 8 but using else if instead of elif</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.IfDirective.test16">
 <code class="descname">test16</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective.test16" title="Permalink to this definition">¶</a></dt>
-<dd><p>single-line #if: with the words &#8216;else&#8217; and &#8216;then&#8217; in the output</p>
+<dd><p>single-line #if: with the words ‘else’ and ‘then’ in the output</p>
 </dd></dl>
 
 <dl class="method">
@@ -1421,19 +1425,19 @@ Same as test 8 but using else if instead of elif</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.IfDirective.test7">
 <code class="descname">test7</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective.test7" title="Permalink to this definition">¶</a></dt>
-<dd><p>#if ... #else ... block using a $emptyString</p>
+<dd><p>#if … #else … block using a $emptyString</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.IfDirective.test8">
 <code class="descname">test8</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective.test8" title="Permalink to this definition">¶</a></dt>
-<dd><p>#if ... #elif ... #else ... block using a $emptyString</p>
+<dd><p>#if … #elif … #else … block using a $emptyString</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.IfDirective.test9">
 <code class="descname">test9</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective.test9" title="Permalink to this definition">¶</a></dt>
-<dd><p>#if &#8216;not&#8217; test, with #slurp</p>
+<dd><p>#if ‘not’ test, with #slurp</p>
 </dd></dl>
 
 </dd></dl>
@@ -1451,7 +1455,7 @@ Same as test 8 but using else if instead of elif</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.ImportDirective.test10">
 <code class="descname">test10</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.ImportDirective.test10" title="Permalink to this definition">¶</a></dt>
-<dd><p>#import os.path &#8211; use it with NameMapper turned off</p>
+<dd><p>#import os.path – use it with NameMapper turned off</p>
 </dd></dl>
 
 <dl class="method">
@@ -1471,7 +1475,7 @@ Same as test 8 but using else if instead of elif</p>
 <dt id="Cheetah.Tests.SyntaxAndOutput.ImportDirective.test3">
 <code class="descname">test3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.ImportDirective.test3" title="Permalink to this definition">¶</a></dt>
 <dd><p>#import math + WS + leading text</p>
-<p>Shouldn&#8217;t gobble</p>
+<p>Shouldn’t gobble</p>
 </dd></dl>
 
 <dl class="method">
@@ -1491,25 +1495,25 @@ Should gobble</p>
 <dt id="Cheetah.Tests.SyntaxAndOutput.ImportDirective.test6">
 <code class="descname">test6</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.ImportDirective.test6" title="Permalink to this definition">¶</a></dt>
 <dd><p>#from math import cos  + WS + leading text
-Shouldn&#8217;t gobble</p>
+Shouldn’t gobble</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.ImportDirective.test7">
 <code class="descname">test7</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.ImportDirective.test7" title="Permalink to this definition">¶</a></dt>
-<dd><p>#from math import cos &#8211; use it</p>
+<dd><p>#from math import cos – use it</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.ImportDirective.test8">
 <code class="descname">test8</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.ImportDirective.test8" title="Permalink to this definition">¶</a></dt>
-<dd><p>#from math import cos,tan,sin &#8211; and use them</p>
+<dd><p>#from math import cos,tan,sin – and use them</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.ImportDirective.test9">
 <code class="descname">test9</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.ImportDirective.test9" title="Permalink to this definition">¶</a></dt>
-<dd><p>#import os.path &#8211; use it</p>
+<dd><p>#import os.path – use it</p>
 </dd></dl>
 
 </dd></dl>
@@ -1549,19 +1553,19 @@ Shouldn&#8217;t gobble</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.IncludeDirective.test10">
 <code class="descname">test10</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.IncludeDirective.test10" title="Permalink to this definition">¶</a></dt>
-<dd><p>#include of &#8220;parseTest.txt&#8221;, with WS</p>
+<dd><p>#include of “parseTest.txt”, with WS</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.IncludeDirective.test11">
 <code class="descname">test11</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.IncludeDirective.test11" title="Permalink to this definition">¶</a></dt>
-<dd><p>#include of &#8216;parseTest.txt&#8217;, with WS and surrounding text</p>
+<dd><p>#include of ‘parseTest.txt’, with WS and surrounding text</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.IncludeDirective.test12">
 <code class="descname">test12</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.IncludeDirective.test12" title="Permalink to this definition">¶</a></dt>
-<dd><p>#include of &#8216;parseTest.txt&#8217;, with WS and explicit closure</p>
+<dd><p>#include of ‘parseTest.txt’, with WS and explicit closure</p>
 </dd></dl>
 
 <dl class="method">
@@ -1573,7 +1577,7 @@ Shouldn&#8217;t gobble</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.IncludeDirective.test3">
 <code class="descname">test3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.IncludeDirective.test3" title="Permalink to this definition">¶</a></dt>
-<dd><p>#include raw of &#8216;parseTest.txt&#8217;</p>
+<dd><p>#include raw of ‘parseTest.txt’</p>
 </dd></dl>
 
 <dl class="method">
@@ -1609,7 +1613,7 @@ Shouldn&#8217;t gobble</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.IncludeDirective.test9">
 <code class="descname">test9</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.IncludeDirective.test9" title="Permalink to this definition">¶</a></dt>
-<dd><p>#include of &#8216;parseTest.txt&#8217;, with WS</p>
+<dd><p>#include of ‘parseTest.txt’, with WS</p>
 </dd></dl>
 
 </dd></dl>
@@ -1652,7 +1656,7 @@ Shouldn&#8217;t gobble</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.MiscComplexSyntax.test1">
 <code class="descname">test1</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.MiscComplexSyntax.test1" title="Permalink to this definition">¶</a></dt>
-<dd><p>#set $c = {&#8216;A&#8217;:0}[{}.get(&#8216;a&#8217;, {&#8216;a&#8217; : &#8216;A&#8217;}[&#8216;a&#8217;])]
+<dd><p>#set $c = {‘A’:0}[{}.get(‘a’, {‘a’ : ‘A’}[‘a’])]
 $c</p>
 </dd></dl>
 
@@ -1707,7 +1711,8 @@ $c</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.NameMapper.test16">
 <code class="descname">test16</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.NameMapper.test16" title="Permalink to this definition">¶</a></dt>
-<dd><p>nested dictionary access - NameMapper style - followed by method, then slice</p>
+<dd><p>Nested dictionary access - NameMapper style - followed by method,
+then slice.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1738,7 +1743,7 @@ $c</p>
 <dt id="Cheetah.Tests.SyntaxAndOutput.NameMapper.test20">
 <code class="descname">test20</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.NameMapper.test20" title="Permalink to this definition">¶</a></dt>
 <dd><p>object method access, followed by a very complex slice
-If it can pass this one, it&#8217;s safe to say it works!!</p>
+If it can pass this one, it’s safe to say it works!!</p>
 </dd></dl>
 
 <dl class="method">
@@ -1972,43 +1977,43 @@ for.</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.PlaceholderStrings.test1">
 <code class="descname">test1</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.PlaceholderStrings.test1" title="Permalink to this definition">¶</a></dt>
-<dd><p>some c&#8217;text $placeholder text&#8217; strings</p>
+<dd><p>some c’text $placeholder text’ strings</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.PlaceholderStrings.test2">
 <code class="descname">test2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.PlaceholderStrings.test2" title="Permalink to this definition">¶</a></dt>
-<dd><p>some c&#8217;text $placeholder text&#8217; strings</p>
+<dd><p>some c’text $placeholder text’ strings</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.PlaceholderStrings.test3">
 <code class="descname">test3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.PlaceholderStrings.test3" title="Permalink to this definition">¶</a></dt>
-<dd><p>some c&#8217;text $placeholder text&#8217; strings</p>
+<dd><p>some c’text $placeholder text’ strings</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.PlaceholderStrings.test4">
 <code class="descname">test4</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.PlaceholderStrings.test4" title="Permalink to this definition">¶</a></dt>
-<dd><p>some c&#8217;text $placeholder text&#8217; strings</p>
+<dd><p>some c’text $placeholder text’ strings</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.PlaceholderStrings.test5">
 <code class="descname">test5</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.PlaceholderStrings.test5" title="Permalink to this definition">¶</a></dt>
-<dd><p>some c&#8217;text $placeholder text&#8217; strings</p>
+<dd><p>some c’text $placeholder text’ strings</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.PlaceholderStrings.test6">
 <code class="descname">test6</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.PlaceholderStrings.test6" title="Permalink to this definition">¶</a></dt>
-<dd><p>some c&#8217;text $placeholder text&#8217; strings</p>
+<dd><p>some c’text $placeholder text’ strings</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.PlaceholderStrings.test7">
 <code class="descname">test7</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.PlaceholderStrings.test7" title="Permalink to this definition">¶</a></dt>
-<dd><p>some c&#8217;text $placeholder text&#8217; strings</p>
+<dd><p>some c’text $placeholder text’ strings</p>
 </dd></dl>
 
 </dd></dl>
@@ -2033,49 +2038,49 @@ for.</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Placeholders.test11">
 <code class="descname">test11</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test11" title="Permalink to this definition">¶</a></dt>
-<dd><p>1 placeholder enclosed in {} + WS + <a href="#id41"><span class="problematic" id="id42">*</span></a>cache</p>
+<dd><p>1 placeholder enclosed in {} + WS + <a href="#id43"><span class="problematic" id="id44">*</span></a>cache</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Placeholders.test12">
 <code class="descname">test12</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test12" title="Permalink to this definition">¶</a></dt>
-<dd><p>1 placeholder enclosed in [] + WS + <a href="#id43"><span class="problematic" id="id44">*</span></a>cache</p>
+<dd><p>1 placeholder enclosed in [] + WS + <a href="#id45"><span class="problematic" id="id46">*</span></a>cache</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Placeholders.test13">
 <code class="descname">test13</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test13" title="Permalink to this definition">¶</a></dt>
-<dd><p>1 placeholder enclosed in {} + WS + <a href="#id45"><span class="problematic" id="id46">*</span></a>&lt;int&gt;*cache</p>
+<dd><p>1 placeholder enclosed in {} + WS + <a href="#id47"><span class="problematic" id="id48">*</span></a>&lt;int&gt;*cache</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Placeholders.test14">
 <code class="descname">test14</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test14" title="Permalink to this definition">¶</a></dt>
-<dd><p>1 placeholder enclosed in [] + WS + <a href="#id47"><span class="problematic" id="id48">*</span></a>&lt;int&gt;*cache</p>
+<dd><p>1 placeholder enclosed in [] + WS + <a href="#id49"><span class="problematic" id="id50">*</span></a>&lt;int&gt;*cache</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Placeholders.test15">
 <code class="descname">test15</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test15" title="Permalink to this definition">¶</a></dt>
-<dd><p>1 placeholder enclosed in {} + WS + <a href="#id49"><span class="problematic" id="id50">*</span></a>&lt;float&gt;*cache</p>
+<dd><p>1 placeholder enclosed in {} + WS + <a href="#id51"><span class="problematic" id="id52">*</span></a>&lt;float&gt;*cache</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Placeholders.test16">
 <code class="descname">test16</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test16" title="Permalink to this definition">¶</a></dt>
-<dd><p>1 placeholder enclosed in [] + WS + <a href="#id51"><span class="problematic" id="id52">*</span></a>&lt;float&gt;*cache</p>
+<dd><p>1 placeholder enclosed in [] + WS + <a href="#id53"><span class="problematic" id="id54">*</span></a>&lt;float&gt;*cache</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Placeholders.test17">
 <code class="descname">test17</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test17" title="Permalink to this definition">¶</a></dt>
-<dd><p>1 placeholder + <a href="#id53"><span class="problematic" id="id54">*</span></a>&lt;int&gt;*cache</p>
+<dd><p>1 placeholder + <a href="#id55"><span class="problematic" id="id56">*</span></a>&lt;int&gt;*cache</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Placeholders.test18">
 <code class="descname">test18</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test18" title="Permalink to this definition">¶</a></dt>
-<dd><p>1 placeholder <a href="#id55"><span class="problematic" id="id56">*</span></a>&lt;float&gt;*cache</p>
+<dd><p>1 placeholder <a href="#id57"><span class="problematic" id="id58">*</span></a>&lt;float&gt;*cache</p>
 </dd></dl>
 
 <dl class="method">
@@ -2160,19 +2165,19 @@ for.</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test10">
 <code class="descname">test10</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test10" title="Permalink to this definition">¶</a></dt>
-<dd><p>func placeholder - with (&#8216;&#8217;&#8216;nstringn&#8217;&#8216;&#8217;)</p>
+<dd><p>func placeholder - with (‘’‘nstringn’‘’)</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test11">
 <code class="descname">test11</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test11" title="Permalink to this definition">¶</a></dt>
-<dd><p>func placeholder - with (&#8216;&#8217;&#8216;nstring&#8217;n&#8217;&#8216;&#8217;)</p>
+<dd><p>func placeholder - with (‘’‘nstring’n’‘’)</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test12">
 <code class="descname">test12</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test12" title="Permalink to this definition">¶</a></dt>
-<dd><p>func placeholder - with (&#8220;&#8221;&#8220;nstringn&#8221;&#8220;&#8221;)</p>
+<dd><p>func placeholder - with (“”“nstringn”“”)</p>
 </dd></dl>
 
 <dl class="method">
@@ -2250,13 +2255,13 @@ for.</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test24">
 <code class="descname">test24</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test24" title="Permalink to this definition">¶</a></dt>
-<dd><p>deeply nested argstring, () enclosure + <a href="#id57"><span class="problematic" id="id58">*</span></a>cache</p>
+<dd><p>deeply nested argstring, () enclosure + <a href="#id59"><span class="problematic" id="id60">*</span></a>cache</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test25">
 <code class="descname">test25</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test25" title="Permalink to this definition">¶</a></dt>
-<dd><p>deeply nested argstring, () enclosure + <a href="#id59"><span class="problematic" id="id60">*</span></a>15*cache</p>
+<dd><p>deeply nested argstring, () enclosure + <a href="#id61"><span class="problematic" id="id62">*</span></a>15*cache</p>
 </dd></dl>
 
 <dl class="method">
@@ -2304,7 +2309,7 @@ for.</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test9">
 <code class="descname">test9</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test9" title="Permalink to this definition">¶</a></dt>
-<dd><p>func placeholder - with (&#8216;&#8217;&#8216;string&#8217;&#8216;&#8217;)</p>
+<dd><p>func placeholder - with (‘’‘string’‘’)</p>
 </dd></dl>
 
 </dd></dl>
@@ -2438,7 +2443,7 @@ for.</p>
 <dt id="Cheetah.Tests.SyntaxAndOutput.RaiseDirective.test3">
 <code class="descname">test3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.RaiseDirective.test3" title="Permalink to this definition">¶</a></dt>
 <dd><p>#raise ValueError in #if block</p>
-<p>Shouldn&#8217;t raise ValueError</p>
+<p>Shouldn’t raise ValueError</p>
 </dd></dl>
 
 </dd></dl>
@@ -2469,7 +2474,7 @@ for.</p>
 <dt id="Cheetah.Tests.SyntaxAndOutput.RawDirective.test4">
 <code class="descname">test4</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.RawDirective.test4" title="Permalink to this definition">¶</a></dt>
 <dd><p>#raw till #end raw using explicit directive closure
-Shouldn&#8217;t gobble</p>
+Shouldn’t gobble</p>
 </dd></dl>
 
 <dl class="method">
@@ -2535,19 +2540,19 @@ Shouldn&#8217;t gobble</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.ReturnDirective.test1">
 <code class="descname">test1</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.ReturnDirective.test1" title="Permalink to this definition">¶</a></dt>
-<dd><p>#return&#8217;ing an int</p>
+<dd><p>#return’ing an int</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.ReturnDirective.test2">
 <code class="descname">test2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.ReturnDirective.test2" title="Permalink to this definition">¶</a></dt>
-<dd><p>#return&#8217;ing an string</p>
+<dd><p>#return’ing an string</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.ReturnDirective.test3">
 <code class="descname">test3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.ReturnDirective.test3" title="Permalink to this definition">¶</a></dt>
-<dd><p>#return&#8217;ing an string AND streaming other output via the transaction</p>
+<dd><p>#return’ing an string AND streaming other output via the transaction</p>
 </dd></dl>
 
 </dd></dl>
@@ -2571,7 +2576,7 @@ Shouldn&#8217;t gobble</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.SetDirective.test11">
 <code class="descname">test11</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective.test11" title="Permalink to this definition">¶</a></dt>
-<dd><p>simple #set global with a list and <a href="#id61"><span class="problematic" id="id62">*</span></a>cache</p>
+<dd><p>simple #set global with a list and <a href="#id63"><span class="problematic" id="id64">*</span></a>cache</p>
 <p>Caching only works with global #set vars.  Local vars are not accesible
 to the cache namespace.</p>
 </dd></dl>
@@ -2579,13 +2584,13 @@ to the cache namespace.</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.SetDirective.test12">
 <code class="descname">test12</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective.test12" title="Permalink to this definition">¶</a></dt>
-<dd><p>simple #set global with a list and <a href="#id63"><span class="problematic" id="id64">*</span></a>&lt;int&gt;*cache</p>
+<dd><p>simple #set global with a list and <a href="#id65"><span class="problematic" id="id66">*</span></a>&lt;int&gt;*cache</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.SetDirective.test13">
 <code class="descname">test13</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective.test13" title="Permalink to this definition">¶</a></dt>
-<dd><p>simple #set with a list and <a href="#id65"><span class="problematic" id="id66">*</span></a>&lt;float&gt;*cache</p>
+<dd><p>simple #set with a list and <a href="#id67"><span class="problematic" id="id68">*</span></a>&lt;float&gt;*cache</p>
 </dd></dl>
 
 <dl class="method">
@@ -2669,7 +2674,7 @@ to the cache namespace.</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.SetDirective.test8">
 <code class="descname">test8</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective.test8" title="Permalink to this definition">¶</a></dt>
-<dd><p>simple #set, don&#8217;t gobble WS</p>
+<dd><p>simple #set, don’t gobble WS</p>
 </dd></dl>
 
 <dl class="method">
@@ -2685,8 +2690,8 @@ to the cache namespace.</p>
 <em class="property">class </em><code class="descclassname">Cheetah.Tests.SyntaxAndOutput.</code><code class="descname">SilentDirective</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.SilentDirective" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.OutputTest" title="Cheetah.Tests.SyntaxAndOutput.OutputTest"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Tests.SyntaxAndOutput.OutputTest</span></code></a></p>
 <dl class="method">
-<dt id="Cheetah.Tests.SyntaxAndOutput.SilentDirective.test1">
-<code class="descname">test1</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.SilentDirective.test1" title="Permalink to this definition">¶</a></dt>
+<dt id="Cheetah.Tests.SyntaxAndOutput.SilentDirective.test4">
+<code class="descname">test4</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.SilentDirective.test4" title="Permalink to this definition">¶</a></dt>
 <dd><p>#silent 1234</p>
 </dd></dl>
 
@@ -2713,14 +2718,14 @@ Should gobble</p>
 <dt id="Cheetah.Tests.SyntaxAndOutput.SlurpDirective.test3">
 <code class="descname">test3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.SlurpDirective.test3" title="Permalink to this definition">¶</a></dt>
 <dd><p>#slurp with 1 n, leading content
-Shouldn&#8217;t gobble</p>
+Shouldn’t gobble</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.SlurpDirective.test4">
 <code class="descname">test4</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.SlurpDirective.test4" title="Permalink to this definition">¶</a></dt>
 <dd><p>#slurp with WS then n, leading content
-Shouldn&#8217;t gobble</p>
+Shouldn’t gobble</p>
 </dd></dl>
 
 <dl class="method">
@@ -2806,7 +2811,7 @@ Should eat the garbage</p>
 <dt id="Cheetah.Tests.SyntaxAndOutput.TryDirective.test4">
 <code class="descname">test4</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.TryDirective.test4" title="Permalink to this definition">¶</a></dt>
 <dd><p>#try / #except with #raise + WS and leading text</p>
-<p>Shouldn&#8217;t gobble</p>
+<p>Shouldn’t gobble</p>
 </dd></dl>
 
 <dl class="method">
@@ -2902,31 +2907,31 @@ Should eat the garbage</p>
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.VarExists.test1">
 <code class="descname">test1</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.VarExists.test1" title="Permalink to this definition">¶</a></dt>
-<dd><p>$varExists(&#8216;$anInt&#8217;)</p>
+<dd><p>$varExists(‘$anInt’)</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.VarExists.test2">
 <code class="descname">test2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.VarExists.test2" title="Permalink to this definition">¶</a></dt>
-<dd><p>$varExists(&#8216;anInt&#8217;)</p>
+<dd><p>$varExists(‘anInt’)</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.VarExists.test3">
 <code class="descname">test3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.VarExists.test3" title="Permalink to this definition">¶</a></dt>
-<dd><p>$varExists(&#8216;$anInt&#8217;)</p>
+<dd><p>$varExists(‘$anInt’)</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.VarExists.test4">
 <code class="descname">test4</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.VarExists.test4" title="Permalink to this definition">¶</a></dt>
-<dd><p>$varExists(&#8216;$anInt&#8217;) combined with #if false</p>
+<dd><p>$varExists(‘$anInt’) combined with #if false</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.SyntaxAndOutput.VarExists.test5">
 <code class="descname">test5</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.VarExists.test5" title="Permalink to this definition">¶</a></dt>
-<dd><p>$varExists(&#8216;$anInt&#8217;) combined with #if true</p>
+<dd><p>$varExists(‘$anInt’) combined with #if true</p>
 </dd></dl>
 
 </dd></dl>
@@ -3008,8 +3013,8 @@ Should eat the garbage</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

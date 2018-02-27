@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Cheetah.ImportManager module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +24,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -69,12 +66,12 @@
             
   <div class="section" id="module-Cheetah.ImportManager">
 <span id="cheetah-importmanager-module"></span><h1>Cheetah.ImportManager module<a class="headerlink" href="#module-Cheetah.ImportManager" title="Permalink to this headline">¶</a></h1>
-<p>Provides an emulator/replacement for Python&#8217;s standard import system.</p>
-<p>&#64;&#64;TR: Be warned that Import Hooks are in the deepest, darkest corner of Python&#8217;s
-jungle.  If you need to start hacking with this, be prepared to get lost for a
-while. Also note, this module predates the newstyle import hooks in Python 2.3
-<a class="reference external" href="http://www.python.org/peps/pep-0302.html">http://www.python.org/peps/pep-0302.html</a>.</p>
-<p>This is a hacked/documented version of Gordon McMillan&#8217;s iu.py. I have:</p>
+<p>Provides an emulator/replacement for Python’s standard import system.</p>
+<p>&#64;&#64;TR: Be warned that Import Hooks are in the deepest, darkest corner of
+Python’s jungle.  If you need to start hacking with this, be prepared to get
+lost for a while. Also note, this module predates the newstyle import hooks in
+Python 2.3 <a class="reference external" href="http://www.python.org/peps/pep-0302.html">http://www.python.org/peps/pep-0302.html</a>.</p>
+<p>This is a hacked/documented version of Gordon McMillan’s iu.py. I have:</p>
 <blockquote>
 <div><ul class="simple">
 <li>made it a little less terse</li>
@@ -122,10 +119,10 @@ while. Also note, this module predates the newstyle import hooks in Python 2.3
 <dt id="Cheetah.ImportManager.ImportDirector">
 <em class="property">class </em><code class="descclassname">Cheetah.ImportManager.</code><code class="descname">ImportDirector</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.ImportDirector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.ImportManager.Owner" title="Cheetah.ImportManager.Owner"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.ImportManager.Owner</span></code></a></p>
-<p>ImportDirectors live on the metapath There&#8217;s one for builtins, one for
+<p>ImportDirectors live on the metapath There’s one for builtins, one for
 frozen modules, and one for sys.path Windows gets one for modules gotten
 from the Registry Mac would have them for PY_RESOURCE modules etc.  A
-generalization of Owner - their concept of &#8216;turf&#8217; is broader</p>
+generalization of Owner - their concept of ‘turf’ is broader</p>
 </dd></dl>
 
 <dl class="class">
@@ -139,9 +136,10 @@ generalization of Owner - their concept of &#8216;turf&#8217; is broader</p>
 <dl class="method">
 <dt id="Cheetah.ImportManager.ImportManager.importHook">
 <code class="descname">importHook</code><span class="sig-paren">(</span><em>name</em>, <em>globals=None</em>, <em>locals=None</em>, <em>fromlist=None</em>, <em>level=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.ImportManager.importHook" title="Permalink to this definition">¶</a></dt>
-<dd><p>NOTE: Currently importHook will accept the keyword-argument &#8220;level&#8221;
-but it will <em>NOT</em> use it (currently). Details about the &#8220;level&#8221; keyword
-argument can be found here: <a class="reference external" href="http://www.python.org/doc/2.5.2/lib/built-in-funcs.html">http://www.python.org/doc/2.5.2/lib/built-in-funcs.html</a></p>
+<dd><p>NOTE: Currently importHook will accept the keyword-argument “level”
+but it will <em>NOT</em> use it. Details about the “level” keyword
+argument can be found here:
+<a class="reference external" href="https://docs.python.org/2/library/functions.html#__import__">https://docs.python.org/2/library/functions.html#__import__</a></p>
 </dd></dl>
 
 <dl class="method">
@@ -164,11 +162,12 @@ argument can be found here: <a class="reference external" href="http://www.pytho
 <dl class="class">
 <dt id="Cheetah.ImportManager.Owner">
 <em class="property">class </em><code class="descclassname">Cheetah.ImportManager.</code><code class="descname">Owner</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.Owner" title="Permalink to this definition">¶</a></dt>
-<dd><p>An Owner does imports from a particular piece of turf That is, there&#8217;s
+<dd><p>An Owner does imports from a particular piece of turf That is, there’s
 an Owner for each thing on sys.path There are owners for directories and
 .pyz files.  There could be owners for zip files, or even URLs.  A
 shadowpath (a dictionary mapping the names in sys.path to their owners) is
-used so that sys.path (or a package&#8217;s __path__) is still a bunch of strings,</p>
+used so that sys.path (or a package’s __path__) is still a bunch of
+strings.</p>
 <dl class="method">
 <dt id="Cheetah.ImportManager.Owner.getmod">
 <code class="descname">getmod</code><span class="sig-paren">(</span><em>nm</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.Owner.getmod" title="Permalink to this definition">¶</a></dt>
@@ -248,8 +247,8 @@ used so that sys.path (or a package&#8217;s __path__) is still a bunch of string
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

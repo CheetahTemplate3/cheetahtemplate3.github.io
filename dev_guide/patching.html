@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Patching Cheetah &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -29,7 +26,7 @@
     <link rel="next" title="Directives: Flow Control" href="flowControl.html" />
     <link rel="prev" title="Placeholders" href="placeholders.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -46,7 +43,7 @@
           <a href="placeholders.html" title="Placeholders"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer’s Guide</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -101,19 +98,19 @@ suite. Describe distutils and how the regression tests work.</p>
 <p>(patching.fileRequirements)</p>
 <p>The code{Template} class contains not only the Cheetah
 infrastructure, but also some convenience methods useful in all
-templates. More methods may be added if it&#8217;s generally agreed among
+templates. More methods may be added if it’s generally agreed among
 Cheetah developers that the method is sufficiently useful to all
 types of templates, or at least to all types of HTML-output
 templates. If a method is too long to fit into {Template} -
 especially if it has helper methods - put it in a mixin class under
 {Cheetah.Utils} and inherit it.</p>
 <p>Routines for a specific problem domain should be put under
-{Cheetah.Tools}, so that it doesn&#8217;t clutter the namespace unless
+{Cheetah.Tools}, so that it doesn’t clutter the namespace unless
 the user asks for it.</p>
 <p>Remember: {Cheetah.Utils} is for objects required by any part of
-Cheetah&#8217;s core. {Cheetah.Tools} is for completely optional objects.
+Cheetah’s core. {Cheetah.Tools} is for completely optional objects.
 It should always be possible to delete {Cheetah.Tools} without
-breaking Cheetah&#8217;s core services.</p>
+breaking Cheetah’s core services.</p>
 <p>If a core method needs to look up an attribute defined under
 {Cheetah.Tools}, it should use {hasattr()} and gracefully provide a
 default if the attribute does not exist (meaning the user has not
@@ -138,7 +135,7 @@ their particular platform and computer.</p>
 <p>The general procedure for modifying Cheetah is as follows:</p>
 <ol class="arabic simple">
 <li>Write a simple Python program that exploits the bug/feature
-you&#8217;re working on. You can either write a regression test (see
+you’re working on. You can either write a regression test (see
 below), or a separate program that writes the template output to
 one file and put the expected output in another file; then you can
 run {diff} on the two outputs. ({diff} is a utility included on all
@@ -148,29 +145,29 @@ by line. A precompiled Windows version is at
 sources at
 <a class="reference external" href="http://perso.wanadoo.fr/gilles.depeyrot/DevTools_en.html">http://perso.wanadoo.fr/gilles.depeyrot/DevTools_en.html</a>.)</li>
 <li>Make the change in your Cheetah CVS sandbox or in your installed
-version of Cheetah. If you make it in the sandbox, you&#8217;ll have to
+version of Cheetah. If you make it in the sandbox, you’ll have to
 run {python setup.py install} before testing it. If you make it in
 the installed version, do { not} run the installer or it will
 overwrite your changes!</li>
-<li>Run {cheetah test} to verify you didn&#8217;t break anything. Then run
+<li>Run {cheetah test} to verify you didn’t break anything. Then run
 your little test program.</li>
 <li>Repeat steps 2-3 until everything is correct.</li>
 <li>Turn your little program into a regression test as described
 below.</li>
 <li>When {cheetah test} runs cleanly with your regression test
-included, update the {www/news.rst} file and check in your changes. If
-you made the changes in your installed copy of Cheetah, you&#8217;ll have
+included, update the {docs/news.rst} file and check in your changes. If
+you made the changes in your installed copy of Cheetah, you’ll have
 to copy them back into the CVS sandbox first. If you added any
 files that must be distributed, { be sure to} {cvs add} them before
 committing. Otherwise Cheetah will run fine on your computer but
-fail on anybody else&#8217;s, and the test suite can&#8217;t check for this.</li>
+fail on anybody else’s, and the test suite can’t check for this.</li>
 <li>Announce the change on the cheetahtemplate-discuss list and
 provide a tutorial if necessary. The documentation maintainer will
-update the Users&#8217; Guide and Developers&#8217; Guide based on this message
+update the Users’ Guide and Developers’ Guide based on this message
 and on the changelog.</li>
 </ol>
 <p>If you add a directory to Cheetah, you have to mention it in
-{setup.py} or it won&#8217;t be installed.</p>
+{setup.py} or it won’t be installed.</p>
 <p>The tests are in the {Cheetah.Tests} package, aka the {src/Tests/}
 directory of your CVS sandbox. Most of the tests are in
 {SyntaxAndOutput.py}. You can either run all the tests or choose
@@ -191,8 +188,8 @@ e.g., {test16}. The method should not require any arguments except
 the two arguments are a template definition string and a control
 string. The tester will complain if the template output does not
 match the control string. You have a wide variety of placeholder
-variables to choose from, anything that&#8217;s included in the
-{defaultTestNameSpace} global dictionary. If that&#8217;s not enough, add
+variables to choose from, anything that’s included in the
+{defaultTestNameSpace} global dictionary. If that’s not enough, add
 items to the dictionary, but please keep it from being cluttered
 with wordy esoteric items for a single test).</p>
 <p>If your test logically belongs in a separate class, create a
@@ -202,12 +199,12 @@ a separate class allows you to define state variables needed by
 your tests (see the {CGI} class) or override {.searchList()} (see
 the {Indenter} class) to provide your own searchList.</p>
 <p>To modify another test module or create your own test module,
-you&#8217;ll have to study the existing modules, the
+you’ll have to study the existing modules, the
 {unittest_local_copy} source, and the {unittest} documentation in
 the Python Library Reference. Note that we are using a hacked
 version of {unittest} to make a more convenient test structure for
 Cheetah. The differences between {unittest_local_copy} and
-Python&#8217;s standard {unittest} are documented at the top of the
+Python’s standard {unittest} are documented at the top of the
 module.</p>
 </div>
 </div>
@@ -234,13 +231,13 @@ module.</p>
           <a href="placeholders.html" title="Placeholders"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer’s Guide</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

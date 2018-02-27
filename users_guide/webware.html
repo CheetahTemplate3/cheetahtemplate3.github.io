@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Using Cheetah with Webware &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -29,7 +26,7 @@
     <link rel="next" title="non-Webware HTML output" href="otherHtml.html" />
     <link rel="prev" title="Tips, Tricks and Troubleshooting" href="tipsAndTricks.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -46,7 +43,7 @@
           <a href="tipsAndTricks.html" title="Tips, Tricks and Troubleshooting"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -113,9 +110,9 @@
   <div class="section" id="using-cheetah-with-webware">
 <h1>Using Cheetah with Webware<a class="headerlink" href="#using-cheetah-with-webware" title="Permalink to this headline">¶</a></h1>
 <p>(webware)</p>
-<p>{ Webware for Python} is a &#8216;Python-Powered Internet Platform&#8217; that
+<p>{ Webware for Python} is a ‘Python-Powered Internet Platform’ that
 runs servlets in a manner similar to Java servlets. { WebKit} is
-the name of Webware&#8217;s application server. For more details, please
+the name of Webware’s application server. For more details, please
 visit <a class="reference external" href="https://cito.github.io/w4py/">https://cito.github.io/w4py/</a>.</p>
 <p>All comments below refer to the official version of Webware, the
 DamnSimple! offshoot at ?, and the now-abandoned
@@ -125,8 +122,8 @@ All the implementations are 95% identical to the servlet writer:
 their differences lie in their internal structure and configuration
 files. One difference is that the executable you run to launch
 standard Webware is called {AppServer}, whereas in
-WebwareExperimental it&#8217;s called {webkit}. But to servlets they&#8217;re
-both &#8220;WebKit, Webware&#8217;s application server&#8221;, so it&#8217;s one half dozen
+WebwareExperimental it’s called {webkit}. But to servlets they’re
+both “WebKit, Webware’s application server”, so it’s one half dozen
 to the other. In this document, we generally use the term { WebKit}
 to refer to the currently-running application server.</p>
 <div class="section" id="installing-cheetah-on-a-webware-system">
@@ -134,48 +131,48 @@ to refer to the currently-running application server.</p>
 <p>(webware.installing)</p>
 <p>Install Cheetah after you have installed Webware, following the
 instructions in chapter gettingStarted.</p>
-<p>The standard Cheetah test suite (&#8216;cheetah test&#8217;) does not test
+<p>The standard Cheetah test suite (‘cheetah test’) does not test
 Webware features. We plan to build a test suite that can run as a
 Webware servlet, containing Webware-specific tests, but that has
 not been built yet. In the meantime, you can make a simple template
-containing something like &#8220;This is a very small template.&#8221;, compile
+containing something like “This is a very small template.”, compile
 it, put the *.py template module in a servlet directory, and see
 if Webware serves it up OK.</p>
-<p>{ You must not have a Webware context called &#8220;Cheetah&#8221;.} If you do,
+<p>{ You must not have a Webware context called “Cheetah”.} If you do,
 Webware will mistake that directory for the Cheetah module
 directory, and all template-servlets will bomb out with a
-&#8220;ImportError: no module named Template&#8221;. (This applies only to the
+“ImportError: no module named Template”. (This applies only to the
 standard Webware; WebwareExperimental does not have contexts.)</p>
 <p>If Webware complains that it cannot find your servlet, make sure
-&#8216;.tmpl&#8217; is listed in &#8216;ExtensionsToIgnore&#8217; in your
-&#8216;Application.config&#8217; file.</p>
+‘.tmpl’ is listed in ‘ExtensionsToIgnore’ in your
+‘Application.config’ file.</p>
 </div>
 <div class="section" id="containment-vs-inheritance">
 <h2>Containment vs Inheritance<a class="headerlink" href="#containment-vs-inheritance" title="Permalink to this headline">¶</a></h2>
 <p>(webware.background)</p>
-<p>Because Cheetah&#8217;s core is flexible, there are many ways to
+<p>Because Cheetah’s core is flexible, there are many ways to
 integrate it with Webware servlets. There are two broad strategies:
 the { Inheritance approach} and the { Containment approach}. The
 difference is that in the Inheritance approach, your template
 object { is} the servlet, whereas in the Containment approach, the
 servlet is not a template but merely { uses} template(s) for
 portion(s) of its work.</p>
-<p>The Inheritance approach is recommended for new sites because it&#8217;s
+<p>The Inheritance approach is recommended for new sites because it’s
 simpler, and because it scales well for large sites with a
 site-&gt;section-&gt;subsection-&gt;servlet hierarchy. The Containment
-approach is better for existing servlets that you don&#8217;t want to
+approach is better for existing servlets that you don’t want to
 restructure. For instance, you can use the Containment approach to
 embed a discussion-forum table at the bottom of a web page.</p>
 <p>However, most people who use Cheetah extensively seem to prefer the
 Inheritance approach because even the most analytical servlet needs
-to produce { some} output, and it has to fit the site&#8217;s look and
+to produce { some} output, and it has to fit the site’s look and
 feel { anyway}, so you may as well use a template-servlet as the
-place to put the output. Especially since it&#8217;s so easy to add a
+place to put the output. Especially since it’s so easy to add a
 template-servlet to a site once the framework is established. So we
 recommend you at least evaluate the effort that would be required
 to convert your site framework to template superclasses as
 described below, vs the greater flexibility and manageability it
-might give the site over the long term. You don&#8217;t necessarily have
+might give the site over the long term. You don’t necessarily have
 to convert all your existing servlets right away: just build common
 site templates that are visually and behaviorally compatible with
 your specification, and use them for new servlets. Existing
@@ -183,7 +180,7 @@ servlets can be converted later, if at all.</p>
 <p>Edmund Liam is preparing a section on a hybrid approach, in which
 the servlet is not a template, but still calls template(s) in an
 inheritance chain to produce the output. The advantage of this
-approach is that you aren&#8217;t dealing with {Template} methods and
+approach is that you aren’t dealing with {Template} methods and
 Webware methods in the same object.</p>
 <div class="section" id="the-containment-approach">
 <h3>The Containment Approach<a class="headerlink" href="#the-containment-approach" title="Permalink to this headline">¶</a></h3>
@@ -191,7 +188,7 @@ Webware methods in the same object.</p>
 <p>In the Containment approach, your servlet is not a template.
 Instead, it it makes its own arrangements to create and use
 template object(s) for whatever it needs. The servlet must
-explicitly call the template objects&#8217; {.respond()} (or
+explicitly call the template objects’ {.respond()} (or
 {.__str__()}) method each time it needs to fill the template.
 This does not present the output to the user; it merely gives the
 output to the servlet. The servlet then calls its
@@ -206,7 +203,7 @@ in a *.py module, and then import it into her servlet.</p>
 one in a module variable and allow multiple servlets to fill it
 simultaneously. Instead, each servlet should instantiate its own
 template object. Template { classes}, however, are thread safe,
-since they don&#8217;t change once created. So it&#8217;s safe to store a
+since they don’t change once created. So it’s safe to store a
 template class in a module global variable.</p>
 </div>
 <div class="section" id="the-inheritance-approach">
@@ -216,7 +213,7 @@ template class in a module global variable.</p>
 Webware servlet, thus these are sometimes called {
 template-servlets}. { cheetah compile} (section
 howWorks.cheetah-compile) automatically creates modules containing
-valid Webware servlets. A servlet is a subclass of Webware&#8217;s
+valid Webware servlets. A servlet is a subclass of Webware’s
 {WebKit.HTTPServlet} class, contained in a module with the same
 name as the servlet. WebKit uses the request URL to find the
 module, and then instantiates the servlet/template. The servlet
@@ -226,7 +223,7 @@ Servlets created by {cheetah compile} meet all these requirements.</p>
 <p>(Cheetah has a Webware plugin that automatically converts a {.tmpl
 servlet file} into a {.py servlet file} when the {.tmpl servlet
 file} is requested by a browser. However, that plugin is currently
-unavailable because it&#8217;s being redesigned. For now, use {cheetah
+unavailable because it’s being redesigned. For now, use {cheetah
 compile} instead.)</p>
 <p>What about logic code? Cheetah promises to keep content (the
 placeholder values), graphic design (the template definition and is
@@ -245,16 +242,16 @@ used a certain right way.)</p>
 <p>If {#WebKit.HTTPServlet} is not available, Cheetah fakes it with a
 dummy class to satisfy the dependency. This allows servlets to be
 tested on the command line even on systems where Webware is not
-installed. This works only with servlets that don&#8217;t call back into
+installed. This works only with servlets that don’t call back into
 WebKit for information about the current web transaction, since
 there is no web transaction. Trying to access form input, for
 instance, will raise an exception because it depends on a live web
 request object, and in the dummy class the request object is
 {None}.</p>
 <p>Because Webware servlets must be valid Python modules, and
-&#8220;cheetah compile&#8221; can produce only valid module names, if you&#8217;re
+“cheetah compile” can produce only valid module names, if you’re
 converting an existing site that has .html filenames with hyphens
-(-), extra dots (.), etc, you&#8217;ll have to rename them (and possibly
+(-), extra dots (.), etc, you’ll have to rename them (and possibly
 use redirects).</p>
 </div>
 </div>
@@ -266,13 +263,13 @@ features common to every page on the site, other features common to
 certain sections or subsections, and others unique to each page.
 You can model this easily with a hierarchy of classes, with
 specific servlets inheriting from their more general superclasses.
-Again, you can do this two ways, using Cheetah&#8217;s { Containment}
+Again, you can do this two ways, using Cheetah’s { Containment}
 approach or { Inheritance} approach.</p>
 <p>In the Inheritance approach, parents provide {#block}s and children
 override them using {#def}. Each child {#extend}s its immediate
-parent. Only the leaf servlets need to be under WebKit&#8217;s document
+parent. Only the leaf servlets need to be under WebKit’s document
 root directory. The superclass servlets can live anywhere in the
-filesystem that&#8217;s in the Python path. (You may want to modify your
+filesystem that’s in the Python path. (You may want to modify your
 WebKit startup script to add that library directory to your
 {PYTHONPATH} before starting WebKit.)</p>
 <p>Section libraries.templates.skeletonPage contains information on a
@@ -282,7 +279,7 @@ your web page templates.</p>
 templates, but each uses one or more templates as it wishes.
 Children provide callback methods to to produce the various
 portions of the page that are their responsibility, and parents
-call those methods. Webware&#8217;s {WebKit.Page} and
+call those methods. Webware’s {WebKit.Page} and
 {WebKit.SidebarPage} classes operate like this.</p>
 <p>Note that the two approaches are not compatible! {WebKit.Page} was
 not designed to intermix with {Cheetah.Templates.SkeletonPage}.
@@ -294,7 +291,7 @@ in this chapter, let us know.</p>
 <div class="section" id="directory-structure">
 <h2>Directory structure<a class="headerlink" href="#directory-structure" title="Permalink to this headline">¶</a></h2>
 <p>(webware.directoryStructure)</p>
-<p>Here&#8217;s one way to organize your files for Webware+Cheetah.</p>
+<p>Here’s one way to organize your files for Webware+Cheetah.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">www</span><span class="o">/</span>                         <span class="c1"># Web root directory.</span>
     <span class="n">site1</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span>       <span class="c1"># Site subdirectory.</span>
         <span class="n">apache</span><span class="o">/</span>              <span class="c1"># Web server document root (for non-servlets).</span>
@@ -326,7 +323,7 @@ because WebKit automatically calls that early when processing the
 web transaction. If you do override {.awake()}, be sure to call the
 superclass {.awake} method. You probably want to do that first so
 that you have access to the web transaction data {Servlet.awake}
-provides. You don&#8217;t have to worry about whether your parent class
+provides. You don’t have to worry about whether your parent class
 has its own {.awake} method, just call it anyway, and somebody up
 the inheritance chain will respond, or at minimum {Servlet.awake}
 will respond. Section tips.callingSuperclassMethods gives examples
@@ -356,7 +353,7 @@ separate objects. Step 1 was a static HTML file, and step 2 was a
 CGI script. Frequently, a better strategy is to have a single
 servlet handle both steps. That way, the servlet has better control
 over the entire situation, and if the user submits unacceptable
-data, the servlet can redisplay the form with a &#8220;try again&#8221; error
+data, the servlet can redisplay the form with a “try again” error
 message at the top and and all the previous input filled in. The
 servlet can use the presence or absence of certain CGI parameters
 (e.g., the submit button, or a hidden mode field) to determine
@@ -367,16 +364,16 @@ displaying and form processing is like this:</p>
 <li>Put your form HTML into an ordinary template-servlet. In each
 input field, use a placeholder for the value of the {VALUE=}
 attribue. Place another placeholder next to each field, for that
-field&#8217;s error message.</li>
+field’s error message.</li>
 <li>Above the form, put a {$processFormData} method call.</li>
 <li>Define that method in a Python class your template {#extend}s.
-(Or if it&#8217;s a simple method, you can define it in a {#def}.) The
+(Or if it’s a simple method, you can define it in a {#def}.) The
 method should:<ol class="arabic">
 <li>Get the form input if any.</li>
 <li>If the input variable corresponding to the submit field is
-empty, there is no form input, so we&#8217;re showing the form for the
+empty, there is no form input, so we’re showing the form for the
 first time. Initialize all VALUE= variables to their default value
-(usually &#8220;&#8221;), and all error variables to &#8220;&#8221;. Return &#8220;&#8221;, which will
+(usually “”), and all error variables to “”. Return “”, which will
 be the value for {$processFormData}.</li>
 <li>If the submit variable is not empty, fill the VALUE= variables
 with the input data the user just submitted.</li>
@@ -384,7 +381,7 @@ with the input data the user just submitted.</li>
 error placeholders.</li>
 <li>If there were any user errors, return a general error message
 string; this will be the value for {$processFormData}.</li>
-<li>If there were no errors, do whatever the form&#8217;s job is (e.g.,
+<li>If there were no errors, do whatever the form’s job is (e.g.,
 update a database) and return a success message; this will be the
 value for {$processFormData}.</li>
 </ol>
@@ -427,10 +424,10 @@ the results to simple variables in the searchList for display.
 These {$request} forms are useful only for occasions where you just
 need one or two simple request items that going to Python for would
 be overkill.</p>
-<p>To get a cookie or session parameter, subsitute &#8220;cookie&#8221; or
-&#8220;session&#8221; for &#8220;field&#8221; above. To get a dictionary of all CGI
-parameters, substitute &#8220;fields&#8221; (ditto for &#8220;cookies&#8221;). To verify a
-field exists, substitute &#8220;hasField&#8221; (ditto for &#8220;hasCookie&#8221;).</p>
+<p>To get a cookie or session parameter, subsitute “cookie” or
+“session” for “field” above. To get a dictionary of all CGI
+parameters, substitute “fields” (ditto for “cookies”). To verify a
+field exists, substitute “hasField” (ditto for “hasCookie”).</p>
 <p>Other useful request goodies:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>## Defined in WebKit.Request
 $request.field(&#39;myField&#39;, &#39;default value&#39;)
@@ -625,12 +622,12 @@ TypeError if a conversion suffix is not &quot;:int&quot; or &quot;:float&quot;.
 <p>(webware.otherTips)</p>
 <p>If your servlet accesses external files (e.g., via an {#include}
 directive), remember that the current directory is not necessarily
-directory the servlet is in. It&#8217;s probably some other directory
-WebKit chose. To find a file relative to the servlet&#8217;s directory,
+directory the servlet is in. It’s probably some other directory
+WebKit chose. To find a file relative to the servlet’s directory,
 prefix the path with whatever {self.serverSidePath()} returns (from
 {Servlet.serverSidePath()}.</p>
-<p>If you don&#8217;t understand how {#extends} and {#implements} work, and
-about a template&#8217;s main method, read the chapter on inheritance
+<p>If you don’t understand how {#extends} and {#implements} work, and
+about a template’s main method, read the chapter on inheritance
 (sections inheritanceEtc.extends and inheritanceEtc.implements).
 This may help you avoid buggy servlets.</p>
 </div>
@@ -658,13 +655,13 @@ This may help you avoid buggy servlets.</p>
           <a href="tipsAndTricks.html" title="Tips, Tricks and Troubleshooting"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Safe Delegation &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -29,7 +26,7 @@
     <link rel="next" title="History of Cheetah" href="history.html" />
     <link rel="prev" title="Design Decisions and Tradeoffs" href="design.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -46,7 +43,7 @@
           <a href="design.html" title="Design Decisions and Tradeoffs"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer’s Guide</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -85,7 +82,7 @@
   <div class="section" id="safe-delegation">
 <h1>Safe Delegation<a class="headerlink" href="#safe-delegation" title="Permalink to this headline">¶</a></h1>
 <p>(safeDelegation)</p>
-<p>Safe delegation, as provided by Zope and Allaire&#8217;s Spectra, is not
+<p>Safe delegation, as provided by Zope and Allaire’s Spectra, is not
 implemented in Cheetah. The core aim has been to help developers
 and template maintainers get things done, without throwing
 unnecessary complications in their way. So you should give write
@@ -98,18 +95,18 @@ configuration Setting {safeDelegationLevel} (0=none, 1=semi-secure,
 in case somebody wants to try them out and test them.</p>
 <p>Of course, you would also need to benchmark your code and verify it
 does not impact performance when safe delegation is off, and
-impacts it only modestly when it is on.&#8221; All necessary changes can
+impacts it only modestly when it is on.” All necessary changes can
 be made at compile time, so there should be no performance impact
 when filling the same TO multiple times.</p>
 <ol class="arabic simple">
 <li>Only give untrusted developers access to the .tmpl files.
-(Verifying what this means. Why can&#8217;t trusted developers access
+(Verifying what this means. Why can’t trusted developers access
 them?)</li>
 <li>Disable the {#attr} directive and maybe the {#set} directive.</li>
-<li>Use Cheetah&#8217;s directive validation hooks to disallow references
+<li>Use Cheetah’s directive validation hooks to disallow references
 to {self}, etc (e.g. {#if $steal(self.thePrivateVar)} )</li>
 <li>Implement a validator for the $placeholders and use it to
-disallow &#8216;__&#8217; in $placeholders so that tricks like
+disallow ‘__’ in $placeholders so that tricks like
 {$obj.__class__.__dict__} are not possible.</li>
 </ol>
 </div>
@@ -136,13 +133,13 @@ disallow &#8216;__&#8217; in $placeholders so that tricks like
           <a href="design.html" title="Design Decisions and Tradeoffs"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer’s Guide</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

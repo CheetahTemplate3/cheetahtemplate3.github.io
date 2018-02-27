@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Directives: Output &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -29,7 +26,7 @@
     <link rel="next" title="Files" href="files.html" />
     <link rel="prev" title="History of Cheetah" href="history.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -46,7 +43,7 @@
           <a href="history.html" title="History of Cheetah"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer’s Guide</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -137,7 +134,7 @@
 <span class="n">write</span><span class="p">(</span><span class="s1">&#39; example</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>OK, it&#8217;s not quite covert because that extra space gives it away,
+<p>OK, it’s not quite covert because that extra space gives it away,
 but it almost succeeds.</p>
 </div>
 <div class="section" id="raw">
@@ -327,16 +324,16 @@ the {maxlen} argument.</p>
 <span class="mi">21</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>As we&#8217;ve seen many times, Cheetah wraps all placeholder lookups in
+<p>As we’ve seen many times, Cheetah wraps all placeholder lookups in
 a {filter} call. (This also applies to non-searchList lookups:
-local, global and builtin variables.) The {filter} &#8220;function&#8221; is
+local, global and builtin variables.) The {filter} “function” is
 actually an alias to the current filter object:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">filter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_currentFilter</span>
 </pre></div>
 </div>
 <p>as set at the top of the main method. Here in lines 3-8 and 11-16
 we see the filter being changed. Whoops, I lied. {filter} is not an
-alias to the filter object itself but to that object&#8217;s {.filter}
+alias to the filter object itself but to that object’s {.filter}
 method. Line 19 switches back to the default filter.</p>
 <p>In line 17 we see the {maxlen} argument being passed as a keyword
 argument to {filter} (not to {VFS}). In line 20 the same thing
@@ -366,13 +363,13 @@ happens although the default filter ignores the argument.</p>
           <a href="history.html" title="History of Cheetah"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer’s Guide</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

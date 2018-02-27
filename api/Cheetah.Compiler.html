@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Cheetah.Compiler module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +24,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -70,7 +67,7 @@
   <div class="section" id="module-Cheetah.Compiler">
 <span id="cheetah-compiler-module"></span><h1>Cheetah.Compiler module<a class="headerlink" href="#module-Cheetah.Compiler" title="Permalink to this headline">¶</a></h1>
 <p>Compiler classes for Cheetah:
-ModuleCompiler aka &#8216;Compiler&#8217;
+ModuleCompiler aka ‘Compiler’
 ClassCompiler
 MethodCompiler</p>
 <p>If you are trying to grok this code start with ModuleCompiler.__init__,
@@ -266,7 +263,7 @@ this is used.</p>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>An abstract baseclass for the Compiler classes that provides methods that
 perform generic utility functions or generate pieces of output code from
-information passed in by the Parser baseclass.  These methods don&#8217;t do any
+information passed in by the Parser baseclass.  These methods don’t do any
 parsing themselves.</p>
 <dl class="method">
 <dt id="Cheetah.Compiler.GenUtils.addGetTextVar">
@@ -308,9 +305,9 @@ output in a dummy method that is never called.</p>
 useAC = where NameMapper should use autocalling on namemapperPart
 remainderOfExpr = any arglist, index, or slice</dd>
 </dl>
-<p>If remainderOfExpr contains a call arglist (e.g. &#8216;(1234)&#8217;) then useAC
+<p>If remainderOfExpr contains a call arglist (e.g. ‘(1234)’) then useAC
 is False, otherwise it defaults to True. It is overridden by the global
-setting &#8216;useAutocalling&#8217; if this setting is False.</p>
+setting ‘useAutocalling’ if this setting is False.</p>
 <p>EXAMPLE:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>if the raw Cheetah Var is
   $a.b.c[1].d().x.y.z
@@ -333,7 +330,8 @@ nameChunks is the list
 <p>where:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>VFN = NameMapper.valueForName
 VFFSL = NameMapper.valueFromFrameOrSearchList
-VFSL = NameMapper.valueFromSearchList # optionally used instead of VFFSL
+# optionally used instead of VFFSL
+VFSL = NameMapper.valueFromSearchList
 SL = self.searchList()
 useAC = self.setting(&#39;useAutocalling&#39;) # True in this example
 
@@ -352,10 +350,11 @@ A` = VFFSL(SL, name=A[0], executeCallables=(useAC and A[1]))A[2]
 </div>
 <p>Note, if the compiler setting useStackFrames=False (default is true)
 then:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>A` = VFSL([locals()]+SL+[globals(), builtin], name=A[0], executeCallables=(useAC and A[1]))A[2]
+<div class="highlight-default"><div class="highlight"><pre><span></span>A` = VFSL([locals()] + SL + [globals(), builtin],
+          name=A[0], executeCallables=(useAC and A[1]))A[2]
 </pre></div>
 </div>
-<p>This option allows Cheetah to be used with Psyco, which doesn&#8217;t support
+<p>This option allows Cheetah to be used with Psyco, which doesn’t support
 stack frame introspection.</p>
 </dd></dl>
 
@@ -445,7 +444,7 @@ stack frame introspection.</p>
 <dl class="method">
 <dt id="Cheetah.Compiler.MethodCompiler.addIf">
 <code class="descname">addIf</code><span class="sig-paren">(</span><em>expr</em>, <em>lineCol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addIf" title="Permalink to this definition">¶</a></dt>
-<dd><p>For a full #if ... #end if directive</p>
+<dd><p>For a full #if … #end if directive</p>
 </dd></dl>
 
 <dl class="method">
@@ -471,7 +470,7 @@ stack frame introspection.</p>
 <dl class="method">
 <dt id="Cheetah.Compiler.MethodCompiler.addOneLineIf">
 <code class="descname">addOneLineIf</code><span class="sig-paren">(</span><em>expr</em>, <em>lineCol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addOneLineIf" title="Permalink to this definition">¶</a></dt>
-<dd><p>For a full #if ... #end if directive</p>
+<dd><p>For a full #if … #end if directive</p>
 </dd></dl>
 
 <dl class="method">
@@ -532,7 +531,7 @@ stack frame introspection.</p>
 <dl class="method">
 <dt id="Cheetah.Compiler.MethodCompiler.addTernaryExpr">
 <code class="descname">addTernaryExpr</code><span class="sig-paren">(</span><em>conditionExpr</em>, <em>trueExpr</em>, <em>falseExpr</em>, <em>lineCol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addTernaryExpr" title="Permalink to this definition">¶</a></dt>
-<dd><p>For a single-lie #if ... then .... else ... directive
+<dd><p>For a single-lie #if … then …. else … directive
 &lt;condition&gt; then &lt;trueExpr&gt; else &lt;falseExpr&gt;</p>
 </dd></dl>
 
@@ -912,8 +911,8 @@ statements and Cheetah default module constants.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

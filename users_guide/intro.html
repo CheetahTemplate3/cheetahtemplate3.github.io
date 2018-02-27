@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Introduction &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -29,7 +26,7 @@
     <link rel="next" title="Vocabulary" href="glossary.html" />
     <link rel="prev" title="Cheetah User’s Guide" href="index.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -46,7 +43,7 @@
           <a href="index.html" title="Cheetah User’s Guide"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -57,7 +54,7 @@
 <li><a class="reference internal" href="#who-should-read-this-guide">Who should read this Guide?</a></li>
 <li><a class="reference internal" href="#what-is-cheetah">What is Cheetah?</a></li>
 <li><a class="reference internal" href="#what-is-the-philosophy-behind-cheetah">What is the philosophy behind Cheetah?</a><ul>
-<li><a class="reference internal" href="#why-cheetah-doesn-t-use-html-style-tags">Why Cheetah doesn&#8217;t use HTML-style tags</a></li>
+<li><a class="reference internal" href="#why-cheetah-doesn-t-use-html-style-tags">Why Cheetah doesn’t use HTML-style tags</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#give-me-an-example">Give me an example!</a></li>
@@ -78,7 +75,7 @@
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="index.html"
-                        title="previous chapter">Cheetah User&#8217;s Guide</a></p>
+                        title="previous chapter">Cheetah User’s Guide</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="glossary.html"
                         title="next chapter">Vocabulary</a></p>
@@ -111,12 +108,12 @@
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="who-should-read-this-guide">
 <h2>Who should read this Guide?<a class="headerlink" href="#who-should-read-this-guide" title="Permalink to this headline">¶</a></h2>
-<p>This Users&#8217; Guide provides a technical overview and reference for
+<p>This Users’ Guide provides a technical overview and reference for
 the Cheetah template system. Knowledge of Python and
 object-oriented programming is assumed. The emphasis in this Guide
 is on features useful in a wide variety of situations. Information
 on less common situations and troubleshooting tips are gradually
-being moved to the Cheetah FAQ. There is also a Cheetah Developer&#8217;s
+being moved to the Cheetah FAQ. There is also a Cheetah Developer’s
 Guide for those who want to know what goes on under the hood.</p>
 </div>
 <div class="section" id="what-is-cheetah">
@@ -151,12 +148,12 @@ class, so it can subclass a pure Python class and vice-versa.</li>
 </div>
 <div class="section" id="what-is-the-philosophy-behind-cheetah">
 <h2>What is the philosophy behind Cheetah?<a class="headerlink" href="#what-is-the-philosophy-behind-cheetah" title="Permalink to this headline">¶</a></h2>
-<p>Cheetah&#8217;s design was guided by these principles:</p>
+<p>Cheetah’s design was guided by these principles:</p>
 <ul>
 <li><p class="first">Python for the back end, Cheetah for the front end. Cheetah was
 designed to complement Python, not replace it.</p>
 </li>
-<li><p class="first">Cheetah&#8217;s core syntax should be easy for non-programmers to
+<li><p class="first">Cheetah’s core syntax should be easy for non-programmers to
 learn.</p>
 </li>
 <li><p class="first">Cheetah should make code reuse easy by providing an
@@ -167,19 +164,19 @@ Python code or other Cheetah templates.</p>
 fully accessible in Cheetah.</p>
 </li>
 <li><p class="first">Cheetah should provide flow control and error handling. Logic
-that belongs in the front end shouldn&#8217;t be relegated to the back
-end simply because it&#8217;s complex.</p>
+that belongs in the front end shouldn’t be relegated to the back
+end simply because it’s complex.</p>
 </li>
 <li><p class="first">It should be easy to <strong>separate</strong> content, graphic design, and
 program code, but also easy to <strong>integrate</strong>  them.</p>
 <p>A clean separation makes it easier for a team of content writers,
 HTML/graphic designers, and programmers to work together without
-stepping on each other&#8217;s toes and polluting each other&#8217;s work. The
+stepping on each other’s toes and polluting each other’s work. The
 HTML framework and the content it contains are two separate things,
 and analytical calculations (program code) is a third thing. Each
 team member should be able to concentrate on their specialty and to
 implement their changes without having to go through one of the
-others (i.e., the dreaded &#8220;webmaster bottleneck&#8221;).</p>
+others (i.e., the dreaded “webmaster bottleneck”).</p>
 <p>While it should be easy to develop content, graphics and program
 code separately, it should be easy to integrate them together into
 a website. In particular, it should be easy:</p>
@@ -198,7 +195,7 @@ designers have created.</li>
 </li>
 </ul>
 <div class="section" id="why-cheetah-doesn-t-use-html-style-tags">
-<h3>Why Cheetah doesn&#8217;t use HTML-style tags<a class="headerlink" href="#why-cheetah-doesn-t-use-html-style-tags" title="Permalink to this headline">¶</a></h3>
+<h3>Why Cheetah doesn’t use HTML-style tags<a class="headerlink" href="#why-cheetah-doesn-t-use-html-style-tags" title="Permalink to this headline">¶</a></h3>
 <p>Cheetah does not use HTML/XML-style tags like some other template
 languages for the following reasons: Cheetah is not limited to
 HTML, HTML-style tags are hard to distinguish from real HTML tags,
@@ -206,7 +203,7 @@ HTML-style tags are not visible in rendered HTML when something
 goes wrong, HTML-style tags often lead to invalid HTML (e.g., <code class="docutils literal"><span class="pre">&lt;img</span>
 <span class="pre">src=&quot;&lt;template-directive&gt;&quot;&gt;</span></code>), Cheetah tags are less verbose and
 easier to understand than HTML-style tags, and HTML-style tags
-aren&#8217;t compatible with most WYSIWYG editors</p>
+aren’t compatible with most WYSIWYG editors</p>
 <p>Besides being much more compact, Cheetah also has some advantages
 over languages that put information inside the HTML tags, such as
 Zope Page Templates or PHP: HTML or XML-bound languages do not work
@@ -220,7 +217,7 @@ hard to confirm or modify that logic.</p>
 </div>
 <div class="section" id="give-me-an-example">
 <h2>Give me an example!<a class="headerlink" href="#give-me-an-example" title="Permalink to this headline">¶</a></h2>
-<p>Here&#8217;s a very simple example that illustrates some of Cheetah&#8217;s
+<p>Here’s a very simple example that illustrates some of Cheetah’s
 basic syntax:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>&lt;HTML&gt;
 &lt;HEAD&gt;&lt;TITLE&gt;$title&lt;/TITLE&gt;&lt;/HEAD&gt;
@@ -264,7 +261,7 @@ definition into an object-oriented Python module.</p>
 </div>
 <div class="section" id="give-me-an-example-of-a-webware-servlet">
 <h2>Give me an example of a Webware servlet!<a class="headerlink" href="#give-me-an-example-of-a-webware-servlet" title="Permalink to this headline">¶</a></h2>
-<p>This example uses an HTML form to ask the user&#8217;s name, then invokes
+<p>This example uses an HTML form to ask the user’s name, then invokes
 itself again to display a <strong>personalized</strong> friendly greeting.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>&lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;My Template-Servlet&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;
 #set $name = $request.field(&#39;name&#39;, None)
@@ -288,20 +285,20 @@ Webware servlet directory.</li>
 <li>In your web browser, go to <code class="docutils literal"><span class="pre">test.py</span></code>, using whatever site and
 directory is appropriate.</li>
 </ol>
-<p>At the first request, field &#8216;name&#8217; will be blank (false) so the
-&#8220;#else&#8221; portion will execute and present a form. You type your name
-and press submit. The form invokes the same page. Now &#8216;name&#8217; is
-true so the &#8220;#if&#8221; portion executes, which displays the greeting.
-The &#8220;#set&#8221; directive creates a local variable that lasts while the
+<p>At the first request, field ‘name’ will be blank (false) so the
+“#else” portion will execute and present a form. You type your name
+and press submit. The form invokes the same page. Now ‘name’ is
+true so the “#if” portion executes, which displays the greeting.
+The “#set” directive creates a local variable that lasts while the
 template is being filled.</p>
 </div>
 <div class="section" id="how-mature-is-cheetah">
 <h2>How mature is Cheetah?<a class="headerlink" href="#how-mature-is-cheetah" title="Permalink to this headline">¶</a></h2>
-<p>Cheetah is stable, production quality, post-beta code. Cheetah&#8217;s
+<p>Cheetah is stable, production quality, post-beta code. Cheetah’s
 syntax, semantics and performance have been generally stable since
 a performance overhaul in mid 2001. Most of the changes since
 October 2001 have been in response to specific requests by
-production sites, things they need that we hadn&#8217;t considered.</p>
+production sites, things they need that we hadn’t considered.</p>
 <p>As of summer 2003, we are putting in the final touches before the
 1.0 release.</p>
 </div>
@@ -340,25 +337,25 @@ appreciate any contributions.</p>
 <h3>Test cases<a class="headerlink" href="#test-cases" title="Permalink to this headline">¶</a></h3>
 <p>Cheetah is packaged with a regression testing suite that is run
 with each new release to ensure that everything is working as
-expected and that recent changes haven&#8217;t broken anything. The test
+expected and that recent changes haven’t broken anything. The test
 cases are in the Cheetah.Tests module. If you find a reproduceable
 bug please consider writing a test case that will pass only when
 the bug is fixed. Send any new test cases to the email list with
-the subject-line &#8220;new test case for Cheetah.&#8221;</p>
+the subject-line “new test case for Cheetah.”</p>
 </div>
 <div class="section" id="publicity">
 <h3>Publicity<a class="headerlink" href="#publicity" title="Permalink to this headline">¶</a></h3>
-<p>Help spread the word ... recommend it to others, write articles
+<p>Help spread the word … recommend it to others, write articles
 about it, etc.</p>
 </div>
 </div>
 <div class="section" id="acknowledgements">
 <h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
 <p>Cheetah is one of several templating frameworks that grew out of a
-&#8216;templates&#8217; thread on the Webware For Python email list. Tavis
+‘templates’ thread on the Webware For Python email list. Tavis
 Rudd, Mike Orr, Chuck Esterbrook and Ian Bicking are the core
 developers.</p>
-<p>We&#8217;d like to thank the following people for contributing valuable
+<p>We’d like to thank the following people for contributing valuable
 advice, code and encouragement: Geoff Talvola, Jeff Johnson, Graham
 Dumpleton, Clark C. Evans, Craig Kattner, Franz Geiger, Geir
 Magnusson, Tom Schwaller, Rober Kuzelj, Jay Love, Terrel Shumway,
@@ -393,13 +390,13 @@ of their developers. Thank you.</p>
           <a href="index.html" title="Cheetah User’s Guide"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

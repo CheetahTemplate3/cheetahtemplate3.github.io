@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Vocabulary &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -29,7 +26,7 @@
     <link rel="next" title="Getting Started" href="gettingStarted.html" />
     <link rel="prev" title="Introduction" href="intro.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -46,7 +43,7 @@
           <a href="intro.html" title="Introduction"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -100,7 +97,7 @@ prerequisite: the { Cheetah compiler} takes a template definition
 and produces Python code to create the finished string. Cheetah
 provides several ways to compile and fill templates, either as one
 step or two.</p>
-<p>Cheetah&#8217;s compiler produces a subclass of {Cheetah.Template}
+<p>Cheetah’s compiler produces a subclass of {Cheetah.Template}
 specific to that template definition; this is called the {
 generated class}. A { template instance} is an instance of a
 generated class.</p>
@@ -109,9 +106,9 @@ a subclass constructor), s/he will get what appears to be an
 instance of {Template} but is actually a subclass created
 on-the-fly.</p>
 <p>The user can make the subclass explicit by using the
-&#8220;cheetah compile&#8221; command to write the template class to a Python
+“cheetah compile” command to write the template class to a Python
 module. Such a module is called a { .py template module}.</p>
-<p>The { Template Definition Language} - or the &#8220;Cheetah language&#8221; for
+<p>The { Template Definition Language} - or the “Cheetah language” for
 short - is the syntax rules governing placeholders and directives.
 These are discussed in sections language and following in this
 Guide.</p>
@@ -121,7 +118,7 @@ Guide.</p>
 inheritanceEtc.implements.</p>
 <p>A { template-servlet} is a .py template module in a Webware servlet
 directory. Such templates can be filled directly through the web by
-requesting the URL. &#8220;Template-servlet&#8221; can also refer to the
+requesting the URL. “Template-servlet” can also refer to the
 instance being filled by a particular web request. If a Webware
 servlet that is not a template-servlet invokes a template, that
 template is not a template-servlet either.</p>
@@ -144,17 +141,17 @@ first are looked up only in the parent object. The final value
 after all lookups have been performed is the { placeholder value}.</p>
 <p>Placeholders may occur in three positions: top-level, expression
 and LVALUE. { Top-level} placeholders are those in ordinary text
-(&#8220;top-level text&#8221;). { Expression} placeholders are those in Python
+(“top-level text”). { Expression} placeholders are those in Python
 expressions. { LVALUE} placeholders are those naming a variable to
 receive a value. (LVALUE is computerese for
-&#8220;the left side of the equal sign&#8221;.) Section
+“the left side of the equal sign”.) Section
 language.placeholders.positions explains the differences between
 these three positions.</p>
 <p>The routine that does the placeholder lookups is called the {
-NameMapper}. Cheetah&#8217;s NameMapper supports universal dotted
+NameMapper}. Cheetah’s NameMapper supports universal dotted
 notation and autocalling. { Universal dotted notation} means that
 keys may be written as if they were attributes: {a.b} instead of
-{a[&#8216;b&#8217;]}. { Autocalling} means that if any identifier&#8217;s value is
+{a[‘b’]}. { Autocalling} means that if any identifier’s value is
 found to be a function or method, Cheetah will call it without
 arguments if there is no <code class="docutils literal"><span class="pre">()</span></code> following. More about the
 NameMapper is in section language.namemapper.</p>
@@ -188,13 +185,13 @@ Rules).</p>
           <a href="intro.html" title="Introduction"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

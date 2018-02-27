@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Flow Control &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -29,7 +26,7 @@
     <link rel="next" title="Error Handling" href="errorHandling.html" />
     <link rel="prev" title="Import, Inheritance, Declaration and Assignment" href="inheritanceEtc.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -46,7 +43,7 @@
           <a href="inheritanceEtc.html" title="Import, Inheritance, Declaration and Assignment"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -54,11 +51,11 @@
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Flow Control</a><ul>
-<li><a class="reference internal" href="#for-end-for">#for ... #end for</a></li>
-<li><a class="reference internal" href="#repeat-end-repeat">#repeat ... #end repeat</a></li>
-<li><a class="reference internal" href="#while-end-while">#while ... #end while</a></li>
-<li><a class="reference internal" href="#if-else-if-else-end-if">#if ... #else if ... #else ... #end if</a></li>
-<li><a class="reference internal" href="#unless-end-unless">#unless ... #end unless</a></li>
+<li><a class="reference internal" href="#for-end-for">#for … #end for</a></li>
+<li><a class="reference internal" href="#repeat-end-repeat">#repeat … #end repeat</a></li>
+<li><a class="reference internal" href="#while-end-while">#while … #end while</a></li>
+<li><a class="reference internal" href="#if-else-if-else-end-if">#if … #else if … #else … #end if</a></li>
+<li><a class="reference internal" href="#unless-end-unless">#unless … #end unless</a></li>
 <li><a class="reference internal" href="#break-and-continue">#break and #continue</a></li>
 <li><a class="reference internal" href="#pass">#pass</a></li>
 <li><a class="reference internal" href="#stop">#stop</a></li>
@@ -102,7 +99,7 @@
 <h1>Flow Control<a class="headerlink" href="#flow-control" title="Permalink to this headline">¶</a></h1>
 <p>(flowControl)</p>
 <div class="section" id="for-end-for">
-<h2>#for ... #end for<a class="headerlink" href="#for-end-for" title="Permalink to this headline">¶</a></h2>
+<h2>#for … #end for<a class="headerlink" href="#for-end-for" title="Permalink to this headline">¶</a></h2>
 <p>(flowControl.for)</p>
 <p>Syntax:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#for $var in EXPR</span>
@@ -111,7 +108,7 @@
 </div>
 <p>The {#for} directive iterates through a sequence. The syntax is the
 same as Python, but remember the {$} before variables.</p>
-<p>Here&#8217;s a simple client listing:</p>
+<p>Here’s a simple client listing:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>&lt;TABLE&gt;
 #for $client in $service.clients
 &lt;TR&gt;
@@ -122,7 +119,7 @@ same as Python, but remember the {$} before variables.</p>
 &lt;/TABLE&gt;
 </pre></div>
 </div>
-<p>Here&#8217;s how to loop through the keys and values of a dictionary:</p>
+<p>Here’s how to loop through the keys and values of a dictionary:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>&lt;PRE&gt;
 #for $key, $value in $dict.items()
 $key: $value
@@ -130,8 +127,8 @@ $key: $value
 &lt;/PRE&gt;
 </pre></div>
 </div>
-<p>Here&#8217;s how to create list of numbers separated by hyphens. This
-&#8220;#end for&#8221; tag shares the last line to avoid introducing a newline
+<p>Here’s how to create list of numbers separated by hyphens. This
+“#end for” tag shares the last line to avoid introducing a newline
 character after each hyphen.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#for $i in range(15)
 $i - #end for
@@ -145,7 +142,7 @@ $i - #slurp
 </pre></div>
 </div>
 <p>The previous two examples will put an extra hyphen after last
-number. Here&#8217;s how to get around that problem, using the {#set}
+number. Here’s how to get around that problem, using the {#set}
 directive, which will be dealt with in more detail below.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#set $sep = &#39;&#39;
 #for $name in $names
@@ -154,14 +151,14 @@ $sep$name
 #end for
 </pre></div>
 </div>
-<p>Although to just put a separator between strings, you don&#8217;t need a
+<p>Although to just put a separator between strings, you don’t need a
 for loop:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#echo &#39;, &#39;.join($names)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="repeat-end-repeat">
-<h2>#repeat ... #end repeat<a class="headerlink" href="#repeat-end-repeat" title="Permalink to this headline">¶</a></h2>
+<h2>#repeat … #end repeat<a class="headerlink" href="#repeat-end-repeat" title="Permalink to this headline">¶</a></h2>
 <p>(flowControl.repeat)</p>
 <p>Syntax:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#repeat EXPR</span>
@@ -169,7 +166,7 @@ for loop:</p>
 </pre></div>
 </div>
 <p>Do something a certain number of times. The argument may be any
-numeric expression. If it&#8217;s zero or negative, the loop will execute
+numeric expression. If it’s zero or negative, the loop will execute
 zero times.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#repeat $times + 3</span>
 <span class="n">She</span> <span class="n">loves</span> <span class="n">me</span><span class="p">,</span> <span class="n">she</span> <span class="n">loves</span> <span class="n">me</span> <span class="ow">not</span><span class="o">.</span>
@@ -177,9 +174,9 @@ zero times.</p>
 <span class="n">She</span> <span class="n">loves</span> <span class="n">me</span><span class="o">.</span>
 </pre></div>
 </div>
-<p>Inside the loop, there&#8217;s no way to tell which iteration you&#8217;re on.
-If you need a counter variable, use {#for} instead with Python&#8217;s
-{range} function. Since Python&#8217;s ranges are base 0 by default,
+<p>Inside the loop, there’s no way to tell which iteration you’re on.
+If you need a counter variable, use {#for} instead with Python’s
+{range} function. Since Python’s ranges are base 0 by default,
 there are two ways to start counting at 1. Say we want to count
 from 1 to 5, and that {$count} is 5.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#for $i in $range($count)
@@ -199,14 +196,14 @@ nested. The current implementation does not have this problem as it
 uses a new local variable for every instance of {#repeat}.</p>
 </div>
 <div class="section" id="while-end-while">
-<h2>#while ... #end while<a class="headerlink" href="#while-end-while" title="Permalink to this headline">¶</a></h2>
+<h2>#while … #end while<a class="headerlink" href="#while-end-while" title="Permalink to this headline">¶</a></h2>
 <p>(flowControl.while)</p>
 <p>Syntax:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#while EXPR</span>
 <span class="c1">#end while</span>
 </pre></div>
 </div>
-<p>{#while} is the same as Python&#8217;s {while} statement. It may be
+<p>{#while} is the same as Python’s {while} statement. It may be
 followed by any boolean expression:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#while $someCondition(&#39;arg1&#39;, $arg2)</span>
 <span class="n">The</span> <span class="n">condition</span> <span class="ow">is</span> <span class="n">true</span><span class="o">.</span>
@@ -217,7 +214,7 @@ followed by any boolean expression:</p>
 until the computer runs out of memory.</p>
 </div>
 <div class="section" id="if-else-if-else-end-if">
-<h2>#if ... #else if ... #else ... #end if<a class="headerlink" href="#if-else-if-else-end-if" title="Permalink to this headline">¶</a></h2>
+<h2>#if … #else if … #else … #end if<a class="headerlink" href="#if-else-if-else-end-if" title="Permalink to this headline">¶</a></h2>
 <p>(flowControl.if)</p>
 <p>Syntax:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#if EXPR</span>
@@ -231,7 +228,7 @@ until the computer runs out of memory.</p>
 text conditionally. {#if} and {#else if} should be followed by a
 true/false expression, while {#else} should not. Any valid Python
 expression is allowed. As in Python, the expression is true unless
-it evaluates to 0, &#8216;&#8217;, None, an empty list, or an empty dictionary.
+it evaluates to 0, ‘’, None, an empty list, or an empty dictionary.
 In deference to Python, {#elif} is accepted as a synonym for {#else
 if}.</p>
 <p>Here are some examples:</p>
@@ -249,7 +246,7 @@ The item $item.name is OK.
 #end if
 </pre></div>
 </div>
-<p>Here&#8217;s an example that combines an {#if} tag with a {#for} tag.</p>
+<p>Here’s an example that combines an {#if} tag with a {#for} tag.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#if $people
 &lt;table&gt;
 &lt;tr&gt;
@@ -271,10 +268,10 @@ The item $item.name is OK.
 </pre></div>
 </div>
 <p>See section output.oneLineIf for the one-line {#if} directive,
-which is equivalent to Perl&#8217;s and C&#8217;s {?:} operator.</p>
+which is equivalent to Perl’s and C’s {?:} operator.</p>
 </div>
 <div class="section" id="unless-end-unless">
-<h2>#unless ... #end unless<a class="headerlink" href="#unless-end-unless" title="Permalink to this headline">¶</a></h2>
+<h2>#unless … #end unless<a class="headerlink" href="#unless-end-unless" title="Permalink to this headline">¶</a></h2>
 <p>(flowControl.unless)</p>
 <p>Syntax:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#unless EXPR</span>
@@ -305,7 +302,7 @@ If you need those, use {#if} instead.</p>
 <p>These directives are used as in Python. {#break} will exit a {#for}
 loop prematurely, while {#continue} will immediately jump to the
 next iteration in the {#for} loop.</p>
-<p>In this example the output list will not contain &#8220;10 -&#8221;.</p>
+<p>In this example the output list will not contain “10 -“.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#for $i in range(15)
 #if $i == 10
   #continue
@@ -315,7 +312,7 @@ $i - #slurp
 </pre></div>
 </div>
 <p>In this example the loop will exit if it finds a name that equals
-&#8216;Joe&#8217;:</p>
+‘Joe’:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#for $name in $names
 #if $name == &#39;Joe&#39;
   #break
@@ -471,13 +468,13 @@ $test
           <a href="inheritanceEtc.html" title="Import, Inheritance, Declaration and Assignment"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

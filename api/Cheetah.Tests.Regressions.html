@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Cheetah.Tests.Regressions module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +24,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -145,13 +142,13 @@ causing NameMapper to raise a NotFound exception</p>
 Traceback (most recent call last):</p>
 <blockquote>
 <div><dl class="docutils">
-<dt>File &#8220;test.py&#8221;, line 12, in &lt;module&gt;</dt>
+<dt>File “test.py”, line 12, in &lt;module&gt;</dt>
 <dd>t.respond()</dd>
 </dl>
-<p>File &#8220;DynamicallyCompiledCheetahTemplate.py&#8221;, line 86, in respond
-File &#8220;/usr/lib64/python2.6/cgi.py&#8221;, line 1035, in escape</p>
+<p>File “DynamicallyCompiledCheetahTemplate.py”, line 86, in respond
+File “/usr/lib64/python2.6/cgi.py”, line 1035, in escape</p>
 <blockquote>
-<div>s = s.replace(&#8220;&amp;&#8221;, &#8220;&amp;&#8221;) # Must be done first!</div></blockquote>
+<div>s = s.replace(“&amp;”, “&amp;”) # Must be done first!</div></blockquote>
 </div></blockquote>
 <dl class="method">
 <dt id="Cheetah.Tests.Regressions.Mantis_Issue_11_Regression_Test.test_FailingBehavior">
@@ -171,7 +168,7 @@ File &#8220;/usr/lib64/python2.6/cgi.py&#8221;, line 1035, in escape</p>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">unittest.case.TestCase</span></code></p>
 <p>Test case for bug outlined in issue #21</p>
 <p>Effectively &#64;staticmethod and &#64;classmethod
-decorated methods in templates don&#8217;t
+decorated methods in templates don’t
 properly define the _filter local, which breaks
 when using the NameMapper</p>
 <dl class="method">
@@ -224,8 +221,8 @@ on the <cite>self</cite> local, breaking the function</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Cheetah3, the Python-Powered Template Engine &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
@@ -28,7 +25,7 @@
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Authors and contributors" href="authors.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -96,11 +93,11 @@
 <p>Cheetah3 is a free (BSD-style) and <a class="reference external" href="https://github.com/CheetahTemplate3/cheetah3">open source</a> template engine and
 code-generation tool written in <a class="reference external" href="http://python.org">Python</a>. Cheetah can be
 used unto itself, or incorporated with other technologies and stacks regardless
-of whether they&#8217;re written in Python or not.</p>
+of whether they’re written in Python or not.</p>
 <p>At its core, Cheetah is a domain-specific language for markup generation and
 templating which allows for full integration with existing Python code but also
 offers extensions to traditional Python syntax to allow for easier text-generation.</p>
-<p>It&#8217;s a fork of the <a class="reference external" href="https://github.com/cheetahtemplate/cheetah">original</a>
+<p>It’s a fork of the <a class="reference external" href="https://github.com/cheetahtemplate/cheetah">original</a>
 CheetahTemplate library.</p>
 <div class="section" id="talk-cheetah">
 <h3>Talk Cheetah<a class="headerlink" href="#talk-cheetah" title="Permalink to this headline">¶</a></h3>
@@ -112,7 +109,12 @@ tracker</a>.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="authors.html">Authors and contributors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="news.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="news.html">News</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="news.html#development-master">Development (master)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="news.html#id1">3.0.1 (2018-02-27)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="news.html#id2">3.0.0 (2017-05-07)</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="developers.html">Contributing to Cheetah</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="developers.html#getting-the-code">Getting the Code</a></li>
 <li class="toctree-l2"><a class="reference internal" href="developers.html#development-process">Development Process</a></li>
@@ -120,7 +122,7 @@ tracker</a>.</p>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">Downloading Cheetah</a></li>
-<li class="toctree-l1"><a class="reference internal" href="users_guide/index.html">Cheetah User&#8217;s Guide</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="users_guide/index.html">Cheetah User’s Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="users_guide/intro.html">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="users_guide/glossary.html">Vocabulary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="users_guide/gettingStarted.html">Getting Started</a></li>
@@ -146,7 +148,7 @@ tracker</a>.</p>
 <li class="toctree-l2"><a class="reference internal" href="recipes/inheritance.html">Basic Inheritance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="recipes/precompiled.html">Precompiled Templates</a></li>
 <li class="toctree-l2"><a class="reference internal" href="recipes/staticmethod.html">&#64;staticmethod and &#64;classmethod</a></li>
-<li class="toctree-l2"><a class="reference internal" href="recipes/writing_a_recipe.html">Writing a &#8220;Recipe&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recipes/writing_a_recipe.html">Writing a “Recipe”</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="roadmap.html">Cheetah Roadmap</a><ul>
@@ -154,7 +156,7 @@ tracker</a>.</p>
 <li class="toctree-l2"><a class="reference internal" href="roadmap.html#cheetah-v2">Cheetah v2</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="dev_guide/index.html">Cheetah Developer&#8217;s Guide</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="dev_guide/index.html">Cheetah Developer’s Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="dev_guide/index.html#overview">Overview</a></li>
 </ul>
 </li>
@@ -168,9 +170,9 @@ tracker</a>.</p>
 </div>
 <div class="section" id="cheetah-in-a-nutshell">
 <h2>Cheetah in a nutshell<a class="headerlink" href="#cheetah-in-a-nutshell" title="Permalink to this headline">¶</a></h2>
-<p>Below is a simple example of some Cheetah code, as you can see it&#8217;s practically
+<p>Below is a simple example of some Cheetah code, as you can see it’s practically
 Python. You can import, inherit and define methods just like in a regular Python
-module, since that&#8217;s what your Cheetah templates are compiled to :)</p>
+module, since that’s what your Cheetah templates are compiled to :)</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#from Cheetah.Template import Template
 #extends Template
 
@@ -236,8 +238,8 @@ module, since that&#8217;s what your Cheetah templates are compiled to :)</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>non-Webware HTML output &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -29,7 +26,7 @@
     <link rel="next" title="Non-HTML Output" href="nonHtml.html" />
     <link rel="prev" title="Using Cheetah with Webware" href="webware.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -46,7 +43,7 @@
           <a href="webware.html" title="Using Cheetah with Webware"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -105,7 +102,7 @@ servers running completely different software from the main site.
 Even dynamic sites may have one or two pages that are static for
 whatever reason, and the site administrator may wish to generate
 those pages from Cheetah templates.</p>
-<p>There&#8217;s nothing special here. Just create your templates as usual.
+<p>There’s nothing special here. Just create your templates as usual.
 Then compile and fill them whenever the template definition
 changes, and fill them again whenever the placeholder values
 change. You may need an extra step to copy the .html files to their
@@ -115,7 +112,7 @@ encapsulate these steps.</p>
 <div class="section" id="cgi-scripts">
 <h2>CGI scripts<a class="headerlink" href="#cgi-scripts" title="Permalink to this headline">¶</a></h2>
 <p>(otherHTML)</p>
-<p>Unlike Webware servlets, which don&#8217;t have to worry about the HTTP
+<p>Unlike Webware servlets, which don’t have to worry about the HTTP
 headers, CGI scripts must emit their own headers. To make a
 template CGI aware, add this at the top:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#extends Cheetah.Tools.CGITemplate
@@ -138,39 +135,39 @@ $cgiHeaders#slurp
 </div>
 <p>Compile the template as usual, put the .py template module in your
 cgi-bin directory and give it execute permission. {.cgiHeaders()}
-is a &#8220;smart&#8221; method that outputs the headers if the module is
+is a “smart” method that outputs the headers if the module is
 called as a CGI script, or outputs nothing if not. Being
-&#8220;called as a CGI script&#8221; means the environmental variable
+“called as a CGI script” means the environmental variable
 {REQUEST_METHOD} exists and {self.isControlledByWebKit} is false.
-If you don&#8217;t agree with that definition, override {.isCgi()} and
+If you don’t agree with that definition, override {.isCgi()} and
 provide your own.</p>
 <p>The default header is a simple <code class="docutils literal"><span class="pre">Content-type:</span> <span class="pre">text/html\n\n</span></code>,
 which works with all CGI scripts. If you want to customize the
 headers (e.g., to specify the character set), override
 {.cgiHeadersHook()} and return a string containing all the headers.
-Don&#8217;t forget to include the extra newline at the end of the string:
+Don’t forget to include the extra newline at the end of the string:
 the HTTP protocol requires this empty line to mark the end of the
 headers.</p>
 <p>To read GET/POST variables from form input, use the {.webInput()}
 method (section webware.webInput), or extract them yourself using
-Python&#8217;s {cgi} module or your own function. Although {.webInput()}
+Python’s {cgi} module or your own function. Although {.webInput()}
 was originally written for Webware servlets, it now handles CGI
 scripts too. There are a couple behavioral differences between CGI
 scripts and Webware servlets regarding input variables:</p>
 <ol class="arabic simple">
-<li>CGI scripts, using Python&#8217;s {cgi} module, believe
+<li>CGI scripts, using Python’s {cgi} module, believe
 {REQUEST_METHOD} and recognize { either} GET variables { or} POST
 variables, not both. Webware servlets, doing additional processing,
 ignore {REQUEST_METHOD} and recognize both, like PHP does.</li>
 <li>Webware servlets can ask for cookies or session variables
-instead of GET/POST variables, by passing the argument {src=&#8217;c&#8217;} or
-{src=&#8217;s&#8217;}. CGI scripts get a {RuntimeError} if they try to do
+instead of GET/POST variables, by passing the argument {src=’c’} or
+{src=’s’}. CGI scripts get a {RuntimeError} if they try to do
 this.</li>
 </ol>
 <p>If you keep your .tmpl files in the same directory as your CGI
-scripts, make sure they don&#8217;t have execute permission. Apache at
+scripts, make sure they don’t have execute permission. Apache at
 least refuses to serve files in a {ScriptAlias} directory that
-don&#8217;t have execute permission.</p>
+don’t have execute permission.</p>
 </div>
 </div>
 
@@ -196,13 +193,13 @@ don&#8217;t have execute permission.</p>
           <a href="webware.html" title="Using Cheetah with Webware"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

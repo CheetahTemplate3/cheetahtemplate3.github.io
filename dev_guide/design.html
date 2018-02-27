@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Design Decisions and Tradeoffs &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -29,7 +26,7 @@
     <link rel="next" title="Safe Delegation" href="safeDelegation.html" />
     <link rel="prev" title="Directives: Flow Control" href="flowControl.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -46,7 +43,7 @@
           <a href="flowControl.html" title="Directives: Flow Control"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer’s Guide</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -101,7 +98,7 @@
 <h2>Delimiters<a class="headerlink" href="#delimiters" title="Permalink to this headline">¶</a></h2>
 <p>(design.Delimiters)</p>
 <p>One of the first decisions we encountered was which delimiter
-syntax to use. We decided to follow Velocity&#8217;s {$placeholder} and
+syntax to use. We decided to follow Velocity’s {$placeholder} and
 {#directive} syntax because the former is widely used in other
 languages for the same purpose, and the latter stands out in an
 HTML or text document. We also implemented the
@@ -110,20 +107,20 @@ Cheetah or you might be confused where a placeholder ends. Tavis
 went ahead and made <code class="docutils literal"><span class="pre">${longPlaceholder}</span></code> and
 <code class="docutils literal"><span class="pre">$[longPlaceholder]</span></code> interchangeable with it since it was trivial
 to implement. Finally, the {#compiler} directive allows you to
-change the delimiters if you don&#8217;t like them or if they conflict
+change the delimiters if you don’t like them or if they conflict
 with the text in your document. (Obviously, if your document
-contains a Perl program listing, you don&#8217;t necessarily want to
+contains a Perl program listing, you don’t necessarily want to
 backslash each and every {$} and {#}, do you?)</p>
 <p>The choice of comment delimiters was more arbitrary. {##} and {#*
-... *#} doesn&#8217;t match any language, but it&#8217;s reminiscent of Python
-and C while also being consistent with our &#8220;{#} is for directives&#8221;
+… *#} doesn’t match any language, but it’s reminiscent of Python
+and C while also being consistent with our “{#} is for directives”
 convention.</p>
 <p>We specifically chose { not} to use pseudo HTML tags for
 placeholders and directives, as described more thoroughly in the
-Cheetah Users&#8217; Guide introduction. Pseudo HTML tags may be easier
-to see in a visual editor (supposedly), but in text editors they&#8217;re
-hard to distinguish from &#8220;real&#8221; HTML tags unless you look closely,
-and they&#8217;re many more keystrokes to type. Also, if you make a
+Cheetah Users’ Guide introduction. Pseudo HTML tags may be easier
+to see in a visual editor (supposedly), but in text editors they’re
+hard to distinguish from “real” HTML tags unless you look closely,
+and they’re many more keystrokes to type. Also, if you make a
 mistake, the tag will show up as literal text in the rendered HTML
 page where it will be easy to notice and eradicate, rather than
 disappearing as bogus HTML tags do in browsers.</p>
@@ -131,7 +128,7 @@ disappearing as bogus HTML tags do in browsers.</p>
 <div class="section" id="late-binding">
 <h2>Late binding<a class="headerlink" href="#late-binding" title="Permalink to this headline">¶</a></h2>
 <p>(design.lateBinding)</p>
-<p>One of Cheetah&#8217;s unique features is the name mapper, which lets you
+<p>One of Cheetah’s unique features is the name mapper, which lets you
 write {$a.b} without worrying much about the type of {a} or {b}.
 Prior to version 0.9.7, Cheetah did the entire NameMapper lookup at
 runtime. This provided maximum flexibility at the expense of speed.
@@ -144,28 +141,28 @@ string.</p>
 <p>To maximize run-time (filling-time) performance, Cheetah 0.9.7
 pushed much of this work back into the compiler. The compiler
 looked up {a} in the searchList at compile time, noted its type,
-and generated an eval&#8217;able Python expression based on that.</p>
+and generated an eval’able Python expression based on that.</p>
 <p>This approach had two significant drawbacks. What if {a} later
 changes type before a template filling? Answer: unpredictable
 exceptions occur. What if {a} does not exist in the searchList at
-compile time? Answer: the template can&#8217;t compile.</p>
+compile time? Answer: the template can’t compile.</p>
 <p>To prevent these catastrophes, users were required to prepopulate
 the searchList before instantiating the template instance, and then
-not to change {a}&#8217;s type. Static typing is repugnant in a dynamic
+not to change {a}’s type. Static typing is repugnant in a dynamic
 language like Python, and having to prepopulate the searchList made
-certain usages impossible. For example, you couldn&#8217;t instantiate
+certain usages impossible. For example, you couldn’t instantiate
 the template object without a searchList and then set {self}
 attributes to specify the values.</p>
 <p>After significant user complaints about the fragility of this
 system, Tavis rewrote placeholder handling, and in version 0.9.8a3
 (August 2001), Tavis moved the name mapper lookup back into
-runtime. Performance wasn&#8217;t crippled because he discovered that
+runtime. Performance wasn’t crippled because he discovered that
 writing a C version of the name mapper was easier than anticipated,
 and the C version completed the lookup quickly. Now Cheetah had
-&#8220;late binding&#8221;, meaning the compiler does not look up {a} or care
+“late binding”, meaning the compiler does not look up {a} or care
 whether it exists. This allows users to create {a} or change its
 type anytime before a template filling.</p>
-<p>The lesson we learned is that it&#8217;s better to decide what you want
+<p>The lesson we learned is that it’s better to decide what you want
 and then figure out how to do it, rather than assuming that certain
 goals are unattainable due to performance considerations.</p>
 </div>
@@ -205,13 +202,13 @@ goals are unattainable due to performance considerations.</p>
           <a href="flowControl.html" title="Directives: Flow Control"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer’s Guide</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

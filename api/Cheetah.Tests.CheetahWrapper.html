@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Cheetah.Tests.CheetahWrapper module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +24,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -69,11 +66,11 @@
             
   <div class="section" id="module-Cheetah.Tests.CheetahWrapper">
 <span id="cheetah-tests-cheetahwrapper-module"></span><h1>Cheetah.Tests.CheetahWrapper module<a class="headerlink" href="#module-Cheetah.Tests.CheetahWrapper" title="Permalink to this headline">¶</a></h1>
-<p>Tests for the &#8216;cheetah&#8217; command.</p>
+<p>Tests for the ‘cheetah’ command.</p>
 <dl class="docutils">
 <dt>Besides unittest usage, recognizes the following command-line options:</dt>
 <dd><dl class="first last docutils">
-<dt>&#8211;list CheetahWrapper.py</dt>
+<dt>–list CheetahWrapper.py</dt>
 <dd><blockquote class="first">
 <div>List all scenarios that are tested.  The argument is the path
 of this script.</div></blockquote>
@@ -83,7 +80,7 @@ of this script.</div></blockquote>
 <tbody valign="top">
 <tr><td class="option-group">
 <kbd><span class="option">--nodelete</span></kbd></td>
-<td>Don&#8217;t delete scratch directory at end.</td></tr>
+<td>Don’t delete scratch directory at end.</td></tr>
 <tr><td class="option-group">
 <kbd><span class="option">--output</span></kbd></td>
 <td>Show the output of each subcommand.  (Normally suppressed.)</td></tr>
@@ -97,7 +94,7 @@ of this script.</div></blockquote>
 <dt id="Cheetah.Tests.CheetahWrapper.CFBase">
 <em class="property">class </em><code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">CFBase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">unittest.case.TestCase</span></code></p>
-<p>Base class for &#8220;cheetah compile&#8221; and &#8220;cheetah fill&#8221; unit tests.</p>
+<p>Base class for “cheetah compile” and “cheetah fill” unit tests.</p>
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.CFBase.assertPosixSubprocess">
 <code class="descname">assertPosixSubprocess</code><span class="sig-paren">(</span><em>cmd</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.assertPosixSubprocess" title="Permalink to this definition">¶</a></dt>
@@ -126,7 +123,7 @@ of this script.</div></blockquote>
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.CFBase.checkNoBackup">
 <code class="descname">checkNoBackup</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.checkNoBackup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Verify &#8216;path&#8217; does not exist.  (To check &#8211;nobackup.)</p>
+<dd><p>Verify ‘path’ does not exist.  (To check –nobackup.)</p>
 </dd></dl>
 
 <dl class="method">
@@ -144,11 +141,11 @@ __init__.py file.</p>
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.CFBase.go">
 <code class="descname">go</code><span class="sig-paren">(</span><em>cmd</em>, <em>expectedStatus=0</em>, <em>expectedOutputSubstring=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.go" title="Permalink to this definition">¶</a></dt>
-<dd><p>Run a &#8220;cheetah compile&#8221; or &#8220;cheetah fill&#8221; subcommand.</p>
+<dd><p>Run a “cheetah compile” or “cheetah fill” subcommand.</p>
 <dl class="docutils">
 <dt>in <span class="classifier-delimiter">:</span> <span class="classifier">cmd, string, the command to run.</span></dt>
 <dd><dl class="first last docutils">
-<dt>expectedStatus, int, subcommand&#8217;s expected output status.</dt>
+<dt>expectedStatus, int, subcommand’s expected output status.</dt>
 <dd>0 if the subcommand is expected to succeed, 1-255 otherwise.</dd>
 <dt>expectedOutputSubstring, string, substring which much appear</dt>
 <dd>in the standard output or standard error.  None to skip this
@@ -202,7 +199,7 @@ files.</p>
 <dt id="Cheetah.Tests.CheetahWrapper.CFIdirBase">
 <em class="property">class </em><code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">CFIdirBase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFIdirBase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Tests.CheetahWrapper.CFBase" title="Cheetah.Tests.CheetahWrapper.CFBase"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Tests.CheetahWrapper.CFBase</span></code></a></p>
-<p>Subclass for tests with &#8211;idir.</p>
+<p>Subclass for tests with –idir.</p>
 <dl class="attribute">
 <dt id="Cheetah.Tests.CheetahWrapper.CFIdirBase.srcDir">
 <code class="descname">srcDir</code><em class="property"> = 'SRC'</em><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFIdirBase.srcDir" title="Permalink to this definition">¶</a></dt>
@@ -599,7 +596,7 @@ files.</p>
 <dt id="Cheetah.Tests.CheetahWrapper.listTests">
 <code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">listTests</code><span class="sig-paren">(</span><em>cheetahWrapperFile</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.listTests" title="Permalink to this definition">¶</a></dt>
 <dd><p>cheetahWrapperFile, string, path of this script.</p>
-<p>XXX TODO: don&#8217;t print test where expectError is true.</p>
+<p>XXX TODO: don’t print test where expectError is true.</p>
 </dd></dl>
 
 <dl class="function">
@@ -634,8 +631,8 @@ files.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

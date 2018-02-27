@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Placeholders &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -29,7 +26,7 @@
     <link rel="next" title="Patching Cheetah" href="patching.html" />
     <link rel="prev" title="Directives: Error Handling" href="errorHandling.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -46,7 +43,7 @@
           <a href="errorHandling.html" title="Directives: Error Handling"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer’s Guide</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -97,7 +94,7 @@
 <div class="section" id="simple-placeholders">
 <h2>Simple placeholders<a class="headerlink" href="#simple-placeholders" title="Permalink to this headline">¶</a></h2>
 <p>(placeholders.simple)</p>
-<p>Let&#8217;s add a few $placeholders to our template:</p>
+<p>Let’s add a few $placeholders to our template:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">Cheetah.Template</span> <span class="k">import</span> <span class="n">Template</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">values</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;what&#39;</span><span class="p">:</span> <span class="s1">&#39;surreal&#39;</span><span class="p">,</span> <span class="s1">&#39;punctuation&#39;</span><span class="p">:</span> <span class="s1">&#39;?&#39;</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
@@ -242,7 +239,7 @@ of the template. Regular text has been translated into a string
 literal, and placeholders into function calls. Every placeholder is
 wrapped inside a {filter} call to apply the current output filter.
 (The default output filter converts all objects to strings, and
-{None} to {&#8220;&#8221;}.)</p>
+{None} to {“”}.)</p>
 <p>Placeholders referring to a Python builtin like {xrange} (line 68)
 generate a bare variable name. Placeholders to be looked up in the
 searchList have a nested function call; e.g.,</p>
@@ -252,8 +249,8 @@ searchList have a nested function call; e.g.,</p>
 <p>{VFS}, remember, is a function imported from {Cheetah.NameMapper}
 that looks up a value in a searchList. So we pass it the
 searchList, the name to look up, and a boolean (1) indicating we
-want autocalling. (It&#8217;s {1} rather than {True} because it&#8217;s
-generated from an {and} expression, and that&#8217;s what Python 2.2
+want autocalling. (It’s {1} rather than {True} because it’s
+generated from an {and} expression, and that’s what Python 2.2
 outputs for true {and} expressions.)</p>
 </div>
 <div class="section" id="complex-placeholders">
@@ -261,7 +258,7 @@ outputs for true {and} expressions.)</p>
 <p>(placeholders.complex)</p>
 <p>Placeholders can get far more complicated than that. This example
 shows what kind of code the various NameMapper features produce.
-The formulas are taken from Cheetah&#8217;s test suite, in the
+The formulas are taken from Cheetah’s test suite, in the
 {Cheetah.Tests.SyntaxAndOutput.Placeholders} class.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>1 placeholder: $aStr
 2 placeholders: $aStr $anInt
@@ -300,7 +297,7 @@ very complex slice: $( anObj.meth1[0: ((4/4*2)*2)/$anObj.meth1(2) ] )
 $_(&#39;a call to gettext&#39;)
 </pre></div>
 </div>
-<p>We&#8217;ll need a big program to set up the placeholder values. Here it
+<p>We’ll need a big program to set up the placeholder values. Here it
 is:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">from</span> <span class="nn">ComplexExample</span> <span class="k">import</span> <span class="n">ComplexExample</span>
@@ -352,7 +349,7 @@ is:</p>
 <span class="nb">print</span> <span class="n">ComplexExample</span><span class="p">(</span> <span class="n">searchList</span><span class="o">=</span><span class="p">[</span><span class="n">defaultTestNameSpace</span><span class="p">]</span> <span class="p">)</span>
 </pre></div>
 </div>
-<p>Here&#8217;s the output:</p>
+<p>Here’s the output:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>1 placeholder: blarg
 2 placeholders: blarg 1
 2 placeholders, back-to-back: blarg1
@@ -392,10 +389,10 @@ very complex slice: do
 translated a call to gettext
 </pre></div>
 </div>
-<p>And here - tada! - is the generated module. To save space, I&#8217;ve
+<p>And here - tada! - is the generated module. To save space, I’ve
 included only the lines containing the {write} calls. The rest of
 the module is the same as in the first example, chapter
-pyModules.example. I&#8217;ve split some of the lines to make them fit on
+pyModules.example. I’ve split some of the lines to make them fit on
 the page.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span> <span class="mi">1</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;1 placeholder: &#39;</span><span class="p">)</span>
  <span class="mi">2</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aStr&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from &#39;$aStr&#39; at line 1, col 16.</span>
@@ -530,7 +527,7 @@ component in the searchList. This is wrapped by zero or more {VFN}
 calls, which perform Universal Dotted Notation lookup on the next
 dotted component of the placeholder, looking for an attribute or
 key by that name within the previous object (not in the
-searchList). Autocalling is performed by {VFS} and {VFN}: that&#8217;s
+searchList). Autocalling is performed by {VFS} and {VFN}: that’s
 the reason for their third argument.</p>
 <p>Explicit function/method arguments, subscripts and keys (which are
 all expressions) are left unchanged, besides expanding any embedded
@@ -539,7 +536,7 @@ expressions, following the standard Python quoting rules.</p>
 <p>Built-in Python values ({None}, {True} and {False}) are converted
 to {filter(None)}, etc. They use normal Python variable lookup
 rather than {VFS}. (Cheetah emulates {True} and {False} using
-global variables for Python &lt; 2.2.1, when they weren&#8217;t builtins
+global variables for Python &lt; 2.2.1, when they weren’t builtins
 yet.)</p>
 <p>Notice the last line is a call to {_} (i.e. {gettext}) which is
 used for internationalization (see
@@ -573,13 +570,13 @@ way of this.</p>
           <a href="errorHandling.html" title="Directives: Error Handling"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer’s Guide</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

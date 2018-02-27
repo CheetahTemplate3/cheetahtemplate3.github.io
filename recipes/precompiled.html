@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Precompiled Templates &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -29,7 +26,7 @@
     <link rel="next" title="@staticmethod and @classmethod" href="staticmethod.html" />
     <link rel="prev" title="Basic Inheritance" href="inheritance.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -100,7 +97,7 @@
 a lot of options when it comes to utilizing Cheetah, particularly in web environments.</p>
 <p>There is added speed to be gained by using pre-compiled templates, especially when
 using mod_python with Apache. Precompiling your templates means Apache/mod_python
-can load your template&#8217;s generated module into memory and then execution is only
+can load your template’s generated module into memory and then execution is only
 limited by the speed of the Python being executed, and not the Cheetah compiler.
 You can further optimize things by then pre-compiling the generated Python files
 (.py) down to Python byte-code (.pyc) so save cycles interpreting the Python.</p>
@@ -136,8 +133,8 @@ as any other Python module:</p>
 </pre></div>
 </div>
 <p><strong>Figure 2. runner.py</strong></p>
-<p><em>Note:</em> If you use the <cite>#implements</cite> directive, <cite>respond</cite> may not be your &#8220;main
-method&#8221; for executing the Cheetah template. You can adjust the example above in
+<p><em>Note:</em> If you use the <cite>#implements</cite> directive, <cite>respond</cite> may not be your “main
+method” for executing the Cheetah template. You can adjust the example above in
 <em>Figure 2</em> by using <cite>getattr()</cite> to make the lookup of the main method dynamic:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">myMethod</span><span class="p">():</span>
     <span class="n">tmpl</span> <span class="o">=</span> <span class="n">hello</span><span class="o">.</span><span class="n">hello</span><span class="p">(</span><span class="n">searchList</span><span class="o">=</span><span class="p">[{</span><span class="s1">&#39;who&#39;</span> <span class="p">:</span> <span class="s1">&#39;world&#39;</span><span class="p">}])</span>
@@ -176,8 +173,8 @@ method&#8221; for executing the Cheetah template. You can adjust the example abo
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

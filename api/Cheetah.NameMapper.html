@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Cheetah.NameMapper module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +24,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -49,7 +46,7 @@
 <li><a class="reference internal" href="#details">Details</a><ul>
 <li><a class="reference internal" href="#dictionary-access-a">DICTIONARY ACCESS (a)</a></li>
 <li><a class="reference internal" href="#autocalling-b-d">AUTOCALLING (b,d)</a></li>
-<li><a class="reference internal" href="#leaving-out-self-c-d">LEAVING OUT &#8216;self&#8217; (c,d)</a></li>
+<li><a class="reference internal" href="#leaving-out-self-c-d">LEAVING OUT ‘self’ (c,d)</a></li>
 <li><a class="reference internal" href="#namespace-cascading-d">NAMESPACE CASCADING (d)</a></li>
 </ul>
 </li>
@@ -86,60 +83,61 @@
             
   <div class="section" id="module-Cheetah.NameMapper">
 <span id="cheetah-namemapper-module"></span><h1>Cheetah.NameMapper module<a class="headerlink" href="#module-Cheetah.NameMapper" title="Permalink to this headline">¶</a></h1>
-<p>This module supports Cheetah&#8217;s optional NameMapper syntax.</p>
+<p>This module supports Cheetah’s optional NameMapper syntax.</p>
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>NameMapper provides a simple syntax for accessing Python data structures,
-functions, and methods from Cheetah. It&#8217;s called NameMapper because it &#8216;maps&#8217;
-simple &#8216;names&#8217; in Cheetah templates to possibly more complex syntax in Python.</p>
+functions, and methods from Cheetah. It’s called NameMapper because it ‘maps’
+simple ‘names’ in Cheetah templates to possibly more complex syntax in Python.</p>
 <p>Its purpose is to make working with Cheetah easy for non-programmers.
 Specifically, non-programmers using Cheetah should NOT need to be taught (a)
 what the difference is between an object and a dictionary, (b) what functions
-and methods are, and (c) what &#8216;self&#8217; is.  A further aim (d) is to buffer the
+and methods are, and (c) what ‘self’ is.  A further aim (d) is to buffer the
 code in Cheetah templates from changes in the implementation of the Python data
 structures behind them.</p>
 <p>Consider this scenario:</p>
 <p>You are building a customer information system. The designers with you want to
-use information from your system on the client&#8217;s website &#8211;AND&#8211; they want to
+use information from your system on the client’s website –AND– they want to
 understand the display code and so they can maintian it themselves.</p>
-<p>You write a UI class with a &#8216;customers&#8217; method that returns a dictionary of all
-the customer objects.  Each customer object has an &#8216;address&#8217; method that returns
-the a dictionary with information about the customer&#8217;s address.  The designers
-want to be able to access that information.</p>
+<p>You write a UI class with a ‘customers’ method that returns a dictionary of all
+the customer objects.  Each customer object has an ‘address’ method
+that returns the a dictionary with information about the customer’s address.
+The designers want to be able to access that information.</p>
 <p>Using PSP, the display code for the website would look something like the
 following, assuming your servlet subclasses the class you created for managing
 customer information:</p>
 <blockquote>
-<div>&lt;%= self.customer()[ID].address()[&#8216;city&#8217;] %&gt;   (42 chars)</div></blockquote>
-<p>Using Cheetah&#8217;s NameMapper syntax it could be any of the following:</p>
+<div>&lt;%= self.customer()[ID].address()[‘city’] %&gt;   (42 chars)</div></blockquote>
+<p>Using Cheetah’s NameMapper syntax it could be any of the following:</p>
 <blockquote>
-<div>$self.customers()[$ID].address()[&#8216;city&#8217;]       (39 chars)
-&#8211;OR&#8211;
-$customers()[$ID].address()[&#8216;city&#8217;]
-&#8211;OR&#8211;
+<div>$self.customers()[$ID].address()[‘city’]       (39 chars)
+–OR–
+$customers()[$ID].address()[‘city’]
+–OR–
 $customers()[$ID].address().city
-&#8211;OR&#8211;
+–OR–
 $customers()[$ID].address.city
-&#8211;OR&#8211;
+–OR–
 $customers()[$ID].address.city
-&#8211;OR&#8211;
+–OR–
 $customers[$ID].address.city                   (27 chars)</div></blockquote>
 <p>Which of these would you prefer to explain to the designers, who have no
 programming experience?  The last form is 15 characters shorter than the PSP
 and, conceptually, is far more accessible. With PHP or ASP, the code would be
 even messier than the PSP</p>
-<p>This is a rather extreme example and, of course, you could also just implement
-&#8216;$getCustomer($ID).city&#8217; and obey the Law of Demeter (search Google for more on that).
-But good object orientated design isn&#8217;t the point here.</p>
+<p>This is a rather extreme example and, of course,
+you could also just implement ‘$getCustomer($ID).city’
+and obey the Law of Demeter (search Google for more on that).
+But good object orientated design isn’t the point here.</p>
 </div>
 <div class="section" id="details">
 <h2>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h2>
 <p>The parenthesized letters below correspond to the aims in the second paragraph.</p>
 <div class="section" id="dictionary-access-a">
 <h3>DICTIONARY ACCESS (a)<a class="headerlink" href="#dictionary-access-a" title="Permalink to this headline">¶</a></h3>
-<p>NameMapper allows access to items in a dictionary using the same dotted notation
-used to access object attributes in Python.  This aspect of NameMapper is known
-as &#8216;Unified Dotted Notation&#8217;.</p>
+<p>NameMapper allows access to items in a dictionary
+using the same dotted notation used to access object attributes in Python.
+This aspect of NameMapper is known as ‘Unified Dotted Notation’.</p>
 <p>For example, with Cheetah it is possible to write:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>$customers()[&#39;kerr&#39;].address()  --OR--  $customers().kerr.address()
 </pre></div>
@@ -152,9 +150,9 @@ as &#8216;Unified Dotted Notation&#8217;.</p>
 </div>
 <div class="section" id="autocalling-b-d">
 <h3>AUTOCALLING (b,d)<a class="headerlink" href="#autocalling-b-d" title="Permalink to this headline">¶</a></h3>
-<p>NameMapper automatically detects functions and methods in Cheetah $vars and calls
-them if the parentheses have been left off.</p>
-<p>For example if &#8216;a&#8217; is an object, &#8216;b&#8217; is a method:</p>
+<p>NameMapper automatically detects functions and methods in Cheetah $vars
+and calls them if the parentheses have been left off.</p>
+<p>For example if ‘a’ is an object, ‘b’ is a method:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>$a.b
 </pre></div>
 </div>
@@ -166,40 +164,40 @@ them if the parentheses have been left off.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>$a.b.c  --OR--  $a.b().c  --OR--  $a.b()[&#39;c&#39;]
 </pre></div>
 </div>
-<p>where &#8216;c&#8217; is a key in the dictionary that a.b() returns.</p>
+<p>where ‘c’ is a key in the dictionary that a.b() returns.</p>
 <p>Further notes:</p>
 <ul class="simple">
 <li>NameMapper autocalls the function or method without any arguments.  Thus
 autocalling can only be used with functions or methods that either have no
 arguments or have default values for all arguments.</li>
-<li>NameMapper only autocalls functions and methods.  Classes and callable object instances
-will not be autocalled.</li>
-<li>Autocalling can be disabled using Cheetah&#8217;s &#8216;useAutocalling&#8217; setting.</li>
+<li>NameMapper only autocalls functions and methods.
+Classes and callable object instances will not be autocalled.</li>
+<li>Autocalling can be disabled using Cheetah’s ‘useAutocalling’ setting.</li>
 </ul>
 </div>
 <div class="section" id="leaving-out-self-c-d">
-<h3>LEAVING OUT &#8216;self&#8217; (c,d)<a class="headerlink" href="#leaving-out-self-c-d" title="Permalink to this headline">¶</a></h3>
+<h3>LEAVING OUT ‘self’ (c,d)<a class="headerlink" href="#leaving-out-self-c-d" title="Permalink to this headline">¶</a></h3>
 <p>NameMapper makes it possible to access the attributes of a servlet in Cheetah
-without needing to include &#8216;self&#8217; in the variable names.  See the NAMESPACE
+without needing to include ‘self’ in the variable names.  See the NAMESPACE
 CASCADING section below for details.</p>
 </div>
 <div class="section" id="namespace-cascading-d">
 <h3>NAMESPACE CASCADING (d)<a class="headerlink" href="#namespace-cascading-d" title="Permalink to this headline">¶</a></h3>
-<p>...</p>
+<p>…</p>
 </div>
 </div>
 <div class="section" id="implementation-details">
 <h2>Implementation details<a class="headerlink" href="#implementation-details" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>NameMapper&#8217;s search order is dictionary keys then object attributes</li>
-<li>NameMapper.NotFound is raised if a value can&#8217;t be found for a name.</li>
+<li>NameMapper’s search order is dictionary keys then object attributes</li>
+<li>NameMapper.NotFound is raised if a value can’t be found for a name.</li>
 </ul>
 </div>
 <div class="section" id="performance-and-the-c-version">
 <h2>Performance and the C version<a class="headerlink" href="#performance-and-the-c-version" title="Permalink to this headline">¶</a></h2>
 <p>Cheetah comes with both a C version and a Python version of NameMapper.  The C
 version is significantly faster and the exception tracebacks are much easier to
-read.  It&#8217;s still slower than standard Python syntax, but you won&#8217;t notice the
+read.  It’s still slower than standard Python syntax, but you won’t notice the
 difference in realistic usage scenarios.</p>
 <p>Cheetah uses the optimized C version (_namemapper.c) if it has
 been compiled or falls back to the Python version if not.</p>
@@ -212,7 +210,7 @@ been compiled or falls back to the Python version if not.</p>
 <dl class="function">
 <dt id="Cheetah.NameMapper.hasKey">
 <code class="descclassname">Cheetah.NameMapper.</code><code class="descname">hasKey</code><span class="sig-paren">(</span><em>obj</em>, <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.NameMapper.hasKey" title="Permalink to this definition">¶</a></dt>
-<dd><p>Determine if &#8216;obj&#8217; has &#8216;key&#8217;</p>
+<dd><p>Determine if ‘obj’ has ‘key’</p>
 </dd></dl>
 
 <dl class="function">
@@ -263,8 +261,8 @@ been compiled or falls back to the Python version if not.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

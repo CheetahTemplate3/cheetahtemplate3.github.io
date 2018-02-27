@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Language Overview &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -29,7 +26,7 @@
     <link rel="next" title="Comments" href="comments.html" />
     <link rel="prev" title="Getting Started" href="gettingStarted.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -46,7 +43,7 @@
           <a href="gettingStarted.html" title="Getting Started"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -108,27 +105,27 @@
   <div class="section" id="language-overview">
 <h1>Language Overview<a class="headerlink" href="#language-overview" title="Permalink to this headline">¶</a></h1>
 <p>(language)</p>
-<p>Cheetah&#8217;s basic syntax was inspired by the Java-based template
+<p>Cheetah’s basic syntax was inspired by the Java-based template
 engines Velocity and WebMacro. It has two types of tags: {
 $placeholders} and { #directives}. Both types are case-sensitive.</p>
 <p>Placeholder tags begin with a dollar sign ({$varName}) and are
 similar to data fields in a form letter or to the {%(key)s} fields
-on the left side of Python&#8217;s {%} operator. When the template is
+on the left side of Python’s {%} operator. When the template is
 filled, the placeholders are replaced with the values they refer
 to.</p>
 <p>Directive tags begin with a hash character (#) and are used for
 comments, loops, conditional blocks, includes, and all other
 advanced features. ({ Note:} you can customize the start and end
 delimeters for placeholder and directive tags, but in this Guide
-we&#8217;ll assume you&#8217;re using the default.)</p>
+we’ll assume you’re using the default.)</p>
 <p>Placeholders and directives can be escaped by putting a backslash
 before them. <code class="docutils literal"><span class="pre">\$var</span></code> and <code class="docutils literal"><span class="pre">\#if</span></code> will be output as literal
 text.</p>
 <p>A placeholder or directive can span multiple physical lines,
 following the same rules as Python source code: put a backslash
 (<code class="docutils literal"><span class="pre">\</span></code>) at the end of all lines except the last line. However, if
-there&#8217;s an unclosed parenthesis, bracket or brace pending, you
-don&#8217;t need the backslash.</p>
+there’s an unclosed parenthesis, bracket or brace pending, you
+don’t need the backslash.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#if $this_is_a_very_long_line and $has_lots_of_conditions \
     and $more_conditions:
 &lt;H1&gt;bla&lt;/H1&gt;
@@ -154,47 +151,47 @@ don&#8217;t need the backslash.</p>
 <li>Generation, caching and filtering of output<ol class="arabic">
 <li>plain text</li>
 <li>look up a value: {$placeholder}</li>
-<li>evaluate an expression: {#echo} ...</li>
-<li>same but discard the output: {#silent} ...</li>
+<li>evaluate an expression: {#echo} …</li>
+<li>same but discard the output: {#silent} …</li>
 <li>one-line if: {#if EXPR then EXPR else EXPR}</li>
 <li>gobble the EOL: {#slurp}</li>
-<li>parsed file includes: {#include} ...</li>
-<li>raw file includes: {#include raw} ...</li>
-<li>verbatim output of Cheetah code: {#raw} ... {#end raw}</li>
+<li>parsed file includes: {#include} …</li>
+<li>raw file includes: {#include raw} …</li>
+<li>verbatim output of Cheetah code: {#raw} … {#end raw}</li>
 <li>cached placeholders: {$*var}, {$*&lt;interval&gt;*var}</li>
-<li>cached regions: {#cache} ... {#end cache}</li>
-<li>set the output filter: {#filter} ...</li>
-<li>control output indentation: {#indent} ... ({ not implemented
+<li>cached regions: {#cache} … {#end cache}</li>
+<li>set the output filter: {#filter} …</li>
+<li>control output indentation: {#indent} … ({ not implemented
 yet})</li>
 </ol>
 </li>
-<li>Importing Python modules and objects: {#import} ..., {#from}
-...</li>
+<li>Importing Python modules and objects: {#import} …, {#from}
+…</li>
 <li>Inheritance<ol class="arabic">
 <li>set the base class to inherit from: {#extends}</li>
 <li>set the name of the main method to implement: {#implements}
-...</li>
+…</li>
 </ol>
 </li>
 <li>Compile-time declaration<ol class="arabic">
-<li>define class attributes: {#attr} ...</li>
-<li>define class methods: {#def} ... {#end def}</li>
-<li>{#block} ... {#end block} provides a simplified interface to
-{#def} ... {#end def}</li>
+<li>define class attributes: {#attr} …</li>
+<li>define class methods: {#def} … {#end def}</li>
+<li>{#block} … {#end block} provides a simplified interface to
+{#def} … {#end def}</li>
 </ol>
 </li>
 <li>Run-time assignment<ol class="arabic">
-<li>local vars: {#set} ...</li>
-<li>global vars: {#set global} ...</li>
-<li>deleting local vars: {#del} ...</li>
+<li>local vars: {#set} …</li>
+<li>global vars: {#set global} …</li>
+<li>deleting local vars: {#del} …</li>
 </ol>
 </li>
 <li>Flow control<ol class="arabic">
-<li>{#if} ... {#else} ... {#else if} (aka {#elif}) ... {#end if}</li>
-<li>{#unless} ... {#end unless}</li>
-<li>{#for} ... {#end for}</li>
-<li>{#repeat} ... {#end repeat}</li>
-<li>{#while} ... {#end while}</li>
+<li>{#if} … {#else} … {#else if} (aka {#elif}) … {#end if}</li>
+<li>{#unless} … {#end unless}</li>
+<li>{#for} … {#end for}</li>
+<li>{#repeat} … {#end repeat}</li>
+<li>{#while} … {#end while}</li>
 <li>{#break}</li>
 <li>{#continue}</li>
 <li>{#pass}</li>
@@ -204,20 +201,20 @@ yet})</li>
 <li>error/exception handling<ol class="arabic">
 <li>{#assert}</li>
 <li>{#raise}</li>
-<li>{#try} ... {#except} ... {#else} ... {#end try}</li>
-<li>{#try} ... {#finally} ... {#end try}</li>
-<li>{#errorCatcher} ... set a handler for exceptions raised by
+<li>{#try} … {#except} … {#else} … {#end try}</li>
+<li>{#try} … {#finally} … {#end try}</li>
+<li>{#errorCatcher} … set a handler for exceptions raised by
 $placeholder calls.</li>
 </ol>
 </li>
 <li>Instructions to the parser/compiler<ol class="arabic">
 <li>{#breakpoint}</li>
-<li>{#compiler-settings} ... {#end compiler-settings}</li>
+<li>{#compiler-settings} … {#end compiler-settings}</li>
 </ol>
 </li>
 <li>Escape to pure Python code<ol class="arabic">
-<li>evalute expression and print the output: {&lt;%=} ... {%&gt;}</li>
-<li>execute code and discard output: {&lt;%} ... {%&gt;}</li>
+<li>evalute expression and print the output: {&lt;%=} … {%&gt;}</li>
+<li>execute code and discard output: {&lt;%} … {%&gt;}</li>
 </ol>
 </li>
 <li>Fine control over Cheetah-generated Python modules<ol class="arabic">
@@ -260,7 +257,7 @@ want via the {#compiler} directive.</p>
 placeholders, not in expressions. See section
 language.placeholders.positions for an elaboration on this.</p>
 </li>
-<li><p class="first">To reiterate Python&#8217;s rules, placeholders consist of one or more
+<li><p class="first">To reiterate Python’s rules, placeholders consist of one or more
 identifiers separated by periods. Each identifier must start with a
 letter or an underscore, and the subsequent characters must be
 letters, digits or underscores. Any identifier may be followed by
@@ -271,7 +268,7 @@ arguments enclosed in <code class="docutils literal"><span class="pre">()</span>
 </li>
 <li><p class="first">Arguments inside <code class="docutils literal"><span class="pre">()</span></code> or <code class="docutils literal"><span class="pre">[]</span></code> are just like in Python.
 Strings may be quoted using any Python quoting style. Each argument
-is an expression and may use any of Python&#8217;s expression operators.
+is an expression and may use any of Python’s expression operators.
 Variables used in argument expressions are placeholders and should
 be prefixed with {$}. This also applies to the *arg and **kw
 forms. However, you do { not} need the {$} with the special Python
@@ -288,9 +285,9 @@ $myList[$mySubscript]
 placeholder name in {$varName.} is {varName}, and the period will
 be left alone in the template output.</p>
 </li>
-<li><p class="first">The syntax {${placeholderName, arg1=&#8221;val1&#8221;}} passes arguments to
+<li><p class="first">The syntax {${placeholderName, arg1=”val1”}} passes arguments to
 the output filter (see {#filter}, section output.filter. The braces
-and comma are required in this case. It&#8217;s conventional to omit the
+and comma are required in this case. It’s conventional to omit the
 {$} before the keyword arguments (i.e. {arg1}) in this case.</p>
 </li>
 <li><p class="first">Cheetah ignores all dollar signs ({$}) that are not followed by
@@ -323,7 +320,7 @@ and <span class="math">$[]$</span> arguments within placeholder tags (i.e., a
 placeholder inside a placeholder), and in several directive tags.</p>
 <p>{ LVALUE position} means naming a variable that will be written to.
 LVALUE is a computer science term meaning
-&#8220;the left side of an assignment statement&#8221;. The first argument of
+“the left side of an assignment statement”. The first argument of
 directives {#set}, {#for}, {#def}, {#block} and {#attr} is an
 LVALUE.</p>
 <p>This stupid example shows the three positions. Top-level position
@@ -349,15 +346,15 @@ wall.
 <div class="section" id="are-all-those-dollar-signs-really-necessary">
 <h2>Are all those dollar signs really necessary?<a class="headerlink" href="#are-all-those-dollar-signs-really-necessary" title="Permalink to this headline">¶</a></h2>
 <p>(language.placeholders.dollar-signs)</p>
-<p>{$} is a &#8220;smart variable prefix&#8221;. When Cheetah sees {$}, it
-determines both the variable&#8217;s position and whether it&#8217;s a
+<p>{$} is a “smart variable prefix”. When Cheetah sees {$}, it
+determines both the variable’s position and whether it’s a
 searchList value or a non-searchList value, and generates the
 appropriate Python code.</p>
-<p>In top-level position, the {$} is { required}. Otherwise there&#8217;s
+<p>In top-level position, the {$} is { required}. Otherwise there’s
 nothing to distinguish the variable from ordinary text, and the
 variable name is output verbatim.</p>
 <p>In expression position, the {$} is { required} if the value comes
-from the searchList or a &#8220;#set global&#8221; variable, { recommended} for
+from the searchList or a “#set global” variable, { recommended} for
 local/global/builtin variables, and { not necessary} for the
 special constants {None}, {True} and {False}. This works because
 Cheetah generates a function call for a searchList placeholder, but
@@ -366,8 +363,8 @@ a bare variable name for a local/global/builtin variable.</p>
 an LVALUE is expected, so it can handle your variable name whether
 it has {$} or not.</p>
 <p>EXCEPTION: Do { not} use the {$} prefix for intermediate variables
-in a Python list comprehensions. This is a limitation of Cheetah&#8217;s
-parser; it can&#8217;t tell which variables in a list comprehension are
+in a Python list comprehensions. This is a limitation of Cheetah’s
+parser; it can’t tell which variables in a list comprehension are
 the intermediate variables, so you have to help it. For example:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#set $theRange = [x ** 2 for x in $range(10)]</span>
 </pre></div>
@@ -381,29 +378,29 @@ list comprehension: if you type {$x}, Cheetah will miscompile it.</p>
 <p>(language.namemapper)</p>
 <p>One of our core aims for Cheetah was to make it easy for
 non-programmers to use. Therefore, Cheetah uses a simplified syntax
-for mapping placeholders in Cheetah to values in Python. It&#8217;s known
+for mapping placeholders in Cheetah to values in Python. It’s known
 as the { NameMapper syntax} and allows for non-programmers to use
 Cheetah without knowing (a) the difference between an instance and
 a dictionary, (b) what functions and methods are, and (c) what
-&#8216;self&#8217; is. A side benefit is that you can change the underlying
+‘self’ is. A side benefit is that you can change the underlying
 data structure (e.g., instance to dictionary or vice-versa) without
 having to modify the templates.</p>
 <p>NameMapper syntax is used for all variables in Cheetah placeholders
 and directives. If desired, it can be turned off via the {Template}
-class&#8217; {&#8216;useNameMapper&#8217;} compiler setting. But it&#8217;s doubtful you&#8217;d
+class’ {‘useNameMapper’} compiler setting. But it’s doubtful you’d
 ever want to turn it off.</p>
 <div class="section" id="example">
 <h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
 <p>(language.namemapper.example)</p>
 <p>Consider this scenario:</p>
 <p>You are building a customer information system. The designers with
-you want to use information from your system on the client&#8217;s
+you want to use information from your system on the client’s
 website -AND- they want to understand the display code and so they
 can maintian it themselves.</p>
-<p>You write a UI class with a &#8216;customers&#8217; method that returns a
+<p>You write a UI class with a ‘customers’ method that returns a
 dictionary of all the customer objects. Each customer object has an
-&#8216;address&#8217; method that returns the a dictionary with information
-about the customer&#8217;s address. The designers want to be able to
+‘address’ method that returns the a dictionary with information
+about the customer’s address. The designers want to be able to
 access that information.</p>
 <p>Using PSP, the display code for the website would look something
 like the following, assuming your servlet subclasses the class you
@@ -411,7 +408,7 @@ created for managing customer information:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;%=</span> <span class="bp">self</span><span class="o">.</span><span class="n">customer</span><span class="p">()[</span><span class="n">ID</span><span class="p">]</span><span class="o">.</span><span class="n">address</span><span class="p">()[</span><span class="s1">&#39;city&#39;</span><span class="p">]</span> <span class="o">%&gt;</span>   <span class="p">(</span><span class="mi">42</span> <span class="n">chars</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>With Cheetah&#8217;s NameMapper syntax, you can use any of the
+<p>With Cheetah’s NameMapper syntax, you can use any of the
 following:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>$self.customers()[$ID].address()[&#39;city&#39;]       (39 chars)
 --OR--
@@ -432,14 +429,14 @@ with PSP.</p>
 <p>This is a rather extreme example and, of course, you could also
 just implement {$getCustomer($ID).city} and obey the Law of Demeter
 (search Google for more on that). But good object orientated design
-isn&#8217;t the point of this example.</p>
+isn’t the point of this example.</p>
 </div>
 <div class="section" id="dictionary-access">
 <h3>Dictionary Access<a class="headerlink" href="#dictionary-access" title="Permalink to this headline">¶</a></h3>
 <p>(language.namemapper.dict)</p>
 <p>NameMapper syntax allows access to dictionary items with the same
 dotted notation used to access object attributes in Python. This
-aspect of NameMapper syntax is known as &#8216;Unified Dotted Notation&#8217;.
+aspect of NameMapper syntax is known as ‘Unified Dotted Notation’.
 For example, with Cheetah it is possible to write:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>$customers()[&#39;kerr&#39;].address()  --OR--  $customers().kerr.address()
 </pre></div>
@@ -457,7 +454,7 @@ Our previous example can be further simplified to:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>$customers.kerr.address
 </pre></div>
 </div>
-<p>As another example, if &#8216;a&#8217; is an object, &#8216;b&#8217; is a method</p>
+<p>As another example, if ‘a’ is an object, ‘b’ is a method</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>$a.b
 </pre></div>
 </div>
@@ -469,7 +466,7 @@ Our previous example can be further simplified to:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>$a.b.c  --OR--  $a.b().c  --OR--  $a.b()[&#39;c&#39;]
 </pre></div>
 </div>
-<p>where &#8216;c&#8217; is a key in the dictionary that a.b() returns.</p>
+<p>where ‘c’ is a key in the dictionary that a.b() returns.</p>
 <p>Further notes:</p>
 <ul class="simple">
 <li>When Cheetah autocalls a function/method, it calls it without
@@ -489,9 +486,9 @@ in the namespace of whatever {myinstance} returns? It could go
 either way, so Cheetah follows the principle of least surprise. If
 you { do} want to call the instance, put the {()} on, or rename the
 {.__call__()} method to {.__str__}.</li>
-<li>Autocalling can be disabled via Cheetah&#8217;s &#8216;useAutocalling&#8217;
+<li>Autocalling can be disabled via Cheetah’s ‘useAutocalling’
 compiler setting. You can also disable it for one placeholder by
-using the syntax {$getVar(&#8216;varName&#8217;, &#8216;default value&#8217;, False)}.
+using the syntax {$getVar(‘varName’, ‘default value’, False)}.
 ({.getVar()} works only with searchList values.)</li>
 </ul>
 </div>
@@ -508,44 +505,44 @@ Cheetah.</li>
 <li>{#set global} variables.</li>
 <li>The { searchList} containers you passed to the {Template}
 constructor, if any.</li>
-<li>The { Template instance} (&#8220;self&#8221;). This contains any attributes
+<li>The { Template instance} (“self”). This contains any attributes
 you assigned, {#def} methods and {#block methods},
 attributes/methods inherited via {#extends}, and other
 attributes/methods built into {Template} or inherited by it
-(there&#8217;s a list of all these methods in section tips.allMethods).</li>
+(there’s a list of all these methods in section tips.allMethods).</li>
 </ol>
 </li>
-<li>{ Python globals:} created by {#import}, {#from ... import}, or
+<li>{ Python globals:} created by {#import}, {#from … import}, or
 otherwise predefined by Cheetah.</li>
 <li>{ Python builtins:} {None}, {max}, etc.</li>
 </ol>
 <p>The first matching name found is used.</p>
 <p>Remember, these namespaces apply only to the { first} identifier
-after the {$}. In a placeholder like {$a.b}, only &#8216;a&#8217; is looked up
-in the searchList and other namespaces. &#8216;b&#8217; is looked up only
-inside &#8216;a&#8217;.</p>
+after the {$}. In a placeholder like {$a.b}, only ‘a’ is looked up
+in the searchList and other namespaces. ‘b’ is looked up only
+inside ‘a’.</p>
 <p>A searchList container can be any Python object with attributes or
 keys: dictionaries, instances, classes or modules. If an instance
 contains both attributes and keys, its attributes are searched
 first, then its keys.</p>
 <p>Because the {Template} instance is part of the searchList, you can
-access its attributes/methods without &#8216;self&#8217;: {$myAttr}. However,
-use the &#8216;self&#8217; if you want to make sure you&#8217;re getting the
+access its attributes/methods without ‘self’: {$myAttr}. However,
+use the ‘self’ if you want to make sure you’re getting the
 {Template} attribute and not a same-name variable defined in a
-higher namespace: {$self.myAttr}. This works because &#8220;self&#8221; itself
+higher namespace: {$self.myAttr}. This works because “self” itself
 is a local variable.</p>
 <p>The final resulting value, after all lookups and function calls
 (but before the filter is applied) is called the { placeholder
 value}, no matter which namespace it was found in.</p>
-<p>{ { Note carefully:}} if you put an object &#8216;myObject&#8217; in the
+<p>{ { Note carefully:}} if you put an object ‘myObject’ in the
 searchList, you { cannot} look up {$myObject}! You can look up only
-the attributes/keys { inside} &#8216;myObject&#8217;.</p>
+the attributes/keys { inside} ‘myObject’.</p>
 <p>Earlier versions of Cheetah did not allow you to override Python
 builtin names, but this was fixed in Cheetah 0.9.15.</p>
 <p>If your template will be used as a Webware servlet, do not override
-methods &#8216;name&#8217; and &#8216;log&#8217; in the {Template} instance or it will
-interfere with Webware&#8217;s logging. However, it { is} OK to use those
-variables in a higher namespace, since Webware doesn&#8217;t know about
+methods ‘name’ and ‘log’ in the {Template} instance or it will
+interfere with Webware’s logging. However, it { is} OK to use those
+variables in a higher namespace, since Webware doesn’t know about
 Cheetah namespaces.</p>
 </div>
 <div class="section" id="missing-values">
@@ -558,7 +555,7 @@ or { errorCatcher} Template constructor argument (section
 howWorks.constructing) to specify an alternate behaviour. BUT BE
 AWARE THAT errorCatcher IS ONLY INTENDED FOR DEBUGGING!</p>
 <p>To provide a default value for a placeholder, write it like this:
-{$getVar(&#8216;varName&#8217;, &#8216;default value&#8217;)}. If you don&#8217;t specify a
+{$getVar(‘varName’, ‘default value’)}. If you don’t specify a
 default and the variable is missing, {NameMapper.NotFound} will be
 raised.</p>
 </div>
@@ -570,7 +567,7 @@ comments, loops, conditional blocks, includes, and all other
 advanced features. Cheetah uses a Python-like syntax inside
 directive tags and understands any valid Python expression. {
 However, unlike Python, Cheetah does not use colons (:) and
-indentation to mark off multi-line directives.} That doesn&#8217;t work
+indentation to mark off multi-line directives.} That doesn’t work
 in an environment where whitespace is significant as part of the
 text. Instead, multi-line directives like {#for} have corresponding
 closing tags ({#end for}). Most directives are direct mirrors of
@@ -581,12 +578,12 @@ following syntax:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#end TAG_NAME [EXPR]</span>
 </pre></div>
 </div>
-<p>The expression is ignored, so it&#8217;s essentially a comment.</p>
+<p>The expression is ignored, so it’s essentially a comment.</p>
 <div class="section" id="directive-closures-and-whitespace-handling">
 <h3>Directive closures and whitespace handling<a class="headerlink" href="#directive-closures-and-whitespace-handling" title="Permalink to this headline">¶</a></h3>
 <p>(language.directives.closures) Directive tags can be closed
 explicitly with {#}, or implicitly with the end of the line if
-you&#8217;re feeling lazy.</p>
+you’re feeling lazy.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#block testBlock #</span>
 <span class="n">Text</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">body</span> <span class="n">of</span> <span class="n">the</span>
 <span class="n">block</span> <span class="n">directive</span>
@@ -659,8 +656,8 @@ preceeding whitespace:</p>
 <p>The {#slurp} directive (section output.slurp) also gobbles up
 whitespace.</p>
 <p>Spaces outside directives are output { exactly} as written. In the
-black sheep example, there&#8217;s a space before &#8220;black&#8221; and another
-before &#8220;sheep&#8221;. So although it&#8217;s legal to put multiple directives
+black sheep example, there’s a space before “black” and another
+before “sheep”. So although it’s legal to put multiple directives
 on one line, it can be hard to read.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#if $a# #echo $a + 1# #end if
       - There&#39;s a space between each directive,
@@ -704,13 +701,13 @@ on one line, it can be hard to read.</p>
           <a href="gettingStarted.html" title="Getting Started"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

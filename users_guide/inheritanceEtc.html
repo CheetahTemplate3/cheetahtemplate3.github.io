@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Import, Inheritance, Declaration and Assignment &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -29,7 +26,7 @@
     <link rel="next" title="Flow Control" href="flowControl.html" />
     <link rel="prev" title="Generating, Caching and Filtering Output" href="output.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -46,7 +43,7 @@
           <a href="output.html" title="Generating, Caching and Filtering Output"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -61,7 +58,7 @@
 <li><a class="reference internal" href="#del">#del</a></li>
 <li><a class="reference internal" href="#attr">#attr</a></li>
 <li><a class="reference internal" href="#def">#def</a></li>
-<li><a class="reference internal" href="#block-end-block">#block ... #end block</a></li>
+<li><a class="reference internal" href="#block-end-block">#block … #end block</a></li>
 </ul>
 </li>
 </ul>
@@ -132,12 +129,12 @@ visible globally to all methods in the generated Python class.</p>
 </pre></div>
 </div>
 <p>All templates are subclasses of {Cheetah.Template.Template}.
-However, it&#8217;s possible for a template to subclass another template
+However, it’s possible for a template to subclass another template
 or a pure Python class. This is where {#extends} steps in: it
-specifies the parent class. It&#8217;s equivalent to PSP&#8217;s
-{&#8220;&#64;page extends=&#8221;} directive.</p>
+specifies the parent class. It’s equivalent to PSP’s
+{“&#64;page extends=”} directive.</p>
 <p>Cheetah imports the class mentioned in an {#extends} directive
-automatically if you haven&#8217;t imported it yet. The implicit
+automatically if you haven’t imported it yet. The implicit
 importing works like this:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#extends Superclass</span>
 <span class="c1">## Implicitly does &#39;#from Superclass import Superclass&#39;.</span>
@@ -154,8 +151,8 @@ practical way to get a parent template into a module is to
 precompile it, all parent templates essentially have to be
 precompiled.</p>
 <p>There can be only one {#extends} directive in a template and it may
-list only one class. In other words, templates don&#8217;t do multiple
-inheritance. This is intentional: it&#8217;s too hard to initialize
+list only one class. In other words, templates don’t do multiple
+inheritance. This is intentional: it’s too hard to initialize
 multiple base classes correctly from inside a template. However,
 you can do multiple inheritance in your pure Python classes.</p>
 <p>If your pure Python class overrides any of the standard {Template}
@@ -173,18 +170,18 @@ bottommost class is a pure Python class, it must inherit from
 <span class="k">class</span> <span class="nc">MyPurePythonClass</span><span class="p">(</span><span class="n">Template</span><span class="p">):</span>
 </pre></div>
 </div>
-<p>If you&#8217;re not keen about having your Python classes inherit from
+<p>If you’re not keen about having your Python classes inherit from
 {Template}, create a tiny glue class that inherits both from your
 class and from {Template}.</p>
-<p>Before giving any examples we&#8217;ll stress that Cheetah does { not}
+<p>Before giving any examples we’ll stress that Cheetah does { not}
 dictate how you should structure your inheritance tree. As long as
 you follow the rules above, many structures are possible.</p>
-<p>Here&#8217;s an example for a large web site that has not only a general
+<p>Here’s an example for a large web site that has not only a general
 site template, but also a template for this section of the site,
 and then a specific template-servlet for each URL. (This is the
-&#8220;inheritance approach&#8221; discussed in the Webware chapter.) Each
+“inheritance approach” discussed in the Webware chapter.) Each
 template inherits from a pure Python class that contains
-methods/attributes used by the template. We&#8217;ll begin with the
+methods/attributes used by the template. We’ll begin with the
 bottommost superclass and end with the specific template-servlet:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="mf">1.</span>  <span class="n">SiteLogic</span><span class="o">.</span><span class="n">py</span> <span class="p">(</span><span class="n">pure</span> <span class="n">Python</span> <span class="k">class</span> <span class="nc">containing</span> <span class="n">methods</span> <span class="k">for</span> <span class="n">the</span> <span class="n">site</span><span class="p">)</span>
         <span class="kn">from</span> <span class="nn">Cheetah.Template</span> <span class="k">import</span> <span class="n">Template</span>
@@ -216,7 +213,7 @@ bottommost superclass and end with the specific template-servlet:</p>
 </pre></div>
 </div>
 <p>A pure Python classes might also contain methods/attributes that
-aren&#8217;t used by their immediate child template, but are available
+aren’t used by their immediate child template, but are available
 for any descendant template to use if it wishes. For instance, the
 site template might have attributes for the name and e-mail address
 of the site administrator, ready to use as $placeholders in any
@@ -235,15 +232,15 @@ as in step 2 above. Read the next section to understand what
 <p>You can call any {#def} or {#block} method directly and get its
 outpt. The top-level content - all the text/placeholders/directives
 outside any {#def}/{#block} - gets concatenated and wrapped in a
-&#8220;main method&#8221;, by default {.respond()}. So if you call
-{.respond()}, you get the &#8220;whole template output&#8221;. When Webware
-calls {.respond()}, that&#8217;s what it&#8217;s doing. And when you do &#8216;print
-t&#8217; or &#8216;str(t)&#8217; on a template instance, you&#8217;re taking advantage of
+“main method”, by default {.respond()}. So if you call
+{.respond()}, you get the “whole template output”. When Webware
+calls {.respond()}, that’s what it’s doing. And when you do ‘print
+t’ or ‘str(t)’ on a template instance, you’re taking advantage of
 the fact that Cheetah makes {.__str__()} an alias for the main
 method.</p>
-<p>That&#8217;s all fine and dandy, but what if your application prefers to
+<p>That’s all fine and dandy, but what if your application prefers to
 call another method name rather than {.respond()}? What if it wants
-to call, say, {.send_output()} instead? That&#8217;s where {#implements}
+to call, say, {.send_output()} instead? That’s where {#implements}
 steps in. It lets you choose the name for the main method. Just put
 this in your template definition:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#implements send_output</span>
@@ -259,14 +256,14 @@ have two problems: (1) calling the right method name, and (2)
 preventing an undesired same-name subclass method from overriding
 the one you want to call.</p>
 <p>Cheetah assumes the method you will call is {.respond()} because
-that&#8217;s what Webware calls. It further assumes the desired main
+that’s what Webware calls. It further assumes the desired main
 method is the one in the lowest-level base template, because that
 works well with {#block} as described in the Inheritance Approach
 for building Webware servlets (section webware.inheritance), which
 was originally the principal use for Cheetah. So when you use
-{#extends}, Cheetah changes that template&#8217;s main method to
+{#extends}, Cheetah changes that template’s main method to
 {.writeBody()} to get it out of the way and prevent it from
-overriding the base template&#8217;s {.respond()}.</p>
+overriding the base template’s {.respond()}.</p>
 <p>Unfortunately this assumption breaks down if the template is used
 in other ways. For instance, you may want to use the main method in
 the highest-level leaf template, and treat the base template(s) as
@@ -281,10 +278,10 @@ is} in the base template but that template extends a pure Python
 class. Cheetah sees the {#extends} and dutifully but incorrectly
 renames the method to {.writeBody()}, so you have to use
 {#implements respond} to change it back. Otherwise the dummy
-{.respond()} in {Cheetah.Template} is found, which outputs...
-nothing. { So if you&#8217;re using {#extends} and get no output, the {
+{.respond()} in {Cheetah.Template} is found, which outputs…
+nothing. { So if you’re using {#extends} and get no output, the {
 first} thing you should think is,
-&#8220;Do I need to add {#implements respond} somewhere?&#8221; }</p>
+“Do I need to add {#implements respond} somewhere?” }</p>
 </div>
 <div class="section" id="set">
 <h2>#set<a class="headerlink" href="#set" title="Permalink to this headline">¶</a></h2>
@@ -295,7 +292,7 @@ first} thing you should think is,
 </div>
 <p>{#set} is used to create and update local variables at run time.
 The expression may be any Python expression. Remember to preface
-variable names with $ unless they&#8217;re part of an intermediate result
+variable names with $ unless they’re part of an intermediate result
 in a list comprehension.</p>
 <p>Here are some examples:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#set $size = $length * 1096</span>
@@ -308,7 +305,7 @@ in a list comprehension.</p>
 <p>{#set} variables are useful to assign a short name to a
 {$deeply.nested.value}, to a calculation, or to a printable version
 of a value. The last example above converts any spaces in the
-&#8216;country&#8217; value into HTML non-breakable-space entities, to ensure
+‘country’ value into HTML non-breakable-space entities, to ensure
 the entire value appears on one line in the browser.</p>
 <p>{#set} variables are also useful in {#if} expressions, but remember
 that complex logical routines should be coded in Python, not in
@@ -320,12 +317,12 @@ Cheetah!</p>
 <span class="c1">#end if</span>
 </pre></div>
 </div>
-<p>Or Python&#8217;s one-line equivalent, &#8220;A and B or C&#8221;. Remember that in
-this case, B must be a true value (not None, &#8216;&#8217;, 0, [] or {}).</p>
+<p>Or Python’s one-line equivalent, “A and B or C”. Remember that in
+this case, B must be a true value (not None, ‘’, 0, [] or {}).</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#set $adj = $size &gt; 1500 and &#39;large&#39; or &#39;small&#39;</span>
 </pre></div>
 </div>
-<p>(Note: Cheetah&#8217;s one-line {#if} will not work for this, since it
+<p>(Note: Cheetah’s one-line {#if} will not work for this, since it
 produces output rather than setting a variable.</p>
 <p>You can also use the augmented assignment operators:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">## Increment $a by 5.</span>
@@ -346,7 +343,7 @@ prevent surprises.</p>
 </pre></div>
 </div>
 <p>{#del} is the opposite of {#set}. It deletes a { local} variable.
-Its usage is just like Python&#8217;s {del} statement:</p>
+Its usage is just like Python’s {del} statement:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#del $myVar</span>
 <span class="c1">#del $myVar, $myArray[5]</span>
 </pre></div>
@@ -395,7 +392,7 @@ compiled into .py template modules):</p>
 </div>
 <p>The {#def} directive is used to define new methods in the generated
 Python class, or to override superclass methods. It is analogous to
-Python&#8217;s {def} statement. The directive is silent, meaning it does
+Python’s {def} statement. The directive is silent, meaning it does
 not itself produce any output. However, the content of the method
 will be inserted into the output (and the directives executed)
 whenever the method is later called by a $placeholder.</p>
@@ -449,7 +446,7 @@ This is the $adj method
 #end def
 </pre></div>
 </div>
-<p>where the method includes a newline after &#8220;method&#8221;. If you don&#8217;t
+<p>where the method includes a newline after “method”. If you don’t
 want the newline, add {#slurp}:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#def myMeth3
 This is the $adj method#slurp
@@ -458,20 +455,20 @@ This is the $adj method#slurp
 </div>
 <p>Because {#def} is handled at compile time, it can appear above or
 below the placeholders that call it. And if a superclass
-placeholder calls a method that&#8217;s overridden in a subclass, it&#8217;s
+placeholder calls a method that’s overridden in a subclass, it’s
 the subclass method that will be called.</p>
 </div>
 <div class="section" id="block-end-block">
-<h2>#block ... #end block<a class="headerlink" href="#block-end-block" title="Permalink to this headline">¶</a></h2>
+<h2>#block … #end block<a class="headerlink" href="#block-end-block" title="Permalink to this headline">¶</a></h2>
 <p>(inheritanceEtc.block)</p>
 <p>The {#block} directive allows you to mark a section of your
 template that can be selectively reimplemented in a subclass. It is
 very useful for changing part of a template without having to
 copy-paste-and-edit the entire thing. The output from a template
 definition that uses blocks will be identical to the output from
-the same template with the {#block ... #end block} tags removed.</p>
-<p>({ Note:} don&#8217;t be confused by the generic word &#8216;block&#8217;&#8217; in this
-Guide, which means a section of code inside { any} {#TAG ... #end
+the same template with the {#block … #end block} tags removed.</p>
+<p>({ Note:} don’t be confused by the generic word ‘block’’ in this
+Guide, which means a section of code inside { any} {#TAG … #end
 TAG} pair. Thus, an if-block, for-block, def-block, block-block
 etc. In this section we are talking only of block-blocks.)</p>
 <p>To reimplement the block, use the {#def} directive. The magical
@@ -508,13 +505,13 @@ as you wish.</p>
 tag.</p>
 <p>Technically, {#block} directive is equivalent to a {#def} directive
 followed immediately by a {#placeholder} for the same name. In
-fact, that&#8217;s what Cheetah does. Which means you can use
+fact, that’s what Cheetah does. Which means you can use
 {$theBlockName} elsewhere in the template to output the block
 content again.</p>
 <p>There is a one-line {#block} syntax analagous to the one-line
 {#def}.</p>
 <p>The block must not require arguments because the implicit
-placeholder that&#8217;s generated will call the block without
+placeholder that’s generated will call the block without
 arguments.</p>
 </div>
 </div>
@@ -541,13 +538,13 @@ arguments.</p>
           <a href="output.html" title="Generating, Caching and Filtering Output"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

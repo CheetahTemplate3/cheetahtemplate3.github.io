@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Cheetah.Filters module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +24,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -70,25 +67,27 @@
   <div class="section" id="module-Cheetah.Filters">
 <span id="cheetah-filters-module"></span><h1>Cheetah.Filters module<a class="headerlink" href="#module-Cheetah.Filters" title="Permalink to this headline">¶</a></h1>
 <p>Filters for the #filter directive as well as #transform</p>
-<p>#filter results in output filters Cheetah&#8217;s $placeholders .
+<p>#filter results in output filters Cheetah’s $placeholders .
 #transform results in a filter on the entirety of the output</p>
 <dl class="class">
 <dt id="Cheetah.Filters.CodeHighlighter">
 <em class="property">class </em><code class="descclassname">Cheetah.Filters.</code><code class="descname">CodeHighlighter</code><span class="sig-paren">(</span><em>template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.CodeHighlighter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Filters.Filter" title="Cheetah.Filters.Filter"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Filters.Filter</span></code></a></p>
-<p>The CodeHighlighter filter depends on the &#8220;pygments&#8221; module which you can
-download and install from: <a class="reference external" href="http://pygments.org">http://pygments.org</a></p>
-<p>What the CodeHighlighter assumes the string that it&#8217;s receiving is source
-code and uses pygments.lexers.guess_lexer() to try to guess which parser
-to use when highlighting it.</p>
-<p>CodeHighlighter will return the HTML and CSS to render the code block, syntax
-highlighted, in a browser</p>
-<p>NOTE: I had an issue installing pygments on Linux/amd64/Python 2.6 dealing with
-importing of pygments.lexers, I was able to correct the failure by adding:</p>
+<p>The CodeHighlighter filter depends on the “pygments” module
+which you can download and install from: <a class="reference external" href="http://pygments.org/">http://pygments.org/</a></p>
+<p>What the CodeHighlighter assumes the string that it’s receiving
+is source code and uses pygments.lexers.guess_lexer() to try to guess
+which parser to use when highlighting it.</p>
+<p>CodeHighlighter will return the HTML and CSS to render the code block,
+syntax highlighted, in a browser</p>
+<p>NOTE: I had an issue installing pygments on Linux/amd64/Python 2.6
+dealing with importing of pygments.lexers. I was able to correct the
+failure by adding:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">raise</span> <span class="ne">ImportError</span>
 </pre></div>
 </div>
-<p>to line 39 of pygments/plugin.py (since importing pkg_resources was causing issues)</p>
+<p>to line 39 of pygments/plugin.py (since importing pkg_resources was
+causing issues).</p>
 <dl class="method">
 <dt id="Cheetah.Filters.CodeHighlighter.filter">
 <code class="descname">filter</code><span class="sig-paren">(</span><em>source</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.CodeHighlighter.filter" title="Permalink to this definition">¶</a></dt>
@@ -110,7 +109,8 @@ importing of pygments.lexers, I was able to correct the failure by adding:</p>
 <dl class="method">
 <dt id="Cheetah.Filters.Filter.filter">
 <code class="descname">filter</code><span class="sig-paren">(</span><em>val</em>, <em>encoding=None</em>, <em>str=&lt;type 'str'&gt;</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.Filter.filter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Pass Unicode strings through unmolested, unless an encoding is specified.</p>
+<dd><p>Pass Unicode strings through unmolested,
+unless an encoding is specified.</p>
 </dd></dl>
 
 </dd></dl>
@@ -131,7 +131,7 @@ importing of pygments.lexers, I was able to correct the failure by adding:</p>
 </div>
 <p>and so on.</p>
 <p>Markdown is meant to be used with the #transform
-tag, as it&#8217;s usefulness with #filter is marginal at
+tag, as it’s usefulness with #filter is marginal at
 best</p>
 <dl class="method">
 <dt id="Cheetah.Filters.Markdown.filter">
@@ -147,7 +147,7 @@ best</p>
 <dl class="method">
 <dt id="Cheetah.Filters.MaxLen.filter">
 <code class="descname">filter</code><span class="sig-paren">(</span><em>val</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.MaxLen.filter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Replace None with &#8216;&#8217; and cut off at maxlen.</p>
+<dd><p>Replace None with ‘’ and cut off at maxlen.</p>
 </dd></dl>
 
 </dd></dl>
@@ -165,8 +165,9 @@ best</p>
 <p>Strip leading/trailing whitespace but preserve newlines.</p>
 <p>This filter goes through the value line by line, removing leading and
 trailing whitespace on each line.  It does not strip newlines, so every
-input line corresponds to one output line, with its trailing newline intact.</p>
-<p>We do not use val.split(&#8216;n&#8217;) because that would squeeze out consecutive
+input line corresponds to one output line, with its trailing newline
+intact.</p>
+<p>We do not use val.split(‘n’) because that would squeeze out consecutive
 blank lines.  Instead, we search for each newline individually.  This
 makes us unable to use the fast C .split method, but it makes the filter
 much more widely useful.</p>
@@ -232,8 +233,8 @@ input is joined into one ling line with NO trailing newline.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

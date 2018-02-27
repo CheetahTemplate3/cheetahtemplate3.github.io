@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Cheetah.Utils.Misc module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +24,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -80,7 +77,7 @@
 what, string, suffix for error message (see function source).</dd>
 </dl>
 <p>out: None.
-exc: TypeError if &#8216;dic&#8217; contains a key not in &#8216;legalKeywords&#8217;.
+exc: TypeError if ‘dic’ contains a key not in ‘legalKeywords’.
 called by: Cheetah.Template.__init__()</p>
 </dd></dl>
 
@@ -92,23 +89,23 @@ called by: Cheetah.Template.__init__()</p>
 <dl class="function">
 <dt id="Cheetah.Utils.Misc.mkdirsWithPyInitFiles">
 <code class="descclassname">Cheetah.Utils.Misc.</code><code class="descname">mkdirsWithPyInitFiles</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Misc.mkdirsWithPyInitFiles" title="Permalink to this definition">¶</a></dt>
-<dd><p>Same as os.makedirs (mkdir &#8216;path&#8217; and all missing parent directories)
-but also puts a Python &#8216;__init__.py&#8217; file in every directory it
-creates.  Does nothing (without creating an &#8216;__init__.py&#8217; file) if the
+<dd><p>Same as os.makedirs (mkdir ‘path’ and all missing parent directories)
+but also puts a Python ‘__init__.py’ file in every directory it
+creates.  Does nothing (without creating an ‘__init__.py’ file) if the
 directory already exists.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="Cheetah.Utils.Misc.removeFromList">
 <code class="descclassname">Cheetah.Utils.Misc.</code><code class="descname">removeFromList</code><span class="sig-paren">(</span><em>list_</em>, <em>*elements</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Misc.removeFromList" title="Permalink to this definition">¶</a></dt>
-<dd><p>Save as <a href="#id3"><span class="problematic" id="id4">list_</span></a>.remove(each element) but don&#8217;t raise an error if
-element is missing.  Modifies &#8216;<a href="#id5"><span class="problematic" id="id6">list_</span></a>&#8216; in place!  Returns None.</p>
+<dd><p>Save as <a href="#id3"><span class="problematic" id="id4">list_</span></a>.remove(each element) but don’t raise an error if
+element is missing.  Modifies ‘<a href="#id5"><span class="problematic" id="id6">list_</span></a>’ in place!  Returns None.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="Cheetah.Utils.Misc.useOrRaise">
 <code class="descclassname">Cheetah.Utils.Misc.</code><code class="descname">useOrRaise</code><span class="sig-paren">(</span><em>thing</em>, <em>errmsg=''</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Misc.useOrRaise" title="Permalink to this definition">¶</a></dt>
-<dd><p>Raise &#8216;thing&#8217; if it&#8217;s a subclass of Exception.  Otherwise return it.</p>
+<dd><p>Raise ‘thing’ if it’s a subclass of Exception.  Otherwise return it.</p>
 <p>Called by: Cheetah.Servlet.cgiImport()</p>
 </dd></dl>
 
@@ -134,8 +131,8 @@ element is missing.  Modifies &#8216;<a href="#id5"><span class="problematic" id
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

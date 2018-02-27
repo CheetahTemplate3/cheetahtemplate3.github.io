@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Error Handling &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -29,7 +26,7 @@
     <link rel="next" title="Instructions to the Parser/Compiler" href="parserInstructions.html" />
     <link rel="prev" title="Flow Control" href="flowControl.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -46,7 +43,7 @@
           <a href="flowControl.html" title="Flow Control"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -54,7 +51,7 @@
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Error Handling</a><ul>
-<li><a class="reference internal" href="#try-except-end-try-finally-and-assert">#try ... #except ... #end try, #finally, and #assert</a></li>
+<li><a class="reference internal" href="#try-except-end-try-finally-and-assert">#try … #except … #end try, #finally, and #assert</a></li>
 <li><a class="reference internal" href="#errorcatcher-and-errorcatcher-objects">#errorCatcher and ErrorCatcher objects</a></li>
 </ul>
 </li>
@@ -96,14 +93,14 @@
 <p>(errorHandling)</p>
 <p>There are two ways to handle runtime errors (exceptions) in
 Cheetah. The first is with the Cheetah directives that mirror
-Python&#8217;s structured exception handling statements. The second is
-with Cheetah&#8217;s {ErrorCatcher} framework. These are described
+Python’s structured exception handling statements. The second is
+with Cheetah’s {ErrorCatcher} framework. These are described
 below.</p>
 <div class="section" id="try-except-end-try-finally-and-assert">
-<h2>#try ... #except ... #end try, #finally, and #assert<a class="headerlink" href="#try-except-end-try-finally-and-assert" title="Permalink to this headline">¶</a></h2>
+<h2>#try … #except … #end try, #finally, and #assert<a class="headerlink" href="#try-except-end-try-finally-and-assert" title="Permalink to this headline">¶</a></h2>
 <p>(errorHandling.directives)</p>
-<p>Cheetah&#8217;s exception-handling directives are exact mirrors Python&#8217;s
-exception-handling statements. See Python&#8217;s documentation for
+<p>Cheetah’s exception-handling directives are exact mirrors Python’s
+exception-handling statements. See Python’s documentation for
 details. The following Cheetah code demonstrates their use:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#try
   $mightFail()
@@ -198,8 +195,8 @@ different ways. {Cheetah.ErrorCatchers.BigEcho} will output</p>
 </pre></div>
 </div>
 <p>ErrorCatcher has a significant performance impact and is turned off
-by default. It can also be turned on with the {Template} class&#8217;
-{&#8216;errorCatcher&#8217;} keyword argument. The value of this argument
+by default. It can also be turned on with the {Template} class’
+{‘errorCatcher’} keyword argument. The value of this argument
 should either be a string specifying which of the classes in
 {Cheetah.ErrorCatchers} to use, or a class that subclasses
 {Cheetah.ErrorCatchers.ErrorCatcher}. The {#errorCatcher} directive
@@ -207,10 +204,10 @@ can also be used to change the errorCatcher part way through a
 template.</p>
 <p>{Cheetah.ErrorCatchers.ListErrors} will produce the same ouput as
 {Echo} while maintaining a list of the errors that can be retrieved
-later. To retrieve the list, use the {Template} class&#8217;
-{&#8216;errorCatcher&#8217;} method to retrieve the errorCatcher and then call
+later. To retrieve the list, use the {Template} class’
+{‘errorCatcher’} method to retrieve the errorCatcher and then call
 its {listErrors} method.</p>
-<p>ErrorCatcher doesn&#8217;t catch exceptions raised inside directives.</p>
+<p>ErrorCatcher doesn’t catch exceptions raised inside directives.</p>
 </div>
 </div>
 
@@ -236,13 +233,13 @@ its {listErrors} method.</p>
           <a href="flowControl.html" title="Flow Control"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

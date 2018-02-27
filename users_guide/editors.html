@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Visual Editors &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -29,7 +26,7 @@
     <link rel="next" title="Useful Web Links" href="links.html" />
     <link rel="prev" title="Batteries included: templates and other libraries" href="libraries.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -46,7 +43,7 @@
           <a href="libraries.html" title="Batteries included: templates and other libraries"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -88,28 +85,28 @@
 <p>This chapter is about maintaining Cheetah templates with visual
 editors, and the tradeoffs between making it friendly to both text
 editors and visual editors.</p>
-<p>Cheetah&#8217;s main developers do not use visual editors. Tavis uses
+<p>Cheetah’s main developers do not use visual editors. Tavis uses
 {emacs}; Mike uses {vim}. So our first priority is to make
-templates easy to maintain in text editors. In particular, we don&#8217;t
-want to add features like Zope Page Template&#8217;s
+templates easy to maintain in text editors. In particular, we don’t
+want to add features like Zope Page Template’s
 placeholder-value-with-mock-text-for-visual-editors-all-in-an-XML-tag.
 The syntax is so verbose it makes for a whole lotta typing just to
 insert a simple placeholder, for the benefit of editors we never
 use. However, as users identify features which would help their
 visual editing without making it harder to maintain templates in a
-text editor, we&#8217;re all for it.</p>
+text editor, we’re all for it.</p>
 <p>As it said in the introduction, Cheetah purposely does not use
 HTML/XML tags for $placeholders or #directives. That way, when you
-preview the template in an editor that interprets HTML tags, you&#8217;ll
+preview the template in an editor that interprets HTML tags, you’ll
 still see the placeholder and directive source definitions, which
-provides some &#8220;mock text&#8221; even if it&#8217;s not the size the final
+provides some “mock text” even if it’s not the size the final
 values will be, and allows you to use your imagination to translate
 how the directive output will look visually in the final.</p>
 <p>If your editor has syntax highlighting, turn it on. That makes a
 big difference in terms of making the template easier to edit.
-Since no &#8220;Cheetah mode&#8221; has been invented yet, set your
+Since no “Cheetah mode” has been invented yet, set your
 highlighting to Perl mode, and at least the directives/placeholders
-will show up in different colors, although the editor won&#8217;t
+will show up in different colors, although the editor won’t
 reliably guess where the directive/placeholder ends and normal text
 begins.</p>
 </div>
@@ -136,13 +133,13 @@ begins.</p>
           <a href="libraries.html" title="Batteries included: templates and other libraries"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

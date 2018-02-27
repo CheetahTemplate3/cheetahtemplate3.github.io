@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>(#2) Conditionalized #import behavior &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -29,7 +26,7 @@
     <link rel="next" title="(#3) Exposing of super() and self via Template searchList" href="3_super.html" />
     <link rel="prev" title="(#1) CHEP Purpose and Guidelines" href="1_chep.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -131,9 +128,9 @@ module-level imports are handled appropriately.</p>
 <h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h2>
 <p>Currently Cheetah (v2.2.1) provides two different, but mutually exclusive,
 means of importing Python modules with the #from/#import directives. The
-&#8220;traditional&#8221; handling for #from/#import (hereafter referred to as &#8220;module imports&#8221;)
+“traditional” handling for #from/#import (hereafter referred to as “module imports”)
 is that the generated import statements shall all be relocated to
-the top of the generated module&#8217;s source code, i.e.</p>
+the top of the generated module’s source code, i.e.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#import cjson
 
 Hello $cjson.encode([1, 2, 3])
@@ -150,7 +147,7 @@ Hello $cjson.encode([1, 2, 3])
 </div>
 <p>Also currently in Cheetah is the ability to switch off this
 behavior and enable location specific #from/#import handling
-(hereafter referred to as &#8220;function imports&#8221;) in the generated
+(hereafter referred to as “function imports”) in the generated
 code, with this block of Cheetah for example:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#def aFunction(arg)</span>
     <span class="c1">#try</span>
@@ -182,8 +179,8 @@ exclusive fashions.</p>
 <h2>Specification<a class="headerlink" href="#specification" title="Permalink to this headline">¶</a></h2>
 <p>The change in #from/#import behavior and how these directives
 are handled is all based on context of their use, making the
-#from/#import handling &#8220;intelligent&#8221;. For module imports, the
-&#8220;traditional&#8221; handling of the #from/#import directives will
+#from/#import handling “intelligent”. For module imports, the
+“traditional” handling of the #from/#import directives will
 still apply. Whereas function imports will result in inline
 generated import code.</p>
 <p>The basic premise of the change proposed by this document is
@@ -194,13 +191,13 @@ to the top of the generated module code (i.e. the module import)</p>
 </div>
 <div class="section" id="rationale">
 <h2>Rationale<a class="headerlink" href="#rationale" title="Permalink to this headline">¶</a></h2>
-<p>The concept of the &#8220;function import&#8221; was introduced in Cheetah v2.1.0
-and quickly retrofitted to &#8220;live&#8221; behind a compiler setting due to the
+<p>The concept of the “function import” was introduced in Cheetah v2.1.0
+and quickly retrofitted to “live” behind a compiler setting due to the
 regressions with older templates or templates that were designed to utilize
 module imports (through heavy #block/#end block use, etc). Through discussion
 with Tavis Rudd, this middle ground between the two styles of importing was
-concluded to be the most reasonable solution to providing &#8220;pythonic&#8221; import
-functionality (i.e. &#8220;function import&#8221; also known as &#8220;inline imports&#8221;) while
+concluded to be the most reasonable solution to providing “pythonic” import
+functionality (i.e. “function import” also known as “inline imports”) while
 still providing the ability to have #from/#import directives declared at the
 module scope within the template (within the Cheetah templates, markup and most
 directives declared within the module scope are placed inside the default method).</p>
@@ -211,7 +208,7 @@ directives declared within the module scope are placed inside the default method
 compatible with current versions of Cheetah, Any unforeseen issues
 could arise from the use of #from/#import inside of a function
 expecting those symbols to be available outside of the function
-that they&#8217;re declared in.</p>
+that they’re declared in.</p>
 </div>
 <div class="section" id="reference-implementation">
 <h2>Reference Implementation<a class="headerlink" href="#reference-implementation" title="Permalink to this headline">¶</a></h2>
@@ -250,8 +247,8 @@ that they&#8217;re declared in.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

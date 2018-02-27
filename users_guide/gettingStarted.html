@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Getting Started &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -29,7 +26,7 @@
     <link rel="next" title="Language Overview" href="language.html" />
     <link rel="prev" title="Vocabulary" href="glossary.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -46,7 +43,7 @@
           <a href="glossary.html" title="Vocabulary"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -58,7 +55,7 @@
 <li><a class="reference internal" href="#installation">Installation</a></li>
 <li><a class="reference internal" href="#files">Files</a></li>
 <li><a class="reference internal" href="#uninstalling">Uninstalling</a></li>
-<li><a class="reference internal" href="#the-cheetah-command">The &#8216;cheetah&#8217; command</a></li>
+<li><a class="reference internal" href="#the-cheetah-command">The ‘cheetah’ command</a></li>
 <li><a class="reference internal" href="#testing-your-installation">Testing your installation</a></li>
 <li><a class="reference internal" href="#quickstart-tutorial">Quickstart tutorial</a></li>
 </ul>
@@ -109,7 +106,7 @@ and should run anywhere Python runs.</p>
 ({_namemapper.so}) for speed, but Cheetah automatically falls back
 to a Python equivalent ({NameMapper.py}) if the C module is not
 available.</p>
-<p>Cheetah can use an additional module Markdown but it&#8217;s not strictly required.</p>
+<p>Cheetah can use an additional module Markdown but it’s not strictly required.</p>
 </div>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
@@ -118,22 +115,22 @@ available.</p>
 <ol class="arabic simple">
 <li>Login as a user with privileges to install system-wide Python
 packages. On POSIX systems (AIX, Solaris, Linux, IRIX, etc.), the
-command is normally &#8216;su root&#8217;. On non-POSIX systems such as Windows
+command is normally ‘su root’. On non-POSIX systems such as Windows
 NT, login as an administrator.</li>
 <li>Run {pip install Cheetah3} at the command prompt.</li>
 <li>Or download source code and run {python setup.py install}.</li>
 <li>The setup program will install the wrapper script { cheetah} to
-wherever it usually puts Python binaries (&#8220;/usr/bin/&#8221;, &#8220;bin/&#8221; in
+wherever it usually puts Python binaries (“/usr/bin/”, “bin/” in
 the Python install directory, etc.)</li>
 <li>If you cannot login as as an administrator install Cheetah as user to your
-own home directory: add option {&#8211;user} to commands: either
-{pip install &#8211;user Cheetah3} or {python setup.py install &#8211;user}.</li>
+own home directory: add option {–user} to commands: either
+{pip install –user Cheetah3} or {python setup.py install –user}.</li>
 </ol>
-<p>Cheetah&#8217;s installation is managed by Python&#8217;s Distribution
-Utilities (&#8216;distutils&#8217;). There are many options for customization.
+<p>Cheetah’s installation is managed by Python’s Distribution
+Utilities (‘distutils’). There are many options for customization.
 Type {python setup.py help} for more information.</p>
 <p>To install Cheetah in an alternate location - someplace outside
-Python&#8217;s {site-packages/} directory, use one of these options:</p>
+Python’s {site-packages/} directory, use one of these options:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span> <span class="o">--</span><span class="n">home</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">tavis</span>
 <span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span> <span class="o">--</span><span class="n">install</span><span class="o">-</span><span class="n">lib</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">tavis</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python</span>
 </pre></div>
@@ -149,7 +146,7 @@ Python to find Cheetah.</p>
 in the { site-packages/Cheetah/} subdirectory of your standard
 library directory; e.g.,
 /opt/Python2.2/lib/python2.2/site-packages/Cheetah.</p>
-<p>Two commands are installed in Python&#8217;s {bin/} directory or a system
+<p>Two commands are installed in Python’s {bin/} directory or a system
 bin directory: {cheetah} (section gettingStarted.cheetah) and
 {cheetah-compile} (section howWorks.cheetah-compile).</p>
 </div>
@@ -157,14 +154,14 @@ bin directory: {cheetah} (section gettingStarted.cheetah) and
 <h2>Uninstalling<a class="headerlink" href="#uninstalling" title="Permalink to this headline">¶</a></h2>
 <p>(gettingstarted.uninstalling)</p>
 <p>To uninstall Cheetah, merely delete the site-packages/Cheetah/
-directory. Then delete the &#8220;cheetah&#8221; and &#8220;cheetah-compile&#8221; commands
+directory. Then delete the “cheetah” and “cheetah-compile” commands
 from whichever bin/ directory they were put in.</p>
 </div>
 <div class="section" id="the-cheetah-command">
-<h2>The &#8216;cheetah&#8217; command<a class="headerlink" href="#the-cheetah-command" title="Permalink to this headline">¶</a></h2>
+<h2>The ‘cheetah’ command<a class="headerlink" href="#the-cheetah-command" title="Permalink to this headline">¶</a></h2>
 <p>(gettingStarted.cheetah)</p>
 <p>Cheetah comes with a utility {cheetah} that provides a command-line
-interface to various housekeeping tasks. The command&#8217;s first
+interface to various housekeeping tasks. The command’s first
 argument is the name of the task. The following commands are
 currently supported:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cheetah</span> <span class="nb">compile</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span> <span class="p">[</span><span class="n">FILES</span> <span class="o">...</span><span class="p">]</span>     <span class="p">:</span> <span class="n">Compile</span> <span class="n">template</span> <span class="n">definitions</span>
@@ -187,10 +184,10 @@ the {fill} command in section howWorks.cheetah-fill.</p>
 <h2>Testing your installation<a class="headerlink" href="#testing-your-installation" title="Permalink to this headline">¶</a></h2>
 <p>(gettingStarted.test)</p>
 <p>After installing Cheetah, you can run its self-test routine to
-verify it&#8217;s working properly on your system. Change directory to
+verify it’s working properly on your system. Change directory to
 any directory you have write permission in (the tests write
 temporary files). Do not run the tests in the directory you
-installed Cheetah from, or you&#8217;ll get unnecessary errors. Type the
+installed Cheetah from, or you’ll get unnecessary errors. Type the
 following at the command prompt:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cheetah</span> <span class="n">test</span>
 </pre></div>
@@ -201,10 +198,10 @@ interactive mode and try the example in the next section.</p>
 <p>Certain test failures are insignificant:</p>
 <blockquote>
 <div><p>Python 2.3 changed the string representation of booleans, and the
-tests haven&#8217;t yet been updated to reflect this.</p>
-<p>Certain tests run &#8220;cheetah&#8221; as a subcommand. The failure may mean
-the command wasn&#8217;t found in your system path. (What happens if you
-run &#8220;cheetah&#8221; on the command line?) The failure also happens on
+tests haven’t yet been updated to reflect this.</p>
+<p>Certain tests run “cheetah” as a subcommand. The failure may mean
+the command wasn’t found in your system path. (What happens if you
+run “cheetah” on the command line?) The failure also happens on
 some Windows systems for unknown reasons. This failure has never
 been observed outside the test suite. Long term, we plan to rewrite
 the tests to do a function call rather than a subcommand, which
@@ -213,7 +210,7 @@ will also make the tests run significantly faster.</p>
 and {import} it. Reread the first paragraph in this section about
 the current directory.</p>
 <p>May be the same problem as SampleBaseClass; let us know if changing
-the current directory doesn&#8217;t work.</p>
+the current directory doesn’t work.</p>
 </div></blockquote>
 <p>If any other tests fail, please send a message to the e-mail list
 with a copy of the test output and the following details about your
@@ -230,11 +227,11 @@ installation:</p>
 <p>(gettingStarted.tutorial)</p>
 <p>This tutorial briefly introduces how to use Cheetah from the Python
 prompt. The following chapters will discuss other ways to use
-templates and more of Cheetah&#8217;s features.</p>
+templates and more of Cheetah’s features.</p>
 <p>The core of Cheetah is the {Template} class in the
 {Cheetah.Template} module. The following example shows how to use
 the {Template} class in an interactive Python session. {t} is the
-Template instance. Lines prefixed with {&gt;&gt;&gt;} and {...} are user
+Template instance. Lines prefixed with {&gt;&gt;&gt;} and {…} are user
 input. The remaining lines are Python output.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">Cheetah.Template</span> <span class="k">import</span> <span class="n">Template</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">templateDef</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -297,24 +294,24 @@ result this way:</p>
 string, as we will see in section howWorks.constructing.</p>
 <p>The above is all fine for short templates, but for long templates
 or for an application that depends on many templates in a
-hierarchy, it&#8217;s easier to store the templates in separate *.tmpl
+hierarchy, it’s easier to store the templates in separate *.tmpl
 files and use the { cheetah compile} program to convert them into
 Python classes in their own modules. This will be covered in
 section howWorks.cheetah-compile.</p>
-<p>As an appetizer, we&#8217;ll just briefly mention that you can store
+<p>As an appetizer, we’ll just briefly mention that you can store
 constant values { inside} the template definition, and they will be
 converted to attributes in the generated class. You can also create
 methods the same way. You can even use inheritance to arrange your
 templates in a hierarchy, with more specific templates overriding
-certain parts of more general templates (e.g., a &#8220;page&#8221; template
-overriding a sidebar in a &#8220;section&#8221; template).</p>
-<p>For the minimalists out there, here&#8217;s a template definition,
+certain parts of more general templates (e.g., a “page” template
+overriding a sidebar in a “section” template).</p>
+<p>For the minimalists out there, here’s a template definition,
 instantiation and filling all in one Python statement:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">Template</span><span class="p">(</span><span class="s2">&quot;Templates are pretty useless without placeholders.&quot;</span><span class="p">)</span>
 <span class="go">Templates are pretty useless without placeholders.</span>
 </pre></div>
 </div>
-<p>You use a precompiled template the same way, except you don&#8217;t
+<p>You use a precompiled template the same way, except you don’t
 provide a template definition since it was already established:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">MyPrecompiledTemplate</span> <span class="k">import</span> <span class="n">MyPrecompiledTemplate</span>
 <span class="n">t</span> <span class="o">=</span> <span class="n">MyPrecompiledTemplate</span><span class="p">()</span>
@@ -348,13 +345,13 @@ provide a template definition since it was already established:</p>
           <a href="glossary.html" title="Vocabulary"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

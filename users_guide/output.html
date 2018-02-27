@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Generating, Caching and Filtering Output &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -29,7 +26,7 @@
     <link rel="next" title="Import, Inheritance, Declaration and Assignment" href="inheritanceEtc.html" />
     <link rel="prev" title="Comments" href="comments.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -46,7 +43,7 @@
           <a href="comments.html" title="Comments"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -113,7 +110,7 @@
 </pre></div>
 </div>
 <p>The {#echo} directive is used to echo the output from expressions
-that can&#8217;t be written as simple $placeholders.</p>
+that can’t be written as simple $placeholders.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Here</span> <span class="ow">is</span> <span class="n">my</span> <span class="c1">#echo &#39;, &#39;.join([&#39;silly&#39;]*5) # example</span>
 </pre></div>
 </div>
@@ -138,7 +135,7 @@ discards the output.</p>
 </div>
 <p>If your template requires some Python code to be executed at the
 beginning; (e.g., to calculate placeholder values, access a
-database, etc), you can put it in a &#8220;doEverything&#8221; method you
+database, etc), you can put it in a “doEverything” method you
 inherit, and call this method using {#silent} at the top of the
 template.</p>
 </div>
@@ -150,16 +147,16 @@ template.</p>
 </pre></div>
 </div>
 <p>The {#if} flow-control directive (section flowControl.if) has a
-one-line counterpart akin to Perl&#8217;s and C&#8217;s {?:} operator. If
+one-line counterpart akin to Perl’s and C’s {?:} operator. If
 {EXPR1} is true, it evaluates {EXPR2} and outputs the result (just
 like {#echo EXPR2#}). Otherwise it evaluates {EXPR3} and outputs
 that result. This directive is short-circuiting, meaning the
-expression that isn&#8217;t needed isn&#8217;t evaluated.</p>
-<p>You MUST include both &#8216;then&#8217; and &#8216;else&#8217;. If this doesn&#8217;t work for
-you or you don&#8217;t like the style use multi-line {#if} directives
+expression that isn’t needed isn’t evaluated.</p>
+<p>You MUST include both ‘then’ and ‘else’. If this doesn’t work for
+you or you don’t like the style use multi-line {#if} directives
 (section flowControl.if).</p>
 <p>The trailing {#} is the normal end-of-directive character. As usual
-it may be omitted if there&#8217;s nothing after the directive on the
+it may be omitted if there’s nothing after the directive on the
 same line.</p>
 </div>
 <div class="section" id="caching-output">
@@ -169,15 +166,15 @@ same line.</p>
 <h3>Caching individual placeholders<a class="headerlink" href="#caching-individual-placeholders" title="Permalink to this headline">¶</a></h3>
 <p>(output.caching.placeholders)</p>
 <p>By default, the values of each $placeholder is retrieved and
-interpolated for every request. However, it&#8217;s possible to cache the
-values of individual placeholders if they don&#8217;t change very often,
+interpolated for every request. However, it’s possible to cache the
+values of individual placeholders if they don’t change very often,
 in order to speed up the template filling.</p>
 <p>To cache the value of a single {$placeholder}, add an asterisk
 after the $; e.g., {$*var}. The first time the template is filled,
 {$var} is looked up. Then whenever the template is filled again,
 the cached value is used instead of doing another lookup.</p>
-<p>The {$*} format caches &#8220;forever&#8221;; that is, as long as the template
-instance remains in memory. It&#8217;s also possible to cache for a
+<p>The {$*} format caches “forever”; that is, as long as the template
+instance remains in memory. It’s also possible to cache for a
 certain time period using the form {$*&lt;interval&gt;*variable}, where
 {&lt;interval&gt;} is the interval. The time interval can be specified in
 seconds (5s), minutes (15m), hours (3h), days (2d) or weeks (1.5w).
@@ -194,16 +191,16 @@ $*5*var3 $*5*{var3}   ## timed refresh - will be updated every five minutes.
 &lt;/HTML&gt;
 </pre></div>
 </div>
-<p>Note that &#8220;every five minutes&#8221; in the example really means every
+<p>Note that “every five minutes” in the example really means every
 five minutes: the variable is looked up again when the time limit
 is reached, whether the template is being filled that frequently or
 not. Keep this in mind when setting refresh times for CPU-intensive
 or I/O intensive operations.</p>
-<p>If you&#8217;re using the long placeholder syntax, <code class="docutils literal"><span class="pre">${}</span></code>, the braces go
+<p>If you’re using the long placeholder syntax, <code class="docutils literal"><span class="pre">${}</span></code>, the braces go
 only around the placeholder name: <code class="docutils literal"><span class="pre">$*.5h*{var.func('arg')}</span></code>.</p>
-<p>Sometimes it&#8217;s preferable to explicitly invalidate a cached item
+<p>Sometimes it’s preferable to explicitly invalidate a cached item
 whenever you say so rather than at certain time intervals. You
-can&#8217;t do this with individual placeholders, but you can do it with
+can’t do this with individual placeholders, but you can do it with
 cached regions, which will be described next.</p>
 </div>
 <div class="section" id="caching-entire-regions">
@@ -229,11 +226,11 @@ way as {$*var}. The region will not be automatically refreshed.</p>
 <p>To refresh the region at an interval, use the {timer=EXPRESSION}
 argument, equivalent to {$*&lt;interval&gt;*}. The expression should
 evaluate to a number or string that is a valid interval (e.g., 0.5,
-&#8216;3m&#8217;, etc).</p>
+‘3m’, etc).</p>
 <p>To refresh whenever an expression is true, use {test=EXPRESSION}.
 The expression can be a method/function returning true or false, a
 boolean placeholder, several of these joined by {and} and/or {or},
-or any other expression. If the expression contains spaces, it&#8217;s
+or any other expression. If the expression contains spaces, it’s
 easier to read if you enclose it in {()}, but this is not
 required.</p>
 <p>To refresh whenever you say so, use {id=EXPRESSION}. Your program
@@ -242,7 +239,7 @@ useful if the cache depends on some external condition that changes
 infrequently but has just changed now.</p>
 <p>You can combine arguments by separating them with commas. For
 instance, you can specify both {id=} and {interval=}, or {id=} and
-{test=}. (You can also combine interval and test although it&#8217;s not
+{test=}. (You can also combine interval and test although it’s not
 very useful.) However, repeating an argument is undefined.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#cache
 This is a static cache.  It will not be refreshed.
@@ -266,10 +263,10 @@ $cust.street - $cust.city
 </pre></div>
 </div>
 <p>The {#cache} directive cannot be nested.</p>
-<p>We are planning to add a {&#8216;varyBy&#8217;} keyword argument in the future
+<p>We are planning to add a {‘varyBy’} keyword argument in the future
 that will allow a separate cache instances to be created for a
 variety of conditions, such as different query string parameters or
-browser types. This is inspired by ASP.net&#8217;s varyByParam and
+browser types. This is inspired by ASP.net’s varyByParam and
 varyByBrowser output caching keywords.</p>
 </div>
 </div>
@@ -281,14 +278,14 @@ varyByBrowser output caching keywords.</p>
 <span class="c1">#end raw</span>
 </pre></div>
 </div>
-<p>Any section of a template definition that is inside a {#raw ...
+<p>Any section of a template definition that is inside a {#raw …
 #end raw} tag pair will be printed verbatim without any parsing of
 $placeholders or other directives. This can be very useful for
 debugging, or for Cheetah examples and tutorials.</p>
-<p>{#raw} is conceptually similar to HTML&#8217;s {&lt;PRE&gt;} tag and LaTeX&#8217;s {
+<p>{#raw} is conceptually similar to HTML’s {&lt;PRE&gt;} tag and LaTeX’s {
 verbatim{}} tag, but unlike those tags, {#raw} does not cause the
-body to appear in a special font or typeface. It can&#8217;t, because
-Cheetah doesn&#8217;t know what a font is.</p>
+body to appear in a special font or typeface. It can’t, because
+Cheetah doesn’t know what a font is.</p>
 </div>
 <div class="section" id="include">
 <h2>#include<a class="headerlink" href="#include" title="Permalink to this headline">¶</a></h2>
@@ -307,7 +304,7 @@ necessary.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#include &quot;includeFileName.txt&quot;</span>
 </pre></div>
 </div>
-<p>The content of &#8220;includeFileName.txt&#8221; will be parsed for Cheetah
+<p>The content of “includeFileName.txt” will be parsed for Cheetah
 syntax.</p>
 <p>And this example demonstrates use with {$placeholder} variables:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#include source=$myParseText</span>
@@ -315,17 +312,17 @@ syntax.</p>
 </div>
 <p>The value of {$myParseText} will be parsed for Cheetah syntax. This
 is not the same as simply placing the $placeholder tag
-&#8220;{$myParseText}&#8221; in the template definition. In the latter case,
+“{$myParseText}” in the template definition. In the latter case,
 the value of $myParseText would not be parsed.</p>
 <p>By default, included text will be parsed for Cheetah tags. The
-argument &#8220;{raw}&#8221; can be used to suppress the parsing.</p>
+argument “{raw}” can be used to suppress the parsing.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#include raw &quot;includeFileName.txt&quot;</span>
 <span class="c1">#include raw source=$myParseText</span>
 </pre></div>
 </div>
 <p>Cheetah wraps each chunk of {#include} text inside a nested
 {Template} object. Each nested template has a copy of the main
-template&#8217;s searchList. However, {#set} variables are visible across
+template’s searchList. However, {#set} variables are visible across
 includes only if the defined using the {#set global} keyword.</p>
 <p>All directives must be balanced in the include file. That is, if
 you start a {#for} or {#if} block inside the include, you must end
@@ -355,7 +352,7 @@ $i #slurp
 <div class="section" id="indent">
 <h2>#indent<a class="headerlink" href="#indent" title="Permalink to this headline">¶</a></h2>
 <p>(output.indent)</p>
-<p>This directive is not implemented yet. When/if it&#8217;s completed, it
+<p>This directive is not implemented yet. When/if it’s completed, it
 will allow you to</p>
 <ol class="arabic simple">
 <li>indent your template definition in a natural way (e.g., the
@@ -367,7 +364,7 @@ source code).</li>
 </ol>
 <p>There is some experimental code that recognizes the {#indent}
 directive with options, but the options are purposely undocumented
-at this time. So pretend it doesn&#8217;t exist. If you have a use for
+at this time. So pretend it doesn’t exist. If you have a use for
 this feature and would like to see it implemented sooner rather
 than later, let us know on the mailing list.</p>
 <p>The latest specification for the future {#indent} directive is in
@@ -389,15 +386,15 @@ filter returns an empty string. Only top-level placeholders invoke
 the filter; placeholders inside expressions do not.</p>
 <p>Certain filters take optional arguments to modify their behaviour.
 To pass arguments, use the long placeholder syntax and precede each
-filter argument by a comma. By convention, filter arguments don&#8217;t
+filter argument by a comma. By convention, filter arguments don’t
 take a {$} prefix, to avoid clutter in the placeholder tag which
 already has plenty of dollar signs. For instance, the MaxLen filter
-takes an argument &#8216;maxlen&#8217;:</p>
+takes an argument ‘maxlen’:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>${placeholderName, maxlen=20}
 ${functionCall($functionArg), maxlen=$myMaxLen}
 </pre></div>
 </div>
-<p>To change the output filter, use the {&#8216;filter&#8217;} keyword to the
+<p>To change the output filter, use the {‘filter’} keyword to the
 {Template} class constructor, or the {#filter} directive at runtime
 (details below). You may use {#filter} as often as you wish to
 switch between several filters, if certain {$placeholders} need one
@@ -405,30 +402,30 @@ filter and other {$placeholders} need another.</p>
 <p>The standard filters are in the module {Cheetah.Filters}. Cheetah
 currently provides:</p>
 <blockquote>
-<div><p>The default filter, which converts None to &#8216;&#8217; and everything else
+<div><p>The default filter, which converts None to ‘’ and everything else
 to {str(whateverItIs)}. This is the base class for all other
 filters, and the minimum behaviour for all filters distributed with
 Cheetah.</p>
 <p>Same.</p>
-<p>Same, but truncate the value if it&#8217;s longer than a certain length.
-Use the &#8216;maxlen&#8217; filter argument to specify the length, as in the
-examples above. If you don&#8217;t specify &#8216;maxlen&#8217;, the value will not
+<p>Same, but truncate the value if it’s longer than a certain length.
+Use the ‘maxlen’ filter argument to specify the length, as in the
+examples above. If you don’t specify ‘maxlen’, the value will not
 be truncated.</p>
-<p>Output a &#8220;pageful&#8221; of a long string. After the page, output HTML
+<p>Output a “pageful” of a long string. After the page, output HTML
 hyperlinks to the previous and next pages. This filter uses several
 filter arguments and environmental variables, which have not been
 documented yet.</p>
 <p>Same as default, but convert HTML-sensitive characters
-(&#8216;<span class="math">$<$</span>&#8216;, &#8216;&amp;&#8217;, &#8216;<span class="math">$>$</span>&#8216;) to HTML entities so that the
+(‘<span class="math">$<$</span>’, ‘&amp;’, ‘<span class="math">$>$</span>’) to HTML entities so that the
 browser will display them literally rather than interpreting them
 as HTML tags. This is useful with database values or user input
 that may contain sensitive characters. But if your values contain
 embedded HTML tags you want to preserve, you do not want this
 filter.</p>
-<p>The filter argument &#8216;also&#8217; may be used to specify additional
+<p>The filter argument ‘also’ may be used to specify additional
 characters to escape. For instance, say you want to ensure a value
 displays all on one line. Escape all spaces in the value with
-&#8216;&amp;nbsp&#8217;, the non-breaking space:</p>
+‘&amp;nbsp’, the non-breaking space:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>${$country, also=&#39; &#39;}}
 </pre></div>
 </div>
@@ -453,15 +450,15 @@ method.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>     <span class="c1"># Returns a string.</span>
 </pre></div>
 </div>
-<p>Return the { string} that should be output for &#8216;val&#8217;. &#8216;val&#8217; may be
-any type. Most filters return `&#8217; for {None}. Cheetah passes one
+<p>Return the { string} that should be output for ‘val’. ‘val’ may be
+any type. Most filters return `’ for {None}. Cheetah passes one
 keyword argument: <code class="docutils literal"><span class="pre">kw['rawExpr']</span></code> is the placeholder name as it
 appears in the template definition, including all subscripts and
 arguments. If you use the long placeholder syntax, any options you
 pass appear as keyword arguments. Again, the return value must be a
 string.</p>
 <p>You can always switch back to the default filter this way: {#filter
-None}. This is easy to remember because &#8220;no filter&#8221; means the
+None}. This is easy to remember because “no filter” means the
 default filter, and because None happens to be the only object the
 default filter treats specially.</p>
 <p>We are considering additional filters; see
@@ -492,13 +489,13 @@ for the latest ideas.</p>
           <a href="comments.html" title="Comments"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Tips, Tricks and Troubleshooting &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -29,7 +26,7 @@
     <link rel="next" title="Using Cheetah with Webware" href="webware.html" />
     <link rel="prev" title="Instructions to the Parser/Compiler" href="parserInstructions.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -46,7 +43,7 @@
           <a href="parserInstructions.html" title="Instructions to the Parser/Compiler"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -102,7 +99,7 @@
   <div class="section" id="tips-tricks-and-troubleshooting">
 <h1>Tips, Tricks and Troubleshooting<a class="headerlink" href="#tips-tricks-and-troubleshooting" title="Permalink to this headline">¶</a></h1>
 <p>(tips)</p>
-<p>This chapter contains short stuff that doesn&#8217;t fit anywhere else.</p>
+<p>This chapter contains short stuff that doesn’t fit anywhere else.</p>
 <p>See the Cheetah FAQ for more specialized issues and for
 troubleshooting tips. Check the wiki periodically for recent tips
 contributed by users. If you get stuck and none of these resources
@@ -110,7 +107,7 @@ help, ask on the mailing list.</p>
 <div class="section" id="placeholder-tips">
 <h2>Placeholder Tips<a class="headerlink" href="#placeholder-tips" title="Permalink to this headline">¶</a></h2>
 <p>(tips.placeholder)</p>
-<p>Here&#8217;s how to do certain important lookups that may not be obvious.
+<p>Here’s how to do certain important lookups that may not be obvious.
 For each, we show first the Cheetah expression and then the Python
 equivalent, because you can use these either in templates or in
 pure Python subclasses. The Cheetah examples use NameMapper
@@ -122,10 +119,10 @@ self.varExists(&#39;theVariable&#39;)
 </pre></div>
 </div>
 <p>This is useful in {#if} or {#unless} constructs to avoid a
-{#NameMapper.NotFound} error if the variable doesn&#8217;t exist. For
+{#NameMapper.NotFound} error if the variable doesn’t exist. For
 instance, a CGI GET parameter that is normally supplied but in this
 case the user typed the URL by hand and forgot the parameter (or
-didn&#8217;t know about it). ({.hasVar} is a synonym for {.varExists}.)</p>
+didn’t know about it). ({.hasVar} is a synonym for {.varExists}.)</p>
 <p>To look up a variable in the searchList from a Python method:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">getVar</span><span class="p">(</span><span class="s1">&#39;theVariable&#39;</span><span class="p">)</span>
 <span class="bp">self</span><span class="o">.</span><span class="n">getVar</span><span class="p">(</span><span class="s1">&#39;theVariable&#39;</span><span class="p">,</span> <span class="n">myDefault</span><span class="p">)</span>
@@ -138,7 +135,7 @@ argument. However, it usually easier to write your method so that
 all needed searchList values come in as method arguments. That way
 the caller can just use a {$placeholder} to specify the argument,
 which is less verbose than you writing a getVar call.</p>
-<p>To do a &#8220;safe&#8221; placeholder lookup that returns a default value if
+<p>To do a “safe” placeholder lookup that returns a default value if
 the variable is missing:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>$getVar(&#39;theVariable&#39;, None)
 $getVar(&#39;theVariable&#39;, $myDefault)
@@ -150,16 +147,16 @@ set a placeholder variable for it.</p>
 <p>Remember that variables found earlier in the searchList override
 same-name variables located in a later searchList object. Be
 careful when adding objects containing other variables besides the
-ones you want (e.g., {os.environ}, CGI parameters). The &#8220;other&#8221;
+ones you want (e.g., {os.environ}, CGI parameters). The “other”
 variables may override variables your application depends on,
 leading to hard-to-find bugs. Also, users can inadvertently or
 maliciously set an environmental variable or CGI parameter you
-didn&#8217;t expect, screwing up your program. To avoid all this, know
+didn’t expect, screwing up your program. To avoid all this, know
 what your namespaces contain, and place the namespaces you have the
 most control over first. For namespaces that could contain
-user-supplied &#8220;other&#8221; variables, don&#8217;t put the namespace itself in
+user-supplied “other” variables, don’t put the namespace itself in
 the searchList; instead, copy the needed variables into your own
-&#8220;safe&#8221; namespace.</p>
+“safe” namespace.</p>
 </div>
 <div class="section" id="diagnostic-output">
 <h2>Diagnostic Output<a class="headerlink" href="#diagnostic-output" title="Permalink to this headline">¶</a></h2>
@@ -180,19 +177,19 @@ the searchList; instead, copy the needed variables into your own
 {#def} methods or Python methods (the Python methods being located
 in a class your template inherits). So how do you choose?</p>
 <p>Generally, if the method consists mostly of text and placeholders,
-use a Cheetah method (a {#def} method). That&#8217;s why {#def} exists,
+use a Cheetah method (a {#def} method). That’s why {#def} exists,
 to take the tedium out of writing those kinds of methods. And if
 you have a couple {#if} stanzas to {#set} some variables, followed
 by a {#for} loop, no big deal. But if your method consists mostly
-of directives and only a little text, you&#8217;re better off writing it
+of directives and only a little text, you’re better off writing it
 in Python. Especially be on the watch for extensive use of {#set},
-{#echo} and {#silent} in a Cheetah method-it&#8217;s a sure sign you&#8217;re
+{#echo} and {#silent} in a Cheetah method-it’s a sure sign you’re
 probably using the wrong language. Of course, though, you are free
 to do so if you wish.</p>
-<p>Another thing that&#8217;s harder to do in Cheetah is adjacent or nested
+<p>Another thing that’s harder to do in Cheetah is adjacent or nested
 multiline stanzas (all those directives with an accompanying {#end}
 directive). Python uses indentation to show the beginning and end
-of nested stanzas, but Cheetah can&#8217;t do that because any
+of nested stanzas, but Cheetah can’t do that because any
 indentation shows up in the output, which may not be desired. So
 unless all those extra spaces and tabs in the output are
 acceptable, you have to keep directives flush with the left margin
@@ -200,9 +197,9 @@ or the preceding text.</p>
 <p>The most difficult decisions come when you have conflicting goals.
 What if a method generates its output in parts (i.e., output
 concatenation), contains many searchList placeholders and lots of
-text, { and} requires lots of {#if ... #set ... #else #set ... #end
+text, { and} requires lots of {#if … #set … #else #set … #end
 if} stanzas. A Cheetah method would be more advantageous in some
-ways, but a Python method in others. You&#8217;ll just have to choose,
+ways, but a Python method in others. You’ll just have to choose,
 perhaps coding groups of methods all the same way. Or maybe you can
 split your method into two, one Cheetah and one Python, and have
 one method call the other. Usually this means the Cheetah method
@@ -210,7 +207,7 @@ calling the Python method to calculate the needed values, then the
 Cheetah method produces the output. One snag you might run into
 though is that {#set} currently can set only one variable per
 statement, so if your Python method needs to return multiple values
-to your Cheetah method, you&#8217;ll have to do it another way.</p>
+to your Cheetah method, you’ll have to do it another way.</p>
 </div>
 <div class="section" id="calling-superclass-methods-and-why-you-have-to">
 <h2>Calling superclass methods, and why you have to<a class="headerlink" href="#calling-superclass-methods-and-why-you-have-to" title="Permalink to this headline">¶</a></h2>
@@ -221,12 +218,12 @@ call the superclass method in your method to prevent various things
 from breaking. The most common methods to override are {.awake} and
 {.__init__}. {.awake} is called automatically by Webware early
 during the web transaction, so it makes a convenient place to put
-Python initialization code your template needs. You&#8217;ll definitely
+Python initialization code your template needs. You’ll definitely
 want to call the superclass {.awake} because it sets up many
 wonderful attributes and methods, such as those to access the CGI
 input fields.</p>
-<p>There&#8217;s nothing Cheetah-specific to calling superclass methods, but
-because it&#8217;s vital, we&#8217;ll recap the standard Python techniques
+<p>There’s nothing Cheetah-specific to calling superclass methods, but
+because it’s vital, we’ll recap the standard Python techniques
 here. We mention only the solution for old-style classes because
 Cheetah classes are old-style (in other Python documentation, you
 will find the technique for new-style classes, but they are not
@@ -244,7 +241,7 @@ superclass of Template. Do we really need both imports? Can we call
 Template.awake? ]</p>
 <p>To avoid hardcoding the superclass name, you can use this function
 {callbase()}, which emulates {super()} for older versions of
-Python. It also works even {super()} does exist, so you don&#8217;t have
+Python. It also works even {super()} does exist, so you don’t have
 to change your servlets immediately when upgrading. Note that the
 argument sequence is different than {super} uses.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">===========================================================================</span>
@@ -296,16 +293,16 @@ compilation took place.</p>
 objects). Use this to print out your searchList for debugging.
 Modifying the returned list will affect your placeholder searches!</p>
 <p>Return a reference to the current error catcher.</p>
-<p>If &#8216;cacheKey&#8217; is not {None}, refresh that item in the cache. If
+<p>If ‘cacheKey’ is not {None}, refresh that item in the cache. If
 {None}, delete all items in the cache so they will be recalculated
 the next time they are encountered.</p>
 <p>Break reference cycles before discarding a servlet.</p>
 <p>Look up a variable in the searchList. Same as {$varName} but allows
 you to specify a default value and control whether autocalling
 occurs.</p>
-<p>Read the named file. If used as a placeholder, inserts the file&#8217;s
+<p>Read the named file. If used as a placeholder, inserts the file’s
 contents in the output without interpretation, like {#include raw}.
-If used in an expression, returns the file&#8217;s content (e.g., to
+If used in an expression, returns the file’s content (e.g., to
 assign it to a variable).</p>
 <p>This is what happens if you run a .py template module as a
 standalone program.</p>
@@ -321,18 +318,18 @@ section webware.webInput for usage information.</p>
 <blockquote>
 <div><p>Get a compiler setting.</p>
 <p>Does this compiler setting exist?</p>
-<p>Set setting &#8216;name&#8217; to &#8216;value&#8217;. See {#compiler-settings}, section
+<p>Set setting ‘name’ to ‘value’. See {#compiler-settings}, section
 parserInstructions.compiler-settings.</p>
 <p>Return the underlying settings dictionary. (Warning: modifying this
-dictionary will change Cheetah&#8217;s behavior.)</p>
+dictionary will change Cheetah’s behavior.)</p>
 <p>Return a copy of the underlying settings dictionary.</p>
 <p>Return a deep copy of the underlying settings dictionary. See
-Python&#8217;s {copy} module.</p>
-<p>Update Cheetah&#8217;s compiler settings from the &#8216;newSettings&#8217;
-dictionary. If &#8216;merge&#8217; is true, update only the names in
+Python’s {copy} module.</p>
+<p>Update Cheetah’s compiler settings from the ‘newSettings’
+dictionary. If ‘merge’ is true, update only the names in
 newSettings and leave the other names alone. (The SettingsManager
 is smart enough to update nested dictionaries one key at a time
-rather than overwriting the entire old dictionary.) If &#8216;merge&#8217; is
+rather than overwriting the entire old dictionary.) If ‘merge’ is
 false, delete all existing settings so that the new ones are the
 only settings.</p>
 <p>Same, but pass a string of {name=value} pairs rather than a
@@ -340,14 +337,14 @@ dictionary, the same as you would provide in a {#compiler-settings}
 directive, section parserInstructions.compiler-settings.</p>
 <p>Same, but exec a Python source file and use the variables it
 contains as the new settings. (e.g.,
-{cheetahVarStartToken = &#8220;&#64;&#8221;}).</p>
+{cheetahVarStartToken = “&#64;”}).</p>
 <p>Same, but get the new settings from a text file in ConfigParser
-format (similar to Windows&#8217; *.ini file format). See Python&#8217;s
+format (similar to Windows’ *.ini file format). See Python’s
 {ConfigParser} module.</p>
-<p>Same, but read the open file object &#8216;inFile&#8217; for the new settings.</p>
+<p>Same, but read the open file object ‘inFile’ for the new settings.</p>
 <p>Same, but read the new settings from a string in ConfigParser
 format.</p>
-<p>Write the current compiler settings to a file named &#8216;path&#8217; in
+<p>Write the current compiler settings to a file named ‘path’ in
 *.ini format.</p>
 <p>Return a string containing the current compiler settings in *.ini
 format.</p>
@@ -358,7 +355,7 @@ attributes if your template will be used as a servlet,} otherwise
 Webware will behave unpredictably. However, it { is} OK to put
 same-name variables in the searchList, because Webware does not use
 the searchList.</p>
-<p>EXCEPTION: It&#8217;s OK to override { awake} and { sleep} as long as you
+<p>EXCEPTION: It’s OK to override { awake} and { sleep} as long as you
 call the superclass methods. (See section
 tips.callingSuperclassMethods.)</p>
 <blockquote>
@@ -384,19 +381,19 @@ URL path).</p>
 <p>Several other goodies are available to template-servlets under the
 {request} attribute, see section webware.input.</p>
 <p>{transaction}, {response}, {request} and {session} are created from
-the current transaction when WebKit calls {awake}, and don&#8217;t exist
+the current transaction when WebKit calls {awake}, and don’t exist
 otherwise. Calling {awake} yourself (rather than letting WebKit
 call it) will raise an exception because the {transaction} argument
-won&#8217;t have the right attributes.</p>
+won’t have the right attributes.</p>
 <p>*{Inherited from WebKit.Servlet} These are accessible only if
 Cheetah knows Webware is installed. This listing is based on a CVS
 snapshot of Webware dated 22 September 2002, and may not include
 more recent changes.</p>
 <p>The same caveats about overriding these methods apply.</p>
 <blockquote>
-<div><p>The simple name of the class. Used by Webware&#8217;s logging and
+<div><p>The simple name of the class. Used by Webware’s logging and
 debugging routines.</p>
-<p>Used by Webware&#8217;s logging and debugging routines.</p>
+<p>Used by Webware’s logging and debugging routines.</p>
 <p>True if the servlet can be multithreaded.</p>
 <p>True if the servlet can be used for another transaction after the
 current transaction is finished.</p>
@@ -412,46 +409,46 @@ this, however, make sure you really need to. In many situations,
 templates appear to initialize and fill instantaneously, so no
 optimization is necessary. If you do find a situation where your
 templates are filling slowly or taking too much memory or too many
-CPU cycles, we&#8217;d like to hear about it on the mailing list.</p>
-<p>Cache $placeholders whose values don&#8217;t change frequently. (Section
+CPU cycles, we’d like to hear about it on the mailing list.</p>
+<p>Cache $placeholders whose values don’t change frequently. (Section
 output.caching).</p>
 <p>Use {#set} for values that are very frequently used, especially if
 they come out of an expensive operation like a
 deeply.nested.structure or a database lookup. {#set} variables are
 set to Python local variables, which have a faster lookup time than
-Python globals or values from Cheetah&#8217;s searchList.</p>
+Python globals or values from Cheetah’s searchList.</p>
 <p>Moving variable lookups into Python code may provide a speedup in
-certain circumstances. If you&#8217;re just reading {self} attributes,
-there&#8217;s no reason to use NameMapper lookup ($placeholders) for
+certain circumstances. If you’re just reading {self} attributes,
+there’s no reason to use NameMapper lookup ($placeholders) for
 them. NameMapper does a lot more work than simply looking up a
 {self} attribute.</p>
-<p>On the other hand, if you don&#8217;t know exactly where the value will
+<p>On the other hand, if you don’t know exactly where the value will
 come from (maybe from {self}, maybe from the searchList, maybe from
-a CGI input variable, etc), it&#8217;s easier to just make that an
+a CGI input variable, etc), it’s easier to just make that an
 argument to your method, and then the template can handle all the
 NameMapper lookups for you:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#silent $myMethod($arg1, $arg2, $arg3)</span>
 </pre></div>
 </div>
-<p>Otherwise you&#8217;d have to call {self.getVar(&#8216;arg1&#8217;)} etc in your
+<p>Otherwise you’d have to call {self.getVar(‘arg1’)} etc in your
 method, which is more wordy, and tedious.</p>
 </div>
 <div class="section" id="psp-style-tags">
 <h2>PSP-style tags<a class="headerlink" href="#psp-style-tags" title="Permalink to this headline">¶</a></h2>
 <p>(tips.PSP)</p>
-<p>{&lt;%= ... %&gt;} and {&lt;% ... %&gt;} allow an escape to Python syntax
+<p>{&lt;%= … %&gt;} and {&lt;% … %&gt;} allow an escape to Python syntax
 inside the template. You do not need it to use Cheetah effectively,
-and we&#8217;re hard pressed to think of a case to recommend it.
-Nevertheless, it&#8217;s there in case you encounter a situation you
-can&#8217;t express adequately in Cheetah syntax. For instance, to set a
+and we’re hard pressed to think of a case to recommend it.
+Nevertheless, it’s there in case you encounter a situation you
+can’t express adequately in Cheetah syntax. For instance, to set a
 local variable to an elaborate initializer.</p>
-<p>{&lt;%= ... %&gt;} encloses a Python expression whose result will be
+<p>{&lt;%= … %&gt;} encloses a Python expression whose result will be
 printed in the output.</p>
-<p>{&lt;% ... %&gt;} encloses a Python statement or expression (or set of
+<p>{&lt;% … %&gt;} encloses a Python statement or expression (or set of
 statements or expressions) that will be included as-is into the
-generated method. The statements themselves won&#8217;t produce any
+generated method. The statements themselves won’t produce any
 output, but you can use the local function {write(EXPRESSION)} to
-produce your own output. (Actually, it&#8217;s a method of a file-like
+produce your own output. (Actually, it’s a method of a file-like
 object, but it looks like a local function.) This syntax also may
 be used to set a local variable with a complicated initializer.</p>
 <p>To access Cheetah services, you must use Python code like you would
@@ -461,20 +458,20 @@ look up something in the searchList.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;%</span> <span class="k">break</span> <span class="o">%&gt;</span>      <span class="c1">## Wrong!</span>
 </pre></div>
 </div>
-<p>you&#8217;ll get a {SyntaxError} when you fill the template, but that&#8217;s
+<p>you’ll get a {SyntaxError} when you fill the template, but that’s
 what you deserve.</p>
 <p>Note that these are PSP-{ style} tags, not PSP tags. A Cheetah
-template is not a PSP document, and you can&#8217;t use PSP commands in
+template is not a PSP document, and you can’t use PSP commands in
 it.</p>
 </div>
 <div class="section" id="makefiles">
 <h2>Makefiles<a class="headerlink" href="#makefiles" title="Permalink to this headline">¶</a></h2>
 <p>(tips.Makefile)</p>
 <p>If your project has several templates and you get sick of typing
-&#8220;cheetah compile FILENAME.tmpl&#8221; all the time-much less remembering
+“cheetah compile FILENAME.tmpl” all the time-much less remembering
 which commands to type when-and your system has the {make} command
 available, consider building a Makefile to make your life easier.</p>
-<p>Here&#8217;s a simple Makefile that controls two templates,
+<p>Here’s a simple Makefile that controls two templates,
 ErrorsTemplate and InquiryTemplate. Two external commands,
 {inquiry} and {receive}, depend on ErrorsTemplate.py. Aditionally,
 InquiryTemplate itself depends on ErrorsTemplate.</p>
@@ -497,14 +494,14 @@ InquiryTemplate itself depends on ErrorsTemplate.</p>
 </pre></div>
 </div>
 <p>Now you can type {make} anytime and it will recompile all the
-templates that have changed, while ignoring the ones that haven&#8217;t.
+templates that have changed, while ignoring the ones that haven’t.
 Or you can recompile all the templates {receive} needs by typing
 {make receive}. Or you can recompile only ErrorsTemplate by typing
-{make ErrorsTemplate}. There&#8217;s also another target, &#8220;printsource&#8221;:
-this sends a Postscript version of the project&#8217;s source files to
+{make ErrorsTemplate}. There’s also another target, “printsource”:
+this sends a Postscript version of the project’s source files to
 the printer. The .PHONY target is explained in the {make}
 documentation; essentially, you have it depend on every target that
-doesn&#8217;t produce an output file with the same name as the target.</p>
+doesn’t produce an output file with the same name as the target.</p>
 </div>
 <div class="section" id="using-cheetah-in-a-multi-threaded-application">
 <h2>Using Cheetah in a Multi-Threaded Application<a class="headerlink" href="#using-cheetah-in-a-multi-threaded-application" title="Permalink to this headline">¶</a></h2>
@@ -527,22 +524,22 @@ threads, causing them to give inconsistent output.</p>
 </ul>
 <p>About the only advantage in sharing a template instance is building
 up the placeholder cache. But template instances are so low
-overhead that it probably wouldn&#8217;t take perceptibly longer to let
-each thread instantiate its own template instance. Only if you&#8217;re
+overhead that it probably wouldn’t take perceptibly longer to let
+each thread instantiate its own template instance. Only if you’re
 filling templates several times a second would the time difference
 be significant, or if some of the placeholders trigger extremely
 slow calculations (e.g., parsing a long text file each time). The
 biggest overhead in Cheetah is importing the {Template} module in
 the first place, but that has to be done only once in a
 long-running application.</p>
-<p>You can use Python&#8217;s {mutex} module for the lock, or any similar
+<p>You can use Python’s {mutex} module for the lock, or any similar
 mutex. If you have to change searchList values or instance
 variables before each fill (which is usually the case), lock the
 mutex before doing this, and unlock it only after the fill is
 complete.</p>
-<p>For Webware servlets, you&#8217;re probably better off using Webware&#8217;s
-servlet caching rather than Cheetah&#8217;s caching. Don&#8217;t override the
-servlet&#8217;s {.canBeThreaded()} method unless you avoid the unsafe
+<p>For Webware servlets, you’re probably better off using Webware’s
+servlet caching rather than Cheetah’s caching. Don’t override the
+servlet’s {.canBeThreaded()} method unless you avoid the unsafe
 operations listed above.</p>
 </div>
 <div class="section" id="using-cheetah-with-gettext">
@@ -589,13 +586,13 @@ using to mark strings for translation.</li>
           <a href="parserInstructions.html" title="Instructions to the Parser/Compiler"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Batteries included: templates and other libraries &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -29,7 +26,7 @@
     <link rel="next" title="Visual Editors" href="editors.html" />
     <link rel="prev" title="Non-HTML Output" href="nonHtml.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -46,7 +43,7 @@
           <a href="nonHtml.html" title="Non-HTML Output"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -102,7 +99,7 @@
   <div class="section" id="batteries-included-templates-and-other-libraries">
 <h1>Batteries included: templates and other libraries<a class="headerlink" href="#batteries-included-templates-and-other-libraries" title="Permalink to this headline">¶</a></h1>
 <p>(libraries)</p>
-<p>Cheetah comes &#8220;batteries included&#8221; with libraries of templates,
+<p>Cheetah comes “batteries included” with libraries of templates,
 functions, classes and other objects you can use in your own
 programs. The different types are listed alphabetically below,
 followed by a longer description of the SkeletonPage framework.
@@ -148,20 +145,20 @@ settings. It facilitates the use of user-supplied configuration
 files to fine tune an application. A setting is a key/value pair
 that an application or component (e.g., a filter, or your own
 servlets) looks up and treats as a configuration value to modify
-its (the component&#8217;s) behaviour.</p>
+its (the component’s) behaviour.</p>
 <p>SettingsManager is designed to:</p>
 <ul class="simple">
 <li>work well with nested settings dictionaries of any depth</li>
 <li>read/write {.ini style config files} (or strings)</li>
 <li>read settings from Python source files (or strings) so that
-complex Python objects can be stored in the application&#8217;s settings
+complex Python objects can be stored in the application’s settings
 dictionary. For example, you might want to store references to
 various classes that are used by the application, and plugins to
 the application might want to substitute one class for another.</li>
 <li>allow sections in {.ini config files} to be extended by settings
 in Python src files. If a section contains a setting like
-&#8220;{importSettings=mySettings.py}&#8221;, {SettingsManager} will merge all
-the settings defined in &#8220;{mySettings.py}&#8221; with the settings for
+“{importSettings=mySettings.py}”, {SettingsManager} will merge all
+the settings defined in “{mySettings.py}” with the settings for
 that section that are defined in the {.ini config file}.</li>
 <li>maintain the case of setting names, unlike the ConfigParser
 module</li>
@@ -196,11 +193,11 @@ users :).</p>
 (C) immune from being deleted in a future Cheetah version, or (D)
 immune from backwards-incompatable changes. If you depend on
 something in Tools/ on a production system, consider making a copy
-of it outside the Cheetah/ directory so that this version won&#8217;t be
+of it outside the Cheetah/ directory so that this version won’t be
 lost when you upgrade Cheetah. Also, learn enough about Python and
 about the Tool so that you can maintain it and bugfix it if
 necessary.</p>
-<p>If anything in Tools/ is found to be necessary to Cheetah&#8217;s
+<p>If anything in Tools/ is found to be necessary to Cheetah’s
 operation (i.e., if another Cheetah component starts importing it),
 it will be moved to the {Cheetah.Utils} package.</p>
 <p>Current Tools include:</p>
@@ -215,17 +212,17 @@ currently some errors in MondoReport, hmm). Contributed by Mike
 Orr.</p>
 <p>Nothing, but in a friendly way. Good for filling in for objects you
 want to hide. If {$form.f1} is a RecursiveNull object, then
-{$form.f1.anything[&#8220;you&#8221;].might(&#8220;use&#8221;)} will resolve to the empty
+{$form.f1.anything[“you”].might(“use”)} will resolve to the empty
 string. You can also put a {RecursiveNull} instance at the end of
-the searchList to convert missing values to &#8216;&#8217; rather than raising
+the searchList to convert missing values to ‘’ rather than raising
 a {NotFound} error or having a (less efficient) errorCatcher handle
-it. Of course, maybe you prefer to get a {NotFound} error...
+it. Of course, maybe you prefer to get a {NotFound} error…
 Contributed by Ian Bicking.</p>
-<p>Provides navigational links to this page&#8217;s parents and children.
+<p>Provides navigational links to this page’s parents and children.
 The constructor takes a recursive list of (url,description) pairs
 representing a tree of hyperlinks to every page in the site (or
-section, or application...), and also a string containing the
-current URL. Two methods &#8216;menuList&#8217; and &#8216;crumbs&#8217; return
+section, or application…), and also a string containing the
+current URL. Two methods ‘menuList’ and ‘crumbs’ return
 output-ready HTML showing an indented menu (hierarchy tree) or
 crumbs list (Yahoo-style bar: home &gt; grandparent &gt; parent &gt;
 currentURL). Contributed by Ian Bicking.</p>
@@ -243,19 +240,19 @@ these utils can be used standalone in other applications too.</p>
 {.cgiImport} method (section webware.cgiImport).</p>
 <p>A catch-all module for small functions.</p>
 <blockquote>
-<div><p>Raise &#8216;thing&#8217; if it&#8217;s a subclass of Exception, otherwise return it.
+<div><p>Raise ‘thing’ if it’s a subclass of Exception, otherwise return it.
 Useful when one argument does double duty as a default value or an
 exception to throw. Contribyted by Mike Orr.</p>
 <p>Verifies the dictionary does not contain any keys not listed in
-&#8216;legalKeywords&#8217;. If it does, raise TypeError. Useful for checking
+‘legalKeywords’. If it does, raise TypeError. Useful for checking
 the keyword arguments to a function. Contributed by Mike Orr.</p>
 </div></blockquote>
 <p>Not implemented yet, but will contain the {.uploadFile} method (or
-three methods) to &#8220;safely&#8221; copy a form-uploaded file to a local
+three methods) to “safely” copy a form-uploaded file to a local
 file, to a searchList variable, or return it. When finished, this
 will be inherited by {Template}, allowing all templates to do this.
 If you want this feature, read the docstring in the source and let
-us know on the mailing list what you&#8217;d like this method to do.
+us know on the mailing list what you’d like this method to do.
 Contributed by Mike Orr.</p>
 <p>Functions to verify the type of a user-supplied function argument.
 Contributed by Mike Orr.</p>
@@ -326,7 +323,7 @@ definition are attributes or methods of the {SkeletonPage} class.
 You can reimplement them as you wish in your subclass. Please read
 the source code of the file {src/Templates/_SkeletonPage.py}
 before doing so.</p>
-<p>You&#8217;ll need to understand how to use the following methods of the
+<p>You’ll need to understand how to use the following methods of the
 {SkeletonPage} class: {$metaTags()}, {$stylesheetTags()},
 {$javascriptTags()}, and {$bodyTag()}. They take the data you
 define in various attributes and renders them into HTML tags.</p>
@@ -352,14 +349,14 @@ dict {self._bodyTagAttribs}.</li>
 <p>The class also provides some convenience methods that can be used
 as $placeholders in your template definitions:</p>
 <ul class="simple">
-<li>{ imgTag(self, src, alt=&#8217;&#8216;, width=None, height=None, border=0)}
+<li>{ imgTag(self, src, alt=’‘, width=None, height=None, border=0)}
 - Dynamically generate an image tag. Cheetah will try to convert
-the &#8220;{src}&#8221; argument to a WebKit serverSidePath relative to the
-servlet&#8217;s location. If width and height aren&#8217;t specified they are
+the “{src}” argument to a WebKit serverSidePath relative to the
+servlet’s location. If width and height aren’t specified they are
 calculated using PIL or ImageMagick if either of these tools are
 available. If all your images are stored in a certain directory you
-can reimplement this method to append that directory&#8217;s path to the
-&#8220;{src}&#8221; argument. Doing so would also insulate your template
+can reimplement this method to append that directory’s path to the
+“{src}” argument. Doing so would also insulate your template
 definitions from changes in your directory structure.</li>
 </ul>
 </div>
@@ -388,13 +385,13 @@ definitions from changes in your directory structure.</li>
           <a href="nonHtml.html" title="Non-HTML Output"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User&#8217;s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

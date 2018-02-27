@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Cheetah.Template module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +24,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -69,8 +66,9 @@
             
   <div class="section" id="module-Cheetah.Template">
 <span id="cheetah-template-module"></span><h1>Cheetah.Template module<a class="headerlink" href="#module-Cheetah.Template" title="Permalink to this headline">¶</a></h1>
-<p>Provides the core API for Cheetah.</p>
-<p>See the docstring in the Template class and the Users&#8217; Guide for more information</p>
+<p>Provides the core API for Cheetah</p>
+<p>See the docstring in the Template class and the Users’ Guide
+for more information.</p>
 <dl class="class">
 <dt id="Cheetah.Template.CompileCacheItem">
 <em class="property">class </em><code class="descclassname">Cheetah.Template.</code><code class="descname">CompileCacheItem</code><a class="headerlink" href="#Cheetah.Template.CompileCacheItem" title="Permalink to this definition">¶</a></dt>
@@ -97,22 +95,22 @@
 
 <dl class="class">
 <dt id="Cheetah.Template.Template">
-<em class="property">class </em><code class="descclassname">Cheetah.Template.</code><code class="descname">Template</code><span class="sig-paren">(</span><em>source=None</em>, <em>namespaces=None</em>, <em>searchList=None</em>, <em>file=None</em>, <em>filter='RawOrEncodedUnicode'</em>, <em>filtersLib=&lt;module 'Cheetah.Filters' from '/home/phd/current/projects/cheetah3/cheetah3/Cheetah/Filters.pyc'&gt;</em>, <em>errorCatcher=None</em>, <em>compilerSettings=Unspecified</em>, <em>_globalSetVars=None</em>, <em>_preBuiltSearchList=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">Cheetah.Template.</code><code class="descname">Template</code><span class="sig-paren">(</span><em>source=None</em>, <em>namespaces=None</em>, <em>searchList=None</em>, <em>file=None</em>, <em>filter='RawOrEncodedUnicode'</em>, <em>filtersLib=&lt;module 'Cheetah.Filters' from '/home/phd/current/projects/cheetah3/cheetah3/Cheetah/Filters.py'&gt;</em>, <em>errorCatcher=None</em>, <em>compilerSettings=Unspecified</em>, <em>_globalSetVars=None</em>, <em>_preBuiltSearchList=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="Cheetah.Servlet.html#Cheetah.Servlet.Servlet" title="Cheetah.Servlet.Servlet"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Servlet.Servlet</span></code></a></p>
 <p>This class provides a) methods used by templates at runtime and b)
 methods for compiling Cheetah source code into template classes.</p>
 <p>This documentation assumes you already know Python and the basics of object
-oriented programming.  If you don&#8217;t know Python, see the sections of the
-Cheetah Users&#8217; Guide for non-programmers.  It also assumes you have read
-about Cheetah&#8217;s syntax in the Users&#8217; Guide.</p>
-<p>The following explains how to use Cheetah from within Python programs or via
-the interpreter. If you statically compile your templates on the command
-line using the &#8216;cheetah&#8217; script, this is not relevant to you. Statically
-compiled Cheetah template modules/classes (e.g. myTemplate.py:
-MyTemplateClasss) are just like any other Python module or class. Also note,
-most Python web frameworks (Webware, Aquarium, mod_python, Turbogears,
-CherryPy, Quixote, etc.) provide plugins that handle Cheetah compilation for
-you.</p>
+oriented programming.  If you don’t know Python, see the sections of the
+Cheetah Users’ Guide for non-programmers.  It also assumes you have read
+about Cheetah’s syntax in the Users’ Guide.</p>
+<p>The following explains how to use Cheetah from within Python programs or
+via the interpreter. If you statically compile your templates on the
+command line using the ‘cheetah’ script, this is not relevant to you.
+Statically compiled Cheetah template modules/classes (e.g. myTemplate.py:
+MyTemplateClasss) are just like any other Python module or class. Also
+note, most Python web frameworks (Webware, Aquarium, mod_python,
+Turbogears, CherryPy, Quixote, etc.) provide plugins that handle Cheetah
+compilation for you.</p>
 <p>There are several possible usage patterns:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="p">)</span> <span class="n">tclass</span> <span class="o">=</span> <span class="n">Template</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">src</span><span class="p">)</span>
    <span class="n">t1</span> <span class="o">=</span> <span class="n">tclass</span><span class="p">()</span> <span class="c1"># or tclass(namespaces=[namespace,...])</span>
@@ -122,13 +120,15 @@ you.</p>
    <span class="n">Template</span><span class="o">.</span><span class="n">compile</span> <span class="n">provides</span> <span class="n">a</span> <span class="n">rich</span> <span class="ow">and</span> <span class="n">very</span> <span class="n">flexible</span> <span class="n">API</span> <span class="n">via</span> <span class="n">its</span>
    <span class="n">optional</span> <span class="n">arguments</span> <span class="n">so</span> <span class="n">there</span> <span class="n">are</span> <span class="n">many</span> <span class="n">possible</span> <span class="n">variations</span> <span class="n">of</span> <span class="n">this</span>
    <span class="n">pattern</span><span class="o">.</span>  <span class="n">One</span> <span class="n">example</span> <span class="ow">is</span><span class="p">:</span>
-     <span class="n">tclass</span> <span class="o">=</span> <span class="n">Template</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;hello $name from $caller&#39;</span><span class="p">,</span> <span class="n">baseclass</span><span class="o">=</span><span class="nb">dict</span><span class="p">)</span>
+     <span class="n">tclass</span> <span class="o">=</span> <span class="n">Template</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;hello $name from $caller&#39;</span><span class="p">,</span>
+                               <span class="n">baseclass</span><span class="o">=</span><span class="nb">dict</span><span class="p">)</span>
      <span class="nb">print</span><span class="p">(</span><span class="n">tclass</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;world&#39;</span><span class="p">,</span> <span class="n">caller</span><span class="o">=</span><span class="s1">&#39;me&#39;</span><span class="p">))</span>
    <span class="n">See</span> <span class="n">the</span> <span class="n">Template</span><span class="o">.</span><span class="n">compile</span><span class="p">()</span> <span class="n">docstring</span> <span class="k">for</span> <span class="n">more</span> <span class="n">details</span><span class="o">.</span>
 
 <span class="mi">2</span><span class="p">)</span> <span class="n">tmplInstance</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="n">src</span><span class="p">)</span>
       <span class="c1"># or Template(src, namespaces=[namespace,...])</span>
-   <span class="n">outputStr</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">tmplInstance</span><span class="p">)</span> <span class="c1"># or outputStr = tmplInstance.aMethodYouDefined(...args...)</span>
+   <span class="n">outputStr</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">tmplInstance</span><span class="p">)</span>
+   <span class="c1"># or outputStr = tmplInstance.aMethodYouDefined(...args...)</span>
 </pre></div>
 </div>
 <p>Notes on the usage patterns:</p>
@@ -152,14 +152,16 @@ you.</p>
       <span class="n">new</span><span class="o">-</span><span class="n">style</span> <span class="s1">&#39;object&#39;</span> <span class="n">baseclass</span><span class="o">.</span>  <span class="n">Cheetah</span><span class="o">.</span><span class="n">Template</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">subclass</span> <span class="n">of</span>
       <span class="s1">&#39;object&#39;</span><span class="o">.</span>  <span class="n">You</span> <span class="n">also</span> <span class="n">can</span> <span class="ow">not</span> <span class="c1">#extend dict, list, or other builtin</span>
       <span class="n">types</span><span class="o">.</span>
-    <span class="o">-</span> <span class="n">If</span> <span class="n">your</span> <span class="n">template</span> <span class="n">baseclass</span><span class="s1">&#39; __init__ constructor expects args there</span>
-      <span class="ow">is</span> <span class="n">currently</span> <span class="n">no</span> <span class="n">way</span> <span class="n">to</span> <span class="k">pass</span> <span class="n">them</span> <span class="ow">in</span><span class="o">.</span>
+    <span class="o">-</span> <span class="n">If</span> <span class="n">your</span> <span class="n">template</span> <span class="n">baseclass</span><span class="s1">&#39; __init__ constructor expects args</span>
+      <span class="n">there</span> <span class="ow">is</span> <span class="n">currently</span> <span class="n">no</span> <span class="n">way</span> <span class="n">to</span> <span class="k">pass</span> <span class="n">them</span> <span class="ow">in</span><span class="o">.</span>
 </pre></div>
 </div>
-<p>If you need to subclass a dynamically compiled Cheetah class, do something like this:</p>
+<p>If you need to subclass a dynamically compiled Cheetah class, do something
+like this:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Cheetah.Template</span> <span class="k">import</span> <span class="n">Template</span>
 <span class="n">T1</span> <span class="o">=</span> <span class="n">Template</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;$meth1 #def meth1: this is meth1 in T1&#39;</span><span class="p">)</span>
-<span class="n">T2</span> <span class="o">=</span> <span class="n">Template</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;#implements meth1</span><span class="se">\n</span><span class="s1">this is meth1 redefined in T2&#39;</span><span class="p">,</span> <span class="n">baseclass</span><span class="o">=</span><span class="n">T1</span><span class="p">)</span>
+<span class="n">T2</span> <span class="o">=</span> <span class="n">Template</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+    <span class="s1">&#39;#implements meth1</span><span class="se">\n</span><span class="s1">this is meth1 redefined in T2&#39;</span><span class="p">,</span> <span class="n">baseclass</span><span class="o">=</span><span class="n">T1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">T1</span><span class="p">,</span> <span class="n">T1</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">T2</span><span class="p">,</span> <span class="n">T2</span><span class="p">())</span>
 </pre></div>
@@ -195,25 +197,25 @@ you.</p>
 <dd><p>The core API for compiling Cheetah source code into template classes.</p>
 <p>This class method compiles Cheetah source code and returns a python
 class.  You then create template instances using that class.  All
-Cheetah&#8217;s other compilation API&#8217;s use this method under the hood.</p>
+Cheetah’s other compilation API’s use this method under the hood.</p>
 <p>Internally, this method a) parses the Cheetah source code and generates
 Python code defining a module with a single class in it, b) dynamically
 creates a module object with a unique name, c) execs the generated code
-in that module&#8217;s namespace then inserts the module into sys.modules, and
-d) returns a reference to the generated class.  If you want to get the
-generated python source code instead, pass the argument
+in that module’s namespace then inserts the module into sys.modules,
+and d) returns a reference to the generated class.  If you want to get
+the generated python source code instead, pass the argument
 returnAClass=False.</p>
 <p>It caches generated code and classes.  See the descriptions of the
-arguments&#8217;cacheCompilationResults&#8217; and &#8216;useCache&#8217; for details. This
-doesn&#8217;t mean that templates will automatically recompile themselves when
-the source file changes. Rather, if you call Template.compile(src) or
-Template.compile(file=path) repeatedly it will attempt to return a
+arguments’cacheCompilationResults’ and ‘useCache’ for details. This
+doesn’t mean that templates will automatically recompile themselves
+when the source file changes. Rather, if you call Template.compile(src)
+or Template.compile(file=path) repeatedly it will attempt to return a
 cached class definition instead of recompiling.</p>
 <p>Hooks are provided template source preprocessing.  See the notes on the
-&#8216;preprocessors&#8217; arg.</p>
-<p>If you are an advanced user and need to customize the way Cheetah parses
-source code or outputs Python code, you should check out the
-compilerSettings argument.</p>
+‘preprocessors’ arg.</p>
+<p>If you are an advanced user and need to customize the way Cheetah
+parses source code or outputs Python code, you should check out
+the compilerSettings argument.</p>
 <p>Arguments:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>You must provide either a &#39;source&#39; or &#39;file&#39; arg, but not both::
 
@@ -222,8 +224,8 @@ compilerSettings argument.</p>
 
 The rest of the arguments are strictly optional. All but the first
 have defaults in attributes of the Template class which can be
-overridden in subclasses of this class.  Working with most of these is
-an advanced topic.
+overridden in subclasses of this class.  Working with most of these
+is an advanced topic.
 
 ::
 
@@ -249,18 +251,17 @@ an advanced topic.
         Template._CHEETAH_defaultModuleNameForTemplates
         =&#39;DynamicallyCompiledCheetahTemplate&#39;
 
-    What to name the generated Python module.  If the provided value is
-    None and a file arg was given, the moduleName is created from the
-    file path.  In all cases if the moduleName provided is already in
-    sys.modules it is passed through a filter that generates a unique
-    variant of the name.
-
+    What to name the generated Python module.  If the provided value
+    is None and a file arg was given, the moduleName is created from
+    the file path.  In all cases if the moduleName provided is
+    already in sys.modules it is passed through a filter that
+    generates a unique variant of the name.
 
   - className (a string)
     Default: Template._CHEETAH_defaultClassNameForTemplates=None
 
-    What to name the generated Python class.  If the provided value is
-    None, the moduleName is use as the class name.
+    What to name the generated Python class.  If the provided value
+    is None, the moduleName is use as the class name.
 
   - mainMethodName (a string)
     Default:
@@ -295,9 +296,9 @@ an advanced topic.
   - cacheCompilationResults (True/False)
     Default: Template._CHEETAH_cacheCompilationResults=True
 
-    Tells Cheetah to cache the generated code and classes so that they
-    can be reused if Template.compile() is called multiple times with
-    the same source and options.
+    Tells Cheetah to cache the generated code and classes so that
+    they can be reused if Template.compile() is called multiple times
+    with the same source and options.
 
   - useCache (True/False)
     Default: Template._CHEETAH_useCompilationCache=True
@@ -412,19 +413,22 @@ an advanced topic.
         happen if you don&#39;t provide at least one):
          - tokens: same as the single string described above. You can
            also provide a tuple of 2 strings.
-         - searchList: the searchList used for preprocess $placeholders
-         - compilerSettings: used in the compilation of the intermediate
-           template
+         - searchList: the searchList used
+           for preprocess $placeholders
+         - compilerSettings: used in the compilation
+           of the intermediate template
          - templateAPIClass: an optional subclass of `Template`
          - outputTransformer: a simple hook for passing in a callable
            which can do further transformations of the preprocessor
            output, or do something else like debug logging. The
            default is str().
-         + any keyword arguments to Template.compile which you want to
-           provide for the compilation of the intermediate template.
+         + any keyword arguments to Template.compile which you want
+           to provide for the compilation
+           of the intermediate template.
 
-         klass = Template.compile(src,
-                preprocessors=[ dict(tokens=&#39;@ %&#39;, searchList=[...]) ] )
+         klass = Template.compile(
+             src,
+             preprocessors=[dict(tokens=&#39;@ %&#39;, searchList=[...])])
 </pre></div>
 </div>
 </dd></dl>
@@ -457,25 +461,26 @@ compilation took place.</p>
 <dl class="method">
 <dt id="Cheetah.Template.Template.getCacheRegions">
 <code class="descname">getCacheRegions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.getCacheRegions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a dictionary of the &#8216;cache regions&#8217; initialized in a
+<dd><p>Returns a dictionary of the ‘cache regions’ initialized in a
 template.</p>
-<p>Each #cache directive block or $*cachedPlaceholder is a separate &#8216;cache
-region&#8217;.</p>
+<p>Each #cache directive block or $*cachedPlaceholder is a separate ‘cache
+region’.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Template.Template.getFileContents">
 <code class="descname">getFileContents</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.getFileContents" title="Permalink to this definition">¶</a></dt>
 <dd><p>A hook for getting the contents of a file.  The default
-implementation just uses the Python open() function to load local files.
-This method could be reimplemented to allow reading of remote files via
-various protocols, as PHP allows with its &#8216;URL fopen wrapper&#8217;</p>
+implementation just uses the Python open() function
+to load local files.  This method could be reimplemented
+to allow reading of remote files via various protocols,
+as PHP allows with its ‘URL fopen wrapper’.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Template.Template.getVar">
 <code class="descname">getVar</code><span class="sig-paren">(</span><em>varName</em>, <em>default=Unspecified</em>, <em>autoCall=True</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.getVar" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get a variable from the searchList.  If the variable can&#8217;t be found
+<dd><p>Get a variable from the searchList.  If the variable can’t be found
 in the searchList, it returns the default value if one was given, or
 raises NameMapper.NotFound.</p>
 </dd></dl>
@@ -492,7 +497,8 @@ raises NameMapper.NotFound.</p>
 <dd><p>This is just a stub at this time.</p>
 <blockquote>
 <div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">plural</span> <span class="o">=</span> <span class="n">the</span> <span class="n">plural</span> <span class="n">form</span> <span class="n">of</span> <span class="n">the</span> <span class="n">message</span>
-<span class="n">n</span> <span class="o">=</span> <span class="n">a</span> <span class="n">sized</span> <span class="n">argument</span> <span class="n">to</span> <span class="n">distinguish</span> <span class="n">between</span> <span class="n">single</span> <span class="ow">and</span> <span class="n">plural</span> <span class="n">forms</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">a</span> <span class="n">sized</span> <span class="n">argument</span> <span class="n">to</span> <span class="n">distinguish</span>
+    <span class="n">between</span> <span class="n">single</span> <span class="ow">and</span> <span class="n">plural</span> <span class="n">forms</span>
 <span class="nb">id</span> <span class="o">=</span> <span class="n">msgid</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">translation</span> <span class="n">catalog</span>
 <span class="n">domain</span> <span class="o">=</span> <span class="n">translation</span> <span class="n">domain</span>
 <span class="n">source</span> <span class="o">=</span> <span class="n">source</span> <span class="n">lang</span>
@@ -504,8 +510,8 @@ raises NameMapper.NotFound.</p>
 <p>See the following for some ideas
 <a class="reference external" href="http://www.zope.org/DevHome/Wikis/DevSite/Projects/ComponentArchitecture/ZPTInternationalizationSupport">http://www.zope.org/DevHome/Wikis/DevSite/Projects/ComponentArchitecture/ZPTInternationalizationSupport</a></p>
 <p>Other notes:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">There</span> <span class="ow">is</span> <span class="n">no</span> <span class="n">need</span> <span class="n">to</span> <span class="n">replicate</span> <span class="n">the</span> <span class="n">i18n</span><span class="p">:</span><span class="n">name</span> <span class="n">attribute</span> <span class="kn">from</span> <span class="nn">plone</span> <span class="o">/</span> <span class="n">PTL</span><span class="p">,</span>
-  <span class="k">as</span> <span class="n">cheetah</span> <span class="n">placeholders</span> <span class="n">serve</span> <span class="n">the</span> <span class="n">same</span> <span class="n">purpose</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">There</span> <span class="ow">is</span> <span class="n">no</span> <span class="n">need</span> <span class="n">to</span> <span class="n">replicate</span> <span class="n">the</span> <span class="n">i18n</span><span class="p">:</span><span class="n">name</span> <span class="n">attribute</span>
+  <span class="kn">from</span> <span class="nn">plone</span> <span class="o">/</span> <span class="n">PTL</span><span class="p">,</span> <span class="k">as</span> <span class="n">cheetah</span> <span class="n">placeholders</span> <span class="n">serve</span> <span class="n">the</span> <span class="n">same</span> <span class="n">purpose</span><span class="o">.</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -521,7 +527,7 @@ raises NameMapper.NotFound.</p>
 <code class="descname">runAsMainProgram</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.runAsMainProgram" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows the Template to function as a standalone command-line program
 for static page generation.</p>
-<p>Type &#8216;python yourtemplate.py &#8211;help to see what it&#8217;s capabable of.</p>
+<p>Type ‘python yourtemplate.py –help to see what it’s capabable of.</p>
 </dd></dl>
 
 <dl class="method">
@@ -541,8 +547,11 @@ for static page generation.</p>
 <em class="property">classmethod </em><code class="descname">subclass</code><span class="sig-paren">(</span><em>klass</em>, <em>*args</em>, <em>**kws</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.subclass" title="Permalink to this definition">¶</a></dt>
 <dd><p>Takes the same args as the .compile() classmethod and returns a
 template that is a subclass of the template this method is called from.</p>
-<p>T1 = Template.compile(&#8216;foo - $meth1 - barn#def meth1: this is T1.meth1&#8217;)
-T2 = T1.subclass(&#8216;#implements meth1n this is T2.meth1&#8217;)</p>
+<dl class="docutils">
+<dt>T1 = Template.compile(</dt>
+<dd>‘foo - $meth1 - barn#def meth1: this is T1.meth1’)</dd>
+</dl>
+<p>T2 = T1.subclass(‘#implements meth1n this is T2.meth1’)</p>
 </dd></dl>
 
 <dl class="method">
@@ -556,14 +565,15 @@ T2 = T1.subclass(&#8216;#implements meth1n this is T2.meth1&#8217;)</p>
 <code class="descname">webInput</code><span class="sig-paren">(</span><em>names</em>, <em>namesMulti=()</em>, <em>default=''</em>, <em>src='f'</em>, <em>defaultInt=0</em>, <em>defaultFloat=0.0</em>, <em>badInt=0</em>, <em>badFloat=0.0</em>, <em>debug=False</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.webInput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method for importing web transaction variables in bulk.</p>
 <p>This works for GET/POST fields both in Webware servlets and in CGI
-scripts, and for cookies and session variables in Webware servlets.  If
-you try to read a cookie or session variable in a CGI script, you&#8217;ll get
-a RuntimeError.  &#8216;In a CGI script&#8217; here means &#8216;not running as a Webware
-servlet&#8217;.  If the CGI environment is not properly set up, Cheetah will
-act like there&#8217;s no input.</p>
+scripts, and for cookies and session variables in Webware servlets.
+If you try to read a cookie or session variable in a CGI script,
+you’ll get a RuntimeError.  ‘In a CGI script’ here means
+‘not running as a Webware servlet’.  If the CGI environment
+is not properly set up, Cheetah will act like there’s no input.</p>
 <p>The public method provided is:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">webInput</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">names</span><span class="p">,</span> <span class="n">namesMulti</span><span class="o">=</span><span class="p">(),</span> <span class="n">default</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">src</span><span class="o">=</span><span class="s1">&#39;f&#39;</span><span class="p">,</span>
-  <span class="n">defaultInt</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">defaultFloat</span><span class="o">=</span><span class="mf">0.00</span><span class="p">,</span> <span class="n">badInt</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">badFloat</span><span class="o">=</span><span class="mf">0.00</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+             <span class="n">defaultInt</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">defaultFloat</span><span class="o">=</span><span class="mf">0.00</span><span class="p">,</span>
+             <span class="n">badInt</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">badFloat</span><span class="o">=</span><span class="mf">0.00</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 </pre></div>
 </div>
 <p>This method places the specified GET/POST fields, cookies or session
@@ -575,9 +585,9 @@ beginning of the searchList.  It handles:</p>
 <span class="o">*</span> <span class="n">printing</span> <span class="n">a</span> <span class="n">snapshot</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">values</span> <span class="n">retrieved</span> <span class="k">for</span> <span class="n">debugging</span>
 </pre></div>
 </div>
-<p>All the &#8216;default*&#8217; and &#8216;bad*&#8217; arguments have &#8216;use or raise&#8217; behavior,
-meaning that if they&#8217;re a subclass of Exception, they&#8217;re raised.  If
-they&#8217;re anything else, that value is substituted for the missing/bad
+<p>All the ‘default*’ and ‘bad*’ arguments have ‘use or raise’ behavior,
+meaning that if they’re a subclass of Exception, they’re raised.  If
+they’re anything else, that value is substituted for the missing/bad
 value.</p>
 <p>The simplest usage is:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#silent $webInput([&#39;choice&#39;])
@@ -587,23 +597,26 @@ dic = self.webInput([&#39;choice&#39;])
 write(dic[&#39;choice&#39;])
 </pre></div>
 </div>
-<p>Both these examples retrieves the GET/POST field &#8216;choice&#8217; and print it.
-If you leave off the&#8217;#silent&#8217;, all the values would be printed too.  But
-a better way to preview the values is:</p>
+<p>Both these examples retrieves the GET/POST field ‘choice’ and print it.
+If you leave off the’#silent’, all the values would be printed too.
+But a better way to preview the values is:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#silent $webInput([&#39;name&#39;], $debug=1)</span>
 </pre></div>
 </div>
 <p>because this pretty-prints all the values inside HTML &lt;PRE&gt; tags.</p>
-<p>** KLUDGE: &#8216;debug&#8217; is supposed to insert into the template output, but it
-wasn&#8217;t working so I changed it to a&#8217;print&#8217; statement.  So the debugging
-output will appear wherever standard output is pointed, whether at the
-terminal, in a Webware log file, or whatever. ***</p>
-<p>Since we didn&#8217;t specify any coversions, the value is a string.  It&#8217;s a
-&#8216;single&#8217; value because we specified it in &#8216;names&#8217; rather than
-&#8216;namesMulti&#8217;. Single values work like this:</p>
+<p>*** KLUDGE: ‘debug’ is supposed to insert into the template output,
+but it wasn’t working so I changed it to a’print’ statement.
+So the debugging output will appear wherever standard output
+is pointed, whether at the terminal, in a Webware log file,
+or whatever. ***</p>
+<p>Since we didn’t specify any coversions, the value is a string.  It’s a
+‘single’ value because we specified it in ‘names’ rather than
+‘namesMulti’. Single values work like this:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">If</span> <span class="n">one</span> <span class="n">value</span> <span class="ow">is</span> <span class="n">found</span><span class="p">,</span> <span class="n">take</span> <span class="n">it</span><span class="o">.</span>
-<span class="o">*</span> <span class="n">If</span> <span class="n">several</span> <span class="n">values</span> <span class="n">are</span> <span class="n">found</span><span class="p">,</span> <span class="n">choose</span> <span class="n">one</span> <span class="n">arbitrarily</span> <span class="ow">and</span> <span class="n">ignore</span> <span class="n">the</span> <span class="n">rest</span><span class="o">.</span>
-<span class="o">*</span> <span class="n">If</span> <span class="n">no</span> <span class="n">values</span> <span class="n">are</span> <span class="n">found</span><span class="p">,</span> <span class="n">use</span> <span class="ow">or</span> <span class="k">raise</span> <span class="n">the</span> <span class="n">appropriate</span> <span class="s1">&#39;default*&#39;</span> <span class="n">value</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">If</span> <span class="n">several</span> <span class="n">values</span> <span class="n">are</span> <span class="n">found</span><span class="p">,</span> <span class="n">choose</span> <span class="n">one</span> <span class="n">arbitrarily</span>
+  <span class="ow">and</span> <span class="n">ignore</span> <span class="n">the</span> <span class="n">rest</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">If</span> <span class="n">no</span> <span class="n">values</span> <span class="n">are</span> <span class="n">found</span><span class="p">,</span> <span class="n">use</span> <span class="ow">or</span> <span class="k">raise</span>
+  <span class="n">the</span> <span class="n">appropriate</span> <span class="s1">&#39;default*&#39;</span> <span class="n">value</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>Multi values work like this:</p>
@@ -613,8 +626,9 @@ terminal, in a Webware log file, or whatever. ***</p>
   <span class="n">arguments</span> <span class="n">are</span> <span class="o">*</span><span class="ow">not</span><span class="o">*</span> <span class="n">consulted</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">case</span><span class="o">.</span>
 </pre></div>
 </div>
-<p>Example: assume &#8216;days&#8217; came from a set of checkboxes or a multiple combo
-box on a form, and the user  chose&#8217;Monday&#8217;, &#8216;Tuesday&#8217; and &#8216;Thursday&#8217;:</p>
+<p>Example: assume ‘days’ came from a set of checkboxes
+or a multiple combo box on a form, and the user  chose’Monday’,
+‘Tuesday’ and ‘Thursday’:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#silent $webInput([], [&#39;days&#39;])
 The days you chose are: #slurp
 #for $day in $days
@@ -627,15 +641,16 @@ for day in dic[&#39;days&#39;]:
     write(day + &#39; &#39;)
 </pre></div>
 </div>
-<p>Both these examples print:  &#8216;The days you chose are: Monday Tuesday Thursday&#8217;.</p>
-<p>By default, missing strings are replaced by &#8216;&#8217; and missing/bad numbers
-by zero.  (A&#8217;bad number&#8217; means the converter raised an exception for
+<p>Both these examples print:  ‘The days you chose are:
+Monday Tuesday Thursday’.</p>
+<p>By default, missing strings are replaced by ‘’ and missing/bad numbers
+by zero.  (A’bad number’ means the converter raised an exception for
 it, usually because of non-numeric characters in the value.)  This
 mimics Perl/PHP behavior, and simplifies coding for many applications
 where missing/bad values <em>should</em> be blank/zero.  In those relatively
 few cases where you must distinguish between empty-string/zero on the
 one hand and missing/bad on the other, change the appropriate
-&#8216;default*&#8217; and &#8216;bad*&#8217; arguments to something like:</p>
+‘default*’ and ‘bad*’ arguments to something like:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>* None
 * another constant value
 * $NonNumericInputError/self.NonNumericInputError
@@ -645,14 +660,14 @@ one hand and missing/bad on the other, change the appropriate
 <p>(NonNumericInputError is defined in this class and is useful for
 distinguishing between bad input vs a TypeError/ValueError thrown for
 some other rason.)</p>
-<p>Here&#8217;s an example using multiple values to schedule newspaper
-deliveries.  &#8216;checkboxes&#8217; comes from a form with checkboxes for all the
+<p>Here’s an example using multiple values to schedule newspaper
+deliveries.  ‘checkboxes’ comes from a form with checkboxes for all the
 days of the week.  The days the user previously chose are preselected.
-The user checks/unchecks boxes as desired and presses Submit.  The value
-of &#8216;checkboxes&#8217; is a list of checkboxes that were checked when Submit
-was pressed.  Our task now is to turn on the days the user checked, turn
-off the days he unchecked, and leave on or off the days he didn&#8217;t
-change.</p>
+The user checks/unchecks boxes as desired and presses Submit.
+The value of ‘checkboxes’ is a list of checkboxes that were checked
+when Submit was pressed.  Our task now is to turn on the days
+the user checked, turn off the days he unchecked, and leave on or off
+the days he didn’t change.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">dic</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">webInput</span><span class="p">([],</span> <span class="p">[</span><span class="s1">&#39;dayCheckboxes&#39;</span><span class="p">])</span>
 <span class="n">wantedDays</span> <span class="o">=</span> <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;dayCheckboxes&#39;</span><span class="p">]</span> <span class="c1"># The days the user checked.</span>
 <span class="k">for</span> <span class="n">day</span><span class="p">,</span> <span class="n">on</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">getAllValues</span><span class="p">():</span>
@@ -664,7 +679,7 @@ change.</p>
         <span class="c1"># ... Unset a flag or delete a database record ...</span>
 </pre></div>
 </div>
-<p>&#8216;source&#8217; allows you to look up the variables from a number of different
+<p>‘source’ allows you to look up the variables from a number of different
 sources:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="s1">&#39;f&#39;</span>   <span class="n">fields</span> <span class="p">(</span><span class="n">CGI</span> <span class="n">GET</span><span class="o">/</span><span class="n">POST</span> <span class="n">parameters</span><span class="p">)</span>
 <span class="s1">&#39;c&#39;</span>   <span class="n">cookies</span>
@@ -672,8 +687,8 @@ sources:</p>
 <span class="s1">&#39;v&#39;</span>   <span class="s1">&#39;values&#39;</span><span class="p">,</span> <span class="n">meaning</span> <span class="n">fields</span> <span class="ow">or</span> <span class="n">cookies</span>
 </pre></div>
 </div>
-<p>In many forms, you&#8217;re dealing only with strings, which is why the
-&#8216;default&#8217; argument is third and the numeric arguments are banished to
+<p>In many forms, you’re dealing only with strings, which is why the
+‘default’ argument is third and the numeric arguments are banished to
 the end.  But sometimes you want automatic number conversion, so that
 you can do numeric comparisions in your templates without having to
 write a bunch of conversion/exception handling code.  Example:</p>
@@ -695,27 +710,28 @@ else:
     write(&#39;Pshaw, you&#39;re short.&#39;)
 </pre></div>
 </div>
-<p>To convert a value to a number, suffix &#8216;:int&#8217; or &#8216;:float&#8217; to the name.
-The method will search first for a &#8216;height:int&#8217; variable and then for a
-&#8216;height&#8217; variable.  (It will be called &#8216;height&#8217; in the final
-dictionary.)  If a numeric conversion fails, use or raise &#8216;badInt&#8217; or
-&#8216;badFloat&#8217;.  Missing values work the same way as for strings, except the
-default is &#8216;defaultInt&#8217; or &#8216;defaultFloat&#8217; instead of &#8216;default&#8217;.</p>
-<p>If a name represents an uploaded file, the entire file will be read into
-memory.  For more sophistocated file-upload handling, leave that name
-out of the list and do your own handling, or wait for
-Cheetah.Utils.UploadFileMixin.</p>
-<p>This only in a subclass that also inherits from Webware&#8217;s Servlet or
-HTTPServlet.  Otherwise you&#8217;ll get an AttributeError on &#8216;self.request&#8217;.</p>
-<p>EXCEPTIONS: ValueError if &#8216;source&#8217; is not one of the stated characters.
-TypeError if a conversion suffix is not &#8216;:int&#8217; or &#8216;:float&#8217;.</p>
+<p>To convert a value to a number, suffix ‘:int’ or ‘:float’ to the name.
+The method will search first for a ‘height:int’ variable
+and then for a ‘height’ variable.  (It will be called ‘height’
+in the final dictionary.)  If a numeric conversion fails,
+use or raise ‘badInt’ or ‘badFloat’.  Missing values work the same way
+as for strings, except the default is ‘defaultInt’
+or ‘defaultFloat’ instead of ‘default’.</p>
+<p>If a name represents an uploaded file, the entire file will be read
+into memory.  For more sophistocated file-upload handling,
+leave that name out of the list and do your own handling,
+or wait for Cheetah.Utils.UploadFileMixin.</p>
+<p>This only in a subclass that also inherits from Webware’s Servlet or
+HTTPServlet.  Otherwise you’ll get an AttributeError on ‘self.request’.</p>
+<p>EXCEPTIONS: ValueError if ‘source’ is not one of the stated characters.
+TypeError if a conversion suffix is not ‘:int’ or ‘:float’.</p>
 <p>FUTURE EXPANSION: a future version of this method may allow source
-cascading; e.g., &#8216;vs&#8217; would look first in &#8216;values&#8217; and then in session
+cascading; e.g., ‘vs’ would look first in ‘values’ and then in session
 variables.</p>
 <p>Meta-Data:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Author</span><span class="p">:</span> <span class="n">Mike</span> <span class="n">Orr</span> <span class="o">&lt;</span><span class="n">iron</span><span class="nd">@mso</span><span class="o">.</span><span class="n">oz</span><span class="o">.</span><span class="n">net</span><span class="o">&gt;</span>
-<span class="n">License</span><span class="p">:</span> <span class="n">This</span> <span class="n">software</span> <span class="ow">is</span> <span class="n">released</span> <span class="k">for</span> <span class="n">unlimited</span> <span class="n">distribution</span> <span class="n">under</span> <span class="n">the</span>
-         <span class="n">terms</span> <span class="n">of</span> <span class="n">the</span> <span class="n">MIT</span> <span class="n">license</span><span class="o">.</span>  <span class="n">See</span> <span class="n">the</span> <span class="n">LICENSE</span> <span class="n">file</span><span class="o">.</span>
+<span class="n">License</span><span class="p">:</span> <span class="n">This</span> <span class="n">software</span> <span class="ow">is</span> <span class="n">released</span> <span class="k">for</span> <span class="n">unlimited</span> <span class="n">distribution</span>
+<span class="n">under</span> <span class="n">the</span> <span class="n">terms</span> <span class="n">of</span> <span class="n">the</span> <span class="n">MIT</span> <span class="n">license</span><span class="o">.</span>  <span class="n">See</span> <span class="n">the</span> <span class="n">LICENSE</span> <span class="n">file</span><span class="o">.</span>
 <span class="n">Version</span><span class="p">:</span> <span class="mf">1.186</span>
 <span class="n">Start</span> <span class="n">Date</span><span class="p">:</span> <span class="mi">2002</span><span class="o">/</span><span class="mi">03</span><span class="o">/</span><span class="mi">17</span>
 <span class="n">Last</span> <span class="n">Revision</span> <span class="n">Date</span><span class="p">:</span> <span class="mi">2008</span><span class="o">/</span><span class="mi">03</span><span class="o">/</span><span class="mi">10</span> <span class="mi">04</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">11</span>
@@ -793,8 +809,8 @@ it outputs</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 07, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+      Last updated on Feb 28, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>
