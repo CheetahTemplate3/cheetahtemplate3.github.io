@@ -4,27 +4,19 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Cheetah.Compiler module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '3.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
-  </head>
-  <body>
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -48,12 +40,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -75,13 +69,13 @@ ModuleCompiler.compile, and ModuleCompiler.__getattr__.</p>
 <dl class="class">
 <dt id="Cheetah.Compiler.AutoClassCompiler">
 <em class="property">class </em><code class="descclassname">Cheetah.Compiler.</code><code class="descname">AutoClassCompiler</code><span class="sig-paren">(</span><em>className</em>, <em>mainMethodName='respond'</em>, <em>moduleCompiler=None</em>, <em>fileName=None</em>, <em>settingsManager=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.AutoClassCompiler" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Cheetah.Compiler.ClassCompiler" title="Cheetah.Compiler.ClassCompiler"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Compiler.ClassCompiler</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.Compiler.ClassCompiler" title="Cheetah.Compiler.ClassCompiler"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Compiler.ClassCompiler</span></code></a></p>
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.Compiler.AutoMethodCompiler">
 <em class="property">class </em><code class="descclassname">Cheetah.Compiler.</code><code class="descname">AutoMethodCompiler</code><span class="sig-paren">(</span><em>methodName</em>, <em>classCompiler</em>, <em>initialMethodComment=None</em>, <em>decorators=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.AutoMethodCompiler" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Cheetah.Compiler.MethodCompiler" title="Cheetah.Compiler.MethodCompiler"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Compiler.MethodCompiler</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.Compiler.MethodCompiler" title="Cheetah.Compiler.MethodCompiler"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Compiler.MethodCompiler</span></code></a></p>
 <dl class="method">
 <dt id="Cheetah.Compiler.AutoMethodCompiler.addMethArg">
 <code class="descname">addMethArg</code><span class="sig-paren">(</span><em>name</em>, <em>defVal=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.AutoMethodCompiler.addMethArg" title="Permalink to this definition">¶</a></dt>
@@ -95,7 +89,8 @@ ModuleCompiler.compile, and ModuleCompiler.__getattr__.</p>
 <dl class="method">
 <dt id="Cheetah.Compiler.AutoMethodCompiler.cleanupState">
 <code class="descname">cleanupState</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.AutoMethodCompiler.cleanupState" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Called by the containing class compiler instance</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Compiler.AutoMethodCompiler.isClassMethod">
@@ -117,7 +112,7 @@ ModuleCompiler.compile, and ModuleCompiler.__getattr__.</p>
 <dl class="class">
 <dt id="Cheetah.Compiler.ClassCompiler">
 <em class="property">class </em><code class="descclassname">Cheetah.Compiler.</code><code class="descname">ClassCompiler</code><span class="sig-paren">(</span><em>className</em>, <em>mainMethodName='respond'</em>, <em>moduleCompiler=None</em>, <em>fileName=None</em>, <em>settingsManager=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Cheetah.Compiler.GenUtils" title="Cheetah.Compiler.GenUtils"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Compiler.GenUtils</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.Compiler.GenUtils" title="Cheetah.Compiler.GenUtils"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Compiler.GenUtils</span></code></a></p>
 <dl class="method">
 <dt id="Cheetah.Compiler.ClassCompiler.addAttribute">
 <code class="descname">addAttribute</code><span class="sig-paren">(</span><em>attribExpr</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.addAttribute" title="Permalink to this definition">¶</a></dt>
@@ -194,13 +189,13 @@ this is used.</p>
 <dl class="attribute">
 <dt id="Cheetah.Compiler.ClassCompiler.methodCompilerClass">
 <code class="descname">methodCompilerClass</code><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.methodCompilerClass" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#Cheetah.Compiler.AutoMethodCompiler" title="Cheetah.Compiler.AutoMethodCompiler"><code class="xref py py-class docutils literal"><span class="pre">AutoMethodCompiler</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#Cheetah.Compiler.AutoMethodCompiler" title="Cheetah.Compiler.AutoMethodCompiler"><code class="xref py py-class docutils literal notranslate"><span class="pre">AutoMethodCompiler</span></code></a></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Compiler.ClassCompiler.methodCompilerClassForInit">
 <code class="descname">methodCompilerClassForInit</code><a class="headerlink" href="#Cheetah.Compiler.ClassCompiler.methodCompilerClassForInit" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#Cheetah.Compiler.MethodCompiler" title="Cheetah.Compiler.MethodCompiler"><code class="xref py py-class docutils literal"><span class="pre">MethodCompiler</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#Cheetah.Compiler.MethodCompiler" title="Cheetah.Compiler.MethodCompiler"><code class="xref py py-class docutils literal notranslate"><span class="pre">MethodCompiler</span></code></a></p>
 </dd></dl>
 
 <dl class="method">
@@ -248,19 +243,19 @@ this is used.</p>
 <dl class="attribute">
 <dt id="Cheetah.Compiler.Compiler">
 <code class="descclassname">Cheetah.Compiler.</code><code class="descname">Compiler</code><a class="headerlink" href="#Cheetah.Compiler.Compiler" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler" title="Cheetah.Compiler.ModuleCompiler"><code class="xref py py-class docutils literal"><span class="pre">ModuleCompiler</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler" title="Cheetah.Compiler.ModuleCompiler"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Compiler.ModuleCompiler</span></code></a></p>
 </dd></dl>
 
 <dl class="exception">
 <dt id="Cheetah.Compiler.Error">
 <em class="property">exception </em><code class="descclassname">Cheetah.Compiler.</code><code class="descname">Error</code><a class="headerlink" href="#Cheetah.Compiler.Error" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">exceptions.Exception</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.Compiler.GenUtils">
 <em class="property">class </em><code class="descclassname">Cheetah.Compiler.</code><code class="descname">GenUtils</code><a class="headerlink" href="#Cheetah.Compiler.GenUtils" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>An abstract baseclass for the Compiler classes that provides methods that
 perform generic utility functions or generate pieces of output code from
 information passed in by the Parser baseclass.  These methods don’t do any
@@ -309,7 +304,7 @@ remainderOfExpr = any arglist, index, or slice</dd>
 is False, otherwise it defaults to True. It is overridden by the global
 setting ‘useAutocalling’ if this setting is False.</p>
 <p>EXAMPLE:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>if the raw Cheetah Var is
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>if the raw Cheetah Var is
   $a.b.c[1].d().x.y.z
 
 nameChunks is the list
@@ -320,15 +315,15 @@ nameChunks is the list
 </pre></div>
 </div>
 <p>When this method is fed the list above it returns:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">VFN</span><span class="p">(</span><span class="n">VFN</span><span class="p">(</span><span class="n">VFFSL</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span> <span class="s1">&#39;a.b.c&#39;</span><span class="p">,</span><span class="kc">True</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="kc">False</span><span class="p">)(),</span> <span class="s1">&#39;x.y.z&#39;</span><span class="p">,</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VFN</span><span class="p">(</span><span class="n">VFN</span><span class="p">(</span><span class="n">VFFSL</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span> <span class="s1">&#39;a.b.c&#39;</span><span class="p">,</span><span class="kc">True</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="kc">False</span><span class="p">)(),</span> <span class="s1">&#39;x.y.z&#39;</span><span class="p">,</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>which can be represented as:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>VFN(B`, name=C[0], executeCallables=(useAC and C[1]))C[2]
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>VFN(B`, name=C[0], executeCallables=(useAC and C[1]))C[2]
 </pre></div>
 </div>
 <p>where:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>VFN = NameMapper.valueForName
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>VFN = NameMapper.valueForName
 VFFSL = NameMapper.valueFromFrameOrSearchList
 # optionally used instead of VFFSL
 VFSL = NameMapper.valueFromSearchList
@@ -350,7 +345,7 @@ A` = VFFSL(SL, name=A[0], executeCallables=(useAC and A[1]))A[2]
 </div>
 <p>Note, if the compiler setting useStackFrames=False (default is true)
 then:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>A` = VFSL([locals()] + SL + [globals(), builtin],
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>A` = VFSL([locals()] + SL + [globals(), builtin],
           name=A[0], executeCallables=(useAC and A[1]))A[2]
 </pre></div>
 </div>
@@ -375,7 +370,7 @@ stack frame introspection.</p>
 <dl class="class">
 <dt id="Cheetah.Compiler.MethodCompiler">
 <em class="property">class </em><code class="descclassname">Cheetah.Compiler.</code><code class="descname">MethodCompiler</code><span class="sig-paren">(</span><em>methodName</em>, <em>classCompiler</em>, <em>initialMethodComment=None</em>, <em>decorators=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Cheetah.Compiler.GenUtils" title="Cheetah.Compiler.GenUtils"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Compiler.GenUtils</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.Compiler.GenUtils" title="Cheetah.Compiler.GenUtils"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Compiler.GenUtils</span></code></a></p>
 <dl class="method">
 <dt id="Cheetah.Compiler.MethodCompiler.addAssert">
 <code class="descname">addAssert</code><span class="sig-paren">(</span><em>expr</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.MethodCompiler.addAssert" title="Permalink to this definition">¶</a></dt>
@@ -739,7 +734,7 @@ any whitespace from it.</p>
 <dl class="class">
 <dt id="Cheetah.Compiler.ModuleCompiler">
 <em class="property">class </em><code class="descclassname">Cheetah.Compiler.</code><code class="descname">ModuleCompiler</code><span class="sig-paren">(</span><em>source=None</em>, <em>file=None</em>, <em>moduleName='DynamicallyCompiledCheetahTemplate'</em>, <em>mainClassName=None</em>, <em>mainMethodName=None</em>, <em>baseclassName=None</em>, <em>extraImportStatements=None</em>, <em>settings=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="Cheetah.SettingsManager.html#Cheetah.SettingsManager.SettingsManager" title="Cheetah.SettingsManager.SettingsManager"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.SettingsManager.SettingsManager</span></code></a>, <a class="reference internal" href="#Cheetah.Compiler.GenUtils" title="Cheetah.Compiler.GenUtils"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.Compiler.GenUtils</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="Cheetah.SettingsManager.html#Cheetah.SettingsManager.SettingsManager" title="Cheetah.SettingsManager.SettingsManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.SettingsManager.SettingsManager</span></code></a>, <a class="reference internal" href="#Cheetah.Compiler.GenUtils" title="Cheetah.Compiler.GenUtils"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Compiler.GenUtils</span></code></a></p>
 <dl class="method">
 <dt id="Cheetah.Compiler.ModuleCompiler.addAttribute">
 <code class="descname">addAttribute</code><span class="sig-paren">(</span><em>attribName</em>, <em>expr</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.addAttribute" title="Permalink to this definition">¶</a></dt>
@@ -788,7 +783,7 @@ statements and Cheetah default module constants.</p>
 <dl class="attribute">
 <dt id="Cheetah.Compiler.ModuleCompiler.classCompilerClass">
 <code class="descname">classCompilerClass</code><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.classCompilerClass" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#Cheetah.Compiler.AutoClassCompiler" title="Cheetah.Compiler.AutoClassCompiler"><code class="xref py py-class docutils literal"><span class="pre">AutoClassCompiler</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#Cheetah.Compiler.AutoClassCompiler" title="Cheetah.Compiler.AutoClassCompiler"><code class="xref py py-class docutils literal notranslate"><span class="pre">AutoClassCompiler</span></code></a></p>
 </dd></dl>
 
 <dl class="method">
@@ -844,7 +839,7 @@ statements and Cheetah default module constants.</p>
 <dl class="attribute">
 <dt id="Cheetah.Compiler.ModuleCompiler.parserClass">
 <code class="descname">parserClass</code><a class="headerlink" href="#Cheetah.Compiler.ModuleCompiler.parserClass" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">_HighLevelParser</span></code></p>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Parser._HighLevelParser</span></code></p>
 </dd></dl>
 
 <dl class="method">
@@ -910,9 +905,9 @@ statements and Cheetah default module constants.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Mar 03, 2018.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+        &#169; Copyright 2017-2018, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Feb 06, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
     </div>
   </body>
 </html>

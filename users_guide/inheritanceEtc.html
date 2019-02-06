@@ -4,29 +4,21 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Import, Inheritance, Declaration and Assignment &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '3.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Flow Control" href="flowControl.html" />
     <link rel="prev" title="Generating, Caching and Filtering Output" href="output.html" /> 
-  </head>
-  <body>
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -48,7 +40,7 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Import, Inheritance, Declaration and Assignment</a><ul>
 <li><a class="reference internal" href="#import-and-from-directives">#import and #from directives</a></li>
@@ -78,12 +70,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -96,12 +90,10 @@
             
   <div class="section" id="import-inheritance-declaration-and-assignment">
 <h1>Import, Inheritance, Declaration and Assignment<a class="headerlink" href="#import-inheritance-declaration-and-assignment" title="Permalink to this headline">¶</a></h1>
-<p>(inheritanceEtc)</p>
 <div class="section" id="import-and-from-directives">
 <h2>#import and #from directives<a class="headerlink" href="#import-and-from-directives" title="Permalink to this headline">¶</a></h2>
-<p>(inheritanceEtc.import)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#import MODULE_OR_OBJECT [as NAME] [, ...]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#import MODULE_OR_OBJECT [as NAME] [, ...]</span>
 <span class="c1">#from MODULE import MODULE_OR_OBJECT [as NAME] [, ...]</span>
 </pre></div>
 </div>
@@ -109,7 +101,7 @@
 Python modules or objects available to placeholders. The syntax is
 identical to the import syntax in Python. Imported modules are
 visible globally to all methods in the generated Python class.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#import math</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#import math</span>
 <span class="c1">#import math as mathModule</span>
 <span class="c1">#from math import sin, cos</span>
 <span class="c1">#from math import sin as _sin</span>
@@ -123,9 +115,8 @@ visible globally to all methods in the generated Python class.</p>
 </div>
 <div class="section" id="extends">
 <h2>#extends<a class="headerlink" href="#extends" title="Permalink to this headline">¶</a></h2>
-<p>(inheritanceEtc.extends)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#extends CLASS</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#extends CLASS</span>
 </pre></div>
 </div>
 <p>All templates are subclasses of {Cheetah.Template.Template}.
@@ -136,7 +127,7 @@ specifies the parent class. It’s equivalent to PSP’s
 <p>Cheetah imports the class mentioned in an {#extends} directive
 automatically if you haven’t imported it yet. The implicit
 importing works like this:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#extends Superclass</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#extends Superclass</span>
 <span class="c1">## Implicitly does &#39;#from Superclass import Superclass&#39;.</span>
 
 <span class="c1">#extends Cheetah.Templates.SkeletonPage</span>
@@ -166,7 +157,7 @@ bottommost class is a template, simply omit the {#extends} in it
 and it will automatically inherit from {Template}. { If your
 bottommost class is a pure Python class, it must inherit from
 {Template} explicitly: }</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Cheetah.Template</span> <span class="k">import</span> <span class="n">Template</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Cheetah.Template</span> <span class="k">import</span> <span class="n">Template</span>
 <span class="k">class</span> <span class="nc">MyPurePythonClass</span><span class="p">(</span><span class="n">Template</span><span class="p">):</span>
 </pre></div>
 </div>
@@ -183,7 +174,7 @@ and then a specific template-servlet for each URL. (This is the
 template inherits from a pure Python class that contains
 methods/attributes used by the template. We’ll begin with the
 bottommost superclass and end with the specific template-servlet:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mf">1.</span>  <span class="n">SiteLogic</span><span class="o">.</span><span class="n">py</span> <span class="p">(</span><span class="n">pure</span> <span class="n">Python</span> <span class="k">class</span> <span class="nc">containing</span> <span class="n">methods</span> <span class="k">for</span> <span class="n">the</span> <span class="n">site</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span>  <span class="n">SiteLogic</span><span class="o">.</span><span class="n">py</span> <span class="p">(</span><span class="n">pure</span> <span class="n">Python</span> <span class="k">class</span> <span class="nc">containing</span> <span class="n">methods</span> <span class="k">for</span> <span class="n">the</span> <span class="n">site</span><span class="p">)</span>
         <span class="kn">from</span> <span class="nn">Cheetah.Template</span> <span class="k">import</span> <span class="n">Template</span>
         <span class="k">class</span> <span class="nc">SiteLogic</span><span class="p">(</span><span class="n">Template</span><span class="p">):</span>
 
@@ -224,9 +215,8 @@ as in step 2 above. Read the next section to understand what
 </div>
 <div class="section" id="implements">
 <h2>#implements<a class="headerlink" href="#implements" title="Permalink to this headline">¶</a></h2>
-<p>(inheritanceEtc.implements)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#implements METHOD</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#implements METHOD</span>
 </pre></div>
 </div>
 <p>You can call any {#def} or {#block} method directly and get its
@@ -243,7 +233,7 @@ call another method name rather than {.respond()}? What if it wants
 to call, say, {.send_output()} instead? That’s where {#implements}
 steps in. It lets you choose the name for the main method. Just put
 this in your template definition:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#implements send_output</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#implements send_output</span>
 </pre></div>
 </div>
 <p>When one template extends another, every template in the
@@ -285,9 +275,8 @@ first} thing you should think is,
 </div>
 <div class="section" id="set">
 <h2>#set<a class="headerlink" href="#set" title="Permalink to this headline">¶</a></h2>
-<p>(inheritanceEtc.set)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#set [global] $var = EXPR</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#set [global] $var = EXPR</span>
 </pre></div>
 </div>
 <p>{#set} is used to create and update local variables at run time.
@@ -295,7 +284,7 @@ The expression may be any Python expression. Remember to preface
 variable names with $ unless they’re part of an intermediate result
 in a list comprehension.</p>
 <p>Here are some examples:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#set $size = $length * 1096</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#set $size = $length * 1096</span>
 <span class="c1">#set $buffer = $size + 1096</span>
 <span class="c1">#set $area = $length * $width</span>
 <span class="c1">#set $namesList = [&#39;Moe&#39;,&#39;Larry&#39;,&#39;Curly&#39;]</span>
@@ -310,7 +299,7 @@ the entire value appears on one line in the browser.</p>
 <p>{#set} variables are also useful in {#if} expressions, but remember
 that complex logical routines should be coded in Python, not in
 Cheetah!</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#if $size &gt; 1500</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#if $size &gt; 1500</span>
   <span class="c1">#set $adj = &#39;large&#39;</span>
 <span class="c1">#else</span>
   <span class="c1">#set $adj = &#39;small&#39;</span>
@@ -319,13 +308,13 @@ Cheetah!</p>
 </div>
 <p>Or Python’s one-line equivalent, “A and B or C”. Remember that in
 this case, B must be a true value (not None, ‘’, 0, [] or {}).</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#set $adj = $size &gt; 1500 and &#39;large&#39; or &#39;small&#39;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#set $adj = $size &gt; 1500 and &#39;large&#39; or &#39;small&#39;</span>
 </pre></div>
 </div>
 <p>(Note: Cheetah’s one-line {#if} will not work for this, since it
 produces output rather than setting a variable.</p>
 <p>You can also use the augmented assignment operators:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">## Increment $a by 5.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## Increment $a by 5.</span>
 <span class="c1">#set $a += 5</span>
 </pre></div>
 </div>
@@ -337,14 +326,13 @@ prevent surprises.</p>
 </div>
 <div class="section" id="del">
 <h2>#del<a class="headerlink" href="#del" title="Permalink to this headline">¶</a></h2>
-<p>(inheritanceEtc.del)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#del $var</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#del $var</span>
 </pre></div>
 </div>
 <p>{#del} is the opposite of {#set}. It deletes a { local} variable.
 Its usage is just like Python’s {del} statement:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#del $myVar</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#del $myVar</span>
 <span class="c1">#del $myVar, $myArray[5]</span>
 </pre></div>
 </div>
@@ -354,9 +342,8 @@ other type of variable.</p>
 </div>
 <div class="section" id="attr">
 <h2>#attr<a class="headerlink" href="#attr" title="Permalink to this headline">¶</a></h2>
-<p>(inheritanceEtc.attr)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#attr $var = EXPR</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#attr $var = EXPR</span>
 </pre></div>
 </div>
 <p>The {#attr} directive creates class attributes in the generated
@@ -364,13 +351,13 @@ Python class. It should be used to assign simple Python literals
 such as numbers or strings. In particular, the expression must {
 not} depend on searchList values or {#set} variables since those
 are not known at compile time.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#attr $title = &quot;Rob Roy&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#attr $title = &quot;Rob Roy&quot;</span>
 <span class="c1">#attr $author = &quot;Sir Walter Scott&quot;</span>
 <span class="c1">#attr $version = 123.4</span>
 </pre></div>
 </div>
 <p>This template or any child template can output the value thus:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$title, by $author, version $version
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$title, by $author, version $version
 </pre></div>
 </div>
 <p>If you have a library of templates derived from etexts
@@ -380,14 +367,13 @@ compiled into .py template modules):</p>
 </div>
 <div class="section" id="def">
 <h2>#def<a class="headerlink" href="#def" title="Permalink to this headline">¶</a></h2>
-<p>(inheritanceEtc.def)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#def METHOD[(ARGUMENTS)]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#def METHOD[(ARGUMENTS)]</span>
 <span class="c1">#end def</span>
 </pre></div>
 </div>
 <p>Or the one-line variation:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#def METHOD[(ARGUMENTS)] : TEXT_AND_PLACEHOLDERS</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#def METHOD[(ARGUMENTS)] : TEXT_AND_PLACEHOLDERS</span>
 </pre></div>
 </div>
 <p>The {#def} directive is used to define new methods in the generated
@@ -396,7 +382,7 @@ Python’s {def} statement. The directive is silent, meaning it does
 not itself produce any output. However, the content of the method
 will be inserted into the output (and the directives executed)
 whenever the method is later called by a $placeholder.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#def myMeth()
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#def myMeth()
 This is the text in my method
 $a $b $c(123)  ## these placeholder names have been defined elsewhere
 #end def
@@ -406,7 +392,7 @@ $myMeth()
 </pre></div>
 </div>
 <p>The arglist and parentheses can be omitted:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#def myMeth
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#def myMeth
 This is the text in my method
 $a $b $c(123)
 #end def
@@ -417,7 +403,7 @@ $myMeth
 </div>
 <p>Methods can have arguments and have defaults for those arguments,
 just like in Python. Remember the {$} before variable names:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#def myMeth($a, $b=1234)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#def myMeth($a, $b=1234)
 This is the text in my method
 $a - $b
 #end def
@@ -427,28 +413,28 @@ $myMeth(1)
 </pre></div>
 </div>
 <p>The output from this last example will be:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">my</span> <span class="n">method</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">my</span> <span class="n">method</span>
 <span class="mi">1</span> <span class="o">-</span> <span class="mi">1234</span>
 </pre></div>
 </div>
 <p>There is also a single line version of the {#def} directive. {
 Unlike the multi-line directives, it uses a colon (:) to delimit
 the method signature and body}:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#attr $adj = &#39;trivial&#39;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#attr $adj = &#39;trivial&#39;
 #def myMeth: This is the $adj method
 $myMeth
 </pre></div>
 </div>
 <p>Leading and trailing whitespace is stripped from the method. This
 is in contrast to:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#def myMeth2
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#def myMeth2
 This is the $adj method
 #end def
 </pre></div>
 </div>
 <p>where the method includes a newline after “method”. If you don’t
 want the newline, add {#slurp}:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#def myMeth3
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#def myMeth3
 This is the $adj method#slurp
 #end def
 </pre></div>
@@ -460,7 +446,6 @@ the subclass method that will be called.</p>
 </div>
 <div class="section" id="block-end-block">
 <h2>#block … #end block<a class="headerlink" href="#block-end-block" title="Permalink to this headline">¶</a></h2>
-<p>(inheritanceEtc.block)</p>
 <p>The {#block} directive allows you to mark a section of your
 template that can be selectively reimplemented in a subclass. It is
 very useful for changing part of a template without having to
@@ -475,7 +460,7 @@ etc. In this section we are talking only of block-blocks.)</p>
 effect is that it appears to go back and change the output text {
 at the point the original block was defined} rather than at the
 location of the reimplementation.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#block testBlock
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#block testBlock
 Text in the contents
 area of the block directive
 #if $testIt
@@ -487,7 +472,7 @@ $getFoo()
 <p>You can repeat the block name in the {#end block} directive or not,
 as you wish.</p>
 <p>{#block} directives can be nested to any depth.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#block outerBlock</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#block outerBlock</span>
 <span class="n">Outer</span> <span class="n">block</span> <span class="n">contents</span>
 
 <span class="c1">#block innerBlock1</span>
@@ -542,9 +527,9 @@ arguments.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Mar 03, 2018.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+        &#169; Copyright 2017-2018, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Feb 06, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
     </div>
   </body>
 </html>

@@ -4,29 +4,21 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Flow Control &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '3.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Error Handling" href="errorHandling.html" />
     <link rel="prev" title="Import, Inheritance, Declaration and Assignment" href="inheritanceEtc.html" /> 
-  </head>
-  <body>
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -48,7 +40,7 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Flow Control</a><ul>
 <li><a class="reference internal" href="#for-end-for">#for … #end for</a></li>
@@ -79,12 +71,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -97,19 +91,17 @@
             
   <div class="section" id="flow-control">
 <h1>Flow Control<a class="headerlink" href="#flow-control" title="Permalink to this headline">¶</a></h1>
-<p>(flowControl)</p>
 <div class="section" id="for-end-for">
 <h2>#for … #end for<a class="headerlink" href="#for-end-for" title="Permalink to this headline">¶</a></h2>
-<p>(flowControl.for)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#for $var in EXPR</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#for $var in EXPR</span>
 <span class="c1">#end for</span>
 </pre></div>
 </div>
 <p>The {#for} directive iterates through a sequence. The syntax is the
 same as Python, but remember the {$} before variables.</p>
 <p>Here’s a simple client listing:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>&lt;TABLE&gt;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;TABLE&gt;
 #for $client in $service.clients
 &lt;TR&gt;
 &lt;TD&gt;$client.surname, $client.firstname&lt;/TD&gt;
@@ -120,7 +112,7 @@ same as Python, but remember the {$} before variables.</p>
 </pre></div>
 </div>
 <p>Here’s how to loop through the keys and values of a dictionary:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>&lt;PRE&gt;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;PRE&gt;
 #for $key, $value in $dict.items()
 $key: $value
 #end for
@@ -130,13 +122,13 @@ $key: $value
 <p>Here’s how to create list of numbers separated by hyphens. This
 “#end for” tag shares the last line to avoid introducing a newline
 character after each hyphen.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#for $i in range(15)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#for $i in range(15)
 $i - #end for
 </pre></div>
 </div>
 <p>If the location of the {#end for} offends your sense of
 indentational propriety, you can do this instead:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#for $i in $range(15)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#for $i in $range(15)
 $i - #slurp
 #end for
 </pre></div>
@@ -144,7 +136,7 @@ $i - #slurp
 <p>The previous two examples will put an extra hyphen after last
 number. Here’s how to get around that problem, using the {#set}
 directive, which will be dealt with in more detail below.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#set $sep = &#39;&#39;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#set $sep = &#39;&#39;
 #for $name in $names
 $sep$name
 #set $sep = &#39;, &#39;
@@ -153,22 +145,21 @@ $sep$name
 </div>
 <p>Although to just put a separator between strings, you don’t need a
 for loop:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#echo &#39;, &#39;.join($names)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#echo &#39;, &#39;.join($names)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="repeat-end-repeat">
 <h2>#repeat … #end repeat<a class="headerlink" href="#repeat-end-repeat" title="Permalink to this headline">¶</a></h2>
-<p>(flowControl.repeat)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#repeat EXPR</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#repeat EXPR</span>
 <span class="c1">#end repeat</span>
 </pre></div>
 </div>
 <p>Do something a certain number of times. The argument may be any
 numeric expression. If it’s zero or negative, the loop will execute
 zero times.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#repeat $times + 3</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#repeat $times + 3</span>
 <span class="n">She</span> <span class="n">loves</span> <span class="n">me</span><span class="p">,</span> <span class="n">she</span> <span class="n">loves</span> <span class="n">me</span> <span class="ow">not</span><span class="o">.</span>
 <span class="c1">#repeat</span>
 <span class="n">She</span> <span class="n">loves</span> <span class="n">me</span><span class="o">.</span>
@@ -179,7 +170,7 @@ If you need a counter variable, use {#for} instead with Python’s
 {range} function. Since Python’s ranges are base 0 by default,
 there are two ways to start counting at 1. Say we want to count
 from 1 to 5, and that {$count} is 5.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#for $i in $range($count)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#for $i in $range($count)
 #set $step = $i + 1
 $step.  Counting from 1 to $count.
 #end for
@@ -197,15 +188,14 @@ uses a new local variable for every instance of {#repeat}.</p>
 </div>
 <div class="section" id="while-end-while">
 <h2>#while … #end while<a class="headerlink" href="#while-end-while" title="Permalink to this headline">¶</a></h2>
-<p>(flowControl.while)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#while EXPR</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#while EXPR</span>
 <span class="c1">#end while</span>
 </pre></div>
 </div>
 <p>{#while} is the same as Python’s {while} statement. It may be
 followed by any boolean expression:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#while $someCondition(&#39;arg1&#39;, $arg2)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#while $someCondition(&#39;arg1&#39;, $arg2)</span>
 <span class="n">The</span> <span class="n">condition</span> <span class="ow">is</span> <span class="n">true</span><span class="o">.</span>
 <span class="c1">#end while</span>
 </pre></div>
@@ -215,9 +205,8 @@ until the computer runs out of memory.</p>
 </div>
 <div class="section" id="if-else-if-else-end-if">
 <h2>#if … #else if … #else … #end if<a class="headerlink" href="#if-else-if-else-end-if" title="Permalink to this headline">¶</a></h2>
-<p>(flowControl.if)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#if EXPR</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#if EXPR</span>
 <span class="c1">#else if EXPR</span>
 <span class="c1">#elif EXPR</span>
 <span class="c1">#else</span>
@@ -232,7 +221,7 @@ it evaluates to 0, ‘’, None, an empty list, or an empty dictionary.
 In deference to Python, {#elif} is accepted as a synonym for {#else
 if}.</p>
 <p>Here are some examples:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#if $size &gt;= 1500</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#if $size &gt;= 1500</span>
 <span class="n">It</span><span class="s1">&#39;s big</span>
 <span class="c1">#else if $size &lt; 1500 and $size &gt; 0</span>
 <span class="n">It</span><span class="s1">&#39;s small</span>
@@ -241,13 +230,13 @@ if}.</p>
 <span class="c1">#end if</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#if $testItem($item)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#if $testItem($item)
 The item $item.name is OK.
 #end if
 </pre></div>
 </div>
 <p>Here’s an example that combines an {#if} tag with a {#for} tag.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#if $people
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#if $people
 &lt;table&gt;
 &lt;tr&gt;
 &lt;th&gt;Name&lt;/th&gt;
@@ -272,16 +261,15 @@ which is equivalent to Perl’s and C’s {?:} operator.</p>
 </div>
 <div class="section" id="unless-end-unless">
 <h2>#unless … #end unless<a class="headerlink" href="#unless-end-unless" title="Permalink to this headline">¶</a></h2>
-<p>(flowControl.unless)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#unless EXPR</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#unless EXPR</span>
 <span class="c1">#end unless</span>
 </pre></div>
 </div>
 <p>{#unless} is the opposite of {#if}: the text is executed if the
 condition is { false}. Sometimes this is more convenient. {#unless
 EXPR} is equivalent to {#if not (EXPR)}.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#unless $alive
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#unless $alive
 This parrot is no more!  He has ceased to be!
 &#39;E&#39;s expired and gone to meet &#39;is maker! ...
 THIS IS AN EX-PARROT!!
@@ -293,9 +281,8 @@ If you need those, use {#if} instead.</p>
 </div>
 <div class="section" id="break-and-continue">
 <h2>#break and #continue<a class="headerlink" href="#break-and-continue" title="Permalink to this headline">¶</a></h2>
-<p>(flowControl.break)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#break</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#break</span>
 <span class="c1">#continue</span>
 </pre></div>
 </div>
@@ -303,7 +290,7 @@ If you need those, use {#if} instead.</p>
 loop prematurely, while {#continue} will immediately jump to the
 next iteration in the {#for} loop.</p>
 <p>In this example the output list will not contain “10 -“.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#for $i in range(15)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#for $i in range(15)
 #if $i == 10
   #continue
 #end if
@@ -313,7 +300,7 @@ $i - #slurp
 </div>
 <p>In this example the loop will exit if it finds a name that equals
 ‘Joe’:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#for $name in $names
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#for $name in $names
 #if $name == &#39;Joe&#39;
   #break
 #end if
@@ -324,16 +311,15 @@ $name - #slurp
 </div>
 <div class="section" id="pass">
 <h2>#pass<a class="headerlink" href="#pass" title="Permalink to this headline">¶</a></h2>
-<p>(flowControl.pass)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#pass</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#pass</span>
 </pre></div>
 </div>
 <p>The {#pass} directive is identical to Python {pass} statement: it
 does nothing. It can be used when a statement is required
 syntactically but the program requires no action.</p>
 <p>The following example does nothing if only $A is true</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#if $A and $B</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#if $A and $B</span>
    <span class="n">do</span> <span class="n">something</span>
 <span class="c1">#elif $A</span>
   <span class="c1">#pass</span>
@@ -347,9 +333,8 @@ syntactically but the program requires no action.</p>
 </div>
 <div class="section" id="stop">
 <h2>#stop<a class="headerlink" href="#stop" title="Permalink to this headline">¶</a></h2>
-<p>(flowControl.stop)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#stop</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#stop</span>
 </pre></div>
 </div>
 <p>The {#stop} directive is used to stop processing of a template at a
@@ -360,7 +345,7 @@ the included code and continues on from after the {#include}
 directive. stop the processing of the included code. Likewise, when
 {#stop} is called inside a {#def} or {#block}, it stops only the
 {#def} or {#block}.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="n">cat</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="n">cat</span>
 <span class="c1">#if 1</span>
   <span class="n">sat</span> <span class="n">on</span> <span class="n">a</span> <span class="n">mat</span>
   <span class="c1">#stop</span>
@@ -370,12 +355,12 @@ directive. stop the processing of the included code. Likewise, when
 </pre></div>
 </div>
 <p>will print</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="n">cat</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="n">cat</span>
   <span class="n">sat</span> <span class="n">on</span> <span class="n">a</span> <span class="n">mat</span>
 </pre></div>
 </div>
 <p>And</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="n">cat</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="n">cat</span>
 <span class="c1">#block action</span>
   <span class="n">sat</span> <span class="n">on</span> <span class="n">a</span> <span class="n">mat</span>
   <span class="c1">#stop</span>
@@ -385,7 +370,7 @@ directive. stop the processing of the included code. Likewise, when
 </pre></div>
 </div>
 <p>will print</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="n">cat</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="n">cat</span>
   <span class="n">sat</span> <span class="n">on</span> <span class="n">a</span> <span class="n">mat</span>
 <span class="ow">in</span> <span class="n">a</span> <span class="n">flat</span><span class="o">.</span>
 </pre></div>
@@ -393,9 +378,8 @@ directive. stop the processing of the included code. Likewise, when
 </div>
 <div class="section" id="return">
 <h2>#return<a class="headerlink" href="#return" title="Permalink to this headline">¶</a></h2>
-<p>(flowControl.return)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#return</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#return</span>
 </pre></div>
 </div>
 <p>This is used as in Python. {#return} will exit the current method
@@ -404,7 +388,7 @@ may be used only inside a {#def} or a {#block}.</p>
 <p>Note that {#return} is different from the {#stop} directive, which
 returns the sum of all text output from the method in which it is
 called. The following examples illustrate this point:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>1
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1
 $test[1]
 3
 #def test
@@ -418,13 +402,13 @@ $test[1]
 </pre></div>
 </div>
 <p>will produce</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
 <span class="mi">2</span>
 <span class="mi">3</span>
 </pre></div>
 </div>
 <p>while</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>1
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1
 $test
 3
 #def test
@@ -438,7 +422,7 @@ $test
 </pre></div>
 </div>
 <p>will produce</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
 <span class="mf">1.5</span>
 <span class="mi">3</span>
 </pre></div>
@@ -472,9 +456,9 @@ $test
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Mar 03, 2018.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+        &#169; Copyright 2017-2018, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Feb 06, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
     </div>
   </body>
 </html>

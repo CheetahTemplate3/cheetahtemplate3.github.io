@@ -4,29 +4,21 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Error Handling &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '3.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Instructions to the Parser/Compiler" href="parserInstructions.html" />
     <link rel="prev" title="Flow Control" href="flowControl.html" /> 
-  </head>
-  <body>
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -48,7 +40,7 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Error Handling</a><ul>
 <li><a class="reference internal" href="#try-except-end-try-finally-and-assert">#try … #except … #end try, #finally, and #assert</a></li>
@@ -72,12 +64,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -90,7 +84,6 @@
             
   <div class="section" id="error-handling">
 <h1>Error Handling<a class="headerlink" href="#error-handling" title="Permalink to this headline">¶</a></h1>
-<p>(errorHandling)</p>
 <p>There are two ways to handle runtime errors (exceptions) in
 Cheetah. The first is with the Cheetah directives that mirror
 Python’s structured exception handling statements. The second is
@@ -98,11 +91,10 @@ with Cheetah’s {ErrorCatcher} framework. These are described
 below.</p>
 <div class="section" id="try-except-end-try-finally-and-assert">
 <h2>#try … #except … #end try, #finally, and #assert<a class="headerlink" href="#try-except-end-try-finally-and-assert" title="Permalink to this headline">¶</a></h2>
-<p>(errorHandling.directives)</p>
 <p>Cheetah’s exception-handling directives are exact mirrors Python’s
 exception-handling statements. See Python’s documentation for
 details. The following Cheetah code demonstrates their use:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#try
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#try
   $mightFail()
 #except
   It failed
@@ -143,9 +135,8 @@ try-block, but can appear in nested try-blocks.</p>
 </div>
 <div class="section" id="errorcatcher-and-errorcatcher-objects">
 <h2>#errorCatcher and ErrorCatcher objects<a class="headerlink" href="#errorcatcher-and-errorcatcher-objects" title="Permalink to this headline">¶</a></h2>
-<p>(errorHandling.errorCatcher)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#errorCatcher CLASS</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#errorCatcher CLASS</span>
 <span class="c1">#errorCatcher $PLACEHOLDER_TO_AN_ERROR_CATCHER_INSTANCE</span>
 </pre></div>
 </div>
@@ -159,7 +150,7 @@ in order without seeing the subsequent output. When an
 at once as well as the template output around them.</p>
 <p>The {Cheetah.ErrorCatchers} module defines the base class for
 ErrorCatchers:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ErrorCatcher</span><span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ErrorCatcher</span><span class="p">:</span>
     <span class="n">_exceptionsToCatch</span> <span class="o">=</span> <span class="p">(</span><span class="n">NameMapper</span><span class="o">.</span><span class="n">NotFound</span><span class="p">,)</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">templateObj</span><span class="p">):</span>
@@ -175,14 +166,14 @@ ErrorCatchers:</p>
 <p>This ErrorCatcher catches {NameMapper.NotFound} exceptions and
 leaves the offending placeholder visible in its raw form in the
 template output. If the following template is executed:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#errorCatcher Echo</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#errorCatcher Echo</span>
 <span class="c1">#set $iExist = &#39;Here I am!&#39;</span>
 <span class="n">Here</span><span class="s1">&#39;s a good placeholder: $iExist</span>
 <span class="n">Here</span><span class="s1">&#39;s bad placeholder: $iDontExist</span>
 </pre></div>
 </div>
 <p>the output will be:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Here</span><span class="s1">&#39;s a good placeholder: Here I am!</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Here</span><span class="s1">&#39;s a good placeholder: Here I am!</span>
 <span class="n">Here</span><span class="s1">&#39;s bad placeholder: $iDontExist</span>
 </pre></div>
 </div>
@@ -190,7 +181,7 @@ template output. If the following template is executed:</p>
 {Cheetah.ErrorCatchers.Echo}. {Cheetah.ErrorCatchers} also provides
 a number of specialized subclasses that warn about exceptions in
 different ways. {Cheetah.ErrorCatchers.BigEcho} will output</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Here</span><span class="s1">&#39;s a good placeholder: Here I am!</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Here</span><span class="s1">&#39;s a good placeholder: Here I am!</span>
 <span class="n">Here</span><span class="s1">&#39;s bad placeholder: ===============&amp;lt;$iDontExist could not be found&amp;gt;===============</span>
 </pre></div>
 </div>
@@ -237,9 +228,9 @@ its {listErrors} method.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Mar 03, 2018.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+        &#169; Copyright 2017-2018, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Feb 06, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
     </div>
   </body>
 </html>

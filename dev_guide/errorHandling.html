@@ -4,29 +4,21 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Directives: Error Handling &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '3.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Placeholders" href="placeholders.html" />
-    <link rel="prev" title="The parser" href="parser.html" /> 
-  </head>
-  <body>
+    <link rel="prev" title="Introduction" href="introduction.html" /> 
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -40,7 +32,7 @@
           <a href="placeholders.html" title="Placeholders"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="parser.html" title="The parser"
+          <a href="introduction.html" title="Introduction"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer’s Guide</a> &#187;</li> 
@@ -48,7 +40,7 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Directives: Error Handling</a><ul>
 <li><a class="reference internal" href="#try-and-raise">#try and #raise</a></li>
@@ -64,8 +56,8 @@
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="parser.html"
-                        title="previous chapter">The parser</a></p>
+  <p class="topless"><a href="introduction.html"
+                        title="previous chapter">Introduction</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="placeholders.html"
                         title="next chapter">Placeholders</a></p>
@@ -78,12 +70,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -96,12 +90,10 @@
             
   <div class="section" id="directives-error-handling">
 <h1>Directives: Error Handling<a class="headerlink" href="#directives-error-handling" title="Permalink to this headline">¶</a></h1>
-<p>(errorHandling)</p>
 <div class="section" id="try-and-raise">
 <h2>#try and #raise<a class="headerlink" href="#try-and-raise" title="Permalink to this headline">¶</a></h2>
-<p>(errorHandling.try)</p>
 <p>The template:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#import traceback</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#import traceback</span>
 <span class="c1">#try</span>
 <span class="c1">#raise RuntimeError</span>
 <span class="c1">#except RuntimeError</span>
@@ -122,7 +114,7 @@
 </pre></div>
 </div>
 <p>The output:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>A runtime error occurred.
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>A runtime error occurred.
 
 Hahaha!
 
@@ -130,7 +122,7 @@ You can&#39;t divide by zero, idiot!
 </pre></div>
 </div>
 <p>The generated code:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="k">raise</span> <span class="ne">RuntimeError</span>
 <span class="k">except</span> <span class="ne">RuntimeError</span><span class="p">:</span>
     <span class="n">write</span><span class="p">(</span><span class="s1">&#39;A runtime error occurred.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -152,13 +144,12 @@ You can&#39;t divide by zero, idiot!
 </div>
 <div class="section" id="assert">
 <h2>#assert<a class="headerlink" href="#assert" title="Permalink to this headline">¶</a></h2>
-<p>(errorHandling.assert)</p>
 <p>The template:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#assert False, &quot;You lose, buster!&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#assert False, &quot;You lose, buster!&quot;</span>
 </pre></div>
 </div>
 <p>The output:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>Traceback (most recent call last):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Traceback (most recent call last):
   File &quot;x.py&quot;, line 117, in ?
     x().runAsMainProgram()
   File &quot;/local/opt/Python/lib/python2.2/site-packages/Webware/Cheetah/
@@ -173,22 +164,20 @@ AssertionError: You lose, buster!
 </pre></div>
 </div>
 <p>The generated code:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;You lose, buster!&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;You lose, buster!&quot;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="errorcatcher">
 <h2>#errorCatcher<a class="headerlink" href="#errorcatcher" title="Permalink to this headline">¶</a></h2>
-<p>(errorHandling.errorCatcher)</p>
 <div class="section" id="no-error-catcher">
 <h3>No error catcher<a class="headerlink" href="#no-error-catcher" title="Permalink to this headline">¶</a></h3>
-<p>(errorHandling.errorCatcher.no)</p>
 <p>The template:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$noValue
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$noValue
 </pre></div>
 </div>
 <p>The output:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>Traceback (most recent call last):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Traceback (most recent call last):
   File &quot;x.py&quot;, line 118, in ?
     x().runAsMainProgram()
   File &quot;/local/opt/Python/lib/python2.2/site-packages/Webware/Cheetah/
@@ -204,7 +193,7 @@ NameMapper.NotFound: noValue
 </pre></div>
 </div>
 <p>The generated code:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;noValue&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from &#39;$noValue&#39; at line 1,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;noValue&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from &#39;$noValue&#39; at line 1,</span>
     <span class="c1"># col 1.</span>
 <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
@@ -212,21 +201,20 @@ NameMapper.NotFound: noValue
 </div>
 <div class="section" id="echo-and-bigecho">
 <h3>Echo and BigEcho<a class="headerlink" href="#echo-and-bigecho" title="Permalink to this headline">¶</a></h3>
-<p>(errorHandling.errorCatcher.echo)</p>
 <p>The template:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#errorCatcher Echo
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#errorCatcher Echo
 $noValue
 #errorCatcher BigEcho
 $noValue
 </pre></div>
 </div>
 <p>The output:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$noValue
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$noValue
 ===============&amp;lt;$noValue could not be found&amp;gt;===============
 </pre></div>
 </div>
 <p>The generated code:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="s2">&quot;Echo&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatchers</span><span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="s2">&quot;Echo&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatchers</span><span class="p">:</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatcher</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatchers</span><span class="p">[</span><span class="s2">&quot;Echo&quot;</span><span class="p">]</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatcher</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_errorCatchers</span><span class="p">[</span><span class="s2">&quot;Echo&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ErrorCatchers</span><span class="o">.</span><span class="n">Echo</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
@@ -246,9 +234,8 @@ $noValue
 </div>
 <div class="section" id="listerrors">
 <h3>ListErrors<a class="headerlink" href="#listerrors" title="Permalink to this headline">¶</a></h3>
-<p>(errorHandling.errorCatcher.listErrors)</p>
 <p>The template:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#import pprint
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#import pprint
 #errorCatcher ListErrors
 $noValue
 $anotherMissingValue.really
@@ -257,7 +244,7 @@ $pprint.pformat($errorCatcher.listErrors)
 </pre></div>
 </div>
 <p>The output:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$noValue
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$noValue
 $anotherMissingValue.really
 [{&#39;code&#39;: &#39;VFS(SL,&quot;noValue&quot;,1)&#39;,
   &#39;exc_val&#39;: &lt;NameMapper.NotFound instance at 0x8170ecc&gt;,
@@ -272,12 +259,12 @@ $anotherMissingValue.really
 </pre></div>
 </div>
 <p>The generated import:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pprint</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pprint</span>
 </pre></div>
 </div>
 <p>Then in the generated class, we have our familiar {.respond} method
 and several new methods:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">__errorCatcher1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">localsDict</span><span class="o">=</span><span class="p">{}):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">__errorCatcher1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">localsDict</span><span class="o">=</span><span class="p">{}):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generated from $noValue at line, col (3, 1).</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -317,7 +304,7 @@ and several new methods:</p>
         <span class="n">lineCol</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">respond</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">respond</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
         <span class="n">trans</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">dummyTrans</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
         <span class="n">VFS</span><span class="o">=</span><span class="n">valueFromSearchList</span><span class="p">,</span>
@@ -400,16 +387,16 @@ system!</p>
           <a href="placeholders.html" title="Placeholders"
              >next</a> |</li>
         <li class="right" >
-          <a href="parser.html" title="The parser"
+          <a href="introduction.html" title="Introduction"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer’s Guide</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Mar 03, 2018.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+        &#169; Copyright 2017-2018, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Feb 06, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
     </div>
   </body>
 </html>

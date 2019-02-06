@@ -4,27 +4,19 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Cheetah.DummyTransaction module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '3.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
-  </head>
-  <body>
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -48,12 +40,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -74,7 +68,7 @@ specific DummyTransaction or DummyResponse behavior</p>
 <dl class="class">
 <dt id="Cheetah.DummyTransaction.DummyResponse">
 <em class="property">class </em><code class="descclassname">Cheetah.DummyTransaction.</code><code class="descname">DummyResponse</code><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponse" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A dummy Response class is used by Cheetah in place of real Webware
 Response objects when the Template obj is not used directly as a Webware
 servlet</p>
@@ -113,13 +107,13 @@ servlet</p>
 <dl class="exception">
 <dt id="Cheetah.DummyTransaction.DummyResponseFailure">
 <em class="property">exception </em><code class="descclassname">Cheetah.DummyTransaction.</code><code class="descname">DummyResponseFailure</code><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponseFailure" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">exceptions.Exception</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.DummyTransaction.DummyTransaction">
 <em class="property">class </em><code class="descclassname">Cheetah.DummyTransaction.</code><code class="descname">DummyTransaction</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyTransaction" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A dummy Transaction class is used by Cheetah in place of real Webware
 transactions when the Template obj is not used directly as a Webware
 servlet.</p>
@@ -135,7 +129,7 @@ attributes make no sense in this context.</p>
 <dl class="class">
 <dt id="Cheetah.DummyTransaction.TransformerResponse">
 <em class="property">class </em><code class="descclassname">Cheetah.DummyTransaction.</code><code class="descname">TransformerResponse</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.TransformerResponse" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Cheetah.DummyTransaction.DummyResponse" title="Cheetah.DummyTransaction.DummyResponse"><code class="xref py py-class docutils literal"><span class="pre">Cheetah.DummyTransaction.DummyResponse</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.DummyTransaction.DummyResponse" title="Cheetah.DummyTransaction.DummyResponse"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.DummyTransaction.DummyResponse</span></code></a></p>
 <dl class="method">
 <dt id="Cheetah.DummyTransaction.TransformerResponse.getvalue">
 <code class="descname">getvalue</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.TransformerResponse.getvalue" title="Permalink to this definition">¶</a></dt>
@@ -146,7 +140,7 @@ attributes make no sense in this context.</p>
 <dl class="class">
 <dt id="Cheetah.DummyTransaction.TransformerTransaction">
 <em class="property">class </em><code class="descclassname">Cheetah.DummyTransaction.</code><code class="descname">TransformerTransaction</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.TransformerTransaction" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="method">
 <dt id="Cheetah.DummyTransaction.TransformerTransaction.response">
 <code class="descname">response</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.TransformerTransaction.response" title="Permalink to this definition">¶</a></dt>
@@ -175,9 +169,9 @@ attributes make no sense in this context.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Mar 03, 2018.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+        &#169; Copyright 2017-2018, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Feb 06, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
     </div>
   </body>
 </html>

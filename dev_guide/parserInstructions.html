@@ -4,29 +4,21 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Directives: Parser Instructions &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '3.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Template" href="template.html" />
+    <link rel="next" title="Directives: Import, Inheritance, Declaration and Assignment" href="inheritanceEtc.html" />
     <link rel="prev" title="Directives: Comments" href="comments.html" /> 
-  </head>
-  <body>
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -37,7 +29,7 @@
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="template.html" title="Template"
+          <a href="inheritanceEtc.html" title="Directives: Import, Inheritance, Declaration and Assignment"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="comments.html" title="Directives: Comments"
@@ -48,7 +40,7 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Directives: Parser Instructions</a><ul>
 <li><a class="reference internal" href="#breakpoint">#breakpoint</a></li>
@@ -61,8 +53,8 @@
   <p class="topless"><a href="comments.html"
                         title="previous chapter">Directives: Comments</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="template.html"
-                        title="next chapter">Template</a></p>
+  <p class="topless"><a href="inheritanceEtc.html"
+                        title="next chapter">Directives: Import, Inheritance, Declaration and Assignment</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -72,12 +64,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -90,32 +84,29 @@
             
   <div class="section" id="directives-parser-instructions">
 <h1>Directives: Parser Instructions<a class="headerlink" href="#directives-parser-instructions" title="Permalink to this headline">¶</a></h1>
-<p>(parserInstructions)</p>
 <div class="section" id="breakpoint">
 <h2>#breakpoint<a class="headerlink" href="#breakpoint" title="Permalink to this headline">¶</a></h2>
-<p>(parserInstructions.breakpoint)</p>
 <p>The template:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Text</span> <span class="n">before</span> <span class="n">breakpoint</span><span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Text</span> <span class="n">before</span> <span class="n">breakpoint</span><span class="o">.</span>
 <span class="c1">#breakpoint</span>
 <span class="n">Text</span> <span class="n">after</span> <span class="n">breakpoint</span><span class="o">.</span>
 <span class="c1">#raise RuntimeError</span>
 </pre></div>
 </div>
 <p>The output:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Text</span> <span class="n">before</span> <span class="n">breakpoint</span><span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Text</span> <span class="n">before</span> <span class="n">breakpoint</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>The generated code:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Text before breakpoint.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Text before breakpoint.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Nothing after the breakpoint was compiled.</p>
 </div>
 <div class="section" id="compiler">
 <h2>#compiler<a class="headerlink" href="#compiler" title="Permalink to this headline">¶</a></h2>
-<p>(parserInstructions.compiler)</p>
 <p>The template:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Not</span> <span class="n">a</span> <span class="n">comment</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Not</span> <span class="n">a</span> <span class="n">comment</span>
 <span class="c1">#compiler commentStartToken = &#39;//&#39;</span>
 <span class="o">//</span> <span class="n">A</span> <span class="n">comment</span>
 <span class="c1">#compiler reset</span>
@@ -123,12 +114,12 @@
 </pre></div>
 </div>
 <p>The output:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Not</span> <span class="n">a</span> <span class="n">comment</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Not</span> <span class="n">a</span> <span class="n">comment</span>
 <span class="o">//</span> <span class="n">Not</span> <span class="n">a</span> <span class="n">comment</span>
 </pre></div>
 </div>
 <p>The generated code:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;// Not a comment</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;// Not a comment</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="c1">#  A comment</span>
 <span class="n">write</span><span class="p">(</span><span class="s1">&#39;// Not a comment</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
@@ -154,7 +145,7 @@ the template definition was read.</p>
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="template.html" title="Template"
+          <a href="inheritanceEtc.html" title="Directives: Import, Inheritance, Declaration and Assignment"
              >next</a> |</li>
         <li class="right" >
           <a href="comments.html" title="Directives: Comments"
@@ -164,9 +155,9 @@ the template definition was read.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Mar 03, 2018.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+        &#169; Copyright 2017-2018, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Feb 06, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
     </div>
   </body>
 </html>

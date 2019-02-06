@@ -4,29 +4,21 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>.py Template Modules &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '3.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Directives: Comments" href="comments.html" />
-    <link rel="prev" title="A BNF Grammar of Cheetah" href="bnf.html" /> 
-  </head>
-  <body>
+    <link rel="prev" title="Caching placeholders and #cache" href="cache.html" /> 
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -40,7 +32,7 @@
           <a href="comments.html" title="Directives: Comments"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="bnf.html" title="A BNF Grammar of Cheetah"
+          <a href="cache.html" title="Caching placeholders and #cache"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer’s Guide</a> &#187;</li> 
@@ -48,7 +40,7 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">.py Template Modules</a><ul>
 <li><a class="reference internal" href="#an-example">An example</a></li>
@@ -58,8 +50,8 @@
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="bnf.html"
-                        title="previous chapter">A BNF Grammar of Cheetah</a></p>
+  <p class="topless"><a href="cache.html"
+                        title="previous chapter">Caching placeholders and #cache</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="comments.html"
                         title="next chapter">Directives: Comments</a></p>
@@ -72,12 +64,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -90,26 +84,24 @@
             
   <div class="section" id="py-template-modules">
 <h1>.py Template Modules<a class="headerlink" href="#py-template-modules" title="Permalink to this headline">¶</a></h1>
-<p>(pyModules)</p>
 <p>This chapter examines the structure of a .py template module. The
 following few chapters will then show how each placeholder and
 directive affects the generated Python code.</p>
 <div class="section" id="an-example">
 <h2>An example<a class="headerlink" href="#an-example" title="Permalink to this headline">¶</a></h2>
-<p>(pyModules.example)</p>
 <p>Our first template follows a long noble tradition in computer
 tutorials. It produces a familiar, friendly greeting. Here’s the
 template:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>Hello, world!
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Hello, world!
 </pre></div>
 </div>
 <p>… the output:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>Hello, world!
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Hello, world!
 </pre></div>
 </div>
 <p>… and the .py template module cheetah-compile produced, with line
 numbers added:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span> <span class="mi">1</span> <span class="c1">#!/usr/bin/env python</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="mi">1</span> <span class="c1">#!/usr/bin/env python</span>
 
  <span class="mi">2</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2"> 3 Autogenerated by CHEETAH: The Python-Powered Template Engine</span>
@@ -157,7 +149,7 @@ numbers added:</p>
 <span class="s2">37     &quot;&quot;&quot;</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">38</span>     <span class="c1">##################################################</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">38</span>     <span class="c1">##################################################</span>
 <span class="mi">39</span>     <span class="c1">## GENERATED METHODS</span>
 
 
@@ -214,7 +206,7 @@ numbers added:</p>
 <span class="mi">83</span>             <span class="k">return</span> <span class="s2">&quot;&quot;</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">84</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">84</span>
 <span class="mi">85</span>     <span class="c1">##################################################</span>
 <span class="mi">86</span>     <span class="c1">## GENERATED ATTRIBUTES</span>
 
@@ -244,7 +236,6 @@ the result a valid Python program.)</p>
 </div>
 <div class="section" id="a-walk-through-the-example">
 <h2>A walk through the example<a class="headerlink" href="#a-walk-through-the-example" title="Permalink to this headline">¶</a></h2>
-<p>(pyModules.walk)</p>
 <p>Lines 20-24 are the Cheetah-specific imports. Line 33 introduces
 our generated class, {x}, a subclass of {Template}. It’s called x
 because the source file was x.tmpl.</p>
@@ -331,16 +322,16 @@ the template fill itself.</p>
           <a href="comments.html" title="Directives: Comments"
              >next</a> |</li>
         <li class="right" >
-          <a href="bnf.html" title="A BNF Grammar of Cheetah"
+          <a href="cache.html" title="Caching placeholders and #cache"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer’s Guide</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Mar 03, 2018.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+        &#169; Copyright 2017-2018, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Feb 06, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
     </div>
   </body>
 </html>

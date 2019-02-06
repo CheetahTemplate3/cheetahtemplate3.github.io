@@ -4,29 +4,21 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>@staticmethod and @classmethod &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '3.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Writing a “Recipe”" href="writing_a_recipe.html" />
+    <link rel="next" title="Cheetah Roadmap" href="../roadmap.html" />
     <link rel="prev" title="Precompiled Templates" href="precompiled.html" /> 
-  </head>
-  <body>
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -37,7 +29,7 @@
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="writing_a_recipe.html" title="Writing a “Recipe”"
+          <a href="../roadmap.html" title="Cheetah Roadmap"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="precompiled.html" title="Precompiled Templates"
@@ -52,8 +44,8 @@
   <p class="topless"><a href="precompiled.html"
                         title="previous chapter">Precompiled Templates</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="writing_a_recipe.html"
-                        title="next chapter">Writing a “Recipe”</a></p>
+  <p class="topless"><a href="../roadmap.html"
+                        title="next chapter">Cheetah Roadmap</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -63,12 +55,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -89,7 +83,7 @@ trivial to create <em>utility templates</em> which are common when using
 Cheetah for web development. These <em>utility templates</em> might contain
 a number of small functions which generate useful snippets of markup.</p>
 <p>For example:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#def copyright()
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#def copyright()
     #import time
     &amp;copy; CheetahCorp, Inc. $time.strftime(&#39;%Y&#39;, time.gmtime())
 #end def
@@ -100,7 +94,7 @@ a number of small functions which generate useful snippets of markup.</p>
 of filling templates with bunches of these small utility functions. In
 <strong>v2.2.0</strong> however, you can decorate these methods with <cite>#&#64;staticmethod</cite>
 and use “proper” Python syntax for calling them, <strong>fig 1</strong> revisited:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#@staticmethod
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#@staticmethod
 #def copyright()
     #import time
     &amp;copy; CheetahCorp, Inc. $time.strftime(&#39;%Y&#39;, time.gmtime())
@@ -111,7 +105,7 @@ and use “proper” Python syntax for calling them, <strong>fig 1</strong> revi
 <p>With the addition of the <a class="reference external" href="http://docs.python.org/library/functions.html#staticmethod">&#64;staticmethod</a> decorator, the <cite>copyright()</cite>
 function can now be used without instantiating an instance of the <cite>util</cite>
 template class. In effect:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#from util import util
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#from util import util
 
 &lt;strong&gt;This is my page&lt;/strong&gt;
 &lt;br/&gt;
@@ -145,7 +139,7 @@ banners, etc).</p>
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="writing_a_recipe.html" title="Writing a “Recipe”"
+          <a href="../roadmap.html" title="Cheetah Roadmap"
              >next</a> |</li>
         <li class="right" >
           <a href="precompiled.html" title="Precompiled Templates"
@@ -155,9 +149,9 @@ banners, etc).</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Mar 03, 2018.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+        &#169; Copyright 2017-2018, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Feb 06, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
     </div>
   </body>
 </html>

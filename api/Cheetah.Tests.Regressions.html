@@ -4,27 +4,19 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Cheetah.Tests.Regressions module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '3.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
-  </head>
-  <body>
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -48,12 +40,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -69,19 +63,19 @@
 <dl class="class">
 <dt id="Cheetah.Tests.Regressions.CustomGetAttrClass">
 <em class="property">class </em><code class="descclassname">Cheetah.Tests.Regressions.</code><code class="descname">CustomGetAttrClass</code><a class="headerlink" href="#Cheetah.Tests.Regressions.CustomGetAttrClass" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 
 <dl class="exception">
 <dt id="Cheetah.Tests.Regressions.GetAttrException">
 <em class="property">exception </em><code class="descclassname">Cheetah.Tests.Regressions.</code><code class="descname">GetAttrException</code><a class="headerlink" href="#Cheetah.Tests.Regressions.GetAttrException" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">exceptions.Exception</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.Tests.Regressions.GetAttrTest">
 <em class="property">class </em><code class="descclassname">Cheetah.Tests.Regressions.</code><code class="descname">GetAttrTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.GetAttrTest" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">unittest.case.TestCase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
 <p>Test for an issue occurring when __getatttr__() raises an exception
 causing NameMapper to raise a NotFound exception</p>
 <dl class="method">
@@ -99,7 +93,7 @@ causing NameMapper to raise a NotFound exception</p>
 <dl class="class">
 <dt id="Cheetah.Tests.Regressions.InlineImportTest">
 <em class="property">class </em><code class="descclassname">Cheetah.Tests.Regressions.</code><code class="descname">InlineImportTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.InlineImportTest" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">unittest.case.TestCase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
 <dl class="method">
 <dt id="Cheetah.Tests.Regressions.InlineImportTest.test_AutoImporting">
 <code class="descname">test_AutoImporting</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.InlineImportTest.test_AutoImporting" title="Permalink to this definition">¶</a></dt>
@@ -136,7 +130,7 @@ causing NameMapper to raise a NotFound exception</p>
 <dl class="class">
 <dt id="Cheetah.Tests.Regressions.Mantis_Issue_11_Regression_Test">
 <em class="property">class </em><code class="descclassname">Cheetah.Tests.Regressions.</code><code class="descname">Mantis_Issue_11_Regression_Test</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.Mantis_Issue_11_Regression_Test" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">unittest.case.TestCase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
 <p>Test case for bug outlined in Mantis issue #11:</p>
 <p>Output:
 Traceback (most recent call last):</p>
@@ -165,7 +159,7 @@ File “/usr/lib64/python2.6/cgi.py”, line 1035, in escape</p>
 <dl class="class">
 <dt id="Cheetah.Tests.Regressions.Mantis_Issue_21_Regression_Test">
 <em class="property">class </em><code class="descclassname">Cheetah.Tests.Regressions.</code><code class="descname">Mantis_Issue_21_Regression_Test</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.Mantis_Issue_21_Regression_Test" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">unittest.case.TestCase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
 <p>Test case for bug outlined in issue #21</p>
 <p>Effectively &#64;staticmethod and &#64;classmethod
 decorated methods in templates don’t
@@ -181,7 +175,7 @@ when using the NameMapper</p>
 <dl class="class">
 <dt id="Cheetah.Tests.Regressions.Mantis_Issue_22_Regression_Test">
 <em class="property">class </em><code class="descclassname">Cheetah.Tests.Regressions.</code><code class="descname">Mantis_Issue_22_Regression_Test</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.Mantis_Issue_22_Regression_Test" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">unittest.case.TestCase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
 <p>Test case for bug outlined in issue #22</p>
 <p>When using &#64;staticmethod and &#64;classmethod
 in conjunction with the #filter directive
@@ -220,9 +214,9 @@ on the <cite>self</cite> local, breaking the function</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Mar 03, 2018.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+        &#169; Copyright 2017-2018, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Feb 06, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
     </div>
   </body>
 </html>

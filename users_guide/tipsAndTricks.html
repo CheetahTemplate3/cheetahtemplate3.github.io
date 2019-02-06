@@ -4,29 +4,21 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Tips, Tricks and Troubleshooting &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '3.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Using Cheetah with Webware" href="webware.html" />
     <link rel="prev" title="Instructions to the Parser/Compiler" href="parserInstructions.html" /> 
-  </head>
-  <body>
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -48,7 +40,7 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Tips, Tricks and Troubleshooting</a><ul>
 <li><a class="reference internal" href="#placeholder-tips">Placeholder Tips</a></li>
@@ -58,6 +50,7 @@
 <li><a class="reference internal" href="#all-methods">All methods</a></li>
 <li><a class="reference internal" href="#optimizing-templates">Optimizing templates</a></li>
 <li><a class="reference internal" href="#psp-style-tags">PSP-style tags</a></li>
+<li><a class="reference internal" href="#calling-one-template-from-another">Calling one template from another</a></li>
 <li><a class="reference internal" href="#makefiles">Makefiles</a></li>
 <li><a class="reference internal" href="#using-cheetah-in-a-multi-threaded-application">Using Cheetah in a Multi-Threaded Application</a></li>
 <li><a class="reference internal" href="#using-cheetah-with-gettext">Using Cheetah with gettext</a></li>
@@ -80,12 +73,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -98,7 +93,6 @@
             
   <div class="section" id="tips-tricks-and-troubleshooting">
 <h1>Tips, Tricks and Troubleshooting<a class="headerlink" href="#tips-tricks-and-troubleshooting" title="Permalink to this headline">¶</a></h1>
-<p>(tips)</p>
 <p>This chapter contains short stuff that doesn’t fit anywhere else.</p>
 <p>See the Cheetah FAQ for more specialized issues and for
 troubleshooting tips. Check the wiki periodically for recent tips
@@ -106,7 +100,6 @@ contributed by users. If you get stuck and none of these resources
 help, ask on the mailing list.</p>
 <div class="section" id="placeholder-tips">
 <h2>Placeholder Tips<a class="headerlink" href="#placeholder-tips" title="Permalink to this headline">¶</a></h2>
-<p>(tips.placeholder)</p>
 <p>Here’s how to do certain important lookups that may not be obvious.
 For each, we show first the Cheetah expression and then the Python
 equivalent, because you can use these either in templates or in
@@ -114,7 +107,7 @@ pure Python subclasses. The Cheetah examples use NameMapper
 shortcuts (uniform dotted notation, autocalling) as much as
 possible.</p>
 <p>To verify whether a variable exists in the searchList:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$varExists(&#39;theVariable&#39;)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$varExists(&#39;theVariable&#39;)
 self.varExists(&#39;theVariable&#39;)
 </pre></div>
 </div>
@@ -124,7 +117,7 @@ instance, a CGI GET parameter that is normally supplied but in this
 case the user typed the URL by hand and forgot the parameter (or
 didn’t know about it). ({.hasVar} is a synonym for {.varExists}.)</p>
 <p>To look up a variable in the searchList from a Python method:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">getVar</span><span class="p">(</span><span class="s1">&#39;theVariable&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">getVar</span><span class="p">(</span><span class="s1">&#39;theVariable&#39;</span><span class="p">)</span>
 <span class="bp">self</span><span class="o">.</span><span class="n">getVar</span><span class="p">(</span><span class="s1">&#39;theVariable&#39;</span><span class="p">,</span> <span class="n">myDefault</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -137,7 +130,7 @@ the caller can just use a {$placeholder} to specify the argument,
 which is less verbose than you writing a getVar call.</p>
 <p>To do a “safe” placeholder lookup that returns a default value if
 the variable is missing:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$getVar(&#39;theVariable&#39;, None)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$getVar(&#39;theVariable&#39;, None)
 $getVar(&#39;theVariable&#39;, $myDefault)
 </pre></div>
 </div>
@@ -160,19 +153,16 @@ the searchList; instead, copy the needed variables into your own
 </div>
 <div class="section" id="diagnostic-output">
 <h2>Diagnostic Output<a class="headerlink" href="#diagnostic-output" title="Permalink to this headline">¶</a></h2>
-<p>(tips.diagnostic)</p>
 <p>If you need send yourself some debugging output, you can use
 {#silent} to output it to standard error:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#silent $sys.stderr.write(&quot;Incorrigible var is &#39;$incorrigible&#39;.\n&quot;)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#silent $sys.stderr.write(&quot;Incorrigible var is &#39;$incorrigible&#39;.\n&quot;)
 #silent $sys.stderr.write(&quot;Is &#39;unknown&#39; in the searchList? &quot; +
     $getVar(&quot;unknown&quot;, &quot;No.&quot;) + &quot;\n&quot; )
 </pre></div>
 </div>
-<p>(Tip contributed by Greg Czajkowski.)</p>
 </div>
 <div class="section" id="when-to-use-python-methods">
 <h2>When to use Python methods<a class="headerlink" href="#when-to-use-python-methods" title="Permalink to this headline">¶</a></h2>
-<p>(tips.pythonMethods)</p>
 <p>You always have a choice whether to code your methods as Cheetah
 {#def} methods or Python methods (the Python methods being located
 in a class your template inherits). So how do you choose?</p>
@@ -211,7 +201,6 @@ to your Cheetah method, you’ll have to do it another way.</p>
 </div>
 <div class="section" id="calling-superclass-methods-and-why-you-have-to">
 <h2>Calling superclass methods, and why you have to<a class="headerlink" href="#calling-superclass-methods-and-why-you-have-to" title="Permalink to this headline">¶</a></h2>
-<p>(tips.callingSuperclassMethods)</p>
 <p>If your template or pure Python class overrides a standard method
 or attribute of {Template} or one of its base classes, you should
 call the superclass method in your method to prevent various things
@@ -229,7 +218,7 @@ Cheetah classes are old-style (in other Python documentation, you
 will find the technique for new-style classes, but they are not
 listed here because they cannot be used with Cheetah if you use
 dynamically-compiled templates).</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Cheetah.Template</span> <span class="k">import</span> <span class="n">Template</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Cheetah.Template</span> <span class="k">import</span> <span class="n">Template</span>
 <span class="k">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="n">Template</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">awake</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trans</span><span class="p">):</span>
         <span class="n">Template</span><span class="o">.</span><span class="n">awake</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trans</span><span class="p">)</span>
@@ -244,7 +233,7 @@ Template.awake? ]</p>
 Python. It also works even {super()} does exist, so you don’t have
 to change your servlets immediately when upgrading. Note that the
 argument sequence is different than {super} uses.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">===========================================================================</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">===========================================================================</span>
 <span class="c1"># Place this in a module SOMEWHERE.py .  Contributed by Edmund Lian.</span>
 <span class="k">class</span> <span class="nc">CallbaseError</span><span class="p">(</span><span class="ne">AttributeError</span><span class="p">):</span>
     <span class="k">pass</span>
@@ -272,7 +261,6 @@ argument sequence is different than {super} uses.</p>
 </div>
 <div class="section" id="all-methods">
 <h2>All methods<a class="headerlink" href="#all-methods" title="Permalink to this headline">¶</a></h2>
-<p>(tips.allMethods)</p>
 <p>Here is a list of all the standard methods and attributes that can
 be accessed from a placeholder. Some of them exist for you to call,
 others are mainly used by Cheetah internally but you can call them
@@ -402,7 +390,6 @@ current transaction is finished.</p>
 </div>
 <div class="section" id="optimizing-templates">
 <h2>Optimizing templates<a class="headerlink" href="#optimizing-templates" title="Permalink to this headline">¶</a></h2>
-<p>(tips.optimizing)</p>
 <p>Here are some things you can do to make your templates fill faster
 and user fewer CPU cycles. Before you put a lot of energy into
 this, however, make sure you really need to. In many situations,
@@ -427,7 +414,7 @@ come from (maybe from {self}, maybe from the searchList, maybe from
 a CGI input variable, etc), it’s easier to just make that an
 argument to your method, and then the template can handle all the
 NameMapper lookups for you:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#silent $myMethod($arg1, $arg2, $arg3)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#silent $myMethod($arg1, $arg2, $arg3)</span>
 </pre></div>
 </div>
 <p>Otherwise you’d have to call {self.getVar(‘arg1’)} etc in your
@@ -435,7 +422,6 @@ method, which is more wordy, and tedious.</p>
 </div>
 <div class="section" id="psp-style-tags">
 <h2>PSP-style tags<a class="headerlink" href="#psp-style-tags" title="Permalink to this headline">¶</a></h2>
-<p>(tips.PSP)</p>
 <p>{&lt;%= … %&gt;} and {&lt;% … %&gt;} allow an escape to Python syntax
 inside the template. You do not need it to use Cheetah effectively,
 and we’re hard pressed to think of a case to recommend it.
@@ -455,7 +441,7 @@ be used to set a local variable with a complicated initializer.</p>
 in an inherited Python class. For instance, use {self.getVar()} to
 look up something in the searchList.</p>
 <p>{ Warning:} { No error checking is done!} If you write:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;%</span> <span class="k">break</span> <span class="o">%&gt;</span>      <span class="c1">## Wrong!</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;%</span> <span class="k">break</span> <span class="o">%&gt;</span>      <span class="c1">## Wrong!</span>
 </pre></div>
 </div>
 <p>you’ll get a {SyntaxError} when you fill the template, but that’s
@@ -464,9 +450,49 @@ what you deserve.</p>
 template is not a PSP document, and you can’t use PSP commands in
 it.</p>
 </div>
+<div class="section" id="calling-one-template-from-another">
+<h2>Calling one template from another<a class="headerlink" href="#calling-one-template-from-another" title="Permalink to this headline">¶</a></h2>
+<p>Cheetah templates are really python modules in disguise. I.e., when
+Cheetah loads a template it compiles it to python code and then to byte
+code. Every template is compiled as a single class. The thing is,
+neither the source code nor byte code are saved to files automatically.</p>
+<p>There are a few ways to allow a user to import one template (python
+module!) from another.</p>
+<p>1. A user can compile templates to <cite>*.py</cite> files using <cite>cheetah compile</cite>
+command line program. Then import works at the Python level.</p>
+<p>To semi-automatically compile all templates after editing them one can
+use the following <cite>Makefile</cite> (GNU flavour):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.SUFFIXES: # Clear the suffix list
+.SUFFIXES: .py .tmpl
+
+%.py: %.tmpl
+        cheetah compile --nobackup $&lt;
+        python -m compile $@
+
+templates = $(shell echo \*.tmpl)
+modules = $(patsubst %.tmpl,%.py,$(templates))
+
+.PHONY: all
+all: $(modules)
+</pre></div>
+</div>
+<p>(Don’t forget - makefiles require indent with tabs, not spaces.)</p>
+<p>2. Subvert Python import to make Cheetah import directly from <cite>*.tmpl</cite>
+files using <a class="reference external" href="../api/Cheetah.ImportHooks.html">import hooks</a>.</p>
+<p>Example code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Cheetah</span> <span class="k">import</span> <span class="n">ImportHooks</span>
+<span class="n">ImportHooks</span><span class="o">.</span><span class="n">install</span><span class="p">()</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;path/to/template_dir&#39;</span><span class="p">)</span>  <span class="c1"># or sys.path.append</span>
+</pre></div>
+</div>
+<p>ImportHooks try to import from <cite>*.pyc</cite>, <cite>*.py</cite> and <cite>*.tmpl</cite> - whatever
+is found first. ImportHooks automatically compile <cite>*.tmpl</cite> to <cite>*.py</cite> and
+<cite>*.pyc</cite>.</p>
+</div>
 <div class="section" id="makefiles">
 <h2>Makefiles<a class="headerlink" href="#makefiles" title="Permalink to this headline">¶</a></h2>
-<p>(tips.Makefile)</p>
 <p>If your project has several templates and you get sick of typing
 “cheetah compile FILENAME.tmpl” all the time-much less remembering
 which commands to type when-and your system has the {make} command
@@ -475,7 +501,7 @@ available, consider building a Makefile to make your life easier.</p>
 ErrorsTemplate and InquiryTemplate. Two external commands,
 {inquiry} and {receive}, depend on ErrorsTemplate.py. Aditionally,
 InquiryTemplate itself depends on ErrorsTemplate.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">all</span><span class="p">:</span>  <span class="n">inquiry</span>  <span class="n">receive</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">all</span><span class="p">:</span>  <span class="n">inquiry</span>  <span class="n">receive</span>
 
 <span class="o">.</span><span class="n">PHONY</span><span class="p">:</span>  <span class="nb">all</span>  <span class="n">receive</span>  <span class="n">inquiry</span>  <span class="n">printsource</span>
 
@@ -505,7 +531,6 @@ doesn’t produce an output file with the same name as the target.</p>
 </div>
 <div class="section" id="using-cheetah-in-a-multi-threaded-application">
 <h2>Using Cheetah in a Multi-Threaded Application<a class="headerlink" href="#using-cheetah-in-a-multi-threaded-application" title="Permalink to this headline">¶</a></h2>
-<p>(tips.threads)</p>
 <p>Template classes may be shared freely between threads. However,
 template instances should not be shared unless you either:</p>
 <ul>
@@ -544,7 +569,6 @@ operations listed above.</p>
 </div>
 <div class="section" id="using-cheetah-with-gettext">
 <h2>Using Cheetah with gettext<a class="headerlink" href="#using-cheetah-with-gettext" title="Permalink to this headline">¶</a></h2>
-<p>(tips.gettext)</p>
 <p>{ gettext} is a project for creating internationalized
 applications. For more details, visit
 <a class="reference external" href="http://docs.python.org/lib/module-gettext.html">http://docs.python.org/lib/module-gettext.html</a>. gettext can be used
@@ -590,9 +614,9 @@ using to mark strings for translation.</li>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Mar 03, 2018.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+        &#169; Copyright 2017-2018, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Feb 06, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
     </div>
   </body>
 </html>

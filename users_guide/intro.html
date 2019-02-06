@@ -4,29 +4,21 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Introduction &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '3.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Vocabulary" href="glossary.html" />
     <link rel="prev" title="Cheetah User’s Guide" href="index.html" /> 
-  </head>
-  <body>
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -48,7 +40,7 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Introduction</a><ul>
 <li><a class="reference internal" href="#who-should-read-this-guide">Who should read this Guide?</a></li>
@@ -88,12 +80,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -200,7 +194,7 @@ designers have created.</li>
 languages for the following reasons: Cheetah is not limited to
 HTML, HTML-style tags are hard to distinguish from real HTML tags,
 HTML-style tags are not visible in rendered HTML when something
-goes wrong, HTML-style tags often lead to invalid HTML (e.g., <code class="docutils literal"><span class="pre">&lt;img</span>
+goes wrong, HTML-style tags often lead to invalid HTML (e.g., <code class="docutils literal notranslate"><span class="pre">&lt;img</span>
 <span class="pre">src=&quot;&lt;template-directive&gt;&quot;&gt;</span></code>), Cheetah tags are less verbose and
 easier to understand than HTML-style tags, and HTML-style tags
 aren’t compatible with most WYSIWYG editors</p>
@@ -219,7 +213,7 @@ hard to confirm or modify that logic.</p>
 <h2>Give me an example!<a class="headerlink" href="#give-me-an-example" title="Permalink to this headline">¶</a></h2>
 <p>Here’s a very simple example that illustrates some of Cheetah’s
 basic syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>&lt;HTML&gt;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;HTML&gt;
 &lt;HEAD&gt;&lt;TITLE&gt;$title&lt;/TITLE&gt;&lt;/HEAD&gt;
 &lt;BODY&gt;
 
@@ -237,7 +231,7 @@ basic syntax:</p>
 </pre></div>
 </div>
 <p>Compare this with PSP:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">HTML</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">HTML</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">HEAD</span><span class="o">&gt;&lt;</span><span class="n">TITLE</span><span class="o">&gt;&lt;%=</span><span class="n">title</span><span class="o">%&gt;&lt;/</span><span class="n">TITLE</span><span class="o">&gt;&lt;/</span><span class="n">HEAD</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">BODY</span><span class="o">&gt;</span>
 
@@ -263,7 +257,7 @@ definition into an object-oriented Python module.</p>
 <h2>Give me an example of a Webware servlet!<a class="headerlink" href="#give-me-an-example-of-a-webware-servlet" title="Permalink to this headline">¶</a></h2>
 <p>This example uses an HTML form to ask the user’s name, then invokes
 itself again to display a <strong>personalized</strong> friendly greeting.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>&lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;My Template-Servlet&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;My Template-Servlet&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;
 #set $name = $request.field(&#39;name&#39;, None)
 #if $name
 Hello $name
@@ -280,9 +274,9 @@ Name: &lt;INPUT TYPE=&quot;text&quot; NAME=&quot;name&quot;&gt;&lt;BR&gt;
 <ol class="arabic simple">
 <li>copy the template definition to a file <strong>test.tmpl</strong> in your
 Webware servlet directory.</li>
-<li>Run <code class="docutils literal"><span class="pre">cheetah</span> <span class="pre">compile</span> <span class="pre">test.tmpl</span></code>. This produces <code class="docutils literal"><span class="pre">test.py</span></code> (a
+<li>Run <code class="docutils literal notranslate"><span class="pre">cheetah</span> <span class="pre">compile</span> <span class="pre">test.tmpl</span></code>. This produces <code class="docutils literal notranslate"><span class="pre">test.py</span></code> (a
 .py template module) in the same directory.</li>
-<li>In your web browser, go to <code class="docutils literal"><span class="pre">test.py</span></code>, using whatever site and
+<li>In your web browser, go to <code class="docutils literal notranslate"><span class="pre">test.py</span></code>, using whatever site and
 directory is appropriate.</li>
 </ol>
 <p>At the first request, field ‘name’ will be blank (false) so the
@@ -394,9 +388,9 @@ of their developers. Thank you.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Mar 03, 2018.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+        &#169; Copyright 2017-2018, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Feb 06, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
     </div>
   </body>
 </html>

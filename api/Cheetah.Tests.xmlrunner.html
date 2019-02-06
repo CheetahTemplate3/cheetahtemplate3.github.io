@@ -4,27 +4,19 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Cheetah.Tests.xmlrunner module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '3.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
-  </head>
-  <body>
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -48,12 +40,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -69,8 +63,8 @@
 <p>XML Test Runner for PyUnit</p>
 <dl class="class">
 <dt id="Cheetah.Tests.xmlrunner.XMLTestProgram">
-<em class="property">class </em><code class="descclassname">Cheetah.Tests.xmlrunner.</code><code class="descname">XMLTestProgram</code><span class="sig-paren">(</span><em>module='__main__'</em>, <em>defaultTest=None</em>, <em>argv=None</em>, <em>testRunner=None</em>, <em>testLoader=&lt;unittest.loader.TestLoader object&gt;</em>, <em>exit=True</em>, <em>verbosity=1</em>, <em>failfast=None</em>, <em>catchbreak=None</em>, <em>buffer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.xmlrunner.XMLTestProgram" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">unittest.main.TestProgram</span></code></p>
+<em class="property">class </em><code class="descclassname">Cheetah.Tests.xmlrunner.</code><code class="descname">XMLTestProgram</code><span class="sig-paren">(</span><em>module='__main__'</em>, <em>defaultTest=None</em>, <em>argv=None</em>, <em>testRunner=None</em>, <em>testLoader=&lt;unittest.loader.TestLoader object&gt;</em>, <em>exit=True</em>, <em>verbosity=1</em>, <em>failfast=None</em>, <em>catchbreak=None</em>, <em>buffer=None</em>, <em>warnings=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.xmlrunner.XMLTestProgram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.main.TestProgram</span></code></p>
 <dl class="method">
 <dt id="Cheetah.Tests.xmlrunner.XMLTestProgram.runTests">
 <code class="descname">runTests</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.xmlrunner.XMLTestProgram.runTests" title="Permalink to this definition">¶</a></dt>
@@ -81,7 +75,7 @@
 <dl class="class">
 <dt id="Cheetah.Tests.xmlrunner.XMLTestRunner">
 <em class="property">class </em><code class="descclassname">Cheetah.Tests.xmlrunner.</code><code class="descname">XMLTestRunner</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.xmlrunner.XMLTestRunner" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A test runner that stores results in XML format compatible with JUnit.</p>
 <p>XMLTestRunner(stream=None) -&gt; XML test runner</p>
 <p>The XML file is written to the supplied stream. If stream is None, the
@@ -106,11 +100,11 @@ where &lt;module&gt; and &lt;class&gt; are the module and class name of the test
 <dl class="class">
 <dt id="Cheetah.Tests.xmlrunner.XMLTestRunnerTest">
 <em class="property">class </em><code class="descclassname">Cheetah.Tests.xmlrunner.</code><code class="descname">XMLTestRunnerTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.xmlrunner.XMLTestRunnerTest" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">unittest.case.TestCase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
 <dl class="class">
 <dt id="Cheetah.Tests.xmlrunner.XMLTestRunnerTest.NullStream">
 <em class="property">class </em><code class="descname">NullStream</code><a class="headerlink" href="#Cheetah.Tests.xmlrunner.XMLTestRunnerTest.NullStream" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A file-like object that discards everything written to it.</p>
 <dl class="method">
 <dt id="Cheetah.Tests.xmlrunner.XMLTestRunnerTest.NullStream.write">
@@ -122,7 +116,8 @@ where &lt;module&gt; and &lt;class&gt; are the module and class name of the test
 <dl class="method">
 <dt id="Cheetah.Tests.xmlrunner.XMLTestRunnerTest.setUp">
 <code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.xmlrunner.XMLTestRunnerTest.setUp" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.xmlrunner.XMLTestRunnerTest.test_error">
@@ -203,7 +198,7 @@ that change stdout, but don’t change it back properly.</p>
 <dl class="attribute">
 <dt id="Cheetah.Tests.xmlrunner.main">
 <code class="descclassname">Cheetah.Tests.xmlrunner.</code><code class="descname">main</code><a class="headerlink" href="#Cheetah.Tests.xmlrunner.main" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#Cheetah.Tests.xmlrunner.XMLTestProgram" title="Cheetah.Tests.xmlrunner.XMLTestProgram"><code class="xref py py-class docutils literal"><span class="pre">XMLTestProgram</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#Cheetah.Tests.xmlrunner.XMLTestProgram" title="Cheetah.Tests.xmlrunner.XMLTestProgram"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Tests.xmlrunner.XMLTestProgram</span></code></a></p>
 </dd></dl>
 
 </div>
@@ -227,9 +222,9 @@ that change stdout, but don’t change it back properly.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Mar 03, 2018.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+        &#169; Copyright 2017-2018, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Feb 06, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
     </div>
   </body>
 </html>

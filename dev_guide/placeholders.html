@@ -4,29 +4,21 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Placeholders &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '3.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Patching Cheetah" href="patching.html" />
     <link rel="prev" title="Directives: Error Handling" href="errorHandling.html" /> 
-  </head>
-  <body>
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -48,7 +40,7 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Placeholders</a><ul>
 <li><a class="reference internal" href="#simple-placeholders">Simple placeholders</a></li>
@@ -72,12 +64,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -90,12 +84,10 @@
             
   <div class="section" id="placeholders">
 <h1>Placeholders<a class="headerlink" href="#placeholders" title="Permalink to this headline">¶</a></h1>
-<p>(placeholders)</p>
 <div class="section" id="simple-placeholders">
 <h2>Simple placeholders<a class="headerlink" href="#simple-placeholders" title="Permalink to this headline">¶</a></h2>
-<p>(placeholders.simple)</p>
 <p>Let’s add a few $placeholders to our template:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">Cheetah.Template</span> <span class="k">import</span> <span class="n">Template</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">Cheetah.Template</span> <span class="k">import</span> <span class="n">Template</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">values</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;what&#39;</span><span class="p">:</span> <span class="s1">&#39;surreal&#39;</span><span class="p">,</span> <span class="s1">&#39;punctuation&#39;</span><span class="p">:</span> <span class="s1">&#39;?&#39;</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
 <span class="gp">... </span><span class="s2">Hello, $what world$punctuation</span>
@@ -154,7 +146,7 @@
 <span class="go"> 36     ## GENERATED METHODS</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">37</span>     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">KWs</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">37</span>     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">KWs</span><span class="p">):</span>
 <span class="mi">38</span>         <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">39</span>
 <span class="s2">40         &quot;&quot;&quot;</span>
@@ -205,7 +197,7 @@
 <span class="mi">77</span>             <span class="k">return</span> <span class="s2">&quot;&quot;</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">78</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">78</span>
 <span class="mi">79</span>     <span class="c1">##################################################</span>
 <span class="mi">80</span>     <span class="c1">## GENERATED ATTRIBUTES</span>
 
@@ -243,7 +235,7 @@ wrapped inside a {filter} call to apply the current output filter.
 <p>Placeholders referring to a Python builtin like {xrange} (line 68)
 generate a bare variable name. Placeholders to be looked up in the
 searchList have a nested function call; e.g.,</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;what&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from &#39;$what&#39; at line 1, col 8.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;what&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from &#39;$what&#39; at line 1, col 8.</span>
 </pre></div>
 </div>
 <p>{VFS}, remember, is a function imported from {Cheetah.NameMapper}
@@ -255,12 +247,11 @@ outputs for true {and} expressions.)</p>
 </div>
 <div class="section" id="complex-placeholders">
 <h2>Complex placeholders<a class="headerlink" href="#complex-placeholders" title="Permalink to this headline">¶</a></h2>
-<p>(placeholders.complex)</p>
 <p>Placeholders can get far more complicated than that. This example
 shows what kind of code the various NameMapper features produce.
 The formulas are taken from Cheetah’s test suite, in the
 {Cheetah.Tests.SyntaxAndOutput.Placeholders} class.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>1 placeholder: $aStr
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1 placeholder: $aStr
 2 placeholders: $aStr $anInt
 2 placeholders, back-to-back: $aStr$anInt
 1 placeholder enclosed in {}: ${aStr}
@@ -299,7 +290,7 @@ $_(&#39;a call to gettext&#39;)
 </div>
 <p>We’ll need a big program to set up the placeholder values. Here it
 is:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">from</span> <span class="nn">ComplexExample</span> <span class="k">import</span> <span class="n">ComplexExample</span>
 
 <span class="k">try</span><span class="p">:</span>   <span class="c1"># Python &gt;= 2.2.1</span>
@@ -350,7 +341,7 @@ is:</p>
 </pre></div>
 </div>
 <p>Here’s the output:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>1 placeholder: blarg
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1 placeholder: blarg
 2 placeholders: blarg 1
 2 placeholders, back-to-back: blarg1
 1 placeholder enclosed in {}: blarg
@@ -394,7 +385,7 @@ included only the lines containing the {write} calls. The rest of
 the module is the same as in the first example, chapter
 pyModules.example. I’ve split some of the lines to make them fit on
 the page.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span> <span class="mi">1</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;1 placeholder: &#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="mi">1</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;1 placeholder: &#39;</span><span class="p">)</span>
  <span class="mi">2</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aStr&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from &#39;$aStr&#39; at line 1, col 16.</span>
  <span class="mi">3</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">2 placeholders: &#39;</span><span class="p">)</span>
  <span class="mi">4</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aStr&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1"># generated from &#39;$aStr&#39; at line 2, col 17.</span>
@@ -451,7 +442,7 @@ the page.</p>
         <span class="c1"># col 22.</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">40</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;.</span><span class="se">\n</span><span class="s1">nested autocalling: &#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">40</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;.</span><span class="se">\n</span><span class="s1">nested autocalling: &#39;</span><span class="p">)</span>
 <span class="mi">41</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aFunc&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">)(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aFunc&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">))))</span> <span class="c1"># generated from</span>
         <span class="c1"># &#39;$aFunc($aFunc)&#39; at line 17, col 21.</span>
 <span class="mi">42</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;.</span><span class="se">\n</span><span class="s1">list subscription: &#39;</span><span class="p">)</span>
@@ -493,7 +484,7 @@ the page.</p>
 <span class="mi">66</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">nested dict - NameMapper style + method + slice: &#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">67</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFN</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aDict.nestedDict.two&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="s2">&quot;upper&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)[:</span><span class="mi">4</span><span class="p">]))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">67</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFN</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aDict.nestedDict.two&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="s2">&quot;upper&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)[:</span><span class="mi">4</span><span class="p">]))</span>
         <span class="c1"># generated from &#39;$aDict.nestedDict.two.upper[:4]&#39; at line 30, col 50.</span>
 <span class="mi">68</span>  <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">nested dict - Python style, variable key: &#39;</span><span class="p">)</span>
 <span class="mi">69</span>  <span class="n">write</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">VFN</span><span class="p">(</span><span class="n">VFS</span><span class="p">(</span><span class="n">SL</span><span class="p">,</span><span class="s2">&quot;aDict&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
@@ -574,9 +565,9 @@ way of this.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Mar 03, 2018.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+        &#169; Copyright 2017-2018, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Feb 06, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
     </div>
   </body>
 </html>

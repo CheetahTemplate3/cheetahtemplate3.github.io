@@ -4,29 +4,21 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Batteries included: templates and other libraries &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '3.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Visual Editors" href="editors.html" />
     <link rel="prev" title="Non-HTML Output" href="nonHtml.html" /> 
-  </head>
-  <body>
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -48,7 +40,7 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Batteries included: templates and other libraries</a><ul>
 <li><a class="reference internal" href="#errorcatchers">ErrorCatchers</a></li>
@@ -80,12 +72,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -98,7 +92,6 @@
             
   <div class="section" id="batteries-included-templates-and-other-libraries">
 <h1>Batteries included: templates and other libraries<a class="headerlink" href="#batteries-included-templates-and-other-libraries" title="Permalink to this headline">¶</a></h1>
-<p>(libraries)</p>
 <p>Cheetah comes “batteries included” with libraries of templates,
 functions, classes and other objects you can use in your own
 programs. The different types are listed alphabetically below,
@@ -114,7 +107,6 @@ it will encourage others to contribute their objects, which might
 include something you want.</p>
 <div class="section" id="errorcatchers">
 <h2>ErrorCatchers<a class="headerlink" href="#errorcatchers" title="Permalink to this headline">¶</a></h2>
-<p>(libraries.ErrorCatchers)</p>
 <p>Module {Cheetah.ErrorCatchers} contains error-handling classes
 suitable for the {#errorCatcher} directive. These are debugging
 tools that are not intended for use in production systems. See
@@ -123,7 +115,6 @@ catchers bundled with Cheetah.</p>
 </div>
 <div class="section" id="fileutils">
 <h2>FileUtils<a class="headerlink" href="#fileutils" title="Permalink to this headline">¶</a></h2>
-<p>(libraries.FileUtils)</p>
 <p>Module {Cheetah.FileUtils} contains generic functions and classes
 for doing bulk search-and-replace on several files, and for finding
 all the files in a directory hierarchy whose names match a glob
@@ -131,14 +122,12 @@ pattern.</p>
 </div>
 <div class="section" id="filters">
 <h2>Filters<a class="headerlink" href="#filters" title="Permalink to this headline">¶</a></h2>
-<p>(libraries.Filters)</p>
 <p>Module {Filters} contains filters suitable for the {#Filter}
 directive. See section output.filter for a description of the
 filters bundled with Cheetah.</p>
 </div>
 <div class="section" id="settingsmanager">
 <h2>SettingsManager<a class="headerlink" href="#settingsmanager" title="Permalink to this headline">¶</a></h2>
-<p>(libraries.SettingsManager)</p>
 <p>The {SettingsManager} class in the {Cheetah.SettingsManager} module
 is a baseclass that provides facilities for managing application
 settings. It facilitates the use of user-supplied configuration
@@ -170,7 +159,6 @@ applications. See the source code and docstrings in the file
 </div>
 <div class="section" id="templates">
 <h2>Templates<a class="headerlink" href="#templates" title="Permalink to this headline">¶</a></h2>
-<p>(libraries.templates)</p>
 <p>Package {Cheetah.Templates} contains stock templates that you can
 either use as is, or extend by using the {#def} directive to
 redefine specific { blocks}. Currently, the only template in here
@@ -179,7 +167,6 @@ libraries.templates.skeletonPage. (Contributed by Tavis Rudd.)</p>
 </div>
 <div class="section" id="tools">
 <h2>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
-<p>(libraries.Tools)</p>
 <p>Package {Cheetah.Tools} contains functions and classes contributed
 by third parties. Some are Cheetah-specific but others are generic
 and can be used standalone. None of them are imported by any other
@@ -230,7 +217,6 @@ currentURL). Contributed by Ian Bicking.</p>
 </div>
 <div class="section" id="utils">
 <h2>Utils<a class="headerlink" href="#utils" title="Permalink to this headline">¶</a></h2>
-<p>(libraries.Utils)</p>
 <p>Package {Cheetah.Utils} contains non-Cheetah-specific functions and
 classes that are imported by other Cheetah components. Many of
 these utils can be used standalone in other applications too.</p>
@@ -259,12 +245,11 @@ Contributed by Mike Orr.</p>
 </div></blockquote>
 <div class="section" id="cheetah-templates-skeletonpage">
 <h3>Cheetah.Templates.SkeletonPage<a class="headerlink" href="#cheetah-templates-skeletonpage" title="Permalink to this headline">¶</a></h3>
-<p>(libraries.templates.skeletonPage)</p>
 <p>A stock template class that may be useful for web developers is
 defined in the {Cheetah.Templates.SkeletonPage} module. The
 {SkeletonPage} template class is generated from the following
 Cheetah source code:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>##doc-module: A Skeleton HTML page template, that provides basic structure and utility methods.
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>##doc-module: A Skeleton HTML page template, that provides basic structure and utility methods.
 ################################################################################
 #extends Cheetah.Templates._SkeletonPage
 #implements respond
@@ -313,7 +298,7 @@ remember, using {#extends} makes your template implement the
 {.writeBody()} method instead of {.respond()} - which happens to be
 the same method SkeletonPage expects the page content to be (note
 the writeBody block in SkeletonPage).)</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#def bodyContents</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#def bodyContents</span>
 <span class="n">Here</span><span class="s1">&#39;s my new body. I&#39;</span><span class="n">ve</span> <span class="n">got</span> <span class="n">some</span> <span class="n">flesh</span> <span class="n">on</span> <span class="n">my</span> <span class="n">bones</span> <span class="n">now</span><span class="o">.</span>
 <span class="c1">#end def bodyContents</span>
 </pre></div>
@@ -389,9 +374,9 @@ definitions from changes in your directory structure.</li>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Mar 03, 2018.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+        &#169; Copyright 2017-2018, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Feb 06, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
     </div>
   </body>
 </html>

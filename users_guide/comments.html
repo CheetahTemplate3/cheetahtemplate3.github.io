@@ -4,29 +4,21 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Comments &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '3.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Generating, Caching and Filtering Output" href="output.html" />
     <link rel="prev" title="Language Overview" href="language.html" /> 
-  </head>
-  <body>
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -48,7 +40,7 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Comments</a><ul>
 <li><a class="reference internal" href="#docstring-comments">Docstring Comments</a></li>
@@ -72,12 +64,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -90,7 +84,6 @@
             
   <div class="section" id="comments">
 <h1>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h1>
-<p>(comments)</p>
 <p>Comments are used to mark notes, explanations, and decorative text
 that should not appear in the output. Cheetah maintains the
 comments in the Python module it generates from the Cheetah source
@@ -100,14 +93,14 @@ multi-line.</p>
 characters ({##}) and the end of the line is treated as a
 single-line comment and will not show up in the output, unless the
 two hash characters are escaped with a backslash.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>##=============================  this is a decorative comment-bar
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>##=============================  this is a decorative comment-bar
 $var    ## this is an end-of-line comment
 ##=============================
 </pre></div>
 </div>
 <p>Any text between {#*} and {*#} will be treated as a multi-line
 comment.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#*</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#*</span>
    <span class="n">Here</span> <span class="ow">is</span> <span class="n">some</span> <span class="n">multiline</span>
    <span class="n">comment</span> <span class="n">text</span>
 <span class="o">*</span><span class="c1">#</span>
@@ -119,7 +112,7 @@ To avoid this, make sure the blank lines are enclosed in a comment.
 Since you normally have a comment before the next method definition
 (right?), you can just extend that comment to include the blank
 lines after the previous method definition, like so:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#def method1
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#def method1
 ... lines ...
 #end def
 #*
@@ -135,14 +128,13 @@ lines after the previous method definition, like so:</p>
 </div>
 <div class="section" id="docstring-comments">
 <h2>Docstring Comments<a class="headerlink" href="#docstring-comments" title="Permalink to this headline">¶</a></h2>
-<p>(comments.docstring)</p>
 <p>Python modules, classes, and methods can be documented with inline
 ‘documentation strings’ (aka ‘docstrings’). Docstrings, unlike
 comments, are accesible at run-time. Thus, they provide a useful
 hook for interactive help utilities.</p>
 <p>Cheetah comments can be transformed into doctrings by adding one of
 the following prefixes:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">##doc: This text will be added to the method docstring</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">##doc: This text will be added to the method docstring</span>
 <span class="c1">#*doc: If your template file is MyTemplate.tmpl, running &quot;cheetah compile&quot;</span>
        <span class="n">on</span> <span class="n">it</span> <span class="n">will</span> <span class="n">produce</span> <span class="n">MyTemplate</span><span class="o">.</span><span class="n">py</span><span class="p">,</span> <span class="k">with</span> <span class="n">a</span> <span class="k">class</span> <span class="nc">MyTemplate</span> <span class="ow">in</span> <span class="n">it</span><span class="p">,</span>
        <span class="n">containing</span> <span class="n">a</span> <span class="n">method</span> <span class="o">.</span><span class="n">respond</span><span class="p">()</span><span class="o">.</span>  <span class="n">This</span> <span class="n">text</span> <span class="n">will</span> <span class="n">be</span> <span class="ow">in</span> <span class="n">the</span> <span class="o">.</span><span class="n">respond</span><span class="p">()</span>
@@ -163,7 +155,7 @@ the following prefixes:</p>
 <h2>Header Comments<a class="headerlink" href="#header-comments" title="Permalink to this headline">¶</a></h2>
 <p>(comments.headers) Cheetah comments can also be transformed into
 module header comments using the following syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">##header: This text will be added to the module header comment</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">##header: This text will be added to the module header comment</span>
 <span class="c1">#*header: This text will be added to the module header comment *#</span>
 </pre></div>
 </div>
@@ -200,9 +192,9 @@ a set of #-prefixed comment lines.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Mar 03, 2018.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+        &#169; Copyright 2017-2018, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Feb 06, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
     </div>
   </body>
 </html>

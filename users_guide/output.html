@@ -4,29 +4,21 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Generating, Caching and Filtering Output &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '3.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Import, Inheritance, Declaration and Assignment" href="inheritanceEtc.html" />
     <link rel="prev" title="Comments" href="comments.html" /> 
-  </head>
-  <body>
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -48,7 +40,7 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Generating, Caching and Filtering Output</a><ul>
 <li><a class="reference internal" href="#output-from-complex-expressions-echo">Output from complex expressions: #echo</a></li>
@@ -83,12 +75,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -101,34 +95,31 @@
             
   <div class="section" id="generating-caching-and-filtering-output">
 <h1>Generating, Caching and Filtering Output<a class="headerlink" href="#generating-caching-and-filtering-output" title="Permalink to this headline">¶</a></h1>
-<p>(output)</p>
 <div class="section" id="output-from-complex-expressions-echo">
 <h2>Output from complex expressions: #echo<a class="headerlink" href="#output-from-complex-expressions-echo" title="Permalink to this headline">¶</a></h2>
-<p>(output.echo)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#echo EXPR</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#echo EXPR</span>
 </pre></div>
 </div>
 <p>The {#echo} directive is used to echo the output from expressions
 that can’t be written as simple $placeholders.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Here</span> <span class="ow">is</span> <span class="n">my</span> <span class="c1">#echo &#39;, &#39;.join([&#39;silly&#39;]*5) # example</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Here</span> <span class="ow">is</span> <span class="n">my</span> <span class="c1">#echo &#39;, &#39;.join([&#39;silly&#39;]*5) # example</span>
 </pre></div>
 </div>
 <p>This produces:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Here</span> <span class="ow">is</span> <span class="n">my</span> <span class="n">silly</span><span class="p">,</span> <span class="n">silly</span><span class="p">,</span> <span class="n">silly</span><span class="p">,</span> <span class="n">silly</span><span class="p">,</span> <span class="n">silly</span> <span class="n">example</span><span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Here</span> <span class="ow">is</span> <span class="n">my</span> <span class="n">silly</span><span class="p">,</span> <span class="n">silly</span><span class="p">,</span> <span class="n">silly</span><span class="p">,</span> <span class="n">silly</span><span class="p">,</span> <span class="n">silly</span> <span class="n">example</span><span class="o">.</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="executing-expressions-without-output-silent">
 <h2>Executing expressions without output: #silent<a class="headerlink" href="#executing-expressions-without-output-silent" title="Permalink to this headline">¶</a></h2>
-<p>(output.silent)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#silent EXPR</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#silent EXPR</span>
 </pre></div>
 </div>
 <p>{#silent} is the opposite of {#echo}. It executes an expression but
 discards the output.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#silent $myList.reverse()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#silent $myList.reverse()</span>
 <span class="c1">#silent $myList.sort()</span>
 <span class="n">Here</span> <span class="ow">is</span> <span class="c1">#silent $covertOperation() # nothing</span>
 </pre></div>
@@ -141,9 +132,8 @@ template.</p>
 </div>
 <div class="section" id="one-line-if">
 <h2>One-line #if<a class="headerlink" href="#one-line-if" title="Permalink to this headline">¶</a></h2>
-<p>(output.oneLineIf)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#if EXPR1 then EXPR2 else EXPR3#</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#if EXPR1 then EXPR2 else EXPR3#</span>
 </pre></div>
 </div>
 <p>The {#if} flow-control directive (section flowControl.if) has a
@@ -161,10 +151,8 @@ same line.</p>
 </div>
 <div class="section" id="caching-output">
 <h2>Caching Output<a class="headerlink" href="#caching-output" title="Permalink to this headline">¶</a></h2>
-<p>(output.caching)</p>
 <div class="section" id="caching-individual-placeholders">
 <h3>Caching individual placeholders<a class="headerlink" href="#caching-individual-placeholders" title="Permalink to this headline">¶</a></h3>
-<p>(output.caching.placeholders)</p>
 <p>By default, the values of each $placeholder is retrieved and
 interpolated for every request. However, it’s possible to cache the
 values of individual placeholders if they don’t change very often,
@@ -179,7 +167,7 @@ certain time period using the form {$*&lt;interval&gt;*variable}, where
 {&lt;interval&gt;} is the interval. The time interval can be specified in
 seconds (5s), minutes (15m), hours (3h), days (2d) or weeks (1.5w).
 The default is minutes.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>&lt;HTML&gt;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;HTML&gt;
 &lt;HEAD&gt;&lt;TITLE&gt;$title&lt;/TITLE&gt;&lt;/HEAD&gt;
 &lt;BODY&gt;
 
@@ -196,8 +184,8 @@ five minutes: the variable is looked up again when the time limit
 is reached, whether the template is being filled that frequently or
 not. Keep this in mind when setting refresh times for CPU-intensive
 or I/O intensive operations.</p>
-<p>If you’re using the long placeholder syntax, <code class="docutils literal"><span class="pre">${}</span></code>, the braces go
-only around the placeholder name: <code class="docutils literal"><span class="pre">$*.5h*{var.func('arg')}</span></code>.</p>
+<p>If you’re using the long placeholder syntax, <code class="docutils literal notranslate"><span class="pre">${}</span></code>, the braces go
+only around the placeholder name: <code class="docutils literal notranslate"><span class="pre">$*.5h*{var.func('arg')}</span></code>.</p>
 <p>Sometimes it’s preferable to explicitly invalidate a cached item
 whenever you say so rather than at certain time intervals. You
 can’t do this with individual placeholders, but you can do it with
@@ -205,9 +193,8 @@ cached regions, which will be described next.</p>
 </div>
 <div class="section" id="caching-entire-regions">
 <h3>Caching entire regions<a class="headerlink" href="#caching-entire-regions" title="Permalink to this headline">¶</a></h3>
-<p>(output.caching.regions)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#cache [id=EXPR] [timer=EXPR] [test=EXPR]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#cache [id=EXPR] [timer=EXPR] [test=EXPR]</span>
 <span class="c1">#end cache</span>
 </pre></div>
 </div>
@@ -241,7 +228,7 @@ infrequently but has just changed now.</p>
 instance, you can specify both {id=} and {interval=}, or {id=} and
 {test=}. (You can also combine interval and test although it’s not
 very useful.) However, repeating an argument is undefined.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#cache
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#cache
 This is a static cache.  It will not be refreshed.
 $a $b $c
 #end cache
@@ -272,9 +259,8 @@ varyByBrowser output caching keywords.</p>
 </div>
 <div class="section" id="raw">
 <h2>#raw<a class="headerlink" href="#raw" title="Permalink to this headline">¶</a></h2>
-<p>(output.raw)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#raw</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#raw</span>
 <span class="c1">#end raw</span>
 </pre></div>
 </div>
@@ -289,9 +275,8 @@ Cheetah doesn’t know what a font is.</p>
 </div>
 <div class="section" id="include">
 <h2>#include<a class="headerlink" href="#include" title="Permalink to this headline">¶</a></h2>
-<p>(output.include)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#include [raw] FILENAME_EXPR</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include [raw] FILENAME_EXPR</span>
 <span class="c1">#include [raw] source=STRING_EXPR</span>
 </pre></div>
 </div>
@@ -301,13 +286,13 @@ from a {$placeholder} variable. When working with external files,
 Cheetah will monitor for changes to the included file and update as
 necessary.</p>
 <p>This example demonstrates its use with external files:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#include &quot;includeFileName.txt&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &quot;includeFileName.txt&quot;</span>
 </pre></div>
 </div>
 <p>The content of “includeFileName.txt” will be parsed for Cheetah
 syntax.</p>
 <p>And this example demonstrates use with {$placeholder} variables:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#include source=$myParseText</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include source=$myParseText</span>
 </pre></div>
 </div>
 <p>The value of {$myParseText} will be parsed for Cheetah syntax. This
@@ -316,7 +301,7 @@ is not the same as simply placing the $placeholder tag
 the value of $myParseText would not be parsed.</p>
 <p>By default, included text will be parsed for Cheetah tags. The
 argument “{raw}” can be used to suppress the parsing.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#include raw &quot;includeFileName.txt&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include raw &quot;includeFileName.txt&quot;</span>
 <span class="c1">#include raw source=$myParseText</span>
 </pre></div>
 </div>
@@ -331,27 +316,25 @@ unbalanced constructs in include files.)</p>
 </div>
 <div class="section" id="slurp">
 <h2>#slurp<a class="headerlink" href="#slurp" title="Permalink to this headline">¶</a></h2>
-<p>(output.slurp)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#slurp</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#slurp</span>
 </pre></div>
 </div>
 <p>The {#slurp} directive eats up the trailing newline on the line it
 appears in, joining the following line onto the current line.</p>
 <p>It is particularly useful in {#for} loops:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#for $i in range(5)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#for $i in range(5)
 $i #slurp
 #end for
 </pre></div>
 </div>
 <p>outputs:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="indent">
 <h2>#indent<a class="headerlink" href="#indent" title="Permalink to this headline">¶</a></h2>
-<p>(output.indent)</p>
 <p>This directive is not implemented yet. When/if it’s completed, it
 will allow you to</p>
 <ol class="arabic simple">
@@ -372,9 +355,8 @@ the TODO file in the Cheetah source distribution.</p>
 </div>
 <div class="section" id="ouput-filtering-and-filter">
 <h2>Ouput Filtering and #filter<a class="headerlink" href="#ouput-filtering-and-filter" title="Permalink to this headline">¶</a></h2>
-<p>(output.filter)</p>
 <p>Syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#filter FILTER_CLASS_NAME</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#filter FILTER_CLASS_NAME</span>
 <span class="c1">#filter $PLACEHOLDER_TO_A_FILTER_INSTANCE</span>
 <span class="c1">#filter None</span>
 </pre></div>
@@ -390,7 +372,7 @@ filter argument by a comma. By convention, filter arguments don’t
 take a {$} prefix, to avoid clutter in the placeholder tag which
 already has plenty of dollar signs. For instance, the MaxLen filter
 takes an argument ‘maxlen’:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>${placeholderName, maxlen=20}
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>${placeholderName, maxlen=20}
 ${functionCall($functionArg), maxlen=$myMaxLen}
 </pre></div>
 </div>
@@ -426,7 +408,7 @@ filter.</p>
 characters to escape. For instance, say you want to ensure a value
 displays all on one line. Escape all spaces in the value with
 ‘&amp;nbsp’, the non-breaking space:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>${$country, also=&#39; &#39;}}
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>${$country, also=&#39; &#39;}}
 </pre></div>
 </div>
 </div></blockquote>
@@ -447,12 +429,12 @@ are in another module, pass the module object as the { filtersLib}
 argument to the Template constructor.</p>
 <p>Writing a custom filter is easy: just override the {.filter}
 method.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>     <span class="c1"># Returns a string.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>     <span class="c1"># Returns a string.</span>
 </pre></div>
 </div>
 <p>Return the { string} that should be output for ‘val’. ‘val’ may be
 any type. Most filters return `’ for {None}. Cheetah passes one
-keyword argument: <code class="docutils literal"><span class="pre">kw['rawExpr']</span></code> is the placeholder name as it
+keyword argument: <code class="docutils literal notranslate"><span class="pre">kw['rawExpr']</span></code> is the placeholder name as it
 appears in the template definition, including all subscripts and
 arguments. If you use the long placeholder syntax, any options you
 pass appear as keyword arguments. Again, the return value must be a
@@ -493,9 +475,9 @@ for the latest ideas.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Mar 03, 2018.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+        &#169; Copyright 2017-2018, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Feb 06, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
     </div>
   </body>
 </html>
