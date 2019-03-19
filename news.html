@@ -43,10 +43,11 @@
   <ul>
 <li><a class="reference internal" href="#">News</a><ul>
 <li><a class="reference internal" href="#development-master">Development (master)</a></li>
-<li><a class="reference internal" href="#id1">3.2.0 (2019-02-06)</a></li>
-<li><a class="reference internal" href="#id2">3.1.0 (2018-03-03)</a></li>
-<li><a class="reference internal" href="#id3">3.0.1 (2018-02-27)</a></li>
-<li><a class="reference internal" href="#id4">3.0.0 (2017-05-07)</a></li>
+<li><a class="reference internal" href="#id1">3.2.1 (2019-03-19)</a></li>
+<li><a class="reference internal" href="#id2">3.2.0 (2019-02-06)</a></li>
+<li><a class="reference internal" href="#id3">3.1.0 (2018-03-03)</a></li>
+<li><a class="reference internal" href="#id4">3.0.1 (2018-02-27)</a></li>
+<li><a class="reference internal" href="#id5">3.0.0 (2017-05-07)</a></li>
 </ul>
 </li>
 </ul>
@@ -90,7 +91,32 @@
 <h2>Development (master)<a class="headerlink" href="#development-master" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="id1">
-<h2>3.2.0 (2019-02-06)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>3.2.1 (2019-03-19)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Minor features:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Changed LoadTemplate.loadTemplate{Module,Class}:
+the loaded module’s __name__ set to just the file name.</li>
+<li>Use imp for Python 2, importlib for Python 3.</li>
+</ul>
+</div></blockquote>
+<p>Bug fixes:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Fix a bug in LoadTemplate.loadTemplate{Module,Class}:
+raise ImportError if the template was not found.</li>
+</ul>
+</div></blockquote>
+<p>CI:</p>
+<blockquote>
+<div><ul class="simple">
+<li>At Travis deploy wheels for macOS.</li>
+<li>At AppVeyor deploy wheels directly to PyPI.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id2">
+<h2>3.2.0 (2019-02-06)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>Features:</p>
 <blockquote>
 <div><ul class="simple">
@@ -137,12 +163,12 @@ compiled source. Under Python 3 the method decodes bytes to str.</li>
 <blockquote>
 <div><ul class="simple">
 <li>Run tests with Python 3.7.</li>
-<li>At travis deploy sdists and wheels for tags.</li>
+<li>At Travis deploy sdists and wheels for tags.</li>
 </ul>
 </div></blockquote>
 </div>
-<div class="section" id="id2">
-<h2>3.1.0 (2018-03-03)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2>3.1.0 (2018-03-03)<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>Features:</p>
 <blockquote>
 <div><ul class="simple">
@@ -170,8 +196,8 @@ at Travis and AppVeyor.</li>
 </ul>
 </div></blockquote>
 </div>
-<div class="section" id="id3">
-<h2>3.0.1 (2018-02-27)<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>3.0.1 (2018-02-27)<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>Bug fixes:</p>
 <blockquote>
 <div><ul class="simple">
@@ -179,8 +205,8 @@ at Travis and AppVeyor.</li>
 </ul>
 </div></blockquote>
 </div>
-<div class="section" id="id4">
-<h2>3.0.0 (2017-05-07)<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h2>3.0.0 (2017-05-07)<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <p>Major features:</p>
 <blockquote>
 <div><ul class="simple">
@@ -243,8 +269,8 @@ patches by Adam Karpierz, tests by Oleg Broytman.</li>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2018, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Feb 06, 2019.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+      Last updated on Mar 19, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
     </div>
   </body>
 </html>
