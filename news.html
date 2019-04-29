@@ -42,12 +42,12 @@
   <h3><a href="index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">News</a><ul>
-<li><a class="reference internal" href="#development-master">Development (master)</a></li>
-<li><a class="reference internal" href="#id1">3.2.1 (2019-03-19)</a></li>
-<li><a class="reference internal" href="#id2">3.2.0 (2019-02-06)</a></li>
-<li><a class="reference internal" href="#id3">3.1.0 (2018-03-03)</a></li>
-<li><a class="reference internal" href="#id4">3.0.1 (2018-02-27)</a></li>
-<li><a class="reference internal" href="#id5">3.0.0 (2017-05-07)</a></li>
+<li><a class="reference internal" href="#id1">3.2.2 (2019-04-29)</a></li>
+<li><a class="reference internal" href="#id2">3.2.1 (2019-03-19)</a></li>
+<li><a class="reference internal" href="#id3">3.2.0 (2019-02-06)</a></li>
+<li><a class="reference internal" href="#id4">3.1.0 (2018-03-03)</a></li>
+<li><a class="reference internal" href="#id5">3.0.1 (2018-02-27)</a></li>
+<li><a class="reference internal" href="#id6">3.0.0 (2017-05-07)</a></li>
 </ul>
 </li>
 </ul>
@@ -87,24 +87,44 @@
             
   <div class="section" id="news">
 <h1>News<a class="headerlink" href="#news" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="development-master">
-<h2>Development (master)<a class="headerlink" href="#development-master" title="Permalink to this headline">¶</a></h2>
-</div>
 <div class="section" id="id1">
-<h2>3.2.1 (2019-03-19)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>3.2.2 (2019-04-29)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>Minor features:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Changed LoadTemplate.loadTemplate{Module,Class}:
-the loaded module’s __name__ set to just the file name.</li>
-<li>Use imp for Python 2, importlib for Python 3.</li>
+<li>Replaced outdated and insecure <code class="docutils literal notranslate"><span class="pre">mktemp</span></code> with <code class="docutils literal notranslate"><span class="pre">mkstemp</span></code>.</li>
 </ul>
 </div></blockquote>
 <p>Bug fixes:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Fix a bug in LoadTemplate.loadTemplate{Module,Class}:
-raise ImportError if the template was not found.</li>
+<li>Fixed bugs in <code class="docutils literal notranslate"><span class="pre">TemplateCmdLineIface.py</span></code>: read binary pickles
+from stdin and files.</li>
+</ul>
+</div></blockquote>
+<p>Tests:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Use <code class="docutils literal notranslate"><span class="pre">cgi.escape()</span></code> for Python 2, <code class="docutils literal notranslate"><span class="pre">html.escape()</span></code> for Python 3.</li>
+<li>Created tests for <code class="docutils literal notranslate"><span class="pre">TemplateCmdLineIface</span></code>.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id2">
+<h2>3.2.1 (2019-03-19)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Minor features:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Changed <code class="docutils literal notranslate"><span class="pre">LoadTemplate.loadTemplate{Module,Class}</span></code>:
+the loaded module’s <code class="docutils literal notranslate"><span class="pre">__name__</span></code> set to just the file name.</li>
+<li>Use <code class="docutils literal notranslate"><span class="pre">imp</span></code> for Python 2, <code class="docutils literal notranslate"><span class="pre">importlib</span></code> for Python 3.</li>
+</ul>
+</div></blockquote>
+<p>Bug fixes:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Fix a bug in <code class="docutils literal notranslate"><span class="pre">LoadTemplate.loadTemplate{Module,Class}</span></code>:
+raise <code class="docutils literal notranslate"><span class="pre">ImportError</span></code> if the template was not found.</li>
 </ul>
 </div></blockquote>
 <p>CI:</p>
@@ -115,33 +135,33 @@ raise ImportError if the template was not found.</li>
 </ul>
 </div></blockquote>
 </div>
-<div class="section" id="id2">
-<h2>3.2.0 (2019-02-06)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2>3.2.0 (2019-02-06)<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>Features:</p>
 <blockquote>
 <div><ul class="simple">
 <li>Dropped support for Python 3.3.</li>
-<li>Implement LoadTemplate.loadTemplate{Module,Class} to load templates
-from .py[co], .py or .tmpl.</li>
-<li>CheetahDirOwner caches compiled template in the template directory.</li>
-<li>CheetahDirOwner now silently ignores errors on compiled templates
-writing. To get tracebacks set CheetahDirOwner.debuglevel = 1.</li>
-<li>CheetahDirOwner and DirOwner byte-compile compiled templates
-to .pyc/.pyo. Errors on writing are silently ignored.</li>
+<li>Implement <code class="docutils literal notranslate"><span class="pre">LoadTemplate.loadTemplate{Module,Class}</span></code>
+to load templates from <code class="docutils literal notranslate"><span class="pre">.py[co]</span></code>, <code class="docutils literal notranslate"><span class="pre">.py</span></code> or <code class="docutils literal notranslate"><span class="pre">.tmpl</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">CheetahDirOwner</span></code> caches compiled template in the template directory.</li>
+<li><code class="docutils literal notranslate"><span class="pre">CheetahDirOwner</span></code> now silently ignores errors on compiled templates
+writing. To get tracebacks set <code class="docutils literal notranslate"><span class="pre">CheetahDirOwner.debuglevel</span> <span class="pre">=</span> <span class="pre">1</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">CheetahDirOwner</span></code> and <code class="docutils literal notranslate"><span class="pre">DirOwner</span></code> byte-compile compiled templates
+to <code class="docutils literal notranslate"><span class="pre">.pyc/.pyo</span></code>. Errors on writing are silently ignored.</li>
 </ul>
 </div></blockquote>
 <p>Minor features:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Implement Compiler.__unicode__ under Python 2 and Compiler.__bytes__
-under Python 3.</li>
+<li>Implement <code class="docutils literal notranslate"><span class="pre">Compiler.__unicode__</span></code> under Python 2
+and <code class="docutils literal notranslate"><span class="pre">Compiler.__bytes__</span></code> under Python 3.</li>
 </ul>
 </div></blockquote>
 <p>Bug fixes:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Fix a bug in Compiler.__str__: under Python 2 the method now always
-returns str; it encodes unicode to str using encoding from the
+<li>Fix a bug in <code class="docutils literal notranslate"><span class="pre">Compiler.__str__</span></code>: under Python 2 the method
+always returns str; it encodes unicode to str using encoding from the
 compiled source. Under Python 3 the method decodes bytes to str.</li>
 </ul>
 </div></blockquote>
@@ -167,8 +187,8 @@ compiled source. Under Python 3 the method decodes bytes to str.</li>
 </ul>
 </div></blockquote>
 </div>
-<div class="section" id="id3">
-<h2>3.1.0 (2018-03-03)<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>3.1.0 (2018-03-03)<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>Features:</p>
 <blockquote>
 <div><ul class="simple">
@@ -196,8 +216,8 @@ at Travis and AppVeyor.</li>
 </ul>
 </div></blockquote>
 </div>
-<div class="section" id="id4">
-<h2>3.0.1 (2018-02-27)<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h2>3.0.1 (2018-02-27)<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <p>Bug fixes:</p>
 <blockquote>
 <div><ul class="simple">
@@ -205,8 +225,8 @@ at Travis and AppVeyor.</li>
 </ul>
 </div></blockquote>
 </div>
-<div class="section" id="id5">
-<h2>3.0.0 (2017-05-07)<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h2>3.0.0 (2017-05-07)<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <p>Major features:</p>
 <blockquote>
 <div><ul class="simple">
@@ -268,8 +288,8 @@ patches by Adam Karpierz, tests by Oleg Broytman.</li>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2018, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Mar 19, 2019.
+        &#169; Copyright 2017-2019, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Apr 29, 2019.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
     </div>
   </body>
