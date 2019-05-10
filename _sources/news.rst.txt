@@ -1,6 +1,28 @@
 News
 ====
 
+3.2.3 (2019-05-10)
+--------------------
+
+Bug fixes:
+
+  - Fixed infinite recursion in ``ImportManager`` on importing
+    a builtin module.
+
+Documentation:
+
+  - The site https://cheetahtemplate.org/ is now served with HTTPS.
+  - Updated docs regarding fixed tests.
+
+Tests:
+
+  - Removed ``unittest.main()`` calls from tests:
+    ``python -m unittest discover -t Cheetah -s Cheetah/Tests -p '[A-Z]*.py'``
+    does it.
+  - Fixed ``cheetah test`` command.
+  - Fixed script ``buildandrun``: copy test templates
+    to the ``build/lib`` directory.
+
 3.2.2 (2019-04-29)
 ------------------
 

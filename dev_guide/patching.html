@@ -84,8 +84,9 @@
             
   <div class="section" id="patching-cheetah">
 <h1>Patching Cheetah<a class="headerlink" href="#patching-cheetah" title="Permalink to this headline">¶</a></h1>
-<p>How to commit changes to CVS or submit patches, how to run the test
-suite. Describe distutils and how the regression tests work.</p>
+<p>How to commit changes to git, or submit patches, or send pull requests,
+how to run the test suite. Describe distutils and how the regression tests
+work.</p>
 <div class="section" id="file-requirements">
 <h2>File Requirements<a class="headerlink" href="#file-requirements" title="Permalink to this headline">¶</a></h2>
 <p>The code{Template} class contains not only the Cheetah
@@ -115,8 +116,9 @@ tests, execute at the shell prompt:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cheetah</span> <span class="n">test</span>
 </pre></div>
 </div>
+<p>To run the test suite with all supported Python versions use <code class="docutils literal notranslate"><span class="pre">tox</span></code>.</p>
 <p>Before checking any changes in, run the tests and verify they all
-pass. That way, users can check out the CVS version of Cheetah at
+pass. That way, users can check out the git version of Cheetah at
 any time with a fairly high confidence that it will work. If you
 fix a bug or add a feature, please take the time to add a test that
 exploits the bug/feature. This will help in the future, to prevent
@@ -135,7 +137,7 @@ by line. A precompiled Windows version is at
 <a class="reference external" href="http://gnuwin32.sourceforge.net/packages/diffutils.htm">http://gnuwin32.sourceforge.net/packages/diffutils.htm</a>, and MacOS
 sources at
 <a class="reference external" href="http://perso.wanadoo.fr/gilles.depeyrot/DevTools_en.html">http://perso.wanadoo.fr/gilles.depeyrot/DevTools_en.html</a>.)</li>
-<li>Make the change in your Cheetah CVS sandbox or in your installed
+<li>Make the change in your Cheetah git sandbox or in your installed
 version of Cheetah. If you make it in the sandbox, you’ll have to
 run {python setup.py install} before testing it. If you make it in
 the installed version, do { not} run the installer or it will
@@ -148,7 +150,7 @@ below.</li>
 <li>When {cheetah test} runs cleanly with your regression test
 included, update the {docs/news.rst} file and check in your changes. If
 you made the changes in your installed copy of Cheetah, you’ll have
-to copy them back into the CVS sandbox first. If you added any
+to copy them back into the git sandbox first. If you added any
 files that must be distributed, { be sure to} {cvs add} them before
 committing. Otherwise Cheetah will run fine on your computer but
 fail on anybody else’s, and the test suite can’t check for this.</li>
@@ -159,8 +161,8 @@ and on the changelog.</li>
 </ol>
 <p>If you add a directory to Cheetah, you have to mention it in
 {setup.py} or it won’t be installed.</p>
-<p>The tests are in the {Cheetah.Tests} package, aka the {src/Tests/}
-directory of your CVS sandbox. Most of the tests are in
+<p>The tests are in the {Cheetah.Tests} package, aka the {Cheetah/Tests/}
+directory of your git sandbox. Most of the tests are in
 {SyntaxAndOutput.py}. You can either run all the tests or choose
 which to run:</p>
 <blockquote>
@@ -227,7 +229,7 @@ module.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2019, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Apr 29, 2019.
+      Last updated on May 10, 2019.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
     </div>
   </body>
