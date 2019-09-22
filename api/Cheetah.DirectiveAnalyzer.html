@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Cheetah.DirectiveAnalyzer module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -39,13 +37,11 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -62,11 +58,11 @@
 <span id="cheetah-directiveanalyzer-module"></span><h1>Cheetah.DirectiveAnalyzer module<a class="headerlink" href="#module-Cheetah.DirectiveAnalyzer" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="Cheetah.DirectiveAnalyzer.AnalysisCompiler">
-<em class="property">class </em><code class="descclassname">Cheetah.DirectiveAnalyzer.</code><code class="descname">AnalysisCompiler</code><span class="sig-paren">(</span><em>source=None</em>, <em>file=None</em>, <em>moduleName='DynamicallyCompiledCheetahTemplate'</em>, <em>mainClassName=None</em>, <em>mainMethodName=None</em>, <em>baseclassName=None</em>, <em>extraImportStatements=None</em>, <em>settings=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.AnalysisCompiler" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.DirectiveAnalyzer.</code><code class="sig-name descname">AnalysisCompiler</code><span class="sig-paren">(</span><em class="sig-param">source=None</em>, <em class="sig-param">file=None</em>, <em class="sig-param">moduleName='DynamicallyCompiledCheetahTemplate'</em>, <em class="sig-param">mainClassName=None</em>, <em class="sig-param">mainMethodName=None</em>, <em class="sig-param">baseclassName=None</em>, <em class="sig-param">extraImportStatements=None</em>, <em class="sig-param">settings=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.AnalysisCompiler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="Cheetah.Compiler.html#Cheetah.Compiler.ModuleCompiler" title="Cheetah.Compiler.ModuleCompiler"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Compiler.ModuleCompiler</span></code></a></p>
 <dl class="attribute">
 <dt id="Cheetah.DirectiveAnalyzer.AnalysisCompiler.parserClass">
-<code class="descname">parserClass</code><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.AnalysisCompiler.parserClass" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">parserClass</code><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.AnalysisCompiler.parserClass" title="Permalink to this definition">¶</a></dt>
 <dd><p>alias of <a class="reference internal" href="#Cheetah.DirectiveAnalyzer.Analyzer" title="Cheetah.DirectiveAnalyzer.Analyzer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Analyzer</span></code></a></p>
 </dd></dl>
 
@@ -74,33 +70,33 @@
 
 <dl class="class">
 <dt id="Cheetah.DirectiveAnalyzer.Analyzer">
-<em class="property">class </em><code class="descclassname">Cheetah.DirectiveAnalyzer.</code><code class="descname">Analyzer</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.Analyzer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.DirectiveAnalyzer.</code><code class="sig-name descname">Analyzer</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.Analyzer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Parser._HighLevelParser</span></code></p>
 <dl class="method">
 <dt id="Cheetah.DirectiveAnalyzer.Analyzer.eatDirective">
-<code class="descname">eatDirective</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.Analyzer.eatDirective" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">eatDirective</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.Analyzer.eatDirective" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="function">
 <dt id="Cheetah.DirectiveAnalyzer.analyze">
-<code class="descclassname">Cheetah.DirectiveAnalyzer.</code><code class="descname">analyze</code><span class="sig-paren">(</span><em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.analyze" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">Cheetah.DirectiveAnalyzer.</code><code class="sig-name descname">analyze</code><span class="sig-paren">(</span><em class="sig-param">source</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.analyze" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="Cheetah.DirectiveAnalyzer.main">
-<code class="descclassname">Cheetah.DirectiveAnalyzer.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.main" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">Cheetah.DirectiveAnalyzer.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.main" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="Cheetah.DirectiveAnalyzer.main_dir">
-<code class="descclassname">Cheetah.DirectiveAnalyzer.</code><code class="descname">main_dir</code><span class="sig-paren">(</span><em>opts</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.main_dir" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">Cheetah.DirectiveAnalyzer.</code><code class="sig-name descname">main_dir</code><span class="sig-paren">(</span><em class="sig-param">opts</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.main_dir" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="Cheetah.DirectiveAnalyzer.main_file">
-<code class="descclassname">Cheetah.DirectiveAnalyzer.</code><code class="descname">main_file</code><span class="sig-paren">(</span><em>f</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.main_file" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">Cheetah.DirectiveAnalyzer.</code><code class="sig-name descname">main_file</code><span class="sig-paren">(</span><em class="sig-param">f</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.main_file" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -125,8 +121,8 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2019, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 10, 2019.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+      Last updated on Sep 22, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0.
     </div>
   </body>
 </html>

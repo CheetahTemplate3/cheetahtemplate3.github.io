@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Cheetah3, the Python-Powered Template Engine &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -61,13 +59,11 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -104,13 +100,14 @@ tracker</a>.</p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="authors.html">Authors and contributors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="news.html">News</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="news.html#id1">3.2.3 (2019-05-10)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="news.html#id2">3.2.2 (2019-04-29)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="news.html#id3">3.2.1 (2019-03-19)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="news.html#id4">3.2.0 (2019-02-06)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="news.html#id5">3.1.0 (2018-03-03)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="news.html#id6">3.0.1 (2018-02-27)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="news.html#id7">3.0.0 (2017-05-07)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="news.html#id1">3.2.4 (2019-10-22)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="news.html#id2">3.2.3 (2019-05-10)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="news.html#id3">3.2.2 (2019-04-29)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="news.html#id4">3.2.1 (2019-03-19)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="news.html#id5">3.2.0 (2019-02-06)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="news.html#id6">3.1.0 (2018-03-03)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="news.html#id7">3.0.1 (2018-02-27)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="news.html#id8">3.0.0 (2017-05-07)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="developers.html">Contributing to Cheetah</a><ul>
@@ -190,24 +187,24 @@ module, since that’s what your Cheetah templates are compiled to :)</p>
 <div class="section" id="why-cheetah">
 <h2>Why Cheetah?<a class="headerlink" href="#why-cheetah" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Cheetah is supported by every major Python web framework.</li>
-<li>It is fully documented and is supported by an active user community.</li>
-<li>It can output/generate any text-based format.</li>
-<li>Cheetah compiles templates into optimized, yet readable, Python code.</li>
-<li>It blends the power and flexibility of Python with a simple template language that non-programmers can understand.</li>
-<li>It gives template authors full access to any Python data structure, module, function, object, or method in their templates. Meanwhile, it provides a way for administrators to selectively restrict access to Python when needed.</li>
-<li>Cheetah makes code reuse easy by providing an object-oriented interface to templates that is accessible from Python code or other Cheetah templates. One template can subclass another and selectively reimplement sections of it. Cheetah templates can be subclasses of any Python class and vice-versa.</li>
-<li>It provides a simple, yet powerful, caching mechanism that can dramatically improve the performance of a dynamic website.</li>
-<li>It encourages clean separation of content, graphic design, and program code. This leads to highly modular, flexible, and reusable site architectures, shorter development time, and HTML and program code that is easier to understand and maintain. It is particularly well suited for team efforts.</li>
-<li>Cheetah can be used to generate static html via its command-line tool.</li>
+<li><p>Cheetah is supported by every major Python web framework.</p></li>
+<li><p>It is fully documented and is supported by an active user community.</p></li>
+<li><p>It can output/generate any text-based format.</p></li>
+<li><p>Cheetah compiles templates into optimized, yet readable, Python code.</p></li>
+<li><p>It blends the power and flexibility of Python with a simple template language that non-programmers can understand.</p></li>
+<li><p>It gives template authors full access to any Python data structure, module, function, object, or method in their templates. Meanwhile, it provides a way for administrators to selectively restrict access to Python when needed.</p></li>
+<li><p>Cheetah makes code reuse easy by providing an object-oriented interface to templates that is accessible from Python code or other Cheetah templates. One template can subclass another and selectively reimplement sections of it. Cheetah templates can be subclasses of any Python class and vice-versa.</p></li>
+<li><p>It provides a simple, yet powerful, caching mechanism that can dramatically improve the performance of a dynamic website.</p></li>
+<li><p>It encourages clean separation of content, graphic design, and program code. This leads to highly modular, flexible, and reusable site architectures, shorter development time, and HTML and program code that is easier to understand and maintain. It is particularly well suited for team efforts.</p></li>
+<li><p>Cheetah can be used to generate static html via its command-line tool.</p></li>
 </ul>
 </div>
 <div class="section" id="indices-and-tables">
 <h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
 </div>
 </div>
@@ -235,8 +232,8 @@ module, since that’s what your Cheetah templates are compiled to :)</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2019, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 10, 2019.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+      Last updated on Sep 22, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0.
     </div>
   </body>
 </html>

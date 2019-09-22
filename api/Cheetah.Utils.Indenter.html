@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Cheetah.Utils.Indenter module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -39,13 +37,11 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -70,159 +66,159 @@ searchList and another one being found.  The directive syntax will
 soon be changed somewhat.</p>
 <dl class="class">
 <dt id="Cheetah.Utils.Indenter.IndentProcessor">
-<em class="property">class </em><code class="descclassname">Cheetah.Utils.Indenter.</code><code class="descname">IndentProcessor</code><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Utils.Indenter.</code><code class="sig-name descname">IndentProcessor</code><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Preprocess #indent tags.</p>
 <dl class="attribute">
 <dt id="Cheetah.Utils.Indenter.IndentProcessor.ARGS">
-<code class="descname">ARGS</code><em class="property"> = 'args'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.ARGS" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ARGS</code><em class="property"> = 'args'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.ARGS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Utils.Indenter.IndentProcessor.CHAR">
-<code class="descname">CHAR</code><em class="property"> = 'char'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.CHAR" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">CHAR</code><em class="property"> = 'char'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.CHAR" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Utils.Indenter.IndentProcessor.DEC">
-<code class="descname">DEC</code><em class="property"> = '--'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.DEC" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">DEC</code><em class="property"> = '--'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.DEC" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Utils.Indenter.IndentProcessor.DIRECTIVE">
-<code class="descname">DIRECTIVE</code><em class="property"> = re.compile('[ \\t]*#')</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.DIRECTIVE" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">DIRECTIVE</code><em class="property"> = re.compile('[ \\t]*#')</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.DIRECTIVE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Utils.Indenter.IndentProcessor.INC">
-<code class="descname">INC</code><em class="property"> = '++'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.INC" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">INC</code><em class="property"> = '++'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.INC" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Utils.Indenter.IndentProcessor.INDENT_DIR">
-<code class="descname">INDENT_DIR</code><em class="property"> = re.compile('[ \\t]*#indent[ \\t]*(?P&lt;args&gt;.*)')</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.INDENT_DIR" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">INDENT_DIR</code><em class="property"> = re.compile('[ \\t]*#indent[ \\t]*(?P&lt;args&gt;.*)')</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.INDENT_DIR" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Utils.Indenter.IndentProcessor.LINE_SEP">
-<code class="descname">LINE_SEP</code><em class="property"> = '\n'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.LINE_SEP" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">LINE_SEP</code><em class="property"> = '\n'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.LINE_SEP" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Utils.Indenter.IndentProcessor.OFF">
-<code class="descname">OFF</code><em class="property"> = 'off'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.OFF" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">OFF</code><em class="property"> = 'off'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.OFF" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Utils.Indenter.IndentProcessor.ON">
-<code class="descname">ON</code><em class="property"> = 'on'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.ON" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ON</code><em class="property"> = 'on'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.ON" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Utils.Indenter.IndentProcessor.POP">
-<code class="descname">POP</code><em class="property"> = 'pop'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.POP" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">POP</code><em class="property"> = 'pop'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.POP" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Utils.Indenter.IndentProcessor.PUSH">
-<code class="descname">PUSH</code><em class="property"> = 'push'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.PUSH" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">PUSH</code><em class="property"> = 'push'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.PUSH" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Utils.Indenter.IndentProcessor.SET">
-<code class="descname">SET</code><em class="property"> = '='</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.SET" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">SET</code><em class="property"> = '='</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.SET" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Utils.Indenter.IndentProcessor.WHITESPACES">
-<code class="descname">WHITESPACES</code><em class="property"> = re.compile('(?P&lt;ws&gt;[ \\t]*)')</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.WHITESPACES" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">WHITESPACES</code><em class="property"> = re.compile('(?P&lt;ws&gt;[ \\t]*)')</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.WHITESPACES" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Utils.Indenter.IndentProcessor.WS">
-<code class="descname">WS</code><em class="property"> = 'ws'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.WS" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">WS</code><em class="property"> = 'ws'</em><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.WS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Utils.Indenter.IndentProcessor.process">
-<code class="descname">process</code><span class="sig-paren">(</span><em>_txt</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.process" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">process</code><span class="sig-paren">(</span><em class="sig-param">_txt</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.IndentProcessor.process" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.Utils.Indenter.Indenter">
-<em class="property">class </em><code class="descclassname">Cheetah.Utils.Indenter.</code><code class="descname">Indenter</code><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Utils.Indenter.</code><code class="sig-name descname">Indenter</code><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A class that keeps track of the current indentation level.
 .indent() returns the appropriate amount of indentation.</p>
 <dl class="attribute">
 <dt id="Cheetah.Utils.Indenter.Indenter.Chars">
-<code class="descname">Chars</code><em class="property"> = '    '</em><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.Chars" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Chars</code><em class="property"> = '    '</em><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.Chars" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Utils.Indenter.Indenter.Level">
-<code class="descname">Level</code><em class="property"> = 0</em><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.Level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Level</code><em class="property"> = 0</em><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.Level" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Utils.Indenter.Indenter.LevelStack">
-<code class="descname">LevelStack</code><em class="property"> = []</em><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.LevelStack" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">LevelStack</code><em class="property"> = []</em><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.LevelStack" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Utils.Indenter.Indenter.On">
-<code class="descname">On</code><em class="property"> = 1</em><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.On" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">On</code><em class="property"> = 1</em><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.On" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Utils.Indenter.Indenter.dec">
-<code class="descname">dec</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.dec" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">dec</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.dec" title="Permalink to this definition">¶</a></dt>
 <dd><p>decrement can only be applied to values greater zero
 values below zero don’t make any sense at all!</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Utils.Indenter.Indenter.inc">
-<code class="descname">inc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.inc" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">inc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.inc" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Utils.Indenter.Indenter.indent">
-<code class="descname">indent</code><span class="sig-paren">(</span><em>_default=0</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.indent" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">indent</code><span class="sig-paren">(</span><em class="sig-param">_default=0</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.indent" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Utils.Indenter.Indenter.off">
-<code class="descname">off</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.off" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">off</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.off" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Utils.Indenter.Indenter.on">
-<code class="descname">on</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.on" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">on</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.on" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Utils.Indenter.Indenter.pop">
-<code class="descname">pop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.pop" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">pop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.pop" title="Permalink to this definition">¶</a></dt>
 <dd><p>the levestack can not become -1. any attempt to do so
 sets the level to 0!</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Utils.Indenter.Indenter.push">
-<code class="descname">push</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.push" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">push</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.push" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Utils.Indenter.Indenter.setChar">
-<code class="descname">setChar</code><span class="sig-paren">(</span><em>_chars</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.setChar" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setChar</code><span class="sig-paren">(</span><em class="sig-param">_chars</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.setChar" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Utils.Indenter.Indenter.setLevel">
-<code class="descname">setLevel</code><span class="sig-paren">(</span><em>_level</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.setLevel" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setLevel</code><span class="sig-paren">(</span><em class="sig-param">_level</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.Indenter.setLevel" title="Permalink to this definition">¶</a></dt>
 <dd><p>the leve can’t be less than zero. any attempt to do so
 sets the level automatically to zero!</p>
 </dd></dl>
@@ -231,7 +227,7 @@ sets the level automatically to zero!</p>
 
 <dl class="function">
 <dt id="Cheetah.Utils.Indenter.indentize">
-<code class="descclassname">Cheetah.Utils.Indenter.</code><code class="descname">indentize</code><span class="sig-paren">(</span><em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.indentize" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">Cheetah.Utils.Indenter.</code><code class="sig-name descname">indentize</code><span class="sig-paren">(</span><em class="sig-param">source</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Indenter.indentize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -256,8 +252,8 @@ sets the level automatically to zero!</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2019, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 10, 2019.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+      Last updated on Sep 22, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0.
     </div>
   </body>
 </html>

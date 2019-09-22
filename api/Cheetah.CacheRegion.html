@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Cheetah.CacheRegion module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -39,13 +37,11 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -79,62 +75,62 @@ in the following example:</p>
 of $getArticleID().</p>
 <dl class="class">
 <dt id="Cheetah.CacheRegion.CacheItem">
-<em class="property">class </em><code class="descclassname">Cheetah.CacheRegion.</code><code class="descname">CacheItem</code><span class="sig-paren">(</span><em>cacheItemID</em>, <em>cacheStore</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.CacheRegion.</code><code class="sig-name descname">CacheItem</code><span class="sig-paren">(</span><em class="sig-param">cacheItemID</em>, <em class="sig-param">cacheStore</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A CacheItem is a container storing:</p>
 <blockquote>
 <div><ul class="simple">
-<li>cacheID (string)</li>
-<li>refreshTime (timestamp or None) : last time the cache was refreshed</li>
-<li>data (string) : the content of the cache</li>
+<li><p>cacheID (string)</p></li>
+<li><p>refreshTime (timestamp or None) : last time the cache was refreshed</p></li>
+<li><p>data (string) : the content of the cache</p></li>
 </ul>
 </div></blockquote>
 <dl class="method">
 <dt id="Cheetah.CacheRegion.CacheItem.clear">
-<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem.clear" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem.clear" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.CacheRegion.CacheItem.getData">
-<code class="descname">getData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem.getData" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem.getData" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.CacheRegion.CacheItem.getExpiryTime">
-<code class="descname">getExpiryTime</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem.getExpiryTime" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getExpiryTime</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem.getExpiryTime" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.CacheRegion.CacheItem.getRefreshTime">
-<code class="descname">getRefreshTime</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem.getRefreshTime" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getRefreshTime</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem.getRefreshTime" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.CacheRegion.CacheItem.hasExpired">
-<code class="descname">hasExpired</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem.hasExpired" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">hasExpired</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem.hasExpired" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.CacheRegion.CacheItem.renderOutput">
-<code class="descname">renderOutput</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem.renderOutput" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">renderOutput</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem.renderOutput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Can be overridden to implement edge-caching</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.CacheRegion.CacheItem.setData">
-<code class="descname">setData</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem.setData" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setData</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem.setData" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.CacheRegion.CacheItem.setExpiryTime">
-<code class="descname">setExpiryTime</code><span class="sig-paren">(</span><em>time</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem.setExpiryTime" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setExpiryTime</code><span class="sig-paren">(</span><em class="sig-param">time</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheItem.setExpiryTime" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.CacheRegion.CacheRegion">
-<em class="property">class </em><code class="descclassname">Cheetah.CacheRegion.</code><code class="descname">CacheRegion</code><span class="sig-paren">(</span><em>regionID</em>, <em>templateCacheIdPrefix=''</em>, <em>cacheStore=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheRegion" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.CacheRegion.</code><code class="sig-name descname">CacheRegion</code><span class="sig-paren">(</span><em class="sig-param">regionID</em>, <em class="sig-param">templateCacheIdPrefix=''</em>, <em class="sig-param">cacheStore=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheRegion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A <cite>CacheRegion</cite> stores some <cite>CacheItem</cite> instances.</p>
 <p>This implementation stores the data in the memory of the current process.
@@ -145,13 +141,13 @@ Cheetah.CacheStore.MemcachedCacheStore, a wrapper around the Python
 memcached API (<a class="reference external" href="http://www.danga.com/memcached">http://www.danga.com/memcached</a>).</p>
 <dl class="method">
 <dt id="Cheetah.CacheRegion.CacheRegion.clear">
-<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheRegion.clear" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheRegion.clear" title="Permalink to this definition">¶</a></dt>
 <dd><p>drop all the caches stored in this cache region</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.CacheRegion.CacheRegion.getCacheItem">
-<code class="descname">getCacheItem</code><span class="sig-paren">(</span><em>cacheItemID</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheRegion.getCacheItem" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getCacheItem</code><span class="sig-paren">(</span><em class="sig-param">cacheItemID</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheRegion.getCacheItem" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lazy access to a cacheItem</p>
 <p>Try to find a cache in the stored caches. If it doesn’t
 exist, it’s created.</p>
@@ -160,7 +156,7 @@ exist, it’s created.</p>
 
 <dl class="method">
 <dt id="Cheetah.CacheRegion.CacheRegion.isNew">
-<code class="descname">isNew</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheRegion.isNew" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">isNew</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheRegion.CacheRegion.isNew" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -187,8 +183,8 @@ exist, it’s created.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2019, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 10, 2019.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+      Last updated on Sep 22, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0.
     </div>
   </body>
 </html>

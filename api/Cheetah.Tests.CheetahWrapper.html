@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Cheetah.Tests.CheetahWrapper module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -39,13 +37,11 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -61,89 +57,88 @@
   <div class="section" id="module-Cheetah.Tests.CheetahWrapper">
 <span id="cheetah-tests-cheetahwrapper-module"></span><h1>Cheetah.Tests.CheetahWrapper module<a class="headerlink" href="#module-Cheetah.Tests.CheetahWrapper" title="Permalink to this headline">¶</a></h1>
 <p>Tests for the ‘cheetah’ command.</p>
-<dl class="docutils">
-<dt>Besides unittest usage, recognizes the following command-line options:</dt>
-<dd><dl class="first last docutils">
-<dt>–list CheetahWrapper.py</dt>
-<dd><blockquote class="first">
-<div>List all scenarios that are tested.  The argument is the path
-of this script.</div></blockquote>
-<table class="last docutils option-list" frame="void" rules="none">
-<col class="option" />
-<col class="description" />
-<tbody valign="top">
-<tr><td class="option-group">
-<kbd><span class="option">--nodelete</span></kbd></td>
-<td>Don’t delete scratch directory at end.</td></tr>
-<tr><td class="option-group">
-<kbd><span class="option">--output</span></kbd></td>
-<td>Show the output of each subcommand.  (Normally suppressed.)</td></tr>
-</tbody>
-</table>
+<dl>
+<dt>Besides unittest usage, recognizes the following command-line options:</dt><dd><dl>
+<dt>–list CheetahWrapper.py</dt><dd><blockquote>
+<div><p>List all scenarios that are tested.  The argument is the path
+of this script.</p>
+</div></blockquote>
+<dl class="option-list">
+<dt><kbd><span class="option">--nodelete</span></kbd></dt>
+<dd><p>Don’t delete scratch directory at end.</p>
+</dd>
+<dt><kbd><span class="option">--output</span></kbd></dt>
+<dd><p>Show the output of each subcommand.  (Normally suppressed.)</p>
 </dd>
 </dl>
 </dd>
 </dl>
+</dd>
+</dl>
+<dl class="data">
+<dt id="Cheetah.Tests.CheetahWrapper.BACKUP_SUFFIX">
+<code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">BACKUP_SUFFIX</code><em class="property"> = '.bak'</em><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.BACKUP_SUFFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="class">
 <dt id="Cheetah.Tests.CheetahWrapper.CFBase">
-<em class="property">class </em><code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">CFBase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">CFBase</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
 <p>Base class for “cheetah compile” and “cheetah fill” unit tests.</p>
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.CFBase.assertPosixSubprocess">
-<code class="descname">assertPosixSubprocess</code><span class="sig-paren">(</span><em>cmd</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.assertPosixSubprocess" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">assertPosixSubprocess</code><span class="sig-paren">(</span><em class="sig-param">cmd</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.assertPosixSubprocess" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.CFBase.assertSubprocess">
-<code class="descname">assertSubprocess</code><span class="sig-paren">(</span><em>cmd</em>, <em>nonzero=False</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.assertSubprocess" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">assertSubprocess</code><span class="sig-paren">(</span><em class="sig-param">cmd</em>, <em class="sig-param">nonzero=False</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.assertSubprocess" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.CFBase.assertWin32Subprocess">
-<code class="descname">assertWin32Subprocess</code><span class="sig-paren">(</span><em>cmd</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.assertWin32Subprocess" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">assertWin32Subprocess</code><span class="sig-paren">(</span><em class="sig-param">cmd</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.assertWin32Subprocess" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.CFBase.checkCompile">
-<code class="descname">checkCompile</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.checkCompile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">checkCompile</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.checkCompile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.CFBase.checkFill">
-<code class="descname">checkFill</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.checkFill" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">checkFill</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.checkFill" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.CFBase.checkNoBackup">
-<code class="descname">checkNoBackup</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.checkNoBackup" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">checkNoBackup</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.checkNoBackup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Verify ‘path’ does not exist.  (To check –nobackup.)</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.CFBase.checkSubdirPyInit">
-<code class="descname">checkSubdirPyInit</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.checkSubdirPyInit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">checkSubdirPyInit</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.checkSubdirPyInit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Verify a destination subdirectory exists and contains an
 __init__.py file.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Tests.CheetahWrapper.CFBase.expectError">
-<code class="descname">expectError</code><em class="property"> = False</em><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.expectError" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">expectError</code><em class="property"> = False</em><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.expectError" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.CFBase.go">
-<code class="descname">go</code><span class="sig-paren">(</span><em>cmd</em>, <em>expectedStatus=0</em>, <em>expectedOutputSubstring=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.go" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">go</code><span class="sig-paren">(</span><em class="sig-param">cmd</em>, <em class="sig-param">expectedStatus=0</em>, <em class="sig-param">expectedOutputSubstring=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.go" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run a “cheetah compile” or “cheetah fill” subcommand.</p>
-<dl class="docutils">
-<dt>in <span class="classifier-delimiter">:</span> <span class="classifier">cmd, string, the command to run.</span></dt>
-<dd><dl class="first last docutils">
-<dt>expectedStatus, int, subcommand’s expected output status.</dt>
-<dd>0 if the subcommand is expected to succeed, 1-255 otherwise.</dd>
-<dt>expectedOutputSubstring, string, substring which much appear</dt>
-<dd>in the standard output or standard error.  None to skip this
-test.</dd>
+<dl class="simple">
+<dt>in<span class="classifier">cmd, string, the command to run.</span></dt><dd><dl class="simple">
+<dt>expectedStatus, int, subcommand’s expected output status.</dt><dd><p>0 if the subcommand is expected to succeed, 1-255 otherwise.</p>
+</dd>
+<dt>expectedOutputSubstring, string, substring which much appear</dt><dd><p>in the standard output or standard error.  None to skip this
+test.</p>
+</dd>
 </dl>
 </dd>
 </dl>
@@ -152,39 +147,39 @@ test.</dd>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.CFBase.inform">
-<code class="descname">inform</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.inform" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">inform</code><span class="sig-paren">(</span><em class="sig-param">message</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.inform" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.CFBase.locate_cheetah">
-<code class="descname">locate_cheetah</code><span class="sig-paren">(</span><em>cmd</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.locate_cheetah" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">locate_cheetah</code><span class="sig-paren">(</span><em class="sig-param">cmd</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.locate_cheetah" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.CFBase.setUp">
-<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.setUp" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.setUp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create the top-level directories, subdirectories and .tmpl
 files.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Tests.CheetahWrapper.CFBase.srcDir">
-<code class="descname">srcDir</code><em class="property"> = ''</em><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.srcDir" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">srcDir</code><em class="property"> = ''</em><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.srcDir" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Tests.CheetahWrapper.CFBase.srcFiles">
-<code class="descname">srcFiles</code><em class="property"> = ('a.tmpl', 'child/a.tmpl', 'child/grandkid/a.tmpl')</em><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.srcFiles" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">srcFiles</code><em class="property"> = ('a.tmpl', 'child/a.tmpl', 'child/grandkid/a.tmpl')</em><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.srcFiles" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Tests.CheetahWrapper.CFBase.subdirs">
-<code class="descname">subdirs</code><em class="property"> = ('child', 'child/grandkid')</em><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.subdirs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">subdirs</code><em class="property"> = ('child', 'child/grandkid')</em><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.subdirs" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.CFBase.tearDown">
-<code class="descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.tearDown" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFBase.tearDown" title="Permalink to this definition">¶</a></dt>
 <dd><p>Hook method for deconstructing the test fixture after testing it.</p>
 </dd></dl>
 
@@ -192,416 +187,426 @@ files.</p>
 
 <dl class="class">
 <dt id="Cheetah.Tests.CheetahWrapper.CFIdirBase">
-<em class="property">class </em><code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">CFIdirBase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFIdirBase" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">CFIdirBase</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFIdirBase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Tests.CheetahWrapper.CFBase" title="Cheetah.Tests.CheetahWrapper.CFBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Tests.CheetahWrapper.CFBase</span></code></a></p>
 <p>Subclass for tests with –idir.</p>
 <dl class="attribute">
 <dt id="Cheetah.Tests.CheetahWrapper.CFIdirBase.srcDir">
-<code class="descname">srcDir</code><em class="property"> = 'SRC'</em><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFIdirBase.srcDir" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">srcDir</code><em class="property"> = 'SRC'</em><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFIdirBase.srcDir" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Tests.CheetahWrapper.CFIdirBase.srcFiles">
-<code class="descname">srcFiles</code><em class="property"> = ('SRC/a.tmpl', 'SRC/child/a.tmpl', 'SRC/child/grandkid/a.tmpl')</em><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFIdirBase.srcFiles" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">srcFiles</code><em class="property"> = ('SRC/a.tmpl', 'SRC/child/a.tmpl', 'SRC/child/grandkid/a.tmpl')</em><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFIdirBase.srcFiles" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Tests.CheetahWrapper.CFIdirBase.subdirs">
-<code class="descname">subdirs</code><em class="property"> = ('SRC/child', 'SRC/child/grandkid')</em><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFIdirBase.subdirs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">subdirs</code><em class="property"> = ('SRC/child', 'SRC/child/grandkid')</em><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.CFIdirBase.subdirs" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
+<dl class="data">
+<dt id="Cheetah.Tests.CheetahWrapper.DELETE">
+<code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">DELETE</code><em class="property"> = True</em><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.DELETE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="class">
 <dt id="Cheetah.Tests.CheetahWrapper.Flat">
-<em class="property">class </em><code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">Flat</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.Flat" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">Flat</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.Flat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Tests.CheetahWrapper.CFBase" title="Cheetah.Tests.CheetahWrapper.CFBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Tests.CheetahWrapper.CFBase</span></code></a></p>
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.Flat.testCompile">
-<code class="descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.Flat.testCompile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.Flat.testCompile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.Flat.testFill">
-<code class="descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.Flat.testFill" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.Flat.testFill" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.Flat.testText">
-<code class="descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.Flat.testText" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.Flat.testText" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.Tests.CheetahWrapper.FlatRecurseCollision">
-<em class="property">class </em><code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">FlatRecurseCollision</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.FlatRecurseCollision" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">FlatRecurseCollision</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.FlatRecurseCollision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Tests.CheetahWrapper.CFBase" title="Cheetah.Tests.CheetahWrapper.CFBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Tests.CheetahWrapper.CFBase</span></code></a></p>
 <dl class="attribute">
 <dt id="Cheetah.Tests.CheetahWrapper.FlatRecurseCollision.expectError">
-<code class="descname">expectError</code><em class="property"> = True</em><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.FlatRecurseCollision.expectError" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">expectError</code><em class="property"> = True</em><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.FlatRecurseCollision.expectError" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.FlatRecurseCollision.testCompile">
-<code class="descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.FlatRecurseCollision.testCompile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.FlatRecurseCollision.testCompile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.FlatRecurseCollision.testFill">
-<code class="descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.FlatRecurseCollision.testFill" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.FlatRecurseCollision.testFill" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.FlatRecurseCollision.testText">
-<code class="descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.FlatRecurseCollision.testText" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.FlatRecurseCollision.testText" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.Tests.CheetahWrapper.IdirFlatRecurseCollision">
-<em class="property">class </em><code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">IdirFlatRecurseCollision</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirFlatRecurseCollision" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">IdirFlatRecurseCollision</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirFlatRecurseCollision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Tests.CheetahWrapper.CFIdirBase" title="Cheetah.Tests.CheetahWrapper.CFIdirBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Tests.CheetahWrapper.CFIdirBase</span></code></a></p>
 <dl class="attribute">
 <dt id="Cheetah.Tests.CheetahWrapper.IdirFlatRecurseCollision.expectError">
-<code class="descname">expectError</code><em class="property"> = True</em><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirFlatRecurseCollision.expectError" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">expectError</code><em class="property"> = True</em><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirFlatRecurseCollision.expectError" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.IdirFlatRecurseCollision.testCompile">
-<code class="descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirFlatRecurseCollision.testCompile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirFlatRecurseCollision.testCompile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.IdirFlatRecurseCollision.testFill">
-<code class="descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirFlatRecurseCollision.testFill" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirFlatRecurseCollision.testFill" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.IdirFlatRecurseCollision.testText">
-<code class="descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirFlatRecurseCollision.testText" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirFlatRecurseCollision.testText" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.Tests.CheetahWrapper.IdirOdirRecurse">
-<em class="property">class </em><code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">IdirOdirRecurse</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirOdirRecurse" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">IdirOdirRecurse</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirOdirRecurse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Tests.CheetahWrapper.CFIdirBase" title="Cheetah.Tests.CheetahWrapper.CFIdirBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Tests.CheetahWrapper.CFIdirBase</span></code></a></p>
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.IdirOdirRecurse.testCompile">
-<code class="descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirOdirRecurse.testCompile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirOdirRecurse.testCompile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.IdirOdirRecurse.testFill">
-<code class="descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirOdirRecurse.testFill" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirOdirRecurse.testFill" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.IdirOdirRecurse.testText">
-<code class="descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirOdirRecurse.testText" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirOdirRecurse.testText" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.Tests.CheetahWrapper.IdirRecurse">
-<em class="property">class </em><code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">IdirRecurse</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirRecurse" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">IdirRecurse</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirRecurse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Tests.CheetahWrapper.CFIdirBase" title="Cheetah.Tests.CheetahWrapper.CFIdirBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Tests.CheetahWrapper.CFIdirBase</span></code></a></p>
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.IdirRecurse.testCompile">
-<code class="descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirRecurse.testCompile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirRecurse.testCompile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.IdirRecurse.testFill">
-<code class="descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirRecurse.testFill" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirRecurse.testFill" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.IdirRecurse.testText">
-<code class="descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirRecurse.testText" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.IdirRecurse.testText" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.Tests.CheetahWrapper.NoBackup">
-<em class="property">class </em><code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">NoBackup</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.NoBackup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">NoBackup</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.NoBackup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Tests.CheetahWrapper.CFBase" title="Cheetah.Tests.CheetahWrapper.CFBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Tests.CheetahWrapper.CFBase</span></code></a></p>
 <p>Run the command twice each time and verify a backup file is
 <em>not</em> created.</p>
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.NoBackup.testCompile">
-<code class="descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.NoBackup.testCompile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.NoBackup.testCompile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.NoBackup.testFill">
-<code class="descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.NoBackup.testFill" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.NoBackup.testFill" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.NoBackup.testText">
-<code class="descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.NoBackup.testText" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.NoBackup.testText" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
+<dl class="data">
+<dt id="Cheetah.Tests.CheetahWrapper.OUTPUT">
+<code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">OUTPUT</code><em class="property"> = False</em><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OUTPUT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="class">
 <dt id="Cheetah.Tests.CheetahWrapper.OneFile">
-<em class="property">class </em><code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">OneFile</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OneFile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">OneFile</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OneFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Tests.CheetahWrapper.CFBase" title="Cheetah.Tests.CheetahWrapper.CFBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Tests.CheetahWrapper.CFBase</span></code></a></p>
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.OneFile.testCompile">
-<code class="descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OneFile.testCompile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OneFile.testCompile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.OneFile.testFill">
-<code class="descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OneFile.testFill" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OneFile.testFill" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.OneFile.testText">
-<code class="descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OneFile.testText" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OneFile.testText" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.Tests.CheetahWrapper.OneFileNoExtension">
-<em class="property">class </em><code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">OneFileNoExtension</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OneFileNoExtension" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">OneFileNoExtension</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OneFileNoExtension" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Tests.CheetahWrapper.CFBase" title="Cheetah.Tests.CheetahWrapper.CFBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Tests.CheetahWrapper.CFBase</span></code></a></p>
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.OneFileNoExtension.testCompile">
-<code class="descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OneFileNoExtension.testCompile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OneFileNoExtension.testCompile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.OneFileNoExtension.testFill">
-<code class="descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OneFileNoExtension.testFill" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OneFileNoExtension.testFill" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.OneFileNoExtension.testText">
-<code class="descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OneFileNoExtension.testText" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OneFileNoExtension.testText" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.Tests.CheetahWrapper.OneFileWithOdir">
-<em class="property">class </em><code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">OneFileWithOdir</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OneFileWithOdir" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">OneFileWithOdir</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OneFileWithOdir" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Tests.CheetahWrapper.CFBase" title="Cheetah.Tests.CheetahWrapper.CFBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Tests.CheetahWrapper.CFBase</span></code></a></p>
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.OneFileWithOdir.testCompile">
-<code class="descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OneFileWithOdir.testCompile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OneFileWithOdir.testCompile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.OneFileWithOdir.testFill">
-<code class="descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OneFileWithOdir.testFill" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OneFileWithOdir.testFill" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.OneFileWithOdir.testText">
-<code class="descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OneFileWithOdir.testText" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.OneFileWithOdir.testText" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.Tests.CheetahWrapper.Popen4">
-<em class="property">class </em><code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">Popen4</code><span class="sig-paren">(</span><em>cmd</em>, <em>bufsize=-1</em>, <em>shell=True</em>, <em>close_fds=True</em>, <em>stdin=-1</em>, <em>stdout=-1</em>, <em>stderr=-2</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.Popen4" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">Popen4</code><span class="sig-paren">(</span><em class="sig-param">cmd</em>, <em class="sig-param">bufsize=-1</em>, <em class="sig-param">shell=True</em>, <em class="sig-param">close_fds=True</em>, <em class="sig-param">stdin=-1</em>, <em class="sig-param">stdout=-1</em>, <em class="sig-param">stderr=-2</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.Popen4" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">subprocess.Popen</span></code></p>
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.Tests.CheetahWrapper.RecurseExplicit">
-<em class="property">class </em><code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">RecurseExplicit</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.RecurseExplicit" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">RecurseExplicit</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.RecurseExplicit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Tests.CheetahWrapper.CFBase" title="Cheetah.Tests.CheetahWrapper.CFBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Tests.CheetahWrapper.CFBase</span></code></a></p>
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.RecurseExplicit.testCompile">
-<code class="descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.RecurseExplicit.testCompile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.RecurseExplicit.testCompile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.RecurseExplicit.testFill">
-<code class="descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.RecurseExplicit.testFill" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.RecurseExplicit.testFill" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.RecurseExplicit.testText">
-<code class="descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.RecurseExplicit.testText" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.RecurseExplicit.testText" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.Tests.CheetahWrapper.RecurseExplicitWIthOdir">
-<em class="property">class </em><code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">RecurseExplicitWIthOdir</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.RecurseExplicitWIthOdir" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">RecurseExplicitWIthOdir</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.RecurseExplicitWIthOdir" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Tests.CheetahWrapper.CFBase" title="Cheetah.Tests.CheetahWrapper.CFBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Tests.CheetahWrapper.CFBase</span></code></a></p>
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.RecurseExplicitWIthOdir.testCompile">
-<code class="descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.RecurseExplicitWIthOdir.testCompile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.RecurseExplicitWIthOdir.testCompile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.RecurseExplicitWIthOdir.testFill">
-<code class="descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.RecurseExplicitWIthOdir.testFill" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.RecurseExplicitWIthOdir.testFill" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.RecurseExplicitWIthOdir.testText">
-<code class="descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.RecurseExplicitWIthOdir.testText" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.RecurseExplicitWIthOdir.testText" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.Tests.CheetahWrapper.RecurseImplicit">
-<em class="property">class </em><code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">RecurseImplicit</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.RecurseImplicit" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">RecurseImplicit</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.RecurseImplicit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Tests.CheetahWrapper.CFBase" title="Cheetah.Tests.CheetahWrapper.CFBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Tests.CheetahWrapper.CFBase</span></code></a></p>
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.RecurseImplicit.testCompile">
-<code class="descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.RecurseImplicit.testCompile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.RecurseImplicit.testCompile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.RecurseImplicit.testFill">
-<code class="descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.RecurseImplicit.testFill" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.RecurseImplicit.testFill" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.RecurseImplicit.testText">
-<code class="descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.RecurseImplicit.testText" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.RecurseImplicit.testText" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.Tests.CheetahWrapper.SplatTmpl">
-<em class="property">class </em><code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">SplatTmpl</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.SplatTmpl" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">SplatTmpl</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.SplatTmpl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Tests.CheetahWrapper.CFBase" title="Cheetah.Tests.CheetahWrapper.CFBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Tests.CheetahWrapper.CFBase</span></code></a></p>
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.SplatTmpl.testCompile">
-<code class="descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.SplatTmpl.testCompile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.SplatTmpl.testCompile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.SplatTmpl.testFill">
-<code class="descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.SplatTmpl.testFill" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.SplatTmpl.testFill" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.SplatTmpl.testText">
-<code class="descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.SplatTmpl.testText" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.SplatTmpl.testText" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.Tests.CheetahWrapper.SplatTmplWithSubdirectories">
-<em class="property">class </em><code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">SplatTmplWithSubdirectories</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.SplatTmplWithSubdirectories" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">SplatTmplWithSubdirectories</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.SplatTmplWithSubdirectories" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Tests.CheetahWrapper.CFBase" title="Cheetah.Tests.CheetahWrapper.CFBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Tests.CheetahWrapper.CFBase</span></code></a></p>
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.SplatTmplWithSubdirectories.testCompile">
-<code class="descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.SplatTmplWithSubdirectories.testCompile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.SplatTmplWithSubdirectories.testCompile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.SplatTmplWithSubdirectories.testFill">
-<code class="descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.SplatTmplWithSubdirectories.testFill" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.SplatTmplWithSubdirectories.testFill" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.SplatTmplWithSubdirectories.testText">
-<code class="descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.SplatTmplWithSubdirectories.testText" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.SplatTmplWithSubdirectories.testText" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.Tests.CheetahWrapper.ThreeFilesWithSubdirectories">
-<em class="property">class </em><code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">ThreeFilesWithSubdirectories</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.ThreeFilesWithSubdirectories" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">ThreeFilesWithSubdirectories</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.ThreeFilesWithSubdirectories" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Tests.CheetahWrapper.CFBase" title="Cheetah.Tests.CheetahWrapper.CFBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Tests.CheetahWrapper.CFBase</span></code></a></p>
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.ThreeFilesWithSubdirectories.testCompile">
-<code class="descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.ThreeFilesWithSubdirectories.testCompile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.ThreeFilesWithSubdirectories.testCompile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.ThreeFilesWithSubdirectories.testFill">
-<code class="descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.ThreeFilesWithSubdirectories.testFill" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.ThreeFilesWithSubdirectories.testFill" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.ThreeFilesWithSubdirectories.testText">
-<code class="descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.ThreeFilesWithSubdirectories.testText" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.ThreeFilesWithSubdirectories.testText" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.Tests.CheetahWrapper.ThreeFilesWithSubdirectoriesNoExtension">
-<em class="property">class </em><code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">ThreeFilesWithSubdirectoriesNoExtension</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.ThreeFilesWithSubdirectoriesNoExtension" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">ThreeFilesWithSubdirectoriesNoExtension</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.ThreeFilesWithSubdirectoriesNoExtension" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Tests.CheetahWrapper.CFBase" title="Cheetah.Tests.CheetahWrapper.CFBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Tests.CheetahWrapper.CFBase</span></code></a></p>
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.ThreeFilesWithSubdirectoriesNoExtension.testCompile">
-<code class="descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.ThreeFilesWithSubdirectoriesNoExtension.testCompile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.ThreeFilesWithSubdirectoriesNoExtension.testCompile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.ThreeFilesWithSubdirectoriesNoExtension.testFill">
-<code class="descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.ThreeFilesWithSubdirectoriesNoExtension.testFill" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.ThreeFilesWithSubdirectoriesNoExtension.testFill" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.ThreeFilesWithSubdirectoriesNoExtension.testText">
-<code class="descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.ThreeFilesWithSubdirectoriesNoExtension.testText" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.ThreeFilesWithSubdirectoriesNoExtension.testText" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.Tests.CheetahWrapper.VarietyWithOdir">
-<em class="property">class </em><code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">VarietyWithOdir</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.VarietyWithOdir" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">VarietyWithOdir</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.VarietyWithOdir" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Tests.CheetahWrapper.CFBase" title="Cheetah.Tests.CheetahWrapper.CFBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Tests.CheetahWrapper.CFBase</span></code></a></p>
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.VarietyWithOdir.testCompile">
-<code class="descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.VarietyWithOdir.testCompile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testCompile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.VarietyWithOdir.testCompile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.VarietyWithOdir.testFill">
-<code class="descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.VarietyWithOdir.testFill" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testFill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.VarietyWithOdir.testFill" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Tests.CheetahWrapper.VarietyWithOdir.testText">
-<code class="descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.VarietyWithOdir.testText" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">testText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.VarietyWithOdir.testText" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="function">
 <dt id="Cheetah.Tests.CheetahWrapper.listTests">
-<code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">listTests</code><span class="sig-paren">(</span><em>cheetahWrapperFile</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.listTests" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">listTests</code><span class="sig-paren">(</span><em class="sig-param">cheetahWrapperFile</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.listTests" title="Permalink to this definition">¶</a></dt>
 <dd><p>cheetahWrapperFile, string, path of this script.</p>
 <p>XXX TODO: don’t print test where expectError is true.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="Cheetah.Tests.CheetahWrapper.main">
-<code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.main" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.main" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="Cheetah.Tests.CheetahWrapper.warn">
-<code class="descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="descname">warn</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.warn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">Cheetah.Tests.CheetahWrapper.</code><code class="sig-name descname">warn</code><span class="sig-paren">(</span><em class="sig-param">msg</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.CheetahWrapper.warn" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -626,8 +631,8 @@ files.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2019, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 10, 2019.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+      Last updated on Sep 22, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0.
     </div>
   </body>
 </html>

@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Cheetah.Parser module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -39,13 +37,11 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -61,126 +57,336 @@
   <div class="section" id="module-Cheetah.Parser">
 <span id="cheetah-parser-module"></span><h1>Cheetah.Parser module<a class="headerlink" href="#module-Cheetah.Parser" title="Permalink to this headline">¶</a></h1>
 <p>Parser classes for Cheetah’s Compiler</p>
-<dl class="docutils">
-<dt>Classes:</dt>
-<dd>ParseError( Exception )
+<dl class="simple">
+<dt>Classes:</dt><dd><p>ParseError( Exception )
 _LowLevelParser( Cheetah.SourceReader.SourceReader ), basically a lexer
 _HighLevelParser( _LowLevelParser )
-Parser === _HighLevelParser (an alias)</dd>
+Parser === _HighLevelParser (an alias)</p>
+</dd>
 </dl>
 <dl class="class">
 <dt id="Cheetah.Parser.ArgList">
-<em class="property">class </em><code class="descclassname">Cheetah.Parser.</code><code class="descname">ArgList</code><a class="headerlink" href="#Cheetah.Parser.ArgList" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">ArgList</code><a class="headerlink" href="#Cheetah.Parser.ArgList" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Used by _LowLevelParser.getArgList()</p>
 <dl class="method">
 <dt id="Cheetah.Parser.ArgList.add_argument">
-<code class="descname">add_argument</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ArgList.add_argument" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_argument</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ArgList.add_argument" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Parser.ArgList.add_default">
-<code class="descname">add_default</code><span class="sig-paren">(</span><em>token</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ArgList.add_default" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_default</code><span class="sig-paren">(</span><em class="sig-param">token</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ArgList.add_default" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Parser.ArgList.merge">
-<code class="descname">merge</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ArgList.merge" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">merge</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ArgList.merge" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.Parser.ArgList.next">
-<code class="descname">next</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ArgList.next" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">next</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ArgList.next" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.Parser.CheetahVariable">
-<em class="property">class </em><code class="descclassname">Cheetah.Parser.</code><code class="descname">CheetahVariable</code><span class="sig-paren">(</span><em>nameChunks</em>, <em>useNameMapper=True</em>, <em>cacheToken=None</em>, <em>rawSource=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.CheetahVariable" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">CheetahVariable</code><span class="sig-paren">(</span><em class="sig-param">nameChunks</em>, <em class="sig-param">useNameMapper=True</em>, <em class="sig-param">cacheToken=None</em>, <em class="sig-param">rawSource=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.CheetahVariable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 
+<dl class="data">
+<dt id="Cheetah.Parser.EOL">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">EOL</code><em class="property"> = '\\r\\n|\\n|\\r'</em><a class="headerlink" href="#Cheetah.Parser.EOL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.EOLZ">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">EOLZ</code><em class="property"> = '\\r\\n|\\n|\\r|\\Z'</em><a class="headerlink" href="#Cheetah.Parser.EOLZ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.EOLre">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">EOLre</code><em class="property"> = re.compile('(?:\\r\\n|\\r|\\n)')</em><a class="headerlink" href="#Cheetah.Parser.EOLre" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="exception">
 <dt id="Cheetah.Parser.ForbiddenDirective">
-<em class="property">exception </em><code class="descclassname">Cheetah.Parser.</code><code class="descname">ForbiddenDirective</code><span class="sig-paren">(</span><em>stream</em>, <em>msg='Invalid Syntax'</em>, <em>extMsg=''</em>, <em>lineno=None</em>, <em>col=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ForbiddenDirective" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">ForbiddenDirective</code><span class="sig-paren">(</span><em class="sig-param">stream</em>, <em class="sig-param">msg='Invalid Syntax'</em>, <em class="sig-param">extMsg=''</em>, <em class="sig-param">lineno=None</em>, <em class="sig-param">col=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ForbiddenDirective" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Parser.ForbiddenSyntax" title="Cheetah.Parser.ForbiddenSyntax"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Parser.ForbiddenSyntax</span></code></a></p>
 </dd></dl>
 
 <dl class="exception">
 <dt id="Cheetah.Parser.ForbiddenExpression">
-<em class="property">exception </em><code class="descclassname">Cheetah.Parser.</code><code class="descname">ForbiddenExpression</code><span class="sig-paren">(</span><em>stream</em>, <em>msg='Invalid Syntax'</em>, <em>extMsg=''</em>, <em>lineno=None</em>, <em>col=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ForbiddenExpression" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">ForbiddenExpression</code><span class="sig-paren">(</span><em class="sig-param">stream</em>, <em class="sig-param">msg='Invalid Syntax'</em>, <em class="sig-param">extMsg=''</em>, <em class="sig-param">lineno=None</em>, <em class="sig-param">col=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ForbiddenExpression" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Parser.ForbiddenSyntax" title="Cheetah.Parser.ForbiddenSyntax"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Parser.ForbiddenSyntax</span></code></a></p>
 </dd></dl>
 
 <dl class="exception">
 <dt id="Cheetah.Parser.ForbiddenSyntax">
-<em class="property">exception </em><code class="descclassname">Cheetah.Parser.</code><code class="descname">ForbiddenSyntax</code><span class="sig-paren">(</span><em>stream</em>, <em>msg='Invalid Syntax'</em>, <em>extMsg=''</em>, <em>lineno=None</em>, <em>col=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ForbiddenSyntax" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">ForbiddenSyntax</code><span class="sig-paren">(</span><em class="sig-param">stream</em>, <em class="sig-param">msg='Invalid Syntax'</em>, <em class="sig-param">extMsg=''</em>, <em class="sig-param">lineno=None</em>, <em class="sig-param">col=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ForbiddenSyntax" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Parser.ParseError" title="Cheetah.Parser.ParseError"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Parser.ParseError</span></code></a></p>
 </dd></dl>
 
+<dl class="data">
+<dt id="Cheetah.Parser.NO_CACHE">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">NO_CACHE</code><em class="property"> = 0</em><a class="headerlink" href="#Cheetah.Parser.NO_CACHE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="exception">
 <dt id="Cheetah.Parser.ParseError">
-<em class="property">exception </em><code class="descclassname">Cheetah.Parser.</code><code class="descname">ParseError</code><span class="sig-paren">(</span><em>stream</em>, <em>msg='Invalid Syntax'</em>, <em>extMsg=''</em>, <em>lineno=None</em>, <em>col=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ParseError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">ParseError</code><span class="sig-paren">(</span><em class="sig-param">stream</em>, <em class="sig-param">msg='Invalid Syntax'</em>, <em class="sig-param">extMsg=''</em>, <em class="sig-param">lineno=None</em>, <em class="sig-param">col=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ParseError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ValueError</span></code></p>
 <dl class="method">
 <dt id="Cheetah.Parser.ParseError.report">
-<code class="descname">report</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ParseError.report" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">report</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ParseError.report" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.Parser.Parser">
-<code class="descclassname">Cheetah.Parser.</code><code class="descname">Parser</code><a class="headerlink" href="#Cheetah.Parser.Parser" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">Parser</code><a class="headerlink" href="#Cheetah.Parser.Parser" title="Permalink to this definition">¶</a></dt>
 <dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Parser._HighLevelParser</span></code></p>
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.Parser.Placeholder">
-<em class="property">class </em><code class="descclassname">Cheetah.Parser.</code><code class="descname">Placeholder</code><span class="sig-paren">(</span><em>nameChunks</em>, <em>useNameMapper=True</em>, <em>cacheToken=None</em>, <em>rawSource=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.Placeholder" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">Placeholder</code><span class="sig-paren">(</span><em class="sig-param">nameChunks</em>, <em class="sig-param">useNameMapper=True</em>, <em class="sig-param">cacheToken=None</em>, <em class="sig-param">rawSource=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.Placeholder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Parser.CheetahVariable" title="Cheetah.Parser.CheetahVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Parser.CheetahVariable</span></code></a></p>
 </dd></dl>
 
+<dl class="data">
+<dt id="Cheetah.Parser.REFRESH_CACHE">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">REFRESH_CACHE</code><em class="property"> = 2</em><a class="headerlink" href="#Cheetah.Parser.REFRESH_CACHE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.SET_GLOBAL">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">SET_GLOBAL</code><em class="property"> = 1</em><a class="headerlink" href="#Cheetah.Parser.SET_GLOBAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.SET_LOCAL">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">SET_LOCAL</code><em class="property"> = 0</em><a class="headerlink" href="#Cheetah.Parser.SET_LOCAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.SET_MODULE">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">SET_MODULE</code><em class="property"> = 2</em><a class="headerlink" href="#Cheetah.Parser.SET_MODULE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.STATIC_CACHE">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">STATIC_CACHE</code><em class="property"> = 1</em><a class="headerlink" href="#Cheetah.Parser.STATIC_CACHE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.WS">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">WS</code><em class="property"> = '[ \\f\\t]*'</em><a class="headerlink" href="#Cheetah.Parser.WS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="function">
 <dt id="Cheetah.Parser.any">
-<code class="descclassname">Cheetah.Parser.</code><code class="descname">any</code><span class="sig-paren">(</span><em>*choices</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.any" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">any</code><span class="sig-paren">(</span><em class="sig-param">*choices</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.any" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.assignOp">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">assignOp</code><em class="property"> = '='</em><a class="headerlink" href="#Cheetah.Parser.assignOp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.assignmentOps">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">assignmentOps</code><em class="property"> = ('=', '+=', '-=', '/=', '*=', '**=', '^=', '%=', '&gt;&gt;=', '&lt;&lt;=', '&amp;=', '|=')</em><a class="headerlink" href="#Cheetah.Parser.assignmentOps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.augAssignOps">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">augAssignOps</code><em class="property"> = ('+=', '-=', '/=', '*=', '**=', '^=', '%=', '&gt;&gt;=', '&lt;&lt;=', '&amp;=', '|=')</em><a class="headerlink" href="#Cheetah.Parser.augAssignOps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.binaryArithOps">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">binaryArithOps</code><em class="property"> = ('+', '-', '/', '//', '%')</em><a class="headerlink" href="#Cheetah.Parser.binaryArithOps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.bitwiseOps">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">bitwiseOps</code><em class="property"> = ('&amp;', '|', '^')</em><a class="headerlink" href="#Cheetah.Parser.bitwiseOps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.booleanOps">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">booleanOps</code><em class="property"> = ('and', 'or', 'not')</em><a class="headerlink" href="#Cheetah.Parser.booleanOps" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="Cheetah.Parser.cachedRegex">
-<code class="descclassname">Cheetah.Parser.</code><code class="descname">cachedRegex</code><span class="sig-paren">(</span><em>pattern</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.cachedRegex" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">cachedRegex</code><span class="sig-paren">(</span><em class="sig-param">pattern</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.cachedRegex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.closurePairs">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">closurePairs</code><em class="property"> = {')': '(', ']': '[', '}': '{'}</em><a class="headerlink" href="#Cheetah.Parser.closurePairs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.closurePairsRev">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">closurePairsRev</code><em class="property"> = {'(': ')', '[': ']', '{': '}'}</em><a class="headerlink" href="#Cheetah.Parser.closurePairsRev" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.compOps">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">compOps</code><em class="property"> = ('&lt;', '&gt;', '==', '!=', '&lt;=', '&gt;=', '&lt;&gt;', 'is', 'in')</em><a class="headerlink" href="#Cheetah.Parser.compOps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.delimeters">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">delimeters</code><em class="property"> = ('(', ')', '{', '}', '[', ']', ',', '.', ':', ';', '=', '`', '+=', '-=', '/=', '*=', '**=', '^=', '%=', '&gt;&gt;=', '&lt;&lt;=', '&amp;=', '|=')</em><a class="headerlink" href="#Cheetah.Parser.delimeters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.directiveNamesAndParsers">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">directiveNamesAndParsers</code><em class="property"> = {'&#64;': 'eatDecorator', 'arg': 'eatCallArg', 'assert': None, 'attr': 'eatAttr', 'block': 'eatBlock', 'break': None, 'breakpoint': 'eatBreakPoint', 'cache': 'eatCache', 'call': 'eatCall', 'capture': 'eatCapture', 'closure': 'eatClosure', 'compiler': 'eatCompiler', 'compiler-settings': 'eatCompilerSettings', 'continue': None, 'def': 'eatDef', 'defmacro': 'eatDefMacro', 'del': None, 'echo': None, 'elif': None, 'else': None, 'encoding': 'eatEncoding', 'end': 'eatEndDirective', 'errorCatcher': 'eatErrorCatcher', 'except': None, 'extends': 'eatExtends', 'filter': 'eatFilter', 'finally': None, 'for': None, 'from': None, 'if': 'eatIf', 'implements': 'eatImplements', 'import': None, 'include': 'eatInclude', 'pass': None, 'raise': None, 'raw': 'eatRaw', 'repeat': None, 'return': None, 'set': 'eatSet', 'shBang': 'eatShbang', 'silent': None, 'slurp': 'eatSlurp', 'stop': None, 'super': 'eatSuper', 'transform': 'eatTransform', 'try': None, 'unless': None, 'while': None, 'yield': None}</em><a class="headerlink" href="#Cheetah.Parser.directiveNamesAndParsers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.double3">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">double3</code><em class="property"> = '&quot;&quot;&quot;'</em><a class="headerlink" href="#Cheetah.Parser.double3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.encodingDirectiveRE">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">encodingDirectiveRE</code><em class="property"> = re.compile('(?:^|\\r\\n|\\r|\\n)\\s*#\\s{0,5}encoding[:\\s]*([-\\w.]*)\\s*(?:\\r\\n|\\r|\\n)', re.MULTILINE)</em><a class="headerlink" href="#Cheetah.Parser.encodingDirectiveRE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.endDirectiveNamesAndHandlers">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">endDirectiveNamesAndHandlers</code><em class="property"> = {'block': None, 'cache': None, 'call': None, 'capture': None, 'closure': None, 'def': 'handleEndDef', 'errorCatcher': None, 'filter': None, 'for': None, 'if': None, 'repeat': None, 'try': None, 'unless': None, 'while': None}</em><a class="headerlink" href="#Cheetah.Parser.endDirectiveNamesAndHandlers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.escCharLookBehind">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">escCharLookBehind</code><em class="property"> = '(?:(?&lt;=\\A)|(?&lt;!\\\\))'</em><a class="headerlink" href="#Cheetah.Parser.escCharLookBehind" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="Cheetah.Parser.escapeRegexChars">
-<code class="descclassname">Cheetah.Parser.</code><code class="descname">escapeRegexChars</code><span class="sig-paren">(</span><em>txt</em>, <em>escapeRE=re.compile('([\\$\\^\\*\\+\\.\\?\\{\\}\\[\\]\\(\\)\\|\\\\])')</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.escapeRegexChars" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">escapeRegexChars</code><span class="sig-paren">(</span><em class="sig-param">txt</em>, <em class="sig-param">escapeRE=re.compile('([\\$\\^\\*\\+\\.\\?\\{\\}\\[\\]\\(\\)\\|\\\\])')</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.escapeRegexChars" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a txt with all special regular expressions chars escaped.</p>
 </dd></dl>
 
+<dl class="data">
+<dt id="Cheetah.Parser.escapedNewlineRE">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">escapedNewlineRE</code><em class="property"> = re.compile('(?&lt;!\\\\)((\\\\\\\\)*)\\\\(n|012)')</em><a class="headerlink" href="#Cheetah.Parser.escapedNewlineRE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="function">
 <dt id="Cheetah.Parser.group">
-<code class="descclassname">Cheetah.Parser.</code><code class="descname">group</code><span class="sig-paren">(</span><em>*choices</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.group" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">group</code><span class="sig-paren">(</span><em class="sig-param">*choices</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.group" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.identRE">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">identRE</code><em class="property"> = re.compile('[a-zA-Z_][a-zA-Z_0-9]*')</em><a class="headerlink" href="#Cheetah.Parser.identRE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.identchars">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">identchars</code><em class="property"> = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_'</em><a class="headerlink" href="#Cheetah.Parser.identchars" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.keywords">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">keywords</code><em class="property"> = ('and', 'del', 'for', 'is', 'raise', 'assert', 'elif', 'from', 'lambda', 'return', 'break', 'else', 'global', 'not', 'try', 'class', 'except', 'if', 'or', 'while', 'continue', 'exec', 'import', 'pass', 'def', 'finally', 'in', 'print')</em><a class="headerlink" href="#Cheetah.Parser.keywords" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="Cheetah.Parser.makeTripleQuoteRe">
-<code class="descclassname">Cheetah.Parser.</code><code class="descname">makeTripleQuoteRe</code><span class="sig-paren">(</span><em>start</em>, <em>end</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.makeTripleQuoteRe" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">makeTripleQuoteRe</code><span class="sig-paren">(</span><em class="sig-param">start</em>, <em class="sig-param">end</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.makeTripleQuoteRe" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="Cheetah.Parser.maybe">
-<code class="descclassname">Cheetah.Parser.</code><code class="descname">maybe</code><span class="sig-paren">(</span><em>*choices</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.maybe" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">maybe</code><span class="sig-paren">(</span><em class="sig-param">*choices</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.maybe" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.nameCharLookAhead">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">nameCharLookAhead</code><em class="property"> = '(?=[A-Za-z_])'</em><a class="headerlink" href="#Cheetah.Parser.nameCharLookAhead" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.namechars">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">namechars</code><em class="property"> = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_0123456789'</em><a class="headerlink" href="#Cheetah.Parser.namechars" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="Cheetah.Parser.namedGroup">
-<code class="descclassname">Cheetah.Parser.</code><code class="descname">namedGroup</code><span class="sig-paren">(</span><em>name</em>, <em>*choices</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.namedGroup" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">namedGroup</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">*choices</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.namedGroup" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="Cheetah.Parser.nongroup">
-<code class="descclassname">Cheetah.Parser.</code><code class="descname">nongroup</code><span class="sig-paren">(</span><em>*choices</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.nongroup" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">nongroup</code><span class="sig-paren">(</span><em class="sig-param">*choices</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.nongroup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.operators">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">operators</code><em class="property"> = ('**', '+', '-', '~', '+', '-', '/', '//', '%', '&gt;&gt;', '&lt;&lt;', '&amp;', '|', '^', '=', '+=', '-=', '/=', '*=', '**=', '^=', '%=', '&gt;&gt;=', '&lt;&lt;=', '&amp;=', '|=', '&lt;', '&gt;', '==', '!=', '&lt;=', '&gt;=', '&lt;&gt;', 'is', 'in', 'and', 'or', 'not')</em><a class="headerlink" href="#Cheetah.Parser.operators" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.powerOp">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">powerOp</code><em class="property"> = '**'</em><a class="headerlink" href="#Cheetah.Parser.powerOp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.pseudoprog">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">pseudoprog</code><em class="property"> = re.compile('[ \\f\\t]*((\\\\\\r?\\n|\\Z|#[^\\r\\n]*|((?:[bB][rR]?|[rR][bB]?|[uU])?\'\'\'|(?:[bB][rR]?|[rR][bB]?|[uU])?&quot;&quot;&quot;))|(([0-9]+[jJ]|(([0-9]+\\.[0-9]*|\\.[0-9]+)([eE][-+]?[0-9]+)?|[0-9]+[eE][-+]?[0-9]+)[jJ]))</em><a class="headerlink" href="#Cheetah.Parser.pseudoprog" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.shiftOps">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">shiftOps</code><em class="property"> = ('&gt;&gt;', '&lt;&lt;')</em><a class="headerlink" href="#Cheetah.Parser.shiftOps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.single3">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">single3</code><em class="property"> = &quot;'''&quot;</em><a class="headerlink" href="#Cheetah.Parser.single3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.specialVarRE">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">specialVarRE</code><em class="property"> = re.compile('([a-zA-z_]+)&#64;')</em><a class="headerlink" href="#Cheetah.Parser.specialVarRE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.tripleQuotedStringPairs">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">tripleQuotedStringPairs</code><em class="property"> = {'&quot;&quot;&quot;': '&quot;&quot;&quot;', &quot;'''&quot;: &quot;'''&quot;, 'R&quot;&quot;&quot;': '&quot;&quot;&quot;', &quot;R'''&quot;: &quot;'''&quot;, 'U&quot;&quot;&quot;': '&quot;&quot;&quot;', &quot;U'''&quot;: &quot;'''&quot;, 'UR&quot;&quot;&quot;': '&quot;&quot;&quot;', &quot;UR'''&quot;: &quot;'''&quot;, 'Ur&quot;&quot;&quot;': '&quot;&quot;&quot;', &quot;Ur'''&quot;: &quot;'''&quot;, 'r&quot;&quot;&quot;': '&quot;&quot;&quot;', &quot;r'''&quot;: &quot;'''&quot;, 'u&quot;&quot;&quot;': '&quot;&quot;&quot;', &quot;u'''&quot;: &quot;'''&quot;, 'uR&quot;&quot;&quot;': '&quot;&quot;&quot;', &quot;uR'''&quot;: &quot;'''&quot;, 'ur&quot;&quot;&quot;': '&quot;&quot;&quot;', &quot;ur'''&quot;: &quot;'''&quot;}</em><a class="headerlink" href="#Cheetah.Parser.tripleQuotedStringPairs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.tripleQuotedStringREs">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">tripleQuotedStringREs</code><em class="property"> = {'&quot;&quot;&quot;': re.compile('(?:&quot;&quot;&quot;).*?(?:&quot;&quot;&quot;)', re.DOTALL), &quot;'''&quot;: re.compile(&quot;(?:''').*?(?:''')&quot;, re.DOTALL), 'R&quot;&quot;&quot;': re.compile('(?:R&quot;&quot;&quot;).*?(?:&quot;&quot;&quot;)', re.DOTALL), &quot;R'''&quot;: re.compile(&quot;(?:R''').*?(?:''')&quot;, re.DOTALL), 'U&quot;&quot;&quot;': re.compile('(?:U&quot;&quot;&quot;).*?(?:&quot;&quot;&quot;)', re.DOTALL), &quot;U'''&quot;: re.compile(&quot;(?:U''').*?(?:''')&quot;, re.DOTALL), 'UR&quot;&quot;&quot;': re.compile('(?:UR&quot;&quot;&quot;).*?(?:&quot;&quot;&quot;)', re.DOTALL), &quot;UR'''&quot;: re.compile(&quot;(?:UR''').*?(?:''')&quot;, re.DOTALL), 'Ur&quot;&quot;&quot;': re.compile('(?:Ur&quot;&quot;&quot;).*?(?:&quot;&quot;&quot;)', re.DOTALL), &quot;Ur'''&quot;: re.compile(&quot;(?:Ur''').*?(?:''')&quot;, re.DOTALL), 'r&quot;&quot;&quot;': re.compile('(?:r&quot;&quot;&quot;).*?(?:&quot;&quot;&quot;)', re.DOTALL), &quot;r'''&quot;: re.compile(&quot;(?:r''').*?(?:''')&quot;, re.DOTALL), 'u&quot;&quot;&quot;': re.compile('(?:u&quot;&quot;&quot;).*?(?:&quot;&quot;&quot;)', re.DOTALL), &quot;u'''&quot;: re.compile(&quot;(?:u''').*?(?:''')&quot;, re.DOTALL), 'uR&quot;&quot;&quot;': re.compile('(?:uR&quot;&quot;&quot;).*?(?:&quot;&quot;&quot;)', re.DOTALL), &quot;uR'''&quot;: re.compile(&quot;(?:uR''').*?(?:''')&quot;, re.DOTALL), 'ur&quot;&quot;&quot;': re.compile('(?:ur&quot;&quot;&quot;).*?(?:&quot;&quot;&quot;)', re.DOTALL), &quot;ur'''&quot;: re.compile(&quot;(?:ur''').*?(?:''')&quot;, re.DOTALL)}</em><a class="headerlink" href="#Cheetah.Parser.tripleQuotedStringREs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.tripleQuotedStringStarts">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">tripleQuotedStringStarts</code><em class="property"> = (&quot;'''&quot;, '&quot;&quot;&quot;', &quot;r'''&quot;, 'r&quot;&quot;&quot;', &quot;R'''&quot;, 'R&quot;&quot;&quot;', &quot;u'''&quot;, 'u&quot;&quot;&quot;', &quot;U'''&quot;, 'U&quot;&quot;&quot;', &quot;ur'''&quot;, 'ur&quot;&quot;&quot;', &quot;Ur'''&quot;, 'Ur&quot;&quot;&quot;', &quot;uR'''&quot;, 'uR&quot;&quot;&quot;', &quot;UR'''&quot;, 'UR&quot;&quot;&quot;')</em><a class="headerlink" href="#Cheetah.Parser.tripleQuotedStringStarts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.unaryArithOps">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">unaryArithOps</code><em class="property"> = ('+', '-', '~')</em><a class="headerlink" href="#Cheetah.Parser.unaryArithOps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="Cheetah.Parser.unicodeDirectiveRE">
+<code class="sig-prename descclassname">Cheetah.Parser.</code><code class="sig-name descname">unicodeDirectiveRE</code><em class="property"> = re.compile('(?:^|\\r\\n|\\r|\\n)\\s*#\\s{0,5}unicode[:\\s]*([-\\w.]*)\\s*(?:\\r\\n|\\r|\\n)', re.MULTILINE)</em><a class="headerlink" href="#Cheetah.Parser.unicodeDirectiveRE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -205,8 +411,8 @@ Parser === _HighLevelParser (an alias)</dd>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2019, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 10, 2019.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+      Last updated on Sep 22, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0.
     </div>
   </body>
 </html>

@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>non-Webware HTML output &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -63,13 +61,11 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -146,14 +142,14 @@ was originally written for Webware servlets, it now handles CGI
 scripts too. There are a couple behavioral differences between CGI
 scripts and Webware servlets regarding input variables:</p>
 <ol class="arabic simple">
-<li>CGI scripts, using Python’s {cgi} module, believe
+<li><p>CGI scripts, using Python’s {cgi} module, believe
 {REQUEST_METHOD} and recognize { either} GET variables { or} POST
 variables, not both. Webware servlets, doing additional processing,
-ignore {REQUEST_METHOD} and recognize both, like PHP does.</li>
-<li>Webware servlets can ask for cookies or session variables
+ignore {REQUEST_METHOD} and recognize both, like PHP does.</p></li>
+<li><p>Webware servlets can ask for cookies or session variables
 instead of GET/POST variables, by passing the argument {src=’c’} or
 {src=’s’}. CGI scripts get a {RuntimeError} if they try to do
-this.</li>
+this.</p></li>
 </ol>
 <p>If you keep your .tmpl files in the same directory as your CGI
 scripts, make sure they don’t have execute permission. Apache at
@@ -189,8 +185,8 @@ don’t have execute permission.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2019, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 10, 2019.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+      Last updated on Sep 22, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0.
     </div>
   </body>
 </html>

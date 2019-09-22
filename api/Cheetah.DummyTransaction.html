@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Cheetah.DummyTransaction module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -39,13 +37,11 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -67,52 +63,52 @@ Webware servlet.</p>
 specific DummyTransaction or DummyResponse behavior</p>
 <dl class="class">
 <dt id="Cheetah.DummyTransaction.DummyResponse">
-<em class="property">class </em><code class="descclassname">Cheetah.DummyTransaction.</code><code class="descname">DummyResponse</code><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponse" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.DummyTransaction.</code><code class="sig-name descname">DummyResponse</code><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A dummy Response class is used by Cheetah in place of real Webware
 Response objects when the Template obj is not used directly as a Webware
 servlet</p>
 <dl class="method">
 <dt id="Cheetah.DummyTransaction.DummyResponse.flush">
-<code class="descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponse.flush" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponse.flush" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.DummyTransaction.DummyResponse.getvalue">
-<code class="descname">getvalue</code><span class="sig-paren">(</span><em>outputChunks=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponse.getvalue" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getvalue</code><span class="sig-paren">(</span><em class="sig-param">outputChunks=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponse.getvalue" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.DummyTransaction.DummyResponse.safeConvert">
-<code class="descname">safeConvert</code><span class="sig-paren">(</span><em>chunk</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponse.safeConvert" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">safeConvert</code><span class="sig-paren">(</span><em class="sig-param">chunk</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponse.safeConvert" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.DummyTransaction.DummyResponse.write">
-<code class="descname">write</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponse.write" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">write</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponse.write" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.DummyTransaction.DummyResponse.writelines">
-<code class="descname">writelines</code><span class="sig-paren">(</span><em>*lines</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponse.writelines" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">writelines</code><span class="sig-paren">(</span><em class="sig-param">*lines</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponse.writelines" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.DummyTransaction.DummyResponse.writeln">
-<code class="descname">writeln</code><span class="sig-paren">(</span><em>txt</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponse.writeln" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">writeln</code><span class="sig-paren">(</span><em class="sig-param">txt</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponse.writeln" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="exception">
 <dt id="Cheetah.DummyTransaction.DummyResponseFailure">
-<em class="property">exception </em><code class="descclassname">Cheetah.DummyTransaction.</code><code class="descname">DummyResponseFailure</code><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponseFailure" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-prename descclassname">Cheetah.DummyTransaction.</code><code class="sig-name descname">DummyResponseFailure</code><a class="headerlink" href="#Cheetah.DummyTransaction.DummyResponseFailure" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.DummyTransaction.DummyTransaction">
-<em class="property">class </em><code class="descclassname">Cheetah.DummyTransaction.</code><code class="descname">DummyTransaction</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyTransaction" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.DummyTransaction.</code><code class="sig-name descname">DummyTransaction</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyTransaction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A dummy Transaction class is used by Cheetah in place of real Webware
 transactions when the Template obj is not used directly as a Webware
@@ -121,29 +117,29 @@ servlet.</p>
 attributes make no sense in this context.</p>
 <dl class="method">
 <dt id="Cheetah.DummyTransaction.DummyTransaction.response">
-<code class="descname">response</code><span class="sig-paren">(</span><em>resp=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyTransaction.response" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">response</code><span class="sig-paren">(</span><em class="sig-param">resp=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.DummyTransaction.response" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.DummyTransaction.TransformerResponse">
-<em class="property">class </em><code class="descclassname">Cheetah.DummyTransaction.</code><code class="descname">TransformerResponse</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.TransformerResponse" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.DummyTransaction.</code><code class="sig-name descname">TransformerResponse</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.TransformerResponse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.DummyTransaction.DummyResponse" title="Cheetah.DummyTransaction.DummyResponse"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.DummyTransaction.DummyResponse</span></code></a></p>
 <dl class="method">
 <dt id="Cheetah.DummyTransaction.TransformerResponse.getvalue">
-<code class="descname">getvalue</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.TransformerResponse.getvalue" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getvalue</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.TransformerResponse.getvalue" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.DummyTransaction.TransformerTransaction">
-<em class="property">class </em><code class="descclassname">Cheetah.DummyTransaction.</code><code class="descname">TransformerTransaction</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.TransformerTransaction" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.DummyTransaction.</code><code class="sig-name descname">TransformerTransaction</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.TransformerTransaction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="method">
 <dt id="Cheetah.DummyTransaction.TransformerTransaction.response">
-<code class="descname">response</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.TransformerTransaction.response" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">response</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DummyTransaction.TransformerTransaction.response" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -170,8 +166,8 @@ attributes make no sense in this context.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2019, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 10, 2019.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+      Last updated on Sep 22, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0.
     </div>
   </body>
 </html>

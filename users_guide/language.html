@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Language Overview &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -77,13 +75,11 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -135,84 +131,94 @@ don’t need the backslash.</p>
 <div class="section" id="language-constructs-summary">
 <h2>Language Constructs - Summary<a class="headerlink" href="#language-constructs-summary" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Comments and documentation strings<ol class="arabic">
-<li>{## single line}</li>
-<li>{#* multi line *#}</li>
+<li><p>Comments and documentation strings</p>
+<ol class="arabic simple">
+<li><p>{## single line}</p></li>
+<li><p>{#* multi line *#}</p></li>
 </ol>
 </li>
-<li>Generation, caching and filtering of output<ol class="arabic">
-<li>plain text</li>
-<li>look up a value: {$placeholder}</li>
-<li>evaluate an expression: {#echo} …</li>
-<li>same but discard the output: {#silent} …</li>
-<li>one-line if: {#if EXPR then EXPR else EXPR}</li>
-<li>gobble the EOL: {#slurp}</li>
-<li>parsed file includes: {#include} …</li>
-<li>raw file includes: {#include raw} …</li>
-<li>verbatim output of Cheetah code: {#raw} … {#end raw}</li>
-<li>cached placeholders: {$*var}, {$*&lt;interval&gt;*var}</li>
-<li>cached regions: {#cache} … {#end cache}</li>
-<li>set the output filter: {#filter} …</li>
-<li>control output indentation: {#indent} … ({ not implemented
-yet})</li>
+<li><p>Generation, caching and filtering of output</p>
+<ol class="arabic simple">
+<li><p>plain text</p></li>
+<li><p>look up a value: {$placeholder}</p></li>
+<li><p>evaluate an expression: {#echo} …</p></li>
+<li><p>same but discard the output: {#silent} …</p></li>
+<li><p>one-line if: {#if EXPR then EXPR else EXPR}</p></li>
+<li><p>gobble the EOL: {#slurp}</p></li>
+<li><p>parsed file includes: {#include} …</p></li>
+<li><p>raw file includes: {#include raw} …</p></li>
+<li><p>verbatim output of Cheetah code: {#raw} … {#end raw}</p></li>
+<li><p>cached placeholders: {$*var}, {$*&lt;interval&gt;*var}</p></li>
+<li><p>cached regions: {#cache} … {#end cache}</p></li>
+<li><p>set the output filter: {#filter} …</p></li>
+<li><p>control output indentation: {#indent} … ({ not implemented
+yet})</p></li>
 </ol>
 </li>
-<li>Importing Python modules and objects: {#import} …, {#from}
-…</li>
-<li>Inheritance<ol class="arabic">
-<li>set the base class to inherit from: {#extends}</li>
-<li>set the name of the main method to implement: {#implements}
-…</li>
+<li><p>Importing Python modules and objects: {#import} …, {#from}
+…</p></li>
+<li><p>Inheritance</p>
+<ol class="arabic simple">
+<li><p>set the base class to inherit from: {#extends}</p></li>
+<li><p>set the name of the main method to implement: {#implements}
+…</p></li>
 </ol>
 </li>
-<li>Compile-time declaration<ol class="arabic">
-<li>define class attributes: {#attr} …</li>
-<li>define class methods: {#def} … {#end def}</li>
-<li>{#block} … {#end block} provides a simplified interface to
-{#def} … {#end def}</li>
+<li><p>Compile-time declaration</p>
+<ol class="arabic simple">
+<li><p>define class attributes: {#attr} …</p></li>
+<li><p>define class methods: {#def} … {#end def}</p></li>
+<li><p>{#block} … {#end block} provides a simplified interface to
+{#def} … {#end def}</p></li>
 </ol>
 </li>
-<li>Run-time assignment<ol class="arabic">
-<li>local vars: {#set} …</li>
-<li>global vars: {#set global} …</li>
-<li>deleting local vars: {#del} …</li>
+<li><p>Run-time assignment</p>
+<ol class="arabic simple">
+<li><p>local vars: {#set} …</p></li>
+<li><p>global vars: {#set global} …</p></li>
+<li><p>deleting local vars: {#del} …</p></li>
 </ol>
 </li>
-<li>Flow control<ol class="arabic">
-<li>{#if} … {#else} … {#else if} (aka {#elif}) … {#end if}</li>
-<li>{#unless} … {#end unless}</li>
-<li>{#for} … {#end for}</li>
-<li>{#repeat} … {#end repeat}</li>
-<li>{#while} … {#end while}</li>
-<li>{#break}</li>
-<li>{#continue}</li>
-<li>{#pass}</li>
-<li>{#stop}</li>
+<li><p>Flow control</p>
+<ol class="arabic simple">
+<li><p>{#if} … {#else} … {#else if} (aka {#elif}) … {#end if}</p></li>
+<li><p>{#unless} … {#end unless}</p></li>
+<li><p>{#for} … {#end for}</p></li>
+<li><p>{#repeat} … {#end repeat}</p></li>
+<li><p>{#while} … {#end while}</p></li>
+<li><p>{#break}</p></li>
+<li><p>{#continue}</p></li>
+<li><p>{#pass}</p></li>
+<li><p>{#stop}</p></li>
 </ol>
 </li>
-<li>error/exception handling<ol class="arabic">
-<li>{#assert}</li>
-<li>{#raise}</li>
-<li>{#try} … {#except} … {#else} … {#end try}</li>
-<li>{#try} … {#finally} … {#end try}</li>
-<li>{#errorCatcher} … set a handler for exceptions raised by
-$placeholder calls.</li>
+<li><p>error/exception handling</p>
+<ol class="arabic simple">
+<li><p>{#assert}</p></li>
+<li><p>{#raise}</p></li>
+<li><p>{#try} … {#except} … {#else} … {#end try}</p></li>
+<li><p>{#try} … {#finally} … {#end try}</p></li>
+<li><p>{#errorCatcher} … set a handler for exceptions raised by
+$placeholder calls.</p></li>
 </ol>
 </li>
-<li>Instructions to the parser/compiler<ol class="arabic">
-<li>{#breakpoint}</li>
-<li>{#compiler-settings} … {#end compiler-settings}</li>
+<li><p>Instructions to the parser/compiler</p>
+<ol class="arabic simple">
+<li><p>{#breakpoint}</p></li>
+<li><p>{#compiler-settings} … {#end compiler-settings}</p></li>
 </ol>
 </li>
-<li>Escape to pure Python code<ol class="arabic">
-<li>evalute expression and print the output: {&lt;%=} … {%&gt;}</li>
-<li>execute code and discard output: {&lt;%} … {%&gt;}</li>
+<li><p>Escape to pure Python code</p>
+<ol class="arabic simple">
+<li><p>evalute expression and print the output: {&lt;%=} … {%&gt;}</p></li>
+<li><p>execute code and discard output: {&lt;%} … {%&gt;}</p></li>
 </ol>
 </li>
-<li>Fine control over Cheetah-generated Python modules<ol class="arabic">
-<li>set the source code encoding of compiled template modules:
-{#encoding}</li>
-<li>set the sh-bang line of compiled template modules: {#shBang}</li>
+<li><p>Fine control over Cheetah-generated Python modules</p>
+<ol class="arabic simple">
+<li><p>set the source code encoding of compiled template modules:
+{#encoding}</p></li>
+<li><p>set the sh-bang line of compiled template modules: {#shBang}</p></li>
 </ol>
 </li>
 </ol>
@@ -222,7 +228,7 @@ chapters.</p>
 <div class="section" id="placeholder-syntax-rules">
 <h2>Placeholder Syntax Rules<a class="headerlink" href="#placeholder-syntax-rules" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p class="first">Placeholders follow the same syntax rules as Python variables
+<li><p>Placeholders follow the same syntax rules as Python variables
 except that they are preceded by {$} (the short form) or enclosed
 in {${}} (the long form). Examples:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$var
@@ -248,16 +254,14 @@ want via the {#compiler} directive.</p>
 placeholders, not in expressions. See section
 language.placeholders.positions for an elaboration on this.</p>
 </li>
-<li><p class="first">To reiterate Python’s rules, placeholders consist of one or more
+<li><p>To reiterate Python’s rules, placeholders consist of one or more
 identifiers separated by periods. Each identifier must start with a
 letter or an underscore, and the subsequent characters must be
 letters, digits or underscores. Any identifier may be followed by
-arguments enclosed in <code class="docutils literal notranslate"><span class="pre">()</span></code> and/or keys/subscripts in <code class="docutils literal notranslate"><span class="pre">[]</span></code>.</p>
-</li>
-<li><p class="first">Identifiers are case sensitive. {$var} does not equal {$Var} or
-{$vAr} or {$VAR}.</p>
-</li>
-<li><p class="first">Arguments inside <code class="docutils literal notranslate"><span class="pre">()</span></code> or <code class="docutils literal notranslate"><span class="pre">[]</span></code> are just like in Python.
+arguments enclosed in <code class="docutils literal notranslate"><span class="pre">()</span></code> and/or keys/subscripts in <code class="docutils literal notranslate"><span class="pre">[]</span></code>.</p></li>
+<li><p>Identifiers are case sensitive. {$var} does not equal {$Var} or
+{$vAr} or {$VAR}.</p></li>
+<li><p>Arguments inside <code class="docutils literal notranslate"><span class="pre">()</span></code> or <code class="docutils literal notranslate"><span class="pre">[]</span></code> are just like in Python.
 Strings may be quoted using any Python quoting style. Each argument
 is an expression and may use any of Python’s expression operators.
 Variables used in argument expressions are placeholders and should
@@ -272,18 +276,15 @@ $myList[$mySubscript]
 </pre></div>
 </div>
 </li>
-<li><p class="first">Trailing periods are ignored. Cheetah will recognize that the
+<li><p>Trailing periods are ignored. Cheetah will recognize that the
 placeholder name in {$varName.} is {varName}, and the period will
-be left alone in the template output.</p>
-</li>
-<li><p class="first">The syntax {${placeholderName, arg1=”val1”}} passes arguments to
+be left alone in the template output.</p></li>
+<li><p>The syntax {${placeholderName, arg1=”val1”}} passes arguments to
 the output filter (see {#filter}, section output.filter. The braces
 and comma are required in this case. It’s conventional to omit the
-{$} before the keyword arguments (i.e. {arg1}) in this case.</p>
-</li>
-<li><p class="first">Cheetah ignores all dollar signs ({$}) that are not followed by
-a letter or an underscore.</p>
-</li>
+{$} before the keyword arguments (i.e. {arg1}) in this case.</p></li>
+<li><p>Cheetah ignores all dollar signs ({$}) that are not followed by
+a letter or an underscore.</p></li>
 </ul>
 <p>The following are valid $placeholders:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$a $_ $var $_var $var1 $_1var $var2_ $dict.key $list[3]
@@ -317,13 +318,14 @@ LVALUE.</p>
 is shown in {courier}, expression position is { italic}, and LVALUE
 position is { bold}.</p>
 <blockquote>
-<div>#for { $count} in { $range}({ $ninetyNine}, 0, -1)
+<div><p>#for { $count} in { $range}({ $ninetyNine}, 0, -1)
 #set { $after} = { $count} - 1
 {$count} bottles of beer on the wall. {$count} bottles of beer!
 Take one down, pass it around. {$after} bottles of beer on the
 wall.
 #end for
-{$hex}({ $myVar}, { $default}={ None})</div></blockquote>
+{$hex}({ $myVar}, { $default}={ None})</p>
+</div></blockquote>
 <p>The output of course is:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>99 bottles of beer on the wall.  99 bottles of beer!
     Take one down, pass it around.  98 bottles of beer on the wall.
@@ -454,12 +456,12 @@ Our previous example can be further simplified to:</p>
 <p>where ‘c’ is a key in the dictionary that a.b() returns.</p>
 <p>Further notes:</p>
 <ul class="simple">
-<li>When Cheetah autocalls a function/method, it calls it without
+<li><p>When Cheetah autocalls a function/method, it calls it without
 any arguments. Thus, the function/method must have been declared
 without arguments (except {self} for methods) or to provide default
 values for all arguments. If the function requires arguments, you
-must use the {()}.</li>
-<li>Cheetah autocalls only functions and methods. Classes and other
+must use the {()}.</p></li>
+<li><p>Cheetah autocalls only functions and methods. Classes and other
 callable objects are not autocalled. The reason is that the primary
 purpose of a function/method is to call it, whereas the primary
 purpose of an instance is to look up its attributes or call its
@@ -470,11 +472,11 @@ Do we want to look up {fname} in the namespace of {myInstance} or
 in the namespace of whatever {myinstance} returns? It could go
 either way, so Cheetah follows the principle of least surprise. If
 you { do} want to call the instance, put the {()} on, or rename the
-{.__call__()} method to {.__str__}.</li>
-<li>Autocalling can be disabled via Cheetah’s ‘useAutocalling’
+{.__call__()} method to {.__str__}.</p></li>
+<li><p>Autocalling can be disabled via Cheetah’s ‘useAutocalling’
 compiler setting. You can also disable it for one placeholder by
 using the syntax {$getVar(‘varName’, ‘default value’, False)}.
-({.getVar()} works only with searchList values.)</li>
+({.getVar()} works only with searchList values.)</p></li>
 </ul>
 </div>
 </div>
@@ -483,22 +485,23 @@ using the syntax {$getVar(‘varName’, ‘default value’, False)}.
 <p>When Cheetah maps a variable name in a template to a Python value,
 it searches several namespaces in order:</p>
 <ol class="arabic simple">
-<li>{ Local variables:} created by {#set}, {#for}, or predefined by
-Cheetah.</li>
-<li>The { searchList}, consisting of:<ol class="arabic">
-<li>{#set global} variables.</li>
-<li>The { searchList} containers you passed to the {Template}
-constructor, if any.</li>
-<li>The { Template instance} (“self”). This contains any attributes
+<li><p>{ Local variables:} created by {#set}, {#for}, or predefined by
+Cheetah.</p></li>
+<li><p>The { searchList}, consisting of:</p>
+<ol class="arabic simple">
+<li><p>{#set global} variables.</p></li>
+<li><p>The { searchList} containers you passed to the {Template}
+constructor, if any.</p></li>
+<li><p>The { Template instance} (“self”). This contains any attributes
 you assigned, {#def} methods and {#block methods},
 attributes/methods inherited via {#extends}, and other
 attributes/methods built into {Template} or inherited by it
-(there’s a list of all these methods in section tips.allMethods).</li>
+(there’s a list of all these methods in section tips.allMethods).</p></li>
 </ol>
 </li>
-<li>{ Python globals:} created by {#import}, {#from … import}, or
-otherwise predefined by Cheetah.</li>
-<li>{ Python builtins:} {None}, {max}, etc.</li>
+<li><p>{ Python globals:} created by {#import}, {#from … import}, or
+otherwise predefined by Cheetah.</p></li>
+<li><p>{ Python builtins:} {None}, {max}, etc.</p></li>
 </ol>
 <p>The first matching name found is used.</p>
 <p>Remember, these namespaces apply only to the { first} identifier
@@ -688,8 +691,8 @@ on one line, it can be hard to read.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2019, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 10, 2019.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+      Last updated on Sep 22, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0.
     </div>
   </body>
 </html>

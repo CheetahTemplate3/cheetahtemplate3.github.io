@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Getting Started &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -68,13 +66,11 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -104,18 +100,18 @@ available.</p>
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>To install Cheetah in your system-wide Python library:</p>
 <ol class="arabic simple">
-<li>Login as a user with privileges to install system-wide Python
+<li><p>Login as a user with privileges to install system-wide Python
 packages. On POSIX systems (AIX, Solaris, Linux, IRIX, etc.), the
 command is normally ‘su root’. On non-POSIX systems such as Windows
-NT, login as an administrator.</li>
-<li>Run {pip install Cheetah3} at the command prompt.</li>
-<li>Or download source code and run {python setup.py install}.</li>
-<li>The setup program will install the wrapper script { cheetah} to
+NT, login as an administrator.</p></li>
+<li><p>Run {pip install Cheetah3} at the command prompt.</p></li>
+<li><p>Or download source code and run {python setup.py install}.</p></li>
+<li><p>The setup program will install the wrapper script { cheetah} to
 wherever it usually puts Python binaries (“/usr/bin/”, “bin/” in
-the Python install directory, etc.)</li>
-<li>If you cannot login as as an administrator install Cheetah as user to your
+the Python install directory, etc.)</p></li>
+<li><p>If you cannot login as as an administrator install Cheetah as user to your
 own home directory: add option {–user} to commands: either
-{pip install –user Cheetah3} or {python setup.py install –user}.</li>
+{pip install –user Cheetah3} or {python setup.py install –user}.</p></li>
 </ol>
 <p>Cheetah’s installation is managed by Python’s Distribution
 Utilities (‘distutils’). There are many options for customization.
@@ -201,10 +197,10 @@ the current directory doesn’t work.</p>
 with a copy of the test output and the following details about your
 installation:</p>
 <ol class="arabic simple">
-<li>your version of Cheetah</li>
-<li>your version of Python</li>
-<li>your operating system</li>
-<li>whether you have changed anything in the Cheetah installation</li>
+<li><p>your version of Cheetah</p></li>
+<li><p>your version of Python</p></li>
+<li><p>your operating system</p></li>
+<li><p>whether you have changed anything in the Cheetah installation</p></li>
 </ol>
 </div>
 <div class="section" id="quickstart-tutorial">
@@ -334,8 +330,8 @@ provide a template definition since it was already established:</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2019, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 10, 2019.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+      Last updated on Sep 22, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0.
     </div>
   </body>
 </html>

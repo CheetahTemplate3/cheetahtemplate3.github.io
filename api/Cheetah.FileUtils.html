@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Cheetah.FileUtils module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -39,13 +37,11 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -62,29 +58,29 @@
 <span id="cheetah-fileutils-module"></span><h1>Cheetah.FileUtils module<a class="headerlink" href="#module-Cheetah.FileUtils" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="Cheetah.FileUtils.FileFinder">
-<em class="property">class </em><code class="descclassname">Cheetah.FileUtils.</code><code class="descname">FileFinder</code><span class="sig-paren">(</span><em>rootPath</em>, <em>globPatterns=('*'</em>, <em>)</em>, <em>ignoreBasenames=('CVS'</em>, <em>'.svn')</em>, <em>ignoreDirs=()</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.FileFinder" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.FileUtils.</code><code class="sig-name descname">FileFinder</code><span class="sig-paren">(</span><em class="sig-param">rootPath</em>, <em class="sig-param">globPatterns=('*'</em>, <em class="sig-param">)</em>, <em class="sig-param">ignoreBasenames=('CVS'</em>, <em class="sig-param">'.svn')</em>, <em class="sig-param">ignoreDirs=()</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.FileFinder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Traverses a directory tree and finds all files in it that match one of
 the specified glob patterns.</p>
 <dl class="method">
 <dt id="Cheetah.FileUtils.FileFinder.files">
-<code class="descname">files</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.FileFinder.files" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">files</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.FileFinder.files" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.FileUtils.FileFinder.filterDir">
-<code class="descname">filterDir</code><span class="sig-paren">(</span><em>baseName</em>, <em>fullPath</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.FileFinder.filterDir" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">filterDir</code><span class="sig-paren">(</span><em class="sig-param">baseName</em>, <em class="sig-param">fullPath</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.FileFinder.filterDir" title="Permalink to this definition">¶</a></dt>
 <dd><p>A hook for filtering out certain dirs.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.FileUtils.FileFinder.processDir">
-<code class="descname">processDir</code><span class="sig-paren">(</span><em>dir</em>, <em>glob=&lt;function glob&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.FileFinder.processDir" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">processDir</code><span class="sig-paren">(</span><em class="sig-param">dir</em>, <em class="sig-param">glob=&lt;function glob&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.FileFinder.processDir" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.FileUtils.FileFinder.walkDirTree">
-<code class="descname">walkDirTree</code><span class="sig-paren">(</span><em>dir='.'</em>, <em>listdir=&lt;built-in function listdir&gt;</em>, <em>isdir=&lt;function isdir&gt;</em>, <em>join=&lt;function join&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.FileFinder.walkDirTree" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">walkDirTree</code><span class="sig-paren">(</span><em class="sig-param">dir='.'</em>, <em class="sig-param">listdir=&lt;built-in function listdir&gt;</em>, <em class="sig-param">isdir=&lt;function isdir&gt;</em>, <em class="sig-param">join=&lt;function join&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.FileFinder.walkDirTree" title="Permalink to this definition">¶</a></dt>
 <dd><p>Recursively walk through a directory tree and find matching files</p>
 </dd></dl>
 
@@ -92,7 +88,7 @@ the specified glob patterns.</p>
 
 <dl class="class">
 <dt id="Cheetah.FileUtils.FindAndReplace">
-<em class="property">class </em><code class="descclassname">Cheetah.FileUtils.</code><code class="descname">FindAndReplace</code><span class="sig-paren">(</span><em>files</em>, <em>patternOrRE</em>, <em>replacement</em>, <em>recordResults=True</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.FindAndReplace" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.FileUtils.</code><code class="sig-name descname">FindAndReplace</code><span class="sig-paren">(</span><em class="sig-param">files</em>, <em class="sig-param">patternOrRE</em>, <em class="sig-param">replacement</em>, <em class="sig-param">recordResults=True</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.FindAndReplace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Find and replace all instances of ‘patternOrRE’ with ‘replacement’ for
 each file in the ‘files’ list. This is a multi-file version of re.sub().</p>
@@ -101,40 +97,40 @@ a regex object as generated by the re module. ‘replacement’ can be any
 string that would work with patternOrRE.sub(replacement, fileContents).</p>
 <dl class="method">
 <dt id="Cheetah.FileUtils.FindAndReplace.results">
-<code class="descname">results</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.FindAndReplace.results" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">results</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.FindAndReplace.results" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.FileUtils.SourceFileStats">
-<em class="property">class </em><code class="descclassname">Cheetah.FileUtils.</code><code class="descname">SourceFileStats</code><span class="sig-paren">(</span><em>files</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.SourceFileStats" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">Cheetah.FileUtils.</code><code class="sig-name descname">SourceFileStats</code><span class="sig-paren">(</span><em class="sig-param">files</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.SourceFileStats" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="method">
 <dt id="Cheetah.FileUtils.SourceFileStats.getFileStats">
-<code class="descname">getFileStats</code><span class="sig-paren">(</span><em>fileName</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.SourceFileStats.getFileStats" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getFileStats</code><span class="sig-paren">(</span><em class="sig-param">fileName</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.SourceFileStats.getFileStats" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.FileUtils.SourceFileStats.printStats">
-<code class="descname">printStats</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.SourceFileStats.printStats" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">printStats</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.SourceFileStats.printStats" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.FileUtils.SourceFileStats.rawStats">
-<code class="descname">rawStats</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.SourceFileStats.rawStats" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">rawStats</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.SourceFileStats.rawStats" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.FileUtils.SourceFileStats.summary">
-<code class="descname">summary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.SourceFileStats.summary" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">summary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.SourceFileStats.summary" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="function">
 <dt id="Cheetah.FileUtils.findFiles">
-<code class="descclassname">Cheetah.FileUtils.</code><code class="descname">findFiles</code><span class="sig-paren">(</span><em>*args</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.findFiles" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">Cheetah.FileUtils.</code><code class="sig-name descname">findFiles</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.findFiles" title="Permalink to this definition">¶</a></dt>
 <dd><p>Recursively find all the files matching a glob pattern.</p>
 <p>This function is a wrapper around the FileFinder class.  See its docstring
 for details about the accepted arguments, etc.</p>
@@ -142,7 +138,7 @@ for details about the accepted arguments, etc.</p>
 
 <dl class="function">
 <dt id="Cheetah.FileUtils.replaceRegexInFiles">
-<code class="descclassname">Cheetah.FileUtils.</code><code class="descname">replaceRegexInFiles</code><span class="sig-paren">(</span><em>files</em>, <em>pattern</em>, <em>repl</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.replaceRegexInFiles" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">Cheetah.FileUtils.</code><code class="sig-name descname">replaceRegexInFiles</code><span class="sig-paren">(</span><em class="sig-param">files</em>, <em class="sig-param">pattern</em>, <em class="sig-param">repl</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.replaceRegexInFiles" title="Permalink to this definition">¶</a></dt>
 <dd><p>Replace all instances of regex ‘pattern’ with ‘repl’ for each file in the
 ‘files’ list. Returns a dictionary with data about the matches found.</p>
 <p>This is like re.sub on a multi-file basis.</p>
@@ -152,7 +148,7 @@ docstring for more details.</p>
 
 <dl class="function">
 <dt id="Cheetah.FileUtils.replaceStrInFiles">
-<code class="descclassname">Cheetah.FileUtils.</code><code class="descname">replaceStrInFiles</code><span class="sig-paren">(</span><em>files</em>, <em>theStr</em>, <em>repl</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.replaceStrInFiles" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">Cheetah.FileUtils.</code><code class="sig-name descname">replaceStrInFiles</code><span class="sig-paren">(</span><em class="sig-param">files</em>, <em class="sig-param">theStr</em>, <em class="sig-param">repl</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.FileUtils.replaceStrInFiles" title="Permalink to this definition">¶</a></dt>
 <dd><p>Replace all instances of ‘theStr’ with ‘repl’ for each file in the ‘files’
 list. Returns a dictionary with data about the matches found.</p>
 <p>This is like string.replace() on a multi-file basis.</p>
@@ -182,8 +178,8 @@ docstring for more details.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2019, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 10, 2019.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+      Last updated on Sep 22, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0.
     </div>
   </body>
 </html>
