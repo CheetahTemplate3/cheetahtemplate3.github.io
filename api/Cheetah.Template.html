@@ -7,11 +7,11 @@
     <title>Cheetah.Template module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head><body>
@@ -45,7 +45,7 @@
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -69,21 +69,6 @@ for more information.</p>
 <dt id="Cheetah.Template.Error">
 <em class="property">exception </em><code class="sig-prename descclassname">Cheetah.Template.</code><code class="sig-name descname">Error</code><a class="headerlink" href="#Cheetah.Template.Error" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
-</dd></dl>
-
-<dl class="function">
-<dt id="Cheetah.Template.Lock">
-<code class="sig-prename descclassname">Cheetah.Template.</code><code class="sig-name descname">Lock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Lock" title="Permalink to this definition">¶</a></dt>
-<dd><p>allocate_lock() -&gt; lock object
-(allocate() is an obsolete synonym)</p>
-<p>Create a new lock object. See help(type(threading.Lock())) for
-information about locks.</p>
-</dd></dl>
-
-<dl class="class">
-<dt id="Cheetah.Template.NoneType">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Template.</code><code class="sig-name descname">NoneType</code><a class="headerlink" href="#Cheetah.Template.NoneType" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 
 <dl class="exception">
@@ -193,7 +178,7 @@ like this:</p>
 
 <dl class="attribute">
 <dt id="Cheetah.Template.Template.Reserved_SearchList">
-<code class="sig-name descname">Reserved_SearchList</code><em class="property"> = {'NonNumericInputError', '_CHEETAH_cacheCompilationResults', '_CHEETAH_cacheDirForModuleFiles', '_CHEETAH_cacheModuleFilesForTracebacks', '_CHEETAH_cacheRegionClass', '_CHEETAH_cacheStore', '_CHEETAH_cacheStoreClass', '_CHEETAH_cacheStoreIdPrefix', '_CHEETAH_compileCache', '_CHEETAH_compileLock', '_CHEETAH_compilerClass', '_CHEETAH_compilerInstance', '_CHEETAH_compilerSettings', '_CHEETAH_defaultBaseclassForTemplates', '_CHEETAH_defaultClassNameForTemplates', '_CHEETAH_defaultMainMethodName', '_CHEETAH_defaultMainMethodNameForTemplates', '_CHEETAH_defaultModuleGlobalsForTemplates', '_CHEETAH_defaultModuleNameForTemplates', '_CHEETAH_defaultPreprocessorClass', '_CHEETAH_generatedModuleCode', '_CHEETAH_keepRefToGeneratedCode', '_CHEETAH_preprocessors', '_CHEETAH_requiredCheetahClassAttributes', '_CHEETAH_requiredCheetahClassMethods', '_CHEETAH_requiredCheetahMethods', '_CHEETAH_useCompilationCache', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_addCheetahPlumbingCodeToClass', '_compile', '_createCacheRegion', '_getCacheStore', '_getCacheStoreIdPrefix', '_getCompilerClass', '_getCompilerSettings', '_getTemplateAPIClassForIncludeDirectiveCompilation', '_handleCheetahInclude', '_initCheetahInstance', '_normalizePreprocessorArg', '_normalizePreprocessorSettings', '_preprocessSource', '_updateSettingsWithPreprocessTokens', 'application', 'compile', 'errorCatcher', 'generatedClassCode', 'generatedModuleCode', 'getCacheRegion', 'getCacheRegions', 'getFileContents', 'getVar', 'hasVar', 'i18n', 'refreshCache', 'request', 'respond', 'runAsMainProgram', 'searchList', 'serverSidePath', 'session', 'shutdown', 'sleep', 'subclass', 'transaction', 'varExists', 'webInput'}</em><a class="headerlink" href="#Cheetah.Template.Template.Reserved_SearchList" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">Reserved_SearchList</code><em class="property"> = {'NonNumericInputError', '_CHEETAH_cacheCompilationResults', '_CHEETAH_cacheDirForModuleFiles', '_CHEETAH_cacheModuleFilesForTracebacks', '_CHEETAH_cacheRegionClass', '_CHEETAH_cacheStore', '_CHEETAH_cacheStoreClass', '_CHEETAH_cacheStoreIdPrefix', '_CHEETAH_compileCache', '_CHEETAH_compileLock', '_CHEETAH_compilerClass', '_CHEETAH_compilerInstance', '_CHEETAH_compilerSettings', '_CHEETAH_defaultBaseclassForTemplates', '_CHEETAH_defaultClassNameForTemplates', '_CHEETAH_defaultMainMethodName', '_CHEETAH_defaultMainMethodNameForTemplates', '_CHEETAH_defaultModuleGlobalsForTemplates', '_CHEETAH_defaultModuleNameForTemplates', '_CHEETAH_defaultPreprocessorClass', '_CHEETAH_generatedModuleCode', '_CHEETAH_keepRefToGeneratedCode', '_CHEETAH_preprocessors', '_CHEETAH_requiredCheetahClassAttributes', '_CHEETAH_requiredCheetahClassMethods', '_CHEETAH_requiredCheetahMethods', '_CHEETAH_useCompilationCache', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_addCheetahPlumbingCodeToClass', '_compile', '_createCacheRegion', '_getCacheStore', '_getCacheStoreIdPrefix', '_getCompilerClass', '_getCompilerSettings', '_getTemplateAPIClassForIncludeDirectiveCompilation', '_handleCheetahInclude', '_initCheetahInstance', '_normalizePreprocessorArg', '_normalizePreprocessorSettings', '_preprocessSource', '_updateSettingsWithPreprocessTokens', 'application', 'compile', 'errorCatcher', 'generatedClassCode', 'generatedModuleCode', 'getCacheRegion', 'getCacheRegions', 'getFileContents', 'getVar', 'hasVar', 'i18n', 'refreshCache', 'request', 'respond', 'runAsMainProgram', 'searchList', 'serverSidePath', 'session', 'shutdown', 'sleep', 'subclass', 'transaction', 'varExists', 'webInput'}</em><a class="headerlink" href="#Cheetah.Template.Template.Reserved_SearchList" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -772,12 +757,6 @@ it outputs</p>
 <code class="sig-prename descclassname">Cheetah.Template.</code><code class="sig-name descname">createMethod</code><span class="sig-paren">(</span><em class="sig-param">func</em>, <em class="sig-param">cls</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.createMethod" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
-<dt id="Cheetah.Template.filetype">
-<code class="sig-prename descclassname">Cheetah.Template.</code><code class="sig-name descname">filetype</code><a class="headerlink" href="#Cheetah.Template.filetype" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">io.IOBase</span></code></p>
-</dd></dl>
-
 <dl class="function">
 <dt id="Cheetah.Template.genParserErrorFromPythonException">
 <code class="sig-prename descclassname">Cheetah.Template.</code><code class="sig-name descname">genParserErrorFromPythonException</code><span class="sig-paren">(</span><em class="sig-param">source</em>, <em class="sig-param">file</em>, <em class="sig-param">generatedPyCode</em>, <em class="sig-param">exception</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.genParserErrorFromPythonException" title="Permalink to this definition">¶</a></dt>
@@ -819,9 +798,9 @@ it outputs</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2019, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Sep 22, 2019.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0.
+        &#169; Copyright 2017-2020, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Apr 04, 2020.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
     </div>
   </body>
 </html>
