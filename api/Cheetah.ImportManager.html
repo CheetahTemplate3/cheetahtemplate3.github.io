@@ -1,17 +1,19 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Cheetah.ImportManager module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head><body>
@@ -37,15 +39,17 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3>Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" />
       <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -64,50 +68,50 @@ Python 2.3 <a class="reference external" href="http://www.python.org/peps/pep-03
 <p>This is a hacked/documented version of Gordon McMillan’s iu.py. I have:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>made it a little less terse</p></li>
-<li><p>added docstrings and explanatations</p></li>
-<li><p>standardized the variable naming scheme</p></li>
-<li><p>reorganized the code layout to enhance readability</p></li>
+<li>made it a little less terse</li>
+<li>added docstrings and explanatations</li>
+<li>standardized the variable naming scheme</li>
+<li>reorganized the code layout to enhance readability</li>
 </ul>
 </div></blockquote>
 <dl class="class">
 <dt id="Cheetah.ImportManager.BuiltinImportDirector">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.ImportManager.</code><code class="sig-name descname">BuiltinImportDirector</code><a class="headerlink" href="#Cheetah.ImportManager.BuiltinImportDirector" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">Cheetah.ImportManager.</code><code class="descname">BuiltinImportDirector</code><a class="headerlink" href="#Cheetah.ImportManager.BuiltinImportDirector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.ImportManager.ImportDirector" title="Cheetah.ImportManager.ImportDirector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.ImportManager.ImportDirector</span></code></a></p>
 <p>Directs imports of builtin modules</p>
 <dl class="method">
 <dt id="Cheetah.ImportManager.BuiltinImportDirector.getmod">
-<code class="sig-name descname">getmod</code><span class="sig-paren">(</span><em class="sig-param">nm</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.BuiltinImportDirector.getmod" title="Permalink to this definition">¶</a></dt>
+<code class="descname">getmod</code><span class="sig-paren">(</span><em>nm</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.BuiltinImportDirector.getmod" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.ImportManager.DirOwner">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.ImportManager.</code><code class="sig-name descname">DirOwner</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.DirOwner" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">Cheetah.ImportManager.</code><code class="descname">DirOwner</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.DirOwner" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.ImportManager.Owner" title="Cheetah.ImportManager.Owner"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.ImportManager.Owner</span></code></a></p>
 <dl class="method">
 <dt id="Cheetah.ImportManager.DirOwner.getmod">
-<code class="sig-name descname">getmod</code><span class="sig-paren">(</span><em class="sig-param">nm</em>, <em class="sig-param">getsuffixes=&lt;function get_suffixes&gt;</em>, <em class="sig-param">loadco=&lt;built-in function loads&gt;</em>, <em class="sig-param">newmod=&lt;class 'module'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.DirOwner.getmod" title="Permalink to this definition">¶</a></dt>
+<code class="descname">getmod</code><span class="sig-paren">(</span><em>nm</em>, <em>getsuffixes=&lt;function get_suffixes&gt;</em>, <em>loadco=&lt;built-in function loads&gt;</em>, <em>newmod=&lt;class 'module'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.DirOwner.getmod" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.ImportManager.FrozenImportDirector">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.ImportManager.</code><code class="sig-name descname">FrozenImportDirector</code><a class="headerlink" href="#Cheetah.ImportManager.FrozenImportDirector" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">Cheetah.ImportManager.</code><code class="descname">FrozenImportDirector</code><a class="headerlink" href="#Cheetah.ImportManager.FrozenImportDirector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.ImportManager.ImportDirector" title="Cheetah.ImportManager.ImportDirector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.ImportManager.ImportDirector</span></code></a></p>
 <p>Directs imports of frozen modules</p>
 <dl class="method">
 <dt id="Cheetah.ImportManager.FrozenImportDirector.getmod">
-<code class="sig-name descname">getmod</code><span class="sig-paren">(</span><em class="sig-param">nm</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.FrozenImportDirector.getmod" title="Permalink to this definition">¶</a></dt>
+<code class="descname">getmod</code><span class="sig-paren">(</span><em>nm</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.FrozenImportDirector.getmod" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.ImportManager.ImportDirector">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.ImportManager.</code><code class="sig-name descname">ImportDirector</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.ImportDirector" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">Cheetah.ImportManager.</code><code class="descname">ImportDirector</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.ImportDirector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.ImportManager.Owner" title="Cheetah.ImportManager.Owner"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.ImportManager.Owner</span></code></a></p>
 <p>ImportDirectors live on the metapath There’s one for builtins, one for
 frozen modules, and one for sys.path Windows gets one for modules gotten
@@ -117,16 +121,16 @@ generalization of Owner - their concept of ‘turf’ is broader</p>
 
 <dl class="class">
 <dt id="Cheetah.ImportManager.ImportManager">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.ImportManager.</code><code class="sig-name descname">ImportManager</code><a class="headerlink" href="#Cheetah.ImportManager.ImportManager" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">Cheetah.ImportManager.</code><code class="descname">ImportManager</code><a class="headerlink" href="#Cheetah.ImportManager.ImportManager" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="method">
 <dt id="Cheetah.ImportManager.ImportManager.doimport">
-<code class="sig-name descname">doimport</code><span class="sig-paren">(</span><em class="sig-param">nm</em>, <em class="sig-param">parentnm</em>, <em class="sig-param">fqname</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.ImportManager.doimport" title="Permalink to this definition">¶</a></dt>
+<code class="descname">doimport</code><span class="sig-paren">(</span><em>nm</em>, <em>parentnm</em>, <em>fqname</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.ImportManager.doimport" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.ImportManager.ImportManager.importHook">
-<code class="sig-name descname">importHook</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">globals=None</em>, <em class="sig-param">locals=None</em>, <em class="sig-param">fromlist=None</em>, <em class="sig-param">level=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.ImportManager.importHook" title="Permalink to this definition">¶</a></dt>
+<code class="descname">importHook</code><span class="sig-paren">(</span><em>name</em>, <em>globals=None</em>, <em>locals=None</em>, <em>fromlist=None</em>, <em>level=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.ImportManager.importHook" title="Permalink to this definition">¶</a></dt>
 <dd><p>NOTE: Currently importHook will accept the keyword-argument “level”
 but it will <em>NOT</em> use it. Details about the “level” keyword
 argument can be found here:
@@ -135,24 +139,24 @@ argument can be found here:
 
 <dl class="method">
 <dt id="Cheetah.ImportManager.ImportManager.install">
-<code class="sig-name descname">install</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.ImportManager.install" title="Permalink to this definition">¶</a></dt>
+<code class="descname">install</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.ImportManager.install" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.ImportManager.ImportManager.reloadHook">
-<code class="sig-name descname">reloadHook</code><span class="sig-paren">(</span><em class="sig-param">mod</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.ImportManager.reloadHook" title="Permalink to this definition">¶</a></dt>
+<code class="descname">reloadHook</code><span class="sig-paren">(</span><em>mod</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.ImportManager.reloadHook" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.ImportManager.ImportManager.setThreaded">
-<code class="sig-name descname">setThreaded</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.ImportManager.setThreaded" title="Permalink to this definition">¶</a></dt>
+<code class="descname">setThreaded</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.ImportManager.setThreaded" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.ImportManager.Owner">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.ImportManager.</code><code class="sig-name descname">Owner</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.Owner" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">Cheetah.ImportManager.</code><code class="descname">Owner</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.Owner" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>An Owner does imports from a particular piece of turf That is, there’s
 an Owner for each thing on sys.path There are owners for directories and
@@ -162,58 +166,58 @@ used so that sys.path (or a package’s __path__) is still a bunch of
 strings.</p>
 <dl class="method">
 <dt id="Cheetah.ImportManager.Owner.getmod">
-<code class="sig-name descname">getmod</code><span class="sig-paren">(</span><em class="sig-param">nm</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.Owner.getmod" title="Permalink to this definition">¶</a></dt>
+<code class="descname">getmod</code><span class="sig-paren">(</span><em>nm</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.Owner.getmod" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.ImportManager.PathImportDirector">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.ImportManager.</code><code class="sig-name descname">PathImportDirector</code><span class="sig-paren">(</span><em class="sig-param">pathlist=None</em>, <em class="sig-param">importers=None</em>, <em class="sig-param">ownertypes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.PathImportDirector" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">Cheetah.ImportManager.</code><code class="descname">PathImportDirector</code><span class="sig-paren">(</span><em>pathlist=None</em>, <em>importers=None</em>, <em>ownertypes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.PathImportDirector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.ImportManager.ImportDirector" title="Cheetah.ImportManager.ImportDirector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.ImportManager.ImportDirector</span></code></a></p>
 <p>Directs imports of modules stored on the filesystem.</p>
 <dl class="method">
 <dt id="Cheetah.ImportManager.PathImportDirector.getmod">
-<code class="sig-name descname">getmod</code><span class="sig-paren">(</span><em class="sig-param">nm</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.PathImportDirector.getmod" title="Permalink to this definition">¶</a></dt>
+<code class="descname">getmod</code><span class="sig-paren">(</span><em>nm</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.PathImportDirector.getmod" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.ImportManager.RegistryImportDirector">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.ImportManager.</code><code class="sig-name descname">RegistryImportDirector</code><a class="headerlink" href="#Cheetah.ImportManager.RegistryImportDirector" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">Cheetah.ImportManager.</code><code class="descname">RegistryImportDirector</code><a class="headerlink" href="#Cheetah.ImportManager.RegistryImportDirector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.ImportManager.ImportDirector" title="Cheetah.ImportManager.ImportDirector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.ImportManager.ImportDirector</span></code></a></p>
 <p>Directs imports of modules stored in the Windows Registry</p>
 <dl class="method">
 <dt id="Cheetah.ImportManager.RegistryImportDirector.getmod">
-<code class="sig-name descname">getmod</code><span class="sig-paren">(</span><em class="sig-param">nm</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.RegistryImportDirector.getmod" title="Permalink to this definition">¶</a></dt>
+<code class="descname">getmod</code><span class="sig-paren">(</span><em>nm</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.RegistryImportDirector.getmod" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="function">
 <dt id="Cheetah.ImportManager.getDescr">
-<code class="sig-prename descclassname">Cheetah.ImportManager.</code><code class="sig-name descname">getDescr</code><span class="sig-paren">(</span><em class="sig-param">fnm</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.getDescr" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">Cheetah.ImportManager.</code><code class="descname">getDescr</code><span class="sig-paren">(</span><em>fnm</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.getDescr" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="Cheetah.ImportManager.getPathExt">
-<code class="sig-prename descclassname">Cheetah.ImportManager.</code><code class="sig-name descname">getPathExt</code><span class="sig-paren">(</span><em class="sig-param">fnm</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.getPathExt" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">Cheetah.ImportManager.</code><code class="descname">getPathExt</code><span class="sig-paren">(</span><em>fnm</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.getPathExt" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="Cheetah.ImportManager.nameSplit">
-<code class="sig-prename descclassname">Cheetah.ImportManager.</code><code class="sig-name descname">nameSplit</code><span class="sig-paren">(</span><em class="sig-param">s</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.nameSplit" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">Cheetah.ImportManager.</code><code class="descname">nameSplit</code><span class="sig-paren">(</span><em>s</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.nameSplit" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="Cheetah.ImportManager.packageName">
-<code class="sig-prename descclassname">Cheetah.ImportManager.</code><code class="sig-name descname">packageName</code><span class="sig-paren">(</span><em class="sig-param">s</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.packageName" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">Cheetah.ImportManager.</code><code class="descname">packageName</code><span class="sig-paren">(</span><em>s</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.packageName" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="Cheetah.ImportManager.pathIsDir">
-<code class="sig-prename descclassname">Cheetah.ImportManager.</code><code class="sig-name descname">pathIsDir</code><span class="sig-paren">(</span><em class="sig-param">pathname</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.pathIsDir" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">Cheetah.ImportManager.</code><code class="descname">pathIsDir</code><span class="sig-paren">(</span><em>pathname</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportManager.pathIsDir" title="Permalink to this definition">¶</a></dt>
 <dd><p>Local replacement for os.path.isdir().</p>
 </dd></dl>
 
@@ -239,8 +243,8 @@ strings.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2020, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Apr 04, 2020.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+      Last updated on May 16, 2020.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
     </div>
   </body>
 </html>

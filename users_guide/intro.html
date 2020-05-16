@@ -1,17 +1,19 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Introduction &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Vocabulary" href="glossary.html" />
@@ -77,15 +79,17 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3>Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" />
       <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -115,24 +119,24 @@ viable alternative to ASP, JSP, PHP and PSP are expected to be its
 principle user group.</p>
 <p>Cheetah:</p>
 <ul class="simple">
-<li><p>generates HTML, SGML, XML, SQL, Postscript, form email, LaTeX,
+<li>generates HTML, SGML, XML, SQL, Postscript, form email, LaTeX,
 or any other text-based format. It has also been used to produce
-Python, Java and PHP source code.</p></li>
-<li><p>cleanly separates content, graphic design, and program code.
+Python, Java and PHP source code.</li>
+<li>cleanly separates content, graphic design, and program code.
 This leads to highly modular, flexible, and reusable site
 architectures; faster development time; and HTML and program code
 that is easier to understand and maintain. It is particularly well
-suited for team efforts.</p></li>
-<li><p>blends the power and flexibility of Python with a simple
-template language that non-programmers can understand.</p></li>
-<li><p>gives template writers full access in their templates to any
-Python data structure, module, function, object, or method.</p></li>
-<li><p>makes code reuse easy by providing an object-oriented interface
+suited for team efforts.</li>
+<li>blends the power and flexibility of Python with a simple
+template language that non-programmers can understand.</li>
+<li>gives template writers full access in their templates to any
+Python data structure, module, function, object, or method.</li>
+<li>makes code reuse easy by providing an object-oriented interface
 to templates that is accessible from Python code or other Cheetah
 templates. One template can subclass another and selectively
 reimplement sections of it. A compiled template <strong>is</strong> a Python
-class, so it can subclass a pure Python class and vice-versa.</p></li>
-<li><p>provides a simple yet powerful caching mechanism</p></li>
+class, so it can subclass a pure Python class and vice-versa.</li>
+<li>provides a simple yet powerful caching mechanism</li>
 </ul>
 <p>Like its namesake, Cheetah is fast, flexible and powerful.</p>
 </div>
@@ -140,19 +144,24 @@ class, so it can subclass a pure Python class and vice-versa.</p></li>
 <h2>What is the philosophy behind Cheetah?<a class="headerlink" href="#what-is-the-philosophy-behind-cheetah" title="Permalink to this headline">¶</a></h2>
 <p>Cheetah’s design was guided by these principles:</p>
 <ul>
-<li><p>Python for the back end, Cheetah for the front end. Cheetah was
-designed to complement Python, not replace it.</p></li>
-<li><p>Cheetah’s core syntax should be easy for non-programmers to
-learn.</p></li>
-<li><p>Cheetah should make code reuse easy by providing an
+<li><p class="first">Python for the back end, Cheetah for the front end. Cheetah was
+designed to complement Python, not replace it.</p>
+</li>
+<li><p class="first">Cheetah’s core syntax should be easy for non-programmers to
+learn.</p>
+</li>
+<li><p class="first">Cheetah should make code reuse easy by providing an
 object-oriented interface to templates that is accessible from
-Python code or other Cheetah templates.</p></li>
-<li><p>Python objects, functions, and other data structures should be
-fully accessible in Cheetah.</p></li>
-<li><p>Cheetah should provide flow control and error handling. Logic
+Python code or other Cheetah templates.</p>
+</li>
+<li><p class="first">Python objects, functions, and other data structures should be
+fully accessible in Cheetah.</p>
+</li>
+<li><p class="first">Cheetah should provide flow control and error handling. Logic
 that belongs in the front end shouldn’t be relegated to the back
-end simply because it’s complex.</p></li>
-<li><p>It should be easy to <strong>separate</strong> content, graphic design, and
+end simply because it’s complex.</p>
+</li>
+<li><p class="first">It should be easy to <strong>separate</strong> content, graphic design, and
 program code, but also easy to <strong>integrate</strong>  them.</p>
 <p>A clean separation makes it easier for a team of content writers,
 HTML/graphic designers, and programmers to work together without
@@ -166,16 +175,16 @@ others (i.e., the dreaded “webmaster bottleneck”).</p>
 code separately, it should be easy to integrate them together into
 a website. In particular, it should be easy:</p>
 <ul class="simple">
-<li><p>for <strong>programmers</strong> to create reusable components and functions
-that are accessible and understandable to designers.</p></li>
-<li><p>for <strong>designers</strong> to mark out placeholders for content and
-dynamic components in their templates.</p></li>
-<li><p>for <strong>designers</strong> to soft-code aspects of their design that are
-either repeated in several places or are subject to change.</p></li>
-<li><p>for <strong>designers</strong> to reuse and extend existing templates and thus
-minimize duplication of effort and code.</p></li>
-<li><p>and, of course, for <strong>content writers</strong> to use the templates that
-designers have created.</p></li>
+<li>for <strong>programmers</strong> to create reusable components and functions
+that are accessible and understandable to designers.</li>
+<li>for <strong>designers</strong> to mark out placeholders for content and
+dynamic components in their templates.</li>
+<li>for <strong>designers</strong> to soft-code aspects of their design that are
+either repeated in several places or are subject to change.</li>
+<li>for <strong>designers</strong> to reuse and extend existing templates and thus
+minimize duplication of effort and code.</li>
+<li>and, of course, for <strong>content writers</strong> to use the templates that
+designers have created.</li>
 </ul>
 </li>
 </ul>
@@ -263,12 +272,12 @@ Name: &lt;INPUT TYPE=&quot;text&quot; NAME=&quot;name&quot;&gt;&lt;BR&gt;
 </div>
 <p>To try it out for yourself on a Webware system:</p>
 <ol class="arabic simple">
-<li><p>copy the template definition to a file <strong>test.tmpl</strong> in your
-Webware servlet directory.</p></li>
-<li><p>Run <code class="docutils literal notranslate"><span class="pre">cheetah</span> <span class="pre">compile</span> <span class="pre">test.tmpl</span></code>. This produces <code class="docutils literal notranslate"><span class="pre">test.py</span></code> (a
-.py template module) in the same directory.</p></li>
-<li><p>In your web browser, go to <code class="docutils literal notranslate"><span class="pre">test.py</span></code>, using whatever site and
-directory is appropriate.</p></li>
+<li>copy the template definition to a file <strong>test.tmpl</strong> in your
+Webware servlet directory.</li>
+<li>Run <code class="docutils literal notranslate"><span class="pre">cheetah</span> <span class="pre">compile</span> <span class="pre">test.tmpl</span></code>. This produces <code class="docutils literal notranslate"><span class="pre">test.py</span></code> (a
+.py template module) in the same directory.</li>
+<li>In your web browser, go to <code class="docutils literal notranslate"><span class="pre">test.py</span></code>, using whatever site and
+directory is appropriate.</li>
 </ol>
 <p>At the first request, field ‘name’ will be blank (false) so the
 “#else” portion will execute and present a form. You type your name
@@ -304,12 +313,12 @@ share your experiences, tricks, customizations, and frustrations.</p>
 <p>If you think there is a bug in Cheetah, send a message to the
 e-mail list with the following information:</p>
 <ol class="arabic simple">
-<li><p>a description of what you were trying to do and what happened</p></li>
-<li><p>all tracebacks and error output</p></li>
-<li><p>your version of Cheetah</p></li>
-<li><p>your version of Python</p></li>
-<li><p>your operating system</p></li>
-<li><p>whether you have changed anything in the Cheetah installation</p></li>
+<li>a description of what you were trying to do and what happened</li>
+<li>all tracebacks and error output</li>
+<li>your version of Cheetah</li>
+<li>your version of Python</li>
+<li>your operating system</li>
+<li>whether you have changed anything in the Cheetah installation</li>
 </ol>
 </div>
 <div class="section" id="template-libraries-and-function-libraries">
@@ -380,8 +389,8 @@ of their developers. Thank you.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2020, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Apr 04, 2020.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+      Last updated on May 16, 2020.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
     </div>
   </body>
 </html>

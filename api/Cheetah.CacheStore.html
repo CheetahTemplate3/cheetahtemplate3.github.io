@@ -1,17 +1,19 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Cheetah.CacheStore module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head><body>
@@ -37,15 +39,17 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3>Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" />
       <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -59,128 +63,128 @@
 <p>Provides several CacheStore backends for Cheetah’s caching framework.  The
 methods provided by these classes have the same semantics as those in the
 python-memcached API, except for their return values:</p>
-<dl class="simple">
-<dt>set(key, val, time=0)</dt><dd><p>set the value unconditionally</p>
-</dd>
-<dt>add(key, val, time=0)</dt><dd><p>set only if the server doesn’t already have this key</p>
-</dd>
-<dt>replace(key, val, time=0)</dt><dd><p>set only if the server already have this key</p>
-</dd>
-<dt>get(key, val)</dt><dd><p>returns val or raises a KeyError</p>
-</dd>
-<dt>delete(key)</dt><dd><p>deletes or raises a KeyError</p>
-</dd>
+<dl class="docutils">
+<dt>set(key, val, time=0)</dt>
+<dd>set the value unconditionally</dd>
+<dt>add(key, val, time=0)</dt>
+<dd>set only if the server doesn’t already have this key</dd>
+<dt>replace(key, val, time=0)</dt>
+<dd>set only if the server already have this key</dd>
+<dt>get(key, val)</dt>
+<dd>returns val or raises a KeyError</dd>
+<dt>delete(key)</dt>
+<dd>deletes or raises a KeyError</dd>
 </dl>
 <dl class="class">
 <dt id="Cheetah.CacheStore.AbstractCacheStore">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.CacheStore.</code><code class="sig-name descname">AbstractCacheStore</code><a class="headerlink" href="#Cheetah.CacheStore.AbstractCacheStore" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">Cheetah.CacheStore.</code><code class="descname">AbstractCacheStore</code><a class="headerlink" href="#Cheetah.CacheStore.AbstractCacheStore" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="method">
 <dt id="Cheetah.CacheStore.AbstractCacheStore.add">
-<code class="sig-name descname">add</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">val</em>, <em class="sig-param">time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.AbstractCacheStore.add" title="Permalink to this definition">¶</a></dt>
+<code class="descname">add</code><span class="sig-paren">(</span><em>key</em>, <em>val</em>, <em>time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.AbstractCacheStore.add" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.CacheStore.AbstractCacheStore.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">key</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.AbstractCacheStore.delete" title="Permalink to this definition">¶</a></dt>
+<code class="descname">delete</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.AbstractCacheStore.delete" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.CacheStore.AbstractCacheStore.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">key</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.AbstractCacheStore.get" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.AbstractCacheStore.get" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.CacheStore.AbstractCacheStore.replace">
-<code class="sig-name descname">replace</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">val</em>, <em class="sig-param">time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.AbstractCacheStore.replace" title="Permalink to this definition">¶</a></dt>
+<code class="descname">replace</code><span class="sig-paren">(</span><em>key</em>, <em>val</em>, <em>time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.AbstractCacheStore.replace" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.CacheStore.AbstractCacheStore.set">
-<code class="sig-name descname">set</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">val</em>, <em class="sig-param">time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.AbstractCacheStore.set" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set</code><span class="sig-paren">(</span><em>key</em>, <em>val</em>, <em>time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.AbstractCacheStore.set" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="exception">
 <dt id="Cheetah.CacheStore.Error">
-<em class="property">exception </em><code class="sig-prename descclassname">Cheetah.CacheStore.</code><code class="sig-name descname">Error</code><a class="headerlink" href="#Cheetah.CacheStore.Error" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="descclassname">Cheetah.CacheStore.</code><code class="descname">Error</code><a class="headerlink" href="#Cheetah.CacheStore.Error" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.CacheStore.MemcachedCacheStore">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.CacheStore.</code><code class="sig-name descname">MemcachedCacheStore</code><span class="sig-paren">(</span><em class="sig-param">servers=None</em>, <em class="sig-param">debug=False</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemcachedCacheStore" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">Cheetah.CacheStore.</code><code class="descname">MemcachedCacheStore</code><span class="sig-paren">(</span><em>servers=None</em>, <em>debug=False</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemcachedCacheStore" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.CacheStore.AbstractCacheStore" title="Cheetah.CacheStore.AbstractCacheStore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.CacheStore.AbstractCacheStore</span></code></a></p>
 <dl class="method">
 <dt id="Cheetah.CacheStore.MemcachedCacheStore.add">
-<code class="sig-name descname">add</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">val</em>, <em class="sig-param">time=0</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemcachedCacheStore.add" title="Permalink to this definition">¶</a></dt>
+<code class="descname">add</code><span class="sig-paren">(</span><em>key</em>, <em>val</em>, <em>time=0</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemcachedCacheStore.add" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.CacheStore.MemcachedCacheStore.clear">
-<code class="sig-name descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemcachedCacheStore.clear" title="Permalink to this definition">¶</a></dt>
+<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemcachedCacheStore.clear" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.CacheStore.MemcachedCacheStore.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">key</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemcachedCacheStore.delete" title="Permalink to this definition">¶</a></dt>
+<code class="descname">delete</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemcachedCacheStore.delete" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.CacheStore.MemcachedCacheStore.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">key</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemcachedCacheStore.get" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemcachedCacheStore.get" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.CacheStore.MemcachedCacheStore.replace">
-<code class="sig-name descname">replace</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">val</em>, <em class="sig-param">time=0</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemcachedCacheStore.replace" title="Permalink to this definition">¶</a></dt>
+<code class="descname">replace</code><span class="sig-paren">(</span><em>key</em>, <em>val</em>, <em>time=0</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemcachedCacheStore.replace" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="Cheetah.CacheStore.MemcachedCacheStore.servers">
-<code class="sig-name descname">servers</code><em class="property"> = '127.0.0.1:11211'</em><a class="headerlink" href="#Cheetah.CacheStore.MemcachedCacheStore.servers" title="Permalink to this definition">¶</a></dt>
+<code class="descname">servers</code><em class="property"> = '127.0.0.1:11211'</em><a class="headerlink" href="#Cheetah.CacheStore.MemcachedCacheStore.servers" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.CacheStore.MemcachedCacheStore.set">
-<code class="sig-name descname">set</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">val</em>, <em class="sig-param">time=0</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemcachedCacheStore.set" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set</code><span class="sig-paren">(</span><em>key</em>, <em>val</em>, <em>time=0</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemcachedCacheStore.set" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="Cheetah.CacheStore.MemoryCacheStore">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.CacheStore.</code><code class="sig-name descname">MemoryCacheStore</code><a class="headerlink" href="#Cheetah.CacheStore.MemoryCacheStore" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">Cheetah.CacheStore.</code><code class="descname">MemoryCacheStore</code><a class="headerlink" href="#Cheetah.CacheStore.MemoryCacheStore" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.CacheStore.AbstractCacheStore" title="Cheetah.CacheStore.AbstractCacheStore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.CacheStore.AbstractCacheStore</span></code></a></p>
 <dl class="method">
 <dt id="Cheetah.CacheStore.MemoryCacheStore.add">
-<code class="sig-name descname">add</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">val</em>, <em class="sig-param">time=0</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemoryCacheStore.add" title="Permalink to this definition">¶</a></dt>
+<code class="descname">add</code><span class="sig-paren">(</span><em>key</em>, <em>val</em>, <em>time=0</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemoryCacheStore.add" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.CacheStore.MemoryCacheStore.clear">
-<code class="sig-name descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemoryCacheStore.clear" title="Permalink to this definition">¶</a></dt>
+<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemoryCacheStore.clear" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.CacheStore.MemoryCacheStore.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">key</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemoryCacheStore.delete" title="Permalink to this definition">¶</a></dt>
+<code class="descname">delete</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemoryCacheStore.delete" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.CacheStore.MemoryCacheStore.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">key</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemoryCacheStore.get" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemoryCacheStore.get" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.CacheStore.MemoryCacheStore.replace">
-<code class="sig-name descname">replace</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">val</em>, <em class="sig-param">time=0</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemoryCacheStore.replace" title="Permalink to this definition">¶</a></dt>
+<code class="descname">replace</code><span class="sig-paren">(</span><em>key</em>, <em>val</em>, <em>time=0</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemoryCacheStore.replace" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="Cheetah.CacheStore.MemoryCacheStore.set">
-<code class="sig-name descname">set</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">val</em>, <em class="sig-param">time=0</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemoryCacheStore.set" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set</code><span class="sig-paren">(</span><em>key</em>, <em>val</em>, <em>time=0</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CacheStore.MemoryCacheStore.set" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -207,8 +211,8 @@ python-memcached API, except for their return values:</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2020, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Apr 04, 2020.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+      Last updated on May 16, 2020.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
     </div>
   </body>
 </html>
