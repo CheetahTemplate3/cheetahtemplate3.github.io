@@ -1,19 +1,18 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Basic Inheritance &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Precompiled Templates" href="precompiled.html" />
@@ -35,47 +34,10 @@
           <a href="../documentation.html" title="Cheetah Recipes"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../documentation.html" accesskey="U">Cheetah Recipes</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="../documentation.html" accesskey="U">Cheetah Recipes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Basic Inheritance</a></li> 
       </ul>
-    </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Basic Inheritance</a><ul>
-<li><a class="reference internal" href="#introduction">Introduction</a></li>
-<li><a class="reference internal" href="#cheetah-inheriting-from-python">Cheetah inheriting from Python</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="../documentation.html"
-                        title="previous chapter">Cheetah Recipes</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="precompiled.html"
-                        title="next chapter">Precompiled Templates</a></p>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/recipes/inheritance.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
@@ -99,9 +61,9 @@ directive, with others playing important roles like <cite>#import</cite>, <cite>
 <p>In this recipe/tutorial I intend to explain and define a few key inheritance
 patterns with Cheetah, being:</p>
 <ul class="simple">
-<li>A Cheetah Template inheriting from Python</li>
-<li>Python inheriting from a Cheetah Template</li>
-<li>Cheetah Templates and “<em>mixins</em>”</li>
+<li><p>A Cheetah Template inheriting from Python</p></li>
+<li><p>Python inheriting from a Cheetah Template</p></li>
+<li><p>Cheetah Templates and “<em>mixins</em>”</p></li>
 </ul>
 <p>This document also operates on the assumption that the reader is at least
 somewhat familiar with the basic tenets of object-oriented programming in
@@ -140,7 +102,44 @@ implicitly subclassing from <cite>Cheetah.Template.Template</cite>:</p>
 </div>
 
 
+            <div class="clearer"></div>
           </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Basic Inheritance</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#cheetah-inheriting-from-python">Cheetah inheriting from Python</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../documentation.html"
+                        title="previous chapter">Cheetah Recipes</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="precompiled.html"
+                        title="next chapter">Precompiled Templates</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/recipes/inheritance.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -161,13 +160,14 @@ implicitly subclassing from <cite>Cheetah.Template.Template</cite>:</p>
           <a href="../documentation.html" title="Cheetah Recipes"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../documentation.html" >Cheetah Recipes</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="../documentation.html" >Cheetah Recipes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Basic Inheritance</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2020, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 16, 2020.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+      Last updated on Oct 01, 2020.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>

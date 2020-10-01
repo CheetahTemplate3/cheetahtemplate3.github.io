@@ -6,7 +6,7 @@
                       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://cheetahtemplate.org/</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -16,12 +16,12 @@
  </url>
  <url>
   <loc>https://cheetahtemplate.org/_sources/</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/_sources/api/</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -341,7 +341,7 @@
  </url>
  <url>
   <loc>https://cheetahtemplate.org/_sources/authors.rst.txt</loc>
-  <lastmod>2020-03-12T15:24:27Z</lastmod>
+  <lastmod>2020-09-29T19:31:44Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -351,7 +351,7 @@
  </url>
  <url>
   <loc>https://cheetahtemplate.org/_sources/cheps/</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -371,7 +371,7 @@
  </url>
  <url>
   <loc>https://cheetahtemplate.org/_sources/dev_guide/</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -471,7 +471,7 @@
  </url>
  <url>
   <loc>https://cheetahtemplate.org/_sources/news.rst.txt</loc>
-  <lastmod>2020-05-16T17:30:16Z</lastmod>
+  <lastmod>2020-10-01T13:41:16Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -481,7 +481,7 @@
  </url>
  <url>
   <loc>https://cheetahtemplate.org/_sources/recipes/</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -506,7 +506,7 @@
  </url>
  <url>
   <loc>https://cheetahtemplate.org/_sources/users_guide/</loc>
-  <lastmod>2020-05-16T17:35:51Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -611,617 +611,572 @@
  </url>
  <url>
   <loc>https://cheetahtemplate.org/_static/</loc>
-  <lastmod>2020-05-16T17:35:51Z</lastmod>
-  <priority>0.5000</priority>
- </url>
- <url>
-  <loc>https://cheetahtemplate.org/_static/ajax-loader.gif</loc>
-  <lastmod>2020-05-16T09:40:22Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/_static/basic.css</loc>
-  <lastmod>2020-05-16T17:35:51Z</lastmod>
-  <priority>0.5000</priority>
- </url>
- <url>
-  <loc>https://cheetahtemplate.org/_static/comment-bright.png</loc>
-  <lastmod>2020-05-16T09:40:22Z</lastmod>
-  <priority>0.5000</priority>
- </url>
- <url>
-  <loc>https://cheetahtemplate.org/_static/comment-close.png</loc>
-  <lastmod>2020-05-16T09:40:22Z</lastmod>
-  <priority>0.5000</priority>
- </url>
- <url>
-  <loc>https://cheetahtemplate.org/_static/comment.png</loc>
-  <lastmod>2020-05-16T09:40:22Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/_static/contents.png</loc>
-  <lastmod>2020-05-16T09:40:22Z</lastmod>
+  <lastmod>2020-08-17T23:57:58Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/_static/doctools.js</loc>
-  <lastmod>2020-05-16T09:40:22Z</lastmod>
+  <lastmod>2020-08-17T23:57:58Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/_static/documentation_options.js</loc>
-  <lastmod>2020-05-16T17:35:51Z</lastmod>
-  <priority>0.5000</priority>
- </url>
- <url>
-  <loc>https://cheetahtemplate.org/_static/down-pressed.png</loc>
-  <lastmod>2020-05-16T09:40:22Z</lastmod>
-  <priority>0.5000</priority>
- </url>
- <url>
-  <loc>https://cheetahtemplate.org/_static/down.png</loc>
-  <lastmod>2020-05-16T09:40:22Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/_static/file.png</loc>
-  <lastmod>2020-05-16T09:40:22Z</lastmod>
+  <lastmod>2020-08-17T23:57:58Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>https://cheetahtemplate.org/_static/jquery-3.2.1.js</loc>
-  <lastmod>2020-05-16T09:40:22Z</lastmod>
+  <loc>https://cheetahtemplate.org/_static/jquery-3.5.1.js</loc>
+  <lastmod>2020-08-17T23:57:58Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/_static/jquery.js</loc>
-  <lastmod>2020-05-16T09:40:22Z</lastmod>
+  <lastmod>2020-08-17T23:57:58Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/_static/language_data.js</loc>
-  <lastmod>2020-05-16T17:35:51Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/_static/minus.png</loc>
-  <lastmod>2020-05-16T09:40:22Z</lastmod>
+  <lastmod>2020-08-17T23:57:58Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/_static/navigation.png</loc>
-  <lastmod>2020-05-16T09:40:22Z</lastmod>
+  <lastmod>2020-08-17T23:57:58Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/_static/plus.png</loc>
-  <lastmod>2020-05-16T09:40:22Z</lastmod>
+  <lastmod>2020-08-17T23:57:58Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/_static/pygments.css</loc>
-  <lastmod>2020-05-16T17:35:51Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/_static/searchtools.js</loc>
-  <lastmod>2020-05-16T09:40:22Z</lastmod>
+  <lastmod>2020-08-17T23:57:58Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/_static/sphinxdoc.css</loc>
-  <lastmod>2020-05-16T17:35:51Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/_static/underscore-1.3.1.js</loc>
-  <lastmod>2020-05-16T09:40:22Z</lastmod>
+  <lastmod>2020-08-17T23:57:58Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/_static/underscore.js</loc>
-  <lastmod>2020-05-16T09:40:22Z</lastmod>
-  <priority>0.5000</priority>
- </url>
- <url>
-  <loc>https://cheetahtemplate.org/_static/up-pressed.png</loc>
-  <lastmod>2020-05-16T09:40:22Z</lastmod>
-  <priority>0.5000</priority>
- </url>
- <url>
-  <loc>https://cheetahtemplate.org/_static/up.png</loc>
-  <lastmod>2020-05-16T09:40:22Z</lastmod>
-  <priority>0.5000</priority>
- </url>
- <url>
-  <loc>https://cheetahtemplate.org/_static/websupport.js</loc>
-  <lastmod>2020-05-16T09:40:22Z</lastmod>
+  <lastmod>2020-08-17T23:57:58Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.CacheRegion.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:17Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.CacheStore.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:17Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.CheetahWrapper.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:17Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Compiler.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:17Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.DirectiveAnalyzer.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:17Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Django.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:17Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.DummyTransaction.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:17Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.ErrorCatchers.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:17Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.FileUtils.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:17Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Filters.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:17Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.ImportHooks.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:17Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.ImportManager.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:17Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Macros.I18n.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:17Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Macros.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:17Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.NameMapper.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:17Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Parser.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:17Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Servlet.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:17Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.SettingsManager.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:17Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.SourceReader.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:17Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Template.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:17Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.TemplateCmdLineIface.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:17Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Templates.SkeletonPage.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:17Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Templates.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:17Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tests.Analyzer.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:17Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tests.Boinker.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tests.CheetahWrapper.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tests.Cheps.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tests.Filters.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tests.Misc.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tests.NameMapper.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tests.NameMapper_pure.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tests.Parser.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tests.Performance.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tests.Pinger.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tests.Regressions.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tests.SyntaxAndOutput.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tests.Template.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tests.Test.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tests.Unicode.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tests.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tests.xmlrunner.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tools.CGITemplate.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tools.MondoReport.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tools.RecursiveNull.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tools.SiteHierarchy.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tools.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tools.turbocheetah.cheetahsupport.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tools.turbocheetah.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tools.turbocheetah.tests.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Tools.turbocheetah.tests.test_template.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Unspecified.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Utils.Indenter.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Utils.Misc.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Utils.WebInputMixin.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Utils.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Utils.htmlDecode.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Utils.htmlEncode.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Utils.statprof.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.Version.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.compat.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.convertTmplPathToModuleName.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/Cheetah.html</loc>
-  <lastmod>2020-05-16T17:35:49Z</lastmod>
+  <lastmod>2020-10-01T14:02:32Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/api/modules.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/authors.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/chep.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/cheps/</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/cheps/1_chep.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/cheps/2_import.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/cheps/3_super.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/dev_guide/</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/dev_guide/cache.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/dev_guide/comments.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/dev_guide/design.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/dev_guide/errorHandling.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/dev_guide/flowControl.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/dev_guide/history.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/dev_guide/inheritanceEtc.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/dev_guide/introduction.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/dev_guide/output.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/dev_guide/parserInstructions.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/dev_guide/patching.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/dev_guide/placeholders.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/dev_guide/pyModules.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/dev_guide/safeDelegation.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/developers.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/documentation.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/download.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/genindex.html</loc>
-  <lastmod>2020-05-16T17:35:51Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/news.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/news2.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/py-modindex.html</loc>
-  <lastmod>2020-05-16T17:35:51Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/recipes/</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/recipes/inheritance.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/recipes/precompiled.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/recipes/staticmethod.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/roadmap.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -1231,112 +1186,112 @@
  </url>
  <url>
   <loc>https://cheetahtemplate.org/search.html</loc>
-  <lastmod>2020-05-16T17:35:51Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/searchindex.js</loc>
-  <lastmod>2020-05-16T17:35:51Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/users_guide/</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/users_guide/comments.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/users_guide/comparisons.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/users_guide/editors.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/users_guide/errorHandling.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/users_guide/examples.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/users_guide/flowControl.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:33Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/users_guide/gettingStarted.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/users_guide/glossary.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/users_guide/inheritanceEtc.html</loc>
-  <lastmod>2020-05-16T17:35:50Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/users_guide/intro.html</loc>
-  <lastmod>2020-05-16T17:35:51Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/users_guide/language.html</loc>
-  <lastmod>2020-05-16T17:35:51Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/users_guide/libraries.html</loc>
-  <lastmod>2020-05-16T17:35:51Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/users_guide/links.html</loc>
-  <lastmod>2020-05-16T17:35:51Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/users_guide/nonHtml.html</loc>
-  <lastmod>2020-05-16T17:35:51Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/users_guide/otherHtml.html</loc>
-  <lastmod>2020-05-16T17:35:51Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/users_guide/output.html</loc>
-  <lastmod>2020-05-16T17:35:51Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/users_guide/parserInstructions.html</loc>
-  <lastmod>2020-05-16T17:35:51Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/users_guide/tipsAndTricks.html</loc>
-  <lastmod>2020-05-16T17:35:51Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>https://cheetahtemplate.org/users_guide/webware.html</loc>
-  <lastmod>2020-05-16T17:35:51Z</lastmod>
+  <lastmod>2020-10-01T14:02:34Z</lastmod>
   <priority>0.5000</priority>
  </url>
 </urlset>

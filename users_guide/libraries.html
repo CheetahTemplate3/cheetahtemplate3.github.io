@@ -1,19 +1,18 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Batteries included: templates and other libraries &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Visual Editors" href="editors.html" />
@@ -35,55 +34,10 @@
           <a href="nonHtml.html" title="Non-HTML Output"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User’s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User’s Guide</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Batteries included: templates and other libraries</a></li> 
       </ul>
-    </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Batteries included: templates and other libraries</a><ul>
-<li><a class="reference internal" href="#errorcatchers">ErrorCatchers</a></li>
-<li><a class="reference internal" href="#fileutils">FileUtils</a></li>
-<li><a class="reference internal" href="#filters">Filters</a></li>
-<li><a class="reference internal" href="#settingsmanager">SettingsManager</a></li>
-<li><a class="reference internal" href="#templates">Templates</a></li>
-<li><a class="reference internal" href="#tools">Tools</a></li>
-<li><a class="reference internal" href="#utils">Utils</a><ul>
-<li><a class="reference internal" href="#cheetah-templates-skeletonpage">Cheetah.Templates.SkeletonPage</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="nonHtml.html"
-                        title="previous chapter">Non-HTML Output</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="editors.html"
-                        title="next chapter">Visual Editors</a></p>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/users_guide/libraries.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
@@ -137,20 +91,20 @@ servlets) looks up and treats as a configuration value to modify
 its (the component’s) behaviour.</p>
 <p>SettingsManager is designed to:</p>
 <ul class="simple">
-<li>work well with nested settings dictionaries of any depth</li>
-<li>read/write {.ini style config files} (or strings)</li>
-<li>read settings from Python source files (or strings) so that
+<li><p>work well with nested settings dictionaries of any depth</p></li>
+<li><p>read/write {.ini style config files} (or strings)</p></li>
+<li><p>read settings from Python source files (or strings) so that
 complex Python objects can be stored in the application’s settings
 dictionary. For example, you might want to store references to
 various classes that are used by the application, and plugins to
-the application might want to substitute one class for another.</li>
-<li>allow sections in {.ini config files} to be extended by settings
+the application might want to substitute one class for another.</p></li>
+<li><p>allow sections in {.ini config files} to be extended by settings
 in Python source files. If a section contains a setting like
 “{importSettings=mySettings.py}”, {SettingsManager} will merge all
 the settings defined in “{mySettings.py}” with the settings for
-that section that are defined in the {.ini config file}.</li>
-<li>maintain the case of setting names, unlike the ConfigParser
-module</li>
+that section that are defined in the {.ini config file}.</p></li>
+<li><p>maintain the case of setting names, unlike the ConfigParser
+module</p></li>
 </ul>
 <p>Cheetah uses {SettingsManager} to manage its configuration
 settings. {SettingsManager} might also be useful in your own
@@ -313,28 +267,28 @@ before doing so.</p>
 {$javascriptTags()}, and {$bodyTag()}. They take the data you
 define in various attributes and renders them into HTML tags.</p>
 <ul class="simple">
-<li>{ metaTags()} - Returns a formatted vesion of the
+<li><p>{ metaTags()} - Returns a formatted vesion of the
 self._metaTags dictionary, using the formatMetaTags function from
-{_SkeletonPage.py}.</li>
-<li>{ stylesheetTags()} - Returns a formatted version of the
+{_SkeletonPage.py}.</p></li>
+<li><p>{ stylesheetTags()} - Returns a formatted version of the
 {self._stylesheetLibs} and {self._stylesheets} dictionaries. The
 keys in {self._stylesheets} must be listed in the order that they
 should appear in the list {self._stylesheetsOrder}, to ensure that
-the style rules are defined in the correct order.</li>
-<li>{ javascriptTags()} - Returns a formatted version of the
+the style rules are defined in the correct order.</p></li>
+<li><p>{ javascriptTags()} - Returns a formatted version of the
 {self._javascriptTags} and {self._javascriptLibs} dictionaries.
 Each value in {self._javascriptTags} should be a either a code
 string to include, or a list containing the JavaScript version
 number and the code string. The keys can be anything. The same
 applies for {self._javascriptLibs}, but the string should be the
-SRC filename rather than a code string.</li>
-<li>{ bodyTag()} - Returns an HTML body tag from the entries in the
-dict {self._bodyTagAttribs}.</li>
+SRC filename rather than a code string.</p></li>
+<li><p>{ bodyTag()} - Returns an HTML body tag from the entries in the
+dict {self._bodyTagAttribs}.</p></li>
 </ul>
 <p>The class also provides some convenience methods that can be used
 as $placeholders in your template definitions:</p>
 <ul class="simple">
-<li>{ imgTag(self, src, alt=’’, width=None, height=None, border=0)}
+<li><p>{ imgTag(self, src, alt=’’, width=None, height=None, border=0)}
 - Dynamically generate an image tag. Cheetah will try to convert
 the “{src}” argument to a WebKit serverSidePath relative to the
 servlet’s location. If width and height aren’t specified they are
@@ -342,14 +296,59 @@ calculated using PIL or ImageMagick if either of these tools are
 available. If all your images are stored in a certain directory you
 can reimplement this method to append that directory’s path to the
 “{src}” argument. Doing so would also insulate your template
-definitions from changes in your directory structure.</li>
+definitions from changes in your directory structure.</p></li>
 </ul>
 </div>
 </div>
 </div>
 
 
+            <div class="clearer"></div>
           </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Batteries included: templates and other libraries</a><ul>
+<li><a class="reference internal" href="#errorcatchers">ErrorCatchers</a></li>
+<li><a class="reference internal" href="#fileutils">FileUtils</a></li>
+<li><a class="reference internal" href="#filters">Filters</a></li>
+<li><a class="reference internal" href="#settingsmanager">SettingsManager</a></li>
+<li><a class="reference internal" href="#templates">Templates</a></li>
+<li><a class="reference internal" href="#tools">Tools</a></li>
+<li><a class="reference internal" href="#utils">Utils</a><ul>
+<li><a class="reference internal" href="#cheetah-templates-skeletonpage">Cheetah.Templates.SkeletonPage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="nonHtml.html"
+                        title="previous chapter">Non-HTML Output</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="editors.html"
+                        title="next chapter">Visual Editors</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/users_guide/libraries.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -370,13 +369,14 @@ definitions from changes in your directory structure.</li>
           <a href="nonHtml.html" title="Non-HTML Output"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User’s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User’s Guide</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Batteries included: templates and other libraries</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2020, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 16, 2020.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+      Last updated on Oct 01, 2020.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>

@@ -1,19 +1,18 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Precompiled Templates &#8212; Cheetah3 - The Python-Powered Template Engine</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="@staticmethod and @classmethod" href="staticmethod.html" />
@@ -35,48 +34,10 @@
           <a href="inheritance.html" title="Basic Inheritance"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../documentation.html" accesskey="U">Cheetah Recipes</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="../documentation.html" accesskey="U">Cheetah Recipes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Precompiled Templates</a></li> 
       </ul>
-    </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Precompiled Templates</a><ul>
-<li><a class="reference internal" href="#why-bother">Why bother?</a></li>
-<li><a class="reference internal" href="#basic-pre-compilation">Basic Pre-compilation</a></li>
-<li><a class="reference internal" href="#importing-and-lookup">Importing and lookup</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="inheritance.html"
-                        title="previous chapter">Basic Inheritance</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="staticmethod.html"
-                        title="next chapter">&#64;staticmethod and &#64;classmethod</a></p>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/recipes/precompiled.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
@@ -119,7 +80,7 @@ which you can then treat as any other Python module in your code base.</p>
 <h2>Importing and lookup<a class="headerlink" href="#importing-and-lookup" title="Permalink to this headline">¶</a></h2>
 <p>Typically for the template in <em>Figure 1</em>, I could easily import it post-compilation
 as any other Python module:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">templates</span> <span class="k">import</span> <span class="n">hello</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">templates</span> <span class="kn">import</span> <span class="n">hello</span>
 
 <span class="k">def</span> <span class="nf">myMethod</span><span class="p">():</span>
     <span class="n">tmpl</span> <span class="o">=</span> <span class="n">hello</span><span class="o">.</span><span class="n">hello</span><span class="p">(</span><span class="n">searchList</span><span class="o">=</span><span class="p">[{</span><span class="s1">&#39;who&#39;</span> <span class="p">:</span> <span class="s1">&#39;world&#39;</span><span class="p">}])</span>
@@ -141,7 +102,45 @@ method” for executing the Cheetah template. You can adjust the example above i
 </div>
 
 
+            <div class="clearer"></div>
           </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Precompiled Templates</a><ul>
+<li><a class="reference internal" href="#why-bother">Why bother?</a></li>
+<li><a class="reference internal" href="#basic-pre-compilation">Basic Pre-compilation</a></li>
+<li><a class="reference internal" href="#importing-and-lookup">Importing and lookup</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="inheritance.html"
+                        title="previous chapter">Basic Inheritance</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="staticmethod.html"
+                        title="next chapter">&#64;staticmethod and &#64;classmethod</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/recipes/precompiled.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -162,13 +161,14 @@ method” for executing the Cheetah template. You can adjust the example above i
           <a href="inheritance.html" title="Basic Inheritance"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../documentation.html" >Cheetah Recipes</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="../documentation.html" >Cheetah Recipes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Precompiled Templates</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2020, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on May 16, 2020.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+      Last updated on Oct 01, 2020.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>
