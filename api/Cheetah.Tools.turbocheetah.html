@@ -6,13 +6,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cheetah.Tools.turbocheetah package &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head><body>
@@ -39,38 +38,38 @@
 <span id="cheetah-tools-turbocheetah-package"></span><h1>Cheetah.Tools.turbocheetah package<a class="headerlink" href="#module-Cheetah.Tools.turbocheetah" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt id="Cheetah.Tools.turbocheetah.TurboCheetah">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Tools.turbocheetah.</code><code class="sig-name descname">TurboCheetah</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">extra_vars_func</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tools.turbocheetah.TurboCheetah" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.Tools.turbocheetah.</span></code><code class="sig-name descname"><span class="pre">TurboCheetah</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">extra_vars_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tools.turbocheetah.TurboCheetah" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py attribute">
 <dt id="Cheetah.Tools.turbocheetah.TurboCheetah.extension">
-<code class="sig-name descname">extension</code><em class="property"> = 'tmpl'</em><a class="headerlink" href="#Cheetah.Tools.turbocheetah.TurboCheetah.extension" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">extension</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'tmpl'</span></em><a class="headerlink" href="#Cheetah.Tools.turbocheetah.TurboCheetah.extension" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.Tools.turbocheetah.TurboCheetah.load_template">
-<code class="sig-name descname">load_template</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_string</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loadingSite</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tools.turbocheetah.TurboCheetah.load_template" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">load_template</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_string</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loadingSite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tools.turbocheetah.TurboCheetah.load_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Searches for a template along the Python path.</p>
 <p>Template files must end in “.tmpl” and be in legitimate packages.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.Tools.turbocheetah.TurboCheetah.load_template_file">
-<code class="sig-name descname">load_template_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tools.turbocheetah.TurboCheetah.load_template_file" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">load_template_file</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tools.turbocheetah.TurboCheetah.load_template_file" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.Tools.turbocheetah.TurboCheetah.load_template_module">
-<code class="sig-name descname">load_template_module</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">classname</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tools.turbocheetah.TurboCheetah.load_template_module" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">load_template_module</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">classname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tools.turbocheetah.TurboCheetah.load_template_module" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.Tools.turbocheetah.TurboCheetah.load_template_string">
-<code class="sig-name descname">load_template_string</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">content</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tools.turbocheetah.TurboCheetah.load_template_string" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">load_template_string</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tools.turbocheetah.TurboCheetah.load_template_string" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.Tools.turbocheetah.TurboCheetah.render">
-<code class="sig-name descname">render</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">info</span></em>, <em class="sig-param"><span class="n">format</span><span class="o">=</span><span class="default_value">'html'</span></em>, <em class="sig-param"><span class="n">fragment</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_string</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tools.turbocheetah.TurboCheetah.render" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">render</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'html'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fragment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_string</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tools.turbocheetah.TurboCheetah.render" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -150,9 +149,9 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2020, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Oct 01, 2020.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+        &#169; Copyright 2017-2021, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Feb 22, 2021.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.0.
     </div>
   </body>
 </html>

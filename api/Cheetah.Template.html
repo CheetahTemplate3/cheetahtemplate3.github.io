@@ -6,13 +6,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cheetah.Template module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head><body>
@@ -42,31 +41,31 @@
 for more information.</p>
 <dl class="py class">
 <dt id="Cheetah.Template.CompileCacheItem">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Template.</code><code class="sig-name descname">CompileCacheItem</code><a class="headerlink" href="#Cheetah.Template.CompileCacheItem" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.Template.</span></code><code class="sig-name descname"><span class="pre">CompileCacheItem</span></code><a class="headerlink" href="#Cheetah.Template.CompileCacheItem" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 
 <dl class="py exception">
 <dt id="Cheetah.Template.Error">
-<em class="property">exception </em><code class="sig-prename descclassname">Cheetah.Template.</code><code class="sig-name descname">Error</code><a class="headerlink" href="#Cheetah.Template.Error" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.Template.</span></code><code class="sig-name descname"><span class="pre">Error</span></code><a class="headerlink" href="#Cheetah.Template.Error" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
 </dd></dl>
 
 <dl class="py exception">
 <dt id="Cheetah.Template.PreprocessError">
-<em class="property">exception </em><code class="sig-prename descclassname">Cheetah.Template.</code><code class="sig-name descname">PreprocessError</code><a class="headerlink" href="#Cheetah.Template.PreprocessError" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.Template.</span></code><code class="sig-name descname"><span class="pre">PreprocessError</span></code><a class="headerlink" href="#Cheetah.Template.PreprocessError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Template.Error" title="Cheetah.Template.Error"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Template.Error</span></code></a></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="Cheetah.Template.T">
-<code class="sig-prename descclassname">Cheetah.Template.</code><code class="sig-name descname">T</code><a class="headerlink" href="#Cheetah.Template.T" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">Cheetah.Template.</span></code><code class="sig-name descname"><span class="pre">T</span></code><a class="headerlink" href="#Cheetah.Template.T" title="Permalink to this definition">¶</a></dt>
 <dd><p>alias of <a class="reference internal" href="#Cheetah.Template.Template" title="Cheetah.Template.Template"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Template.Template</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt id="Cheetah.Template.Template">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Template.</code><code class="sig-name descname">Template</code><span class="sig-paren">(</span><em class="sig-param">source=None</em>, <em class="sig-param">namespaces=None</em>, <em class="sig-param">searchList=None</em>, <em class="sig-param">file=None</em>, <em class="sig-param">filter='RawOrEncodedUnicode'</em>, <em class="sig-param">filtersLib=&lt;module 'Cheetah.Filters' from '/home/phd/current/projects/cheetah3/cheetah3/Cheetah/Filters.py'&gt;</em>, <em class="sig-param">errorCatcher=None</em>, <em class="sig-param">compilerSettings=Unspecified</em>, <em class="sig-param">_globalSetVars=None</em>, <em class="sig-param">_preBuiltSearchList=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.Template.</span></code><code class="sig-name descname"><span class="pre">Template</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">source=None</span></em>, <em class="sig-param"><span class="pre">namespaces=None</span></em>, <em class="sig-param"><span class="pre">searchList=None</span></em>, <em class="sig-param"><span class="pre">file=None</span></em>, <em class="sig-param"><span class="pre">filter='RawOrEncodedUnicode'</span></em>, <em class="sig-param"><span class="pre">filtersLib=&lt;module</span> <span class="pre">'Cheetah.Filters'</span> <span class="pre">from</span> <span class="pre">'/home/phd/current/projects/cheetah3/cheetah3/Cheetah/Filters.py'&gt;</span></em>, <em class="sig-param"><span class="pre">errorCatcher=None</span></em>, <em class="sig-param"><span class="pre">compilerSettings=Unspecified</span></em>, <em class="sig-param"><span class="pre">_globalSetVars=None</span></em>, <em class="sig-param"><span class="pre">_preBuiltSearchList=None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="Cheetah.Servlet.html#Cheetah.Servlet.Servlet" title="Cheetah.Servlet.Servlet"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Servlet.Servlet</span></code></a></p>
 <p>This class provides a) methods used by templates at runtime and b)
 methods for compiling Cheetah source code into template classes.</p>
@@ -153,18 +152,18 @@ like this:</p>
 </div>
 <dl class="py exception">
 <dt id="Cheetah.Template.Template.NonNumericInputError">
-<em class="property">exception </em><code class="sig-name descname">NonNumericInputError</code><a class="headerlink" href="#Cheetah.Template.Template.NonNumericInputError" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">exception</span> </em><code class="sig-name descname"><span class="pre">NonNumericInputError</span></code><a class="headerlink" href="#Cheetah.Template.Template.NonNumericInputError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ValueError</span></code></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="Cheetah.Template.Template.Reserved_SearchList">
-<code class="sig-name descname">Reserved_SearchList</code><em class="property"> = {'NonNumericInputError', '_CHEETAH_cacheCompilationResults', '_CHEETAH_cacheDirForModuleFiles', '_CHEETAH_cacheModuleFilesForTracebacks', '_CHEETAH_cacheRegionClass', '_CHEETAH_cacheStore', '_CHEETAH_cacheStoreClass', '_CHEETAH_cacheStoreIdPrefix', '_CHEETAH_compileCache', '_CHEETAH_compileLock', '_CHEETAH_compilerClass', '_CHEETAH_compilerInstance', '_CHEETAH_compilerSettings', '_CHEETAH_defaultBaseclassForTemplates', '_CHEETAH_defaultClassNameForTemplates', '_CHEETAH_defaultMainMethodName', '_CHEETAH_defaultMainMethodNameForTemplates', '_CHEETAH_defaultModuleGlobalsForTemplates', '_CHEETAH_defaultModuleNameForTemplates', '_CHEETAH_defaultPreprocessorClass', '_CHEETAH_generatedModuleCode', '_CHEETAH_keepRefToGeneratedCode', '_CHEETAH_preprocessors', '_CHEETAH_requiredCheetahClassAttributes', '_CHEETAH_requiredCheetahClassMethods', '_CHEETAH_requiredCheetahMethods', '_CHEETAH_useCompilationCache', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_addCheetahPlumbingCodeToClass', '_compile', '_createCacheRegion', '_getCacheStore', '_getCacheStoreIdPrefix', '_getCompilerClass', '_getCompilerSettings', '_getTemplateAPIClassForIncludeDirectiveCompilation', '_handleCheetahInclude', '_initCheetahInstance', '_normalizePreprocessorArg', '_normalizePreprocessorSettings', '_preprocessSource', '_updateSettingsWithPreprocessTokens', 'application', 'compile', 'errorCatcher', 'generatedClassCode', 'generatedModuleCode', 'getCacheRegion', 'getCacheRegions', 'getFileContents', 'getVar', 'hasVar', 'i18n', 'refreshCache', 'request', 'respond', 'runAsMainProgram', 'searchList', 'serverSidePath', 'session', 'shutdown', 'sleep', 'subclass', 'transaction', 'varExists', 'webInput'}</em><a class="headerlink" href="#Cheetah.Template.Template.Reserved_SearchList" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">Reserved_SearchList</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'NonNumericInputError',</span> <span class="pre">'_CHEETAH_cacheCompilationResults',</span> <span class="pre">'_CHEETAH_cacheDirForModuleFiles',</span> <span class="pre">'_CHEETAH_cacheModuleFilesForTracebacks',</span> <span class="pre">'_CHEETAH_cacheRegionClass',</span> <span class="pre">'_CHEETAH_cacheStore',</span> <span class="pre">'_CHEETAH_cacheStoreClass',</span> <span class="pre">'_CHEETAH_cacheStoreIdPrefix',</span> <span class="pre">'_CHEETAH_compileCache',</span> <span class="pre">'_CHEETAH_compileLock',</span> <span class="pre">'_CHEETAH_compilerClass',</span> <span class="pre">'_CHEETAH_compilerInstance',</span> <span class="pre">'_CHEETAH_compilerSettings',</span> <span class="pre">'_CHEETAH_defaultBaseclassForTemplates',</span> <span class="pre">'_CHEETAH_defaultClassNameForTemplates',</span> <span class="pre">'_CHEETAH_defaultMainMethodName',</span> <span class="pre">'_CHEETAH_defaultMainMethodNameForTemplates',</span> <span class="pre">'_CHEETAH_defaultModuleGlobalsForTemplates',</span> <span class="pre">'_CHEETAH_defaultModuleNameForTemplates',</span> <span class="pre">'_CHEETAH_defaultPreprocessorClass',</span> <span class="pre">'_CHEETAH_generatedModuleCode',</span> <span class="pre">'_CHEETAH_keepRefToGeneratedCode',</span> <span class="pre">'_CHEETAH_preprocessors',</span> <span class="pre">'_CHEETAH_requiredCheetahClassAttributes',</span> <span class="pre">'_CHEETAH_requiredCheetahClassMethods',</span> <span class="pre">'_CHEETAH_requiredCheetahMethods',</span> <span class="pre">'_CHEETAH_useCompilationCache',</span> <span class="pre">'__class__',</span> <span class="pre">'__delattr__',</span> <span class="pre">'__dict__',</span> <span class="pre">'__dir__',</span> <span class="pre">'__doc__',</span> <span class="pre">'__eq__',</span> <span class="pre">'__format__',</span> <span class="pre">'__ge__',</span> <span class="pre">'__getattribute__',</span> <span class="pre">'__gt__',</span> <span class="pre">'__hash__',</span> <span class="pre">'__init__',</span> <span class="pre">'__le__',</span> <span class="pre">'__lt__',</span> <span class="pre">'__module__',</span> <span class="pre">'__ne__',</span> <span class="pre">'__new__',</span> <span class="pre">'__reduce__',</span> <span class="pre">'__reduce_ex__',</span> <span class="pre">'__repr__',</span> <span class="pre">'__setattr__',</span> <span class="pre">'__sizeof__',</span> <span class="pre">'__str__',</span> <span class="pre">'__subclasshook__',</span> <span class="pre">'__weakref__',</span> <span class="pre">'_addCheetahPlumbingCodeToClass',</span> <span class="pre">'_compile',</span> <span class="pre">'_createCacheRegion',</span> <span class="pre">'_getCacheStore',</span> <span class="pre">'_getCacheStoreIdPrefix',</span> <span class="pre">'_getCompilerClass',</span> <span class="pre">'_getCompilerSettings',</span> <span class="pre">'_getTemplateAPIClassForIncludeDirectiveCompilation',</span> <span class="pre">'_handleCheetahInclude',</span> <span class="pre">'_initCheetahInstance',</span> <span class="pre">'_normalizePreprocessorArg',</span> <span class="pre">'_normalizePreprocessorSettings',</span> <span class="pre">'_preprocessSource',</span> <span class="pre">'_updateSettingsWithPreprocessTokens',</span> <span class="pre">'application',</span> <span class="pre">'compile',</span> <span class="pre">'errorCatcher',</span> <span class="pre">'generatedClassCode',</span> <span class="pre">'generatedModuleCode',</span> <span class="pre">'getCacheRegion',</span> <span class="pre">'getCacheRegions',</span> <span class="pre">'getFileContents',</span> <span class="pre">'getVar',</span> <span class="pre">'hasVar',</span> <span class="pre">'i18n',</span> <span class="pre">'refreshCache',</span> <span class="pre">'request',</span> <span class="pre">'respond',</span> <span class="pre">'runAsMainProgram',</span> <span class="pre">'searchList',</span> <span class="pre">'serverSidePath',</span> <span class="pre">'session',</span> <span class="pre">'shutdown',</span> <span class="pre">'sleep',</span> <span class="pre">'subclass',</span> <span class="pre">'transaction',</span> <span class="pre">'varExists',</span> <span class="pre">'webInput'}</span></em><a class="headerlink" href="#Cheetah.Template.Template.Reserved_SearchList" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.Template.Template.compile">
-<em class="property">classmethod </em><code class="sig-name descname">compile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">returnAClass</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">compilerSettings</span><span class="o">=</span><span class="default_value">Unspecified</span></em>, <em class="sig-param"><span class="n">compilerClass</span><span class="o">=</span><span class="default_value">Unspecified</span></em>, <em class="sig-param"><span class="n">moduleName</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">className</span><span class="o">=</span><span class="default_value">Unspecified</span></em>, <em class="sig-param"><span class="n">mainMethodName</span><span class="o">=</span><span class="default_value">Unspecified</span></em>, <em class="sig-param"><span class="n">baseclass</span><span class="o">=</span><span class="default_value">Unspecified</span></em>, <em class="sig-param"><span class="n">moduleGlobals</span><span class="o">=</span><span class="default_value">Unspecified</span></em>, <em class="sig-param"><span class="n">cacheCompilationResults</span><span class="o">=</span><span class="default_value">Unspecified</span></em>, <em class="sig-param"><span class="n">useCache</span><span class="o">=</span><span class="default_value">Unspecified</span></em>, <em class="sig-param"><span class="n">preprocessors</span><span class="o">=</span><span class="default_value">Unspecified</span></em>, <em class="sig-param"><span class="n">cacheModuleFilesForTracebacks</span><span class="o">=</span><span class="default_value">Unspecified</span></em>, <em class="sig-param"><span class="n">cacheDirForModuleFiles</span><span class="o">=</span><span class="default_value">Unspecified</span></em>, <em class="sig-param"><span class="n">commandlineopts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepRefToGeneratedCode</span><span class="o">=</span><span class="default_value">Unspecified</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.compile" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">compile</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">returnAClass</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compilerSettings</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Unspecified</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compilerClass</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Unspecified</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moduleName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">className</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Unspecified</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mainMethodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Unspecified</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baseclass</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Unspecified</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moduleGlobals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Unspecified</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cacheCompilationResults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Unspecified</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useCache</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Unspecified</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preprocessors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Unspecified</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cacheModuleFilesForTracebacks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Unspecified</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cacheDirForModuleFiles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Unspecified</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commandlineopts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keepRefToGeneratedCode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Unspecified</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.compile" title="Permalink to this definition">¶</a></dt>
 <dd><p>The core API for compiling Cheetah source code into template classes.</p>
 <p>This class method compiles Cheetah source code and returns a python
 class.  You then create template instances using that class.  All
@@ -406,32 +405,32 @@ is an advanced topic.
 
 <dl class="py method">
 <dt id="Cheetah.Template.Template.errorCatcher">
-<code class="sig-name descname">errorCatcher</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.errorCatcher" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">errorCatcher</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.errorCatcher" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a reference to the current errorCatcher</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.Template.Template.generatedClassCode">
-<code class="sig-name descname">generatedClassCode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.generatedClassCode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">generatedClassCode</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.generatedClassCode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the class code the compiler generated, or None if no
 compilation took place.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.Template.Template.generatedModuleCode">
-<code class="sig-name descname">generatedModuleCode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.generatedModuleCode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">generatedModuleCode</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.generatedModuleCode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the module code the compiler generated, or None if no
 compilation took place.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.Template.Template.getCacheRegion">
-<code class="sig-name descname">getCacheRegion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">regionID</span></em>, <em class="sig-param"><span class="n">cacheInfo</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.getCacheRegion" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">getCacheRegion</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regionID</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cacheInfo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">create</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.getCacheRegion" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.Template.Template.getCacheRegions">
-<code class="sig-name descname">getCacheRegions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.getCacheRegions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">getCacheRegions</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.getCacheRegions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a dictionary of the ‘cache regions’ initialized in a
 template.</p>
 <p>Each #cache directive block or $*cachedPlaceholder is a separate ‘cache
@@ -440,7 +439,7 @@ region’.</p>
 
 <dl class="py method">
 <dt id="Cheetah.Template.Template.getFileContents">
-<code class="sig-name descname">getFileContents</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.getFileContents" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">getFileContents</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.getFileContents" title="Permalink to this definition">¶</a></dt>
 <dd><p>A hook for getting the contents of a file.  The default
 implementation just uses the Python open() function
 to load local files.  This method could be reimplemented
@@ -450,7 +449,7 @@ as PHP allows with its ‘URL fopen wrapper’.</p>
 
 <dl class="py method">
 <dt id="Cheetah.Template.Template.getVar">
-<code class="sig-name descname">getVar</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">varName</span></em>, <em class="sig-param"><span class="n">default</span><span class="o">=</span><span class="default_value">Unspecified</span></em>, <em class="sig-param"><span class="n">autoCall</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.getVar" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">getVar</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">varName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Unspecified</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoCall</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.getVar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a variable from the searchList.  If the variable can’t be found
 in the searchList, it returns the default value if one was given, or
 raises NameMapper.NotFound.</p>
@@ -458,13 +457,13 @@ raises NameMapper.NotFound.</p>
 
 <dl class="py method">
 <dt id="Cheetah.Template.Template.hasVar">
-<code class="sig-name descname">hasVar</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">varName</span></em>, <em class="sig-param"><span class="n">autoCall</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.hasVar" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">hasVar</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">varName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoCall</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.hasVar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Test if a variable name exists in the searchList.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.Template.Template.i18n">
-<code class="sig-name descname">i18n</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em>, <em class="sig-param"><span class="n">plural</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">n</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">comment</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.i18n" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">i18n</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plural</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.i18n" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is just a stub at this time.</p>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plural</span> <span class="o">=</span> <span class="n">the</span> <span class="n">plural</span> <span class="n">form</span> <span class="n">of</span> <span class="n">the</span> <span class="n">message</span>
@@ -489,13 +488,13 @@ raises NameMapper.NotFound.</p>
 
 <dl class="py method">
 <dt id="Cheetah.Template.Template.refreshCache">
-<code class="sig-name descname">refreshCache</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cacheRegionId</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cacheItemId</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.refreshCache" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">refreshCache</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cacheRegionId</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cacheItemId</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.refreshCache" title="Permalink to this definition">¶</a></dt>
 <dd><p>Refresh a cache region or a specific cache item within a region.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.Template.Template.runAsMainProgram">
-<code class="sig-name descname">runAsMainProgram</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.runAsMainProgram" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">runAsMainProgram</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.runAsMainProgram" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows the Template to function as a standalone command-line program
 for static page generation.</p>
 <p>Type ‘python yourtemplate.py –help to see what it’s capabable of.</p>
@@ -503,19 +502,19 @@ for static page generation.</p>
 
 <dl class="py method">
 <dt id="Cheetah.Template.Template.searchList">
-<code class="sig-name descname">searchList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.searchList" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">searchList</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.searchList" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a reference to the searchlist</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.Template.Template.shutdown">
-<code class="sig-name descname">shutdown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.shutdown" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">shutdown</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.shutdown" title="Permalink to this definition">¶</a></dt>
 <dd><p>Break reference cycles before discarding a servlet.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.Template.Template.subclass">
-<em class="property">classmethod </em><code class="sig-name descname">subclass</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kws</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.subclass" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">subclass</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kws</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.subclass" title="Permalink to this definition">¶</a></dt>
 <dd><p>Takes the same args as the .compile() classmethod and returns a
 template that is a subclass of the template this method is called from.</p>
 <dl class="simple">
@@ -527,13 +526,13 @@ template that is a subclass of the template this method is called from.</p>
 
 <dl class="py method">
 <dt id="Cheetah.Template.Template.varExists">
-<code class="sig-name descname">varExists</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">varName</span></em>, <em class="sig-param"><span class="n">autoCall</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.varExists" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">varExists</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">varName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoCall</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.varExists" title="Permalink to this definition">¶</a></dt>
 <dd><p>Test if a variable name exists in the searchList.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.Template.Template.webInput">
-<code class="sig-name descname">webInput</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">names</span></em>, <em class="sig-param"><span class="n">namesMulti</span><span class="o">=</span><span class="default_value">()</span></em>, <em class="sig-param"><span class="n">default</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">src</span><span class="o">=</span><span class="default_value">'f'</span></em>, <em class="sig-param"><span class="n">defaultInt</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">defaultFloat</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">badInt</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">badFloat</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">debug</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.webInput" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">webInput</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namesMulti</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'f'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaultInt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaultFloat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">badInt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">badFloat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template.webInput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method for importing web transaction variables in bulk.</p>
 <p>This works for GET/POST fields both in Webware servlets and in CGI
 scripts, and for cookies and session variables in Webware servlets.
@@ -714,14 +713,14 @@ variables.</p>
 
 <dl class="py class">
 <dt id="Cheetah.Template.TemplatePreprocessor">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Template.</code><code class="sig-name descname">TemplatePreprocessor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">settings</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.TemplatePreprocessor" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.Template.</span></code><code class="sig-name descname"><span class="pre">TemplatePreprocessor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">settings</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.TemplatePreprocessor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This is used with the preprocessors argument to Template.compile().</p>
 <p>See the docstring for Template.compile</p>
 <p>** Preprocessors are an advanced topic **</p>
 <dl class="py method">
 <dt id="Cheetah.Template.TemplatePreprocessor.preprocess">
-<code class="sig-name descname">preprocess</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">source</span></em>, <em class="sig-param"><span class="n">file</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.TemplatePreprocessor.preprocess" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">preprocess</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.TemplatePreprocessor.preprocess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create an intermediate template and return the source code
 it outputs</p>
 </dd></dl>
@@ -730,32 +729,32 @@ it outputs</p>
 
 <dl class="py function">
 <dt id="Cheetah.Template.checkFileMtime">
-<code class="sig-prename descclassname">Cheetah.Template.</code><code class="sig-name descname">checkFileMtime</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.checkFileMtime" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">Cheetah.Template.</span></code><code class="sig-name descname"><span class="pre">checkFileMtime</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.checkFileMtime" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt id="Cheetah.Template.createMethod">
-<code class="sig-prename descclassname">Cheetah.Template.</code><code class="sig-name descname">createMethod</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span></em>, <em class="sig-param"><span class="n">cls</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.createMethod" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">Cheetah.Template.</span></code><code class="sig-name descname"><span class="pre">createMethod</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cls</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.createMethod" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt id="Cheetah.Template.genParserErrorFromPythonException">
-<code class="sig-prename descclassname">Cheetah.Template.</code><code class="sig-name descname">genParserErrorFromPythonException</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">source</span></em>, <em class="sig-param"><span class="n">file</span></em>, <em class="sig-param"><span class="n">generatedPyCode</span></em>, <em class="sig-param"><span class="n">exception</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.genParserErrorFromPythonException" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">Cheetah.Template.</span></code><code class="sig-name descname"><span class="pre">genParserErrorFromPythonException</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">generatedPyCode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exception</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.genParserErrorFromPythonException" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt id="Cheetah.Template.hashDict">
-<code class="sig-prename descclassname">Cheetah.Template.</code><code class="sig-name descname">hashDict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">d</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.hashDict" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">Cheetah.Template.</span></code><code class="sig-name descname"><span class="pre">hashDict</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.hashDict" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt id="Cheetah.Template.hashList">
-<code class="sig-prename descclassname">Cheetah.Template.</code><code class="sig-name descname">hashList</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">v_list</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.hashList" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">Cheetah.Template.</span></code><code class="sig-name descname"><span class="pre">hashList</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.hashList" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt id="Cheetah.Template.updateLinecache">
-<code class="sig-prename descclassname">Cheetah.Template.</code><code class="sig-name descname">updateLinecache</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em>, <em class="sig-param"><span class="n">src</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.updateLinecache" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">Cheetah.Template.</span></code><code class="sig-name descname"><span class="pre">updateLinecache</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.updateLinecache" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -802,9 +801,9 @@ it outputs</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2020, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Oct 01, 2020.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+        &#169; Copyright 2017-2021, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Feb 22, 2021.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.0.
     </div>
   </body>
 </html>

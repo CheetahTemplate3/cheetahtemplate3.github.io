@@ -6,13 +6,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cheetah.Servlet module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head><body>
@@ -40,47 +39,47 @@
 <p>Provides an abstract Servlet baseclass for Cheetah’s Template class</p>
 <dl class="py class">
 <dt id="Cheetah.Servlet.Servlet">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Servlet.</code><code class="sig-name descname">Servlet</code><a class="headerlink" href="#Cheetah.Servlet.Servlet" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.Servlet.</span></code><code class="sig-name descname"><span class="pre">Servlet</span></code><a class="headerlink" href="#Cheetah.Servlet.Servlet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This class is an abstract baseclass for Cheetah.Template.Template.</p>
 <dl class="py attribute">
 <dt id="Cheetah.Servlet.Servlet.application">
-<code class="sig-name descname">application</code><em class="property"> = None</em><a class="headerlink" href="#Cheetah.Servlet.Servlet.application" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">application</span></code><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#Cheetah.Servlet.Servlet.application" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="Cheetah.Servlet.Servlet.request">
-<code class="sig-name descname">request</code><em class="property"> = None</em><a class="headerlink" href="#Cheetah.Servlet.Servlet.request" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">request</span></code><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#Cheetah.Servlet.Servlet.request" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.Servlet.Servlet.respond">
-<code class="sig-name descname">respond</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">trans</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Servlet.Servlet.respond" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">respond</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trans</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Servlet.Servlet.respond" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.Servlet.Servlet.serverSidePath">
-<code class="sig-name descname">serverSidePath</code><span class="sig-paren">(</span><em class="sig-param">path=None</em>, <em class="sig-param">normpath=&lt;function normpath&gt;</em>, <em class="sig-param">abspath=&lt;function abspath&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Servlet.Servlet.serverSidePath" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">serverSidePath</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">path=None</span></em>, <em class="sig-param"><span class="pre">normpath=&lt;function</span> <span class="pre">normpath&gt;</span></em>, <em class="sig-param"><span class="pre">abspath=&lt;function</span> <span class="pre">abspath&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Servlet.Servlet.serverSidePath" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="Cheetah.Servlet.Servlet.session">
-<code class="sig-name descname">session</code><em class="property"> = None</em><a class="headerlink" href="#Cheetah.Servlet.Servlet.session" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">session</span></code><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#Cheetah.Servlet.Servlet.session" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.Servlet.Servlet.shutdown">
-<code class="sig-name descname">shutdown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Servlet.Servlet.shutdown" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">shutdown</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Servlet.Servlet.shutdown" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.Servlet.Servlet.sleep">
-<code class="sig-name descname">sleep</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">transaction</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Servlet.Servlet.sleep" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">sleep</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transaction</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Servlet.Servlet.sleep" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="Cheetah.Servlet.Servlet.transaction">
-<code class="sig-name descname">transaction</code><em class="property"> = None</em><a class="headerlink" href="#Cheetah.Servlet.Servlet.transaction" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">transaction</span></code><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#Cheetah.Servlet.Servlet.transaction" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -129,9 +128,9 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2020, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Oct 01, 2020.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+        &#169; Copyright 2017-2021, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Feb 22, 2021.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.0.
     </div>
   </body>
 </html>

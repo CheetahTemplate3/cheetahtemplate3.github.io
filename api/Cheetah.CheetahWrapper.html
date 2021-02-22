@@ -6,13 +6,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cheetah.CheetahWrapper module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head><body>
@@ -39,7 +38,7 @@
 <span id="cheetah-cheetahwrapper-module"></span><h1>Cheetah.CheetahWrapper module<a class="headerlink" href="#module-Cheetah.CheetahWrapper" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt id="Cheetah.CheetahWrapper.Bundle">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.CheetahWrapper.</code><code class="sig-name descname">Bundle</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kw</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.Bundle" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.CheetahWrapper.</span></code><code class="sig-name descname"><span class="pre">Bundle</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.Bundle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Wrap the source, destination and backup paths in one neat little class.
 Used by CheetahWrapper.getBundles().</p>
@@ -47,82 +46,82 @@ Used by CheetahWrapper.getBundles().</p>
 
 <dl class="py class">
 <dt id="Cheetah.CheetahWrapper.CheetahWrapper">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.CheetahWrapper.</code><code class="sig-name descname">CheetahWrapper</code><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.CheetahWrapper.</span></code><code class="sig-name descname"><span class="pre">CheetahWrapper</span></code><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py attribute">
 <dt id="Cheetah.CheetahWrapper.CheetahWrapper.BACKUP_SUFFIX">
-<code class="sig-name descname">BACKUP_SUFFIX</code><em class="property"> = '.bak'</em><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.BACKUP_SUFFIX" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">BACKUP_SUFFIX</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'.bak'</span></em><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.BACKUP_SUFFIX" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="Cheetah.CheetahWrapper.CheetahWrapper.MAKE_BACKUPS">
-<code class="sig-name descname">MAKE_BACKUPS</code><em class="property"> = True</em><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.MAKE_BACKUPS" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">MAKE_BACKUPS</span></code><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.MAKE_BACKUPS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.CheetahWrapper.CheetahWrapper.chatter">
-<code class="sig-name descname">chatter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">format</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.chatter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">chatter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">format</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.chatter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print a verbose message to stdout.  But don’t if .opts.stdout is
 true or .opts.verbose is false.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.CheetahWrapper.CheetahWrapper.compile">
-<code class="sig-name descname">compile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.compile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">compile</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.compile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.CheetahWrapper.CheetahWrapper.debug">
-<code class="sig-name descname">debug</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">format</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.debug" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">debug</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">format</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print a debugging message to stderr, but don’t if .debug is
 false.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.CheetahWrapper.CheetahWrapper.error">
-<code class="sig-name descname">error</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">format</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.error" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">error</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">format</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.error" title="Permalink to this definition">¶</a></dt>
 <dd><p>Always print a warning message to stderr and exit with an error code.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.CheetahWrapper.CheetahWrapper.fill">
-<code class="sig-name descname">fill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.fill" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">fill</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.fill" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.CheetahWrapper.CheetahWrapper.help">
-<code class="sig-name descname">help</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.help" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">help</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.help" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.CheetahWrapper.CheetahWrapper.main">
-<code class="sig-name descname">main</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">argv</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.main" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">main</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">argv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.main" title="Permalink to this definition">¶</a></dt>
 <dd><p>The main program controller.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.CheetahWrapper.CheetahWrapper.options">
-<code class="sig-name descname">options</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.options" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">options</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.options" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.CheetahWrapper.CheetahWrapper.parseOpts">
-<code class="sig-name descname">parseOpts</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.parseOpts" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">parseOpts</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.parseOpts" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.CheetahWrapper.CheetahWrapper.test">
-<code class="sig-name descname">test</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.test" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">test</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.test" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.CheetahWrapper.CheetahWrapper.version">
-<code class="sig-name descname">version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">version</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.version" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="Cheetah.CheetahWrapper.CheetahWrapper.warn">
-<code class="sig-name descname">warn</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">format</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.warn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">warn</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">format</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.CheetahWrapper.warn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Always print a warning message to stderr.</p>
 </dd></dl>
 
@@ -130,18 +129,18 @@ false.</p>
 
 <dl class="py exception">
 <dt id="Cheetah.CheetahWrapper.Error">
-<em class="property">exception </em><code class="sig-prename descclassname">Cheetah.CheetahWrapper.</code><code class="sig-name descname">Error</code><a class="headerlink" href="#Cheetah.CheetahWrapper.Error" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.CheetahWrapper.</span></code><code class="sig-name descname"><span class="pre">Error</span></code><a class="headerlink" href="#Cheetah.CheetahWrapper.Error" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
 </dd></dl>
 
 <dl class="py function">
 <dt id="Cheetah.CheetahWrapper.fprintfMessage">
-<code class="sig-prename descclassname">Cheetah.CheetahWrapper.</code><code class="sig-name descname">fprintfMessage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stream</span></em>, <em class="sig-param"><span class="n">format</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.fprintfMessage" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">Cheetah.CheetahWrapper.</span></code><code class="sig-name descname"><span class="pre">fprintfMessage</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.fprintfMessage" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt id="Cheetah.CheetahWrapper.usage">
-<code class="sig-prename descclassname">Cheetah.CheetahWrapper.</code><code class="sig-name descname">usage</code><span class="sig-paren">(</span><em class="sig-param">usageMessage</em>, <em class="sig-param">errorMessage=''</em>, <em class="sig-param">out=&lt;_io.TextIOWrapper name='&lt;stderr&gt;' mode='w' encoding='KOI8-R'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.usage" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">Cheetah.CheetahWrapper.</span></code><code class="sig-name descname"><span class="pre">usage</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">usageMessage</span></em>, <em class="sig-param"><span class="pre">errorMessage=''</span></em>, <em class="sig-param"><span class="pre">out=&lt;_io.TextIOWrapper</span> <span class="pre">name='&lt;stderr&gt;'</span> <span class="pre">mode='w'</span> <span class="pre">encoding='KOI8-R'&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.usage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write help text, an optional error message, and abort the program.</p>
 </dd></dl>
 
@@ -189,9 +188,9 @@ false.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2020, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Oct 01, 2020.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+        &#169; Copyright 2017-2021, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Feb 22, 2021.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.0.
     </div>
   </body>
 </html>

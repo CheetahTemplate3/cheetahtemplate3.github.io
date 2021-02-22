@@ -6,13 +6,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cheetah.Filters module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head><body>
@@ -42,7 +41,7 @@
 #transform results in a filter on the entirety of the output</p>
 <dl class="py class">
 <dt id="Cheetah.Filters.CodeHighlighter">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Filters.</code><code class="sig-name descname">CodeHighlighter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">template</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.CodeHighlighter" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.Filters.</span></code><code class="sig-name descname"><span class="pre">CodeHighlighter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.CodeHighlighter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Filters.Filter" title="Cheetah.Filters.Filter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Filters.Filter</span></code></a></p>
 <p>The CodeHighlighter filter depends on the “pygments” module
 which you can download and install from: <a class="reference external" href="http://pygments.org/">http://pygments.org/</a></p>
@@ -61,7 +60,7 @@ failure by adding:</p>
 causing issues).</p>
 <dl class="py method">
 <dt id="Cheetah.Filters.CodeHighlighter.filter">
-<code class="sig-name descname">filter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">source</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.CodeHighlighter.filter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">filter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.CodeHighlighter.filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pass Unicode strings through unmolested,
 unless an encoding is specified.</p>
 </dd></dl>
@@ -70,18 +69,18 @@ unless an encoding is specified.</p>
 
 <dl class="py attribute">
 <dt id="Cheetah.Filters.EncodeUnicode">
-<code class="sig-prename descclassname">Cheetah.Filters.</code><code class="sig-name descname">EncodeUnicode</code><a class="headerlink" href="#Cheetah.Filters.EncodeUnicode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">Cheetah.Filters.</span></code><code class="sig-name descname"><span class="pre">EncodeUnicode</span></code><a class="headerlink" href="#Cheetah.Filters.EncodeUnicode" title="Permalink to this definition">¶</a></dt>
 <dd><p>alias of <a class="reference internal" href="#Cheetah.Filters.Filter" title="Cheetah.Filters.Filter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Filters.Filter</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt id="Cheetah.Filters.Filter">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Filters.</code><code class="sig-name descname">Filter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">template</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.Filter" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.Filters.</span></code><code class="sig-name descname"><span class="pre">Filter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.Filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A baseclass for the Cheetah Filters.</p>
 <dl class="py method">
 <dt id="Cheetah.Filters.Filter.filter">
-<code class="sig-name descname">filter</code><span class="sig-paren">(</span><em class="sig-param">val</em>, <em class="sig-param">encoding=None</em>, <em class="sig-param">str=&lt;class 'str'&gt;</em>, <em class="sig-param">**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.Filter.filter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">filter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">val</span></em>, <em class="sig-param"><span class="pre">encoding=None</span></em>, <em class="sig-param"><span class="pre">str=&lt;class</span> <span class="pre">'str'&gt;</span></em>, <em class="sig-param"><span class="pre">**kw</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.Filter.filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pass Unicode strings through unmolested,
 unless an encoding is specified.</p>
 </dd></dl>
@@ -90,7 +89,7 @@ unless an encoding is specified.</p>
 
 <dl class="py class">
 <dt id="Cheetah.Filters.Markdown">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Filters.</code><code class="sig-name descname">Markdown</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">template</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.Markdown" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.Filters.</span></code><code class="sig-name descname"><span class="pre">Markdown</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.Markdown" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Filters.Filter" title="Cheetah.Filters.Filter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Filters.Filter</span></code></a></p>
 <p>Markdown will change regular strings to <a class="reference external" href="http://daringfireball.net/projects/markdown/">Markdown</a></p>
 <p>Such that:</p>
@@ -108,7 +107,7 @@ tag, as it’s usefulness with #filter is marginal at
 best</p>
 <dl class="py method">
 <dt id="Cheetah.Filters.Markdown.filter">
-<code class="sig-name descname">filter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.Markdown.filter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">filter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.Markdown.filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pass Unicode strings through unmolested,
 unless an encoding is specified.</p>
 </dd></dl>
@@ -117,11 +116,11 @@ unless an encoding is specified.</p>
 
 <dl class="py class">
 <dt id="Cheetah.Filters.MaxLen">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Filters.</code><code class="sig-name descname">MaxLen</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">template</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.MaxLen" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.Filters.</span></code><code class="sig-name descname"><span class="pre">MaxLen</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.MaxLen" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Filters.Filter" title="Cheetah.Filters.Filter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Filters.Filter</span></code></a></p>
 <dl class="py method">
 <dt id="Cheetah.Filters.MaxLen.filter">
-<code class="sig-name descname">filter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kw</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.MaxLen.filter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">filter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.MaxLen.filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Replace None with ‘’ and cut off at maxlen.</p>
 </dd></dl>
 
@@ -129,13 +128,13 @@ unless an encoding is specified.</p>
 
 <dl class="py attribute">
 <dt id="Cheetah.Filters.RawOrEncodedUnicode">
-<code class="sig-prename descclassname">Cheetah.Filters.</code><code class="sig-name descname">RawOrEncodedUnicode</code><a class="headerlink" href="#Cheetah.Filters.RawOrEncodedUnicode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">Cheetah.Filters.</span></code><code class="sig-name descname"><span class="pre">RawOrEncodedUnicode</span></code><a class="headerlink" href="#Cheetah.Filters.RawOrEncodedUnicode" title="Permalink to this definition">¶</a></dt>
 <dd><p>alias of <a class="reference internal" href="#Cheetah.Filters.Filter" title="Cheetah.Filters.Filter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Filters.Filter</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt id="Cheetah.Filters.Strip">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Filters.</code><code class="sig-name descname">Strip</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">template</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.Strip" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.Filters.</span></code><code class="sig-name descname"><span class="pre">Strip</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.Strip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Filters.Filter" title="Cheetah.Filters.Filter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Filters.Filter</span></code></a></p>
 <p>Strip leading/trailing whitespace but preserve newlines.</p>
 <p>This filter goes through the value line by line, removing leading and
@@ -150,7 +149,7 @@ much more widely useful.</p>
 with the proposed #sed directive (which has not been ratified yet.)</p>
 <dl class="py method">
 <dt id="Cheetah.Filters.Strip.filter">
-<code class="sig-name descname">filter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kw</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.Strip.filter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">filter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.Strip.filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pass Unicode strings through unmolested,
 unless an encoding is specified.</p>
 </dd></dl>
@@ -159,14 +158,14 @@ unless an encoding is specified.</p>
 
 <dl class="py class">
 <dt id="Cheetah.Filters.StripSqueeze">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Filters.</code><code class="sig-name descname">StripSqueeze</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">template</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.StripSqueeze" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.Filters.</span></code><code class="sig-name descname"><span class="pre">StripSqueeze</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.StripSqueeze" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Filters.Filter" title="Cheetah.Filters.Filter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Filters.Filter</span></code></a></p>
 <p>Canonicalizes every chunk of whitespace to a single space.</p>
 <p>Strips leading/trailing whitespace.  Removes all newlines, so multi-line
 input is joined into one ling line with NO trailing newline.</p>
 <dl class="py method">
 <dt id="Cheetah.Filters.StripSqueeze.filter">
-<code class="sig-name descname">filter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kw</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.StripSqueeze.filter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">filter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.StripSqueeze.filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pass Unicode strings through unmolested,
 unless an encoding is specified.</p>
 </dd></dl>
@@ -175,12 +174,12 @@ unless an encoding is specified.</p>
 
 <dl class="py class">
 <dt id="Cheetah.Filters.WebSafe">
-<em class="property">class </em><code class="sig-prename descclassname">Cheetah.Filters.</code><code class="sig-name descname">WebSafe</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">template</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.WebSafe" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.Filters.</span></code><code class="sig-name descname"><span class="pre">WebSafe</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.WebSafe" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Cheetah.Filters.Filter" title="Cheetah.Filters.Filter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Filters.Filter</span></code></a></p>
 <p>Escape HTML entities in $placeholders.</p>
 <dl class="py method">
 <dt id="Cheetah.Filters.WebSafe.filter">
-<code class="sig-name descname">filter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kw</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.WebSafe.filter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">filter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.WebSafe.filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pass Unicode strings through unmolested,
 unless an encoding is specified.</p>
 </dd></dl>
@@ -189,7 +188,7 @@ unless an encoding is specified.</p>
 
 <dl class="py function">
 <dt id="Cheetah.Filters.test">
-<code class="sig-prename descclassname">Cheetah.Filters.</code><code class="sig-name descname">test</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.test" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">Cheetah.Filters.</span></code><code class="sig-name descname"><span class="pre">test</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Filters.test" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -236,9 +235,9 @@ unless an encoding is specified.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2020, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Oct 01, 2020.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+        &#169; Copyright 2017-2021, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Feb 22, 2021.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.0.
     </div>
   </body>
 </html>
