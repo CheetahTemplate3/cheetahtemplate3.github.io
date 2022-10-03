@@ -1,16 +1,17 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Comments &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -44,7 +45,7 @@
           <div class="body" role="main">
             
   <div class="section" id="comments">
-<h1>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h1>
+<h1>Comments<a class="headerlink" href="#comments" title="Permalink to this heading">¶</a></h1>
 <p>Comments are used to mark notes, explanations, and decorative text
 that should not appear in the output. Cheetah maintains the
 comments in the Python module it generates from the Cheetah source
@@ -88,7 +89,7 @@ lines after the previous method definition, like so:</p>
 </pre></div>
 </div>
 <div class="section" id="docstring-comments">
-<h2>Docstring Comments<a class="headerlink" href="#docstring-comments" title="Permalink to this headline">¶</a></h2>
+<h2>Docstring Comments<a class="headerlink" href="#docstring-comments" title="Permalink to this heading">¶</a></h2>
 <p>Python modules, classes, and methods can be documented with inline
 ‘documentation strings’ (aka ‘docstrings’). Docstrings, unlike
 comments, are accesible at run-time. Thus, they provide a useful
@@ -113,7 +114,7 @@ the following prefixes:</p>
 </div>
 </div>
 <div class="section" id="header-comments">
-<h2>Header Comments<a class="headerlink" href="#header-comments" title="Permalink to this headline">¶</a></h2>
+<h2>Header Comments<a class="headerlink" href="#header-comments" title="Permalink to this heading">¶</a></h2>
 <p>(comments.headers) Cheetah comments can also be transformed into
 module header comments using the following syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">##header: This text will be added to the module header comment</span>
@@ -134,8 +135,9 @@ a set of #-prefixed comment lines.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Comments</a><ul>
 <li><a class="reference internal" href="#docstring-comments">Docstring Comments</a></li>
 <li><a class="reference internal" href="#header-comments">Header Comments</a></li>
@@ -143,12 +145,17 @@ a set of #-prefixed comment lines.</p>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="language.html"
-                        title="previous chapter">Language Overview</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="output.html"
-                        title="next chapter">Generating, Caching and Filtering Output</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="language.html"
+                          title="previous chapter">Language Overview</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="output.html"
+                          title="next chapter">Generating, Caching and Filtering Output</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -160,12 +167,12 @@ a set of #-prefixed comment lines.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -191,9 +198,9 @@ a set of #-prefixed comment lines.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2021, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Apr 20, 2021.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+        &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Oct 03, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
   </body>
 </html>

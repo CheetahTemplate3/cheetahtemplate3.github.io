@@ -1,16 +1,17 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Import, Inheritance, Declaration and Assignment &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -44,9 +45,9 @@
           <div class="body" role="main">
             
   <div class="section" id="import-inheritance-declaration-and-assignment">
-<h1>Import, Inheritance, Declaration and Assignment<a class="headerlink" href="#import-inheritance-declaration-and-assignment" title="Permalink to this headline">¶</a></h1>
+<h1>Import, Inheritance, Declaration and Assignment<a class="headerlink" href="#import-inheritance-declaration-and-assignment" title="Permalink to this heading">¶</a></h1>
 <div class="section" id="import-and-from-directives">
-<h2>#import and #from directives<a class="headerlink" href="#import-and-from-directives" title="Permalink to this headline">¶</a></h2>
+<h2>#import and #from directives<a class="headerlink" href="#import-and-from-directives" title="Permalink to this heading">¶</a></h2>
 <p>Syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#import MODULE_OR_OBJECT [as NAME] [, ...]</span>
 <span class="c1">#from MODULE import MODULE_OR_OBJECT [as NAME] [, ...]</span>
@@ -69,7 +70,7 @@ visible globally to all methods in the generated Python class.</p>
 {$placeholders} and expressions.</p>
 </div>
 <div class="section" id="extends">
-<h2>#extends<a class="headerlink" href="#extends" title="Permalink to this headline">¶</a></h2>
+<h2>#extends<a class="headerlink" href="#extends" title="Permalink to this heading">¶</a></h2>
 <p>Syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#extends CLASS</span>
 </pre></div>
@@ -169,7 +170,7 @@ as in step 2 above. Read the next section to understand what
 {#implements} is and when to use it.</p>
 </div>
 <div class="section" id="implements">
-<h2>#implements<a class="headerlink" href="#implements" title="Permalink to this headline">¶</a></h2>
+<h2>#implements<a class="headerlink" href="#implements" title="Permalink to this heading">¶</a></h2>
 <p>Syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#implements METHOD</span>
 </pre></div>
@@ -229,7 +230,7 @@ first} thing you should think is,
 “Do I need to add {#implements respond} somewhere?” }</p>
 </div>
 <div class="section" id="set">
-<h2>#set<a class="headerlink" href="#set" title="Permalink to this headline">¶</a></h2>
+<h2>#set<a class="headerlink" href="#set" title="Permalink to this heading">¶</a></h2>
 <p>Syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#set [global] $var = EXPR</span>
 </pre></div>
@@ -280,7 +281,7 @@ nested templates and included files. Use this feature with care to
 prevent surprises.</p>
 </div>
 <div class="section" id="del">
-<h2>#del<a class="headerlink" href="#del" title="Permalink to this headline">¶</a></h2>
+<h2>#del<a class="headerlink" href="#del" title="Permalink to this heading">¶</a></h2>
 <p>Syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#del $var</span>
 </pre></div>
@@ -296,7 +297,7 @@ delete a {#set global} variable, a searchList variable, or any
 other type of variable.</p>
 </div>
 <div class="section" id="attr">
-<h2>#attr<a class="headerlink" href="#attr" title="Permalink to this headline">¶</a></h2>
+<h2>#attr<a class="headerlink" href="#attr" title="Permalink to this heading">¶</a></h2>
 <p>Syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#attr $var = EXPR</span>
 </pre></div>
@@ -321,7 +322,7 @@ and put them in a database (assuming the templates have been
 compiled into .py template modules):</p>
 </div>
 <div class="section" id="def">
-<h2>#def<a class="headerlink" href="#def" title="Permalink to this headline">¶</a></h2>
+<h2>#def<a class="headerlink" href="#def" title="Permalink to this heading">¶</a></h2>
 <p>Syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#def METHOD[(ARGUMENTS)]</span>
 <span class="c1">#end def</span>
@@ -400,7 +401,7 @@ placeholder calls a method that’s overridden in a subclass, it’s
 the subclass method that will be called.</p>
 </div>
 <div class="section" id="block-end-block">
-<h2>#block … #end block<a class="headerlink" href="#block-end-block" title="Permalink to this headline">¶</a></h2>
+<h2>#block … #end block<a class="headerlink" href="#block-end-block" title="Permalink to this heading">¶</a></h2>
 <p>The {#block} directive allows you to mark a section of your
 template that can be selectively reimplemented in a subclass. It is
 very useful for changing part of a template without having to
@@ -463,8 +464,9 @@ arguments.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Import, Inheritance, Declaration and Assignment</a><ul>
 <li><a class="reference internal" href="#import-and-from-directives">#import and #from directives</a></li>
 <li><a class="reference internal" href="#extends">#extends</a></li>
@@ -478,12 +480,17 @@ arguments.</p>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="output.html"
-                        title="previous chapter">Generating, Caching and Filtering Output</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="flowControl.html"
-                        title="next chapter">Flow Control</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="output.html"
+                          title="previous chapter">Generating, Caching and Filtering Output</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="flowControl.html"
+                          title="next chapter">Flow Control</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -495,12 +502,12 @@ arguments.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -526,9 +533,9 @@ arguments.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2021, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Apr 20, 2021.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+        &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Oct 03, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
   </body>
 </html>

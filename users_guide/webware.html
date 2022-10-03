@@ -1,16 +1,17 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Using Cheetah with Webware &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -44,7 +45,7 @@
           <div class="body" role="main">
             
   <div class="section" id="using-cheetah-with-webware">
-<h1>Using Cheetah with Webware<a class="headerlink" href="#using-cheetah-with-webware" title="Permalink to this headline">¶</a></h1>
+<h1>Using Cheetah with Webware<a class="headerlink" href="#using-cheetah-with-webware" title="Permalink to this heading">¶</a></h1>
 <p>{ Webware for Python} is a ‘Python-Powered Internet Platform’ that
 runs servlets in a manner similar to Java servlets. { WebKit} is
 the name of Webware’s application server. For more details, please
@@ -62,7 +63,7 @@ both “WebKit, Webware’s application server”, so it’s one half dozen
 to the other. In this document, we generally use the term { WebKit}
 to refer to the currently-running application server.</p>
 <div class="section" id="installing-cheetah-on-a-webware-system">
-<h2>Installing Cheetah on a Webware system<a class="headerlink" href="#installing-cheetah-on-a-webware-system" title="Permalink to this headline">¶</a></h2>
+<h2>Installing Cheetah on a Webware system<a class="headerlink" href="#installing-cheetah-on-a-webware-system" title="Permalink to this heading">¶</a></h2>
 <p>Install Cheetah after you have installed Webware, following the
 instructions in chapter gettingStarted.</p>
 <p>The standard Cheetah test suite (‘cheetah test’) does not test
@@ -82,7 +83,7 @@ standard Webware; WebwareExperimental does not have contexts.)</p>
 ‘Application.config’ file.</p>
 </div>
 <div class="section" id="containment-vs-inheritance">
-<h2>Containment vs Inheritance<a class="headerlink" href="#containment-vs-inheritance" title="Permalink to this headline">¶</a></h2>
+<h2>Containment vs Inheritance<a class="headerlink" href="#containment-vs-inheritance" title="Permalink to this heading">¶</a></h2>
 <p>Because Cheetah’s core is flexible, there are many ways to
 integrate it with Webware servlets. There are two broad strategies:
 the { Inheritance approach} and the { Containment approach}. The
@@ -116,7 +117,7 @@ inheritance chain to produce the output. The advantage of this
 approach is that you aren’t dealing with {Template} methods and
 Webware methods in the same object.</p>
 <div class="section" id="the-containment-approach">
-<h3>The Containment Approach<a class="headerlink" href="#the-containment-approach" title="Permalink to this headline">¶</a></h3>
+<h3>The Containment Approach<a class="headerlink" href="#the-containment-approach" title="Permalink to this heading">¶</a></h3>
 <p>In the Containment approach, your servlet is not a template.
 Instead, it it makes its own arrangements to create and use
 template object(s) for whatever it needs. The servlet must
@@ -139,7 +140,7 @@ since they don’t change once created. So it’s safe to store a
 template class in a module global variable.</p>
 </div>
 <div class="section" id="the-inheritance-approach">
-<h3>The Inheritance Approach<a class="headerlink" href="#the-inheritance-approach" title="Permalink to this headline">¶</a></h3>
+<h3>The Inheritance Approach<a class="headerlink" href="#the-inheritance-approach" title="Permalink to this heading">¶</a></h3>
 <p>In the Inheritance approach, your template object doubles as as
 Webware servlet, thus these are sometimes called {
 template-servlets}. { cheetah compile} (section
@@ -187,7 +188,7 @@ use redirects).</p>
 </div>
 </div>
 <div class="section" id="site-frameworks">
-<h2>Site frameworks<a class="headerlink" href="#site-frameworks" title="Permalink to this headline">¶</a></h2>
+<h2>Site frameworks<a class="headerlink" href="#site-frameworks" title="Permalink to this heading">¶</a></h2>
 <p>Web sites are normally arranged hierarchically, with certain
 features common to every page on the site, other features common to
 certain sections or subsections, and others unique to each page.
@@ -219,7 +220,7 @@ work.</p>
 in this chapter, let us know.</p>
 </div>
 <div class="section" id="directory-structure">
-<h2>Directory structure<a class="headerlink" href="#directory-structure" title="Permalink to this headline">¶</a></h2>
+<h2>Directory structure<a class="headerlink" href="#directory-structure" title="Permalink to this heading">¶</a></h2>
 <p>Here’s one way to organize your files for Webware+Cheetah.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">www</span><span class="o">/</span>                         <span class="c1"># Web root directory.</span>
     <span class="n">site1</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span>       <span class="c1"># Site subdirectory.</span>
@@ -244,7 +245,7 @@ in this chapter, let us know.</p>
 </div>
 </div>
 <div class="section" id="initializing-your-template-servlet-with-python-code">
-<h2>Initializing your template-servlet with Python code<a class="headerlink" href="#initializing-your-template-servlet-with-python-code" title="Permalink to this headline">¶</a></h2>
+<h2>Initializing your template-servlet with Python code<a class="headerlink" href="#initializing-your-template-servlet-with-python-code" title="Permalink to this heading">¶</a></h2>
 <p>If you need a place to initialize variables or do calculations for
 your template-servlet, you can put it in an {.awake()} method
 because WebKit automatically calls that early when processing the
@@ -261,7 +262,7 @@ method and call it near the top of your template. ({#silent},
 section output.silent).</p>
 </div>
 <div class="section" id="form-processing">
-<h2>Form processing<a class="headerlink" href="#form-processing" title="Permalink to this headline">¶</a></h2>
+<h2>Form processing<a class="headerlink" href="#form-processing" title="Permalink to this heading">¶</a></h2>
 <p>There are many ways to display and process HTML forms with Cheetah.
 But basically, all form processing involves two steps.</p>
 <ol class="arabic simple">
@@ -329,7 +330,7 @@ been used with Cheetah. You can download FunFormKit from
 yourself.</p>
 </div>
 <div class="section" id="form-input-cookies-session-variables-and-web-server-variables">
-<h2>Form input, cookies, session variables and web server variables<a class="headerlink" href="#form-input-cookies-session-variables-and-web-server-variables" title="Permalink to this headline">¶</a></h2>
+<h2>Form input, cookies, session variables and web server variables<a class="headerlink" href="#form-input-cookies-session-variables-and-web-server-variables" title="Permalink to this heading">¶</a></h2>
 <p>General variable tips that also apply to servlets are in section
 tips.placeholder.</p>
 <p>To look up a CGI GET or POST parameter (with POST overriding):</p>
@@ -385,7 +386,7 @@ $log(&quot;message&quot;)         ## Put a message in the Webware server log.  (
 </pre></div>
 </div>
 <div class="section" id="webinput">
-<h3>.webInput()<a class="headerlink" href="#webinput" title="Permalink to this headline">¶</a></h3>
+<h3>.webInput()<a class="headerlink" href="#webinput" title="Permalink to this heading">¶</a></h3>
 <p>From the method docstring:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    def webInput(self, names, namesMulti=(), default=&#39;&#39;, src=&#39;f&#39;,
         defaultInt=0, defaultFloat=0.00, badInt=0, badFloat=0.00, debug=False):
@@ -531,19 +532,19 @@ TypeError if a conversion suffix is not &quot;:int&quot; or &quot;:float&quot;.
 </div>
 </div>
 <div class="section" id="more-examples">
-<h2>More examples<a class="headerlink" href="#more-examples" title="Permalink to this headline">¶</a></h2>
+<h2>More examples<a class="headerlink" href="#more-examples" title="Permalink to this heading">¶</a></h2>
 <div class="section" id="example-a-a-standalone-servlet">
-<h3>Example A - a standalone servlet<a class="headerlink" href="#example-a-a-standalone-servlet" title="Permalink to this headline">¶</a></h3>
+<h3>Example A - a standalone servlet<a class="headerlink" href="#example-a-a-standalone-servlet" title="Permalink to this heading">¶</a></h3>
 </div>
 <div class="section" id="example-b-a-servlet-under-a-site-framework">
-<h3>Example B - a servlet under a site framework<a class="headerlink" href="#example-b-a-servlet-under-a-site-framework" title="Permalink to this headline">¶</a></h3>
+<h3>Example B - a servlet under a site framework<a class="headerlink" href="#example-b-a-servlet-under-a-site-framework" title="Permalink to this heading">¶</a></h3>
 </div>
 <div class="section" id="example-c-several-servlets-with-a-common-template">
-<h3>Example C - several servlets with a common template<a class="headerlink" href="#example-c-several-servlets-with-a-common-template" title="Permalink to this headline">¶</a></h3>
+<h3>Example C - several servlets with a common template<a class="headerlink" href="#example-c-several-servlets-with-a-common-template" title="Permalink to this heading">¶</a></h3>
 </div>
 </div>
 <div class="section" id="other-tips">
-<h2>Other Tips<a class="headerlink" href="#other-tips" title="Permalink to this headline">¶</a></h2>
+<h2>Other Tips<a class="headerlink" href="#other-tips" title="Permalink to this heading">¶</a></h2>
 <p>If your servlet accesses external files (e.g., via an {#include}
 directive), remember that the current directory is not necessarily
 directory the servlet is in. It’s probably some other directory
@@ -564,8 +565,9 @@ This may help you avoid buggy servlets.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Using Cheetah with Webware</a><ul>
 <li><a class="reference internal" href="#installing-cheetah-on-a-webware-system">Installing Cheetah on a Webware system</a></li>
 <li><a class="reference internal" href="#containment-vs-inheritance">Containment vs Inheritance</a><ul>
@@ -592,12 +594,17 @@ This may help you avoid buggy servlets.</p>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="tipsAndTricks.html"
-                        title="previous chapter">Tips, Tricks and Troubleshooting</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="otherHtml.html"
-                        title="next chapter">non-Webware HTML output</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="tipsAndTricks.html"
+                          title="previous chapter">Tips, Tricks and Troubleshooting</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="otherHtml.html"
+                          title="next chapter">non-Webware HTML output</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -609,12 +616,12 @@ This may help you avoid buggy servlets.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -640,9 +647,9 @@ This may help you avoid buggy servlets.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2021, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Apr 20, 2021.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+        &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Oct 03, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
   </body>
 </html>

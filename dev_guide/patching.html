@@ -1,16 +1,17 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Patching Cheetah &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -44,12 +45,12 @@
           <div class="body" role="main">
             
   <div class="section" id="patching-cheetah">
-<h1>Patching Cheetah<a class="headerlink" href="#patching-cheetah" title="Permalink to this headline">¶</a></h1>
+<h1>Patching Cheetah<a class="headerlink" href="#patching-cheetah" title="Permalink to this heading">¶</a></h1>
 <p>How to commit changes to git, or submit patches, or send pull requests,
 how to run the test suite. Describe distutils and how the regression tests
 work.</p>
 <div class="section" id="file-requirements">
-<h2>File Requirements<a class="headerlink" href="#file-requirements" title="Permalink to this headline">¶</a></h2>
+<h2>File Requirements<a class="headerlink" href="#file-requirements" title="Permalink to this heading">¶</a></h2>
 <p>The code{Template} class contains not only the Cheetah
 infrastructure, but also some convenience methods useful in all
 templates. More methods may be added if it’s generally agreed among
@@ -71,7 +72,7 @@ default if the attribute does not exist (meaning the user has not
 imported that subsystem).</p>
 </div>
 <div class="section" id="testing-changes-and-building-regression-tests">
-<h2>Testing Changes and Building Regression Tests<a class="headerlink" href="#testing-changes-and-building-regression-tests" title="Permalink to this headline">¶</a></h2>
+<h2>Testing Changes and Building Regression Tests<a class="headerlink" href="#testing-changes-and-building-regression-tests" title="Permalink to this heading">¶</a></h2>
 <p>Cheetah ships with a regression test suite. To run the built-in
 tests, execute at the shell prompt:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cheetah</span> <span class="n">test</span>
@@ -170,8 +171,9 @@ module.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Patching Cheetah</a><ul>
 <li><a class="reference internal" href="#file-requirements">File Requirements</a></li>
 <li><a class="reference internal" href="#testing-changes-and-building-regression-tests">Testing Changes and Building Regression Tests</a></li>
@@ -179,12 +181,17 @@ module.</p>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="placeholders.html"
-                        title="previous chapter">Placeholders</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="flowControl.html"
-                        title="next chapter">Directives: Flow Control</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="placeholders.html"
+                          title="previous chapter">Placeholders</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="flowControl.html"
+                          title="next chapter">Directives: Flow Control</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -196,12 +203,12 @@ module.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -227,9 +234,9 @@ module.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2021, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Apr 20, 2021.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+        &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Oct 03, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
   </body>
 </html>

@@ -1,16 +1,17 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Getting Started &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -44,9 +45,9 @@
           <div class="body" role="main">
             
   <div class="section" id="getting-started">
-<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading">¶</a></h1>
 <div class="section" id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">¶</a></h2>
 <p>Cheetah requires Python release 2.7 (there are plans to support 3.4+).
 It is known to run on Linux, Windows, FreeBSD and Solaris,
 and should run anywhere Python runs.</p>
@@ -57,21 +58,21 @@ available.</p>
 <p>Cheetah can use an additional module Markdown but it’s not strictly required.</p>
 </div>
 <div class="section" id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h2>
 <p>To install Cheetah in your system-wide Python library:</p>
 <ol class="arabic simple">
 <li><p>Login as a user with privileges to install system-wide Python
 packages. On POSIX systems (AIX, Solaris, Linux, IRIX, etc.), the
 command is normally ‘su root’. On non-POSIX systems such as Windows
 NT, login as an administrator.</p></li>
-<li><p>Run {pip install Cheetah3} at the command prompt.</p></li>
+<li><p>Run {pip install CT3} at the command prompt.</p></li>
 <li><p>Or download source code and run {python setup.py install}.</p></li>
 <li><p>The setup program will install the wrapper script { cheetah} to
 wherever it usually puts Python binaries (“/usr/bin/”, “bin/” in
 the Python install directory, etc.)</p></li>
 <li><p>If you cannot login as as an administrator install Cheetah as user to your
 own home directory: add option {–user} to commands: either
-{pip install –user Cheetah3} or {python setup.py install –user}.</p></li>
+{pip install –user CT3} or {python setup.py install –user}.</p></li>
 </ol>
 <p>Cheetah’s installation is managed by Python’s Distribution
 Utilities (‘distutils’). There are many options for customization.
@@ -87,7 +88,7 @@ Python’s {site-packages/} directory, use one of these options:</p>
 Python to find Cheetah.</p>
 </div>
 <div class="section" id="files">
-<h2>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h2>
+<h2>Files<a class="headerlink" href="#files" title="Permalink to this heading">¶</a></h2>
 <p>If you do the systemwide install, all Cheetah modules are installed
 in the { site-packages/Cheetah/} subdirectory of your standard
 library directory; e.g.,
@@ -97,13 +98,13 @@ bin directory: {cheetah} (section gettingStarted.cheetah) and
 {cheetah-compile} (section howWorks.cheetah-compile).</p>
 </div>
 <div class="section" id="uninstalling">
-<h2>Uninstalling<a class="headerlink" href="#uninstalling" title="Permalink to this headline">¶</a></h2>
+<h2>Uninstalling<a class="headerlink" href="#uninstalling" title="Permalink to this heading">¶</a></h2>
 <p>To uninstall Cheetah, merely delete the site-packages/Cheetah/
 directory. Then delete the “cheetah” and “cheetah-compile” commands
 from whichever bin/ directory they were put in.</p>
 </div>
 <div class="section" id="the-cheetah-command">
-<h2>The ‘cheetah’ command<a class="headerlink" href="#the-cheetah-command" title="Permalink to this headline">¶</a></h2>
+<h2>The ‘cheetah’ command<a class="headerlink" href="#the-cheetah-command" title="Permalink to this heading">¶</a></h2>
 <p>Cheetah comes with a utility {cheetah} that provides a command-line
 interface to various housekeeping tasks. The command’s first
 argument is the name of the task. The following commands are
@@ -125,7 +126,7 @@ the {fill} command in section howWorks.cheetah-fill.</p>
 {cheetah compile}.</p>
 </div>
 <div class="section" id="testing-your-installation">
-<h2>Testing your installation<a class="headerlink" href="#testing-your-installation" title="Permalink to this headline">¶</a></h2>
+<h2>Testing your installation<a class="headerlink" href="#testing-your-installation" title="Permalink to this heading">¶</a></h2>
 <p>After installing Cheetah, you can run its self-test routine to
 verify it’s working properly on your system. Change directory to
 any directory you have write permission in (the tests write
@@ -164,7 +165,7 @@ installation:</p>
 </ol>
 </div>
 <div class="section" id="quickstart-tutorial">
-<h2>Quickstart tutorial<a class="headerlink" href="#quickstart-tutorial" title="Permalink to this headline">¶</a></h2>
+<h2>Quickstart tutorial<a class="headerlink" href="#quickstart-tutorial" title="Permalink to this heading">¶</a></h2>
 <p>This tutorial briefly introduces how to use Cheetah from the Python
 prompt. The following chapters will discuss other ways to use
 templates and more of Cheetah’s features.</p>
@@ -270,8 +271,9 @@ provide a template definition since it was already established:</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Getting Started</a><ul>
 <li><a class="reference internal" href="#requirements">Requirements</a></li>
 <li><a class="reference internal" href="#installation">Installation</a></li>
@@ -284,12 +286,17 @@ provide a template definition since it was already established:</p>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="glossary.html"
-                        title="previous chapter">Vocabulary</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="language.html"
-                        title="next chapter">Language Overview</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="glossary.html"
+                          title="previous chapter">Vocabulary</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="language.html"
+                          title="next chapter">Language Overview</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -301,12 +308,12 @@ provide a template definition since it was already established:</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -332,9 +339,9 @@ provide a template definition since it was already established:</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2021, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Apr 20, 2021.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+        &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Oct 03, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
   </body>
 </html>

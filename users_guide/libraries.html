@@ -1,16 +1,17 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Batteries included: templates and other libraries &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -44,7 +45,7 @@
           <div class="body" role="main">
             
   <div class="section" id="batteries-included-templates-and-other-libraries">
-<h1>Batteries included: templates and other libraries<a class="headerlink" href="#batteries-included-templates-and-other-libraries" title="Permalink to this headline">¶</a></h1>
+<h1>Batteries included: templates and other libraries<a class="headerlink" href="#batteries-included-templates-and-other-libraries" title="Permalink to this heading">¶</a></h1>
 <p>Cheetah comes “batteries included” with libraries of templates,
 functions, classes and other objects you can use in your own
 programs. The different types are listed alphabetically below,
@@ -59,7 +60,7 @@ the standard library. That way, all Cheetah users will benefit, and
 it will encourage others to contribute their objects, which might
 include something you want.</p>
 <div class="section" id="errorcatchers">
-<h2>ErrorCatchers<a class="headerlink" href="#errorcatchers" title="Permalink to this headline">¶</a></h2>
+<h2>ErrorCatchers<a class="headerlink" href="#errorcatchers" title="Permalink to this heading">¶</a></h2>
 <p>Module {Cheetah.ErrorCatchers} contains error-handling classes
 suitable for the {#errorCatcher} directive. These are debugging
 tools that are not intended for use in production systems. See
@@ -67,20 +68,20 @@ section errorHandling.errorCatcher for a description of the error
 catchers bundled with Cheetah.</p>
 </div>
 <div class="section" id="fileutils">
-<h2>FileUtils<a class="headerlink" href="#fileutils" title="Permalink to this headline">¶</a></h2>
+<h2>FileUtils<a class="headerlink" href="#fileutils" title="Permalink to this heading">¶</a></h2>
 <p>Module {Cheetah.FileUtils} contains generic functions and classes
 for doing bulk search-and-replace on several files, and for finding
 all the files in a directory hierarchy whose names match a glob
 pattern.</p>
 </div>
 <div class="section" id="filters">
-<h2>Filters<a class="headerlink" href="#filters" title="Permalink to this headline">¶</a></h2>
+<h2>Filters<a class="headerlink" href="#filters" title="Permalink to this heading">¶</a></h2>
 <p>Module {Filters} contains filters suitable for the {#Filter}
 directive. See section output.filter for a description of the
 filters bundled with Cheetah.</p>
 </div>
 <div class="section" id="settingsmanager">
-<h2>SettingsManager<a class="headerlink" href="#settingsmanager" title="Permalink to this headline">¶</a></h2>
+<h2>SettingsManager<a class="headerlink" href="#settingsmanager" title="Permalink to this heading">¶</a></h2>
 <p>The {SettingsManager} class in the {Cheetah.SettingsManager} module
 is a baseclass that provides facilities for managing application
 settings. It facilitates the use of user-supplied configuration
@@ -111,7 +112,7 @@ applications. See the source code and docstrings in the file
 {Cheetah/SettingsManager.py} for more information.</p>
 </div>
 <div class="section" id="templates">
-<h2>Templates<a class="headerlink" href="#templates" title="Permalink to this headline">¶</a></h2>
+<h2>Templates<a class="headerlink" href="#templates" title="Permalink to this heading">¶</a></h2>
 <p>Package {Cheetah.Templates} contains stock templates that you can
 either use as is, or extend by using the {#def} directive to
 redefine specific { blocks}. Currently, the only template in here
@@ -119,7 +120,7 @@ is SkeletonPage, which is described in detail below in section
 libraries.templates.skeletonPage. (Contributed by Tavis Rudd.)</p>
 </div>
 <div class="section" id="tools">
-<h2>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<h2>Tools<a class="headerlink" href="#tools" title="Permalink to this heading">¶</a></h2>
 <p>Package {Cheetah.Tools} contains functions and classes contributed
 by third parties. Some are Cheetah-specific but others are generic
 and can be used standalone. None of them are imported by any other
@@ -169,7 +170,7 @@ currentURL). Contributed by Ian Bicking.</p>
 </div></blockquote>
 </div>
 <div class="section" id="utils">
-<h2>Utils<a class="headerlink" href="#utils" title="Permalink to this headline">¶</a></h2>
+<h2>Utils<a class="headerlink" href="#utils" title="Permalink to this heading">¶</a></h2>
 <p>Package {Cheetah.Utils} contains non-Cheetah-specific functions and
 classes that are imported by other Cheetah components. Many of
 these utils can be used standalone in other applications too.</p>
@@ -197,7 +198,7 @@ Contributed by Mike Orr.</p>
 Contributed by Mike Orr.</p>
 </div></blockquote>
 <div class="section" id="cheetah-templates-skeletonpage">
-<h3>Cheetah.Templates.SkeletonPage<a class="headerlink" href="#cheetah-templates-skeletonpage" title="Permalink to this headline">¶</a></h3>
+<h3>Cheetah.Templates.SkeletonPage<a class="headerlink" href="#cheetah-templates-skeletonpage" title="Permalink to this heading">¶</a></h3>
 <p>A stock template class that may be useful for web developers is
 defined in the {Cheetah.Templates.SkeletonPage} module. The
 {SkeletonPage} template class is generated from the following
@@ -308,8 +309,9 @@ definitions from changes in your directory structure.</p></li>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Batteries included: templates and other libraries</a><ul>
 <li><a class="reference internal" href="#errorcatchers">ErrorCatchers</a></li>
 <li><a class="reference internal" href="#fileutils">FileUtils</a></li>
@@ -325,12 +327,17 @@ definitions from changes in your directory structure.</p></li>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="nonHtml.html"
-                        title="previous chapter">Non-HTML Output</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="editors.html"
-                        title="next chapter">Visual Editors</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="nonHtml.html"
+                          title="previous chapter">Non-HTML Output</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="editors.html"
+                          title="next chapter">Visual Editors</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -342,12 +349,12 @@ definitions from changes in your directory structure.</p></li>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -373,9 +380,9 @@ definitions from changes in your directory structure.</p></li>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2021, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Apr 20, 2021.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+        &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Oct 03, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
   </body>
 </html>

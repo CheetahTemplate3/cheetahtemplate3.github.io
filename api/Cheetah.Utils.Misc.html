@@ -1,16 +1,17 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cheetah.Utils.Misc module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
@@ -35,11 +36,11 @@
           <div class="body" role="main">
             
   <div class="section" id="module-Cheetah.Utils.Misc">
-<span id="cheetah-utils-misc-module"></span><h1>Cheetah.Utils.Misc module<a class="headerlink" href="#module-Cheetah.Utils.Misc" title="Permalink to this headline">¶</a></h1>
+<span id="cheetah-utils-misc-module"></span><h1>Cheetah.Utils.Misc module<a class="headerlink" href="#module-Cheetah.Utils.Misc" title="Permalink to this heading">¶</a></h1>
 <p>Miscellaneous functions/objects used by Cheetah but also useful standalone.</p>
 <dl class="py function">
-<dt id="Cheetah.Utils.Misc.checkKeywords">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.Utils.Misc.</span></code><code class="sig-name descname"><span class="pre">checkKeywords</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">legalKeywords</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">what</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'argument'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Misc.checkKeywords" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.Utils.Misc.checkKeywords">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.Utils.Misc.</span></span><span class="sig-name descname"><span class="pre">checkKeywords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">legalKeywords</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">what</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'argument'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Misc.checkKeywords" title="Permalink to this definition">¶</a></dt>
 <dd><p>Verify no illegal keyword arguments were passed to a function.</p>
 <dl>
 <dt>in<span class="classifier">dic, dictionary (<a href="#id1"><span class="problematic" id="id2">**</span></a>kw in the calling routine).</span></dt><dd><p>legalKeywords, list of strings, the keywords that are allowed.
@@ -52,13 +53,13 @@ called by: Cheetah.Template.__init__()</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.Utils.Misc.die">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.Utils.Misc.</span></code><code class="sig-name descname"><span class="pre">die</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reason</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Misc.die" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.Utils.Misc.die">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.Utils.Misc.</span></span><span class="sig-name descname"><span class="pre">die</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reason</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Misc.die" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.Utils.Misc.mkdirsWithPyInitFiles">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.Utils.Misc.</span></code><code class="sig-name descname"><span class="pre">mkdirsWithPyInitFiles</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Misc.mkdirsWithPyInitFiles" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.Utils.Misc.mkdirsWithPyInitFiles">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.Utils.Misc.</span></span><span class="sig-name descname"><span class="pre">mkdirsWithPyInitFiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Misc.mkdirsWithPyInitFiles" title="Permalink to this definition">¶</a></dt>
 <dd><p>Same as os.makedirs (mkdir ‘path’ and all missing parent directories)
 but also puts a Python ‘__init__.py’ file in every directory it
 creates.  Does nothing (without creating an ‘__init__.py’ file) if the
@@ -66,15 +67,15 @@ directory already exists.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.Utils.Misc.removeFromList">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.Utils.Misc.</span></code><code class="sig-name descname"><span class="pre">removeFromList</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">elements</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Misc.removeFromList" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.Utils.Misc.removeFromList">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.Utils.Misc.</span></span><span class="sig-name descname"><span class="pre">removeFromList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">elements</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Misc.removeFromList" title="Permalink to this definition">¶</a></dt>
 <dd><p>Save as <a href="#id3"><span class="problematic" id="id4">list_</span></a>.remove(each element) but don’t raise an error if
 element is missing.  Modifies ‘<a href="#id5"><span class="problematic" id="id6">list_</span></a>’ in place!  Returns None.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.Utils.Misc.useOrRaise">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.Utils.Misc.</span></code><code class="sig-name descname"><span class="pre">useOrRaise</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thing</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errmsg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Misc.useOrRaise" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.Utils.Misc.useOrRaise">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.Utils.Misc.</span></span><span class="sig-name descname"><span class="pre">useOrRaise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thing</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errmsg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Utils.Misc.useOrRaise" title="Permalink to this definition">¶</a></dt>
 <dd><p>Raise ‘thing’ if it’s a subclass of Exception.  Otherwise return it.</p>
 <p>Called by: Cheetah.Servlet.cgiImport()</p>
 </dd></dl>
@@ -99,12 +100,12 @@ element is missing.  Modifies ‘<a href="#id5"><span class="problematic" id="id
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -123,9 +124,9 @@ element is missing.  Modifies ‘<a href="#id5"><span class="problematic" id="id
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2021, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Apr 20, 2021.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+        &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Oct 03, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
   </body>
 </html>

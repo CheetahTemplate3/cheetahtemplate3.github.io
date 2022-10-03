@@ -1,16 +1,17 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cheetah.DirectiveAnalyzer module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
@@ -35,48 +36,48 @@
           <div class="body" role="main">
             
   <div class="section" id="module-Cheetah.DirectiveAnalyzer">
-<span id="cheetah-directiveanalyzer-module"></span><h1>Cheetah.DirectiveAnalyzer module<a class="headerlink" href="#module-Cheetah.DirectiveAnalyzer" title="Permalink to this headline">¶</a></h1>
+<span id="cheetah-directiveanalyzer-module"></span><h1>Cheetah.DirectiveAnalyzer module<a class="headerlink" href="#module-Cheetah.DirectiveAnalyzer" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
-<dt id="Cheetah.DirectiveAnalyzer.AnalysisCompiler">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.DirectiveAnalyzer.</span></code><code class="sig-name descname"><span class="pre">AnalysisCompiler</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moduleName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'DynamicallyCompiledCheetahTemplate'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mainClassName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mainMethodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baseclassName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extraImportStatements</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">settings</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.AnalysisCompiler" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="Cheetah.Compiler.html#Cheetah.Compiler.ModuleCompiler" title="Cheetah.Compiler.ModuleCompiler"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Compiler.ModuleCompiler</span></code></a></p>
+<dt class="sig sig-object py" id="Cheetah.DirectiveAnalyzer.AnalysisCompiler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cheetah.DirectiveAnalyzer.</span></span><span class="sig-name descname"><span class="pre">AnalysisCompiler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moduleName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'DynamicallyCompiledCheetahTemplate'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mainClassName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mainMethodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baseclassName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extraImportStatements</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">settings</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.AnalysisCompiler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="Cheetah.Compiler.html#Cheetah.Compiler.ModuleCompiler" title="Cheetah.Compiler.ModuleCompiler"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModuleCompiler</span></code></a></p>
 <dl class="py attribute">
-<dt id="Cheetah.DirectiveAnalyzer.AnalysisCompiler.parserClass">
-<code class="sig-name descname"><span class="pre">parserClass</span></code><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.AnalysisCompiler.parserClass" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#Cheetah.DirectiveAnalyzer.Analyzer" title="Cheetah.DirectiveAnalyzer.Analyzer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.DirectiveAnalyzer.Analyzer</span></code></a></p>
+<dt class="sig sig-object py" id="Cheetah.DirectiveAnalyzer.AnalysisCompiler.parserClass">
+<span class="sig-name descname"><span class="pre">parserClass</span></span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.AnalysisCompiler.parserClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#Cheetah.DirectiveAnalyzer.Analyzer" title="Cheetah.DirectiveAnalyzer.Analyzer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Analyzer</span></code></a></p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="Cheetah.DirectiveAnalyzer.Analyzer">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.DirectiveAnalyzer.</span></code><code class="sig-name descname"><span class="pre">Analyzer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.Analyzer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Parser._HighLevelParser</span></code></p>
+<dt class="sig sig-object py" id="Cheetah.DirectiveAnalyzer.Analyzer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cheetah.DirectiveAnalyzer.</span></span><span class="sig-name descname"><span class="pre">Analyzer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.Analyzer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_HighLevelParser</span></code></p>
 <dl class="py method">
-<dt id="Cheetah.DirectiveAnalyzer.Analyzer.eatDirective">
-<code class="sig-name descname"><span class="pre">eatDirective</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.Analyzer.eatDirective" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.DirectiveAnalyzer.Analyzer.eatDirective">
+<span class="sig-name descname"><span class="pre">eatDirective</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.Analyzer.eatDirective" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.DirectiveAnalyzer.analyze">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.DirectiveAnalyzer.</span></code><code class="sig-name descname"><span class="pre">analyze</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.analyze" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.DirectiveAnalyzer.analyze">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.DirectiveAnalyzer.</span></span><span class="sig-name descname"><span class="pre">analyze</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.analyze" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.DirectiveAnalyzer.main">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.DirectiveAnalyzer.</span></code><code class="sig-name descname"><span class="pre">main</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.main" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.DirectiveAnalyzer.main">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.DirectiveAnalyzer.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.main" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.DirectiveAnalyzer.main_dir">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.DirectiveAnalyzer.</span></code><code class="sig-name descname"><span class="pre">main_dir</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">opts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.main_dir" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.DirectiveAnalyzer.main_dir">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.DirectiveAnalyzer.</span></span><span class="sig-name descname"><span class="pre">main_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">opts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.main_dir" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.DirectiveAnalyzer.main_file">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.DirectiveAnalyzer.</span></code><code class="sig-name descname"><span class="pre">main_file</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.main_file" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.DirectiveAnalyzer.main_file">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.DirectiveAnalyzer.</span></span><span class="sig-name descname"><span class="pre">main_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.DirectiveAnalyzer.main_file" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -99,12 +100,12 @@
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -123,9 +124,9 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2021, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Apr 20, 2021.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+        &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Oct 03, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
   </body>
 </html>

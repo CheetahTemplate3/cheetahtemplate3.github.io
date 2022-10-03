@@ -1,16 +1,17 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contributing to Cheetah &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -43,19 +44,19 @@
           <div class="body" role="main">
             
   <div class="section" id="contributing-to-cheetah">
-<h1>Contributing to Cheetah<a class="headerlink" href="#contributing-to-cheetah" title="Permalink to this headline">¶</a></h1>
+<h1>Contributing to Cheetah<a class="headerlink" href="#contributing-to-cheetah" title="Permalink to this heading">¶</a></h1>
 <p>Cheetah is the work of many volunteers. If you use Cheetah, share your
 experiences, tricks, customizations, and frustrations. Please visit
 <a class="reference external" href="https://github.com/CheetahTemplate3/cheetah3">https://github.com/CheetahTemplate3/cheetah3</a> and file bug reports, feature
 requests or pull requests.</p>
 <div class="section" id="getting-the-code">
-<h2>Getting the Code<a class="headerlink" href="#getting-the-code" title="Permalink to this headline">¶</a></h2>
+<h2>Getting the Code<a class="headerlink" href="#getting-the-code" title="Permalink to this heading">¶</a></h2>
 <p>The Cheetah source code is stored in a central <strong>Git</strong> repository
 hosted primarily by <a class="reference external" href="http://github.com">GitHub</a>. The primary Git
 repository can be found <a class="reference external" href="http://github.com/CheetahTemplate3/cheetah3">here</a>.</p>
 </div>
 <div class="section" id="development-process">
-<h2>Development Process<a class="headerlink" href="#development-process" title="Permalink to this headline">¶</a></h2>
+<h2>Development Process<a class="headerlink" href="#development-process" title="Permalink to this heading">¶</a></h2>
 <p>The typical development workflow for Cheetah revolves around
 two primary branches <strong>maint</strong> and <strong>next</strong>. The <strong>next</strong> branch is where development
 planned for the next release of Cheetah is. The <strong>maint</strong> branch
@@ -65,14 +66,14 @@ to be applied to maint and next at the same time.</p>
 <p>Anyone and everyone is encouraged to submit patches at any time, but as far
 as bugs or feature requests go, we try to file those <em>first</em> in the <a class="reference external" href="https://github.com/CheetahTemplate3/cheetah3/issues">Cheetah3 Bug Tracker</a>
 and then they can be organized into particular releases as is necessary.</p>
-<p>In addition to the bug tracker, Cheetah uses Travis CI for automating builds
-and test runs (see: <a class="reference external" href="https://travis-ci.org/CheetahTemplate3/cheetah3">Cheetah at Travis</a>).</p>
+<p>In addition to the bug tracker, Cheetah uses Github Actions
+for automating builds and test runs (see: <a class="reference external" href="https://github.com/CheetahTemplate3/cheetah3/actions">Github Actions for Cheetah</a>).</p>
 <p>Prior to the tarballing of a release, <strong>all</strong> tests must be passing before the
 <strong>next</strong> branch is merged down to the Git <strong>master</strong> branch where the release
 tarball will actually be created from.</p>
 </div>
 <div class="section" id="filing-bugs">
-<h2>Filing Bugs<a class="headerlink" href="#filing-bugs" title="Permalink to this headline">¶</a></h2>
+<h2>Filing Bugs<a class="headerlink" href="#filing-bugs" title="Permalink to this heading">¶</a></h2>
 <p>No software is perfect, and unfortunately no bug report is either. If you’ve
 found yourself faced with a bug in Cheetah, or just have a good idea for a
 new feature, we kindly ask that you create an issue in the <a class="reference external" href="https://github.com/CheetahTemplate3/cheetah3/issues">Cheetah3 Bug Tracker</a>.</p>
@@ -95,8 +96,9 @@ new feature, we kindly ask that you create an issue in the <a class="reference e
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Contributing to Cheetah</a><ul>
 <li><a class="reference internal" href="#getting-the-code">Getting the Code</a></li>
 <li><a class="reference internal" href="#development-process">Development Process</a></li>
@@ -105,12 +107,17 @@ new feature, we kindly ask that you create an issue in the <a class="reference e
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="news.html"
-                        title="previous chapter">News</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="download.html"
-                        title="next chapter">Downloading Cheetah</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="news.html"
+                          title="previous chapter">News</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="download.html"
+                          title="next chapter">Downloading Cheetah</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -122,12 +129,12 @@ new feature, we kindly ask that you create an issue in the <a class="reference e
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -152,9 +159,9 @@ new feature, we kindly ask that you create an issue in the <a class="reference e
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2021, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Apr 20, 2021.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+        &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Oct 03, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
   </body>
 </html>

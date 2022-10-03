@@ -1,16 +1,17 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cheetah.Parser module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
@@ -35,7 +36,7 @@
           <div class="body" role="main">
             
   <div class="section" id="module-Cheetah.Parser">
-<span id="cheetah-parser-module"></span><h1>Cheetah.Parser module<a class="headerlink" href="#module-Cheetah.Parser" title="Permalink to this headline">¶</a></h1>
+<span id="cheetah-parser-module"></span><h1>Cheetah.Parser module<a class="headerlink" href="#module-Cheetah.Parser" title="Permalink to this heading">¶</a></h1>
 <p>Parser classes for Cheetah’s Compiler</p>
 <dl class="simple">
 <dt>Classes:</dt><dd><p>ParseError( Exception )
@@ -45,118 +46,118 @@ Parser === _HighLevelParser (an alias)</p>
 </dd>
 </dl>
 <dl class="py class">
-<dt id="Cheetah.Parser.ArgList">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></code><code class="sig-name descname"><span class="pre">ArgList</span></code><a class="headerlink" href="#Cheetah.Parser.ArgList" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.Parser.ArgList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></span><span class="sig-name descname"><span class="pre">ArgList</span></span><a class="headerlink" href="#Cheetah.Parser.ArgList" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Used by _LowLevelParser.getArgList()</p>
 <dl class="py method">
-<dt id="Cheetah.Parser.ArgList.add_argument">
-<code class="sig-name descname"><span class="pre">add_argument</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ArgList.add_argument" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.Parser.ArgList.add_argument">
+<span class="sig-name descname"><span class="pre">add_argument</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ArgList.add_argument" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="Cheetah.Parser.ArgList.add_default">
-<code class="sig-name descname"><span class="pre">add_default</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ArgList.add_default" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.Parser.ArgList.add_default">
+<span class="sig-name descname"><span class="pre">add_default</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ArgList.add_default" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="Cheetah.Parser.ArgList.merge">
-<code class="sig-name descname"><span class="pre">merge</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ArgList.merge" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.Parser.ArgList.merge">
+<span class="sig-name descname"><span class="pre">merge</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ArgList.merge" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="Cheetah.Parser.ArgList.next">
-<code class="sig-name descname"><span class="pre">next</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ArgList.next" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.Parser.ArgList.next">
+<span class="sig-name descname"><span class="pre">next</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ArgList.next" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="Cheetah.Parser.CheetahVariable">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></code><code class="sig-name descname"><span class="pre">CheetahVariable</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nameChunks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useNameMapper</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cacheToken</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rawSource</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.CheetahVariable" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.Parser.CheetahVariable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></span><span class="sig-name descname"><span class="pre">CheetahVariable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nameChunks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useNameMapper</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cacheToken</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rawSource</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.CheetahVariable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 
 <dl class="py exception">
-<dt id="Cheetah.Parser.ForbiddenDirective">
-<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></code><code class="sig-name descname"><span class="pre">ForbiddenDirective</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Invalid</span> <span class="pre">Syntax'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extMsg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ForbiddenDirective" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Cheetah.Parser.ForbiddenSyntax" title="Cheetah.Parser.ForbiddenSyntax"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Parser.ForbiddenSyntax</span></code></a></p>
+<dt class="sig sig-object py" id="Cheetah.Parser.ForbiddenDirective">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></span><span class="sig-name descname"><span class="pre">ForbiddenDirective</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Invalid</span> <span class="pre">Syntax'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extMsg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ForbiddenDirective" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.Parser.ForbiddenSyntax" title="Cheetah.Parser.ForbiddenSyntax"><code class="xref py py-class docutils literal notranslate"><span class="pre">ForbiddenSyntax</span></code></a></p>
 </dd></dl>
 
 <dl class="py exception">
-<dt id="Cheetah.Parser.ForbiddenExpression">
-<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></code><code class="sig-name descname"><span class="pre">ForbiddenExpression</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Invalid</span> <span class="pre">Syntax'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extMsg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ForbiddenExpression" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Cheetah.Parser.ForbiddenSyntax" title="Cheetah.Parser.ForbiddenSyntax"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Parser.ForbiddenSyntax</span></code></a></p>
+<dt class="sig sig-object py" id="Cheetah.Parser.ForbiddenExpression">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></span><span class="sig-name descname"><span class="pre">ForbiddenExpression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Invalid</span> <span class="pre">Syntax'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extMsg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ForbiddenExpression" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.Parser.ForbiddenSyntax" title="Cheetah.Parser.ForbiddenSyntax"><code class="xref py py-class docutils literal notranslate"><span class="pre">ForbiddenSyntax</span></code></a></p>
 </dd></dl>
 
 <dl class="py exception">
-<dt id="Cheetah.Parser.ForbiddenSyntax">
-<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></code><code class="sig-name descname"><span class="pre">ForbiddenSyntax</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Invalid</span> <span class="pre">Syntax'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extMsg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ForbiddenSyntax" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Cheetah.Parser.ParseError" title="Cheetah.Parser.ParseError"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Parser.ParseError</span></code></a></p>
+<dt class="sig sig-object py" id="Cheetah.Parser.ForbiddenSyntax">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></span><span class="sig-name descname"><span class="pre">ForbiddenSyntax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Invalid</span> <span class="pre">Syntax'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extMsg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ForbiddenSyntax" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.Parser.ParseError" title="Cheetah.Parser.ParseError"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParseError</span></code></a></p>
 </dd></dl>
 
 <dl class="py exception">
-<dt id="Cheetah.Parser.ParseError">
-<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></code><code class="sig-name descname"><span class="pre">ParseError</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Invalid</span> <span class="pre">Syntax'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extMsg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ParseError" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.Parser.ParseError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></span><span class="sig-name descname"><span class="pre">ParseError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Invalid</span> <span class="pre">Syntax'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extMsg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ParseError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ValueError</span></code></p>
 <dl class="py method">
-<dt id="Cheetah.Parser.ParseError.report">
-<code class="sig-name descname"><span class="pre">report</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ParseError.report" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.Parser.ParseError.report">
+<span class="sig-name descname"><span class="pre">report</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.ParseError.report" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="Cheetah.Parser.Parser">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></code><code class="sig-name descname"><span class="pre">Parser</span></code><a class="headerlink" href="#Cheetah.Parser.Parser" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Parser._HighLevelParser</span></code></p>
+<dt class="sig sig-object py" id="Cheetah.Parser.Parser">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></span><span class="sig-name descname"><span class="pre">Parser</span></span><a class="headerlink" href="#Cheetah.Parser.Parser" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">_HighLevelParser</span></code></p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="Cheetah.Parser.Placeholder">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></code><code class="sig-name descname"><span class="pre">Placeholder</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nameChunks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useNameMapper</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cacheToken</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rawSource</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.Placeholder" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Cheetah.Parser.CheetahVariable" title="Cheetah.Parser.CheetahVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.Parser.CheetahVariable</span></code></a></p>
+<dt class="sig sig-object py" id="Cheetah.Parser.Placeholder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></span><span class="sig-name descname"><span class="pre">Placeholder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nameChunks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useNameMapper</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cacheToken</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rawSource</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.Placeholder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Cheetah.Parser.CheetahVariable" title="Cheetah.Parser.CheetahVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">CheetahVariable</span></code></a></p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.Parser.any">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></code><code class="sig-name descname"><span class="pre">any</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">choices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.any" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.Parser.any">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></span><span class="sig-name descname"><span class="pre">any</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">choices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.any" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.Parser.cachedRegex">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></code><code class="sig-name descname"><span class="pre">cachedRegex</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pattern</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.cachedRegex" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.Parser.cachedRegex">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></span><span class="sig-name descname"><span class="pre">cachedRegex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pattern</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.cachedRegex" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.Parser.escapeRegexChars">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></code><code class="sig-name descname"><span class="pre">escapeRegexChars</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">txt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">escapeRE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">re.compile('([\\$\\^\\*\\+\\.\\?\\{\\}\\[\\]\\(\\)\\|\\\\])')</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.escapeRegexChars" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.Parser.escapeRegexChars">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></span><span class="sig-name descname"><span class="pre">escapeRegexChars</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">txt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">escapeRE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">re.compile('([\\$\\^\\*\\+\\.\\?\\{\\}\\[\\]\\(\\)\\|\\\\])')</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.escapeRegexChars" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a txt with all special regular expressions chars escaped.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.Parser.group">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></code><code class="sig-name descname"><span class="pre">group</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">choices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.group" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.Parser.group">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></span><span class="sig-name descname"><span class="pre">group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">choices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.group" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.Parser.makeTripleQuoteRe">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></code><code class="sig-name descname"><span class="pre">makeTripleQuoteRe</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.makeTripleQuoteRe" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.Parser.makeTripleQuoteRe">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></span><span class="sig-name descname"><span class="pre">makeTripleQuoteRe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.makeTripleQuoteRe" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.Parser.maybe">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></code><code class="sig-name descname"><span class="pre">maybe</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">choices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.maybe" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.Parser.maybe">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></span><span class="sig-name descname"><span class="pre">maybe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">choices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.maybe" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.Parser.namedGroup">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></code><code class="sig-name descname"><span class="pre">namedGroup</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">choices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.namedGroup" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.Parser.namedGroup">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></span><span class="sig-name descname"><span class="pre">namedGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">choices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.namedGroup" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.Parser.nongroup">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></code><code class="sig-name descname"><span class="pre">nongroup</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">choices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.nongroup" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.Parser.nongroup">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.Parser.</span></span><span class="sig-name descname"><span class="pre">nongroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">choices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Parser.nongroup" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -179,12 +180,12 @@ Parser === _HighLevelParser (an alias)</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -203,9 +204,9 @@ Parser === _HighLevelParser (an alias)</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2021, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Apr 20, 2021.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+        &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Oct 03, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
   </body>
 </html>

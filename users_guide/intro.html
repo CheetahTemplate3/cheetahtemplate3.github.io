@@ -1,16 +1,17 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introduction &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -44,9 +45,9 @@
           <div class="body" role="main">
             
   <div class="section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h1>
 <div class="section" id="who-should-read-this-guide">
-<h2>Who should read this Guide?<a class="headerlink" href="#who-should-read-this-guide" title="Permalink to this headline">¶</a></h2>
+<h2>Who should read this Guide?<a class="headerlink" href="#who-should-read-this-guide" title="Permalink to this heading">¶</a></h2>
 <p>This Users’ Guide provides a technical overview and reference for
 the Cheetah template system. Knowledge of Python and
 object-oriented programming is assumed. The emphasis in this Guide
@@ -56,7 +57,7 @@ being moved to the Cheetah FAQ. There is also a Cheetah Developer’s
 Guide for those who want to know what goes on under the hood.</p>
 </div>
 <div class="section" id="what-is-cheetah">
-<h2>What is Cheetah?<a class="headerlink" href="#what-is-cheetah" title="Permalink to this headline">¶</a></h2>
+<h2>What is Cheetah?<a class="headerlink" href="#what-is-cheetah" title="Permalink to this heading">¶</a></h2>
 <p>Cheetah is a Python-powered template engine and code generator. It
 may be used as a standalone utility or combined with other tools.
 Cheetah has many potential uses, but web developers looking for a
@@ -86,7 +87,7 @@ class, so it can subclass a pure Python class and vice-versa.</p></li>
 <p>Like its namesake, Cheetah is fast, flexible and powerful.</p>
 </div>
 <div class="section" id="what-is-the-philosophy-behind-cheetah">
-<h2>What is the philosophy behind Cheetah?<a class="headerlink" href="#what-is-the-philosophy-behind-cheetah" title="Permalink to this headline">¶</a></h2>
+<h2>What is the philosophy behind Cheetah?<a class="headerlink" href="#what-is-the-philosophy-behind-cheetah" title="Permalink to this heading">¶</a></h2>
 <p>Cheetah’s design was guided by these principles:</p>
 <ul>
 <li><p>Python for the back end, Cheetah for the front end. Cheetah was
@@ -129,7 +130,7 @@ designers have created.</p></li>
 </li>
 </ul>
 <div class="section" id="why-cheetah-doesn-t-use-html-style-tags">
-<h3>Why Cheetah doesn’t use HTML-style tags<a class="headerlink" href="#why-cheetah-doesn-t-use-html-style-tags" title="Permalink to this headline">¶</a></h3>
+<h3>Why Cheetah doesn’t use HTML-style tags<a class="headerlink" href="#why-cheetah-doesn-t-use-html-style-tags" title="Permalink to this heading">¶</a></h3>
 <p>Cheetah does not use HTML/XML-style tags like some other template
 languages for the following reasons: Cheetah is not limited to
 HTML, HTML-style tags are hard to distinguish from real HTML tags,
@@ -150,7 +151,7 @@ hard to confirm or modify that logic.</p>
 </div>
 </div>
 <div class="section" id="give-me-an-example">
-<h2>Give me an example!<a class="headerlink" href="#give-me-an-example" title="Permalink to this headline">¶</a></h2>
+<h2>Give me an example!<a class="headerlink" href="#give-me-an-example" title="Permalink to this heading">¶</a></h2>
 <p>Here’s a very simple example that illustrates some of Cheetah’s
 basic syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;HTML&gt;
@@ -194,7 +195,7 @@ howWorks.cheetah-compile explains how to turn your template
 definition into an object-oriented Python module.</p>
 </div>
 <div class="section" id="give-me-an-example-of-a-webware-servlet">
-<h2>Give me an example of a Webware servlet!<a class="headerlink" href="#give-me-an-example-of-a-webware-servlet" title="Permalink to this headline">¶</a></h2>
+<h2>Give me an example of a Webware servlet!<a class="headerlink" href="#give-me-an-example-of-a-webware-servlet" title="Permalink to this heading">¶</a></h2>
 <p>This example uses an HTML form to ask the user’s name, then invokes
 itself again to display a <strong>personalized</strong> friendly greeting.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;My Template-Servlet&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;
@@ -227,7 +228,7 @@ The “#set” directive creates a local variable that lasts while the
 template is being filled.</p>
 </div>
 <div class="section" id="how-mature-is-cheetah">
-<h2>How mature is Cheetah?<a class="headerlink" href="#how-mature-is-cheetah" title="Permalink to this headline">¶</a></h2>
+<h2>How mature is Cheetah?<a class="headerlink" href="#how-mature-is-cheetah" title="Permalink to this heading">¶</a></h2>
 <p>Cheetah is stable, production quality, post-beta code. Cheetah’s
 syntax, semantics and performance have been generally stable since
 a performance overhaul in mid 2001. Most of the changes since
@@ -237,7 +238,7 @@ production sites, things they need that we hadn’t considered.</p>
 1.0 release.</p>
 </div>
 <div class="section" id="where-can-i-get-news">
-<h2>Where can I get news?<a class="headerlink" href="#where-can-i-get-news" title="Permalink to this headline">¶</a></h2>
+<h2>Where can I get news?<a class="headerlink" href="#where-can-i-get-news" title="Permalink to this heading">¶</a></h2>
 <p>Cheetah releases can be obtained from the <a class="reference external" href="https://cheetahtemplate.org/">Cheetah
 website</a></p>
 <p>If you encounter difficulties, or are unsure about how to do something, please
@@ -245,11 +246,11 @@ post a detailed message to the <cite>bug tracker
 &lt;https://github.com/CheetahTemplate3/cheetah3/issues&gt;</cite>.</p>
 </div>
 <div class="section" id="how-can-i-contribute">
-<h2>How can I contribute?<a class="headerlink" href="#how-can-i-contribute" title="Permalink to this headline">¶</a></h2>
+<h2>How can I contribute?<a class="headerlink" href="#how-can-i-contribute" title="Permalink to this heading">¶</a></h2>
 <p>Cheetah is the work of many volunteers. If you use Cheetah please
 share your experiences, tricks, customizations, and frustrations.</p>
 <div class="section" id="bug-reports-and-patches">
-<h3>Bug reports and patches<a class="headerlink" href="#bug-reports-and-patches" title="Permalink to this headline">¶</a></h3>
+<h3>Bug reports and patches<a class="headerlink" href="#bug-reports-and-patches" title="Permalink to this heading">¶</a></h3>
 <p>If you think there is a bug in Cheetah, send a message to the
 e-mail list with the following information:</p>
 <ol class="arabic simple">
@@ -262,13 +263,13 @@ e-mail list with the following information:</p>
 </ol>
 </div>
 <div class="section" id="template-libraries-and-function-libraries">
-<h3>Template libraries and function libraries<a class="headerlink" href="#template-libraries-and-function-libraries" title="Permalink to this headline">¶</a></h3>
+<h3>Template libraries and function libraries<a class="headerlink" href="#template-libraries-and-function-libraries" title="Permalink to this heading">¶</a></h3>
 <p>We hope to build up a framework of Template libraries (see section
 libraries.templates) to distribute with Cheetah and would
 appreciate any contributions.</p>
 </div>
 <div class="section" id="test-cases">
-<h3>Test cases<a class="headerlink" href="#test-cases" title="Permalink to this headline">¶</a></h3>
+<h3>Test cases<a class="headerlink" href="#test-cases" title="Permalink to this heading">¶</a></h3>
 <p>Cheetah is packaged with a regression testing suite that is run
 with each new release to ensure that everything is working as
 expected and that recent changes haven’t broken anything. The test
@@ -278,13 +279,13 @@ the bug is fixed. Send any new test cases to the email list with
 the subject-line “new test case for Cheetah.”</p>
 </div>
 <div class="section" id="publicity">
-<h3>Publicity<a class="headerlink" href="#publicity" title="Permalink to this headline">¶</a></h3>
+<h3>Publicity<a class="headerlink" href="#publicity" title="Permalink to this heading">¶</a></h3>
 <p>Help spread the word … recommend it to others, write articles
 about it, etc.</p>
 </div>
 </div>
 <div class="section" id="acknowledgements">
-<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this heading">¶</a></h2>
 <p>Cheetah is one of several templating frameworks that grew out of a
 ‘templates’ thread on the Webware For Python email list. Tavis
 Rudd, Mike Orr, Chuck Esterbrook and Ian Bicking are the core
@@ -309,8 +310,9 @@ of their developers. Thank you.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Introduction</a><ul>
 <li><a class="reference internal" href="#who-should-read-this-guide">Who should read this Guide?</a></li>
 <li><a class="reference internal" href="#what-is-cheetah">What is Cheetah?</a></li>
@@ -334,12 +336,17 @@ of their developers. Thank you.</p>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="index.html"
-                        title="previous chapter">Cheetah User’s Guide</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="glossary.html"
-                        title="next chapter">Vocabulary</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="index.html"
+                          title="previous chapter">Cheetah User’s Guide</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="glossary.html"
+                          title="next chapter">Vocabulary</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -351,12 +358,12 @@ of their developers. Thank you.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -382,9 +389,9 @@ of their developers. Thank you.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2021, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Apr 20, 2021.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+        &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Oct 03, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
   </body>
 </html>

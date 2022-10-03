@@ -1,16 +1,17 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tips, Tricks and Troubleshooting &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -44,14 +45,14 @@
           <div class="body" role="main">
             
   <div class="section" id="tips-tricks-and-troubleshooting">
-<h1>Tips, Tricks and Troubleshooting<a class="headerlink" href="#tips-tricks-and-troubleshooting" title="Permalink to this headline">¶</a></h1>
+<h1>Tips, Tricks and Troubleshooting<a class="headerlink" href="#tips-tricks-and-troubleshooting" title="Permalink to this heading">¶</a></h1>
 <p>This chapter contains short stuff that doesn’t fit anywhere else.</p>
 <p>See the Cheetah FAQ for more specialized issues and for
 troubleshooting tips. Check the wiki periodically for recent tips
 contributed by users. If you get stuck and none of these resources
 help, ask on the mailing list.</p>
 <div class="section" id="placeholder-tips">
-<h2>Placeholder Tips<a class="headerlink" href="#placeholder-tips" title="Permalink to this headline">¶</a></h2>
+<h2>Placeholder Tips<a class="headerlink" href="#placeholder-tips" title="Permalink to this heading">¶</a></h2>
 <p>Here’s how to do certain important lookups that may not be obvious.
 For each, we show first the Cheetah expression and then the Python
 equivalent, because you can use these either in templates or in
@@ -104,7 +105,7 @@ the searchList; instead, copy the needed variables into your own
 “safe” namespace.</p>
 </div>
 <div class="section" id="diagnostic-output">
-<h2>Diagnostic Output<a class="headerlink" href="#diagnostic-output" title="Permalink to this headline">¶</a></h2>
+<h2>Diagnostic Output<a class="headerlink" href="#diagnostic-output" title="Permalink to this heading">¶</a></h2>
 <p>If you need send yourself some debugging output, you can use
 {#silent} to output it to standard error:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#silent $sys.stderr.write(&quot;Incorrigible var is &#39;$incorrigible&#39;.\n&quot;)
@@ -114,7 +115,7 @@ the searchList; instead, copy the needed variables into your own
 </div>
 </div>
 <div class="section" id="when-to-use-python-methods">
-<h2>When to use Python methods<a class="headerlink" href="#when-to-use-python-methods" title="Permalink to this headline">¶</a></h2>
+<h2>When to use Python methods<a class="headerlink" href="#when-to-use-python-methods" title="Permalink to this heading">¶</a></h2>
 <p>You always have a choice whether to code your methods as Cheetah
 {#def} methods or Python methods (the Python methods being located
 in a class your template inherits). So how do you choose?</p>
@@ -152,7 +153,7 @@ statement, so if your Python method needs to return multiple values
 to your Cheetah method, you’ll have to do it another way.</p>
 </div>
 <div class="section" id="calling-superclass-methods-and-why-you-have-to">
-<h2>Calling superclass methods, and why you have to<a class="headerlink" href="#calling-superclass-methods-and-why-you-have-to" title="Permalink to this headline">¶</a></h2>
+<h2>Calling superclass methods, and why you have to<a class="headerlink" href="#calling-superclass-methods-and-why-you-have-to" title="Permalink to this heading">¶</a></h2>
 <p>If your template or pure Python class overrides a standard method
 or attribute of {Template} or one of its base classes, you should
 call the superclass method in your method to prevent various things
@@ -212,7 +213,7 @@ argument sequence is different than {super} uses.</p>
 </div>
 </div>
 <div class="section" id="all-methods">
-<h2>All methods<a class="headerlink" href="#all-methods" title="Permalink to this headline">¶</a></h2>
+<h2>All methods<a class="headerlink" href="#all-methods" title="Permalink to this heading">¶</a></h2>
 <p>Here is a list of all the standard methods and attributes that can
 be accessed from a placeholder. Some of them exist for you to call,
 others are mainly used by Cheetah internally but you can call them
@@ -341,7 +342,7 @@ current transaction is finished.</p>
 </div></blockquote>
 </div>
 <div class="section" id="optimizing-templates">
-<h2>Optimizing templates<a class="headerlink" href="#optimizing-templates" title="Permalink to this headline">¶</a></h2>
+<h2>Optimizing templates<a class="headerlink" href="#optimizing-templates" title="Permalink to this heading">¶</a></h2>
 <p>Here are some things you can do to make your templates fill faster
 and user fewer CPU cycles. Before you put a lot of energy into
 this, however, make sure you really need to. In many situations,
@@ -373,7 +374,7 @@ NameMapper lookups for you:</p>
 method, which is more wordy, and tedious.</p>
 </div>
 <div class="section" id="psp-style-tags">
-<h2>PSP-style tags<a class="headerlink" href="#psp-style-tags" title="Permalink to this headline">¶</a></h2>
+<h2>PSP-style tags<a class="headerlink" href="#psp-style-tags" title="Permalink to this heading">¶</a></h2>
 <p>{&lt;%= … %&gt;} and {&lt;% … %&gt;} allow an escape to Python syntax
 inside the template. You do not need it to use Cheetah effectively,
 and we’re hard pressed to think of a case to recommend it.
@@ -403,7 +404,7 @@ template is not a PSP document, and you can’t use PSP commands in
 it.</p>
 </div>
 <div class="section" id="calling-one-template-from-another">
-<h2>Calling one template from another<a class="headerlink" href="#calling-one-template-from-another" title="Permalink to this headline">¶</a></h2>
+<h2>Calling one template from another<a class="headerlink" href="#calling-one-template-from-another" title="Permalink to this heading">¶</a></h2>
 <p>Cheetah templates are really python modules in disguise. I.e., when
 Cheetah loads a template it compiles it to python code and then to byte
 code. Every template is compiled as a single class. The thing is,
@@ -444,7 +445,7 @@ is found first. ImportHooks automatically compile <cite>*.tmpl</cite> to <cite>*
 <cite>*.pyc</cite>.</p>
 </div>
 <div class="section" id="makefiles">
-<h2>Makefiles<a class="headerlink" href="#makefiles" title="Permalink to this headline">¶</a></h2>
+<h2>Makefiles<a class="headerlink" href="#makefiles" title="Permalink to this heading">¶</a></h2>
 <p>If your project has several templates and you get sick of typing
 “cheetah compile FILENAME.tmpl” all the time-much less remembering
 which commands to type when-and your system has the {make} command
@@ -482,7 +483,7 @@ documentation; essentially, you have it depend on every target that
 doesn’t produce an output file with the same name as the target.</p>
 </div>
 <div class="section" id="using-cheetah-in-a-multi-threaded-application">
-<h2>Using Cheetah in a Multi-Threaded Application<a class="headerlink" href="#using-cheetah-in-a-multi-threaded-application" title="Permalink to this headline">¶</a></h2>
+<h2>Using Cheetah in a Multi-Threaded Application<a class="headerlink" href="#using-cheetah-in-a-multi-threaded-application" title="Permalink to this heading">¶</a></h2>
 <p>Template classes may be shared freely between threads. However,
 template instances should not be shared unless you either:</p>
 <ul>
@@ -519,7 +520,7 @@ servlet’s {.canBeThreaded()} method unless you avoid the unsafe
 operations listed above.</p>
 </div>
 <div class="section" id="using-cheetah-with-gettext">
-<h2>Using Cheetah with gettext<a class="headerlink" href="#using-cheetah-with-gettext" title="Permalink to this headline">¶</a></h2>
+<h2>Using Cheetah with gettext<a class="headerlink" href="#using-cheetah-with-gettext" title="Permalink to this heading">¶</a></h2>
 <p>{ gettext} is a project for creating internationalized
 applications. For more details, visit
 <a class="reference external" href="http://docs.python.org/lib/module-gettext.html">http://docs.python.org/lib/module-gettext.html</a>. gettext can be used
@@ -546,8 +547,9 @@ using to mark strings for translation.</p></li>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Tips, Tricks and Troubleshooting</a><ul>
 <li><a class="reference internal" href="#placeholder-tips">Placeholder Tips</a></li>
 <li><a class="reference internal" href="#diagnostic-output">Diagnostic Output</a></li>
@@ -564,12 +566,17 @@ using to mark strings for translation.</p></li>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="parserInstructions.html"
-                        title="previous chapter">Instructions to the Parser/Compiler</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="webware.html"
-                        title="next chapter">Using Cheetah with Webware</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="parserInstructions.html"
+                          title="previous chapter">Instructions to the Parser/Compiler</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="webware.html"
+                          title="next chapter">Using Cheetah with Webware</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -581,12 +588,12 @@ using to mark strings for translation.</p></li>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -612,9 +619,9 @@ using to mark strings for translation.</p></li>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2021, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Apr 20, 2021.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+        &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Oct 03, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
   </body>
 </html>

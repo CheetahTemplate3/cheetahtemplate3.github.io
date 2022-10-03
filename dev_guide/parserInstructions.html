@@ -1,16 +1,17 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Directives: Parser Instructions &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -44,9 +45,9 @@
           <div class="body" role="main">
             
   <div class="section" id="directives-parser-instructions">
-<h1>Directives: Parser Instructions<a class="headerlink" href="#directives-parser-instructions" title="Permalink to this headline">¶</a></h1>
+<h1>Directives: Parser Instructions<a class="headerlink" href="#directives-parser-instructions" title="Permalink to this heading">¶</a></h1>
 <div class="section" id="breakpoint">
-<h2>#breakpoint<a class="headerlink" href="#breakpoint" title="Permalink to this headline">¶</a></h2>
+<h2>#breakpoint<a class="headerlink" href="#breakpoint" title="Permalink to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Text</span> <span class="n">before</span> <span class="n">breakpoint</span><span class="o">.</span>
 <span class="c1">#breakpoint</span>
@@ -65,7 +66,7 @@
 <p>Nothing after the breakpoint was compiled.</p>
 </div>
 <div class="section" id="compiler">
-<h2>#compiler<a class="headerlink" href="#compiler" title="Permalink to this headline">¶</a></h2>
+<h2>#compiler<a class="headerlink" href="#compiler" title="Permalink to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Not</span> <span class="n">a</span> <span class="n">comment</span>
 <span class="c1">#compiler commentStartToken = &#39;//&#39;</span>
@@ -97,8 +98,9 @@ the template definition was read.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Directives: Parser Instructions</a><ul>
 <li><a class="reference internal" href="#breakpoint">#breakpoint</a></li>
 <li><a class="reference internal" href="#compiler">#compiler</a></li>
@@ -106,12 +108,17 @@ the template definition was read.</p>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="comments.html"
-                        title="previous chapter">Directives: Comments</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="inheritanceEtc.html"
-                        title="next chapter">Directives: Import, Inheritance, Declaration and Assignment</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="comments.html"
+                          title="previous chapter">Directives: Comments</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="inheritanceEtc.html"
+                          title="next chapter">Directives: Import, Inheritance, Declaration and Assignment</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -123,12 +130,12 @@ the template definition was read.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -154,9 +161,9 @@ the template definition was read.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2021, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Apr 20, 2021.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+        &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Oct 03, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
   </body>
 </html>

@@ -1,16 +1,17 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Examples &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -44,12 +45,12 @@
           <div class="body" role="main">
             
   <div class="section" id="examples">
-<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
+<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h1>
 <p>The Cheetah distribution comes with an ‘examples’ directory. Browse
 the files in this directory and its subdirectories for examples of
 how Cheetah can be used.</p>
 <div class="section" id="syntax-examples">
-<h2>Syntax examples<a class="headerlink" href="#syntax-examples" title="Permalink to this headline">¶</a></h2>
+<h2>Syntax examples<a class="headerlink" href="#syntax-examples" title="Permalink to this heading">¶</a></h2>
 <p>The {Cheetah.Tests} module contains a large number of test cases
 that can double as examples of how the Cheetah Language works. To
 view these cases go to the base directory of your Cheetah
@@ -57,7 +58,7 @@ distribution and open the file {Cheetah/Tests/SyntaxAndOutput.py}
 in a text editor.</p>
 </div>
 <div class="section" id="webware-examples">
-<h2>Webware Examples<a class="headerlink" href="#webware-examples" title="Permalink to this headline">¶</a></h2>
+<h2>Webware Examples<a class="headerlink" href="#webware-examples" title="Permalink to this heading">¶</a></h2>
 <p>For examples of Cheetah in use with Webware visit the Cheetah and
 Webware wikis or use google. We used to have more examples in the
 cheetah source tarball, but they were out of date and confused
@@ -72,8 +73,9 @@ people.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Examples</a><ul>
 <li><a class="reference internal" href="#syntax-examples">Syntax examples</a></li>
 <li><a class="reference internal" href="#webware-examples">Webware Examples</a></li>
@@ -81,12 +83,17 @@ people.</p>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="links.html"
-                        title="previous chapter">Useful Web Links</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="comparisons.html"
-                        title="next chapter">Cheetah vs. Other Template Engines</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="links.html"
+                          title="previous chapter">Useful Web Links</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="comparisons.html"
+                          title="next chapter">Cheetah vs. Other Template Engines</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -98,12 +105,12 @@ people.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -129,9 +136,9 @@ people.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2021, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Apr 20, 2021.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+        &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Oct 03, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
   </body>
 </html>

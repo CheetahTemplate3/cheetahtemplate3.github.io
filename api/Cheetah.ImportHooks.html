@@ -1,16 +1,17 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cheetah.ImportHooks module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
@@ -35,7 +36,7 @@
           <div class="body" role="main">
             
   <div class="section" id="module-Cheetah.ImportHooks">
-<span id="cheetah-importhooks-module"></span><h1>Cheetah.ImportHooks module<a class="headerlink" href="#module-Cheetah.ImportHooks" title="Permalink to this headline">¶</a></h1>
+<span id="cheetah-importhooks-module"></span><h1>Cheetah.ImportHooks module<a class="headerlink" href="#module-Cheetah.ImportHooks" title="Permalink to this heading">¶</a></h1>
 <p>Provides some import hooks to allow Cheetah’s .tmpl files to be imported
 directly like Python .py modules.</p>
 <dl class="simple">
@@ -44,40 +45,40 @@ Cheetah.ImportHooks.install()</p>
 </dd>
 </dl>
 <dl class="py class">
-<dt id="Cheetah.ImportHooks.CheetahDirOwner">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.ImportHooks.</span></code><code class="sig-name descname"><span class="pre">CheetahDirOwner</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportHooks.CheetahDirOwner" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="Cheetah.ImportManager.html#Cheetah.ImportManager.DirOwner" title="Cheetah.ImportManager.DirOwner"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cheetah.ImportManager.DirOwner</span></code></a></p>
+<dt class="sig sig-object py" id="Cheetah.ImportHooks.CheetahDirOwner">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cheetah.ImportHooks.</span></span><span class="sig-name descname"><span class="pre">CheetahDirOwner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportHooks.CheetahDirOwner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="Cheetah.ImportManager.html#Cheetah.ImportManager.DirOwner" title="Cheetah.ImportManager.DirOwner"><code class="xref py py-class docutils literal notranslate"><span class="pre">DirOwner</span></code></a></p>
 <dl class="py attribute">
-<dt id="Cheetah.ImportHooks.CheetahDirOwner.debuglevel">
-<code class="sig-name descname"><span class="pre">debuglevel</span></code><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#Cheetah.ImportHooks.CheetahDirOwner.debuglevel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.ImportHooks.CheetahDirOwner.debuglevel">
+<span class="sig-name descname"><span class="pre">debuglevel</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#Cheetah.ImportHooks.CheetahDirOwner.debuglevel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="Cheetah.ImportHooks.CheetahDirOwner.getmod">
-<code class="sig-name descname"><span class="pre">getmod</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportHooks.CheetahDirOwner.getmod" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.ImportHooks.CheetahDirOwner.getmod">
+<span class="sig-name descname"><span class="pre">getmod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportHooks.CheetahDirOwner.getmod" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="Cheetah.ImportHooks.CheetahDirOwner.templateFileExtensions">
-<code class="sig-name descname"><span class="pre">templateFileExtensions</span></code><em class="property"> <span class="pre">=</span> <span class="pre">('.tmpl',)</span></em><a class="headerlink" href="#Cheetah.ImportHooks.CheetahDirOwner.templateFileExtensions" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.ImportHooks.CheetahDirOwner.templateFileExtensions">
+<span class="sig-name descname"><span class="pre">templateFileExtensions</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('.tmpl',)</span></em><a class="headerlink" href="#Cheetah.ImportHooks.CheetahDirOwner.templateFileExtensions" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.ImportHooks.install">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.ImportHooks.</span></code><code class="sig-name descname"><span class="pre">install</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">templateFileExtensions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('.tmpl')</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportHooks.install" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.ImportHooks.install">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.ImportHooks.</span></span><span class="sig-name descname"><span class="pre">install</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">templateFileExtensions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('.tmpl',)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportHooks.install" title="Permalink to this definition">¶</a></dt>
 <dd><p>Install the Cheetah Import Hooks</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.ImportHooks.setCacheDir">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.ImportHooks.</span></code><code class="sig-name descname"><span class="pre">setCacheDir</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cacheDir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportHooks.setCacheDir" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.ImportHooks.setCacheDir">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.ImportHooks.</span></span><span class="sig-name descname"><span class="pre">setCacheDir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cacheDir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportHooks.setCacheDir" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.ImportHooks.uninstall">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.ImportHooks.</span></code><code class="sig-name descname"><span class="pre">uninstall</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportHooks.uninstall" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.ImportHooks.uninstall">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.ImportHooks.</span></span><span class="sig-name descname"><span class="pre">uninstall</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.ImportHooks.uninstall" title="Permalink to this definition">¶</a></dt>
 <dd><p>Uninstall the Cheetah Import Hooks</p>
 </dd></dl>
 
@@ -101,12 +102,12 @@ Cheetah.ImportHooks.install()</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -125,9 +126,9 @@ Cheetah.ImportHooks.install()</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2021, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Apr 20, 2021.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+        &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Oct 03, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
   </body>
 </html>

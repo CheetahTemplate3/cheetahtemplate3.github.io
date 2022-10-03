@@ -1,16 +1,17 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cheetah.NameMapper module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
@@ -35,10 +36,10 @@
           <div class="body" role="main">
             
   <div class="section" id="module-Cheetah.NameMapper">
-<span id="cheetah-namemapper-module"></span><h1>Cheetah.NameMapper module<a class="headerlink" href="#module-Cheetah.NameMapper" title="Permalink to this headline">¶</a></h1>
+<span id="cheetah-namemapper-module"></span><h1>Cheetah.NameMapper module<a class="headerlink" href="#module-Cheetah.NameMapper" title="Permalink to this heading">¶</a></h1>
 <p>This module supports Cheetah’s optional NameMapper syntax.</p>
 <div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h2>
 <p>NameMapper provides a simple syntax for accessing Python data structures,
 functions, and methods from Cheetah. It’s called NameMapper because it ‘maps’
 simple ‘names’ in Cheetah templates to possibly more complex syntax in Python.</p>
@@ -86,10 +87,10 @@ and obey the Law of Demeter (search Google for more on that).
 But good object orientated design isn’t the point here.</p>
 </div>
 <div class="section" id="details">
-<h2>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h2>
+<h2>Details<a class="headerlink" href="#details" title="Permalink to this heading">¶</a></h2>
 <p>The parenthesized letters below correspond to the aims in the second paragraph.</p>
 <div class="section" id="dictionary-access-a">
-<h3>DICTIONARY ACCESS (a)<a class="headerlink" href="#dictionary-access-a" title="Permalink to this headline">¶</a></h3>
+<h3>DICTIONARY ACCESS (a)<a class="headerlink" href="#dictionary-access-a" title="Permalink to this heading">¶</a></h3>
 <p>NameMapper allows access to items in a dictionary
 using the same dotted notation used to access object attributes in Python.
 This aspect of NameMapper is known as ‘Unified Dotted Notation’.</p>
@@ -104,7 +105,7 @@ This aspect of NameMapper is known as ‘Unified Dotted Notation’.</p>
 </div>
 </div>
 <div class="section" id="autocalling-b-d">
-<h3>AUTOCALLING (b,d)<a class="headerlink" href="#autocalling-b-d" title="Permalink to this headline">¶</a></h3>
+<h3>AUTOCALLING (b,d)<a class="headerlink" href="#autocalling-b-d" title="Permalink to this heading">¶</a></h3>
 <p>NameMapper automatically detects functions and methods in Cheetah $vars
 and calls them if the parentheses have been left off.</p>
 <p>For example if ‘a’ is an object, ‘b’ is a method:</p>
@@ -131,25 +132,25 @@ Classes and callable object instances will not be autocalled.</p></li>
 </ul>
 </div>
 <div class="section" id="leaving-out-self-c-d">
-<h3>LEAVING OUT ‘self’ (c,d)<a class="headerlink" href="#leaving-out-self-c-d" title="Permalink to this headline">¶</a></h3>
+<h3>LEAVING OUT ‘self’ (c,d)<a class="headerlink" href="#leaving-out-self-c-d" title="Permalink to this heading">¶</a></h3>
 <p>NameMapper makes it possible to access the attributes of a servlet in Cheetah
 without needing to include ‘self’ in the variable names.  See the NAMESPACE
 CASCADING section below for details.</p>
 </div>
 <div class="section" id="namespace-cascading-d">
-<h3>NAMESPACE CASCADING (d)<a class="headerlink" href="#namespace-cascading-d" title="Permalink to this headline">¶</a></h3>
+<h3>NAMESPACE CASCADING (d)<a class="headerlink" href="#namespace-cascading-d" title="Permalink to this heading">¶</a></h3>
 <p>…</p>
 </div>
 </div>
 <div class="section" id="implementation-details">
-<h2>Implementation details<a class="headerlink" href="#implementation-details" title="Permalink to this headline">¶</a></h2>
+<h2>Implementation details<a class="headerlink" href="#implementation-details" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>NameMapper’s search order is dictionary keys then object attributes</p></li>
 <li><p>NameMapper.NotFound is raised if a value can’t be found for a name.</p></li>
 </ul>
 </div>
 <div class="section" id="performance-and-the-c-version">
-<h2>Performance and the C version<a class="headerlink" href="#performance-and-the-c-version" title="Permalink to this headline">¶</a></h2>
+<h2>Performance and the C version<a class="headerlink" href="#performance-and-the-c-version" title="Permalink to this heading">¶</a></h2>
 <p>Cheetah comes with both a C version and a Python version of NameMapper.  The C
 version is significantly faster and the exception tracebacks are much easier to
 read.  It’s still slower than standard Python syntax, but you won’t notice the
@@ -157,40 +158,40 @@ difference in realistic usage scenarios.</p>
 <p>Cheetah uses the optimized C version (_namemapper.c) if it has
 been compiled or falls back to the Python version if not.</p>
 <dl class="py exception">
-<dt id="Cheetah.NameMapper.NotFound">
-<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">Cheetah.NameMapper.</span></code><code class="sig-name descname"><span class="pre">NotFound</span></code><a class="headerlink" href="#Cheetah.NameMapper.NotFound" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.NameMapper.NotFound">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cheetah.NameMapper.</span></span><span class="sig-name descname"><span class="pre">NotFound</span></span><a class="headerlink" href="#Cheetah.NameMapper.NotFound" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">LookupError</span></code></p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.NameMapper.hasKey">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.NameMapper.</span></code><code class="sig-name descname"><span class="pre">hasKey</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.NameMapper.hasKey" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.NameMapper.hasKey">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.NameMapper.</span></span><span class="sig-name descname"><span class="pre">hasKey</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.NameMapper.hasKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determine if ‘obj’ has ‘key’</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.NameMapper.valueForKey">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.NameMapper.</span></code><code class="sig-name descname"><span class="pre">valueForKey</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.NameMapper.valueForKey" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.NameMapper.valueForKey">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.NameMapper.</span></span><span class="sig-name descname"><span class="pre">valueForKey</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.NameMapper.valueForKey" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.NameMapper.valueForName">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.NameMapper.</span></code><code class="sig-name descname"><span class="pre">valueForName</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">executeCallables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.NameMapper.valueForName" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.NameMapper.valueForName">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.NameMapper.</span></span><span class="sig-name descname"><span class="pre">valueForName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">executeCallables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.NameMapper.valueForName" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.NameMapper.valueFromFrame">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.NameMapper.</span></code><code class="sig-name descname"><span class="pre">valueFromFrame</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">executeCallables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.NameMapper.valueFromFrame" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.NameMapper.valueFromFrame">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.NameMapper.</span></span><span class="sig-name descname"><span class="pre">valueFromFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">executeCallables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.NameMapper.valueFromFrame" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.NameMapper.valueFromFrameOrSearchList">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.NameMapper.</span></code><code class="sig-name descname"><span class="pre">valueFromFrameOrSearchList</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">searchList</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">executeCallables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.NameMapper.valueFromFrameOrSearchList" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.NameMapper.valueFromFrameOrSearchList">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.NameMapper.</span></span><span class="sig-name descname"><span class="pre">valueFromFrameOrSearchList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">searchList</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">executeCallables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.NameMapper.valueFromFrameOrSearchList" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="Cheetah.NameMapper.valueFromSearchList">
-<code class="sig-prename descclassname"><span class="pre">Cheetah.NameMapper.</span></code><code class="sig-name descname"><span class="pre">valueFromSearchList</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">searchList</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">executeCallables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.NameMapper.valueFromSearchList" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Cheetah.NameMapper.valueFromSearchList">
+<span class="sig-prename descclassname"><span class="pre">Cheetah.NameMapper.</span></span><span class="sig-name descname"><span class="pre">valueFromSearchList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">searchList</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">executeCallables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.NameMapper.valueFromSearchList" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -203,8 +204,9 @@ been compiled or falls back to the Python version if not.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Cheetah.NameMapper module</a><ul>
 <li><a class="reference internal" href="#overview">Overview</a></li>
 <li><a class="reference internal" href="#details">Details</a><ul>
@@ -220,6 +222,7 @@ been compiled or falls back to the Python version if not.</p>
 </li>
 </ul>
 
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -231,12 +234,12 @@ been compiled or falls back to the Python version if not.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -255,9 +258,9 @@ been compiled or falls back to the Python version if not.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2021, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Apr 20, 2021.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+        &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Oct 03, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
   </body>
 </html>

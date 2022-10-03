@@ -1,16 +1,17 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Directives: Flow Control &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -44,9 +45,9 @@
           <div class="body" role="main">
             
   <div class="section" id="directives-flow-control">
-<h1>Directives: Flow Control<a class="headerlink" href="#directives-flow-control" title="Permalink to this headline">¶</a></h1>
+<h1>Directives: Flow Control<a class="headerlink" href="#directives-flow-control" title="Permalink to this heading">¶</a></h1>
 <div class="section" id="for">
-<h2>#for<a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h2>
+<h2>#for<a class="headerlink" href="#for" title="Permalink to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#for $i in $range(10)
 $i #slurp
@@ -65,7 +66,7 @@ $i #slurp
 </div>
 </div>
 <div class="section" id="repeat">
-<h2>#repeat<a class="headerlink" href="#repeat" title="Permalink to this headline">¶</a></h2>
+<h2>#repeat<a class="headerlink" href="#repeat" title="Permalink to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#repeat 3
 My bonnie lies over the ocean
@@ -90,7 +91,7 @@ O, bring back my bonnie to me!
 for each instance of {repeat} in order to permit nesting.</p>
 </div>
 <div class="section" id="while">
-<h2>#while<a class="headerlink" href="#while" title="Permalink to this headline">¶</a></h2>
+<h2>#while<a class="headerlink" href="#while" title="Permalink to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#set $alive = True
 #while $alive
@@ -112,7 +113,7 @@ I am alive!
 </div>
 </div>
 <div class="section" id="if">
-<h2>#if<a class="headerlink" href="#if" title="Permalink to this headline">¶</a></h2>
+<h2>#if<a class="headerlink" href="#if" title="Permalink to this heading">¶</a></h2>
 <p>()</p>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#set $size = 500</span>
@@ -141,7 +142,7 @@ I am alive!
 </div>
 </div>
 <div class="section" id="unless">
-<h2>#unless<a class="headerlink" href="#unless" title="Permalink to this headline">¶</a></h2>
+<h2>#unless<a class="headerlink" href="#unless" title="Permalink to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#set $count = 9</span>
 <span class="c1">#unless $count + 5 &gt; 15</span>
@@ -164,7 +165,7 @@ parentheses in the {if} expression, which could lead to it
 calculating something different than it should.</p>
 </div>
 <div class="section" id="break-and-continue">
-<h2>#break and #continue<a class="headerlink" href="#break-and-continue" title="Permalink to this headline">¶</a></h2>
+<h2>#break and #continue<a class="headerlink" href="#break-and-continue" title="Permalink to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#for $i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, &#39;James&#39;, &#39;Joe&#39;, &#39;Snow&#39;]
 #if $i == 10
@@ -195,7 +196,7 @@ $i - #slurp
 </div>
 </div>
 <div class="section" id="pass">
-<h2>#pass<a class="headerlink" href="#pass" title="Permalink to this headline">¶</a></h2>
+<h2>#pass<a class="headerlink" href="#pass" title="Permalink to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Let</span><span class="s1">&#39;s check the number.</span>
 <span class="c1">#set $size = 500</span>
@@ -228,7 +229,7 @@ $i - #slurp
 </div>
 </div>
 <div class="section" id="stop">
-<h2>#stop<a class="headerlink" href="#stop" title="Permalink to this headline">¶</a></h2>
+<h2>#stop<a class="headerlink" href="#stop" title="Permalink to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="n">cat</span>
 <span class="c1">#if 1</span>
@@ -258,7 +259,7 @@ $i - #slurp
 </div>
 </div>
 <div class="section" id="return">
-<h2>#return<a class="headerlink" href="#return" title="Permalink to this headline">¶</a></h2>
+<h2>#return<a class="headerlink" href="#return" title="Permalink to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1
 $test[1]
@@ -366,8 +367,9 @@ $test[1]
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Directives: Flow Control</a><ul>
 <li><a class="reference internal" href="#for">#for</a></li>
 <li><a class="reference internal" href="#repeat">#repeat</a></li>
@@ -382,12 +384,17 @@ $test[1]
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="patching.html"
-                        title="previous chapter">Patching Cheetah</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="design.html"
-                        title="next chapter">Design Decisions and Tradeoffs</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="patching.html"
+                          title="previous chapter">Patching Cheetah</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="design.html"
+                          title="next chapter">Design Decisions and Tradeoffs</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -399,12 +406,12 @@ $test[1]
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -430,9 +437,9 @@ $test[1]
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2021, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Apr 20, 2021.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+        &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Oct 03, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
   </body>
 </html>

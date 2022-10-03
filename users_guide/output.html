@@ -1,16 +1,17 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Generating, Caching and Filtering Output &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -44,9 +45,9 @@
           <div class="body" role="main">
             
   <div class="section" id="generating-caching-and-filtering-output">
-<h1>Generating, Caching and Filtering Output<a class="headerlink" href="#generating-caching-and-filtering-output" title="Permalink to this headline">¶</a></h1>
+<h1>Generating, Caching and Filtering Output<a class="headerlink" href="#generating-caching-and-filtering-output" title="Permalink to this heading">¶</a></h1>
 <div class="section" id="output-from-complex-expressions-echo">
-<h2>Output from complex expressions: #echo<a class="headerlink" href="#output-from-complex-expressions-echo" title="Permalink to this headline">¶</a></h2>
+<h2>Output from complex expressions: #echo<a class="headerlink" href="#output-from-complex-expressions-echo" title="Permalink to this heading">¶</a></h2>
 <p>Syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#echo EXPR</span>
 </pre></div>
@@ -62,7 +63,7 @@ that can’t be written as simple $placeholders.</p>
 </div>
 </div>
 <div class="section" id="executing-expressions-without-output-silent">
-<h2>Executing expressions without output: #silent<a class="headerlink" href="#executing-expressions-without-output-silent" title="Permalink to this headline">¶</a></h2>
+<h2>Executing expressions without output: #silent<a class="headerlink" href="#executing-expressions-without-output-silent" title="Permalink to this heading">¶</a></h2>
 <p>Syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#silent EXPR</span>
 </pre></div>
@@ -81,7 +82,7 @@ inherit, and call this method using {#silent} at the top of the
 template.</p>
 </div>
 <div class="section" id="one-line-if">
-<h2>One-line #if<a class="headerlink" href="#one-line-if" title="Permalink to this headline">¶</a></h2>
+<h2>One-line #if<a class="headerlink" href="#one-line-if" title="Permalink to this heading">¶</a></h2>
 <p>Syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#if EXPR1 then EXPR2 else EXPR3#</span>
 </pre></div>
@@ -100,9 +101,9 @@ it may be omitted if there’s nothing after the directive on the
 same line.</p>
 </div>
 <div class="section" id="caching-output">
-<h2>Caching Output<a class="headerlink" href="#caching-output" title="Permalink to this headline">¶</a></h2>
+<h2>Caching Output<a class="headerlink" href="#caching-output" title="Permalink to this heading">¶</a></h2>
 <div class="section" id="caching-individual-placeholders">
-<h3>Caching individual placeholders<a class="headerlink" href="#caching-individual-placeholders" title="Permalink to this headline">¶</a></h3>
+<h3>Caching individual placeholders<a class="headerlink" href="#caching-individual-placeholders" title="Permalink to this heading">¶</a></h3>
 <p>By default, the values of each $placeholder is retrieved and
 interpolated for every request. However, it’s possible to cache the
 values of individual placeholders if they don’t change very often,
@@ -142,7 +143,7 @@ can’t do this with individual placeholders, but you can do it with
 cached regions, which will be described next.</p>
 </div>
 <div class="section" id="caching-entire-regions">
-<h3>Caching entire regions<a class="headerlink" href="#caching-entire-regions" title="Permalink to this headline">¶</a></h3>
+<h3>Caching entire regions<a class="headerlink" href="#caching-entire-regions" title="Permalink to this heading">¶</a></h3>
 <p>Syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#cache [id=EXPR] [timer=EXPR] [test=EXPR]</span>
 <span class="c1">#end cache</span>
@@ -208,7 +209,7 @@ varyByBrowser output caching keywords.</p>
 </div>
 </div>
 <div class="section" id="raw">
-<h2>#raw<a class="headerlink" href="#raw" title="Permalink to this headline">¶</a></h2>
+<h2>#raw<a class="headerlink" href="#raw" title="Permalink to this heading">¶</a></h2>
 <p>Syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#raw</span>
 <span class="c1">#end raw</span>
@@ -224,7 +225,7 @@ body to appear in a special font or typeface. It can’t, because
 Cheetah doesn’t know what a font is.</p>
 </div>
 <div class="section" id="include">
-<h2>#include<a class="headerlink" href="#include" title="Permalink to this headline">¶</a></h2>
+<h2>#include<a class="headerlink" href="#include" title="Permalink to this heading">¶</a></h2>
 <p>Syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include [raw] FILENAME_EXPR</span>
 <span class="c1">#include [raw] source=STRING_EXPR</span>
@@ -265,7 +266,7 @@ it in the same include. (This is unlike PHP, which allows
 unbalanced constructs in include files.)</p>
 </div>
 <div class="section" id="slurp">
-<h2>#slurp<a class="headerlink" href="#slurp" title="Permalink to this headline">¶</a></h2>
+<h2>#slurp<a class="headerlink" href="#slurp" title="Permalink to this heading">¶</a></h2>
 <p>Syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#slurp</span>
 </pre></div>
@@ -284,7 +285,7 @@ $i #slurp
 </div>
 </div>
 <div class="section" id="indent">
-<h2>#indent<a class="headerlink" href="#indent" title="Permalink to this headline">¶</a></h2>
+<h2>#indent<a class="headerlink" href="#indent" title="Permalink to this heading">¶</a></h2>
 <p>This directive is not implemented yet. When/if it’s completed, it
 will allow you to</p>
 <ol class="arabic simple">
@@ -304,7 +305,7 @@ than later, let us know on the mailing list.</p>
 the TODO file in the Cheetah source distribution.</p>
 </div>
 <div class="section" id="ouput-filtering-and-filter">
-<h2>Ouput Filtering and #filter<a class="headerlink" href="#ouput-filtering-and-filter" title="Permalink to this headline">¶</a></h2>
+<h2>Ouput Filtering and #filter<a class="headerlink" href="#ouput-filtering-and-filter" title="Permalink to this heading">¶</a></h2>
 <p>Syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#filter FILTER_CLASS_NAME</span>
 <span class="c1">#filter $PLACEHOLDER_TO_A_FILTER_INSTANCE</span>
@@ -406,8 +407,9 @@ for the latest ideas.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Generating, Caching and Filtering Output</a><ul>
 <li><a class="reference internal" href="#output-from-complex-expressions-echo">Output from complex expressions: #echo</a></li>
 <li><a class="reference internal" href="#executing-expressions-without-output-silent">Executing expressions without output: #silent</a></li>
@@ -426,12 +428,17 @@ for the latest ideas.</p>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="comments.html"
-                        title="previous chapter">Comments</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="inheritanceEtc.html"
-                        title="next chapter">Import, Inheritance, Declaration and Assignment</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="comments.html"
+                          title="previous chapter">Comments</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="inheritanceEtc.html"
+                          title="next chapter">Import, Inheritance, Declaration and Assignment</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -443,12 +450,12 @@ for the latest ideas.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -474,9 +481,9 @@ for the latest ideas.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2021, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Apr 20, 2021.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+        &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Oct 03, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
   </body>
 </html>
