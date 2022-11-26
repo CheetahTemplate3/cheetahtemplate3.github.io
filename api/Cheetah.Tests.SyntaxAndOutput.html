@@ -13,6 +13,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head><body>
@@ -1639,8 +1640,11 @@ Shouldn’t gobble</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="Cheetah.Tests.SyntaxAndOutput.MiscComplexSyntax.test1">
 <span class="sig-name descname"><span class="pre">test1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.SyntaxAndOutput.MiscComplexSyntax.test1" title="Permalink to this definition">¶</a></dt>
-<dd><p>#set $c = {‘A’:0}[{}.get(‘a’, {‘a’ : ‘A’}[‘a’])]
+<dd><div class="section" id="complex-use-of-and-in-a-set-expression">
+<h2>Complex use of {},[] and () in a #set expression<a class="headerlink" href="#complex-use-of-and-in-a-set-expression" title="Permalink to this heading">¶</a></h2>
+<p>#set $c = {‘A’:0}[{}.get(‘a’, {‘a’ : ‘A’}[‘a’])]
 $c</p>
+</div>
 </dd></dl>
 
 </dd></dl>
@@ -2983,6 +2987,621 @@ Should eat the garbage</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Cheetah.Tests.SyntaxAndOutput module</a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.AssertDirective"><code class="docutils literal notranslate"><span class="pre">AssertDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.AssertDirective.test1"><code class="docutils literal notranslate"><span class="pre">AssertDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.AssertDirective.test2"><code class="docutils literal notranslate"><span class="pre">AssertDirective.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.AssertDirective.test3"><code class="docutils literal notranslate"><span class="pre">AssertDirective.test3()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.AttrDirective"><code class="docutils literal notranslate"><span class="pre">AttrDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.AttrDirective.test1"><code class="docutils literal notranslate"><span class="pre">AttrDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.AttrDirective.test2"><code class="docutils literal notranslate"><span class="pre">AttrDirective.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.AttrDirective.test3"><code class="docutils literal notranslate"><span class="pre">AttrDirective.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.AttrDirective.test4"><code class="docutils literal notranslate"><span class="pre">AttrDirective.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.AttrDirective.test5"><code class="docutils literal notranslate"><span class="pre">AttrDirective.test5()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Backslashes"><code class="docutils literal notranslate"><span class="pre">Backslashes</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Backslashes.convertEOLs"><code class="docutils literal notranslate"><span class="pre">Backslashes.convertEOLs</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Backslashes.setUp"><code class="docutils literal notranslate"><span class="pre">Backslashes.setUp()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Backslashes.tearDown"><code class="docutils literal notranslate"><span class="pre">Backslashes.tearDown()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Backslashes.test1"><code class="docutils literal notranslate"><span class="pre">Backslashes.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Backslashes.test2"><code class="docutils literal notranslate"><span class="pre">Backslashes.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Backslashes.test3"><code class="docutils literal notranslate"><span class="pre">Backslashes.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Backslashes.test4"><code class="docutils literal notranslate"><span class="pre">Backslashes.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Backslashes.test5"><code class="docutils literal notranslate"><span class="pre">Backslashes.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Backslashes.test6"><code class="docutils literal notranslate"><span class="pre">Backslashes.test6()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Backslashes.test7"><code class="docutils literal notranslate"><span class="pre">Backslashes.test7()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Backslashes.test8"><code class="docutils literal notranslate"><span class="pre">Backslashes.test8()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.BlockDirective"><code class="docutils literal notranslate"><span class="pre">BlockDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.BlockDirective.test1"><code class="docutils literal notranslate"><span class="pre">BlockDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.BlockDirective.test10"><code class="docutils literal notranslate"><span class="pre">BlockDirective.test10()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.BlockDirective.test11"><code class="docutils literal notranslate"><span class="pre">BlockDirective.test11()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.BlockDirective.test12"><code class="docutils literal notranslate"><span class="pre">BlockDirective.test12()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.BlockDirective.test13"><code class="docutils literal notranslate"><span class="pre">BlockDirective.test13()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.BlockDirective.test14"><code class="docutils literal notranslate"><span class="pre">BlockDirective.test14()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.BlockDirective.test15"><code class="docutils literal notranslate"><span class="pre">BlockDirective.test15()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.BlockDirective.test2"><code class="docutils literal notranslate"><span class="pre">BlockDirective.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.BlockDirective.test3"><code class="docutils literal notranslate"><span class="pre">BlockDirective.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.BlockDirective.test4"><code class="docutils literal notranslate"><span class="pre">BlockDirective.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.BlockDirective.test5"><code class="docutils literal notranslate"><span class="pre">BlockDirective.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.BlockDirective.test6"><code class="docutils literal notranslate"><span class="pre">BlockDirective.test6()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.BlockDirective.test7"><code class="docutils literal notranslate"><span class="pre">BlockDirective.test7()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.BlockDirective.test8"><code class="docutils literal notranslate"><span class="pre">BlockDirective.test8()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.BlockDirective.test9"><code class="docutils literal notranslate"><span class="pre">BlockDirective.test9()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.BreakDirective"><code class="docutils literal notranslate"><span class="pre">BreakDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.BreakDirective.test1"><code class="docutils literal notranslate"><span class="pre">BreakDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.BreakDirective.test2"><code class="docutils literal notranslate"><span class="pre">BreakDirective.test2()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.BreakpointDirective"><code class="docutils literal notranslate"><span class="pre">BreakpointDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.BreakpointDirective.test1"><code class="docutils literal notranslate"><span class="pre">BreakpointDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.BreakpointDirective.test2"><code class="docutils literal notranslate"><span class="pre">BreakpointDirective.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.BreakpointDirective.test3"><code class="docutils literal notranslate"><span class="pre">BreakpointDirective.test3()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CGI"><code class="docutils literal notranslate"><span class="pre">CGI</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CGI.convertEOLs"><code class="docutils literal notranslate"><span class="pre">CGI.convertEOLs</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CGI.test1"><code class="docutils literal notranslate"><span class="pre">CGI.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CGI.test2"><code class="docutils literal notranslate"><span class="pre">CGI.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CGI.test3"><code class="docutils literal notranslate"><span class="pre">CGI.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CGI.test4"><code class="docutils literal notranslate"><span class="pre">CGI.test4()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CacheDirective"><code class="docutils literal notranslate"><span class="pre">CacheDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CacheDirective.test1"><code class="docutils literal notranslate"><span class="pre">CacheDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CacheDirective.test2"><code class="docutils literal notranslate"><span class="pre">CacheDirective.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CacheDirective.test3"><code class="docutils literal notranslate"><span class="pre">CacheDirective.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CacheDirective.test4"><code class="docutils literal notranslate"><span class="pre">CacheDirective.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CacheDirective.test5"><code class="docutils literal notranslate"><span class="pre">CacheDirective.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CacheDirective.test6"><code class="docutils literal notranslate"><span class="pre">CacheDirective.test6()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CallDirective"><code class="docutils literal notranslate"><span class="pre">CallDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CallDirective.test1"><code class="docutils literal notranslate"><span class="pre">CallDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CallDirective.test2"><code class="docutils literal notranslate"><span class="pre">CallDirective.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CallDirective.test3"><code class="docutils literal notranslate"><span class="pre">CallDirective.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CallDirective.test4"><code class="docutils literal notranslate"><span class="pre">CallDirective.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CallDirective.test5"><code class="docutils literal notranslate"><span class="pre">CallDirective.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CallDirective.test6"><code class="docutils literal notranslate"><span class="pre">CallDirective.test6()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CallDirective.test7"><code class="docutils literal notranslate"><span class="pre">CallDirective.test7()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CallDirective.test8"><code class="docutils literal notranslate"><span class="pre">CallDirective.test8()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CallDirective.test9"><code class="docutils literal notranslate"><span class="pre">CallDirective.test9()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CaptureDirective"><code class="docutils literal notranslate"><span class="pre">CaptureDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CaptureDirective.test1"><code class="docutils literal notranslate"><span class="pre">CaptureDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CaptureDirective.test2"><code class="docutils literal notranslate"><span class="pre">CaptureDirective.test2()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine"><code class="docutils literal notranslate"><span class="pre">Comments_MultiLine</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test1"><code class="docutils literal notranslate"><span class="pre">Comments_MultiLine.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test10"><code class="docutils literal notranslate"><span class="pre">Comments_MultiLine.test10()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test11"><code class="docutils literal notranslate"><span class="pre">Comments_MultiLine.test11()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test2"><code class="docutils literal notranslate"><span class="pre">Comments_MultiLine.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test3"><code class="docutils literal notranslate"><span class="pre">Comments_MultiLine.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test4"><code class="docutils literal notranslate"><span class="pre">Comments_MultiLine.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test5"><code class="docutils literal notranslate"><span class="pre">Comments_MultiLine.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test6"><code class="docutils literal notranslate"><span class="pre">Comments_MultiLine.test6()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test7"><code class="docutils literal notranslate"><span class="pre">Comments_MultiLine.test7()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test8"><code class="docutils literal notranslate"><span class="pre">Comments_MultiLine.test8()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine.test9"><code class="docutils literal notranslate"><span class="pre">Comments_MultiLine.test9()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine_NoGobble"><code class="docutils literal notranslate"><span class="pre">Comments_MultiLine_NoGobble</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine_NoGobble.test1"><code class="docutils literal notranslate"><span class="pre">Comments_MultiLine_NoGobble.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine_NoGobble.test2"><code class="docutils literal notranslate"><span class="pre">Comments_MultiLine_NoGobble.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine_NoGobble.test3"><code class="docutils literal notranslate"><span class="pre">Comments_MultiLine_NoGobble.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_MultiLine_NoGobble.test4"><code class="docutils literal notranslate"><span class="pre">Comments_MultiLine_NoGobble.test4()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_SingleLine"><code class="docutils literal notranslate"><span class="pre">Comments_SingleLine</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_SingleLine.test1"><code class="docutils literal notranslate"><span class="pre">Comments_SingleLine.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_SingleLine.test10"><code class="docutils literal notranslate"><span class="pre">Comments_SingleLine.test10()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_SingleLine.test11"><code class="docutils literal notranslate"><span class="pre">Comments_SingleLine.test11()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_SingleLine.test2"><code class="docutils literal notranslate"><span class="pre">Comments_SingleLine.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_SingleLine.test3"><code class="docutils literal notranslate"><span class="pre">Comments_SingleLine.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_SingleLine.test4"><code class="docutils literal notranslate"><span class="pre">Comments_SingleLine.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_SingleLine.test5"><code class="docutils literal notranslate"><span class="pre">Comments_SingleLine.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_SingleLine.test6"><code class="docutils literal notranslate"><span class="pre">Comments_SingleLine.test6()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_SingleLine.test7"><code class="docutils literal notranslate"><span class="pre">Comments_SingleLine.test7()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_SingleLine.test8"><code class="docutils literal notranslate"><span class="pre">Comments_SingleLine.test8()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Comments_SingleLine.test9"><code class="docutils literal notranslate"><span class="pre">Comments_SingleLine.test9()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CompilerDirective"><code class="docutils literal notranslate"><span class="pre">CompilerDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CompilerDirective.test1"><code class="docutils literal notranslate"><span class="pre">CompilerDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CompilerDirective.test2"><code class="docutils literal notranslate"><span class="pre">CompilerDirective.test2()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CompilerSettingsDirective"><code class="docutils literal notranslate"><span class="pre">CompilerSettingsDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CompilerSettingsDirective.test1"><code class="docutils literal notranslate"><span class="pre">CompilerSettingsDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CompilerSettingsDirective.test2"><code class="docutils literal notranslate"><span class="pre">CompilerSettingsDirective.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.CompilerSettingsDirective.test3"><code class="docutils literal notranslate"><span class="pre">CompilerSettingsDirective.test3()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ContinueDirective"><code class="docutils literal notranslate"><span class="pre">ContinueDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ContinueDirective.test1"><code class="docutils literal notranslate"><span class="pre">ContinueDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ContinueDirective.test2"><code class="docutils literal notranslate"><span class="pre">ContinueDirective.test2()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DecoratorDirective"><code class="docutils literal notranslate"><span class="pre">DecoratorDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DecoratorDirective.test1"><code class="docutils literal notranslate"><span class="pre">DecoratorDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DecoratorDirective.test2"><code class="docutils literal notranslate"><span class="pre">DecoratorDirective.test2()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DefDirective"><code class="docutils literal notranslate"><span class="pre">DefDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DefDirective.test1"><code class="docutils literal notranslate"><span class="pre">DefDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DefDirective.test10"><code class="docutils literal notranslate"><span class="pre">DefDirective.test10()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DefDirective.test11"><code class="docutils literal notranslate"><span class="pre">DefDirective.test11()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DefDirective.test12"><code class="docutils literal notranslate"><span class="pre">DefDirective.test12()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DefDirective.test13"><code class="docutils literal notranslate"><span class="pre">DefDirective.test13()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DefDirective.test14"><code class="docutils literal notranslate"><span class="pre">DefDirective.test14()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DefDirective.test15"><code class="docutils literal notranslate"><span class="pre">DefDirective.test15()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DefDirective.test16"><code class="docutils literal notranslate"><span class="pre">DefDirective.test16()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DefDirective.test17"><code class="docutils literal notranslate"><span class="pre">DefDirective.test17()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DefDirective.test18"><code class="docutils literal notranslate"><span class="pre">DefDirective.test18()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DefDirective.test19"><code class="docutils literal notranslate"><span class="pre">DefDirective.test19()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DefDirective.test2"><code class="docutils literal notranslate"><span class="pre">DefDirective.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DefDirective.test3"><code class="docutils literal notranslate"><span class="pre">DefDirective.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DefDirective.test4"><code class="docutils literal notranslate"><span class="pre">DefDirective.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DefDirective.test5"><code class="docutils literal notranslate"><span class="pre">DefDirective.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DefDirective.test6"><code class="docutils literal notranslate"><span class="pre">DefDirective.test6()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DefDirective.test7"><code class="docutils literal notranslate"><span class="pre">DefDirective.test7()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DefDirective.test8"><code class="docutils literal notranslate"><span class="pre">DefDirective.test8()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DefDirective.test9"><code class="docutils literal notranslate"><span class="pre">DefDirective.test9()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DefmacroDirective"><code class="docutils literal notranslate"><span class="pre">DefmacroDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DefmacroDirective.test1"><code class="docutils literal notranslate"><span class="pre">DefmacroDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DefmacroDirective.test2"><code class="docutils literal notranslate"><span class="pre">DefmacroDirective.test2()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DummyClass"><code class="docutils literal notranslate"><span class="pre">DummyClass</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DummyClass.callIt"><code class="docutils literal notranslate"><span class="pre">DummyClass.callIt()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DummyClass.meth"><code class="docutils literal notranslate"><span class="pre">DummyClass.meth()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DummyClass.meth1"><code class="docutils literal notranslate"><span class="pre">DummyClass.meth1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DummyClass.meth2"><code class="docutils literal notranslate"><span class="pre">DummyClass.meth2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.DummyClass.methWithPercentSignDefaultArg"><code class="docutils literal notranslate"><span class="pre">DummyClass.methWithPercentSignDefaultArg()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.EOLSlurpToken"><code class="docutils literal notranslate"><span class="pre">EOLSlurpToken</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.EOLSlurpToken.test1"><code class="docutils literal notranslate"><span class="pre">EOLSlurpToken.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.EOLSlurpToken.test2"><code class="docutils literal notranslate"><span class="pre">EOLSlurpToken.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.EOLSlurpToken.test3"><code class="docutils literal notranslate"><span class="pre">EOLSlurpToken.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.EOLSlurpToken.test4"><code class="docutils literal notranslate"><span class="pre">EOLSlurpToken.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.EOLSlurpToken.test5"><code class="docutils literal notranslate"><span class="pre">EOLSlurpToken.test5()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.EchoDirective"><code class="docutils literal notranslate"><span class="pre">EchoDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.EchoDirective.test1"><code class="docutils literal notranslate"><span class="pre">EchoDirective.test1()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.EmptyTemplate"><code class="docutils literal notranslate"><span class="pre">EmptyTemplate</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.EmptyTemplate.convertEOLs"><code class="docutils literal notranslate"><span class="pre">EmptyTemplate.convertEOLs</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.EmptyTemplate.test1"><code class="docutils literal notranslate"><span class="pre">EmptyTemplate.test1()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.EncodingDirective"><code class="docutils literal notranslate"><span class="pre">EncodingDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.EncodingDirective.test1"><code class="docutils literal notranslate"><span class="pre">EncodingDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.EncodingDirective.test2"><code class="docutils literal notranslate"><span class="pre">EncodingDirective.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.EncodingDirective.test3"><code class="docutils literal notranslate"><span class="pre">EncodingDirective.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.EncodingDirective.test4"><code class="docutils literal notranslate"><span class="pre">EncodingDirective.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.EncodingDirective.test5"><code class="docutils literal notranslate"><span class="pre">EncodingDirective.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.EncodingDirective.test6"><code class="docutils literal notranslate"><span class="pre">EncodingDirective.test6()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ErrorCatcherDirective"><code class="docutils literal notranslate"><span class="pre">ErrorCatcherDirective</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ExtendsDirective"><code class="docutils literal notranslate"><span class="pre">ExtendsDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ExtendsDirective.test1"><code class="docutils literal notranslate"><span class="pre">ExtendsDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ExtendsDirective.test2"><code class="docutils literal notranslate"><span class="pre">ExtendsDirective.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ExtendsDirective.test3"><code class="docutils literal notranslate"><span class="pre">ExtendsDirective.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ExtendsDirective.test4"><code class="docutils literal notranslate"><span class="pre">ExtendsDirective.test4()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.FilterDirective"><code class="docutils literal notranslate"><span class="pre">FilterDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.FilterDirective.convertEOLs"><code class="docutils literal notranslate"><span class="pre">FilterDirective.convertEOLs</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.FilterDirective.test1"><code class="docutils literal notranslate"><span class="pre">FilterDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.FilterDirective.test10"><code class="docutils literal notranslate"><span class="pre">FilterDirective.test10()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.FilterDirective.test11"><code class="docutils literal notranslate"><span class="pre">FilterDirective.test11()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.FilterDirective.test2"><code class="docutils literal notranslate"><span class="pre">FilterDirective.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.FilterDirective.test3"><code class="docutils literal notranslate"><span class="pre">FilterDirective.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.FilterDirective.test4"><code class="docutils literal notranslate"><span class="pre">FilterDirective.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.FilterDirective.test5"><code class="docutils literal notranslate"><span class="pre">FilterDirective.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.FilterDirective.test6"><code class="docutils literal notranslate"><span class="pre">FilterDirective.test6()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.FilterDirective.test7"><code class="docutils literal notranslate"><span class="pre">FilterDirective.test7()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.FilterDirective.test8"><code class="docutils literal notranslate"><span class="pre">FilterDirective.test8()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.FilterDirective.test9"><code class="docutils literal notranslate"><span class="pre">FilterDirective.test9()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ForDirective"><code class="docutils literal notranslate"><span class="pre">ForDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ForDirective.test1"><code class="docutils literal notranslate"><span class="pre">ForDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ForDirective.test10"><code class="docutils literal notranslate"><span class="pre">ForDirective.test10()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ForDirective.test11"><code class="docutils literal notranslate"><span class="pre">ForDirective.test11()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ForDirective.test12"><code class="docutils literal notranslate"><span class="pre">ForDirective.test12()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ForDirective.test13"><code class="docutils literal notranslate"><span class="pre">ForDirective.test13()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ForDirective.test14"><code class="docutils literal notranslate"><span class="pre">ForDirective.test14()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ForDirective.test15"><code class="docutils literal notranslate"><span class="pre">ForDirective.test15()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ForDirective.test16"><code class="docutils literal notranslate"><span class="pre">ForDirective.test16()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ForDirective.test2"><code class="docutils literal notranslate"><span class="pre">ForDirective.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ForDirective.test3"><code class="docutils literal notranslate"><span class="pre">ForDirective.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ForDirective.test4"><code class="docutils literal notranslate"><span class="pre">ForDirective.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ForDirective.test5"><code class="docutils literal notranslate"><span class="pre">ForDirective.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ForDirective.test6"><code class="docutils literal notranslate"><span class="pre">ForDirective.test6()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ForDirective.test7"><code class="docutils literal notranslate"><span class="pre">ForDirective.test7()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ForDirective.test8"><code class="docutils literal notranslate"><span class="pre">ForDirective.test8()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ForDirective.test9"><code class="docutils literal notranslate"><span class="pre">ForDirective.test9()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.GetVar"><code class="docutils literal notranslate"><span class="pre">GetVar</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.GetVar.test1"><code class="docutils literal notranslate"><span class="pre">GetVar.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.GetVar.test2"><code class="docutils literal notranslate"><span class="pre">GetVar.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.GetVar.test3"><code class="docutils literal notranslate"><span class="pre">GetVar.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.GetVar.test4"><code class="docutils literal notranslate"><span class="pre">GetVar.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.GetVar.test5"><code class="docutils literal notranslate"><span class="pre">GetVar.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.GetVar.test6"><code class="docutils literal notranslate"><span class="pre">GetVar.test6()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.I18nDirective"><code class="docutils literal notranslate"><span class="pre">I18nDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.I18nDirective.test1"><code class="docutils literal notranslate"><span class="pre">I18nDirective.test1()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective"><code class="docutils literal notranslate"><span class="pre">IfDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective.test1"><code class="docutils literal notranslate"><span class="pre">IfDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective.test10"><code class="docutils literal notranslate"><span class="pre">IfDirective.test10()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective.test11"><code class="docutils literal notranslate"><span class="pre">IfDirective.test11()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective.test12"><code class="docutils literal notranslate"><span class="pre">IfDirective.test12()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective.test13"><code class="docutils literal notranslate"><span class="pre">IfDirective.test13()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective.test14"><code class="docutils literal notranslate"><span class="pre">IfDirective.test14()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective.test15"><code class="docutils literal notranslate"><span class="pre">IfDirective.test15()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective.test16"><code class="docutils literal notranslate"><span class="pre">IfDirective.test16()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective.test17"><code class="docutils literal notranslate"><span class="pre">IfDirective.test17()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective.test18"><code class="docutils literal notranslate"><span class="pre">IfDirective.test18()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective.test2"><code class="docutils literal notranslate"><span class="pre">IfDirective.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective.test3"><code class="docutils literal notranslate"><span class="pre">IfDirective.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective.test4"><code class="docutils literal notranslate"><span class="pre">IfDirective.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective.test5"><code class="docutils literal notranslate"><span class="pre">IfDirective.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective.test6"><code class="docutils literal notranslate"><span class="pre">IfDirective.test6()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective.test7"><code class="docutils literal notranslate"><span class="pre">IfDirective.test7()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective.test8"><code class="docutils literal notranslate"><span class="pre">IfDirective.test8()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IfDirective.test9"><code class="docutils literal notranslate"><span class="pre">IfDirective.test9()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ImportDirective"><code class="docutils literal notranslate"><span class="pre">ImportDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ImportDirective.test1"><code class="docutils literal notranslate"><span class="pre">ImportDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ImportDirective.test10"><code class="docutils literal notranslate"><span class="pre">ImportDirective.test10()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ImportDirective.test11"><code class="docutils literal notranslate"><span class="pre">ImportDirective.test11()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ImportDirective.test2"><code class="docutils literal notranslate"><span class="pre">ImportDirective.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ImportDirective.test3"><code class="docutils literal notranslate"><span class="pre">ImportDirective.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ImportDirective.test4"><code class="docutils literal notranslate"><span class="pre">ImportDirective.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ImportDirective.test5"><code class="docutils literal notranslate"><span class="pre">ImportDirective.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ImportDirective.test6"><code class="docutils literal notranslate"><span class="pre">ImportDirective.test6()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ImportDirective.test7"><code class="docutils literal notranslate"><span class="pre">ImportDirective.test7()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ImportDirective.test8"><code class="docutils literal notranslate"><span class="pre">ImportDirective.test8()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ImportDirective.test9"><code class="docutils literal notranslate"><span class="pre">ImportDirective.test9()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ImportantExampleCases"><code class="docutils literal notranslate"><span class="pre">ImportantExampleCases</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ImportantExampleCases.test1"><code class="docutils literal notranslate"><span class="pre">ImportantExampleCases.test1()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IncludeDirective"><code class="docutils literal notranslate"><span class="pre">IncludeDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IncludeDirective.setUp"><code class="docutils literal notranslate"><span class="pre">IncludeDirective.setUp()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IncludeDirective.tearDown"><code class="docutils literal notranslate"><span class="pre">IncludeDirective.tearDown()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IncludeDirective.test1"><code class="docutils literal notranslate"><span class="pre">IncludeDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IncludeDirective.test10"><code class="docutils literal notranslate"><span class="pre">IncludeDirective.test10()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IncludeDirective.test11"><code class="docutils literal notranslate"><span class="pre">IncludeDirective.test11()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IncludeDirective.test12"><code class="docutils literal notranslate"><span class="pre">IncludeDirective.test12()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IncludeDirective.test2"><code class="docutils literal notranslate"><span class="pre">IncludeDirective.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IncludeDirective.test3"><code class="docutils literal notranslate"><span class="pre">IncludeDirective.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IncludeDirective.test4"><code class="docutils literal notranslate"><span class="pre">IncludeDirective.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IncludeDirective.test5"><code class="docutils literal notranslate"><span class="pre">IncludeDirective.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IncludeDirective.test6"><code class="docutils literal notranslate"><span class="pre">IncludeDirective.test6()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IncludeDirective.test7"><code class="docutils literal notranslate"><span class="pre">IncludeDirective.test7()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IncludeDirective.test8"><code class="docutils literal notranslate"><span class="pre">IncludeDirective.test8()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.IncludeDirective.test9"><code class="docutils literal notranslate"><span class="pre">IncludeDirective.test9()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Indenter"><code class="docutils literal notranslate"><span class="pre">Indenter</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Indenter.control"><code class="docutils literal notranslate"><span class="pre">Indenter.control</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Indenter.convertEOLs"><code class="docutils literal notranslate"><span class="pre">Indenter.convertEOLs</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Indenter.searchList"><code class="docutils literal notranslate"><span class="pre">Indenter.searchList()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Indenter.source"><code class="docutils literal notranslate"><span class="pre">Indenter.source</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Indenter.test1"><code class="docutils literal notranslate"><span class="pre">Indenter.test1()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.MiscComplexSyntax"><code class="docutils literal notranslate"><span class="pre">MiscComplexSyntax</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.MiscComplexSyntax.test1"><code class="docutils literal notranslate"><span class="pre">MiscComplexSyntax.test1()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NameMapper"><code class="docutils literal notranslate"><span class="pre">NameMapper</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NameMapper.test1"><code class="docutils literal notranslate"><span class="pre">NameMapper.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NameMapper.test10"><code class="docutils literal notranslate"><span class="pre">NameMapper.test10()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NameMapper.test11"><code class="docutils literal notranslate"><span class="pre">NameMapper.test11()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NameMapper.test12"><code class="docutils literal notranslate"><span class="pre">NameMapper.test12()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NameMapper.test13"><code class="docutils literal notranslate"><span class="pre">NameMapper.test13()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NameMapper.test14"><code class="docutils literal notranslate"><span class="pre">NameMapper.test14()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NameMapper.test15"><code class="docutils literal notranslate"><span class="pre">NameMapper.test15()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NameMapper.test16"><code class="docutils literal notranslate"><span class="pre">NameMapper.test16()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NameMapper.test17"><code class="docutils literal notranslate"><span class="pre">NameMapper.test17()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NameMapper.test18"><code class="docutils literal notranslate"><span class="pre">NameMapper.test18()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NameMapper.test19"><code class="docutils literal notranslate"><span class="pre">NameMapper.test19()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NameMapper.test2"><code class="docutils literal notranslate"><span class="pre">NameMapper.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NameMapper.test20"><code class="docutils literal notranslate"><span class="pre">NameMapper.test20()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NameMapper.test21"><code class="docutils literal notranslate"><span class="pre">NameMapper.test21()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NameMapper.test3"><code class="docutils literal notranslate"><span class="pre">NameMapper.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NameMapper.test4"><code class="docutils literal notranslate"><span class="pre">NameMapper.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NameMapper.test5"><code class="docutils literal notranslate"><span class="pre">NameMapper.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NameMapper.test6"><code class="docutils literal notranslate"><span class="pre">NameMapper.test6()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NameMapper.test7"><code class="docutils literal notranslate"><span class="pre">NameMapper.test7()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NameMapper.test8"><code class="docutils literal notranslate"><span class="pre">NameMapper.test8()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NameMapper.test9"><code class="docutils literal notranslate"><span class="pre">NameMapper.test9()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NonTokens"><code class="docutils literal notranslate"><span class="pre">NonTokens</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NonTokens.test1"><code class="docutils literal notranslate"><span class="pre">NonTokens.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NonTokens.test2"><code class="docutils literal notranslate"><span class="pre">NonTokens.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NonTokens.test3"><code class="docutils literal notranslate"><span class="pre">NonTokens.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NonTokens.test4"><code class="docutils literal notranslate"><span class="pre">NonTokens.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NonTokens.test5"><code class="docutils literal notranslate"><span class="pre">NonTokens.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.NonTokens.test6"><code class="docutils literal notranslate"><span class="pre">NonTokens.test6()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.OutputTest"><code class="docutils literal notranslate"><span class="pre">OutputTest</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.OutputTest.DEBUGLEV"><code class="docutils literal notranslate"><span class="pre">OutputTest.DEBUGLEV</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.OutputTest.convertEOLs"><code class="docutils literal notranslate"><span class="pre">OutputTest.convertEOLs</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.OutputTest.genClassCode"><code class="docutils literal notranslate"><span class="pre">OutputTest.genClassCode()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.OutputTest.genModuleCode"><code class="docutils literal notranslate"><span class="pre">OutputTest.genModuleCode()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.OutputTest.report"><code class="docutils literal notranslate"><span class="pre">OutputTest.report</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.OutputTest.searchList"><code class="docutils literal notranslate"><span class="pre">OutputTest.searchList()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.OutputTest.verify"><code class="docutils literal notranslate"><span class="pre">OutputTest.verify()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.PSP"><code class="docutils literal notranslate"><span class="pre">PSP</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.PSP.searchList"><code class="docutils literal notranslate"><span class="pre">PSP.searchList()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.PSP.test1"><code class="docutils literal notranslate"><span class="pre">PSP.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.PSP.test10"><code class="docutils literal notranslate"><span class="pre">PSP.test10()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.PSP.test2"><code class="docutils literal notranslate"><span class="pre">PSP.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.PSP.test3"><code class="docutils literal notranslate"><span class="pre">PSP.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.PSP.test4"><code class="docutils literal notranslate"><span class="pre">PSP.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.PSP.test5"><code class="docutils literal notranslate"><span class="pre">PSP.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.PSP.test6"><code class="docutils literal notranslate"><span class="pre">PSP.test6()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.PSP.test7"><code class="docutils literal notranslate"><span class="pre">PSP.test7()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.PSP.test8"><code class="docutils literal notranslate"><span class="pre">PSP.test8()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.PSP.test9"><code class="docutils literal notranslate"><span class="pre">PSP.test9()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.PassDirective"><code class="docutils literal notranslate"><span class="pre">PassDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.PassDirective.test1"><code class="docutils literal notranslate"><span class="pre">PassDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.PassDirective.test2"><code class="docutils literal notranslate"><span class="pre">PassDirective.test2()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.PlaceholderStrings"><code class="docutils literal notranslate"><span class="pre">PlaceholderStrings</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.PlaceholderStrings.test1"><code class="docutils literal notranslate"><span class="pre">PlaceholderStrings.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.PlaceholderStrings.test2"><code class="docutils literal notranslate"><span class="pre">PlaceholderStrings.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.PlaceholderStrings.test3"><code class="docutils literal notranslate"><span class="pre">PlaceholderStrings.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.PlaceholderStrings.test4"><code class="docutils literal notranslate"><span class="pre">PlaceholderStrings.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.PlaceholderStrings.test5"><code class="docutils literal notranslate"><span class="pre">PlaceholderStrings.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.PlaceholderStrings.test6"><code class="docutils literal notranslate"><span class="pre">PlaceholderStrings.test6()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.PlaceholderStrings.test7"><code class="docutils literal notranslate"><span class="pre">PlaceholderStrings.test7()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders"><code class="docutils literal notranslate"><span class="pre">Placeholders</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test1"><code class="docutils literal notranslate"><span class="pre">Placeholders.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test10"><code class="docutils literal notranslate"><span class="pre">Placeholders.test10()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test11"><code class="docutils literal notranslate"><span class="pre">Placeholders.test11()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test12"><code class="docutils literal notranslate"><span class="pre">Placeholders.test12()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test13"><code class="docutils literal notranslate"><span class="pre">Placeholders.test13()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test14"><code class="docutils literal notranslate"><span class="pre">Placeholders.test14()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test15"><code class="docutils literal notranslate"><span class="pre">Placeholders.test15()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test16"><code class="docutils literal notranslate"><span class="pre">Placeholders.test16()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test17"><code class="docutils literal notranslate"><span class="pre">Placeholders.test17()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test18"><code class="docutils literal notranslate"><span class="pre">Placeholders.test18()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test19"><code class="docutils literal notranslate"><span class="pre">Placeholders.test19()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test2"><code class="docutils literal notranslate"><span class="pre">Placeholders.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test20"><code class="docutils literal notranslate"><span class="pre">Placeholders.test20()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test21"><code class="docutils literal notranslate"><span class="pre">Placeholders.test21()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test3"><code class="docutils literal notranslate"><span class="pre">Placeholders.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test4"><code class="docutils literal notranslate"><span class="pre">Placeholders.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test5"><code class="docutils literal notranslate"><span class="pre">Placeholders.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test6"><code class="docutils literal notranslate"><span class="pre">Placeholders.test6()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test7"><code class="docutils literal notranslate"><span class="pre">Placeholders.test7()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test8"><code class="docutils literal notranslate"><span class="pre">Placeholders.test8()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders.test9"><code class="docutils literal notranslate"><span class="pre">Placeholders.test9()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test1"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test10"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test10()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test11"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test11()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test12"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test12()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test13"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test13()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test14"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test14()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test15"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test15()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test16"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test16()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test17"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test17()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test18"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test18()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test19"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test19()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test2"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test20"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test20()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test21"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test21()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test22"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test22()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test23"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test23()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test24"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test24()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test25"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test25()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test26"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test26()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test3"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test4"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test5"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test6"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test6()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test7"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test7()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test8"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test8()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Calls.test9"><code class="docutils literal notranslate"><span class="pre">Placeholders_Calls.test9()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Esc"><code class="docutils literal notranslate"><span class="pre">Placeholders_Esc</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Esc.convertEOLs"><code class="docutils literal notranslate"><span class="pre">Placeholders_Esc.convertEOLs</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Esc.test1"><code class="docutils literal notranslate"><span class="pre">Placeholders_Esc.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Esc.test2"><code class="docutils literal notranslate"><span class="pre">Placeholders_Esc.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Esc.test3"><code class="docutils literal notranslate"><span class="pre">Placeholders_Esc.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Esc.test4"><code class="docutils literal notranslate"><span class="pre">Placeholders_Esc.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Esc.test5"><code class="docutils literal notranslate"><span class="pre">Placeholders_Esc.test5()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Vals"><code class="docutils literal notranslate"><span class="pre">Placeholders_Vals</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Vals.convertEOLs"><code class="docutils literal notranslate"><span class="pre">Placeholders_Vals.convertEOLs</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Vals.test1"><code class="docutils literal notranslate"><span class="pre">Placeholders_Vals.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Vals.test2"><code class="docutils literal notranslate"><span class="pre">Placeholders_Vals.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Vals.test3"><code class="docutils literal notranslate"><span class="pre">Placeholders_Vals.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Vals.test4"><code class="docutils literal notranslate"><span class="pre">Placeholders_Vals.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Vals.test5"><code class="docutils literal notranslate"><span class="pre">Placeholders_Vals.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Vals.test6"><code class="docutils literal notranslate"><span class="pre">Placeholders_Vals.test6()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Vals.test7"><code class="docutils literal notranslate"><span class="pre">Placeholders_Vals.test7()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Vals.test8"><code class="docutils literal notranslate"><span class="pre">Placeholders_Vals.test8()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Placeholders_Vals.test9"><code class="docutils literal notranslate"><span class="pre">Placeholders_Vals.test9()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.RaiseDirective"><code class="docutils literal notranslate"><span class="pre">RaiseDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.RaiseDirective.test1"><code class="docutils literal notranslate"><span class="pre">RaiseDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.RaiseDirective.test2"><code class="docutils literal notranslate"><span class="pre">RaiseDirective.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.RaiseDirective.test3"><code class="docutils literal notranslate"><span class="pre">RaiseDirective.test3()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.RawDirective"><code class="docutils literal notranslate"><span class="pre">RawDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.RawDirective.test1"><code class="docutils literal notranslate"><span class="pre">RawDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.RawDirective.test2"><code class="docutils literal notranslate"><span class="pre">RawDirective.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.RawDirective.test3"><code class="docutils literal notranslate"><span class="pre">RawDirective.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.RawDirective.test4"><code class="docutils literal notranslate"><span class="pre">RawDirective.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.RawDirective.test5"><code class="docutils literal notranslate"><span class="pre">RawDirective.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.RawDirective.test6"><code class="docutils literal notranslate"><span class="pre">RawDirective.test6()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.RepeatDirective"><code class="docutils literal notranslate"><span class="pre">RepeatDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.RepeatDirective.test1"><code class="docutils literal notranslate"><span class="pre">RepeatDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.RepeatDirective.test2"><code class="docutils literal notranslate"><span class="pre">RepeatDirective.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.RepeatDirective.test3"><code class="docutils literal notranslate"><span class="pre">RepeatDirective.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.RepeatDirective.test4"><code class="docutils literal notranslate"><span class="pre">RepeatDirective.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.RepeatDirective.test5"><code class="docutils literal notranslate"><span class="pre">RepeatDirective.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.RepeatDirective.test6"><code class="docutils literal notranslate"><span class="pre">RepeatDirective.test6()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ReturnDirective"><code class="docutils literal notranslate"><span class="pre">ReturnDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ReturnDirective.test1"><code class="docutils literal notranslate"><span class="pre">ReturnDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ReturnDirective.test2"><code class="docutils literal notranslate"><span class="pre">ReturnDirective.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.ReturnDirective.test3"><code class="docutils literal notranslate"><span class="pre">ReturnDirective.test3()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective"><code class="docutils literal notranslate"><span class="pre">SetDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective.test1"><code class="docutils literal notranslate"><span class="pre">SetDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective.test10"><code class="docutils literal notranslate"><span class="pre">SetDirective.test10()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective.test11"><code class="docutils literal notranslate"><span class="pre">SetDirective.test11()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective.test12"><code class="docutils literal notranslate"><span class="pre">SetDirective.test12()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective.test13"><code class="docutils literal notranslate"><span class="pre">SetDirective.test13()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective.test14"><code class="docutils literal notranslate"><span class="pre">SetDirective.test14()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective.test15"><code class="docutils literal notranslate"><span class="pre">SetDirective.test15()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective.test16"><code class="docutils literal notranslate"><span class="pre">SetDirective.test16()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective.test17"><code class="docutils literal notranslate"><span class="pre">SetDirective.test17()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective.test18"><code class="docutils literal notranslate"><span class="pre">SetDirective.test18()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective.test19"><code class="docutils literal notranslate"><span class="pre">SetDirective.test19()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective.test2"><code class="docutils literal notranslate"><span class="pre">SetDirective.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective.test20"><code class="docutils literal notranslate"><span class="pre">SetDirective.test20()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective.test3"><code class="docutils literal notranslate"><span class="pre">SetDirective.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective.test4"><code class="docutils literal notranslate"><span class="pre">SetDirective.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective.test5"><code class="docutils literal notranslate"><span class="pre">SetDirective.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective.test6"><code class="docutils literal notranslate"><span class="pre">SetDirective.test6()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective.test7"><code class="docutils literal notranslate"><span class="pre">SetDirective.test7()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective.test8"><code class="docutils literal notranslate"><span class="pre">SetDirective.test8()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SetDirective.test9"><code class="docutils literal notranslate"><span class="pre">SetDirective.test9()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SilentDirective"><code class="docutils literal notranslate"><span class="pre">SilentDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SilentDirective.test4"><code class="docutils literal notranslate"><span class="pre">SilentDirective.test4()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SlurpDirective"><code class="docutils literal notranslate"><span class="pre">SlurpDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SlurpDirective.test1"><code class="docutils literal notranslate"><span class="pre">SlurpDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SlurpDirective.test2"><code class="docutils literal notranslate"><span class="pre">SlurpDirective.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SlurpDirective.test3"><code class="docutils literal notranslate"><span class="pre">SlurpDirective.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SlurpDirective.test4"><code class="docutils literal notranslate"><span class="pre">SlurpDirective.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SlurpDirective.test5"><code class="docutils literal notranslate"><span class="pre">SlurpDirective.test5()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.StopDirective"><code class="docutils literal notranslate"><span class="pre">StopDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.StopDirective.test1"><code class="docutils literal notranslate"><span class="pre">StopDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.StopDirective.test2"><code class="docutils literal notranslate"><span class="pre">StopDirective.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.StopDirective.test3"><code class="docutils literal notranslate"><span class="pre">StopDirective.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.StopDirective.test4"><code class="docutils literal notranslate"><span class="pre">StopDirective.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.StopDirective.test5"><code class="docutils literal notranslate"><span class="pre">StopDirective.test5()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SuperDirective"><code class="docutils literal notranslate"><span class="pre">SuperDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.SuperDirective.test1"><code class="docutils literal notranslate"><span class="pre">SuperDirective.test1()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.TryDirective"><code class="docutils literal notranslate"><span class="pre">TryDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.TryDirective.test1"><code class="docutils literal notranslate"><span class="pre">TryDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.TryDirective.test2"><code class="docutils literal notranslate"><span class="pre">TryDirective.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.TryDirective.test3"><code class="docutils literal notranslate"><span class="pre">TryDirective.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.TryDirective.test4"><code class="docutils literal notranslate"><span class="pre">TryDirective.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.TryDirective.test5"><code class="docutils literal notranslate"><span class="pre">TryDirective.test5()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.UnicodeDirective"><code class="docutils literal notranslate"><span class="pre">UnicodeDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.UnicodeDirective.test1"><code class="docutils literal notranslate"><span class="pre">UnicodeDirective.test1()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.UnicodeStrings"><code class="docutils literal notranslate"><span class="pre">UnicodeStrings</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.UnicodeStrings.test1"><code class="docutils literal notranslate"><span class="pre">UnicodeStrings.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.UnicodeStrings.test2"><code class="docutils literal notranslate"><span class="pre">UnicodeStrings.test2()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.UnlessDirective"><code class="docutils literal notranslate"><span class="pre">UnlessDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.UnlessDirective.test1"><code class="docutils literal notranslate"><span class="pre">UnlessDirective.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.UnlessDirective.test2"><code class="docutils literal notranslate"><span class="pre">UnlessDirective.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.UnlessDirective.test3"><code class="docutils literal notranslate"><span class="pre">UnlessDirective.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.UnlessDirective.test4"><code class="docutils literal notranslate"><span class="pre">UnlessDirective.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.UnlessDirective.test5"><code class="docutils literal notranslate"><span class="pre">UnlessDirective.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.UnlessDirective.test6"><code class="docutils literal notranslate"><span class="pre">UnlessDirective.test6()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.Unspecified"><code class="docutils literal notranslate"><span class="pre">Unspecified</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.VarExists"><code class="docutils literal notranslate"><span class="pre">VarExists</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.VarExists.test1"><code class="docutils literal notranslate"><span class="pre">VarExists.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.VarExists.test2"><code class="docutils literal notranslate"><span class="pre">VarExists.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.VarExists.test3"><code class="docutils literal notranslate"><span class="pre">VarExists.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.VarExists.test4"><code class="docutils literal notranslate"><span class="pre">VarExists.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.VarExists.test5"><code class="docutils literal notranslate"><span class="pre">VarExists.test5()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.WhileDirective"><code class="docutils literal notranslate"><span class="pre">WhileDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.WhileDirective.test1"><code class="docutils literal notranslate"><span class="pre">WhileDirective.test1()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.WhitespaceAfterDirectiveTokens"><code class="docutils literal notranslate"><span class="pre">WhitespaceAfterDirectiveTokens</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.WhitespaceAfterDirectiveTokens.test1"><code class="docutils literal notranslate"><span class="pre">WhitespaceAfterDirectiveTokens.test1()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.YieldDirective"><code class="docutils literal notranslate"><span class="pre">YieldDirective</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.YieldDirective.convertEOLs"><code class="docutils literal notranslate"><span class="pre">YieldDirective.convertEOLs</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.YieldDirective.test1"><code class="docutils literal notranslate"><span class="pre">YieldDirective.test1()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.dummyFunc"><code class="docutils literal notranslate"><span class="pre">dummyFunc()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.install_eols"><code class="docutils literal notranslate"><span class="pre">install_eols()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.SyntaxAndOutput.testdecorator"><code class="docutils literal notranslate"><span class="pre">testdecorator()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -3019,8 +3638,8 @@ Should eat the garbage</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Oct 10, 2022.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+      Last updated on Nov 26, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
   </body>
 </html>

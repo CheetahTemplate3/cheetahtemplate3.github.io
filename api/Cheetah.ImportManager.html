@@ -13,6 +13,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head><body>
@@ -207,6 +208,53 @@ strings.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Cheetah.ImportManager module</a><ul>
+<li><a class="reference internal" href="#Cheetah.ImportManager.BuiltinImportDirector"><code class="docutils literal notranslate"><span class="pre">BuiltinImportDirector</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.ImportManager.BuiltinImportDirector.getmod"><code class="docutils literal notranslate"><span class="pre">BuiltinImportDirector.getmod()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.ImportManager.DirOwner"><code class="docutils literal notranslate"><span class="pre">DirOwner</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.ImportManager.DirOwner.getmod"><code class="docutils literal notranslate"><span class="pre">DirOwner.getmod()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.ImportManager.FrozenImportDirector"><code class="docutils literal notranslate"><span class="pre">FrozenImportDirector</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.ImportManager.FrozenImportDirector.getmod"><code class="docutils literal notranslate"><span class="pre">FrozenImportDirector.getmod()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.ImportManager.ImportDirector"><code class="docutils literal notranslate"><span class="pre">ImportDirector</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.ImportManager.ImportManager"><code class="docutils literal notranslate"><span class="pre">ImportManager</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.ImportManager.ImportManager.doimport"><code class="docutils literal notranslate"><span class="pre">ImportManager.doimport()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.ImportManager.ImportManager.importHook"><code class="docutils literal notranslate"><span class="pre">ImportManager.importHook()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.ImportManager.ImportManager.install"><code class="docutils literal notranslate"><span class="pre">ImportManager.install()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.ImportManager.ImportManager.reloadHook"><code class="docutils literal notranslate"><span class="pre">ImportManager.reloadHook()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.ImportManager.ImportManager.setThreaded"><code class="docutils literal notranslate"><span class="pre">ImportManager.setThreaded()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.ImportManager.Owner"><code class="docutils literal notranslate"><span class="pre">Owner</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.ImportManager.Owner.getmod"><code class="docutils literal notranslate"><span class="pre">Owner.getmod()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.ImportManager.PathImportDirector"><code class="docutils literal notranslate"><span class="pre">PathImportDirector</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.ImportManager.PathImportDirector.getmod"><code class="docutils literal notranslate"><span class="pre">PathImportDirector.getmod()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.ImportManager.RegistryImportDirector"><code class="docutils literal notranslate"><span class="pre">RegistryImportDirector</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.ImportManager.RegistryImportDirector.getmod"><code class="docutils literal notranslate"><span class="pre">RegistryImportDirector.getmod()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.ImportManager.getDescr"><code class="docutils literal notranslate"><span class="pre">getDescr()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.ImportManager.getPathExt"><code class="docutils literal notranslate"><span class="pre">getPathExt()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.ImportManager.nameSplit"><code class="docutils literal notranslate"><span class="pre">nameSplit()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.ImportManager.packageName"><code class="docutils literal notranslate"><span class="pre">packageName()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.ImportManager.pathIsDir"><code class="docutils literal notranslate"><span class="pre">pathIsDir()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -243,8 +291,8 @@ strings.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Oct 10, 2022.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+      Last updated on Nov 26, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
   </body>
 </html>

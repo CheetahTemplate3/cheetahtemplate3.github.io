@@ -13,6 +13,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head><body>
@@ -39,7 +40,7 @@
 <span id="cheetah-settingsmanager-module"></span><h1>Cheetah.SettingsManager module<a class="headerlink" href="#module-Cheetah.SettingsManager" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="Cheetah.SettingsManager.ConfigParserCaseSensitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cheetah.SettingsManager.</span></span><span class="sig-name descname"><span class="pre">ConfigParserCaseSensitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">defaults=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict_type=&lt;class</span> <span class="pre">'dict'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_no_value=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delimiters=('='</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">':')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comment_prefixes=('#'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">';')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inline_comment_prefixes=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_lines_in_values=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_section='DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation=&lt;object</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">converters=&lt;object</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SettingsManager.ConfigParserCaseSensitive" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cheetah.SettingsManager.</span></span><span class="sig-name descname"><span class="pre">ConfigParserCaseSensitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">defaults=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict_type=&lt;class</span> <span class="pre">'collections.OrderedDict'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_no_value=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delimiters=('='</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">':')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comment_prefixes=('#'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">';')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inline_comment_prefixes=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_lines_in_values=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_section='DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation=&lt;object</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">converters=&lt;object</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SettingsManager.ConfigParserCaseSensitive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigParser</span></code></p>
 <p>A case sensitive version of the standard Python ConfigParser.</p>
 <dl class="py method">
@@ -163,6 +164,37 @@ This also works for complex numbers and numbers with +/- in front.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Cheetah.SettingsManager module</a><ul>
+<li><a class="reference internal" href="#Cheetah.SettingsManager.ConfigParserCaseSensitive"><code class="docutils literal notranslate"><span class="pre">ConfigParserCaseSensitive</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.SettingsManager.ConfigParserCaseSensitive.optionxform"><code class="docutils literal notranslate"><span class="pre">ConfigParserCaseSensitive.optionxform()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.SettingsManager.Error"><code class="docutils literal notranslate"><span class="pre">Error</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SettingsManager.NoDefault"><code class="docutils literal notranslate"><span class="pre">NoDefault</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SettingsManager.SettingsManager"><code class="docutils literal notranslate"><span class="pre">SettingsManager</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.SettingsManager.SettingsManager.copySettings"><code class="docutils literal notranslate"><span class="pre">SettingsManager.copySettings()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SettingsManager.SettingsManager.deepcopySettings"><code class="docutils literal notranslate"><span class="pre">SettingsManager.deepcopySettings()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SettingsManager.SettingsManager.hasSetting"><code class="docutils literal notranslate"><span class="pre">SettingsManager.hasSetting()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SettingsManager.SettingsManager.setSetting"><code class="docutils literal notranslate"><span class="pre">SettingsManager.setSetting()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SettingsManager.SettingsManager.setting"><code class="docutils literal notranslate"><span class="pre">SettingsManager.setting()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SettingsManager.SettingsManager.settings"><code class="docutils literal notranslate"><span class="pre">SettingsManager.settings()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SettingsManager.SettingsManager.updateSettings"><code class="docutils literal notranslate"><span class="pre">SettingsManager.updateSettings()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SettingsManager.SettingsManager.updateSettingsFromConfigFileObj"><code class="docutils literal notranslate"><span class="pre">SettingsManager.updateSettingsFromConfigFileObj()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SettingsManager.SettingsManager.updateSettingsFromConfigStr"><code class="docutils literal notranslate"><span class="pre">SettingsManager.updateSettingsFromConfigStr()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SettingsManager.SettingsManager.updateSettingsFromPySrcStr"><code class="docutils literal notranslate"><span class="pre">SettingsManager.updateSettingsFromPySrcStr()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.SettingsManager.convStringToNum"><code class="docutils literal notranslate"><span class="pre">convStringToNum()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SettingsManager.mergeNestedDictionaries"><code class="docutils literal notranslate"><span class="pre">mergeNestedDictionaries()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SettingsManager.stringIsNumber"><code class="docutils literal notranslate"><span class="pre">stringIsNumber()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -199,8 +231,8 @@ This also works for complex numbers and numbers with +/- in front.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Oct 10, 2022.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+      Last updated on Nov 26, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
   </body>
 </html>

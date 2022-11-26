@@ -13,6 +13,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head><body>
@@ -360,6 +361,81 @@ next.query.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Cheetah.Tools.MondoReport module</a><ul>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.IndexFormats"><code class="docutils literal notranslate"><span class="pre">IndexFormats</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.IndexFormats.Letter"><code class="docutils literal notranslate"><span class="pre">IndexFormats.Letter()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.IndexFormats.Roman"><code class="docutils literal notranslate"><span class="pre">IndexFormats.Roman()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.IndexFormats.even"><code class="docutils literal notranslate"><span class="pre">IndexFormats.even()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.IndexFormats.even_i"><code class="docutils literal notranslate"><span class="pre">IndexFormats.even_i()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.IndexFormats.index"><code class="docutils literal notranslate"><span class="pre">IndexFormats.index()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.IndexFormats.item"><code class="docutils literal notranslate"><span class="pre">IndexFormats.item()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.IndexFormats.letter"><code class="docutils literal notranslate"><span class="pre">IndexFormats.letter()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.IndexFormats.number"><code class="docutils literal notranslate"><span class="pre">IndexFormats.number()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.IndexFormats.odd"><code class="docutils literal notranslate"><span class="pre">IndexFormats.odd()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.IndexFormats.odd_i"><code class="docutils literal notranslate"><span class="pre">IndexFormats.odd_i()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.IndexFormats.roman"><code class="docutils literal notranslate"><span class="pre">IndexFormats.roman()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.MondoReport"><code class="docutils literal notranslate"><span class="pre">MondoReport</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.MondoReport.all"><code class="docutils literal notranslate"><span class="pre">MondoReport.all()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.MondoReport.batch"><code class="docutils literal notranslate"><span class="pre">MondoReport.batch()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.MondoReport.page"><code class="docutils literal notranslate"><span class="pre">MondoReport.page()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.MondoReport.summary"><code class="docutils literal notranslate"><span class="pre">MondoReport.summary()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.NegativeError"><code class="docutils literal notranslate"><span class="pre">NegativeError</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.PrevNextPage"><code class="docutils literal notranslate"><span class="pre">PrevNextPage</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.RecordStats"><code class="docutils literal notranslate"><span class="pre">RecordStats</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.RecordStats.first"><code class="docutils literal notranslate"><span class="pre">RecordStats.first()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.RecordStats.firstValue"><code class="docutils literal notranslate"><span class="pre">RecordStats.firstValue()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.RecordStats.last"><code class="docutils literal notranslate"><span class="pre">RecordStats.last()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.RecordStats.lastValue"><code class="docutils literal notranslate"><span class="pre">RecordStats.lastValue()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.RecordStats.length"><code class="docutils literal notranslate"><span class="pre">RecordStats.length()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.RecordStats.next"><code class="docutils literal notranslate"><span class="pre">RecordStats.next()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.RecordStats.nextPages"><code class="docutils literal notranslate"><span class="pre">RecordStats.nextPages()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.RecordStats.next_batches"><code class="docutils literal notranslate"><span class="pre">RecordStats.next_batches()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.RecordStats.percentOfTotal"><code class="docutils literal notranslate"><span class="pre">RecordStats.percentOfTotal()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.RecordStats.prev"><code class="docutils literal notranslate"><span class="pre">RecordStats.prev()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.RecordStats.prevPages"><code class="docutils literal notranslate"><span class="pre">RecordStats.prevPages()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.RecordStats.prev_batches"><code class="docutils literal notranslate"><span class="pre">RecordStats.prev_batches()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.RecordStats.summary"><code class="docutils literal notranslate"><span class="pre">RecordStats.summary()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.Roman"><code class="docutils literal notranslate"><span class="pre">Roman()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.Summary"><code class="docutils literal notranslate"><span class="pre">Summary</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.Summary.average"><code class="docutils literal notranslate"><span class="pre">Summary.average()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.Summary.count"><code class="docutils literal notranslate"><span class="pre">Summary.count()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.Summary.max"><code class="docutils literal notranslate"><span class="pre">Summary.max()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.Summary.mean"><code class="docutils literal notranslate"><span class="pre">Summary.mean()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.Summary.median"><code class="docutils literal notranslate"><span class="pre">Summary.median()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.Summary.min"><code class="docutils literal notranslate"><span class="pre">Summary.min()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.Summary.standardDeviation"><code class="docutils literal notranslate"><span class="pre">Summary.standardDeviation()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.Summary.standardDeviation_n"><code class="docutils literal notranslate"><span class="pre">Summary.standardDeviation_n()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.Summary.sum"><code class="docutils literal notranslate"><span class="pre">Summary.sum()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.Summary.total"><code class="docutils literal notranslate"><span class="pre">Summary.total()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.Summary.variance"><code class="docutils literal notranslate"><span class="pre">Summary.variance()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.Summary.variance_n"><code class="docutils literal notranslate"><span class="pre">Summary.variance_n()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.ValuesGetterMixin"><code class="docutils literal notranslate"><span class="pre">ValuesGetterMixin</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.isNonNegative"><code class="docutils literal notranslate"><span class="pre">isNonNegative()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.isNotNone"><code class="docutils literal notranslate"><span class="pre">isNotNone()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.isNumeric"><code class="docutils literal notranslate"><span class="pre">isNumeric()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.mean"><code class="docutils literal notranslate"><span class="pre">mean()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.median"><code class="docutils literal notranslate"><span class="pre">median()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.standardDeviation"><code class="docutils literal notranslate"><span class="pre">standardDeviation()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.standardDeviation_n"><code class="docutils literal notranslate"><span class="pre">standardDeviation_n()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.sum"><code class="docutils literal notranslate"><span class="pre">sum()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.variance"><code class="docutils literal notranslate"><span class="pre">variance()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.MondoReport.variance_n"><code class="docutils literal notranslate"><span class="pre">variance_n()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -396,8 +472,8 @@ next.query.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Oct 10, 2022.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+      Last updated on Nov 26, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
   </body>
 </html>

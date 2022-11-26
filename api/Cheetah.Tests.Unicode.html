@@ -13,6 +13,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head><body>
@@ -214,6 +215,71 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Cheetah.Tests.Unicode module</a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.CommandLineTest"><code class="docutils literal notranslate"><span class="pre">CommandLineTest</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.CommandLineTest.createAndCompile"><code class="docutils literal notranslate"><span class="pre">CommandLineTest.createAndCompile()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.CompilerTest"><code class="docutils literal notranslate"><span class="pre">CompilerTest</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.CompilerTest.test_compiler_str"><code class="docutils literal notranslate"><span class="pre">CompilerTest.test_compiler_str()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.EncodeUnicodeCompatTest"><code class="docutils literal notranslate"><span class="pre">EncodeUnicodeCompatTest</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.EncodeUnicodeCompatTest.runTest"><code class="docutils literal notranslate"><span class="pre">EncodeUnicodeCompatTest.runTest()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.InlineSpanishTest"><code class="docutils literal notranslate"><span class="pre">InlineSpanishTest</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.InlineSpanishTest.setUp"><code class="docutils literal notranslate"><span class="pre">InlineSpanishTest.setUp()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.InlineSpanishTest.test_success"><code class="docutils literal notranslate"><span class="pre">InlineSpanishTest.test_success()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.JBQ_UTF8_Test1"><code class="docutils literal notranslate"><span class="pre">JBQ_UTF8_Test1</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.JBQ_UTF8_Test1.runTest"><code class="docutils literal notranslate"><span class="pre">JBQ_UTF8_Test1.runTest()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.JBQ_UTF8_Test2"><code class="docutils literal notranslate"><span class="pre">JBQ_UTF8_Test2</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.JBQ_UTF8_Test2.runTest"><code class="docutils literal notranslate"><span class="pre">JBQ_UTF8_Test2.runTest()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.JBQ_UTF8_Test3"><code class="docutils literal notranslate"><span class="pre">JBQ_UTF8_Test3</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.JBQ_UTF8_Test3.runTest"><code class="docutils literal notranslate"><span class="pre">JBQ_UTF8_Test3.runTest()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.JBQ_UTF8_Test4"><code class="docutils literal notranslate"><span class="pre">JBQ_UTF8_Test4</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.JBQ_UTF8_Test4.runTest"><code class="docutils literal notranslate"><span class="pre">JBQ_UTF8_Test4.runTest()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.JBQ_UTF8_Test5"><code class="docutils literal notranslate"><span class="pre">JBQ_UTF8_Test5</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.JBQ_UTF8_Test5.runTest"><code class="docutils literal notranslate"><span class="pre">JBQ_UTF8_Test5.runTest()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.JBQ_UTF8_Test6"><code class="docutils literal notranslate"><span class="pre">JBQ_UTF8_Test6</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.JBQ_UTF8_Test6.runTest"><code class="docutils literal notranslate"><span class="pre">JBQ_UTF8_Test6.runTest()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.JBQ_UTF8_Test7"><code class="docutils literal notranslate"><span class="pre">JBQ_UTF8_Test7</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.JBQ_UTF8_Test7.runTest"><code class="docutils literal notranslate"><span class="pre">JBQ_UTF8_Test7.runTest()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.JBQ_UTF8_Test8"><code class="docutils literal notranslate"><span class="pre">JBQ_UTF8_Test8</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.JBQ_UTF8_Test8.testDynamicCompile"><code class="docutils literal notranslate"><span class="pre">JBQ_UTF8_Test8.testDynamicCompile()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.JBQ_UTF8_Test8.testStaticCompile"><code class="docutils literal notranslate"><span class="pre">JBQ_UTF8_Test8.testStaticCompile()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.Unicode_in_SearchList_Test"><code class="docutils literal notranslate"><span class="pre">Unicode_in_SearchList_Test</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.Unicode_in_SearchList_Test.test_BasicASCII"><code class="docutils literal notranslate"><span class="pre">Unicode_in_SearchList_Test.test_BasicASCII()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.Unicode_in_SearchList_Test.test_Thai"><code class="docutils literal notranslate"><span class="pre">Unicode_in_SearchList_Test.test_Thai()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Unicode.Unicode_in_SearchList_Test.test_Thai_utf8"><code class="docutils literal notranslate"><span class="pre">Unicode_in_SearchList_Test.test_Thai_utf8()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -250,8 +316,8 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Oct 10, 2022.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+      Last updated on Nov 26, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
   </body>
 </html>

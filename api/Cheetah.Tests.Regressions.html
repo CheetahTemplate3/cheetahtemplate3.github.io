@@ -13,6 +13,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head><body>
@@ -180,6 +181,44 @@ on the <cite>self</cite> local, breaking the function</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Cheetah.Tests.Regressions module</a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Regressions.CustomGetAttrClass"><code class="docutils literal notranslate"><span class="pre">CustomGetAttrClass</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Regressions.GetAttrException"><code class="docutils literal notranslate"><span class="pre">GetAttrException</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Regressions.GetAttrTest"><code class="docutils literal notranslate"><span class="pre">GetAttrTest</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Regressions.GetAttrTest.test_NotFoundException"><code class="docutils literal notranslate"><span class="pre">GetAttrTest.test_NotFoundException()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Regressions.GetAttrTest.test_ValidException"><code class="docutils literal notranslate"><span class="pre">GetAttrTest.test_ValidException()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.Regressions.InlineImportTest"><code class="docutils literal notranslate"><span class="pre">InlineImportTest</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Regressions.InlineImportTest.test_AutoImporting"><code class="docutils literal notranslate"><span class="pre">InlineImportTest.test_AutoImporting()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Regressions.InlineImportTest.test_FromFooImportThing"><code class="docutils literal notranslate"><span class="pre">InlineImportTest.test_FromFooImportThing()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Regressions.InlineImportTest.test_ImportFailModule"><code class="docutils literal notranslate"><span class="pre">InlineImportTest.test_ImportFailModule()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Regressions.InlineImportTest.test_ProperImportOfBadModule"><code class="docutils literal notranslate"><span class="pre">InlineImportTest.test_ProperImportOfBadModule()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Regressions.InlineImportTest.test_StuffBeforeImport_Legacy"><code class="docutils literal notranslate"><span class="pre">InlineImportTest.test_StuffBeforeImport_Legacy()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.Regressions.Mantis_Issue_11_Regression_Test"><code class="docutils literal notranslate"><span class="pre">Mantis_Issue_11_Regression_Test</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Regressions.Mantis_Issue_11_Regression_Test.test_FailingBehavior"><code class="docutils literal notranslate"><span class="pre">Mantis_Issue_11_Regression_Test.test_FailingBehavior()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Regressions.Mantis_Issue_11_Regression_Test.test_FailingBehaviorWithSetting"><code class="docutils literal notranslate"><span class="pre">Mantis_Issue_11_Regression_Test.test_FailingBehaviorWithSetting()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.Regressions.Mantis_Issue_21_Regression_Test"><code class="docutils literal notranslate"><span class="pre">Mantis_Issue_21_Regression_Test</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Regressions.Mantis_Issue_21_Regression_Test.runTest"><code class="docutils literal notranslate"><span class="pre">Mantis_Issue_21_Regression_Test.runTest()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.Regressions.Mantis_Issue_22_Regression_Test"><code class="docutils literal notranslate"><span class="pre">Mantis_Issue_22_Regression_Test</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Regressions.Mantis_Issue_22_Regression_Test.test_DefinedFilter"><code class="docutils literal notranslate"><span class="pre">Mantis_Issue_22_Regression_Test.test_DefinedFilter()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Regressions.Mantis_Issue_22_Regression_Test.test_NoneFilter"><code class="docutils literal notranslate"><span class="pre">Mantis_Issue_22_Regression_Test.test_NoneFilter()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -216,8 +255,8 @@ on the <cite>self</cite> local, breaking the function</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Oct 10, 2022.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+      Last updated on Nov 26, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
   </body>
 </html>

@@ -13,6 +13,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head><body>
@@ -66,7 +67,7 @@ for more information.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="Cheetah.Template.Template">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cheetah.Template.</span></span><span class="sig-name descname"><span class="pre">Template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespaces=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">searchList=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter='RawOrEncodedUnicode'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filtersLib=&lt;module</span> <span class="pre">'Cheetah.Filters'</span> <span class="pre">from</span> <span class="pre">'/home/phd/current/projects/cheetah3/cheetah3/Cheetah/Filters.py'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errorCatcher=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compilerSettings=Unspecified</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_globalSetVars=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_preBuiltSearchList=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cheetah.Template.</span></span><span class="sig-name descname"><span class="pre">Template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespaces=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">searchList=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter='RawOrEncodedUnicode'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filtersLib=&lt;module</span> <span class="pre">'Cheetah.Filters'</span> <span class="pre">from</span> <span class="pre">'/home/phd/tmp/cheetah3/cheetah3/Cheetah/Filters.py'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errorCatcher=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compilerSettings=Unspecified</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_globalSetVars=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_preBuiltSearchList=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Template.Template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="Cheetah.Servlet.html#Cheetah.Servlet.Servlet" title="Cheetah.Servlet.Servlet"><code class="xref py py-class docutils literal notranslate"><span class="pre">Servlet</span></code></a></p>
 <p>This class provides a) methods used by templates at runtime and b)
 methods for compiling Cheetah source code into template classes.</p>
@@ -767,6 +768,51 @@ it outputs</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Cheetah.Template module</a><ul>
+<li><a class="reference internal" href="#Cheetah.Template.CompileCacheItem"><code class="docutils literal notranslate"><span class="pre">CompileCacheItem</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.Error"><code class="docutils literal notranslate"><span class="pre">Error</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.PreprocessError"><code class="docutils literal notranslate"><span class="pre">PreprocessError</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.T"><code class="docutils literal notranslate"><span class="pre">T</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.Template"><code class="docutils literal notranslate"><span class="pre">Template</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Template.Template.NonNumericInputError"><code class="docutils literal notranslate"><span class="pre">Template.NonNumericInputError</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.Template.Reserved_SearchList"><code class="docutils literal notranslate"><span class="pre">Template.Reserved_SearchList</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.Template.compile"><code class="docutils literal notranslate"><span class="pre">Template.compile()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.Template.errorCatcher"><code class="docutils literal notranslate"><span class="pre">Template.errorCatcher()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.Template.generatedClassCode"><code class="docutils literal notranslate"><span class="pre">Template.generatedClassCode()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.Template.generatedModuleCode"><code class="docutils literal notranslate"><span class="pre">Template.generatedModuleCode()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.Template.getCacheRegion"><code class="docutils literal notranslate"><span class="pre">Template.getCacheRegion()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.Template.getCacheRegions"><code class="docutils literal notranslate"><span class="pre">Template.getCacheRegions()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.Template.getFileContents"><code class="docutils literal notranslate"><span class="pre">Template.getFileContents()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.Template.getVar"><code class="docutils literal notranslate"><span class="pre">Template.getVar()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.Template.hasVar"><code class="docutils literal notranslate"><span class="pre">Template.hasVar()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.Template.i18n"><code class="docutils literal notranslate"><span class="pre">Template.i18n()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.Template.refreshCache"><code class="docutils literal notranslate"><span class="pre">Template.refreshCache()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.Template.runAsMainProgram"><code class="docutils literal notranslate"><span class="pre">Template.runAsMainProgram()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.Template.searchList"><code class="docutils literal notranslate"><span class="pre">Template.searchList()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.Template.shutdown"><code class="docutils literal notranslate"><span class="pre">Template.shutdown()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.Template.subclass"><code class="docutils literal notranslate"><span class="pre">Template.subclass()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.Template.varExists"><code class="docutils literal notranslate"><span class="pre">Template.varExists()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.Template.webInput"><code class="docutils literal notranslate"><span class="pre">Template.webInput()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Template.TemplatePreprocessor"><code class="docutils literal notranslate"><span class="pre">TemplatePreprocessor</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Template.TemplatePreprocessor.preprocess"><code class="docutils literal notranslate"><span class="pre">TemplatePreprocessor.preprocess()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Template.checkFileMtime"><code class="docutils literal notranslate"><span class="pre">checkFileMtime()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.createMethod"><code class="docutils literal notranslate"><span class="pre">createMethod()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.genParserErrorFromPythonException"><code class="docutils literal notranslate"><span class="pre">genParserErrorFromPythonException()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.hashDict"><code class="docutils literal notranslate"><span class="pre">hashDict()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.hashList"><code class="docutils literal notranslate"><span class="pre">hashList()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Template.updateLinecache"><code class="docutils literal notranslate"><span class="pre">updateLinecache()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -803,8 +849,8 @@ it outputs</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Oct 10, 2022.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+      Last updated on Nov 26, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
   </body>
 </html>

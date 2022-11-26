@@ -13,6 +13,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head><body>
@@ -870,6 +871,168 @@ statements and Cheetah default module constants.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Cheetah.Compiler module</a><ul>
+<li><a class="reference internal" href="#Cheetah.Compiler.AutoClassCompiler"><code class="docutils literal notranslate"><span class="pre">AutoClassCompiler</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.AutoMethodCompiler"><code class="docutils literal notranslate"><span class="pre">AutoMethodCompiler</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Compiler.AutoMethodCompiler.addMethArg"><code class="docutils literal notranslate"><span class="pre">AutoMethodCompiler.addMethArg()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.AutoMethodCompiler.addStop"><code class="docutils literal notranslate"><span class="pre">AutoMethodCompiler.addStop()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.AutoMethodCompiler.cleanupState"><code class="docutils literal notranslate"><span class="pre">AutoMethodCompiler.cleanupState()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.AutoMethodCompiler.isClassMethod"><code class="docutils literal notranslate"><span class="pre">AutoMethodCompiler.isClassMethod()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.AutoMethodCompiler.isStaticMethod"><code class="docutils literal notranslate"><span class="pre">AutoMethodCompiler.isStaticMethod()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.AutoMethodCompiler.methodSignature"><code class="docutils literal notranslate"><span class="pre">AutoMethodCompiler.methodSignature()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler"><code class="docutils literal notranslate"><span class="pre">ClassCompiler</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler.addAttribute"><code class="docutils literal notranslate"><span class="pre">ClassCompiler.addAttribute()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler.addChunkToInit"><code class="docutils literal notranslate"><span class="pre">ClassCompiler.addChunkToInit()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler.addClassDocString"><code class="docutils literal notranslate"><span class="pre">ClassCompiler.addClassDocString()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler.addDecorator"><code class="docutils literal notranslate"><span class="pre">ClassCompiler.addDecorator()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler.addErrorCatcherCall"><code class="docutils literal notranslate"><span class="pre">ClassCompiler.addErrorCatcherCall()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler.addSuper"><code class="docutils literal notranslate"><span class="pre">ClassCompiler.addSuper()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler.attributes"><code class="docutils literal notranslate"><span class="pre">ClassCompiler.attributes()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler.classDef"><code class="docutils literal notranslate"><span class="pre">ClassCompiler.classDef()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler.classDocstring"><code class="docutils literal notranslate"><span class="pre">ClassCompiler.classDocstring()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler.className"><code class="docutils literal notranslate"><span class="pre">ClassCompiler.className()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler.classSignature"><code class="docutils literal notranslate"><span class="pre">ClassCompiler.classSignature()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler.cleanupState"><code class="docutils literal notranslate"><span class="pre">ClassCompiler.cleanupState()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler.closeBlock"><code class="docutils literal notranslate"><span class="pre">ClassCompiler.closeBlock()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler.closeDef"><code class="docutils literal notranslate"><span class="pre">ClassCompiler.closeDef()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler.methodCompilerClass"><code class="docutils literal notranslate"><span class="pre">ClassCompiler.methodCompilerClass</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler.methodCompilerClassForInit"><code class="docutils literal notranslate"><span class="pre">ClassCompiler.methodCompilerClassForInit</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler.methodDefs"><code class="docutils literal notranslate"><span class="pre">ClassCompiler.methodDefs()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler.setBaseClass"><code class="docutils literal notranslate"><span class="pre">ClassCompiler.setBaseClass()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler.setClassName"><code class="docutils literal notranslate"><span class="pre">ClassCompiler.setClassName()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler.setMainMethodArgs"><code class="docutils literal notranslate"><span class="pre">ClassCompiler.setMainMethodArgs()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler.setMainMethodName"><code class="docutils literal notranslate"><span class="pre">ClassCompiler.setMainMethodName()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler.setting"><code class="docutils literal notranslate"><span class="pre">ClassCompiler.setting()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler.startMethodDef"><code class="docutils literal notranslate"><span class="pre">ClassCompiler.startMethodDef()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ClassCompiler.wrapClassDef"><code class="docutils literal notranslate"><span class="pre">ClassCompiler.wrapClassDef()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Compiler.Compiler"><code class="docutils literal notranslate"><span class="pre">Compiler</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.Error"><code class="docutils literal notranslate"><span class="pre">Error</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.GenUtils"><code class="docutils literal notranslate"><span class="pre">GenUtils</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Compiler.GenUtils.addGetTextVar"><code class="docutils literal notranslate"><span class="pre">GenUtils.addGetTextVar()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.GenUtils.genCacheInfo"><code class="docutils literal notranslate"><span class="pre">GenUtils.genCacheInfo()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.GenUtils.genCacheInfoFromArgList"><code class="docutils literal notranslate"><span class="pre">GenUtils.genCacheInfoFromArgList()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.GenUtils.genCheetahVar"><code class="docutils literal notranslate"><span class="pre">GenUtils.genCheetahVar()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.GenUtils.genNameMapperVar"><code class="docutils literal notranslate"><span class="pre">GenUtils.genNameMapperVar()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.GenUtils.genPlainVar"><code class="docutils literal notranslate"><span class="pre">GenUtils.genPlainVar()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.GenUtils.genTimeInterval"><code class="docutils literal notranslate"><span class="pre">GenUtils.genTimeInterval()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler"><code class="docutils literal notranslate"><span class="pre">MethodCompiler</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addAssert"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addAssert()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addBreak"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addBreak()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addChunk"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addChunk()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addClosure"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addClosure()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addContinue"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addContinue()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addDel"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addDel()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addEcho"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addEcho()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addElif"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addElif()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addElse"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addElse()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addExcept"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addExcept()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addFilteredChunk"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addFilteredChunk()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addFinally"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addFinally()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addFor"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addFor()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addIf"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addIf()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addInclude"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addInclude()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addIndentingDirective"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addIndentingDirective()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addMethComment"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addMethComment()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addMethDocString"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addMethDocString()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addOneLineIf"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addOneLineIf()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addPSP"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addPSP()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addPass"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addPass()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addPlaceholder"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addPlaceholder()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addRaise"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addRaise()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addRawText"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addRawText()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addReIndentingDirective"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addReIndentingDirective()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addRepeat"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addRepeat()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addReturn"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addReturn()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addSet"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addSet()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addSilent"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addSilent()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addStrConst"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addStrConst()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addTernaryExpr"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addTernaryExpr()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addTry"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addTry()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addUnless"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addUnless()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addWhile"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addWhile()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addWriteChunk"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addWriteChunk()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.addYield"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.addYield()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.appendToPrevChunk"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.appendToPrevChunk()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.cleanupState"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.cleanupState()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.closeFilterBlock"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.closeFilterBlock()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.commitStrConst"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.commitStrConst()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.dedent"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.dedent()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.docString"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.docString()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.endCacheRegion"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.endCacheRegion()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.endCallRegion"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.endCallRegion()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.endCaptureRegion"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.endCaptureRegion()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.handleWSBeforeDirective"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.handleWSBeforeDirective()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.indent"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.indent()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.indentation"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.indentation()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.isErrorCatcherOn"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.isErrorCatcherOn()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.methodBody"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.methodBody()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.methodDef"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.methodDef()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.methodName"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.methodName()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.methodSignature"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.methodSignature()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.nextCacheID"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.nextCacheID()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.nextCallRegionID"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.nextCallRegionID()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.nextCaptureRegionID"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.nextCaptureRegionID()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.nextFilterRegionID"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.nextFilterRegionID()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.setCallArg"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.setCallArg()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.setErrorCatcher"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.setErrorCatcher()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.setFilter"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.setFilter()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.setMethodName"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.setMethodName()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.setMethodSignature"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.setMethodSignature()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.setTransform"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.setTransform()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.setting"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.setting()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.startCacheRegion"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.startCacheRegion()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.startCallRegion"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.startCallRegion()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.startCaptureRegion"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.startCaptureRegion()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.turnErrorCatcherOff"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.turnErrorCatcherOff()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.turnErrorCatcherOn"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.turnErrorCatcherOn()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.MethodCompiler.wrapCode"><code class="docutils literal notranslate"><span class="pre">MethodCompiler.wrapCode()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.addAttribute"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.addAttribute()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.addComment"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.addComment()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.addImportStatement"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.addImportStatement()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.addImportedVarNames"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.addImportedVarNames()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.addModuleDocString"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.addModuleDocString()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.addModuleGlobal"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.addModuleGlobal()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.addModuleHeader"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.addModuleHeader()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.addSpecialVar"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.addSpecialVar()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.classCompilerClass"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.classCompilerClass</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.classDefs"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.classDefs()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.compile"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.compile()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.getModuleCode"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.getModuleCode()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.getModuleEncoding"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.getModuleEncoding()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.importStatements"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.importStatements()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.importedVarNames"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.importedVarNames()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.moduleConstants"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.moduleConstants()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.moduleDocstring"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.moduleDocstring()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.moduleFooter"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.moduleFooter()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.moduleHeader"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.moduleHeader()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.parserClass"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.parserClass</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.setBaseClass"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.setBaseClass()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.setCompilerSetting"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.setCompilerSetting()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.setCompilerSettings"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.setCompilerSettings()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.setModuleEncoding"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.setModuleEncoding()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.setShBang"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.setShBang()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.specialVars"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.specialVars()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.timestamp"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.timestamp()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Compiler.ModuleCompiler.wrapModuleDef"><code class="docutils literal notranslate"><span class="pre">ModuleCompiler.wrapModuleDef()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -906,8 +1069,8 @@ statements and Cheetah default module constants.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Oct 10, 2022.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+      Last updated on Nov 26, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
   </body>
 </html>

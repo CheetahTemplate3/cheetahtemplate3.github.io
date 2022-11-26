@@ -13,6 +13,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head><body>
@@ -223,6 +224,65 @@ use attributes on that subclass in the searchList</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Cheetah.Tests.Template module</a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.ClassMethodSupport"><code class="docutils literal notranslate"><span class="pre">ClassMethodSupport</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.ClassMethodSupport.test_BasicDecorator"><code class="docutils literal notranslate"><span class="pre">ClassMethodSupport.test_BasicDecorator()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.ClassMethods_compile"><code class="docutils literal notranslate"><span class="pre">ClassMethods_compile</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.ClassMethods_compile.test_baseclassArg"><code class="docutils literal notranslate"><span class="pre">ClassMethods_compile.test_baseclassArg()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.ClassMethods_compile.test_basicUsage"><code class="docutils literal notranslate"><span class="pre">ClassMethods_compile.test_basicUsage()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.ClassMethods_compile.test_classNameArg"><code class="docutils literal notranslate"><span class="pre">ClassMethods_compile.test_classNameArg()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.ClassMethods_compile.test_compilationCache"><code class="docutils literal notranslate"><span class="pre">ClassMethods_compile.test_compilationCache()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.ClassMethods_compile.test_keepRefToGeneratedCodeArg"><code class="docutils literal notranslate"><span class="pre">ClassMethods_compile.test_keepRefToGeneratedCodeArg()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.ClassMethods_compile.test_mainMethodNameArg"><code class="docutils literal notranslate"><span class="pre">ClassMethods_compile.test_mainMethodNameArg()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.ClassMethods_compile.test_moduleFileCaching"><code class="docutils literal notranslate"><span class="pre">ClassMethods_compile.test_moduleFileCaching()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.ClassMethods_compile.test_moduleGlobalsArg"><code class="docutils literal notranslate"><span class="pre">ClassMethods_compile.test_moduleGlobalsArg()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.ClassMethods_compile.test_moduleNameArg"><code class="docutils literal notranslate"><span class="pre">ClassMethods_compile.test_moduleNameArg()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.ClassMethods_subclass"><code class="docutils literal notranslate"><span class="pre">ClassMethods_subclass</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.ClassMethods_subclass.test_basicUsage"><code class="docutils literal notranslate"><span class="pre">ClassMethods_subclass.test_basicUsage()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.MultipleInheritanceSupport"><code class="docutils literal notranslate"><span class="pre">MultipleInheritanceSupport</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.MultipleInheritanceSupport.runTest"><code class="docutils literal notranslate"><span class="pre">MultipleInheritanceSupport.runTest()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.OpenFileTest"><code class="docutils literal notranslate"><span class="pre">OpenFileTest</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.OpenFileTest.setUp"><code class="docutils literal notranslate"><span class="pre">OpenFileTest.setUp()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.OpenFileTest.tearDown"><code class="docutils literal notranslate"><span class="pre">OpenFileTest.tearDown()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.OpenFileTest.test_compileFile"><code class="docutils literal notranslate"><span class="pre">OpenFileTest.test_compileFile()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.Preprocessors"><code class="docutils literal notranslate"><span class="pre">Preprocessors</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.Preprocessors.test_basicUsage1"><code class="docutils literal notranslate"><span class="pre">Preprocessors.test_basicUsage1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.Preprocessors.test_complexUsage"><code class="docutils literal notranslate"><span class="pre">Preprocessors.test_complexUsage()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.Preprocessors.test_i18n"><code class="docutils literal notranslate"><span class="pre">Preprocessors.test_i18n()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.Preprocessors.test_normalizePreprocessorArgVariants"><code class="docutils literal notranslate"><span class="pre">Preprocessors.test_normalizePreprocessorArgVariants()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.StaticMethodSupport"><code class="docutils literal notranslate"><span class="pre">StaticMethodSupport</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.StaticMethodSupport.test_BasicDecorator"><code class="docutils literal notranslate"><span class="pre">StaticMethodSupport.test_BasicDecorator()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.SubclassSearchListTest"><code class="docutils literal notranslate"><span class="pre">SubclassSearchListTest</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.SubclassSearchListTest.runTest"><code class="docutils literal notranslate"><span class="pre">SubclassSearchListTest.runTest()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.TemplateTest"><code class="docutils literal notranslate"><span class="pre">TemplateTest</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.TryExceptImportTest"><code class="docutils literal notranslate"><span class="pre">TryExceptImportTest</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.Template.TryExceptImportTest.test_FailCase"><code class="docutils literal notranslate"><span class="pre">TryExceptImportTest.test_FailCase()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -259,8 +319,8 @@ use attributes on that subclass in the searchList</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Oct 10, 2022.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+      Last updated on Nov 26, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
   </body>
 </html>

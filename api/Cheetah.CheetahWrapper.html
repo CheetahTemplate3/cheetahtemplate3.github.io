@@ -13,6 +13,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head><body>
@@ -141,7 +142,7 @@ false.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Cheetah.CheetahWrapper.usage">
-<span class="sig-prename descclassname"><span class="pre">Cheetah.CheetahWrapper.</span></span><span class="sig-name descname"><span class="pre">usage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">usageMessage</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errorMessage=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out=&lt;_io.TextIOWrapper</span> <span class="pre">name='&lt;stderr&gt;'</span> <span class="pre">mode='w'</span> <span class="pre">encoding='koi8-r'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.usage" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">Cheetah.CheetahWrapper.</span></span><span class="sig-name descname"><span class="pre">usage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">usageMessage</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errorMessage=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out=&lt;_io.TextIOWrapper</span> <span class="pre">name='&lt;stderr&gt;'</span> <span class="pre">mode='w'</span> <span class="pre">encoding='KOI8-R'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.CheetahWrapper.usage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write help text, an optional error message, and abort the program.</p>
 </dd></dl>
 
@@ -154,6 +155,36 @@ false.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Cheetah.CheetahWrapper module</a><ul>
+<li><a class="reference internal" href="#Cheetah.CheetahWrapper.Bundle"><code class="docutils literal notranslate"><span class="pre">Bundle</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.CheetahWrapper.CheetahWrapper"><code class="docutils literal notranslate"><span class="pre">CheetahWrapper</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.CheetahWrapper.CheetahWrapper.BACKUP_SUFFIX"><code class="docutils literal notranslate"><span class="pre">CheetahWrapper.BACKUP_SUFFIX</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.CheetahWrapper.CheetahWrapper.MAKE_BACKUPS"><code class="docutils literal notranslate"><span class="pre">CheetahWrapper.MAKE_BACKUPS</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.CheetahWrapper.CheetahWrapper.chatter"><code class="docutils literal notranslate"><span class="pre">CheetahWrapper.chatter()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.CheetahWrapper.CheetahWrapper.compile"><code class="docutils literal notranslate"><span class="pre">CheetahWrapper.compile()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.CheetahWrapper.CheetahWrapper.debug"><code class="docutils literal notranslate"><span class="pre">CheetahWrapper.debug()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.CheetahWrapper.CheetahWrapper.error"><code class="docutils literal notranslate"><span class="pre">CheetahWrapper.error()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.CheetahWrapper.CheetahWrapper.fill"><code class="docutils literal notranslate"><span class="pre">CheetahWrapper.fill()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.CheetahWrapper.CheetahWrapper.help"><code class="docutils literal notranslate"><span class="pre">CheetahWrapper.help()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.CheetahWrapper.CheetahWrapper.main"><code class="docutils literal notranslate"><span class="pre">CheetahWrapper.main()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.CheetahWrapper.CheetahWrapper.options"><code class="docutils literal notranslate"><span class="pre">CheetahWrapper.options()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.CheetahWrapper.CheetahWrapper.parseOpts"><code class="docutils literal notranslate"><span class="pre">CheetahWrapper.parseOpts()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.CheetahWrapper.CheetahWrapper.test"><code class="docutils literal notranslate"><span class="pre">CheetahWrapper.test()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.CheetahWrapper.CheetahWrapper.version"><code class="docutils literal notranslate"><span class="pre">CheetahWrapper.version()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.CheetahWrapper.CheetahWrapper.warn"><code class="docutils literal notranslate"><span class="pre">CheetahWrapper.warn()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.CheetahWrapper.Error"><code class="docutils literal notranslate"><span class="pre">Error</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.CheetahWrapper.fprintfMessage"><code class="docutils literal notranslate"><span class="pre">fprintfMessage()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.CheetahWrapper.usage"><code class="docutils literal notranslate"><span class="pre">usage()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -190,8 +221,8 @@ false.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Oct 10, 2022.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+      Last updated on Nov 26, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
   </body>
 </html>

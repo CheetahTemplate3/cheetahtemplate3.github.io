@@ -13,6 +13,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head><body>
@@ -624,6 +625,128 @@ if something follows it</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Cheetah.Tests.NameMapper module</a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.DummyClass"><code class="docutils literal notranslate"><span class="pre">DummyClass</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.DummyClass.classVar1"><code class="docutils literal notranslate"><span class="pre">DummyClass.classVar1</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.DummyClass.meth"><code class="docutils literal notranslate"><span class="pre">DummyClass.meth()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.DummyClass.meth1"><code class="docutils literal notranslate"><span class="pre">DummyClass.meth1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.DummyClass.meth2"><code class="docutils literal notranslate"><span class="pre">DummyClass.meth2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.DummyClass.meth3"><code class="docutils literal notranslate"><span class="pre">DummyClass.meth3()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.DummyClassGetAttrRaises"><code class="docutils literal notranslate"><span class="pre">DummyClassGetAttrRaises</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.MapBuiltins"><code class="docutils literal notranslate"><span class="pre">MapBuiltins</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.MapBuiltins.test_int"><code class="docutils literal notranslate"><span class="pre">MapBuiltins.test_int()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.NameMapperTest"><code class="docutils literal notranslate"><span class="pre">NameMapperTest</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.NameMapperTest.VFN"><code class="docutils literal notranslate"><span class="pre">NameMapperTest.VFN()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.NameMapperTest.VFS"><code class="docutils literal notranslate"><span class="pre">NameMapperTest.VFS()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.NameMapperTest.check"><code class="docutils literal notranslate"><span class="pre">NameMapperTest.check()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.NameMapperTest.failureException"><code class="docutils literal notranslate"><span class="pre">NameMapperTest.failureException</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.NameMapperTest.get"><code class="docutils literal notranslate"><span class="pre">NameMapperTest.get()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.NameMapperTest.namespace"><code class="docutils literal notranslate"><span class="pre">NameMapperTest.namespace()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFF"><code class="docutils literal notranslate"><span class="pre">VFF</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFF.get"><code class="docutils literal notranslate"><span class="pre">VFF.get()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFF.setUp"><code class="docutils literal notranslate"><span class="pre">VFF.setUp()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFF.test_VFF_1"><code class="docutils literal notranslate"><span class="pre">VFF.test_VFF_1()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFFSL"><code class="docutils literal notranslate"><span class="pre">VFFSL</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFFSL.VFFSL"><code class="docutils literal notranslate"><span class="pre">VFFSL.VFFSL()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFFSL.get"><code class="docutils literal notranslate"><span class="pre">VFFSL.get()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFFSL.setUp"><code class="docutils literal notranslate"><span class="pre">VFFSL.setUp()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFFSL_2"><code class="docutils literal notranslate"><span class="pre">VFFSL_2</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFFSL_3"><code class="docutils literal notranslate"><span class="pre">VFFSL_3</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFFSL_4"><code class="docutils literal notranslate"><span class="pre">VFFSL_4</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN"><code class="docutils literal notranslate"><span class="pre">VFN</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test1"><code class="docutils literal notranslate"><span class="pre">VFN.test1()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test10"><code class="docutils literal notranslate"><span class="pre">VFN.test10()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test11"><code class="docutils literal notranslate"><span class="pre">VFN.test11()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test12"><code class="docutils literal notranslate"><span class="pre">VFN.test12()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test13"><code class="docutils literal notranslate"><span class="pre">VFN.test13()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test14"><code class="docutils literal notranslate"><span class="pre">VFN.test14()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test15"><code class="docutils literal notranslate"><span class="pre">VFN.test15()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test16"><code class="docutils literal notranslate"><span class="pre">VFN.test16()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test17"><code class="docutils literal notranslate"><span class="pre">VFN.test17()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test18"><code class="docutils literal notranslate"><span class="pre">VFN.test18()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test19"><code class="docutils literal notranslate"><span class="pre">VFN.test19()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test2"><code class="docutils literal notranslate"><span class="pre">VFN.test2()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test20"><code class="docutils literal notranslate"><span class="pre">VFN.test20()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test21"><code class="docutils literal notranslate"><span class="pre">VFN.test21()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test22"><code class="docutils literal notranslate"><span class="pre">VFN.test22()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test23"><code class="docutils literal notranslate"><span class="pre">VFN.test23()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test24"><code class="docutils literal notranslate"><span class="pre">VFN.test24()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test27"><code class="docutils literal notranslate"><span class="pre">VFN.test27()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test28"><code class="docutils literal notranslate"><span class="pre">VFN.test28()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test29"><code class="docutils literal notranslate"><span class="pre">VFN.test29()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test3"><code class="docutils literal notranslate"><span class="pre">VFN.test3()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test30"><code class="docutils literal notranslate"><span class="pre">VFN.test30()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test31"><code class="docutils literal notranslate"><span class="pre">VFN.test31()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test32"><code class="docutils literal notranslate"><span class="pre">VFN.test32()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test33"><code class="docutils literal notranslate"><span class="pre">VFN.test33()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test34"><code class="docutils literal notranslate"><span class="pre">VFN.test34()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test35"><code class="docutils literal notranslate"><span class="pre">VFN.test35()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test36"><code class="docutils literal notranslate"><span class="pre">VFN.test36()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test37"><code class="docutils literal notranslate"><span class="pre">VFN.test37()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test38"><code class="docutils literal notranslate"><span class="pre">VFN.test38()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test39"><code class="docutils literal notranslate"><span class="pre">VFN.test39()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test4"><code class="docutils literal notranslate"><span class="pre">VFN.test4()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test40"><code class="docutils literal notranslate"><span class="pre">VFN.test40()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test41"><code class="docutils literal notranslate"><span class="pre">VFN.test41()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test42"><code class="docutils literal notranslate"><span class="pre">VFN.test42()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test43"><code class="docutils literal notranslate"><span class="pre">VFN.test43()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test44"><code class="docutils literal notranslate"><span class="pre">VFN.test44()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test45"><code class="docutils literal notranslate"><span class="pre">VFN.test45()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test46"><code class="docutils literal notranslate"><span class="pre">VFN.test46()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test47"><code class="docutils literal notranslate"><span class="pre">VFN.test47()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test48"><code class="docutils literal notranslate"><span class="pre">VFN.test48()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test49"><code class="docutils literal notranslate"><span class="pre">VFN.test49()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test5"><code class="docutils literal notranslate"><span class="pre">VFN.test5()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test50"><code class="docutils literal notranslate"><span class="pre">VFN.test50()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test51"><code class="docutils literal notranslate"><span class="pre">VFN.test51()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test52"><code class="docutils literal notranslate"><span class="pre">VFN.test52()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test53"><code class="docutils literal notranslate"><span class="pre">VFN.test53()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test54"><code class="docutils literal notranslate"><span class="pre">VFN.test54()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test55"><code class="docutils literal notranslate"><span class="pre">VFN.test55()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test56"><code class="docutils literal notranslate"><span class="pre">VFN.test56()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test57"><code class="docutils literal notranslate"><span class="pre">VFN.test57()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test58"><code class="docutils literal notranslate"><span class="pre">VFN.test58()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test59"><code class="docutils literal notranslate"><span class="pre">VFN.test59()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test6"><code class="docutils literal notranslate"><span class="pre">VFN.test6()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test60"><code class="docutils literal notranslate"><span class="pre">VFN.test60()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test61"><code class="docutils literal notranslate"><span class="pre">VFN.test61()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test7"><code class="docutils literal notranslate"><span class="pre">VFN.test7()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test8"><code class="docutils literal notranslate"><span class="pre">VFN.test8()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFN.test9"><code class="docutils literal notranslate"><span class="pre">VFN.test9()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFS"><code class="docutils literal notranslate"><span class="pre">VFS</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFS.get"><code class="docutils literal notranslate"><span class="pre">VFS.get()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFS.searchList"><code class="docutils literal notranslate"><span class="pre">VFS.searchList()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFS.searchListGenerator"><code class="docutils literal notranslate"><span class="pre">VFS.searchListGenerator()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFS_2namespaces"><code class="docutils literal notranslate"><span class="pre">VFS_2namespaces</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFS_3namespaces"><code class="docutils literal notranslate"><span class="pre">VFS_3namespaces</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.VFS_4namespaces"><code class="docutils literal notranslate"><span class="pre">VFS_4namespaces</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.aClass"><code class="docutils literal notranslate"><span class="pre">aClass</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.aFunc"><code class="docutils literal notranslate"><span class="pre">aFunc()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.aMeth"><code class="docutils literal notranslate"><span class="pre">aMeth()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.dummyFunc"><code class="docutils literal notranslate"><span class="pre">dummyFunc()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tests.NameMapper.funcThatRaises"><code class="docutils literal notranslate"><span class="pre">funcThatRaises()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -660,8 +783,8 @@ if something follows it</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Oct 10, 2022.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+      Last updated on Nov 26, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
   </body>
 </html>

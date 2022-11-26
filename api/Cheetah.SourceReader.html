@@ -13,6 +13,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head><body>
@@ -40,7 +41,7 @@
 <p>SourceReader class for Cheetah’s Parser and CodeGenerator</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="Cheetah.SourceReader.ENCODINGsearch">
-<span class="sig-prename descclassname"><span class="pre">Cheetah.SourceReader.</span></span><span class="sig-name descname"><span class="pre">ENCODINGsearch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endpos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9223372036854775807</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.ENCODINGsearch" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">Cheetah.SourceReader.</span></span><span class="sig-name descname"><span class="pre">ENCODINGsearch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endpos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9223372036854775807</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pattern</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.SourceReader.ENCODINGsearch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scan through string looking for a match, and return a corresponding match object instance.</p>
 <p>Return None if no position in the string matches.</p>
 </dd></dl>
@@ -251,6 +252,57 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Cheetah.SourceReader module</a><ul>
+<li><a class="reference internal" href="#Cheetah.SourceReader.ENCODINGsearch"><code class="docutils literal notranslate"><span class="pre">ENCODINGsearch()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.Error"><code class="docutils literal notranslate"><span class="pre">Error</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader"><code class="docutils literal notranslate"><span class="pre">SourceReader</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.advance"><code class="docutils literal notranslate"><span class="pre">SourceReader.advance()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.atEnd"><code class="docutils literal notranslate"><span class="pre">SourceReader.atEnd()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.atStart"><code class="docutils literal notranslate"><span class="pre">SourceReader.atStart()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.breakPoint"><code class="docutils literal notranslate"><span class="pre">SourceReader.breakPoint()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.checkPos"><code class="docutils literal notranslate"><span class="pre">SourceReader.checkPos()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.filename"><code class="docutils literal notranslate"><span class="pre">SourceReader.filename()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.find"><code class="docutils literal notranslate"><span class="pre">SourceReader.find()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.findBOL"><code class="docutils literal notranslate"><span class="pre">SourceReader.findBOL()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.findEOL"><code class="docutils literal notranslate"><span class="pre">SourceReader.findEOL()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.getLine"><code class="docutils literal notranslate"><span class="pre">SourceReader.getLine()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.getNonWhiteSpace"><code class="docutils literal notranslate"><span class="pre">SourceReader.getNonWhiteSpace()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.getRowCol"><code class="docutils literal notranslate"><span class="pre">SourceReader.getRowCol()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.getRowColLine"><code class="docutils literal notranslate"><span class="pre">SourceReader.getRowColLine()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.getWhiteSpace"><code class="docutils literal notranslate"><span class="pre">SourceReader.getWhiteSpace()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.getc"><code class="docutils literal notranslate"><span class="pre">SourceReader.getc()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.gotoBookmark"><code class="docutils literal notranslate"><span class="pre">SourceReader.gotoBookmark()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.hasBookmark"><code class="docutils literal notranslate"><span class="pre">SourceReader.hasBookmark()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.isLineClearToPos"><code class="docutils literal notranslate"><span class="pre">SourceReader.isLineClearToPos()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.lineNum"><code class="docutils literal notranslate"><span class="pre">SourceReader.lineNum()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.matchNonWhiteSpace"><code class="docutils literal notranslate"><span class="pre">SourceReader.matchNonWhiteSpace()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.matchWhiteSpace"><code class="docutils literal notranslate"><span class="pre">SourceReader.matchWhiteSpace()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.matches"><code class="docutils literal notranslate"><span class="pre">SourceReader.matches()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.peek"><code class="docutils literal notranslate"><span class="pre">SourceReader.peek()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.pos"><code class="docutils literal notranslate"><span class="pre">SourceReader.pos()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.read"><code class="docutils literal notranslate"><span class="pre">SourceReader.read()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.readTo"><code class="docutils literal notranslate"><span class="pre">SourceReader.readTo()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.readToEOL"><code class="docutils literal notranslate"><span class="pre">SourceReader.readToEOL()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.rev"><code class="docutils literal notranslate"><span class="pre">SourceReader.rev()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.rfind"><code class="docutils literal notranslate"><span class="pre">SourceReader.rfind()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.setBookmark"><code class="docutils literal notranslate"><span class="pre">SourceReader.setBookmark()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.setBreakPoint"><code class="docutils literal notranslate"><span class="pre">SourceReader.setBreakPoint()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.setPos"><code class="docutils literal notranslate"><span class="pre">SourceReader.setPos()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.splitlines"><code class="docutils literal notranslate"><span class="pre">SourceReader.splitlines()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.src"><code class="docutils literal notranslate"><span class="pre">SourceReader.src()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.startswith"><code class="docutils literal notranslate"><span class="pre">SourceReader.startswith()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.ungetc"><code class="docutils literal notranslate"><span class="pre">SourceReader.ungetc()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.SourceReader.SourceReader.validPos"><code class="docutils literal notranslate"><span class="pre">SourceReader.validPos()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -287,8 +339,8 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Oct 10, 2022.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+      Last updated on Nov 26, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
   </body>
 </html>

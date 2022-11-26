@@ -13,6 +13,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head><body>
@@ -73,7 +74,7 @@ anything), use Python’s ‘cgi’ module, or make your own arrangements.</p>
 single-inheritance model.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="Cheetah.Tools.CGITemplate.CGITemplate">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cheetah.Tools.CGITemplate.</span></span><span class="sig-name descname"><span class="pre">CGITemplate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespaces=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">searchList=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter='RawOrEncodedUnicode'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filtersLib=&lt;module</span> <span class="pre">'Cheetah.Filters'</span> <span class="pre">from</span> <span class="pre">'/home/phd/current/projects/cheetah3/cheetah3/Cheetah/Filters.py'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errorCatcher=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compilerSettings=Unspecified</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_globalSetVars=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_preBuiltSearchList=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tools.CGITemplate.CGITemplate" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cheetah.Tools.CGITemplate.</span></span><span class="sig-name descname"><span class="pre">CGITemplate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespaces=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">searchList=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter='RawOrEncodedUnicode'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filtersLib=&lt;module</span> <span class="pre">'Cheetah.Filters'</span> <span class="pre">from</span> <span class="pre">'/home/phd/tmp/cheetah3/cheetah3/Cheetah/Filters.py'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errorCatcher=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compilerSettings=Unspecified</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_globalSetVars=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_preBuiltSearchList=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tools.CGITemplate.CGITemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="Cheetah.Template.html#Cheetah.Template.Template" title="Cheetah.Template.Template"><code class="xref py py-class docutils literal notranslate"><span class="pre">Template</span></code></a></p>
 <p>Methods useful in CGI scripts.</p>
 <p>Any class that inherits this mixin must also inherit Cheetah.Servlet.</p>
@@ -108,6 +109,21 @@ Override .cgiHeadersHook() if you want to customize the headers.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Cheetah.Tools.CGITemplate module</a><ul>
+<li><a class="reference internal" href="#Cheetah.Tools.CGITemplate.CGITemplate"><code class="docutils literal notranslate"><span class="pre">CGITemplate</span></code></a><ul>
+<li><a class="reference internal" href="#Cheetah.Tools.CGITemplate.CGITemplate.cgiHeaders"><code class="docutils literal notranslate"><span class="pre">CGITemplate.cgiHeaders()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.CGITemplate.CGITemplate.cgiHeadersHook"><code class="docutils literal notranslate"><span class="pre">CGITemplate.cgiHeadersHook()</span></code></a></li>
+<li><a class="reference internal" href="#Cheetah.Tools.CGITemplate.CGITemplate.isCgi"><code class="docutils literal notranslate"><span class="pre">CGITemplate.isCgi()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -144,8 +160,8 @@ Override .cgiHeadersHook() if you want to customize the headers.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Oct 10, 2022.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+      Last updated on Nov 26, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
   </body>
 </html>
