@@ -1,19 +1,19 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Cheetah vs. Other Template Engines &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Cheetah Recipes" href="../documentation.html" />
@@ -35,10 +35,53 @@
           <a href="examples.html" title="Examples"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User’s Guide</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Cheetah vs. Other Template Engines</a></li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User’s Guide</a> &#187;</li> 
       </ul>
-    </div>  
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Cheetah vs. Other Template Engines</a><ul>
+<li><a class="reference internal" href="#which-features-are-unique-to-cheetah">Which features are unique to Cheetah</a></li>
+<li><a class="reference internal" href="#cheetah-vs-velocity">Cheetah vs. Velocity</a></li>
+<li><a class="reference internal" href="#cheetah-vs-webmacro">Cheetah vs. WebMacro</a></li>
+<li><a class="reference internal" href="#cheetah-vs-zope-s-dtml">Cheetah vs. Zope’s DTML</a></li>
+<li><a class="reference internal" href="#cheetah-vs-zope-page-templates">Cheetah vs. Zope Page Templates</a></li>
+<li><a class="reference internal" href="#cheetah-vs-php-s-smarty-templates">Cheetah vs. PHP’s Smarty templates</a></li>
+<li><a class="reference internal" href="#cheetah-vs-phplib-s-template-class">Cheetah vs. PHPLib’s Template class</a></li>
+<li><a class="reference internal" href="#cheetah-vs-psp-php-asp-jsp-embperl-etc">Cheetah vs. PSP, PHP, ASP, JSP, Embperl, etc.</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="examples.html"
+                        title="previous chapter">Examples</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../documentation.html"
+                        title="next chapter">Cheetah Recipes</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/users_guide/comparisons.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
 
     <div class="document">
       <div class="documentwrapper">
@@ -46,50 +89,53 @@
           <div class="body" role="main">
             
   <div class="section" id="cheetah-vs-other-template-engines">
-<h1>Cheetah vs. Other Template Engines<a class="headerlink" href="#cheetah-vs-other-template-engines" title="Permalink to this heading">¶</a></h1>
+<h1>Cheetah vs. Other Template Engines<a class="headerlink" href="#cheetah-vs-other-template-engines" title="Permalink to this headline">¶</a></h1>
 <p>This appendix compares Cheetah with various other template/emdedded
 scripting languages and Internet development frameworks. As Cheetah
 is similar to Velocity at a superficial level, you may also wish to
 read comparisons between Velocity and other languages at
 <a class="reference external" href="http://jakarta.apache.org/velocity/ymtd/ymtd.html">http://jakarta.apache.org/velocity/ymtd/ymtd.html</a>.</p>
 <div class="section" id="which-features-are-unique-to-cheetah">
-<h2>Which features are unique to Cheetah<a class="headerlink" href="#which-features-are-unique-to-cheetah" title="Permalink to this heading">¶</a></h2>
+<h2>Which features are unique to Cheetah<a class="headerlink" href="#which-features-are-unique-to-cheetah" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>The { block framework} (section inheritanceEtc.block)</p></li>
-<li><p>Cheetah’s powerful yet simple { caching framework} (section
-output.caching)</p></li>
-<li><p>Cheetah’s { Unified Dotted Notation} and { autocalling}
+<li>The { block framework} (section inheritanceEtc.block)</li>
+<li>Cheetah’s powerful yet simple { caching framework} (section
+output.caching)</li>
+<li>Cheetah’s { Unified Dotted Notation} and { autocalling}
 (sections language.namemapper.dict and
-language.namemapper.autocalling)</p></li>
-<li><p>Cheetah’s searchList (section language.searchList) information.</p></li>
-<li><p>Cheetah’s {#raw} directive (section output.raw)</p></li>
-<li><p>Cheetah’s {#slurp} directive (section output.slurp)</p></li>
-<li><p>Cheetah’s tight integration with Webware for Python (section
-webware)</p></li>
-<li><p>Cheetah’s { SkeletonPage framework} (section
-libraries.templates.skeletonPage)</p></li>
-<li><p>Cheetah’s ability to mix PSP-style code with Cheetah Language
+language.namemapper.autocalling)</li>
+<li>Cheetah’s searchList (section language.searchList) information.</li>
+<li>Cheetah’s {#raw} directive (section output.raw)</li>
+<li>Cheetah’s {#slurp} directive (section output.slurp)</li>
+<li>Cheetah’s tight integration with Webware for Python (section
+webware)</li>
+<li>Cheetah’s { SkeletonPage framework} (section
+libraries.templates.skeletonPage)</li>
+<li>Cheetah’s ability to mix PSP-style code with Cheetah Language
 syntax (section tips.PSP) Because of Cheetah’s design and Python’s
 flexibility it is relatively easy to extend Cheetah’s syntax with
 syntax elements from almost any other template or embedded
-scripting language.</p></li>
+scripting language.</li>
 </ul>
 </div>
 <div class="section" id="cheetah-vs-velocity">
-<h2>Cheetah vs. Velocity<a class="headerlink" href="#cheetah-vs-velocity" title="Permalink to this heading">¶</a></h2>
+<h2>Cheetah vs. Velocity<a class="headerlink" href="#cheetah-vs-velocity" title="Permalink to this headline">¶</a></h2>
 <p>For a basic introduction to Velocity, visit
 <a class="reference external" href="http://jakarta.apache.org/velocity">http://jakarta.apache.org/velocity</a>.</p>
 <p>Velocity is a Java template engine. It’s older than Cheetah, has a
 larger user base, and has better examples and docs at the moment.
 Cheetah, however, has a number of advantages over Velocity:</p>
 <ul>
-<li><p>Cheetah is written in Python. Thus, it’s easier to use and
-extend.</p></li>
-<li><p>Cheetah’s syntax is closer to Python’s syntax than Velocity’s is
-to Java’s.</p></li>
-<li><p>Cheetah has a powerful caching mechanism. Velocity has no
-equivalent.</p></li>
-<li><p>It’s far easier to add data/objects into the namespace where
+<li><p class="first">Cheetah is written in Python. Thus, it’s easier to use and
+extend.</p>
+</li>
+<li><p class="first">Cheetah’s syntax is closer to Python’s syntax than Velocity’s is
+to Java’s.</p>
+</li>
+<li><p class="first">Cheetah has a powerful caching mechanism. Velocity has no
+equivalent.</p>
+</li>
+<li><p class="first">It’s far easier to add data/objects into the namespace where
 $placeholder values are extracted from in Cheetah. Velocity calls
 this namespace a ‘context’. Contexts are dictionaries/hashtables.
 You can put anything you want into a context, BUT you have to use
@@ -115,13 +161,14 @@ will then go to ‘foofoo’ (the second element in the searchList) and
 look among its dictionary keys for ‘spam’. Finding it, Cheetah will
 select {foofoo[‘spam’]} as {$spam}’s value.</p>
 </li>
-<li><p>In Cheetah, the tokens that are used to signal the start of
+<li><p class="first">In Cheetah, the tokens that are used to signal the start of
 $placeholders and #directives are configurable. You can set them to
-any character sequences, not just $ and #.</p></li>
+any character sequences, not just $ and #.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="cheetah-vs-webmacro">
-<h2>Cheetah vs. WebMacro<a class="headerlink" href="#cheetah-vs-webmacro" title="Permalink to this heading">¶</a></h2>
+<h2>Cheetah vs. WebMacro<a class="headerlink" href="#cheetah-vs-webmacro" title="Permalink to this headline">¶</a></h2>
 <p>For a basic introduction to WebMacro, visit <a class="reference external" href="http://webmacro.org">http://webmacro.org</a>.</p>
 <p>The points discussed in section comparisons.velocity also apply to
 the comparison between Cheetah and WebMacro. For further
@@ -129,19 +176,19 @@ differences please refer to
 <a class="reference external" href="http://jakarta.apache.org/velocity/differences.html">http://jakarta.apache.org/velocity/differences.html</a>.</p>
 </div>
 <div class="section" id="cheetah-vs-zope-s-dtml">
-<h2>Cheetah vs. Zope’s DTML<a class="headerlink" href="#cheetah-vs-zope-s-dtml" title="Permalink to this heading">¶</a></h2>
+<h2>Cheetah vs. Zope’s DTML<a class="headerlink" href="#cheetah-vs-zope-s-dtml" title="Permalink to this headline">¶</a></h2>
 <p>For a basic introduction to DTML, visit
 <a class="reference external" href="http://www.zope.org/Members/michel/ZB/DTML.dtml">http://www.zope.org/Members/michel/ZB/DTML.dtml</a>.</p>
 <ul class="simple">
-<li><p>Cheetah is faster than DTML.</p></li>
-<li><p>Cheetah does not use HTML-style tags; DTML does. Thus, Cheetah
-tags are visible in rendered HTML output if something goes wrong.</p></li>
-<li><p>DTML can only be used with ZOPE for web development; Cheetah can
-be used as a standalone tool for any purpose.</p></li>
-<li><p>Cheetah’s documentation is more complete than DTML’s.</p></li>
-<li><p>Cheetah’s learning curve is shorter than DTML’s.</p></li>
-<li><p>DTML has no equivalent of Cheetah’s blocks, caching framework,
-unified dotted notation, and {#raw} directive.</p></li>
+<li>Cheetah is faster than DTML.</li>
+<li>Cheetah does not use HTML-style tags; DTML does. Thus, Cheetah
+tags are visible in rendered HTML output if something goes wrong.</li>
+<li>DTML can only be used with ZOPE for web development; Cheetah can
+be used as a standalone tool for any purpose.</li>
+<li>Cheetah’s documentation is more complete than DTML’s.</li>
+<li>Cheetah’s learning curve is shorter than DTML’s.</li>
+<li>DTML has no equivalent of Cheetah’s blocks, caching framework,
+unified dotted notation, and {#raw} directive.</li>
 </ul>
 <p>Here are some examples of syntax differences between DTML and
 Cheetah:</p>
@@ -224,12 +271,12 @@ We are also planning an output filter as flexible as the
 complete yet.</p>
 </div>
 <div class="section" id="cheetah-vs-zope-page-templates">
-<h2>Cheetah vs. Zope Page Templates<a class="headerlink" href="#cheetah-vs-zope-page-templates" title="Permalink to this heading">¶</a></h2>
+<h2>Cheetah vs. Zope Page Templates<a class="headerlink" href="#cheetah-vs-zope-page-templates" title="Permalink to this headline">¶</a></h2>
 <p>For a basic introduction to Zope Page Templates, please visit
 <a class="reference external" href="http://www.zope.org/Documentation/Articles/ZPT2">http://www.zope.org/Documentation/Articles/ZPT2</a>.</p>
 </div>
 <div class="section" id="cheetah-vs-php-s-smarty-templates">
-<h2>Cheetah vs. PHP’s Smarty templates<a class="headerlink" href="#cheetah-vs-php-s-smarty-templates" title="Permalink to this heading">¶</a></h2>
+<h2>Cheetah vs. PHP’s Smarty templates<a class="headerlink" href="#cheetah-vs-php-s-smarty-templates" title="Permalink to this headline">¶</a></h2>
 <p>PHP (<a class="reference external" href="http://www.php.net/">http://www.php.net/</a>) is one of the few scripting languages
 expressly designed for web servlets. However, it’s also a
 full-fledged programming language with libraries similar to
@@ -243,17 +290,17 @@ documentation. The author has not used Smarty. Please send
 corrections or ommissions to the Cheetah mailing list.) Like
 Cheetah, Smarty:</p>
 <ul class="simple">
-<li><p>compiles to the target programming language (PHP).</p></li>
-<li><p>has configurable delimeters.</p></li>
-<li><p>passes if-blocks directly to PHP, so you can use any PHP
-expression in them.</p></li>
-<li><p>allows you to embed PHP code in a template.</p></li>
-<li><p>has a caching framework (although it works quite differently).</p></li>
-<li><p>can read the template definition from any arbitrary source.</p></li>
+<li>compiles to the target programming language (PHP).</li>
+<li>has configurable delimeters.</li>
+<li>passes if-blocks directly to PHP, so you can use any PHP
+expression in them.</li>
+<li>allows you to embed PHP code in a template.</li>
+<li>has a caching framework (although it works quite differently).</li>
+<li>can read the template definition from any arbitrary source.</li>
 </ul>
 <p>Features Smarty has that Cheetah lacks:</p>
 <ul class="simple">
-<li><p>Preprocessors, postprocessors and output filters. You can
+<li>Preprocessors, postprocessors and output filters. You can
 emulate a preprocessor in Cheetah by running your template
 definition through a filter program or function before Cheetah sees
 it. To emulate a postprocessor, run a .py template module through a
@@ -266,14 +313,14 @@ than Smarty: Cheetah output filters ({#filter}) operate on
 placeholders, while Smarty output filters operate on the entire
 template output. There has been a proposed {#sed} directive that
 would operate on the entire output line by line, but it has not
-been implemented.</p></li>
-<li><p>Variable modifiers. In some cases, Python has equivalent string
+been implemented.</li>
+<li>Variable modifiers. In some cases, Python has equivalent string
 methods ({.strip}, {.capitalize}, {.replace(SEARCH, REPL)}), but in
 other cases you must wrap the result in a function call or write a
-custom output filter ({#filter}).</p></li>
-<li><p>Certain web-specific functions, which can be emulated with
-third-party functions.</p></li>
-<li><p>The ability to “plug in” new directives in a modular way.
+custom output filter ({#filter}).</li>
+<li>Certain web-specific functions, which can be emulated with
+third-party functions.</li>
+<li>The ability to “plug in” new directives in a modular way.
 Cheetah directives are tightly bound to the compiler. However,
 third-party { functions} can be freely imported and called from
 placeholders, and { methods} can be mixed in via {#extends}. Part
@@ -282,8 +329,8 @@ directives, while Smarty treats them all as “functions”. Cheetah’s
 design does not allow functions to have flow control effect outside
 the function (e.g., {#if} and {#for}, which operate on template
 body lines), so directives like these cannot be encoded as
-functions.</p></li>
-<li><p>Configuration variables read from an .ini-style file. The
+functions.</li>
+<li>Configuration variables read from an .ini-style file. The
 {Cheetah.SettingsManager} module can parse such a file, but you’d
 have to invoke it manually. (See the docstrings in the module for
 details.) In Smarty, this feature is used for multilingual
@@ -292,14 +339,14 @@ has their own preferred way to do this (such as using Python’s
 {gettext} module), and it’s not worth blessing one particular
 strategy in Cheetah since it’s easy enough to integrate third-party
 code around the template, or to add the resulting values to the
-searchList.</p></li>
+searchList.</li>
 </ul>
 <p>Features Cheetah has that Smarty lacks:</p>
 <ul class="simple">
-<li><p>Saving the compilation result in a Python (PHP) module for quick
-reading later.</p></li>
-<li><p>Caching individual placeholders or portions of a template.
-Smarty caches only the entire template output as a unit.</p></li>
+<li>Saving the compilation result in a Python (PHP) module for quick
+reading later.</li>
+<li>Caching individual placeholders or portions of a template.
+Smarty caches only the entire template output as a unit.</li>
 </ul>
 <p>Comparisions of various Smarty constructs:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{assign var=&quot;name&quot; value=&quot;Bob&quot;} (#set has better syntax in the author&#39;s opinion)
@@ -377,7 +424,7 @@ wordwrap  (&#39;writer&#39; module, or a new module coming in Python 2.3)
 we want to write someday.</p>
 </div>
 <div class="section" id="cheetah-vs-phplib-s-template-class">
-<h2>Cheetah vs. PHPLib’s Template class<a class="headerlink" href="#cheetah-vs-phplib-s-template-class" title="Permalink to this heading">¶</a></h2>
+<h2>Cheetah vs. PHPLib’s Template class<a class="headerlink" href="#cheetah-vs-phplib-s-template-class" title="Permalink to this headline">¶</a></h2>
 <p>PHPLib ((<a class="reference external" href="http://phplib.netuse.de/">http://phplib.netuse.de/</a>) is a collection of classes for
 various web objects (authentication, shopping cart, sessions, etc),
 but what we’re interested in is the {Template} object. It’s much
@@ -385,66 +432,70 @@ more primitive than Smarty, and was based on an old Perl template
 class. In fact, one of the precursors to Cheetah was based on it
 too. Differences from Cheetah:</p>
 <ul class="simple">
-<li><p>Templates consist of text with {{placeholders}} in braces.</p></li>
-<li><p>Instead of a searchList, there is one flat namespace. Every
+<li>Templates consist of text with {{placeholders}} in braces.</li>
+<li>Instead of a searchList, there is one flat namespace. Every
 variable must be assigned via the {set_var} method. However, you
 can pass this method an array (dictionary) of several variables at
-once.</p></li>
-<li><p>You cannot embed lookups or calculations into the template.
-Every placeholder must be an exact variable name.</p></li>
-<li><p>There are no directives. You must do all display logic (if, for,
-etc) in the calling routine.</p></li>
-<li><p>There is, however, a “block” construct. A block is a portion of
+once.</li>
+<li>You cannot embed lookups or calculations into the template.
+Every placeholder must be an exact variable name.</li>
+<li>There are no directives. You must do all display logic (if, for,
+etc) in the calling routine.</li>
+<li>There is, however, a “block” construct. A block is a portion of
 text between the comment markers {&lt;!- BEGIN blockName -&gt; … &lt;!-
 END blockName&gt;}. The {set_block} method extracts this text into a
 namespace variable and puts a placeholder referring to it in the
 template. This has a few parallels with Cheetah’s {#block}
-directive but is overall quite different.</p></li>
-<li><p>To do the equivalent of {#if}, extract the block. Then if true,
+directive but is overall quite different.</li>
+<li>To do the equivalent of {#if}, extract the block. Then if true,
 do nothing. If false, assign the empty string to the namespace
-variable.</p></li>
-<li><p>To do the equivalent of {#for}, extract the block. Set any
+variable.</li>
+<li>To do the equivalent of {#for}, extract the block. Set any
 namespace variables needed inside the loop. To parse one iteration,
 use the {parse} method to fill the block variable (a mini-template)
 into another namespace variable, appending to it. Refresh the
 namespace variables needed inside the loop and parse again; repeat
 for each iteration. You’ll end up with a mini-result that will be
-plugged into the main template’s placeholder.</p></li>
-<li><p>To read a template definition from a file, use the {set_file}
+plugged into the main template’s placeholder.</li>
+<li>To read a template definition from a file, use the {set_file}
 method. This places the file’s content in a namespace variable. To
 read a template definition from a string, assign it to a namespace
-variable.</p></li>
-<li><p>Thus, for complicated templates, you are doing a lot of
+variable.</li>
+<li>Thus, for complicated templates, you are doing a lot of
 recursive block filling and file reading and parsing mini-templates
 all into one flat namespace as you finally build up values for the
 main template. In Cheetah, all this display logic can be embedded
 into the template using directives, calling out to Python methods
-for the more complicated tasks.</p></li>
-<li><p>Although you can nest blocks in the template, it becomes tedious
+for the more complicated tasks.</li>
+<li>Although you can nest blocks in the template, it becomes tedious
 and arguably hard to read, because all blocks have identical
 syntax. Unless you choose your block names carefully and put
 comments around them, it’s hard to tell which blocks are if-blocks
-and which are for-blocks, or what their nesting order is.</p></li>
-<li><p>PHPLib templates do not have caching, output filters, etc.</p></li>
+and which are for-blocks, or what their nesting order is.</li>
+<li>PHPLib templates do not have caching, output filters, etc.</li>
 </ul>
 </div>
 <div class="section" id="cheetah-vs-psp-php-asp-jsp-embperl-etc">
-<h2>Cheetah vs. PSP, PHP, ASP, JSP, Embperl, etc.<a class="headerlink" href="#cheetah-vs-psp-php-asp-jsp-embperl-etc" title="Permalink to this heading">¶</a></h2>
-<dl class="simple">
-<dt>Webware’s PSP Component</dt><dd><ul class="simple">
-<li><p><a class="reference external" href="http://webware.sourceforge.net/Webware/PSP/Docs/">http://webware.sourceforge.net/Webware/PSP/Docs/</a></p></li>
+<h2>Cheetah vs. PSP, PHP, ASP, JSP, Embperl, etc.<a class="headerlink" href="#cheetah-vs-psp-php-asp-jsp-embperl-etc" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Webware’s PSP Component</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://webware.sourceforge.net/Webware/PSP/Docs/">http://webware.sourceforge.net/Webware/PSP/Docs/</a></li>
 </ul>
 </dd>
-<dt>Tomcat JSP Information</dt><dd><ul class="simple">
-<li><p><a class="reference external" href="http://jakarta.apache.org/tomcat/index.html">http://jakarta.apache.org/tomcat/index.html</a></p></li>
+<dt>Tomcat JSP Information</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://jakarta.apache.org/tomcat/index.html">http://jakarta.apache.org/tomcat/index.html</a></li>
 </ul>
 </dd>
-<dt>ASP Information at ASP101</dt><dd><ul class="simple">
-<li><p><a class="reference external" href="http://www.asp101.com/">http://www.asp101.com/</a></p></li>
+<dt>ASP Information at ASP101</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://www.asp101.com/">http://www.asp101.com/</a></li>
 </ul>
 </dd>
-<dt>Embperl</dt><dd><ul class="simple">
-<li><p><a class="reference external" href="http://perl.apache.org/embperl/">http://perl.apache.org/embperl/</a></p></li>
+<dt>Embperl</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://perl.apache.org/embperl/">http://perl.apache.org/embperl/</a></li>
 </ul>
 </dd>
 </dl>
@@ -474,56 +525,7 @@ and which are for-blocks, or what their nesting order is.</p></li>
 </div>
 
 
-            <div class="clearer"></div>
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="../index.html">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">Cheetah vs. Other Template Engines</a><ul>
-<li><a class="reference internal" href="#which-features-are-unique-to-cheetah">Which features are unique to Cheetah</a></li>
-<li><a class="reference internal" href="#cheetah-vs-velocity">Cheetah vs. Velocity</a></li>
-<li><a class="reference internal" href="#cheetah-vs-webmacro">Cheetah vs. WebMacro</a></li>
-<li><a class="reference internal" href="#cheetah-vs-zope-s-dtml">Cheetah vs. Zope’s DTML</a></li>
-<li><a class="reference internal" href="#cheetah-vs-zope-page-templates">Cheetah vs. Zope Page Templates</a></li>
-<li><a class="reference internal" href="#cheetah-vs-php-s-smarty-templates">Cheetah vs. PHP’s Smarty templates</a></li>
-<li><a class="reference internal" href="#cheetah-vs-phplib-s-template-class">Cheetah vs. PHPLib’s Template class</a></li>
-<li><a class="reference internal" href="#cheetah-vs-psp-php-asp-jsp-embperl-etc">Cheetah vs. PSP, PHP, ASP, JSP, Embperl, etc.</a></li>
-</ul>
-</li>
-</ul>
-
-  </div>
-  <div>
-    <h4>Previous topic</h4>
-    <p class="topless"><a href="examples.html"
-                          title="previous chapter">Examples</a></p>
-  </div>
-  <div>
-    <h4>Next topic</h4>
-    <p class="topless"><a href="../documentation.html"
-                          title="next chapter">Cheetah Recipes</a></p>
-  </div>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/users_guide/comparisons.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -544,14 +546,13 @@ and which are for-blocks, or what their nesting order is.</p></li>
           <a href="examples.html" title="Examples"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User’s Guide</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Cheetah vs. Other Template Engines</a></li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Nov 26, 2022.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+      Last updated on Dec 25, 2022.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.6.
     </div>
   </body>
 </html>

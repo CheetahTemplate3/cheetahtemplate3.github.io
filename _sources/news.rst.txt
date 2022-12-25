@@ -1,6 +1,24 @@
 News
 ====
 
+3.3.1 (2022-12-25)
+------------------
+
+Bug fixes:
+
+  - Fixed ``ImportHooks`` under PyPy3.
+
+Tests:
+
+  - Run tests with PyPy3.
+
+CI:
+
+  - Use ``conda`` to install older Pythons
+
+    Ubuntu >= 22 and ``setup-python`` dropped Pythons < 3.7.
+    Use ``s-weigand/setup-conda`` instead of ``setup-python``.
+
 3.3.0.post1 (2022-11-26)
 ------------------------
 

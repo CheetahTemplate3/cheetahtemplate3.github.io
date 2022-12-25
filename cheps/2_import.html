@@ -1,19 +1,19 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>(#2) Conditionalized #import behavior &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="(#3) Exposing of super() and self via Template searchList" href="3_super.html" />
@@ -35,10 +35,52 @@
           <a href="1_chep.html" title="(#1) CHEP Purpose and Guidelines"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../chep.html" accesskey="U">Cheetah Enhancement Proposals</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">(#2) Conditionalized #import behavior</a></li> 
+          <li class="nav-item nav-item-1"><a href="../chep.html" accesskey="U">Cheetah Enhancement Proposals</a> &#187;</li> 
       </ul>
-    </div>  
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">(#2) Conditionalized #import behavior</a><ul>
+<li><a class="reference internal" href="#abstract">Abstract</a></li>
+<li><a class="reference internal" href="#motivation">Motivation</a></li>
+<li><a class="reference internal" href="#specification">Specification</a></li>
+<li><a class="reference internal" href="#rationale">Rationale</a></li>
+<li><a class="reference internal" href="#backwards-compatibility">Backwards Compatibility</a></li>
+<li><a class="reference internal" href="#reference-implementation">Reference Implementation</a></li>
+<li><a class="reference internal" href="#copyright">Copyright</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="1_chep.html"
+                        title="previous chapter">(#1) CHEP Purpose and Guidelines</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="3_super.html"
+                        title="next chapter">(#3) Exposing of super() and self via Template searchList</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/cheps/2_import.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
 
     <div class="document">
       <div class="documentwrapper">
@@ -46,42 +88,38 @@
           <div class="body" role="main">
             
   <div class="section" id="conditionalized-import-behavior">
-<h1>(#2) Conditionalized #import behavior<a class="headerlink" href="#conditionalized-import-behavior" title="Permalink to this heading">¶</a></h1>
-<dl class="field-list simple">
-<dt class="field-odd">CHEP</dt>
-<dd class="field-odd"><p>2</p>
-</dd>
-<dt class="field-even">Title</dt>
-<dd class="field-even"><p>Conditionalized #import behavior</p>
-</dd>
-<dt class="field-odd">Version</dt>
-<dd class="field-odd"><p>1</p>
-</dd>
-<dt class="field-even">Author</dt>
-<dd class="field-even"><p>R Tyler Ballance &lt;tyler at slide.com&gt;</p>
-</dd>
-<dt class="field-odd">Status</dt>
-<dd class="field-odd"><p>Draft</p>
-</dd>
-<dt class="field-even">Type</dt>
-<dd class="field-even"><p>Standards Track</p>
-</dd>
-<dt class="field-odd">Content-Type</dt>
-<dd class="field-odd"><p>text/x-rst</p>
-</dd>
-<dt class="field-even">Created</dt>
-<dd class="field-even"><p>07-Jun-2009</p>
-</dd>
-</dl>
+<h1>(#2) Conditionalized #import behavior<a class="headerlink" href="#conditionalized-import-behavior" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">CHEP:</th><td class="field-body">2</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Title:</th><td class="field-body">Conditionalized #import behavior</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Version:</th><td class="field-body">1</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Author:</th><td class="field-body">R Tyler Ballance &lt;tyler at slide.com&gt;</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Status:</th><td class="field-body">Draft</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body">Standards Track</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Content-Type:</th><td class="field-body">text/x-rst</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Created:</th><td class="field-body">07-Jun-2009</td>
+</tr>
+</tbody>
+</table>
 <hr class="docutils" />
 <div class="section" id="abstract">
-<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this heading">¶</a></h2>
+<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
 <p>This CHEP proposes an update to the way the #import and #from
 directives are handled such that locally scoped imports and
 module-level imports are handled appropriately.</p>
 </div>
 <div class="section" id="motivation">
-<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this heading">¶</a></h2>
+<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h2>
 <p>Currently Cheetah (v2.2.1) provides two different, but mutually exclusive,
 means of importing Python modules with the #from/#import directives. The
 “traditional” handling for #from/#import (hereafter referred to as “module imports”)
@@ -132,7 +170,7 @@ are handled in mutually exclusive code paths and in mutually
 exclusive fashions.</p>
 </div>
 <div class="section" id="specification">
-<h2>Specification<a class="headerlink" href="#specification" title="Permalink to this heading">¶</a></h2>
+<h2>Specification<a class="headerlink" href="#specification" title="Permalink to this headline">¶</a></h2>
 <p>The change in #from/#import behavior and how these directives
 are handled is all based on context of their use, making the
 #from/#import handling “intelligent”. For module imports, the
@@ -146,7 +184,7 @@ function block whereas everywhere else the statements will be relocated
 to the top of the generated module code (i.e. the module import)</p>
 </div>
 <div class="section" id="rationale">
-<h2>Rationale<a class="headerlink" href="#rationale" title="Permalink to this heading">¶</a></h2>
+<h2>Rationale<a class="headerlink" href="#rationale" title="Permalink to this headline">¶</a></h2>
 <p>The concept of the “function import” was introduced in Cheetah v2.1.0
 and quickly retrofitted to “live” behind a compiler setting due to the
 regressions with older templates or templates that were designed to utilize
@@ -159,7 +197,7 @@ module scope within the template (within the Cheetah templates, markup and most
 directives declared within the module scope are placed inside the default method).</p>
 </div>
 <div class="section" id="backwards-compatibility">
-<h2>Backwards Compatibility<a class="headerlink" href="#backwards-compatibility" title="Permalink to this heading">¶</a></h2>
+<h2>Backwards Compatibility<a class="headerlink" href="#backwards-compatibility" title="Permalink to this headline">¶</a></h2>
 <p>Changes proposed in this document should be <em>mostly</em> backwards
 compatible with current versions of Cheetah, Any unforeseen issues
 could arise from the use of #from/#import inside of a function
@@ -167,65 +205,17 @@ expecting those symbols to be available outside of the function
 that they’re declared in.</p>
 </div>
 <div class="section" id="reference-implementation">
-<h2>Reference Implementation<a class="headerlink" href="#reference-implementation" title="Permalink to this heading">¶</a></h2>
+<h2>Reference Implementation<a class="headerlink" href="#reference-implementation" title="Permalink to this headline">¶</a></h2>
 <p><em>still in development</em></p>
 </div>
 <div class="section" id="copyright">
-<h2>Copyright<a class="headerlink" href="#copyright" title="Permalink to this heading">¶</a></h2>
+<h2>Copyright<a class="headerlink" href="#copyright" title="Permalink to this headline">¶</a></h2>
 <p>This document has been placed in the public domain.</p>
 </div>
 </div>
 
 
-            <div class="clearer"></div>
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="../index.html">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">(#2) Conditionalized #import behavior</a><ul>
-<li><a class="reference internal" href="#abstract">Abstract</a></li>
-<li><a class="reference internal" href="#motivation">Motivation</a></li>
-<li><a class="reference internal" href="#specification">Specification</a></li>
-<li><a class="reference internal" href="#rationale">Rationale</a></li>
-<li><a class="reference internal" href="#backwards-compatibility">Backwards Compatibility</a></li>
-<li><a class="reference internal" href="#reference-implementation">Reference Implementation</a></li>
-<li><a class="reference internal" href="#copyright">Copyright</a></li>
-</ul>
-</li>
-</ul>
-
-  </div>
-  <div>
-    <h4>Previous topic</h4>
-    <p class="topless"><a href="1_chep.html"
-                          title="previous chapter">(#1) CHEP Purpose and Guidelines</a></p>
-  </div>
-  <div>
-    <h4>Next topic</h4>
-    <p class="topless"><a href="3_super.html"
-                          title="next chapter">(#3) Exposing of super() and self via Template searchList</a></p>
-  </div>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/cheps/2_import.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -246,14 +236,13 @@ that they’re declared in.</p>
           <a href="1_chep.html" title="(#1) CHEP Purpose and Guidelines"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../chep.html" >Cheetah Enhancement Proposals</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">(#2) Conditionalized #import behavior</a></li> 
+          <li class="nav-item nav-item-1"><a href="../chep.html" >Cheetah Enhancement Proposals</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Nov 26, 2022.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+      Last updated on Dec 25, 2022.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.6.
     </div>
   </body>
 </html>

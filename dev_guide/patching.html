@@ -1,19 +1,19 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Patching Cheetah &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Directives: Flow Control" href="flowControl.html" />
@@ -35,10 +35,47 @@
           <a href="placeholders.html" title="Placeholders"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer’s Guide</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Patching Cheetah</a></li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer’s Guide</a> &#187;</li> 
       </ul>
-    </div>  
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Patching Cheetah</a><ul>
+<li><a class="reference internal" href="#file-requirements">File Requirements</a></li>
+<li><a class="reference internal" href="#testing-changes-and-building-regression-tests">Testing Changes and Building Regression Tests</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="placeholders.html"
+                        title="previous chapter">Placeholders</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="flowControl.html"
+                        title="next chapter">Directives: Flow Control</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/dev_guide/patching.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
 
     <div class="document">
       <div class="documentwrapper">
@@ -46,12 +83,12 @@
           <div class="body" role="main">
             
   <div class="section" id="patching-cheetah">
-<h1>Patching Cheetah<a class="headerlink" href="#patching-cheetah" title="Permalink to this heading">¶</a></h1>
+<h1>Patching Cheetah<a class="headerlink" href="#patching-cheetah" title="Permalink to this headline">¶</a></h1>
 <p>How to commit changes to git, or submit patches, or send pull requests,
 how to run the test suite. Describe distutils and how the regression tests
 work.</p>
 <div class="section" id="file-requirements">
-<h2>File Requirements<a class="headerlink" href="#file-requirements" title="Permalink to this heading">¶</a></h2>
+<h2>File Requirements<a class="headerlink" href="#file-requirements" title="Permalink to this headline">¶</a></h2>
 <p>The code{Template} class contains not only the Cheetah
 infrastructure, but also some convenience methods useful in all
 templates. More methods may be added if it’s generally agreed among
@@ -73,7 +110,7 @@ default if the attribute does not exist (meaning the user has not
 imported that subsystem).</p>
 </div>
 <div class="section" id="testing-changes-and-building-regression-tests">
-<h2>Testing Changes and Building Regression Tests<a class="headerlink" href="#testing-changes-and-building-regression-tests" title="Permalink to this heading">¶</a></h2>
+<h2>Testing Changes and Building Regression Tests<a class="headerlink" href="#testing-changes-and-building-regression-tests" title="Permalink to this headline">¶</a></h2>
 <p>Cheetah ships with a regression test suite. To run the built-in
 tests, execute at the shell prompt:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cheetah</span> <span class="n">test</span>
@@ -90,7 +127,7 @@ can also run the test suite to verify all the features work on
 their particular platform and computer.</p>
 <p>The general procedure for modifying Cheetah is as follows:</p>
 <ol class="arabic simple">
-<li><p>Write a simple Python program that exploits the bug/feature
+<li>Write a simple Python program that exploits the bug/feature
 you’re working on. You can either write a regression test (see
 below), or a separate program that writes the template output to
 one file and put the expected output in another file; then you can
@@ -99,28 +136,28 @@ Unix-like systems. It shows the differences between two files line
 by line. A precompiled Windows version is at
 <a class="reference external" href="http://gnuwin32.sourceforge.net/packages/diffutils.htm">http://gnuwin32.sourceforge.net/packages/diffutils.htm</a>, and MacOS
 sources at
-<a class="reference external" href="http://perso.wanadoo.fr/gilles.depeyrot/DevTools_en.html">http://perso.wanadoo.fr/gilles.depeyrot/DevTools_en.html</a>.)</p></li>
-<li><p>Make the change in your Cheetah git sandbox or in your installed
+<a class="reference external" href="http://perso.wanadoo.fr/gilles.depeyrot/DevTools_en.html">http://perso.wanadoo.fr/gilles.depeyrot/DevTools_en.html</a>.)</li>
+<li>Make the change in your Cheetah git sandbox or in your installed
 version of Cheetah. If you make it in the sandbox, you’ll have to
 run {python setup.py install} before testing it. If you make it in
 the installed version, do { not} run the installer or it will
-overwrite your changes!</p></li>
-<li><p>Run {cheetah test} to verify you didn’t break anything. Then run
-your little test program.</p></li>
-<li><p>Repeat steps 2-3 until everything is correct.</p></li>
-<li><p>Turn your little program into a regression test as described
-below.</p></li>
-<li><p>When {cheetah test} runs cleanly with your regression test
+overwrite your changes!</li>
+<li>Run {cheetah test} to verify you didn’t break anything. Then run
+your little test program.</li>
+<li>Repeat steps 2-3 until everything is correct.</li>
+<li>Turn your little program into a regression test as described
+below.</li>
+<li>When {cheetah test} runs cleanly with your regression test
 included, update the {docs/news.rst} file and check in your changes. If
 you made the changes in your installed copy of Cheetah, you’ll have
 to copy them back into the git sandbox first. If you added any
 files that must be distributed, { be sure to} {cvs add} them before
 committing. Otherwise Cheetah will run fine on your computer but
-fail on anybody else’s, and the test suite can’t check for this.</p></li>
-<li><p>Announce the change on the cheetahtemplate-discuss list and
+fail on anybody else’s, and the test suite can’t check for this.</li>
+<li>Announce the change on the cheetahtemplate-discuss list and
 provide a tutorial if necessary. The documentation maintainer will
 update the Users’ Guide and Developers’ Guide based on this message
-and on the changelog.</p></li>
+and on the changelog.</li>
 </ol>
 <p>If you add a directory to Cheetah, you have to mention it in
 {setup.py} or it won’t be installed.</p>
@@ -166,50 +203,7 @@ module.</p>
 </div>
 
 
-            <div class="clearer"></div>
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="../index.html">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">Patching Cheetah</a><ul>
-<li><a class="reference internal" href="#file-requirements">File Requirements</a></li>
-<li><a class="reference internal" href="#testing-changes-and-building-regression-tests">Testing Changes and Building Regression Tests</a></li>
-</ul>
-</li>
-</ul>
-
-  </div>
-  <div>
-    <h4>Previous topic</h4>
-    <p class="topless"><a href="placeholders.html"
-                          title="previous chapter">Placeholders</a></p>
-  </div>
-  <div>
-    <h4>Next topic</h4>
-    <p class="topless"><a href="flowControl.html"
-                          title="next chapter">Directives: Flow Control</a></p>
-  </div>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/dev_guide/patching.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -230,14 +224,13 @@ module.</p>
           <a href="placeholders.html" title="Placeholders"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer’s Guide</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Patching Cheetah</a></li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer’s Guide</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Nov 26, 2022.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+      Last updated on Dec 25, 2022.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.6.
     </div>
   </body>
 </html>

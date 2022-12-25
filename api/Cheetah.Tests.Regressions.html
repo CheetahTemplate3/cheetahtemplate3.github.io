@@ -1,19 +1,19 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Cheetah.Tests.Regressions module &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
   </head><body>
@@ -26,199 +26,11 @@
         <li class="right" >
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Cheetah.Tests.Regressions module</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li> 
       </ul>
-    </div>  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <div class="section" id="module-Cheetah.Tests.Regressions">
-<span id="cheetah-tests-regressions-module"></span><h1>Cheetah.Tests.Regressions module<a class="headerlink" href="#module-Cheetah.Tests.Regressions" title="Permalink to this heading">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="Cheetah.Tests.Regressions.CustomGetAttrClass">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cheetah.Tests.Regressions.</span></span><span class="sig-name descname"><span class="pre">CustomGetAttrClass</span></span><a class="headerlink" href="#Cheetah.Tests.Regressions.CustomGetAttrClass" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-</dd></dl>
-
-<dl class="py exception">
-<dt class="sig sig-object py" id="Cheetah.Tests.Regressions.GetAttrException">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cheetah.Tests.Regressions.</span></span><span class="sig-name descname"><span class="pre">GetAttrException</span></span><a class="headerlink" href="#Cheetah.Tests.Regressions.GetAttrException" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="Cheetah.Tests.Regressions.GetAttrTest">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cheetah.Tests.Regressions.</span></span><span class="sig-name descname"><span class="pre">GetAttrTest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.GetAttrTest" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
-<p>Test for an issue occurring when __getatttr__() raises an exception
-causing NameMapper to raise a NotFound exception</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="Cheetah.Tests.Regressions.GetAttrTest.test_NotFoundException">
-<span class="sig-name descname"><span class="pre">test_NotFoundException</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.GetAttrTest.test_NotFoundException" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="Cheetah.Tests.Regressions.GetAttrTest.test_ValidException">
-<span class="sig-name descname"><span class="pre">test_ValidException</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.GetAttrTest.test_ValidException" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="Cheetah.Tests.Regressions.InlineImportTest">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cheetah.Tests.Regressions.</span></span><span class="sig-name descname"><span class="pre">InlineImportTest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.InlineImportTest" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="Cheetah.Tests.Regressions.InlineImportTest.test_AutoImporting">
-<span class="sig-name descname"><span class="pre">test_AutoImporting</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.InlineImportTest.test_AutoImporting" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="Cheetah.Tests.Regressions.InlineImportTest.test_FromFooImportThing">
-<span class="sig-name descname"><span class="pre">test_FromFooImportThing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.InlineImportTest.test_FromFooImportThing" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Verify that a bug introduced in v2.1.0 where an inline:</dt><dd><p>#from module import class</p>
-</dd>
-<dt>would result in the following code being generated:</dt><dd><p>import class</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="Cheetah.Tests.Regressions.InlineImportTest.test_ImportFailModule">
-<span class="sig-name descname"><span class="pre">test_ImportFailModule</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.InlineImportTest.test_ImportFailModule" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="Cheetah.Tests.Regressions.InlineImportTest.test_ProperImportOfBadModule">
-<span class="sig-name descname"><span class="pre">test_ProperImportOfBadModule</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.InlineImportTest.test_ProperImportOfBadModule" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="Cheetah.Tests.Regressions.InlineImportTest.test_StuffBeforeImport_Legacy">
-<span class="sig-name descname"><span class="pre">test_StuffBeforeImport_Legacy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.InlineImportTest.test_StuffBeforeImport_Legacy" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="Cheetah.Tests.Regressions.Mantis_Issue_11_Regression_Test">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cheetah.Tests.Regressions.</span></span><span class="sig-name descname"><span class="pre">Mantis_Issue_11_Regression_Test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.Mantis_Issue_11_Regression_Test" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
-<p>Test case for bug outlined in Mantis issue #11:</p>
-<p>Output:
-Traceback (most recent call last):</p>
-<blockquote>
-<div><dl class="simple">
-<dt>File “test.py”, line 12, in &lt;module&gt;</dt><dd><p>t.respond()</p>
-</dd>
-</dl>
-<p>File “DynamicallyCompiledCheetahTemplate.py”, line 86, in respond
-File “/usr/lib64/python2.6/cgi.py”, line 1035, in escape</p>
-<blockquote>
-<div><p>s = s.replace(“&amp;”, “&amp;”) # Must be done first!</p>
-</div></blockquote>
-</div></blockquote>
-<dl class="py method">
-<dt class="sig sig-object py" id="Cheetah.Tests.Regressions.Mantis_Issue_11_Regression_Test.test_FailingBehavior">
-<span class="sig-name descname"><span class="pre">test_FailingBehavior</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.Mantis_Issue_11_Regression_Test.test_FailingBehavior" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="Cheetah.Tests.Regressions.Mantis_Issue_11_Regression_Test.test_FailingBehaviorWithSetting">
-<span class="sig-name descname"><span class="pre">test_FailingBehaviorWithSetting</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.Mantis_Issue_11_Regression_Test.test_FailingBehaviorWithSetting" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="Cheetah.Tests.Regressions.Mantis_Issue_21_Regression_Test">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cheetah.Tests.Regressions.</span></span><span class="sig-name descname"><span class="pre">Mantis_Issue_21_Regression_Test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.Mantis_Issue_21_Regression_Test" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
-<p>Test case for bug outlined in issue #21</p>
-<p>Effectively &#64;staticmethod and &#64;classmethod
-decorated methods in templates don’t
-properly define the _filter local, which breaks
-when using the NameMapper</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="Cheetah.Tests.Regressions.Mantis_Issue_21_Regression_Test.runTest">
-<span class="sig-name descname"><span class="pre">runTest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.Mantis_Issue_21_Regression_Test.runTest" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="Cheetah.Tests.Regressions.Mantis_Issue_22_Regression_Test">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cheetah.Tests.Regressions.</span></span><span class="sig-name descname"><span class="pre">Mantis_Issue_22_Regression_Test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.Mantis_Issue_22_Regression_Test" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
-<p>Test case for bug outlined in issue #22</p>
-<p>When using &#64;staticmethod and &#64;classmethod
-in conjunction with the #filter directive
-the generated code for the #filter is reliant
-on the <cite>self</cite> local, breaking the function</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="Cheetah.Tests.Regressions.Mantis_Issue_22_Regression_Test.test_DefinedFilter">
-<span class="sig-name descname"><span class="pre">test_DefinedFilter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.Mantis_Issue_22_Regression_Test.test_DefinedFilter" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="Cheetah.Tests.Regressions.Mantis_Issue_22_Regression_Test.test_NoneFilter">
-<span class="sig-name descname"><span class="pre">test_NoneFilter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.Mantis_Issue_22_Regression_Test.test_NoneFilter" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-</div>
-
-
-            <div class="clearer"></div>
-          </div>
-        </div>
-      </div>
+    </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="../index.html">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">Cheetah.Tests.Regressions module</a><ul>
-<li><a class="reference internal" href="#Cheetah.Tests.Regressions.CustomGetAttrClass"><code class="docutils literal notranslate"><span class="pre">CustomGetAttrClass</span></code></a></li>
-<li><a class="reference internal" href="#Cheetah.Tests.Regressions.GetAttrException"><code class="docutils literal notranslate"><span class="pre">GetAttrException</span></code></a></li>
-<li><a class="reference internal" href="#Cheetah.Tests.Regressions.GetAttrTest"><code class="docutils literal notranslate"><span class="pre">GetAttrTest</span></code></a><ul>
-<li><a class="reference internal" href="#Cheetah.Tests.Regressions.GetAttrTest.test_NotFoundException"><code class="docutils literal notranslate"><span class="pre">GetAttrTest.test_NotFoundException()</span></code></a></li>
-<li><a class="reference internal" href="#Cheetah.Tests.Regressions.GetAttrTest.test_ValidException"><code class="docutils literal notranslate"><span class="pre">GetAttrTest.test_ValidException()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#Cheetah.Tests.Regressions.InlineImportTest"><code class="docutils literal notranslate"><span class="pre">InlineImportTest</span></code></a><ul>
-<li><a class="reference internal" href="#Cheetah.Tests.Regressions.InlineImportTest.test_AutoImporting"><code class="docutils literal notranslate"><span class="pre">InlineImportTest.test_AutoImporting()</span></code></a></li>
-<li><a class="reference internal" href="#Cheetah.Tests.Regressions.InlineImportTest.test_FromFooImportThing"><code class="docutils literal notranslate"><span class="pre">InlineImportTest.test_FromFooImportThing()</span></code></a></li>
-<li><a class="reference internal" href="#Cheetah.Tests.Regressions.InlineImportTest.test_ImportFailModule"><code class="docutils literal notranslate"><span class="pre">InlineImportTest.test_ImportFailModule()</span></code></a></li>
-<li><a class="reference internal" href="#Cheetah.Tests.Regressions.InlineImportTest.test_ProperImportOfBadModule"><code class="docutils literal notranslate"><span class="pre">InlineImportTest.test_ProperImportOfBadModule()</span></code></a></li>
-<li><a class="reference internal" href="#Cheetah.Tests.Regressions.InlineImportTest.test_StuffBeforeImport_Legacy"><code class="docutils literal notranslate"><span class="pre">InlineImportTest.test_StuffBeforeImport_Legacy()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#Cheetah.Tests.Regressions.Mantis_Issue_11_Regression_Test"><code class="docutils literal notranslate"><span class="pre">Mantis_Issue_11_Regression_Test</span></code></a><ul>
-<li><a class="reference internal" href="#Cheetah.Tests.Regressions.Mantis_Issue_11_Regression_Test.test_FailingBehavior"><code class="docutils literal notranslate"><span class="pre">Mantis_Issue_11_Regression_Test.test_FailingBehavior()</span></code></a></li>
-<li><a class="reference internal" href="#Cheetah.Tests.Regressions.Mantis_Issue_11_Regression_Test.test_FailingBehaviorWithSetting"><code class="docutils literal notranslate"><span class="pre">Mantis_Issue_11_Regression_Test.test_FailingBehaviorWithSetting()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#Cheetah.Tests.Regressions.Mantis_Issue_21_Regression_Test"><code class="docutils literal notranslate"><span class="pre">Mantis_Issue_21_Regression_Test</span></code></a><ul>
-<li><a class="reference internal" href="#Cheetah.Tests.Regressions.Mantis_Issue_21_Regression_Test.runTest"><code class="docutils literal notranslate"><span class="pre">Mantis_Issue_21_Regression_Test.runTest()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#Cheetah.Tests.Regressions.Mantis_Issue_22_Regression_Test"><code class="docutils literal notranslate"><span class="pre">Mantis_Issue_22_Regression_Test</span></code></a><ul>
-<li><a class="reference internal" href="#Cheetah.Tests.Regressions.Mantis_Issue_22_Regression_Test.test_DefinedFilter"><code class="docutils literal notranslate"><span class="pre">Mantis_Issue_22_Regression_Test.test_DefinedFilter()</span></code></a></li>
-<li><a class="reference internal" href="#Cheetah.Tests.Regressions.Mantis_Issue_22_Regression_Test.test_NoneFilter"><code class="docutils literal notranslate"><span class="pre">Mantis_Issue_22_Regression_Test.test_NoneFilter()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -227,15 +39,164 @@ on the <cite>self</cite> local, breaking the function</p>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3>Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="text" name="q" />
       <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-Cheetah.Tests.Regressions">
+<span id="cheetah-tests-regressions-module"></span><h1>Cheetah.Tests.Regressions module<a class="headerlink" href="#module-Cheetah.Tests.Regressions" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="Cheetah.Tests.Regressions.CustomGetAttrClass">
+<em class="property">class </em><code class="descclassname">Cheetah.Tests.Regressions.</code><code class="descname">CustomGetAttrClass</code><a class="headerlink" href="#Cheetah.Tests.Regressions.CustomGetAttrClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="Cheetah.Tests.Regressions.GetAttrException">
+<em class="property">exception </em><code class="descclassname">Cheetah.Tests.Regressions.</code><code class="descname">GetAttrException</code><a class="headerlink" href="#Cheetah.Tests.Regressions.GetAttrException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.Exception</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.Tests.Regressions.GetAttrTest">
+<em class="property">class </em><code class="descclassname">Cheetah.Tests.Regressions.</code><code class="descname">GetAttrTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.GetAttrTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<p>Test for an issue occurring when __getatttr__() raises an exception
+causing NameMapper to raise a NotFound exception</p>
+<dl class="method">
+<dt id="Cheetah.Tests.Regressions.GetAttrTest.test_NotFoundException">
+<code class="descname">test_NotFoundException</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.GetAttrTest.test_NotFoundException" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Tests.Regressions.GetAttrTest.test_ValidException">
+<code class="descname">test_ValidException</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.GetAttrTest.test_ValidException" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.Tests.Regressions.InlineImportTest">
+<em class="property">class </em><code class="descclassname">Cheetah.Tests.Regressions.</code><code class="descname">InlineImportTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.InlineImportTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<dl class="method">
+<dt id="Cheetah.Tests.Regressions.InlineImportTest.test_AutoImporting">
+<code class="descname">test_AutoImporting</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.InlineImportTest.test_AutoImporting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Tests.Regressions.InlineImportTest.test_FromFooImportThing">
+<code class="descname">test_FromFooImportThing</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.InlineImportTest.test_FromFooImportThing" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Verify that a bug introduced in v2.1.0 where an inline:</dt>
+<dd>#from module import class</dd>
+<dt>would result in the following code being generated:</dt>
+<dd>import class</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Tests.Regressions.InlineImportTest.test_ImportFailModule">
+<code class="descname">test_ImportFailModule</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.InlineImportTest.test_ImportFailModule" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Tests.Regressions.InlineImportTest.test_ProperImportOfBadModule">
+<code class="descname">test_ProperImportOfBadModule</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.InlineImportTest.test_ProperImportOfBadModule" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Tests.Regressions.InlineImportTest.test_StuffBeforeImport_Legacy">
+<code class="descname">test_StuffBeforeImport_Legacy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.InlineImportTest.test_StuffBeforeImport_Legacy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.Tests.Regressions.Mantis_Issue_11_Regression_Test">
+<em class="property">class </em><code class="descclassname">Cheetah.Tests.Regressions.</code><code class="descname">Mantis_Issue_11_Regression_Test</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.Mantis_Issue_11_Regression_Test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<p>Test case for bug outlined in Mantis issue #11:</p>
+<p>Output:
+Traceback (most recent call last):</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>File “test.py”, line 12, in &lt;module&gt;</dt>
+<dd>t.respond()</dd>
+</dl>
+<p>File “DynamicallyCompiledCheetahTemplate.py”, line 86, in respond
+File “/usr/lib64/python2.6/cgi.py”, line 1035, in escape</p>
+<blockquote>
+<div>s = s.replace(”&amp;”, “&amp;”) # Must be done first!</div></blockquote>
+</div></blockquote>
+<dl class="method">
+<dt id="Cheetah.Tests.Regressions.Mantis_Issue_11_Regression_Test.test_FailingBehavior">
+<code class="descname">test_FailingBehavior</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.Mantis_Issue_11_Regression_Test.test_FailingBehavior" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Tests.Regressions.Mantis_Issue_11_Regression_Test.test_FailingBehaviorWithSetting">
+<code class="descname">test_FailingBehaviorWithSetting</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.Mantis_Issue_11_Regression_Test.test_FailingBehaviorWithSetting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.Tests.Regressions.Mantis_Issue_21_Regression_Test">
+<em class="property">class </em><code class="descclassname">Cheetah.Tests.Regressions.</code><code class="descname">Mantis_Issue_21_Regression_Test</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.Mantis_Issue_21_Regression_Test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<p>Test case for bug outlined in issue #21</p>
+<p>Effectively &#64;staticmethod and &#64;classmethod
+decorated methods in templates don’t
+properly define the _filter local, which breaks
+when using the NameMapper</p>
+<dl class="method">
+<dt id="Cheetah.Tests.Regressions.Mantis_Issue_21_Regression_Test.runTest">
+<code class="descname">runTest</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.Mantis_Issue_21_Regression_Test.runTest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Cheetah.Tests.Regressions.Mantis_Issue_22_Regression_Test">
+<em class="property">class </em><code class="descclassname">Cheetah.Tests.Regressions.</code><code class="descname">Mantis_Issue_22_Regression_Test</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.Mantis_Issue_22_Regression_Test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<p>Test case for bug outlined in issue #22</p>
+<p>When using &#64;staticmethod and &#64;classmethod
+in conjunction with the #filter directive
+the generated code for the #filter is reliant
+on the <cite>self</cite> local, breaking the function</p>
+<dl class="method">
+<dt id="Cheetah.Tests.Regressions.Mantis_Issue_22_Regression_Test.test_DefinedFilter">
+<code class="descname">test_DefinedFilter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.Mantis_Issue_22_Regression_Test.test_DefinedFilter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Cheetah.Tests.Regressions.Mantis_Issue_22_Regression_Test.test_NoneFilter">
+<code class="descname">test_NoneFilter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cheetah.Tests.Regressions.Mantis_Issue_22_Regression_Test.test_NoneFilter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
         </div>
       </div>
       <div class="clearer"></div>
@@ -249,14 +210,13 @@ on the <cite>self</cite> local, breaking the function</p>
         <li class="right" >
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Cheetah.Tests.Regressions module</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017-2022, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Nov 26, 2022.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+      Last updated on Dec 25, 2022.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.6.
     </div>
   </body>
 </html>
