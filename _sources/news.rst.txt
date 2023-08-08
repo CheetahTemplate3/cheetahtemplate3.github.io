@@ -1,6 +1,17 @@
 News
 ====
 
+3.3.2 (2023-08-08)
+------------------
+
+Bug fixes:
+
+  - Fixed printing to stdout in ``CheetahWrapper``.
+
+CI:
+
+   - CI(GHActions): Install all Python and PyPy versions from ``conda-forge``.
+
 3.3.1 (2022-12-25)
 ------------------
 
