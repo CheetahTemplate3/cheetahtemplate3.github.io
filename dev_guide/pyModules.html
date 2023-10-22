@@ -1,19 +1,16 @@
+<!DOCTYPE html>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" data-content_root="../">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>.py Template Modules &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=d59dc883" />
+    <script src="../_static/documentation_options.js?v=09401b74"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Directives: Comments" href="comments.html" />
@@ -35,60 +32,23 @@
           <a href="cache.html" title="Caching placeholders and #cache"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer’s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer’s Guide</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">.py Template Modules</a></li> 
       </ul>
-    </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">.py Template Modules</a><ul>
-<li><a class="reference internal" href="#an-example">An example</a></li>
-<li><a class="reference internal" href="#a-walk-through-the-example">A walk through the example</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="cache.html"
-                        title="previous chapter">Caching placeholders and #cache</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="comments.html"
-                        title="next chapter">Directives: Comments</a></p>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/dev_guide/pyModules.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="py-template-modules">
-<h1>.py Template Modules<a class="headerlink" href="#py-template-modules" title="Permalink to this headline">¶</a></h1>
+  <section id="py-template-modules">
+<h1>.py Template Modules<a class="headerlink" href="#py-template-modules" title="Link to this heading">¶</a></h1>
 <p>This chapter examines the structure of a .py template module. The
 following few chapters will then show how each placeholder and
 directive affects the generated Python code.</p>
-<div class="section" id="an-example">
-<h2>An example<a class="headerlink" href="#an-example" title="Permalink to this headline">¶</a></h2>
+<section id="an-example">
+<h2>An example<a class="headerlink" href="#an-example" title="Link to this heading">¶</a></h2>
 <p>Our first template follows a long noble tradition in computer
 tutorials. It produces a familiar, friendly greeting. Here’s the
 template:</p>
@@ -233,9 +193,9 @@ and I added indentation, backslashes and ‘#’ as necessary to make
 the result a valid Python program.)</p>
 <p>The examples were generated from CVS versions of Cheetah between
 0.9.12 and 0.9.14.</p>
-</div>
-<div class="section" id="a-walk-through-the-example">
-<h2>A walk through the example<a class="headerlink" href="#a-walk-through-the-example" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="a-walk-through-the-example">
+<h2>A walk through the example<a class="headerlink" href="#a-walk-through-the-example" title="Link to this heading">¶</a></h2>
 <p>Lines 20-24 are the Cheetah-specific imports. Line 33 introduces
 our generated class, {x}, a subclass of {Template}. It’s called x
 because the source file was x.tmpl.</p>
@@ -300,11 +260,54 @@ sometimes it’s not {.respond}.</p>
 <p>Lines 94-95 allow the module to be run directly as a script.
 Essentially, they process the command-line arguments and them make
 the template fill itself.</p>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">.py Template Modules</a><ul>
+<li><a class="reference internal" href="#an-example">An example</a></li>
+<li><a class="reference internal" href="#a-walk-through-the-example">A walk through the example</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="cache.html"
+                          title="previous chapter">Caching placeholders and #cache</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="comments.html"
+                          title="next chapter">Directives: Comments</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/dev_guide/pyModules.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -325,13 +328,14 @@ the template fill itself.</p>
           <a href="cache.html" title="Caching placeholders and #cache"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer’s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer’s Guide</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">.py Template Modules</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2023, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Aug 08, 2023.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.6.
+    &#169; Copyright 2017-2023, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Oct 22, 2023.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

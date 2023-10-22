@@ -1,19 +1,16 @@
+<!DOCTYPE html>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" data-content_root="../">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Directives: Error Handling &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=d59dc883" />
+    <script src="../_static/documentation_options.js?v=09401b74"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Placeholders" href="placeholders.html" />
@@ -35,63 +32,20 @@
           <a href="introduction.html" title="Introduction"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer’s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer’s Guide</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Directives: Error Handling</a></li> 
       </ul>
-    </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Directives: Error Handling</a><ul>
-<li><a class="reference internal" href="#try-and-raise">#try and #raise</a></li>
-<li><a class="reference internal" href="#assert">#assert</a></li>
-<li><a class="reference internal" href="#errorcatcher">#errorCatcher</a><ul>
-<li><a class="reference internal" href="#no-error-catcher">No error catcher</a></li>
-<li><a class="reference internal" href="#echo-and-bigecho">Echo and BigEcho</a></li>
-<li><a class="reference internal" href="#listerrors">ListErrors</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="introduction.html"
-                        title="previous chapter">Introduction</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="placeholders.html"
-                        title="next chapter">Placeholders</a></p>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/dev_guide/errorHandling.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="directives-error-handling">
-<h1>Directives: Error Handling<a class="headerlink" href="#directives-error-handling" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="try-and-raise">
-<h2>#try and #raise<a class="headerlink" href="#try-and-raise" title="Permalink to this headline">¶</a></h2>
+  <section id="directives-error-handling">
+<h1>Directives: Error Handling<a class="headerlink" href="#directives-error-handling" title="Link to this heading">¶</a></h1>
+<section id="try-and-raise">
+<h2>#try and #raise<a class="headerlink" href="#try-and-raise" title="Link to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#import traceback</span>
 <span class="c1">#try</span>
@@ -141,9 +95,9 @@ You can&#39;t divide by zero, idiot!
 </pre></div>
 </div>
 <p>{#finally} works just like in Python.</p>
-</div>
-<div class="section" id="assert">
-<h2>#assert<a class="headerlink" href="#assert" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="assert">
+<h2>#assert<a class="headerlink" href="#assert" title="Link to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#assert False, &quot;You lose, buster!&quot;</span>
 </pre></div>
@@ -167,11 +121,11 @@ AssertionError: You lose, buster!
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;You lose, buster!&quot;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="errorcatcher">
-<h2>#errorCatcher<a class="headerlink" href="#errorcatcher" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="no-error-catcher">
-<h3>No error catcher<a class="headerlink" href="#no-error-catcher" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="errorcatcher">
+<h2>#errorCatcher<a class="headerlink" href="#errorcatcher" title="Link to this heading">¶</a></h2>
+<section id="no-error-catcher">
+<h3>No error catcher<a class="headerlink" href="#no-error-catcher" title="Link to this heading">¶</a></h3>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$noValue
 </pre></div>
@@ -198,9 +152,9 @@ NameMapper.NotFound: noValue
 <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="echo-and-bigecho">
-<h3>Echo and BigEcho<a class="headerlink" href="#echo-and-bigecho" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="echo-and-bigecho">
+<h3>Echo and BigEcho<a class="headerlink" href="#echo-and-bigecho" title="Link to this heading">¶</a></h3>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#errorCatcher Echo
 $noValue
@@ -231,9 +185,9 @@ $noValue
 <span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="listerrors">
-<h3>ListErrors<a class="headerlink" href="#listerrors" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="listerrors">
+<h3>ListErrors<a class="headerlink" href="#listerrors" title="Link to this heading">¶</a></h3>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#import pprint
 #errorCatcher ListErrors
@@ -265,7 +219,7 @@ $anotherMissingValue.really
 <p>Then in the generated class, we have our familiar {.respond} method
 and several new methods:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">__errorCatcher1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">localsDict</span><span class="o">=</span><span class="p">{}):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generated from $noValue at line, col (3, 1).</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -276,7 +230,7 @@ and several new methods:</p>
         <span class="n">rawCode</span><span class="o">=</span> <span class="s1">&#39;$noValue&#39;</span> <span class="p">,</span> <span class="n">lineCol</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 
 <span class="k">def</span> <span class="nf">__errorCatcher2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">localsDict</span><span class="o">=</span><span class="p">{}):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generated from $anotherMissingValue.really at line, col (4, 1).</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -289,7 +243,7 @@ and several new methods:</p>
         <span class="n">rawCode</span><span class="o">=</span> <span class="s1">&#39;$anotherMissingValue.really&#39;</span> <span class="p">,</span> <span class="n">lineCol</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 
 <span class="k">def</span> <span class="nf">__errorCatcher3</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">localsDict</span><span class="o">=</span><span class="p">{}):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generated from $pprint.pformat($errorCatcher.listErrors) at line, col</span>
 <span class="sd">    (5, 1).</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -313,7 +267,7 @@ and several new methods:</p>
         <span class="n">currentTime</span><span class="o">=</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">):</span>
 
 
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This is the main method generated by Cheetah</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -364,12 +318,61 @@ and several new methods:</p>
 <p>So whenever an error catcher is active, each placeholder gets
 wrapped in its own method. No wonder error catchers slow down the
 system!</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Directives: Error Handling</a><ul>
+<li><a class="reference internal" href="#try-and-raise">#try and #raise</a></li>
+<li><a class="reference internal" href="#assert">#assert</a></li>
+<li><a class="reference internal" href="#errorcatcher">#errorCatcher</a><ul>
+<li><a class="reference internal" href="#no-error-catcher">No error catcher</a></li>
+<li><a class="reference internal" href="#echo-and-bigecho">Echo and BigEcho</a></li>
+<li><a class="reference internal" href="#listerrors">ListErrors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="introduction.html"
+                          title="previous chapter">Introduction</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="placeholders.html"
+                          title="next chapter">Placeholders</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/dev_guide/errorHandling.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -390,13 +393,14 @@ system!</p>
           <a href="introduction.html" title="Introduction"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer’s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer’s Guide</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Directives: Error Handling</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2023, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Aug 08, 2023.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.6.
+    &#169; Copyright 2017-2023, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Oct 22, 2023.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

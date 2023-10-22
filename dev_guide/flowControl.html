@@ -1,19 +1,16 @@
+<!DOCTYPE html>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" data-content_root="../">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Directives: Flow Control &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=d59dc883" />
+    <script src="../_static/documentation_options.js?v=09401b74"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Design Decisions and Tradeoffs" href="design.html" />
@@ -35,64 +32,20 @@
           <a href="patching.html" title="Patching Cheetah"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer’s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer’s Guide</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Directives: Flow Control</a></li> 
       </ul>
-    </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Directives: Flow Control</a><ul>
-<li><a class="reference internal" href="#for">#for</a></li>
-<li><a class="reference internal" href="#repeat">#repeat</a></li>
-<li><a class="reference internal" href="#while">#while</a></li>
-<li><a class="reference internal" href="#if">#if</a></li>
-<li><a class="reference internal" href="#unless">#unless</a></li>
-<li><a class="reference internal" href="#break-and-continue">#break and #continue</a></li>
-<li><a class="reference internal" href="#pass">#pass</a></li>
-<li><a class="reference internal" href="#stop">#stop</a></li>
-<li><a class="reference internal" href="#return">#return</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="patching.html"
-                        title="previous chapter">Patching Cheetah</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="design.html"
-                        title="next chapter">Design Decisions and Tradeoffs</a></p>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/dev_guide/flowControl.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="directives-flow-control">
-<h1>Directives: Flow Control<a class="headerlink" href="#directives-flow-control" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="for">
-<h2>#for<a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h2>
+  <section id="directives-flow-control">
+<h1>Directives: Flow Control<a class="headerlink" href="#directives-flow-control" title="Link to this heading">¶</a></h1>
+<section id="for">
+<h2>#for<a class="headerlink" href="#for" title="Link to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#for $i in $range(10)
 $i #slurp
@@ -109,9 +62,9 @@ $i #slurp
     <span class="n">write</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="repeat">
-<h2>#repeat<a class="headerlink" href="#repeat" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="repeat">
+<h2>#repeat<a class="headerlink" href="#repeat" title="Link to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#repeat 3
 My bonnie lies over the ocean
@@ -134,9 +87,9 @@ O, bring back my bonnie to me!
 </div>
 <p>Note that a new local variable of the form {__i$num} will be used
 for each instance of {repeat} in order to permit nesting.</p>
-</div>
-<div class="section" id="while">
-<h2>#while<a class="headerlink" href="#while" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="while">
+<h2>#while<a class="headerlink" href="#while" title="Link to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#set $alive = True
 #while $alive
@@ -156,9 +109,9 @@ I am alive!
     <span class="n">alive</span> <span class="o">=</span> <span class="kc">False</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="if">
-<h2>#if<a class="headerlink" href="#if" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="if">
+<h2>#if<a class="headerlink" href="#if" title="Link to this heading">¶</a></h2>
 <p>()</p>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#set $size = 500</span>
@@ -185,9 +138,9 @@ I am alive!
     <span class="n">write</span><span class="p">(</span><span class="s2">&quot;It&#39;s not there</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="unless">
-<h2>#unless<a class="headerlink" href="#unless" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="unless">
+<h2>#unless<a class="headerlink" href="#unless" title="Link to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#set $count = 9</span>
 <span class="c1">#unless $count + 5 &gt; 15</span>
@@ -208,9 +161,9 @@ I am alive!
 <p>{ Note:} There is a bug in Cheetah 0.9.13. It’s forgetting the
 parentheses in the {if} expression, which could lead to it
 calculating something different than it should.</p>
-</div>
-<div class="section" id="break-and-continue">
-<h2>#break and #continue<a class="headerlink" href="#break-and-continue" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="break-and-continue">
+<h2>#break and #continue<a class="headerlink" href="#break-and-continue" title="Link to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#for $i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, &#39;James&#39;, &#39;Joe&#39;, &#39;Snow&#39;]
 #if $i == 10
@@ -239,9 +192,9 @@ $i - #slurp
     <span class="n">write</span><span class="p">(</span><span class="s1">&#39; - &#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="pass">
-<h2>#pass<a class="headerlink" href="#pass" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="pass">
+<h2>#pass<a class="headerlink" href="#pass" title="Link to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Let</span><span class="s1">&#39;s check the number.</span>
 <span class="c1">#set $size = 500</span>
@@ -272,9 +225,9 @@ $i - #slurp
 <span class="n">write</span><span class="p">(</span><span class="s1">&#39;Done checking the number.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="stop">
-<h2>#stop<a class="headerlink" href="#stop" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="stop">
+<h2>#stop<a class="headerlink" href="#stop" title="Link to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="n">cat</span>
 <span class="c1">#if 1</span>
@@ -302,9 +255,9 @@ $i - #slurp
 <span class="n">write</span><span class="p">(</span><span class="s1">&#39;in a flat.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="return">
-<h2>#return<a class="headerlink" href="#return" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="return">
+<h2>#return<a class="headerlink" href="#return" title="Link to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1
 $test[1]
@@ -335,7 +288,7 @@ $test[1]
         <span class="n">currentTime</span><span class="o">=</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">):</span>
 
 
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generated from #def test at line 5, col 1.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -374,7 +327,7 @@ $test[1]
         <span class="n">currentTime</span><span class="o">=</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">):</span>
 
 
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This is the main method generated by Cheetah</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -402,11 +355,61 @@ $test[1]
         <span class="k">return</span> <span class="s2">&quot;&quot;</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Directives: Flow Control</a><ul>
+<li><a class="reference internal" href="#for">#for</a></li>
+<li><a class="reference internal" href="#repeat">#repeat</a></li>
+<li><a class="reference internal" href="#while">#while</a></li>
+<li><a class="reference internal" href="#if">#if</a></li>
+<li><a class="reference internal" href="#unless">#unless</a></li>
+<li><a class="reference internal" href="#break-and-continue">#break and #continue</a></li>
+<li><a class="reference internal" href="#pass">#pass</a></li>
+<li><a class="reference internal" href="#stop">#stop</a></li>
+<li><a class="reference internal" href="#return">#return</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="patching.html"
+                          title="previous chapter">Patching Cheetah</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="design.html"
+                          title="next chapter">Design Decisions and Tradeoffs</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/dev_guide/flowControl.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -427,13 +430,14 @@ $test[1]
           <a href="patching.html" title="Patching Cheetah"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer’s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer’s Guide</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Directives: Flow Control</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2023, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Aug 08, 2023.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.6.
+    &#169; Copyright 2017-2023, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Oct 22, 2023.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

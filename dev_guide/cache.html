@@ -1,19 +1,16 @@
+<!DOCTYPE html>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" data-content_root="../">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Caching placeholders and #cache &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=d59dc883" />
+    <script src="../_static/documentation_options.js?v=09401b74"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title=".py Template Modules" href="pyModules.html" />
@@ -35,62 +32,20 @@
           <a href="output.html" title="Directives: Output"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer’s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer’s Guide</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Caching placeholders and #cache</a></li> 
       </ul>
-    </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Caching placeholders and #cache</a><ul>
-<li><a class="reference internal" href="#dynamic-placeholder-no-cache">Dynamic placeholder - no cache</a></li>
-<li><a class="reference internal" href="#static-placeholder">Static placeholder</a></li>
-<li><a class="reference internal" href="#timed-refresh-placeholder">Timed-refresh placeholder</a></li>
-<li><a class="reference internal" href="#timed-refresh-placeholder-with-braces">Timed-refresh placeholder with braces</a></li>
-<li><a class="reference internal" href="#cache">#cache</a></li>
-<li><a class="reference internal" href="#cache-with-timer-and-id">#cache with timer and id</a></li>
-<li><a class="reference internal" href="#cache-with-test-expression-and-method-conditions">#cache with test: expression and method conditions</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="output.html"
-                        title="previous chapter">Directives: Output</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="pyModules.html"
-                        title="next chapter">.py Template Modules</a></p>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/dev_guide/cache.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="caching-placeholders-and-cache">
-<h1>Caching placeholders and #cache<a class="headerlink" href="#caching-placeholders-and-cache" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="dynamic-placeholder-no-cache">
-<h2>Dynamic placeholder - no cache<a class="headerlink" href="#dynamic-placeholder-no-cache" title="Permalink to this headline">¶</a></h2>
+  <section id="caching-placeholders-and-cache">
+<h1>Caching placeholders and #cache<a class="headerlink" href="#caching-placeholders-and-cache" title="Link to this heading">¶</a></h1>
+<section id="dynamic-placeholder-no-cache">
+<h2>Dynamic placeholder - no cache<a class="headerlink" href="#dynamic-placeholder-no-cache" title="Link to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Dynamic variable:  $voom
 </pre></div>
@@ -107,9 +62,9 @@ Dynamic variable:  Voom!
 </pre></div>
 </div>
 <p>Just what we expected, like any other dynamic placeholder.</p>
-</div>
-<div class="section" id="static-placeholder">
-<h2>Static placeholder<a class="headerlink" href="#static-placeholder" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="static-placeholder">
+<h2>Static placeholder<a class="headerlink" href="#static-placeholder" title="Link to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Cached variable:  $*voom
 </pre></div>
@@ -157,7 +112,7 @@ eliminated if line 8 was changed to</p>
 </pre></div>
 </div>
 <ul class="simple">
-<li>but this model is expandable for some of the cache features we’ll</li>
+<li><p>but this model is expandable for some of the cache features we’ll</p></li>
 </ul>
 <p>see below.</p>
 <p>The second if-block, lines 8-16, do the cache updating if
@@ -167,9 +122,9 @@ though it looks like a local function, is actually a method of a
 file-like object. So we create a temporary file-like object to
 divert the {write} object into, then read the result and stuff it
 into the cache.</p>
-</div>
-<div class="section" id="timed-refresh-placeholder">
-<h2>Timed-refresh placeholder<a class="headerlink" href="#timed-refresh-placeholder" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="timed-refresh-placeholder">
+<h2>Timed-refresh placeholder<a class="headerlink" href="#timed-refresh-placeholder" title="Link to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Timed cache:  $*.5m*voom
 </pre></div>
@@ -239,9 +194,9 @@ are at different intervals, you get a situation like this:</p>
 60.0 seconds, but doesn’t reveal { which} placeholder that is. Only
 if you know the relative order of the placeholders in the template
 can you figure that out.</p>
-</div>
-<div class="section" id="timed-refresh-placeholder-with-braces">
-<h2>Timed-refresh placeholder with braces<a class="headerlink" href="#timed-refresh-placeholder-with-braces" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="timed-refresh-placeholder-with-braces">
+<h2>Timed-refresh placeholder with braces<a class="headerlink" href="#timed-refresh-placeholder-with-braces" title="Link to this heading">¶</a></h2>
 <p>This example is the same but with the long placeholder syntax. It’s
 here because it’s a Cheetah FAQ whether to put the cache interval
 inside or outside the braces. (It’s also here so I can look it up
@@ -272,9 +227,9 @@ cache-refresh if-block:</p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">${</span></code> is not a valid placeholder, so it gets treated as ordinary
 text.</p>
-</div>
-<div class="section" id="cache">
-<h2>#cache<a class="headerlink" href="#cache" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="cache">
+<h2>#cache<a class="headerlink" href="#cache" title="Link to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#cache
 This is a cached region.  $voom
@@ -310,9 +265,9 @@ This is a cached region.  $voom
 </div>
 <p>This is the same as the {$*voom} example, except that the plain
 text around the placeholder is inside the second if-block.</p>
-</div>
-<div class="section" id="cache-with-timer-and-id">
-<h2>#cache with timer and id<a class="headerlink" href="#cache-with-timer-and-id" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="cache-with-timer-and-id">
+<h2>#cache with timer and id<a class="headerlink" href="#cache-with-timer-and-id" title="Link to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#cache timer=&#39;.5m&#39;, id=&#39;cache1&#39;
 This is a cached region.  $voom
@@ -335,9 +290,9 @@ first if-block:</p>
     <span class="n">RECACHE</span> <span class="o">=</span> <span class="kc">False</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="cache-with-test-expression-and-method-conditions">
-<h2>#cache with test: expression and method conditions<a class="headerlink" href="#cache-with-test-expression-and-method-conditions" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="cache-with-test-expression-and-method-conditions">
+<h2>#cache with test: expression and method conditions<a class="headerlink" href="#cache-with-test-expression-and-method-conditions" title="Link to this heading">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#cache test=$isDBUpdated
 This is a cached region.  $voom
@@ -399,11 +354,59 @@ variety of conditions, such as different query string parameters or
 browser types. This is inspired by ASP.net’s varyByParam and
 varyByBrowser output caching keywords. Since this is not
 implemented yet, I cannot provide examples here.</p>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Caching placeholders and #cache</a><ul>
+<li><a class="reference internal" href="#dynamic-placeholder-no-cache">Dynamic placeholder - no cache</a></li>
+<li><a class="reference internal" href="#static-placeholder">Static placeholder</a></li>
+<li><a class="reference internal" href="#timed-refresh-placeholder">Timed-refresh placeholder</a></li>
+<li><a class="reference internal" href="#timed-refresh-placeholder-with-braces">Timed-refresh placeholder with braces</a></li>
+<li><a class="reference internal" href="#cache">#cache</a></li>
+<li><a class="reference internal" href="#cache-with-timer-and-id">#cache with timer and id</a></li>
+<li><a class="reference internal" href="#cache-with-test-expression-and-method-conditions">#cache with test: expression and method conditions</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="output.html"
+                          title="previous chapter">Directives: Output</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="pyModules.html"
+                          title="next chapter">.py Template Modules</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/dev_guide/cache.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -424,13 +427,14 @@ implemented yet, I cannot provide examples here.</p>
           <a href="output.html" title="Directives: Output"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer’s Guide</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer’s Guide</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Caching placeholders and #cache</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017-2023, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Aug 08, 2023.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.6.
+    &#169; Copyright 2017-2023, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Oct 22, 2023.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>
