@@ -1,16 +1,19 @@
-<!DOCTYPE html>
 
-<html lang="en" data-content_root="../">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Directives: Output &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=d59dc883" />
-    <script src="../_static/documentation_options.js?v=09401b74"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Caching placeholders and #cache" href="cache.html" />
@@ -32,20 +35,65 @@
           <a href="history.html" title="History of Cheetah"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer’s Guide</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Directives: Output</a></li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah Developer’s Guide</a> &#187;</li> 
       </ul>
-    </div>  
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Directives: Output</a><ul>
+<li><a class="reference internal" href="#echo">#echo</a></li>
+<li><a class="reference internal" href="#silent">#silent</a></li>
+<li><a class="reference internal" href="#raw">#raw</a></li>
+<li><a class="reference internal" href="#include">#include</a><ul>
+<li><a class="reference internal" href="#include-raw">#include raw</a></li>
+<li><a class="reference internal" href="#include-from-a-string-or-expression-eval">#include from a string or expression (eval)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#slurp">#slurp</a></li>
+<li><a class="reference internal" href="#filter">#filter</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="history.html"
+                        title="previous chapter">History of Cheetah</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="cache.html"
+                        title="next chapter">Caching placeholders and #cache</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/dev_guide/output.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="directives-output">
-<h1>Directives: Output<a class="headerlink" href="#directives-output" title="Link to this heading">¶</a></h1>
-<section id="echo">
-<h2>#echo<a class="headerlink" href="#echo" title="Link to this heading">¶</a></h2>
+  <div class="section" id="directives-output">
+<h1>Directives: Output<a class="headerlink" href="#directives-output" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="echo">
+<h2>#echo<a class="headerlink" href="#echo" title="Permalink to this headline">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Here</span> <span class="ow">is</span> <span class="n">my</span> <span class="c1">#echo &#39;, &#39;.join([&#39;silly&#39;]*5) # example</span>
 </pre></div>
@@ -60,9 +108,9 @@
 <span class="n">write</span><span class="p">(</span><span class="s1">&#39; example</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section id="silent">
-<h2>#silent<a class="headerlink" href="#silent" title="Link to this heading">¶</a></h2>
+</div>
+<div class="section" id="silent">
+<h2>#silent<a class="headerlink" href="#silent" title="Permalink to this headline">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Here</span> <span class="ow">is</span> <span class="n">my</span> <span class="c1">#silent &#39;, &#39;.join([&#39;silly&#39;]*5) # example</span>
 </pre></div>
@@ -79,9 +127,9 @@
 </div>
 <p>OK, it’s not quite covert because that extra space gives it away,
 but it almost succeeds.</p>
-</section>
-<section id="raw">
-<h2>#raw<a class="headerlink" href="#raw" title="Link to this heading">¶</a></h2>
+</div>
+<div class="section" id="raw">
+<h2>#raw<a class="headerlink" href="#raw" title="Permalink to this headline">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Text before raw.
 #raw
@@ -107,9 +155,9 @@ Text after raw.
 that anything inside it is ordinary text, and Cheetah joins a
 {#raw} section with adjacent string literals rather than generating
 a separate {write} call.</p>
-</section>
-<section id="include">
-<h2>#include<a class="headerlink" href="#include" title="Link to this heading">¶</a></h2>
+</div>
+<div class="section" id="include">
+<h2>#include<a class="headerlink" href="#include" title="Permalink to this headline">¶</a></h2>
 <p>The main template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &quot;y.tmpl&quot;</span>
 </pre></div>
@@ -128,8 +176,8 @@ a separate {write} call.</p>
     <span class="n">raw</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
 </pre></div>
 </div>
-<section id="include-raw">
-<h3>#include raw<a class="headerlink" href="#include-raw" title="Link to this heading">¶</a></h3>
+<div class="section" id="include-raw">
+<h3>#include raw<a class="headerlink" href="#include-raw" title="Permalink to this headline">¶</a></h3>
 <p>The main template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include raw &quot;y.tmpl&quot;</span>
 </pre></div>
@@ -145,9 +193,9 @@ a separate {write} call.</p>
 </pre></div>
 </div>
 <p>That last argument, {raw}, makes the difference.</p>
-</section>
-<section id="include-from-a-string-or-expression-eval">
-<h3>#include from a string or expression (eval)<a class="headerlink" href="#include-from-a-string-or-expression-eval" title="Link to this heading">¶</a></h3>
+</div>
+<div class="section" id="include-from-a-string-or-expression-eval">
+<h3>#include from a string or expression (eval)<a class="headerlink" href="#include-from-a-string-or-expression-eval" title="Permalink to this headline">¶</a></h3>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#attr $y = &quot;Let&#39;s go $voom!&quot;</span>
 <span class="c1">#include source=$y</span>
@@ -173,10 +221,10 @@ Let&#39;s go VOOM!Let&#39;s go $voom!Bam!  Bam!
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;Let&#39;s go $voom!&quot;</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="slurp">
-<h2>#slurp<a class="headerlink" href="#slurp" title="Link to this heading">¶</a></h2>
+</div>
+</div>
+<div class="section" id="slurp">
+<h2>#slurp<a class="headerlink" href="#slurp" title="Permalink to this headline">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#for $i in range(5)
 $i
@@ -208,9 +256,9 @@ Line after slurp.
 </div>
 <p>The space after each number is because of the space before {#slurp}
 in the template definition.</p>
-</section>
-<section id="filter">
-<h2>#filter<a class="headerlink" href="#filter" title="Link to this heading">¶</a></h2>
+</div>
+<div class="section" id="filter">
+<h2>#filter<a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h2>
 <p>The template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#attr $ode = &quot;&gt;&gt; Rubber Ducky, you&#39;re the one!  You make bathtime so much fun! &lt;&lt;&quot;
 $ode
@@ -275,62 +323,11 @@ method. Line 19 switches back to the default filter.</p>
 <p>In line 17 we see the {maxlen} argument being passed as a keyword
 argument to {filter} (not to {VFS}). In line 20 the same thing
 happens although the default filter ignores the argument.</p>
-</section>
-</section>
-
-
-            <div class="clearer"></div>
-          </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="../index.html">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">Directives: Output</a><ul>
-<li><a class="reference internal" href="#echo">#echo</a></li>
-<li><a class="reference internal" href="#silent">#silent</a></li>
-<li><a class="reference internal" href="#raw">#raw</a></li>
-<li><a class="reference internal" href="#include">#include</a><ul>
-<li><a class="reference internal" href="#include-raw">#include raw</a></li>
-<li><a class="reference internal" href="#include-from-a-string-or-expression-eval">#include from a string or expression (eval)</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#slurp">#slurp</a></li>
-<li><a class="reference internal" href="#filter">#filter</a></li>
-</ul>
-</li>
-</ul>
-
-  </div>
-  <div>
-    <h4>Previous topic</h4>
-    <p class="topless"><a href="history.html"
-                          title="previous chapter">History of Cheetah</a></p>
-  </div>
-  <div>
-    <h4>Next topic</h4>
-    <p class="topless"><a href="cache.html"
-                          title="next chapter">Caching placeholders and #cache</a></p>
-  </div>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/dev_guide/output.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
 </div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
+</div>
+
+
+          </div>
         </div>
       </div>
       <div class="clearer"></div>
@@ -351,14 +348,13 @@ happens although the default filter ignores the argument.</p>
           <a href="history.html" title="History of Cheetah"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer’s Guide</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Directives: Output</a></li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah Developer’s Guide</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2017-2023, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Oct 22, 2023.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+        &#169; Copyright 2017-2024, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Feb 28, 2024.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.6.
     </div>
   </body>
 </html>

@@ -1,16 +1,19 @@
-<!DOCTYPE html>
 
-<html lang="en" data-content_root="../">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Import, Inheritance, Declaration and Assignment &#8212; Cheetah3 - The Python-Powered Template Engine</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=d59dc883" />
-    <script src="../_static/documentation_options.js?v=09401b74"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Flow Control" href="flowControl.html" />
@@ -32,20 +35,63 @@
           <a href="output.html" title="Generating, Caching and Filtering Output"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User’s Guide</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Import, Inheritance, Declaration and Assignment</a></li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Cheetah User’s Guide</a> &#187;</li> 
       </ul>
-    </div>  
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Import, Inheritance, Declaration and Assignment</a><ul>
+<li><a class="reference internal" href="#import-and-from-directives">#import and #from directives</a></li>
+<li><a class="reference internal" href="#extends">#extends</a></li>
+<li><a class="reference internal" href="#implements">#implements</a></li>
+<li><a class="reference internal" href="#set">#set</a></li>
+<li><a class="reference internal" href="#del">#del</a></li>
+<li><a class="reference internal" href="#attr">#attr</a></li>
+<li><a class="reference internal" href="#def">#def</a></li>
+<li><a class="reference internal" href="#block-end-block">#block … #end block</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="output.html"
+                        title="previous chapter">Generating, Caching and Filtering Output</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="flowControl.html"
+                        title="next chapter">Flow Control</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/users_guide/inheritanceEtc.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="import-inheritance-declaration-and-assignment">
-<h1>Import, Inheritance, Declaration and Assignment<a class="headerlink" href="#import-inheritance-declaration-and-assignment" title="Link to this heading">¶</a></h1>
-<section id="import-and-from-directives">
-<h2>#import and #from directives<a class="headerlink" href="#import-and-from-directives" title="Link to this heading">¶</a></h2>
+  <div class="section" id="import-inheritance-declaration-and-assignment">
+<h1>Import, Inheritance, Declaration and Assignment<a class="headerlink" href="#import-inheritance-declaration-and-assignment" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="import-and-from-directives">
+<h2>#import and #from directives<a class="headerlink" href="#import-and-from-directives" title="Permalink to this headline">¶</a></h2>
 <p>Syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#import MODULE_OR_OBJECT [as NAME] [, ...]</span>
 <span class="c1">#from MODULE import MODULE_OR_OBJECT [as NAME] [, ...]</span>
@@ -66,9 +112,9 @@ visible globally to all methods in the generated Python class.</p>
 <p>After the above imports, {$math}, {$mathModule}, {$sin}, {$cos} and
 {$_sin}, {$random}, {$re} and {$DateTime} may be used in
 {$placeholders} and expressions.</p>
-</section>
-<section id="extends">
-<h2>#extends<a class="headerlink" href="#extends" title="Link to this heading">¶</a></h2>
+</div>
+<div class="section" id="extends">
+<h2>#extends<a class="headerlink" href="#extends" title="Permalink to this headline">¶</a></h2>
 <p>Syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#extends CLASS</span>
 </pre></div>
@@ -166,9 +212,9 @@ template that wants it.</p>
 <p>{ Whenever you use {#extends}, you often need {#implements} too,}
 as in step 2 above. Read the next section to understand what
 {#implements} is and when to use it.</p>
-</section>
-<section id="implements">
-<h2>#implements<a class="headerlink" href="#implements" title="Link to this heading">¶</a></h2>
+</div>
+<div class="section" id="implements">
+<h2>#implements<a class="headerlink" href="#implements" title="Permalink to this headline">¶</a></h2>
 <p>Syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#implements METHOD</span>
 </pre></div>
@@ -226,9 +272,9 @@ renames the method to {.writeBody()}, so you have to use
 nothing. { So if you’re using {#extends} and get no output, the {
 first} thing you should think is,
 “Do I need to add {#implements respond} somewhere?” }</p>
-</section>
-<section id="set">
-<h2>#set<a class="headerlink" href="#set" title="Link to this heading">¶</a></h2>
+</div>
+<div class="section" id="set">
+<h2>#set<a class="headerlink" href="#set" title="Permalink to this headline">¶</a></h2>
 <p>Syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#set [global] $var = EXPR</span>
 </pre></div>
@@ -277,9 +323,9 @@ include files unless you use the {global} attribute: {#set global
 $var = EXPRESSION}. Global variables are visible in all methods,
 nested templates and included files. Use this feature with care to
 prevent surprises.</p>
-</section>
-<section id="del">
-<h2>#del<a class="headerlink" href="#del" title="Link to this heading">¶</a></h2>
+</div>
+<div class="section" id="del">
+<h2>#del<a class="headerlink" href="#del" title="Permalink to this headline">¶</a></h2>
 <p>Syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#del $var</span>
 </pre></div>
@@ -293,9 +339,9 @@ Its usage is just like Python’s {del} statement:</p>
 <p>Only local variables can be deleted. There is no directive to
 delete a {#set global} variable, a searchList variable, or any
 other type of variable.</p>
-</section>
-<section id="attr">
-<h2>#attr<a class="headerlink" href="#attr" title="Link to this heading">¶</a></h2>
+</div>
+<div class="section" id="attr">
+<h2>#attr<a class="headerlink" href="#attr" title="Permalink to this headline">¶</a></h2>
 <p>Syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#attr $var = EXPR</span>
 </pre></div>
@@ -318,9 +364,9 @@ are not known at compile time.</p>
 (<a class="reference external" href="http://www.gutenberg.org/">http://www.gutenberg.org/</a>), you can extract the titles and authors
 and put them in a database (assuming the templates have been
 compiled into .py template modules):</p>
-</section>
-<section id="def">
-<h2>#def<a class="headerlink" href="#def" title="Link to this heading">¶</a></h2>
+</div>
+<div class="section" id="def">
+<h2>#def<a class="headerlink" href="#def" title="Permalink to this headline">¶</a></h2>
 <p>Syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#def METHOD[(ARGUMENTS)]</span>
 <span class="c1">#end def</span>
@@ -397,9 +443,9 @@ This is the $adj method#slurp
 below the placeholders that call it. And if a superclass
 placeholder calls a method that’s overridden in a subclass, it’s
 the subclass method that will be called.</p>
-</section>
-<section id="block-end-block">
-<h2>#block … #end block<a class="headerlink" href="#block-end-block" title="Link to this heading">¶</a></h2>
+</div>
+<div class="section" id="block-end-block">
+<h2>#block … #end block<a class="headerlink" href="#block-end-block" title="Permalink to this headline">¶</a></h2>
 <p>The {#block} directive allows you to mark a section of your
 template that can be selectively reimplemented in a subclass. It is
 very useful for changing part of a template without having to
@@ -452,60 +498,11 @@ content again.</p>
 <p>The block must not require arguments because the implicit
 placeholder that’s generated will call the block without
 arguments.</p>
-</section>
-</section>
-
-
-            <div class="clearer"></div>
-          </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="../index.html">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">Import, Inheritance, Declaration and Assignment</a><ul>
-<li><a class="reference internal" href="#import-and-from-directives">#import and #from directives</a></li>
-<li><a class="reference internal" href="#extends">#extends</a></li>
-<li><a class="reference internal" href="#implements">#implements</a></li>
-<li><a class="reference internal" href="#set">#set</a></li>
-<li><a class="reference internal" href="#del">#del</a></li>
-<li><a class="reference internal" href="#attr">#attr</a></li>
-<li><a class="reference internal" href="#def">#def</a></li>
-<li><a class="reference internal" href="#block-end-block">#block … #end block</a></li>
-</ul>
-</li>
-</ul>
-
-  </div>
-  <div>
-    <h4>Previous topic</h4>
-    <p class="topless"><a href="output.html"
-                          title="previous chapter">Generating, Caching and Filtering Output</a></p>
-  </div>
-  <div>
-    <h4>Next topic</h4>
-    <p class="topless"><a href="flowControl.html"
-                          title="next chapter">Flow Control</a></p>
-  </div>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/users_guide/inheritanceEtc.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
 </div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
+</div>
+
+
+          </div>
         </div>
       </div>
       <div class="clearer"></div>
@@ -526,14 +523,13 @@ arguments.</p>
           <a href="output.html" title="Generating, Caching and Filtering Output"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cheetah3 - The Python-Powered Template Engine</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User’s Guide</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Import, Inheritance, Declaration and Assignment</a></li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >Cheetah User’s Guide</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2017-2023, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
-      Last updated on Oct 22, 2023.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+        &#169; Copyright 2017-2024, Oleg Broytman; 2009-2012, R. Tyler Croy; 2001-2008, The Cheetah Development Team..
+      Last updated on Feb 28, 2024.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.6.
     </div>
   </body>
 </html>
